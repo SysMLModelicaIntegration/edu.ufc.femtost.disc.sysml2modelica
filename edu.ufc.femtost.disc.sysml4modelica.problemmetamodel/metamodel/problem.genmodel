@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.ufc.femtost.disc.sysml4modelica.problemmetamodel/src"
+    editDirectory="/edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.edit/src"
+    editorDirectory="/edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.editor/src"
+    modelPluginID="org.omg.sysml4modelica.problemmetamodel" modelName="Problem" editPluginClass="edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.problem.provider.ProblemEditPlugin"
+    editorPluginClass="edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.problem.presentation.ProblemEditorPlugin"
+    testsDirectory="/edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.tests/src"
+    testSuiteClass="edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.problem.tests.ProblemAllTests"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    editPluginID="edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.edit" editorPluginID="edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.editor"
+    testsPluginID="edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.tests">
+  <foreignModel>problem.ecore</foreignModel>
+  <genPackages prefix="problem" basePackage="edu.ufc.femtost.disc.sysml4modelica.problemmetamodel"
+      disposableProviderFactory="true" ecorePackage="problem.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="problem.ecore#//Severity">
+      <genEnumLiterals ecoreEnumLiteral="problem.ecore#//Severity/ok"/>
+      <genEnumLiterals ecoreEnumLiteral="problem.ecore#//Severity/warning"/>
+      <genEnumLiterals ecoreEnumLiteral="problem.ecore#//Severity/error"/>
+      <genEnumLiterals ecoreEnumLiteral="problem.ecore#//Severity/critic"/>
+    </genEnums>
+    <genClasses ecoreClass="problem.ecore#//Problem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute problem.ecore#//Problem/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute problem.ecore#//Problem/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute problem.ecore#//Problem/severity"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
