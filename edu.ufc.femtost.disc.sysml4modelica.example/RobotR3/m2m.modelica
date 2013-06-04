@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<modelica:ModelicaModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modelica="http://www.omg.org/metamodel/modelica" xmlns:sysML="http://www.topcased.org/2.0/sysML" name="RobotR3">
+  <modelicaClasses xsi:type="modelica:Package" name="RobotR3" withinClause="RobotR3">
+    <modelicaClasses xsi:type="modelica:Package" name="Components" withinClause="RobotR3/RobotR3">
+      <modelicaClasses xsi:type="modelica:Model" name="AxisType1">
+        <extends modification="redeclare GearType1 gear(c = c, d = cd)" extendedModelicaClass="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="c" modification="unit = &quot;N.m/rad&quot;" type_specifier="Real" variability="parameter" default_value="43.0"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="cd" modification="unit = &quot;N.m/rad&quot;" type_specifier="Real" variability="parameter" default_value="0.005"/>
+      </modelicaClasses>
+      <modelicaClasses xsi:type="modelica:Model" name="AxisType2">
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="kp" type_specifier="Real" variability="parameter" default_value="10.0"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="ks" type_specifier="Real" variability="parameter" default_value="1.0"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="Ts" type_specifier="Modelica.SIunits.Time" variability="parameter" default_value="0.01"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="k" type_specifier="Real" variability="parameter" default_value="1.1616"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="w" type_specifier="Real" variability="parameter" default_value="4590.0"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="D" type_specifier="Real" variability="parameter" default_value="0.6"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="J" modification="min = 0" type_specifier="Modelica.SIunits.Inertia" variability="parameter" default_value="0.0013"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="ratio" type_specifier="Real" variability="parameter" default_value="-105.0"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="Rv0" type_specifier="Modelica.SIunits.Torque" variability="parameter" default_value="0.4"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="Rv1" modification="unit = &quot;N.m.s/rad&quot;" type_specifier="Real" variability="parameter" default_value="0.13 / 160"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="peak" type_specifier="Real" variability="parameter" default_value="1"/>
+        <modelicaComponents xsi:type="modelica:ModelicaPort" name="flange" type_specifier="Modelica.Mechanics.Rotational.Interfaces.Flange_b">
+          <type_connector href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_iiujkLCuEeKzo_FD3Yn8sw"/>
+        </modelicaComponents>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="gear" modification="Rv0 = Rv0, Rv1 = Rv1, peak = peak, i = ratio" isReplaceable="true" type_specifier="RobotR3.RobotR3.Components.GearType2" type_part="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.2"/>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="motor" modification="J = J, k = k, w = w, D = D" type_specifier="RobotR3.RobotR3.Components.Motor" type_part="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.3"/>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="controller" modification="kp = kp, ks = ks, Ts = Ts, ratio = ratio" type_specifier="RobotR3.RobotR3.Components.Controller" type_part="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.4"/>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="axisControlBus" type_specifier="RobotR3.RobotR3.Components.AxisControlBus"/>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="angleSensor" type_specifier="Modelica.Mechanics.Rotational.Sensors.AngleSensor">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_7VsG4LCuEeKzo_FD3Yn8sw"/>
+        </modelicaComponents>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="speedSensor" type_specifier="Modelica.Mechanics.Rotational.Sensors.SpeedSensor">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#__-gFG7CuEeKzo_FD3Yn8sw"/>
+        </modelicaComponents>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="accSensor" type_specifier="Modelica.Mechanics.Rotational.Sensors.AccSensor">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_D4vGALCvEeKzo_FD3Yn8sw"/>
+        </modelicaComponents>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="initializeFlange" type_specifier="Modelica.Mechanics.Rotational.Components.InitializeFlange">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_MRzpwLCvEeKzo_FD3Yn8sw"/>
+        </modelicaComponents>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="const" modification="k = 0" type_specifier="Modelica.Blocks.Sources.Constant">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_ZZ7Wm7CvEeKzo_FD3Yn8sw"/>
+        </modelicaComponents>
+        <equationSection>
+          <connects from="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1/@modelicaComponents.11" toModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1/@modelicaComponents.12" toPort="flange_b"/>
+          <connects fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1/@modelicaComponents.12" toModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1/@modelicaComponents.18" fromPort="flange_b" toPort="flange"/>
+          <connects fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1/@modelicaComponents.12" toModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1/@modelicaComponents.17" fromPort="flange_b" toPort="flange"/>
+          <connects fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1/@modelicaComponents.12" toModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1/@modelicaComponents.16" fromPort="flange_b" toPort="flange"/>
+          <connects to="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.3/@modelicaComponents.0" fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1/@modelicaComponents.12" toModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1/@modelicaComponents.13" fromPort="flange_a"/>
+          <connects to="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1/@modelicaComponents.11" fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1/@modelicaComponents.19" fromPort="flange"/>
+          <connects fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1/@modelicaComponents.20" toModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1/@modelicaComponents.19" fromPort="y" toPort="a_start"/>
+          <connects fromPort="axisControlBus" fromPart="motor" toPart="axisControlBus"/>
+          <connects fromPort="speed" toPort="w" fromPart="axisControlBus" toPart="speedSensor"/>
+          <connects fromPort="phi" toPort="angle" fromPart="angleSensor" toPart="axisControlBus"/>
+          <connects fromPort="a" toPort="acceleration" fromPart="accSensor" toPart="axisControlBus"/>
+          <connects toPort="axisControlBus" fromPart="axisControlBus" toPart="controller"/>
+          <connects fromPort="angle_ref" toPort="phi_start" fromPart="axisControlBus" toPart="initializeFlange"/>
+          <connects fromPort="w_start" toPort="speed_ref" fromPart="initializeFlange" toPart="axisControlBus"/>
+        </equationSection>
+      </modelicaClasses>
+      <modelicaClasses xsi:type="modelica:Model" name="GearType2">
+        <extends from_modelica_standard_library="Modelica.Mechanics.Rotational.Interfaces.PartialTwoFlanges"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="i" type_specifier="Real" variability="parameter" default_value="-99"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="Rv0" type_specifier="Modelica.SIunits.Torque" variability="parameter" default_value="21.8"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="peak" type_specifier="Real" variability="parameter" default_value="26.7 / 21.8"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="Rv1" type_specifier="Real" variability="parameter" default_value="9.8"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="unitAngularVelocity" type_specifier="Modelica.SIunits.AngularVelocity" variability="constant" default_value="1"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="unitTorque" type_specifier="Modelica.SIunits.Torque" variability="constant" default_value="1"/>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="gear" modification="ratio = i, useSupport = false" type_specifier="Modelica.Mechanics.Rotational.Components.IdealGear">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_i70jsLGYEeK0T7edPe2X5A"/>
+        </modelicaComponents>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="bearingFriction" modification="tau_pos = [0,Rv0 / unitTorque;1,(Rv0 + Rv1 * unitAngularVelocity) / unitTorque], peak = peak, useSupport = false" type_specifier="Modelica.Mechanics.Rotational.Components.BearingFriction">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_LYnXELGjEeK0T7edPe2X5A"/>
+        </modelicaComponents>
+        <equationSection>
+          <connects fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.2/@modelicaComponents.6" toModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.2/@modelicaComponents.7" fromPort="flange_b" toPort="flange_a"/>
+          <connects fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.2/@modelicaComponents.7" fromPort="flange_b" toPort="flange_b">
+            <toModelicaPart href="RobotR3.sysml#_BqDz0bGzEeKgG5qcPzyCcg"/>
+          </connects>
+          <connects fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.2/@modelicaComponents.6" fromPort="flange_a" toPort="flange_a">
+            <toModelicaPart href="RobotR3.sysml#_BqDz0bGzEeKgG5qcPzyCcg"/>
+          </connects>
+        </equationSection>
+      </modelicaClasses>
+      <modelicaClasses xsi:type="modelica:Model" name="Motor">
+        <modelicaComponents xsi:type="modelica:ModelicaPort" name="flange_motor" type_specifier="Modelica.Mechanics.Rotational.Interfaces.Flange_b">
+          <type_connector href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_iiujkLCuEeKzo_FD3Yn8sw"/>
+        </modelicaComponents>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="axisControlBus" type_specifier="RobotR3.RobotR3.Components.AxisControlBus"/>
+      </modelicaClasses>
+      <modelicaClasses xsi:type="modelica:Model" name="Controller">
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="kp" type_specifier="Real" variability="parameter" default_value="10.0"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="ks" type_specifier="Real" variability="parameter" default_value="1.0"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="Ts" type_specifier="Modelica.SIunits.Time" variability="parameter" default_value="0.01"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="ratio" type_specifier="Real" variability="parameter" default_value="1.0"/>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="axisControlBus" type_specifier="RobotR3.RobotR3.Components.AxisControlBus"/>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="gain1" modification="k = ratio" type_specifier="Modelica.Blocks.Math.Gain">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_X-epALFvEeK0T7edPe2X5A"/>
+        </modelicaComponents>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="PI" modification="k = ks, T = Ts" type_specifier="Modelica.Blocks.Continuous.PI">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_A8jwELFwEeK0T7edPe2X5A"/>
+        </modelicaComponents>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="feedback1" type_specifier="Modelica.Blocks.Math.Feedback">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_qlBJgLFzEeK0T7edPe2X5A"/>
+        </modelicaComponents>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="P" modification="k = kp" type_specifier="Modelica.Blocks.Math.Gain">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_X-epALFvEeK0T7edPe2X5A"/>
+        </modelicaComponents>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="add3" modification="k3 = -1" type_specifier="Modelica.Blocks.Math.Add3">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_oY168LF1EeK0T7edPe2X5A"/>
+        </modelicaComponents>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="gain2" modification="k = ratio" type_specifier="Modelica.Blocks.Math.Gain">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_X-epALFvEeK0T7edPe2X5A"/>
+        </modelicaComponents>
+        <equationSection>
+          <connects fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.4/@modelicaComponents.5" toModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.4/@modelicaComponents.7" fromPort="y" toPort="u1"/>
+          <connects fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.4/@modelicaComponents.7" toModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.4/@modelicaComponents.8" fromPort="y" toPort="u"/>
+          <connects fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.4/@modelicaComponents.8" toModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.4/@modelicaComponents.9" fromPort="y" toPort="u2"/>
+          <connects fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.4/@modelicaComponents.10" toModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.4/@modelicaComponents.9" fromPort="y" toPort="u1"/>
+          <connects fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.4/@modelicaComponents.9" toModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.4/@modelicaComponents.6" fromPort="y" toPort="u"/>
+          <connects fromPort="u" toPort="speed_ref" fromPart="gain2" toPart="axisControlBus"/>
+          <connects fromPort="angle_ref" toPort="u" fromPart="axisControlBus" toPart="gain1"/>
+          <connects fromPort="u2" toPort="motorAngle" fromPart="feedback1" toPart="axisControlBus"/>
+          <connects fromPort="u3" toPort="motorSpeed" fromPart="add3" toPart="axisControlBus"/>
+          <connects fromPort="y" toPort="current_ref" fromPart="PI" toPart="axisControlBus"/>
+        </equationSection>
+      </modelicaClasses>
+      <modelicaClasses xsi:type="modelica:Model" name="GearType1">
+        <extends from_modelica_standard_library="Modelica.Mechanics.Rotational.Interfaces.PartialTwoFlanges"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="i" type_specifier="Real" variability="parameter" default_value="-105"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="c" modification="unit = &quot;N.m/rad&quot;" type_specifier="Real" variability="parameter" default_value="43.0"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="d" modification="unit = &quot;N.m.s/rad&quot;" type_specifier="Real" variability="parameter" default_value="0.005"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="Rv0" type_specifier="Modelica.SIunits.Torque" variability="parameter" default_value="0.4"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="Rv1" modification="unit = &quot;N.m.s/rad&quot;" type_specifier="Real" variability="parameter" default_value="0.13 / 160"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="peak" modification="" type_specifier="Real" variability="parameter" default_value="1.0"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="a_rel" type_specifier="Modelica.SIunits.AngularAcceleration" default_value="der(spring.w_rel)"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="unitAngularVelocity" type_specifier="Modelica.SIunits.AngularVelocity" variability="constant" default_value="1.0"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="unitTorque" type_specifier="Modelica.SIunits.Torque" variability="constant" default_value="1.0"/>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="gear" modification="ratio = i, useSupport = false" type_specifier="Modelica.Mechanics.Rotational.Components.IdealGear">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_i70jsLGYEeK0T7edPe2X5A"/>
+        </modelicaComponents>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="spring" modification="c = c, d = d" type_specifier="Modelica.Mechanics.Rotational.Components.SpringDamper">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_r1A_sLGdEeK0T7edPe2X5A"/>
+        </modelicaComponents>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="bearingFriction" modification="tau_pos = [0,Rv0 / unitTorque;1,(Rv0 + Rv1 * unitAngularVelocity) / unitTorque], useSupport = false" type_specifier="Modelica.Mechanics.Rotational.Components.BearingFriction">
+          <type_part xsi:type="sysML:Block" href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_LYnXELGjEeK0T7edPe2X5A"/>
+        </modelicaComponents>
+        <equationSection>
+          <equations isInitial="true" body="spring.w_rel = 0"/>
+          <equations isInitial="true" body="a_rel = 0"/>
+          <connects fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.5/@modelicaComponents.11" toModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.5/@modelicaComponents.10" fromPort="flange_b" toPort="flange_a"/>
+          <connects fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.5/@modelicaComponents.10" toModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.5/@modelicaComponents.9" fromPort="flange_b" toPort="flange_a"/>
+          <connects fromModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.5/@modelicaComponents.11" fromPort="flange_a" toPort="flange_a">
+            <toModelicaPart href="RobotR3.sysml#_bkxmMbGvEeKX9dy6PtDLxA"/>
+          </connects>
+          <connects toModelicaPart="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.5/@modelicaComponents.9" fromPort="flange_b" toPort="flange_b">
+            <fromModelicaPart href="RobotR3.sysml#_bkxmMbGvEeKX9dy6PtDLxA"/>
+          </connects>
+        </equationSection>
+      </modelicaClasses>
+      <modelicaClasses xsi:type="modelica:Connector" name="AxisControlBus" isExpandable="true">
+        <extends from_modelica_standard_library="Modelica.Icons.SignalSubBus"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="motion_ref" type_specifier="Boolean"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="angle_ref" type_specifier="Modelica.SIunits.Angle"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="angle" type_specifier="Modelica.SIunits.Angle"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="speed_ref" type_specifier="Modelica.SIunits.AngularVelocity"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="speed" type_specifier="Modelica.SIunits.AngularVelocity"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="acceleration_ref" type_specifier="Modelica.SIunits.AngularAcceleration"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="acceleration" type_specifier="Modelica.SIunits.AngularAcceleration"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="current_ref" type_specifier="Modelica.SIunits.Current"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="current" type_specifier="Modelica.SIunits.Current"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="motorAngle" type_specifier="Modelica.SIunits.Angle"/>
+        <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="motorSpeed" type_specifier="Modelica.SIunits.AngularVelocity"/>
+      </modelicaClasses>
+      <modelicaClasses xsi:type="modelica:Connector" name="ControlBus" isExpandable="true">
+        <extends from_modelica_standard_library="Modelica.Icons.SignalBus"/>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="axisControlBus1" type_specifier="RobotR3.RobotR3.Components.AxisControlBus"/>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="axisControlBus2" type_specifier="RobotR3.RobotR3.Components.AxisControlBus"/>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="axisControlBus3" type_specifier="RobotR3.RobotR3.Components.AxisControlBus"/>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="axisControlBus4" type_specifier="RobotR3.RobotR3.Components.AxisControlBus"/>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="axisControlBus5" type_specifier="RobotR3.RobotR3.Components.AxisControlBus"/>
+        <modelicaComponents xsi:type="modelica:ModelicaPart" name="axisControlBus6" type_specifier="RobotR3.RobotR3.Components.AxisControlBus"/>
+      </modelicaClasses>
+    </modelicaClasses>
+    <modelicaClasses xsi:type="modelica:Model" name="fullRobot">
+      <extends from_modelica_standard_library="Modelica.Icons.Example"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="mLoad" modification="min = 0" type_specifier="Modelica.SIunits.Mass" variability="parameter" default_value="15.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="rLoad[3]" type_specifier="Modelica.SIunits.Position" variability="parameter" default_value="{0.1,0.25,0.1}"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="g" type_specifier="Modelica.SIunits.Acceleration" variability="parameter" default_value="9.81"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="refStartTime" type_specifier="Modelica.SIunits.Time" variability="parameter" default_value="0.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="refSwingTime" type_specifier="Modelica.SIunits.Time" variability="parameter" default_value="0.5"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="startAngle1" modification="unit = &quot;deg&quot;" type_specifier="Real" variability="parameter" default_value="-60.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="startAngle2" modification="unit = &quot;deg&quot;" type_specifier="Real" variability="parameter" default_value="20.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="startAngle3" modification="unit = &quot;deg&quot;" type_specifier="Real" variability="parameter" default_value="90.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="startAngle4" modification="unit = &quot;deg&quot;" type_specifier="Real" variability="parameter" default_value="0.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="startAngle5" modification="unit = &quot;deg&quot;" type_specifier="Real" variability="parameter" default_value="-110.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="startAngle6" modification="unit = &quot;deg&quot;" type_specifier="Real" variability="parameter" default_value="0.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="endAngle2" modification="unit = &quot;deg&quot;" type_specifier="Real" variability="parameter" default_value="-70.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="endAngle3" modification="unit = &quot;deg&quot;" type_specifier="Real" variability="parameter" default_value="-35.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="endAngle4" modification="unit = &quot;deg&quot;" type_specifier="Real" variability="parameter" default_value="45.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="endAngle5" modification="unit = &quot;deg&quot;" type_specifier="Real" variability="parameter" default_value="110.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="endAngle1" modification="unit = &quot;deg&quot;" type_specifier="Real" variability="parameter" default_value="60.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="endAngle6" modification="unit = &quot;deg&quot;" type_specifier="Real" variability="parameter" default_value="45.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="refSpeedMax[6]" type_specifier="Modelica.SIunits.AngularVelocity" variability="parameter" default_value="{3,1.5,5,3.1,3.1,4.1}"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="refAccMax[6]" type_specifier="Modelica.SIunits.AngularAcceleration" variability="parameter" default_value="{15,15,15,60,60,60}"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="kp1" type_specifier="Real" variability="parameter" default_value="5.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="ks1" type_specifier="Real" variability="parameter" default_value="0.5"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="Ts1" type_specifier="Modelica.SIunits.Time" variability="parameter" default_value="0.05"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="kp2" type_specifier="Real" variability="parameter" default_value="5.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="ks2" type_specifier="Real" variability="parameter" default_value="0.5"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="Ts2" type_specifier="Modelica.SIunits.Time" variability="parameter" default_value="0.05"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="kp3" type_specifier="Real" variability="parameter" default_value="5.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="ks3" type_specifier="Real" variability="parameter" default_value="0.5"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="Ts3" type_specifier="Modelica.SIunits.Time" variability="parameter" default_value="0.05"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="kp4" type_specifier="Real" variability="parameter" default_value="5.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="ks4" type_specifier="Real" variability="parameter" default_value="0.5"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="Ts4" type_specifier="Modelica.SIunits.Time" variability="parameter" default_value="0.05"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="kp5" type_specifier="Real" variability="parameter" default_value="5.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="ks5" type_specifier="Real" variability="parameter" default_value="0.5"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="Ts5" type_specifier="Modelica.SIunits.Time" variability="parameter" default_value="0.05"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="kp6" type_specifier="Real" variability="parameter" default_value="5.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="ks6" type_specifier="Real" variability="parameter" default_value="0.5"/>
+      <modelicaComponents xsi:type="modelica:ModelicaValueProperty" name="Ts6" type_specifier="Modelica.SIunits.Time" variability="parameter" default_value="0.05"/>
+      <modelicaComponents xsi:type="modelica:ModelicaPart" name="axis1" modification="w = 4590, ratio = -105, c = 43, cd = 0.005, Rv0 = 0.4, Rv1 = 0.13 / 160, kp = kp1, ks = ks1, Ts = Ts1" type_specifier="RobotR3.RobotR3.Components.AxisType1" type_part="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaPart" name="axis2" modification="w = 5500, ratio = 210, c = 8, cd = 0.01, Rv1 = 0.1 / 130, Rv0 = 0.5, kp = kp2, ks = ks2, Ts = Ts2" type_specifier="RobotR3.RobotR3.Components.AxisType1" type_part="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaPart" name="axis3" modification="w = 5500, ratio = 60, c = 58, cd = 0.04, Rv0 = 0.7, Rv1 = 0.2 / 130, kp = kp3, ks = ks3, Ts = Ts3" type_specifier="RobotR3.RobotR3.Components.AxisType1" type_part="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.0"/>
+      <modelicaComponents xsi:type="modelica:ModelicaPart" name="axis4" modification="k = 0.2365, w = 6250, D = 0.55, J = 0.00016, ratio = -99, Rv0 = 21.8, Rv1 = 9.8, peak = 26.7 / 21.8, kp = kp4, ks = ks4, Ts = Ts4" type_specifier="RobotR3.RobotR3.Components.AxisType2" type_part="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1"/>
+      <modelicaComponents xsi:type="modelica:ModelicaPart" name="axis5" modification="k = 0.2608, w = 6250, D = 0.55, J = 0.00018, ratio = 79.2, Rv0 = 30.1, Rv1 = 0.03, peak = 39.6 / 30.1, kp = kp5, ks = ks5, Ts = Ts5" type_specifier="RobotR3.RobotR3.Components.AxisType2" type_part="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1"/>
+      <modelicaComponents xsi:type="modelica:ModelicaPart" name="axis6" modification="k = 0.0842, w = 7400, D = 0.27, J = 0.000043, ratio = -99, Rv0 = 10.9, Rv1 = 3.92, peak = 16.8 / 10.9, kp = kp6, ks = ks6, Ts = Ts6" type_specifier="RobotR3.RobotR3.Components.AxisType2" type_part="//@modelicaClasses.0/@modelicaClasses.0/@modelicaClasses.1"/>
+      <modelicaComponents xsi:type="modelica:ModelicaPart" name="controlBus" type_specifier="RobotR3.RobotR3.Components.ControlBus" visibility="protected"/>
+    </modelicaClasses>
+    <modelicaClasses xsi:type="modelica:Model" name="oneAxis"/>
+  </modelicaClasses>
+</modelica:ModelicaModel>
