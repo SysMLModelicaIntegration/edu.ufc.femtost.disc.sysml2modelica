@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ecore="http://www.eclipse.org/uml2/schemas/Ecore/5" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Ecore/5 pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA">
+  <uml:Profile xmi:id="_XkGiwB07Ed-QQ4mYkrb7Gg" name="SysML4Modelica">
+    <ownedComment xmi:id="_rHRSgMbeEeKThuE6BjWoqQ" annotatedElement="_XkGiwB07Ed-QQ4mYkrb7Gg">
+      <body>OMG SysML4Modelica v.1.0 beta3/2012-03</body>
+    </ownedComment>
+    <elementImport xmi:id="_jsC04MbPEeKThuE6BjWoqQ">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Classifier"/>
+    </elementImport>
+    <elementImport xmi:id="_ng_tMMbPEeKThuE6BjWoqQ">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#FunctionBehavior"/>
+    </elementImport>
+    <elementImport xmi:id="_1Ukx0MbPEeKThuE6BjWoqQ">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Generalization"/>
+    </elementImport>
+    <elementImport xmi:id="_2wqVUMbPEeKThuE6BjWoqQ">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+    </elementImport>
+    <elementImport xmi:id="_8cTpgMbPEeKThuE6BjWoqQ">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+    </elementImport>
+    <elementImport xmi:id="_925YMMbPEeKThuE6BjWoqQ">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Port"/>
+    </elementImport>
+    <elementImport xmi:id="_EYk8gMbQEeKThuE6BjWoqQ">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Parameter"/>
+    </elementImport>
+    <elementImport xmi:id="_HCFVYMbQEeKThuE6BjWoqQ">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Constraint"/>
+    </elementImport>
+    <elementImport xmi:id="_IskhQMbQEeKThuE6BjWoqQ">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Behavior"/>
+    </elementImport>
+    <elementImport xmi:id="_KB_cEMbQEeKThuE6BjWoqQ">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Connector"/>
+    </elementImport>
+    <elementImport xmi:id="_NG5-kMbQEeKThuE6BjWoqQ">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Comment"/>
+    </elementImport>
+    <elementImport xmi:id="_toUGIMeSEeKfMrYq53FfYw">
+      <importedElement xmi:type="uml:Class" href="pathmap://SYSML_METAMODELS/SYSML.metamodel.uml#Block"/>
+    </elementImport>
+    <packageImport xmi:id="_b3qnYCWuEd62NaW46C6lHg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:id="_YlKXIB07Ed-QQ4mYkrb7Gg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:id="_zb7TUB09Ed-QQ4mYkrb7Gg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://SYSML_METAMODELS/SYSML.metamodel.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Profile" xmi:id="_Z9wxsMbPEeKThuE6BjWoqQ" name="Classes">
+      <elementImport xmi:id="_t3NwgMxCEeKDzMzQSQLlQQ">
+        <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#DataType"/>
+      </elementImport>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_6l66MMbQEeKThuE6BjWoqQ" name="ModelicaClassDefinition" isAbstract="true">
+        <ownedAttribute xmi:id="__FNwAsbQEeKThuE6BjWoqQ" name="base_Classifier" association="__FNwAMbQEeKThuE6BjWoqQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Classifier"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Zsd7cMbREeKThuE6BjWoqQ" name="isFinal">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_oul20MbREeKThuE6BjWoqQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_b4bcsMbREeKThuE6BjWoqQ" name="isPartial">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_pUpxQMbREeKThuE6BjWoqQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_cxo8oMbREeKThuE6BjWoqQ" name="isModelicaEncapsulated">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_pvAyAMbREeKThuE6BjWoqQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_d8VOIMbREeKThuE6BjWoqQ" name="isReplaceable">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_qGdBoMbREeKThuE6BjWoqQ"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="__FNwAMbQEeKThuE6BjWoqQ" name="Classifier_ModelicaClassDefinition" memberEnd="__FNwAcbQEeKThuE6BjWoqQ __FNwAsbQEeKThuE6BjWoqQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="__FNwAcbQEeKThuE6BjWoqQ" name="extension_ModelicaClassDefinition" type="_6l66MMbQEeKThuE6BjWoqQ" aggregation="composite" association="__FNwAMbQEeKThuE6BjWoqQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="__skD4MbQEeKThuE6BjWoqQ" name="ModelicaClass">
+        <generalization xmi:id="_Rst2oMbREeKThuE6BjWoqQ" general="_6l66MMbQEeKThuE6BjWoqQ"/>
+        <ownedAttribute xmi:id="_46N4MMeSEeKfMrYq53FfYw" name="base_Block" association="_46MDAMeSEeKfMrYq53FfYw">
+          <type xmi:type="uml:Class" href="pathmap://SYSML_METAMODELS/SYSML.metamodel.uml#Block"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_AneM8MbREeKThuE6BjWoqQ" name="ModelicaModel">
+        <generalization xmi:id="_T91ksMbREeKThuE6BjWoqQ" general="_6l66MMbQEeKThuE6BjWoqQ"/>
+        <ownedAttribute xmi:id="_8h2GMseSEeKfMrYq53FfYw" name="base_Block" association="_8h2GMMeSEeKfMrYq53FfYw">
+          <type xmi:type="uml:Class" href="pathmap://SYSML_METAMODELS/SYSML.metamodel.uml#Block"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_Cq4PIMbREeKThuE6BjWoqQ" name="ModelicaBlock">
+        <generalization xmi:id="_wD2NIMbREeKThuE6BjWoqQ" general="_6l66MMbQEeKThuE6BjWoqQ"/>
+        <ownedAttribute xmi:id="_ABeOwseTEeKfMrYq53FfYw" name="base_Block" association="_ABeOwMeTEeKfMrYq53FfYw">
+          <type xmi:type="uml:Class" href="pathmap://SYSML_METAMODELS/SYSML.metamodel.uml#Block"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_Dvr7EMbREeKThuE6BjWoqQ" name="ModelicaRecord">
+        <generalization xmi:id="_sXCkMMbREeKThuE6BjWoqQ" general="_6l66MMbQEeKThuE6BjWoqQ"/>
+        <ownedAttribute xmi:id="_CgOJIseTEeKfMrYq53FfYw" name="base_Block" association="_CgOJIMeTEeKfMrYq53FfYw">
+          <type xmi:type="uml:Class" href="pathmap://SYSML_METAMODELS/SYSML.metamodel.uml#Block"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_FbqUsMbREeKThuE6BjWoqQ" name="ModelicaOperator">
+        <generalization xmi:id="_3EBEQMbREeKThuE6BjWoqQ" general="_6l66MMbQEeKThuE6BjWoqQ"/>
+        <ownedAttribute xmi:id="_FKYpUseTEeKfMrYq53FfYw" name="base_Block" association="_FKYpUMeTEeKfMrYq53FfYw">
+          <type xmi:type="uml:Class" href="pathmap://SYSML_METAMODELS/SYSML.metamodel.uml#Block"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_HIYVMMbREeKThuE6BjWoqQ" name="ModelicaConnector">
+        <generalization xmi:id="_337NcMbREeKThuE6BjWoqQ" general="_6l66MMbQEeKThuE6BjWoqQ"/>
+        <ownedAttribute xmi:id="_O8YAgMbSEeKThuE6BjWoqQ" name="isExpandable">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_Ru6ZkMbSEeKThuE6BjWoqQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_KKH5wseTEeKfMrYq53FfYw" name="base_Block" association="_KKH5wMeTEeKfMrYq53FfYw">
+          <type xmi:type="uml:Class" href="pathmap://SYSML_METAMODELS/SYSML.metamodel.uml#Block"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_IoSBsMbREeKThuE6BjWoqQ" name="ModelicaPackage">
+        <generalization xmi:id="_4fiAAMbREeKThuE6BjWoqQ" general="_6l66MMbQEeKThuE6BjWoqQ"/>
+        <ownedAttribute xmi:id="_MsxcsseTEeKfMrYq53FfYw" name="base_Block" association="_MsxcsMeTEeKfMrYq53FfYw">
+          <type xmi:type="uml:Class" href="pathmap://SYSML_METAMODELS/SYSML.metamodel.uml#Block"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_Kk8isMbREeKThuE6BjWoqQ" name="ModelicaType">
+        <generalization xmi:id="_5KHOEMbREeKThuE6BjWoqQ" general="_6l66MMbQEeKThuE6BjWoqQ"/>
+        <ownedAttribute xmi:id="_wbr4YsxCEeKDzMzQSQLlQQ" name="base_DataType" association="_wbr4YMxCEeKDzMzQSQLlQQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#DataType"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_L5ukUMbREeKThuE6BjWoqQ" name="ModelicaFunction">
+        <generalization xmi:id="_5qNDYMbREeKThuE6BjWoqQ" general="_6l66MMbQEeKThuE6BjWoqQ"/>
+        <ownedAttribute xmi:id="_PdoI4sbREeKThuE6BjWoqQ" name="base_FunctionBehavior" association="_PdoI4MbREeKThuE6BjWoqQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#FunctionBehavior"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_uRN8YMeWEeKfMrYq53FfYw" name="scope" type="_ECeh8MbWEeKThuE6BjWoqQ">
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_y_DkgMeWEeKfMrYq53FfYw" type="_ECeh8MbWEeKThuE6BjWoqQ" instance="__tqQAMeUEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_49dcoMeWEeKfMrYq53FfYw" name="externalLibrary" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_85w6IMeWEeKfMrYq53FfYw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8yE9wMeWEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_-YrvMMeWEeKfMrYq53FfYw" name="externalInclude">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A5L9EMeXEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_PdoI4MbREeKThuE6BjWoqQ" name="FunctionBehavior_ModelicaFunction" memberEnd="_PdoI4cbREeKThuE6BjWoqQ _PdoI4sbREeKThuE6BjWoqQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_PdoI4cbREeKThuE6BjWoqQ" name="extension_ModelicaFunction" type="_L5ukUMbREeKThuE6BjWoqQ" aggregation="composite" association="_PdoI4MbREeKThuE6BjWoqQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_46MDAMeSEeKfMrYq53FfYw" name="Block_ModelicaClass" memberEnd="_46MDAceSEeKfMrYq53FfYw _46N4MMeSEeKfMrYq53FfYw">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_46MDAceSEeKfMrYq53FfYw" name="extension_ModelicaClass" type="__skD4MbQEeKThuE6BjWoqQ" aggregation="composite" association="_46MDAMeSEeKfMrYq53FfYw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_8h2GMMeSEeKfMrYq53FfYw" name="Block_ModelicaModel" memberEnd="_8h2GMceSEeKfMrYq53FfYw _8h2GMseSEeKfMrYq53FfYw">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_8h2GMceSEeKfMrYq53FfYw" name="extension_ModelicaModel" type="_AneM8MbREeKThuE6BjWoqQ" aggregation="composite" association="_8h2GMMeSEeKfMrYq53FfYw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_ABeOwMeTEeKfMrYq53FfYw" name="Block_ModelicaBlock" memberEnd="_ABeOwceTEeKfMrYq53FfYw _ABeOwseTEeKfMrYq53FfYw">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_ABeOwceTEeKfMrYq53FfYw" name="extension_ModelicaBlock" type="_Cq4PIMbREeKThuE6BjWoqQ" aggregation="composite" association="_ABeOwMeTEeKfMrYq53FfYw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_CgOJIMeTEeKfMrYq53FfYw" name="Block_ModelicaRecord" memberEnd="_CgOJIceTEeKfMrYq53FfYw _CgOJIseTEeKfMrYq53FfYw">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_CgOJIceTEeKfMrYq53FfYw" name="extension_ModelicaRecord" type="_Dvr7EMbREeKThuE6BjWoqQ" aggregation="composite" association="_CgOJIMeTEeKfMrYq53FfYw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_FKYpUMeTEeKfMrYq53FfYw" name="Block_ModelicaOperator" memberEnd="_FKYpUceTEeKfMrYq53FfYw _FKYpUseTEeKfMrYq53FfYw">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_FKYpUceTEeKfMrYq53FfYw" name="extension_ModelicaOperator" type="_FbqUsMbREeKThuE6BjWoqQ" aggregation="composite" association="_FKYpUMeTEeKfMrYq53FfYw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_KKH5wMeTEeKfMrYq53FfYw" name="Block_ModelicaConnector" memberEnd="_KKH5wceTEeKfMrYq53FfYw _KKH5wseTEeKfMrYq53FfYw">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_KKH5wceTEeKfMrYq53FfYw" name="extension_ModelicaConnector" type="_HIYVMMbREeKThuE6BjWoqQ" aggregation="composite" association="_KKH5wMeTEeKfMrYq53FfYw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_MsxcsMeTEeKfMrYq53FfYw" name="Block_ModelicaPackage" memberEnd="_MsxcsceTEeKfMrYq53FfYw _MsxcsseTEeKfMrYq53FfYw">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_MsxcsceTEeKfMrYq53FfYw" name="extension_ModelicaPackage" type="_IoSBsMbREeKThuE6BjWoqQ" aggregation="composite" association="_MsxcsMeTEeKfMrYq53FfYw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_U0Ch8MeXEeKfMrYq53FfYw" name="ModelicaExtends">
+        <ownedAttribute xmi:id="_WbzxAMeXEeKfMrYq53FfYw" name="modification" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZcXX8MeXEeKfMrYq53FfYw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZSSO4MeXEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_aP4fkMeXEeKfMrYq53FfYw" name="visibility">
+          <type xmi:type="uml:Enumeration" href="pathmap://UML_METAMODELS/UML.metamodel.uml#VisibilityKind"/>
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_dYU3MMeXEeKfMrYq53FfYw" name="">
+            <type xmi:type="uml:Enumeration" href="pathmap://UML_METAMODELS/UML.metamodel.uml#VisibilityKind"/>
+            <instance xmi:type="uml:EnumerationLiteral" href="pathmap://UML_METAMODELS/UML.metamodel.uml#VisibilityKind-public"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_hBYokMeXEeKfMrYq53FfYw" name="arraySize" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ioSU8MeXEeKfMrYq53FfYw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iZBw8MeXEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_nHsfgseXEeKfMrYq53FfYw" name="base_Generalization" association="_nHsfgMeXEeKfMrYq53FfYw">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Generalization"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_nHsfgMeXEeKfMrYq53FfYw" name="Generalization_ModelicaExtends" memberEnd="_nHsfgceXEeKfMrYq53FfYw _nHsfgseXEeKfMrYq53FfYw">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_nHsfgceXEeKfMrYq53FfYw" name="extension_ModelicaExtends" type="_U0Ch8MeXEeKfMrYq53FfYw" aggregation="composite" association="_nHsfgMeXEeKfMrYq53FfYw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oy_jsMeXEeKfMrYq53FfYw" name="ModelicaConstrainedBy">
+        <ownedAttribute xmi:id="_qoJugMeXEeKfMrYq53FfYw" name="modification" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_slCR8MeXEeKfMrYq53FfYw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sdeRYMeXEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_yq4O0seXEeKfMrYq53FfYw" name="base_Dependency" association="_yq4O0MeXEeKfMrYq53FfYw">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_tlzycMeXEeKfMrYq53FfYw" name="ModelicaDer">
+        <ownedAttribute xmi:id="_vAXr8MeXEeKfMrYq53FfYw" name="variable" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wuOU4MeXEeKfMrYq53FfYw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_0piT4MeXEeKfMrYq53FfYw" name="base_Dependency" association="_0phFwMeXEeKfMrYq53FfYw">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_yq4O0MeXEeKfMrYq53FfYw" name="Dependency_ModelicaConstrainedBy" memberEnd="_yq4O0ceXEeKfMrYq53FfYw _yq4O0seXEeKfMrYq53FfYw">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_yq4O0ceXEeKfMrYq53FfYw" name="extension_ModelicaConstrainedBy" type="_oy_jsMeXEeKfMrYq53FfYw" aggregation="composite" association="_yq4O0MeXEeKfMrYq53FfYw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_0phFwMeXEeKfMrYq53FfYw" name="Dependency_ModelicaDer" memberEnd="_0phFwceXEeKfMrYq53FfYw _0piT4MeXEeKfMrYq53FfYw">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_0phFwceXEeKfMrYq53FfYw" name="extension_ModelicaDer" type="_tlzycMeXEeKfMrYq53FfYw" aggregation="composite" association="_0phFwMeXEeKfMrYq53FfYw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_wbr4YMxCEeKDzMzQSQLlQQ" name="DataType_ModelicaType" memberEnd="_wbr4YcxCEeKDzMzQSQLlQQ _wbr4YsxCEeKDzMzQSQLlQQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_wbr4YcxCEeKDzMzQSQLlQQ" name="extension_ModelicaType" type="_Kk8isMbREeKThuE6BjWoqQ" aggregation="composite" association="_wbr4YMxCEeKDzMzQSQLlQQ"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Profile" xmi:id="_l0KigMbQEeKThuE6BjWoqQ" name="Types">
+      <ownedComment xmi:id="_K_V_oMeVEeKfMrYq53FfYw" annotatedElement="_CGad4MbWEeKThuE6BjWoqQ">
+        <body>Modelica Spec 3.1, Chapter 15</body>
+      </ownedComment>
+      <ownedComment xmi:id="_OoHdIMeVEeKfMrYq53FfYw" annotatedElement="_ECeh8MbWEeKThuE6BjWoqQ">
+        <body>Modelica Spec 3.1, section 5.4</body>
+      </ownedComment>
+      <ownedComment xmi:id="_YlazwMeVEeKfMrYq53FfYw" annotatedElement="_H9atgMbWEeKThuE6BjWoqQ">
+        <body>Modelica Spec 3.1, section 4.4.2.2</body>
+      </ownedComment>
+      <ownedComment xmi:id="_kYbHwMeVEeKfMrYq53FfYw" annotatedElement="_JsL8cMbWEeKThuE6BjWoqQ">
+        <body>Modelica Spec 3.1, section 4.4.4</body>
+      </ownedComment>
+      <ownedComment xmi:id="_jyLxsMeWEeKfMrYq53FfYw" annotatedElement="_XmIEgMeWEeKfMrYq53FfYw">
+        <body>Modelica Spec 3.1, section 4.8.7.1</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_CGad4MbWEeKThuE6BjWoqQ" name="ModelicaFlowFlagKind">
+        <ownedLiteral xmi:id="_14UikMeUEeKfMrYq53FfYw" name="none"/>
+        <ownedLiteral xmi:id="_0Pb5MMeUEeKfMrYq53FfYw" name="flow"/>
+        <ownedLiteral xmi:id="_1E0pEMeUEeKfMrYq53FfYw" name="stream"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_ECeh8MbWEeKThuE6BjWoqQ" name="ModelicaScopeKind">
+        <ownedLiteral xmi:id="_6Y3VkMeUEeKfMrYq53FfYw" name="none"/>
+        <ownedLiteral xmi:id="_68pYEMeUEeKfMrYq53FfYw" name="inner"/>
+        <ownedLiteral xmi:id="_7sBmkMeUEeKfMrYq53FfYw" name="outer"/>
+        <ownedLiteral xmi:id="_8WmNkMeUEeKfMrYq53FfYw" name="inner-outer"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_H9atgMbWEeKThuE6BjWoqQ" name="ModelicaCausalityKind">
+        <ownedLiteral xmi:id="__tqQAMeUEeKfMrYq53FfYw" name="none"/>
+        <ownedLiteral xmi:id="_AiYRgMeVEeKfMrYq53FfYw" name="input"/>
+        <ownedLiteral xmi:id="_BU9lAMeVEeKfMrYq53FfYw" name="output"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_JsL8cMbWEeKThuE6BjWoqQ" name="ModelicaVariabilityKind">
+        <ownedLiteral xmi:id="_EaLpgMeVEeKfMrYq53FfYw" name="continuous"/>
+        <ownedLiteral xmi:id="_FToaAMeVEeKfMrYq53FfYw" name="constant"/>
+        <ownedLiteral xmi:id="_GkN4IMeVEeKfMrYq53FfYw" name="parameter"/>
+        <ownedLiteral xmi:id="_JLljAMeVEeKfMrYq53FfYw" name="discrete"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_y5hZsMeVEeKfMrYq53FfYw" name="ModelicaReal"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_z_j0sMeVEeKfMrYq53FfYw" name="ModelicaInteger"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3pg98MeVEeKfMrYq53FfYw" name="ModelicaBoolean"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5xhzUMeVEeKfMrYq53FfYw" name="ModelicaString"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_9r-PoMeVEeKfMrYq53FfYw" name="ModelicaExternalObject" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_XmIEgMeWEeKfMrYq53FfYw" name="ModelicaStateSelect">
+        <ownedLiteral xmi:id="_bfzEwMeWEeKfMrYq53FfYw" name="always"/>
+        <ownedLiteral xmi:id="_c6C1MMeWEeKfMrYq53FfYw" name="never"/>
+        <ownedLiteral xmi:id="_dXzvQMeWEeKfMrYq53FfYw" name="prefer"/>
+        <ownedLiteral xmi:id="_eIZesMeWEeKfMrYq53FfYw" name="avoid"/>
+        <ownedLiteral xmi:id="_ZFEHsMeWEeKfMrYq53FfYw" name="default"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Profile" xmi:id="_osBgcMbQEeKThuE6BjWoqQ" name="Components">
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_PuAxcMbVEeKThuE6BjWoqQ" name="ModelicaValueProperty">
+        <ownedAttribute xmi:id="_RQdbosbVEeKThuE6BjWoqQ" name="base_Property" association="_RQdboMbVEeKThuE6BjWoqQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="__nX6cMeXEeKfMrYq53FfYw" name="causality" type="_H9atgMbWEeKThuE6BjWoqQ">
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_vctNMMeYEeKfMrYq53FfYw" type="_H9atgMbWEeKThuE6BjWoqQ" instance="__tqQAMeUEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_AgmBcMeYEeKfMrYq53FfYw" name="variability" type="_JsL8cMbWEeKThuE6BjWoqQ">
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_0vnRQMeYEeKfMrYq53FfYw" type="_JsL8cMbWEeKThuE6BjWoqQ" instance="_EaLpgMeVEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_BRujcMeYEeKfMrYq53FfYw" name="flowFlag" type="_CGad4MbWEeKThuE6BjWoqQ">
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_5OsrsMeYEeKfMrYq53FfYw" type="_CGad4MbWEeKThuE6BjWoqQ" instance="_14UikMeUEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_ChdF8MeYEeKfMrYq53FfYw" name="scope" type="_ECeh8MbWEeKThuE6BjWoqQ">
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_BUEQUMeZEeKfMrYq53FfYw" type="_ECeh8MbWEeKThuE6BjWoqQ" instance="_6Y3VkMeUEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_DJXagMeYEeKfMrYq53FfYw" name="isFinal">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_HsubgMeZEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SoVC4MeYEeKfMrYq53FfYw" name="conditionalExpression">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_J8VGoMeZEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_UEWU8MeYEeKfMrYq53FfYw" name="modification" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_K9aJIMeZEeKfMrYq53FfYw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ks_ukMeZEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_U6DN4MeYEeKfMrYq53FfYw" name="isReplaceable">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_MXDcoMeZEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_WJxwYMeYEeKfMrYq53FfYw" name="declarationEquation">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OG5CkMeZEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_X9l3YMeYEeKfMrYq53FfYw" name="arraySize" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PoKoEMeZEeKfMrYq53FfYw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PSM_IMeZEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_RQdboMbVEeKThuE6BjWoqQ" name="Property_ModelicaValueProperty" memberEnd="_RQdbocbVEeKThuE6BjWoqQ _RQdbosbVEeKThuE6BjWoqQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_RQdbocbVEeKThuE6BjWoqQ" name="extension_ModelicaValueProperty" type="_PuAxcMbVEeKThuE6BjWoqQ" aggregation="composite" association="_RQdboMbVEeKThuE6BjWoqQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SYVCoMbVEeKThuE6BjWoqQ" name="ModelicaPart">
+        <ownedAttribute xmi:id="_TF5TQsbVEeKThuE6BjWoqQ" name="base_Property" association="_TF5TQMbVEeKThuE6BjWoqQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_S-9kwMeZEeKfMrYq53FfYw" name="scope" type="_ECeh8MbWEeKThuE6BjWoqQ">
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_uNqxwMeZEeKfMrYq53FfYw" type="_ECeh8MbWEeKThuE6BjWoqQ" instance="_6Y3VkMeUEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_UeO_IMeZEeKfMrYq53FfYw" name="conditionalExpression">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jom3kMeZEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VshXMMeZEeKfMrYq53FfYw" name="modification" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_k2HMgMeZEeKfMrYq53FfYw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kfmxAMeZEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_WlDhsMeZEeKfMrYq53FfYw" name="isFinal" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_oYa1oMeZEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_YERRsMeZEeKfMrYq53FfYw" name="isReplaceable">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_q2_w4MeZEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_ZGuNMMeZEeKfMrYq53FfYw" name="arraySize" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tAa7gMeZEeKfMrYq53FfYw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_stHlAMeZEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_TF5TQMbVEeKThuE6BjWoqQ" name="Property_ModelicaPart" memberEnd="_TF5TQcbVEeKThuE6BjWoqQ _TF5TQsbVEeKThuE6BjWoqQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_TF5TQcbVEeKThuE6BjWoqQ" name="extension_ModelicaPart" type="_SYVCoMbVEeKThuE6BjWoqQ" aggregation="composite" association="_TF5TQMbVEeKThuE6BjWoqQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_VCneoMbVEeKThuE6BjWoqQ" name="ModelicaPort">
+        <ownedAttribute xmi:id="_V5CwUsbVEeKThuE6BjWoqQ" name="base_Port" association="_V5CwUMbVEeKThuE6BjWoqQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Port"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3JxxIMeZEeKfMrYq53FfYw" name="causality" type="_H9atgMbWEeKThuE6BjWoqQ">
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_KngVIMeaEeKfMrYq53FfYw" name="" type="_H9atgMbWEeKThuE6BjWoqQ" instance="__tqQAMeUEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5JHLoMeZEeKfMrYq53FfYw" name="conditionalExpression">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AwwScMeaEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_6camkMeZEeKfMrYq53FfYw" name="modification" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CWm18MeaEeKfMrYq53FfYw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CBKxcMeaEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_7PY7oMeZEeKfMrYq53FfYw" name="isFinal">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_ETgAcMeaEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_8pQ4oMeZEeKfMrYq53FfYw" name="isReplaceable">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_GXAwUMeaEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_9qVUEMeZEeKfMrYq53FfYw" name="arraySize" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IVYhgMeaEeKfMrYq53FfYw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IDXkcMeaEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_V5CwUMbVEeKThuE6BjWoqQ" name="Port_ModelicaPort" memberEnd="_V5CwUcbVEeKThuE6BjWoqQ _V5CwUsbVEeKThuE6BjWoqQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_V5CwUcbVEeKThuE6BjWoqQ" name="extension_ModelicaPort" type="_VCneoMbVEeKThuE6BjWoqQ" aggregation="composite" association="_V5CwUMbVEeKThuE6BjWoqQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_bExOUMbVEeKThuE6BjWoqQ" name="ModelicaFunctionParameter">
+        <ownedAttribute xmi:id="_dMESAMbVEeKThuE6BjWoqQ" name="base_Parameter" association="_dMDq8MbVEeKThuE6BjWoqQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Parameter"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Qh53AMeaEeKfMrYq53FfYw" name="causality" type="_H9atgMbWEeKThuE6BjWoqQ">
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_Z8SGwMeaEeKfMrYq53FfYw" type="_H9atgMbWEeKThuE6BjWoqQ" instance="_AiYRgMeVEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_RM24gMeaEeKfMrYq53FfYw" name="variability" type="_JsL8cMbWEeKThuE6BjWoqQ">
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_fbBnYMeaEeKfMrYq53FfYw" type="_JsL8cMbWEeKThuE6BjWoqQ" instance="_EaLpgMeVEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SgoNgMeaEeKfMrYq53FfYw" name="modification" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jNQi4MeaEeKfMrYq53FfYw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i8tlcMeaEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_TXVMAMeaEeKfMrYq53FfYw" name="isReplaceable">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_lm5TwMeaEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_UhkKgMeaEeKfMrYq53FfYw" name="declarationEquation">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tnSRwMeaEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_V6cpAMeaEeKfMrYq53FfYw" name="isFinal">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_vaVjwMeaEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_W3oqAMeaEeKfMrYq53FfYw" name="arraySize" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0H77UMeaEeKfMrYq53FfYw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z36iUMeaEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_dMDq8MbVEeKThuE6BjWoqQ" name="Parameter_ModelicaFunctionParameter" memberEnd="_dMDq8cbVEeKThuE6BjWoqQ _dMESAMbVEeKThuE6BjWoqQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_dMDq8cbVEeKThuE6BjWoqQ" name="extension_ModelicaFunctionParameter" type="_bExOUMbVEeKThuE6BjWoqQ" aggregation="composite" association="_dMDq8MbVEeKThuE6BjWoqQ"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Profile" xmi:id="_u4nlkMbQEeKThuE6BjWoqQ" name="Equations and Algorithms">
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_jsJ64MbVEeKThuE6BjWoqQ" name="ModelicaEquation">
+        <ownedAttribute xmi:id="_k9veksbVEeKThuE6BjWoqQ" name="base_Constraint" association="_k9vekMbVEeKThuE6BjWoqQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Constraint"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_qbI7YMbVEeKThuE6BjWoqQ" name="isInitial">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_szfS0MbVEeKThuE6BjWoqQ"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_k9vekMbVEeKThuE6BjWoqQ" name="Constraint_ModelicaEquation" memberEnd="_k9vekcbVEeKThuE6BjWoqQ _k9veksbVEeKThuE6BjWoqQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_k9vekcbVEeKThuE6BjWoqQ" name="extension_ModelicaEquation" type="_jsJ64MbVEeKThuE6BjWoqQ" aggregation="composite" association="_k9vekMbVEeKThuE6BjWoqQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_ls4cgMbVEeKThuE6BjWoqQ" name="ModelicaAlgorithm">
+        <ownedAttribute xmi:id="_ndPm4sbVEeKThuE6BjWoqQ" name="base_Behavior" association="_ndPm4MbVEeKThuE6BjWoqQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Behavior"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3QmVYMeaEeKfMrYq53FfYw" name="isInitial">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_5VwEAMeaEeKfMrYq53FfYw"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_ndPm4MbVEeKThuE6BjWoqQ" name="Behavior_ModelicaAlgorithm" memberEnd="_ndPm4cbVEeKThuE6BjWoqQ _ndPm4sbVEeKThuE6BjWoqQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_ndPm4cbVEeKThuE6BjWoqQ" name="extension_ModelicaAlgorithm" type="_ls4cgMbVEeKThuE6BjWoqQ" aggregation="composite" association="_ndPm4MbVEeKThuE6BjWoqQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_n2TnIMbVEeKThuE6BjWoqQ" name="ModelicaConnection">
+        <ownedAttribute xmi:id="_pHEEYsbVEeKThuE6BjWoqQ" name="base_Connector" association="_pHEEYMbVEeKThuE6BjWoqQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Connector"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_pHEEYMbVEeKThuE6BjWoqQ" name="Connector_ModelicaConnection" memberEnd="_pHEEYcbVEeKThuE6BjWoqQ _pHEEYsbVEeKThuE6BjWoqQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_pHEEYcbVEeKThuE6BjWoqQ" name="extension_ModelicaConnection" type="_n2TnIMbVEeKThuE6BjWoqQ" aggregation="composite" association="_pHEEYMbVEeKThuE6BjWoqQ"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Profile" xmi:id="_1LWu8MbQEeKThuE6BjWoqQ" name="Other">
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_zqVO0MbVEeKThuE6BjWoqQ" name="ModelicaAnnotation">
+        <ownedAttribute xmi:id="_1KbIkMbVEeKThuE6BjWoqQ" name="base_Comment" association="_1KahgMbVEeKThuE6BjWoqQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Comment"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_1KahgMbVEeKThuE6BjWoqQ" name="Comment_ModelicaAnnotation" memberEnd="_1KahgcbVEeKThuE6BjWoqQ _1KbIkMbVEeKThuE6BjWoqQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_1KahgcbVEeKThuE6BjWoqQ" name="extension_ModelicaAnnotation" type="_zqVO0MbVEeKThuE6BjWoqQ" aggregation="composite" association="_1KahgMbVEeKThuE6BjWoqQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_2Oi4AMbVEeKThuE6BjWoqQ" name="ModelicaSimulation">
+        <ownedAttribute xmi:id="_4REJYMbVEeKThuE6BjWoqQ" name="model" type="_AneM8MbREeKThuE6BjWoqQ"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_avbr8MbfEeKThuE6BjWoqQ" name="Dummy"/>
+    <profileApplication xmi:id="_Be5PEMbPEeKThuE6BjWoqQ">
+      <eAnnotations xmi:id="_Be5PEcbPEeKThuE6BjWoqQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Ecore.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Profile>
+  <Ecore:EPackage xmi:id="_FT38kMbPEeKThuE6BjWoqQ" base_Package="_XkGiwB07Ed-QQ4mYkrb7Gg" packageName="sysml4modelica" nsPrefix="SysML4Modelica" nsURI="http://www.femto-st.fr/disc/SysML4Modelica" basePackage="edu.ufc.femtost.disc.sysml4modelica.profile" prefix="sysml4modelica"/>
+  <Ecore:EPackage xmi:id="_fRc44MbPEeKThuE6BjWoqQ" base_Package="_Z9wxsMbPEeKThuE6BjWoqQ" packageName="classes" nsPrefix="Classes" nsURI="http://www.femto-st.fr/disc/SysML4Modelica/Classes" basePackage="edu.ufc.femtost.disc.sysml4modelica.profile" prefix="classes"/>
+  <Ecore:EPackage xmi:id="_a6fqQMbQEeKThuE6BjWoqQ"/>
+  <Ecore:EPackage xmi:id="_nUK8sMbQEeKThuE6BjWoqQ" base_Package="_l0KigMbQEeKThuE6BjWoqQ" packageName="types" nsPrefix="Types" nsURI="http://www.femto-st.fr/disc/SysML4Modelica/Types" basePackage="edu.ufc.femtost.disc.sysml4modelica.profile" prefix="types"/>
+  <Ecore:EPackage xmi:id="_qdp2IMbQEeKThuE6BjWoqQ" base_Package="_osBgcMbQEeKThuE6BjWoqQ" packageName="components" nsPrefix="Components" nsURI="http://www.femto-st.fr/disc/SysML4Modelica/Components" basePackage="edu.ufc.femtost.disc.sysml4modelica.profile" prefix="components"/>
+  <Ecore:EPackage xmi:id="_x__mMMbQEeKThuE6BjWoqQ" base_Package="_u4nlkMbQEeKThuE6BjWoqQ" packageName="equationsandalgorithms" nsPrefix="EquationsAndAlgorithms" nsURI="http://www.femto-st.fr/disc/SysML4Modelica/EquationsAndAlgorithms" basePackage="edu.ufc.femtost.disc.sysml4modelica.profile" prefix="equationsandalgorithms"/>
+  <Ecore:EPackage xmi:id="_16d3sMbQEeKThuE6BjWoqQ" base_Package="_1LWu8MbQEeKThuE6BjWoqQ" packageName="other" nsPrefix="Other" nsURI="http://www.femto-st.fr/disc/SysML4Modelica/Other" basePackage="edu.ufc.femtost.disc.sysml4modelica.profile" prefix="other"/>
+  <Ecore:EDataType xmi:id="_eugJkMbfEeKThuE6BjWoqQ" instanceClassName="java.lang.String" base_PrimitiveType="_avbr8MbfEeKThuE6BjWoqQ"/>
+</xmi:XMI>
