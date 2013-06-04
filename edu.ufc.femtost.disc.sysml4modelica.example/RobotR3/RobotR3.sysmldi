@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_CSW74LCgEeKV4bTJZ5Azxw" activeDiagram="_I3Rk8bChEeKV4bTJZ5Azxw">
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_CSW74LCgEeKV4bTJZ5Azxw" activeDiagram="_wXWSYbCgEeKV4bTJZ5Azxw">
   <model href="RobotR3.sysml#idPackage"/>
   <diagrams xmi:id="_CSgs4LCgEeKV4bTJZ5Azxw" position="0,0" size="100,100" name="RobotR3" viewport="0,0">
     <property xmi:id="_CmTLkLCgEeKV4bTJZ5Azxw" key="pageFormatName" value="A4"/>
@@ -40,7 +40,7 @@
   </diagrams>
   <subdiagrams xmi:id="_wXWSYLCgEeKV4bTJZ5Azxw">
     <model href="RobotR3.sysml#_qcbMELCgEeKV4bTJZ5Azxw"/>
-    <diagrams xmi:id="_wXWSYbCgEeKV4bTJZ5Azxw" position="0,0" size="100,100" name="RobotR3" viewport="0,0">
+    <diagrams xmi:id="_wXWSYbCgEeKV4bTJZ5Azxw" position="0,0" size="100,100" name="RobotR3" viewport="0,396">
       <property xmi:id="_wXy-ULCgEeKV4bTJZ5Azxw" key="pageFormatName" value="A1"/>
       <property xmi:id="_wXy-UbCgEeKV4bTJZ5Azxw" key="diagramWidth" value="2376"/>
       <property xmi:id="_wXy-UrCgEeKV4bTJZ5Azxw" key="diagramHeight" value="3364"/>
@@ -445,7 +445,7 @@
     </diagrams>
     <subdiagrams xmi:id="_I3Rk8LChEeKV4bTJZ5Azxw">
       <model href="RobotR3.sysml#_wkSiMLCgEeKV4bTJZ5Azxw"/>
-      <diagrams xmi:id="_I3Rk8bChEeKV4bTJZ5Azxw" position="0,0" size="100,100" name="Components" zoom="0.75" viewport="550,300">
+      <diagrams xmi:id="_I3Rk8bChEeKV4bTJZ5Azxw" position="0,0" size="100,100" name="Components" zoom="0.75" viewport="225,375">
         <property xmi:id="_I3kf4LChEeKV4bTJZ5Azxw" key="pageFormatName" value="A1"/>
         <property xmi:id="_I3kf4bChEeKV4bTJZ5Azxw" key="diagramWidth" value="2376"/>
         <property xmi:id="_I3kf4rChEeKV4bTJZ5Azxw" key="diagramHeight" value="3364"/>
