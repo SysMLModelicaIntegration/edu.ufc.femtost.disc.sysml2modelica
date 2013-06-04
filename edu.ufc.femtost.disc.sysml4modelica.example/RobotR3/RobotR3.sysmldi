@@ -40,7 +40,7 @@
   </diagrams>
   <subdiagrams xmi:id="_wXWSYLCgEeKV4bTJZ5Azxw">
     <model href="RobotR3.sysml#_qcbMELCgEeKV4bTJZ5Azxw"/>
-    <diagrams xmi:id="_wXWSYbCgEeKV4bTJZ5Azxw" position="0,0" size="100,100" name="RobotR3" viewport="0,396">
+    <diagrams xmi:id="_wXWSYbCgEeKV4bTJZ5Azxw" position="0,0" size="100,100" name="RobotR3" viewport="3,0">
       <property xmi:id="_wXy-ULCgEeKV4bTJZ5Azxw" key="pageFormatName" value="A1"/>
       <property xmi:id="_wXy-UbCgEeKV4bTJZ5Azxw" key="diagramWidth" value="2376"/>
       <property xmi:id="_wXy-UrCgEeKV4bTJZ5Azxw" key="diagramHeight" value="3364"/>
@@ -77,7 +77,7 @@
         </contained>
       </contained>
       <contained xsi:type="di:GraphNode" xmi:id="_3id1QLCgEeKV4bTJZ5Azxw" position="49,411" size="467,-1">
-        <anchorage xmi:id="_dt1UQLccEeKrB6yskAhl0w" graphEdge="_dt_FQLccEeKrB6yskAhl0w"/>
+        <anchorage xmi:id="_VvAfsM0ZEeKH2rWo0wnQfw" graphEdge="_VvAfss0ZEeKH2rWo0wnQfw"/>
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_3id1QbCgEeKV4bTJZ5Azxw" presentation="default">
           <element href="RobotR3.sysml#_3id1S7CgEeKV4bTJZ5Azxw"/>
         </semanticModel>
@@ -321,7 +321,7 @@
         </contained>
       </contained>
       <contained xsi:type="di:GraphNode" xmi:id="_6N2dcLCgEeKV4bTJZ5Azxw" position="542,412" size="506,-1">
-        <anchorage xmi:id="_swEzwLujEeKpL8MCUeA_vw" graphEdge="_swXHoLujEeKpL8MCUeA_vw"/>
+        <anchorage xmi:id="_WiOFUM0ZEeKH2rWo0wnQfw" graphEdge="_WiUL8M0ZEeKH2rWo0wnQfw"/>
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6N2dcbCgEeKV4bTJZ5Azxw" presentation="default">
           <element href="RobotR3.sysml#_6OAOcLCgEeKV4bTJZ5Azxw"/>
         </semanticModel>
@@ -404,48 +404,47 @@
           </contained>
         </contained>
       </contained>
-      <contained xsi:type="di:GraphNode" xmi:id="_cYR2kLccEeKrB6yskAhl0w" position="131,203" size="197,-1">
-        <anchorage xmi:id="_dt1UQbccEeKrB6yskAhl0w" graphEdge="_dt_FQLccEeKrB6yskAhl0w _swXHoLujEeKpL8MCUeA_vw"/>
-        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_cYR2kbccEeKrB6yskAhl0w" presentation="default">
-          <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_OOuh8LccEeKrB6yskAhl0w"/>
+      <contained xsi:type="di:GraphNode" xmi:id="_UkB6UM0ZEeKH2rWo0wnQfw" position="206,203" size="112,-1">
+        <anchorage xmi:id="_VvAfsc0ZEeKH2rWo0wnQfw" graphEdge="_VvAfss0ZEeKH2rWo0wnQfw _WiUL8M0ZEeKH2rWo0wnQfw"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_UkB6Uc0ZEeKH2rWo0wnQfw" presentation="default">
+          <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_OOuh8LccEeKrB6yskAhl0w"/>
         </semanticModel>
-        <contained xsi:type="di:GraphNode" xmi:id="_cYR2krccEeKrB6yskAhl0w">
-          <property xmi:id="_cYR2k7ccEeKrB6yskAhl0w" key="eStructuralFeatureID" value="12"/>
-          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_cYR2lLccEeKrB6yskAhl0w" presentation="constraints">
-            <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_OOuh8LccEeKrB6yskAhl0w"/>
+        <contained xsi:type="di:GraphNode" xmi:id="_UkB6Us0ZEeKH2rWo0wnQfw">
+          <property xmi:id="_UkB6U80ZEeKH2rWo0wnQfw" key="eStructuralFeatureID" value="12"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_UkB6VM0ZEeKH2rWo0wnQfw" presentation="constraints">
+            <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_OOuh8LccEeKrB6yskAhl0w"/>
           </semanticModel>
         </contained>
-        <contained xsi:type="di:GraphNode" xmi:id="_cYR2lbccEeKrB6yskAhl0w">
-          <property xmi:id="_cYR2lrccEeKrB6yskAhl0w" key="eStructuralFeatureID" value="47 50 "/>
-          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_cYR2l7ccEeKrB6yskAhl0w" presentation="operations">
-            <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_OOuh8LccEeKrB6yskAhl0w"/>
+        <contained xsi:type="di:GraphNode" xmi:id="_UkB6Vc0ZEeKH2rWo0wnQfw">
+          <property xmi:id="_UkB6Vs0ZEeKH2rWo0wnQfw" key="eStructuralFeatureID" value="47 50 "/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_UkB6V80ZEeKH2rWo0wnQfw" presentation="operations">
+            <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_OOuh8LccEeKrB6yskAhl0w"/>
           </semanticModel>
         </contained>
-        <contained xsi:type="di:GraphNode" xmi:id="_cYR2mLccEeKrB6yskAhl0w">
-          <property xmi:id="_cYR2mbccEeKrB6yskAhl0w" key="eStructuralFeatureID" value="37"/>
-          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_cYR2mrccEeKrB6yskAhl0w" presentation="default">
-            <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_OOuh8LccEeKrB6yskAhl0w"/>
+        <contained xsi:type="di:GraphNode" xmi:id="_UkB6WM0ZEeKH2rWo0wnQfw">
+          <property xmi:id="_UkB6Wc0ZEeKH2rWo0wnQfw" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_UkB6Ws0ZEeKH2rWo0wnQfw" presentation="default">
+            <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_OOuh8LccEeKrB6yskAhl0w"/>
           </semanticModel>
         </contained>
       </contained>
-      <contained xsi:type="di:GraphEdge" xmi:id="_dt_FQLccEeKrB6yskAhl0w" anchor="_dt1UQLccEeKrB6yskAhl0w _dt1UQbccEeKrB6yskAhl0w">
-        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_dt_FQbccEeKrB6yskAhl0w" presentation="default">
-          <element href="RobotR3.sysml#_duusILccEeKrB6yskAhl0w"/>
+      <contained xsi:type="di:GraphEdge" xmi:id="_VvAfss0ZEeKH2rWo0wnQfw" anchor="_VvAfsM0ZEeKH2rWo0wnQfw _VvAfsc0ZEeKH2rWo0wnQfw">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VvAfs80ZEeKH2rWo0wnQfw" presentation="default">
+          <element href="RobotR3.sysml#_VxAq0M0ZEeKH2rWo0wnQfw"/>
         </semanticModel>
-        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_dt_FQrccEeKrB6yskAhl0w" visible="false" id="stereotypeEdgeObject" offset="86,3"/>
-        <waypoints>[-8, -145, 4, 103]</waypoints>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_VvAftM0ZEeKH2rWo0wnQfw" visible="false" id="stereotypeEdgeObject"/>
       </contained>
-      <contained xsi:type="di:GraphEdge" xmi:id="_swXHoLujEeKpL8MCUeA_vw" anchor="_swEzwLujEeKpL8MCUeA_vw _dt1UQbccEeKrB6yskAhl0w">
-        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_swXHobujEeKpL8MCUeA_vw" presentation="default">
-          <element href="RobotR3.sysml#_sxODQLujEeKpL8MCUeA_vw"/>
+      <contained xsi:type="di:GraphEdge" xmi:id="_WiUL8M0ZEeKH2rWo0wnQfw" anchor="_WiOFUM0ZEeKH2rWo0wnQfw _VvAfsc0ZEeKH2rWo0wnQfw">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_WiUL8c0ZEeKH2rWo0wnQfw" presentation="default">
+          <element href="RobotR3.sysml#_Wj118M0ZEeKH2rWo0wnQfw"/>
         </semanticModel>
-        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_swXHorujEeKpL8MCUeA_vw" visible="false" id="stereotypeEdgeObject"/>
-        <waypoints>[6, -220, 517, -16]</waypoints>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_WiUL8s0ZEeKH2rWo0wnQfw" visible="false" id="stereotypeEdgeObject"/>
+        <waypoints>[0, -275, 533, 33]</waypoints>
       </contained>
     </diagrams>
     <subdiagrams xmi:id="_I3Rk8LChEeKV4bTJZ5Azxw">
       <model href="RobotR3.sysml#_wkSiMLCgEeKV4bTJZ5Azxw"/>
-      <diagrams xmi:id="_I3Rk8bChEeKV4bTJZ5Azxw" position="0,0" size="100,100" name="Components" zoom="0.75" viewport="225,375">
+      <diagrams xmi:id="_I3Rk8bChEeKV4bTJZ5Azxw" position="0,0" size="100,100" name="Components" zoom="0.75" viewport="0,0">
         <property xmi:id="_I3kf4LChEeKV4bTJZ5Azxw" key="pageFormatName" value="A1"/>
         <property xmi:id="_I3kf4bChEeKV4bTJZ5Azxw" key="diagramWidth" value="2376"/>
         <property xmi:id="_I3kf4rChEeKV4bTJZ5Azxw" key="diagramHeight" value="3364"/>
@@ -887,36 +886,36 @@
         <contained xsi:type="di:GraphNode" xmi:id="_GvLTYLDKEeKzo_FD3Yn8sw" position="717,902" size="236,-1">
           <anchorage xmi:id="_Lo8esbDKEeKzo_FD3Yn8sw" graphEdge="_Lo8esrDKEeKzo_FD3Yn8sw _661McbGWEeK0T7edPe2X5A"/>
           <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_GvLTYbDKEeKzo_FD3Yn8sw" presentation="default">
-            <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_uY4d8LDJEeKzo_FD3Yn8sw"/>
+            <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uY4d8LDJEeKzo_FD3Yn8sw"/>
           </semanticModel>
           <contained xsi:type="di:GraphNode" xmi:id="_GvLTYrDKEeKzo_FD3Yn8sw">
             <property xmi:id="_GvLTY7DKEeKzo_FD3Yn8sw" key="eStructuralFeatureID" value="12"/>
             <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_GvLTZLDKEeKzo_FD3Yn8sw" presentation="constraints">
-              <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_uY4d8LDJEeKzo_FD3Yn8sw"/>
+              <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uY4d8LDJEeKzo_FD3Yn8sw"/>
             </semanticModel>
           </contained>
           <contained xsi:type="di:GraphNode" xmi:id="_GvLTZbDKEeKzo_FD3Yn8sw">
             <property xmi:id="_GvLTZrDKEeKzo_FD3Yn8sw" key="eStructuralFeatureID" value="47 50 "/>
             <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_GvLTZ7DKEeKzo_FD3Yn8sw" presentation="operations">
-              <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_uY4d8LDJEeKzo_FD3Yn8sw"/>
+              <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uY4d8LDJEeKzo_FD3Yn8sw"/>
             </semanticModel>
           </contained>
           <contained xsi:type="di:GraphNode" xmi:id="_GvLTaLDKEeKzo_FD3Yn8sw">
             <property xmi:id="_GvLTabDKEeKzo_FD3Yn8sw" key="eStructuralFeatureID" value="37"/>
             <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_GvLTarDKEeKzo_FD3Yn8sw" presentation="default">
-              <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_uY4d8LDJEeKzo_FD3Yn8sw"/>
+              <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uY4d8LDJEeKzo_FD3Yn8sw"/>
             </semanticModel>
           </contained>
           <contained xsi:type="di:GraphNode" xmi:id="_G6yGcLDKEeKzo_FD3Yn8sw" position="-6,47" size="15,15">
             <property xmi:id="_G6yGcbDKEeKzo_FD3Yn8sw" key="portPosition" value="1"/>
             <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_G6yGcrDKEeKzo_FD3Yn8sw" presentation="default">
-              <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_1CX6c7DJEeKzo_FD3Yn8sw"/>
+              <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_1CX6c7DJEeKzo_FD3Yn8sw"/>
             </semanticModel>
           </contained>
           <contained xsi:type="di:GraphNode" xmi:id="_G6yGc7DKEeKzo_FD3Yn8sw" position="225,38" size="15,15">
             <property xmi:id="_G6yGdLDKEeKzo_FD3Yn8sw" key="portPosition" value="4"/>
             <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_G6yGdbDKEeKzo_FD3Yn8sw" presentation="default">
-              <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
+              <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
             </semanticModel>
           </contained>
         </contained>
@@ -932,24 +931,24 @@
           <property xmi:id="_dY4wkLDdEeK0T7edPe2X5A" key="backgroundColor" value="252,211,167"/>
           <anchorage xmi:id="_eE7XMbDdEeK0T7edPe2X5A" graphEdge="_eE7XMrDdEeK0T7edPe2X5A"/>
           <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_cKUEobDdEeK0T7edPe2X5A" presentation="default">
-            <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_RaOmMLDdEeK0T7edPe2X5A"/>
+            <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_RaOmMLDdEeK0T7edPe2X5A"/>
           </semanticModel>
           <contained xsi:type="di:GraphNode" xmi:id="_cKUEorDdEeK0T7edPe2X5A">
             <property xmi:id="_cKUEo7DdEeK0T7edPe2X5A" key="eStructuralFeatureID" value="12"/>
             <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_cKUEpLDdEeK0T7edPe2X5A" presentation="constraints">
-              <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_RaOmMLDdEeK0T7edPe2X5A"/>
+              <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_RaOmMLDdEeK0T7edPe2X5A"/>
             </semanticModel>
           </contained>
           <contained xsi:type="di:GraphNode" xmi:id="_cKUEpbDdEeK0T7edPe2X5A">
             <property xmi:id="_cKUEprDdEeK0T7edPe2X5A" key="eStructuralFeatureID" value="47 50 "/>
             <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_cKUEp7DdEeK0T7edPe2X5A" presentation="operations">
-              <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_RaOmMLDdEeK0T7edPe2X5A"/>
+              <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_RaOmMLDdEeK0T7edPe2X5A"/>
             </semanticModel>
           </contained>
           <contained xsi:type="di:GraphNode" xmi:id="_cKUEqLDdEeK0T7edPe2X5A">
             <property xmi:id="_cKUEqbDdEeK0T7edPe2X5A" key="eStructuralFeatureID" value="37"/>
             <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_cKUEqrDdEeK0T7edPe2X5A" presentation="default">
-              <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_RaOmMLDdEeK0T7edPe2X5A"/>
+              <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_RaOmMLDdEeK0T7edPe2X5A"/>
             </semanticModel>
           </contained>
         </contained>
@@ -1018,24 +1017,24 @@
           <property xmi:id="_NhplILFsEeK0T7edPe2X5A" key="backgroundColor" value="252,211,167"/>
           <anchorage xmi:id="_OkKLAbFsEeK0T7edPe2X5A" graphEdge="_OkKLArFsEeK0T7edPe2X5A"/>
           <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_MuxWsbFsEeK0T7edPe2X5A" presentation="default">
-            <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_d3JRK7ChEeKV4bTJZ5Azxw"/>
+            <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_d3JRK7ChEeKV4bTJZ5Azxw"/>
           </semanticModel>
           <contained xsi:type="di:GraphNode" xmi:id="_MuxWsrFsEeK0T7edPe2X5A">
             <property xmi:id="_MuxWs7FsEeK0T7edPe2X5A" key="eStructuralFeatureID" value="12"/>
             <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_MuxWtLFsEeK0T7edPe2X5A" presentation="constraints">
-              <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_d3JRK7ChEeKV4bTJZ5Azxw"/>
+              <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_d3JRK7ChEeKV4bTJZ5Azxw"/>
             </semanticModel>
           </contained>
           <contained xsi:type="di:GraphNode" xmi:id="_MuxWtbFsEeK0T7edPe2X5A">
             <property xmi:id="_MuxWtrFsEeK0T7edPe2X5A" key="eStructuralFeatureID" value="47 50 "/>
             <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_MuxWt7FsEeK0T7edPe2X5A" presentation="operations">
-              <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_d3JRK7ChEeKV4bTJZ5Azxw"/>
+              <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_d3JRK7ChEeKV4bTJZ5Azxw"/>
             </semanticModel>
           </contained>
           <contained xsi:type="di:GraphNode" xmi:id="_MuxWuLFsEeK0T7edPe2X5A">
             <property xmi:id="_MuxWubFsEeK0T7edPe2X5A" key="eStructuralFeatureID" value="37"/>
             <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_MuxWurFsEeK0T7edPe2X5A" presentation="default">
-              <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_d3JRK7ChEeKV4bTJZ5Azxw"/>
+              <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_d3JRK7ChEeKV4bTJZ5Azxw"/>
             </semanticModel>
           </contained>
         </contained>
@@ -1202,14 +1201,14 @@
               <property xmi:id="_k5qVAbDKEeKzo_FD3Yn8sw" key="portPosition" value="1"/>
               <anchorage xmi:id="_1bexcLDeEeK0T7edPe2X5A" graphEdge="_1bexcrDeEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_k5qVArDKEeKzo_FD3Yn8sw" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_1CX6c7DJEeKzo_FD3Yn8sw"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_1CX6c7DJEeKzo_FD3Yn8sw"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_l32bkLDKEeKzo_FD3Yn8sw" position="230,27" size="15,15">
               <property xmi:id="_l32bkbDKEeKzo_FD3Yn8sw" key="portPosition" value="4"/>
               <anchorage xmi:id="_pWj-IbDKEeKzo_FD3Yn8sw" graphEdge="_pWj-IrDKEeKzo_FD3Yn8sw _Pnv5wbDOEeKzo_FD3Yn8sw _RBxnwbDOEeKzo_FD3Yn8sw _TB2pIbDOEeKzo_FD3Yn8sw"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_l32bkrDKEeKzo_FD3Yn8sw" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
               </semanticModel>
             </contained>
           </contained>
@@ -1234,14 +1233,14 @@
               <property xmi:id="_CgjaAbDOEeKzo_FD3Yn8sw" key="portPosition" value="4"/>
               <anchorage xmi:id="_XGUWILFoEeK0T7edPe2X5A" graphEdge="_XGUWIrFoEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_CgjaArDOEeKzo_FD3Yn8sw" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_PsL_w7DMEeKzo_FD3Yn8sw"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_PsL_w7DMEeKzo_FD3Yn8sw"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_Ir0CYLDOEeKzo_FD3Yn8sw" position="1,39" size="15,15">
               <property xmi:id="_Ir0CYbDOEeKzo_FD3Yn8sw" key="portPosition" value="1"/>
               <anchorage xmi:id="_Pnv5wLDOEeKzo_FD3Yn8sw" graphEdge="_Pnv5wbDOEeKzo_FD3Yn8sw"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Ir0CYrDOEeKzo_FD3Yn8sw" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_RP5qs7DLEeKzo_FD3Yn8sw"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_RP5qs7DLEeKzo_FD3Yn8sw"/>
               </semanticModel>
             </contained>
           </contained>
@@ -1255,14 +1254,14 @@
               <property xmi:id="_-vXnYbDNEeKzo_FD3Yn8sw" key="portPosition" value="4"/>
               <anchorage xmi:id="_nCUHgbFiEeK0T7edPe2X5A" graphEdge="_nCUHgrFiEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_-vXnYrDNEeKzo_FD3Yn8sw" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_EhiPwLDNEeKzo_FD3Yn8sw"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_EhiPwLDNEeKzo_FD3Yn8sw"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="__n05YLDNEeKzo_FD3Yn8sw" position="1,45" size="15,15">
               <property xmi:id="__n05YbDNEeKzo_FD3Yn8sw" key="portPosition" value="1"/>
               <anchorage xmi:id="_RBxnwLDOEeKzo_FD3Yn8sw" graphEdge="_RBxnwbDOEeKzo_FD3Yn8sw"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__n05YrDNEeKzo_FD3Yn8sw" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_RP5qs7DLEeKzo_FD3Yn8sw"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_RP5qs7DLEeKzo_FD3Yn8sw"/>
               </semanticModel>
             </contained>
           </contained>
@@ -1276,14 +1275,14 @@
               <property xmi:id="_SF83AbDNEeKzo_FD3Yn8sw" key="portPosition" value="4"/>
               <anchorage xmi:id="_Bdd-YLFoEeK0T7edPe2X5A" graphEdge="_Bdd-YrFoEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_SF83ArDNEeKzo_FD3Yn8sw" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_t66BILDMEeKzo_FD3Yn8sw"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_t66BILDMEeKzo_FD3Yn8sw"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_6qutQLDNEeKzo_FD3Yn8sw" position="1,38" size="15,15">
               <property xmi:id="_6qutQbDNEeKzo_FD3Yn8sw" key="portPosition" value="1"/>
               <anchorage xmi:id="_TB2pILDOEeKzo_FD3Yn8sw" graphEdge="_TB2pIbDOEeKzo_FD3Yn8sw"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6qutQrDNEeKzo_FD3Yn8sw" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_RP5qs7DLEeKzo_FD3Yn8sw"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_RP5qs7DLEeKzo_FD3Yn8sw"/>
               </semanticModel>
             </contained>
           </contained>
@@ -1484,28 +1483,28 @@
               <property xmi:id="_YfbMMbFqEeK0T7edPe2X5A" key="portPosition" value="1"/>
               <anchorage xmi:id="_twdg4bFqEeK0T7edPe2X5A" graphEdge="_twdg4rFqEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_YfbMMrFqEeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_rYmHE7FpEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_rYmHE7FpEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_ZE7F8LFqEeK0T7edPe2X5A" position="1,78" size="15,15">
               <property xmi:id="_ZE7F8bFqEeK0T7edPe2X5A" key="portPosition" value="1"/>
               <anchorage xmi:id="_uXSQULFqEeK0T7edPe2X5A" graphEdge="_uXSQUrFqEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ZE7F8rFqEeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_w0LmA7FpEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_w0LmA7FpEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_ZcvJALFqEeK0T7edPe2X5A" position="1,132" size="15,15">
               <property xmi:id="_ZcvJAbFqEeK0T7edPe2X5A" key="portPosition" value="1"/>
               <anchorage xmi:id="_sr53IbFrEeK0T7edPe2X5A" graphEdge="_sr53IrFrEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ZcvJArFqEeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_xJnDc7FpEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_xJnDc7FpEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_Z2nooLFqEeK0T7edPe2X5A" position="220,72" size="15,15">
               <property xmi:id="_Z2noobFqEeK0T7edPe2X5A" key="portPosition" value="4"/>
               <anchorage xmi:id="_bcs1oLFqEeK0T7edPe2X5A" graphEdge="_bc1_kLFqEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Z2noorFqEeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_68fSw7FpEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_68fSw7FpEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
           </contained>
@@ -1554,7 +1553,7 @@
               <property xmi:id="_qjBfEbFrEeK0T7edPe2X5A" key="portPosition" value="4"/>
               <anchorage xmi:id="_sr53ILFrEeK0T7edPe2X5A" graphEdge="_sr53IrFrEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_qjBfErFrEeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_JSfSg7FrEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_JSfSg7FrEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
           </contained>
@@ -1636,14 +1635,14 @@
               <property xmi:id="_6eFhsbF4EeK0T7edPe2X5A" key="portPosition" value="1"/>
               <anchorage xmi:id="_MdBMcbF5EeK0T7edPe2X5A" graphEdge="_MdKWYLF5EeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6eFhsrF4EeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_Y5m_E7FwEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_Y5m_E7FwEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_9mXhQLF4EeK0T7edPe2X5A" position="95,35" size="15,15">
               <property xmi:id="_9mXhQbF4EeK0T7edPe2X5A" key="portPosition" value="4"/>
               <anchorage xmi:id="_6I2icLGBEeK0T7edPe2X5A" graphEdge="_6I2icrGBEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9mXhQrF4EeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_b_t0Y7FwEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_b_t0Y7FwEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
           </contained>
@@ -1656,28 +1655,28 @@
               <property xmi:id="_zDHk8bF4EeK0T7edPe2X5A" key="portPosition" value="1"/>
               <anchorage xmi:id="_KBrLYbF5EeK0T7edPe2X5A" graphEdge="_KBrLYrF5EeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_zDHk8rF4EeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_74M2o7F1EeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_74M2o7F1EeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_3DNWQLF4EeK0T7edPe2X5A" position="1,79" size="15,15">
               <property xmi:id="_3DNWQbF4EeK0T7edPe2X5A" key="portPosition" value="1"/>
               <anchorage xmi:id="_GO0k0bF5EeK0T7edPe2X5A" graphEdge="_GO0k0rF5EeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_3DNWQrF4EeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_8T4GA7F1EeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_8T4GA7F1EeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_3eJl0LF4EeK0T7edPe2X5A" position="-1,133" size="15,15">
               <property xmi:id="_3eJl0bF4EeK0T7edPe2X5A" key="portPosition" value="1"/>
               <anchorage xmi:id="_zCQ6QLGBEeK0T7edPe2X5A" graphEdge="_zCarQLGBEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_3eJl0rF4EeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_89GCILF1EeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_89GCILF1EeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_4Gwd8LF4EeK0T7edPe2X5A" position="95,67" size="15,15">
               <property xmi:id="_4Gwd8bF4EeK0T7edPe2X5A" key="portPosition" value="4"/>
               <anchorage xmi:id="_MdBMcLF5EeK0T7edPe2X5A" graphEdge="_MdKWYLF5EeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_4Gwd8rF4EeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_-SV907F1EeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_-SV907F1EeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
           </contained>
@@ -1690,21 +1689,21 @@
               <property xmi:id="_v9OLAbF4EeK0T7edPe2X5A" key="portPosition" value="1"/>
               <anchorage xmi:id="_Ad1dobF5EeK0T7edPe2X5A" graphEdge="_Ad1dorF5EeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_v9OLArF4EeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_7SA10LF0EeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_7SA10LF0EeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_witdsLF4EeK0T7edPe2X5A" position="79,58" size="15,15">
               <property xmi:id="_witdsbF4EeK0T7edPe2X5A" key="portPosition" value="32"/>
               <anchorage xmi:id="_u65cQLGBEeK0T7edPe2X5A" graphEdge="_u7DNQLGBEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_witdsrF4EeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_Xv6Z07F1EeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_Xv6Z07F1EeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_xJjbQLF4EeK0T7edPe2X5A" position="146,34" size="15,15">
               <property xmi:id="_xJjbQbF4EeK0T7edPe2X5A" key="portPosition" value="4"/>
               <anchorage xmi:id="_Dkd3YLF5EeK0T7edPe2X5A" graphEdge="_Dkd3YrF5EeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_xJjbQrF4EeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_bDDlkLF1EeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_bDDlkLF1EeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
           </contained>
@@ -1717,14 +1716,14 @@
               <property xmi:id="_ohFJkbF4EeK0T7edPe2X5A" key="portPosition" value="1"/>
               <anchorage xmi:id="_ap2k8LGBEeK0T7edPe2X5A" graphEdge="_ap2k8rGBEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ohFJkrF4EeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_nRNzQ7FvEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_nRNzQ7FvEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_o0a8ULF4EeK0T7edPe2X5A" position="94,40" size="15,15">
               <property xmi:id="_o0a8UbF4EeK0T7edPe2X5A" key="portPosition" value="4"/>
               <anchorage xmi:id="_KBrLYLF5EeK0T7edPe2X5A" graphEdge="_KBrLYrF5EeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_o0a8UrF4EeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_uGb-o7FvEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uGb-o7FvEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
           </contained>
@@ -1737,14 +1736,14 @@
               <property xmi:id="_n8oYsbF4EeK0T7edPe2X5A" key="portPosition" value="4"/>
               <anchorage xmi:id="_GO0k0LF5EeK0T7edPe2X5A" graphEdge="_GO0k0rF5EeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_n8oYsrF4EeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_uGb-o7FvEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uGb-o7FvEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_oO7poLF4EeK0T7edPe2X5A" position="1,43" size="15,15">
               <property xmi:id="_oO7pobF4EeK0T7edPe2X5A" key="portPosition" value="1"/>
               <anchorage xmi:id="_Dkd3YbF5EeK0T7edPe2X5A" graphEdge="_Dkd3YrF5EeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_oO7porF4EeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_nRNzQ7FvEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_nRNzQ7FvEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
           </contained>
@@ -1757,14 +1756,14 @@
               <property xmi:id="_kqFC0bF4EeK0T7edPe2X5A" key="portPosition" value="1"/>
               <anchorage xmi:id="_k_GhgbGBEeK0T7edPe2X5A" graphEdge="_k_GhgrGBEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_kqFC0rF4EeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_nRNzQ7FvEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_nRNzQ7FvEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_ncgHILF4EeK0T7edPe2X5A" position="94,35" size="15,15">
               <property xmi:id="_ncgHIbF4EeK0T7edPe2X5A" key="portPosition" value="4"/>
               <anchorage xmi:id="_Ad1doLF5EeK0T7edPe2X5A" graphEdge="_Ad1dorF5EeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ncgHIrF4EeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_uGb-o7FvEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uGb-o7FvEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
           </contained>
@@ -1919,14 +1918,14 @@
               <property xmi:id="_7Oe7sbGrEeK0T7edPe2X5A" key="portPosition" value="8"/>
               <anchorage xmi:id="_M0ZpgbGsEeK0T7edPe2X5A" graphEdge="_M0ZpgrGsEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_7Oe7srGrEeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_AsY3M7GeEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_AsY3M7GeEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_8lFiQLGrEeK0T7edPe2X5A" position="169,59" size="15,15">
               <property xmi:id="_8lFiQbGrEeK0T7edPe2X5A" key="portPosition" value="32"/>
               <anchorage xmi:id="_PadFwLGsEeK0T7edPe2X5A" graphEdge="_Pam2wLGsEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_8lFiQrGrEeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_EI7PgLGeEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_EI7PgLGeEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
           </contained>
@@ -1939,14 +1938,14 @@
               <property xmi:id="_CGxpMbGsEeK0T7edPe2X5A" key="portPosition" value="8"/>
               <anchorage xmi:id="_PadFwbGsEeK0T7edPe2X5A" graphEdge="_Pam2wLGsEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_CGxpMrGsEeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_C8yrMLGsEeK0T7edPe2X5A" position="168,61" size="15,15">
               <property xmi:id="_C8yrMbGsEeK0T7edPe2X5A" key="portPosition" value="32"/>
               <anchorage xmi:id="_oItn4bGvEeKX9dy6PtDLxA" graphEdge="_oItn4rGvEeKX9dy6PtDLxA"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_C8yrMrGsEeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
           </contained>
@@ -1981,14 +1980,14 @@
               <property xmi:id="_wL27wbGrEeK0T7edPe2X5A" key="portPosition" value="8"/>
               <anchorage xmi:id="_kfHD8LGvEeKX9dy6PtDLxA" graphEdge="_kfHD8rGvEeKX9dy6PtDLxA"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_wL27wrGrEeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_xLiQELGrEeK0T7edPe2X5A" position="159,63" size="15,15">
               <property xmi:id="_xLiQEbGrEeK0T7edPe2X5A" key="portPosition" value="32"/>
               <anchorage xmi:id="_M0ZpgLGsEeK0T7edPe2X5A" graphEdge="_M0ZpgrGsEeK0T7edPe2X5A"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_xLiQErGrEeK0T7edPe2X5A" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
           </contained>
@@ -2001,14 +2000,14 @@
               <property xmi:id="_eQ7qcbGvEeKX9dy6PtDLxA" key="portPosition" value="8"/>
               <anchorage xmi:id="_kfHD8bGvEeKX9dy6PtDLxA" graphEdge="_kfHD8rGvEeKX9dy6PtDLxA"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_eQ7qcrGvEeKX9dy6PtDLxA" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_1CX6c7DJEeKzo_FD3Yn8sw"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_1CX6c7DJEeKzo_FD3Yn8sw"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_jIM7YLGvEeKX9dy6PtDLxA" position="186,98" size="15,15">
               <property xmi:id="_jIM7YbGvEeKX9dy6PtDLxA" key="portPosition" value="32"/>
               <anchorage xmi:id="_oItn4LGvEeKX9dy6PtDLxA" graphEdge="_oItn4rGvEeKX9dy6PtDLxA"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_jIM7YrGvEeKX9dy6PtDLxA" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
               </semanticModel>
             </contained>
           </contained>
@@ -2064,14 +2063,14 @@
               <property xmi:id="_8tkEobGyEeKgG5qcPzyCcg" key="portPosition" value="8"/>
               <anchorage xmi:id="_O_inMLGzEeKgG5qcPzyCcg" graphEdge="_O_rxILGzEeKgG5qcPzyCcg"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_8tkEorGyEeKgG5qcPzyCcg" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_9MElkLGyEeKgG5qcPzyCcg" position="196,57" size="15,15">
               <property xmi:id="_9MElkbGyEeKgG5qcPzyCcg" key="portPosition" value="32"/>
               <anchorage xmi:id="_HdAC0LGzEeKgG5qcPzyCcg" graphEdge="_HdAC0rGzEeKgG5qcPzyCcg"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9MElkrGyEeKgG5qcPzyCcg" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
           </contained>
@@ -2084,14 +2083,14 @@
               <property xmi:id="__C9OsbGyEeKgG5qcPzyCcg" key="portPosition" value="8"/>
               <anchorage xmi:id="_HdAC0bGzEeKgG5qcPzyCcg" graphEdge="_HdAC0rGzEeKgG5qcPzyCcg"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__C9OsrGyEeKgG5qcPzyCcg" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="__09TYLGyEeKgG5qcPzyCcg" position="203,58" size="15,15">
               <property xmi:id="__09TYbGyEeKgG5qcPzyCcg" key="portPosition" value="32"/>
               <anchorage xmi:id="_JZFVALGzEeKgG5qcPzyCcg" graphEdge="_JZPGALGzEeKgG5qcPzyCcg"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__09TYrGyEeKgG5qcPzyCcg" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
               </semanticModel>
             </contained>
           </contained>
@@ -2104,14 +2103,14 @@
               <property xmi:id="_ECttQbGzEeKgG5qcPzyCcg" key="portPosition" value="8"/>
               <anchorage xmi:id="_O_inMbGzEeKgG5qcPzyCcg" graphEdge="_O_rxILGzEeKgG5qcPzyCcg"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ECttQrGzEeKgG5qcPzyCcg" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_1CX6c7DJEeKzo_FD3Yn8sw"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_1CX6c7DJEeKzo_FD3Yn8sw"/>
               </semanticModel>
             </contained>
             <contained xsi:type="di:GraphNode" xmi:id="_FlNawLGzEeKgG5qcPzyCcg" position="147,32" size="15,15">
               <property xmi:id="_FlNawbGzEeKgG5qcPzyCcg" key="portPosition" value="32"/>
               <anchorage xmi:id="_JZFVAbGzEeKgG5qcPzyCcg" graphEdge="_JZPGALGzEeKgG5qcPzyCcg"/>
               <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_FlNawrGzEeKgG5qcPzyCcg" presentation="default">
-                <element href="../../org.omg.sysml4modelica.library/library/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
+                <element href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
               </semanticModel>
             </contained>
           </contained>

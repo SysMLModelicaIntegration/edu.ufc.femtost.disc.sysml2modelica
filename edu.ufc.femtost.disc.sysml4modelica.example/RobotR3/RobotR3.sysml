@@ -6,40 +6,40 @@
         <nestedClassifier xmi:type="sysML:Block" xmi:id="_wkSiMLCgEeKV4bTJZ5Azxw" name="Components">
           <nestedClassifier xmi:type="sysML:Block" xmi:id="_JHyGILChEeKV4bTJZ5Azxw" name="AxisControlBus">
             <generalization xmi:type="uml:Generalization" xmi:id="_eFhNELDdEeK0T7edPe2X5A">
-              <general xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_RaOmMLDdEeK0T7edPe2X5A"/>
+              <general xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_RaOmMLDdEeK0T7edPe2X5A"/>
             </generalization>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_3O9bsLCmEeKzo_FD3Yn8sw" name="motion_ref">
-              <type xmi:type="uml:DataType" href="../../org.omg.sysml4modelica.library/library/sysml4modelica.library.sysml#_dVPKAJhPEeKZMJ2_m9jhLg"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_3pg98MeVEeKfMrYq53FfYw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_FjjisrCnEeKzo_FD3Yn8sw" name="angle_ref">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uEnZyLCrEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uEnZyLCrEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_TioTYrCsEeKzo_FD3Yn8sw" name="angle">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uEnZyLCrEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uEnZyLCrEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_VgypMrCsEeKzo_FD3Yn8sw" name="speed_ref">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2XcLkLCrEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2XcLkLCrEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_X67JULCsEeKzo_FD3Yn8sw" name="speed">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2XcLkLCrEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2XcLkLCrEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_qRMWArCsEeKzo_FD3Yn8sw" name="acceleration_ref">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_5u3aYLCrEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_5u3aYLCrEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_rBi04rCsEeKzo_FD3Yn8sw" name="acceleration">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_5u3aYLCrEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_5u3aYLCrEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_r1KqMLCsEeKzo_FD3Yn8sw" name="current_ref">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_PaHtQLCpEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_PaHtQLCpEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_sc4xgrCsEeKzo_FD3Yn8sw" name="current">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_PaHtQLCpEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_PaHtQLCpEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_tIesMrCsEeKzo_FD3Yn8sw" name="motorAngle">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uEnZyLCrEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uEnZyLCrEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_t9lvQrCsEeKzo_FD3Yn8sw" name="motorSpeed">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2XcLkLCrEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2XcLkLCrEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
           </nestedClassifier>
           <nestedClassifier xmi:type="sysML:Block" xmi:id="_-SbPsLCsEeKzo_FD3Yn8sw" name="AxisType1">
@@ -63,7 +63,7 @@
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_4cceULCtEeKzo_FD3Yn8sw" value="1.0"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_o-TqcrCvEeKzo_FD3Yn8sw" name="Ts">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_s6elELCvEeKzo_FD3Yn8sw" value="0.01"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_tV25grCvEeKzo_FD3Yn8sw" name="k">
@@ -79,7 +79,7 @@
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_79pCQLCvEeKzo_FD3Yn8sw" value="0.6"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_-e6FILCvEeKzo_FD3Yn8sw" name="J">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_AGf_8LCuEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_AGf_8LCuEeKzo_FD3Yn8sw"/>
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_FPsccLCwEeKzo_FD3Yn8sw" value="0.0013"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_3_o5orDFEeKzo_FD3Yn8sw" name="ratio">
@@ -87,7 +87,7 @@
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_8Qo0wLDFEeKzo_FD3Yn8sw" value="-105.0"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_-fAw0rDFEeKzo_FD3Yn8sw" name="Rv0">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_CiQ3wLCuEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_CiQ3wLCuEeKzo_FD3Yn8sw"/>
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_CQUfQLDGEeKzo_FD3Yn8sw" value="0.4"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_DaQi0rDGEeKzo_FD3Yn8sw" name="Rv1">
@@ -99,60 +99,60 @@
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_O3HnsLDGEeKzo_FD3Yn8sw" value="1"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="sysML:FlowPort" xmi:id="_YwTTU7DGEeKzo_FD3Yn8sw" name="flange" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_iiujkLCuEeKzo_FD3Yn8sw"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_iiujkLCuEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_6Ap5srDGEeKzo_FD3Yn8sw" name="gear" type="_zwTV8LDGEeKzo_FD3Yn8sw" aggregation="composite"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_fSh0wrDHEeKzo_FD3Yn8sw" name="motor" type="_cQ0-ULDHEeKzo_FD3Yn8sw" aggregation="composite"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_qBt7ULDHEeKzo_FD3Yn8sw" name="controller" type="_mZoaULDHEeKzo_FD3Yn8sw" aggregation="composite"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_PBmHcrDIEeKzo_FD3Yn8sw" name="axisControlBus" type="_JHyGILChEeKV4bTJZ5Azxw" aggregation="composite"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_WWOysLDIEeKzo_FD3Yn8sw" name="angleSensor" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_7VsG4LCuEeKzo_FD3Yn8sw"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_7VsG4LCuEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_Zq-g8LDIEeKzo_FD3Yn8sw" name="speedSensor" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#__-gFG7CuEeKzo_FD3Yn8sw"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#__-gFG7CuEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_hFt0MrDIEeKzo_FD3Yn8sw" name="accSensor" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_D4vGALCvEeKzo_FD3Yn8sw"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_D4vGALCvEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_nPhEALDIEeKzo_FD3Yn8sw" name="initializeFlange" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_MRzpwLCvEeKzo_FD3Yn8sw"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_MRzpwLCvEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_qnPNwrDIEeKzo_FD3Yn8sw" name="const" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_ZZ7Wm7CvEeKzo_FD3Yn8sw"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_ZZ7Wm7CvEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_pXAqELDKEeKzo_FD3Yn8sw" name="Connector1" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_pXAqEbDKEeKzo_FD3Yn8sw" role="_YwTTU7DGEeKzo_FD3Yn8sw"/>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_pXAqErDKEeKzo_FD3Yn8sw" partWithPort="_6Ap5srDGEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_PoIUQLDOEeKzo_FD3Yn8sw" name="Connector2" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_PoIUQbDOEeKzo_FD3Yn8sw" partWithPort="_6Ap5srDGEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_PoIUQrDOEeKzo_FD3Yn8sw" partWithPort="_hFt0MrDIEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_RP5qs7DLEeKzo_FD3Yn8sw"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_RP5qs7DLEeKzo_FD3Yn8sw"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_RCWPgLDOEeKzo_FD3Yn8sw" name="Connector3" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_RCWPgbDOEeKzo_FD3Yn8sw" partWithPort="_6Ap5srDGEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_RCWPgrDOEeKzo_FD3Yn8sw" partWithPort="_Zq-g8LDIEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_RP5qs7DLEeKzo_FD3Yn8sw"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_RP5qs7DLEeKzo_FD3Yn8sw"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_TCPDoLDOEeKzo_FD3Yn8sw" name="Connector4" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_TCPDobDOEeKzo_FD3Yn8sw" partWithPort="_6Ap5srDGEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_TCPDorDOEeKzo_FD3Yn8sw" partWithPort="_WWOysLDIEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_RP5qs7DLEeKzo_FD3Yn8sw"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_RP5qs7DLEeKzo_FD3Yn8sw"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_1cYJULDeEeK0T7edPe2X5A" name="Connector5" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_1cYJUbDeEeK0T7edPe2X5A" partWithPort="_6Ap5srDGEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_1CX6c7DJEeKzo_FD3Yn8sw"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_1CX6c7DJEeKzo_FD3Yn8sw"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_1cYJUrDeEeK0T7edPe2X5A" role="_KCFeg7DeEeK0T7edPe2X5A" partWithPort="_fSh0wrDHEeKzo_FD3Yn8sw"/>
             </ownedConnector>
@@ -163,18 +163,18 @@
             <ownedConnector xmi:type="uml:Connector" xmi:id="_nC59YLFiEeK0T7edPe2X5A" name="Connector7" kind="delegation">
               <end xmi:type="sysML:NestedConnectorEnd" xmi:id="_nC59YbFiEeK0T7edPe2X5A" role="_X67JULCsEeKzo_FD3Yn8sw" propertyPath="_PBmHcrDIEeKzo_FD3Yn8sw"/>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_nC59YrFiEeK0T7edPe2X5A" partWithPort="_Zq-g8LDIEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_EhiPwLDNEeKzo_FD3Yn8sw"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_EhiPwLDNEeKzo_FD3Yn8sw"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_BeEbULFoEeK0T7edPe2X5A" name="Connector8" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_BeEbUbFoEeK0T7edPe2X5A" partWithPort="_WWOysLDIEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_t66BILDMEeKzo_FD3Yn8sw"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_t66BILDMEeKzo_FD3Yn8sw"/>
               </end>
               <end xmi:type="sysML:NestedConnectorEnd" xmi:id="_BeEbUrFoEeK0T7edPe2X5A" role="_TioTYrCsEeKzo_FD3Yn8sw" propertyPath="_PBmHcrDIEeKzo_FD3Yn8sw"/>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_XG6MALFoEeK0T7edPe2X5A" name="Connector9" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_XG6MAbFoEeK0T7edPe2X5A" partWithPort="_hFt0MrDIEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_PsL_w7DMEeKzo_FD3Yn8sw"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_PsL_w7DMEeKzo_FD3Yn8sw"/>
               </end>
               <end xmi:type="sysML:NestedConnectorEnd" xmi:id="_XG6MArFoEeK0T7edPe2X5A" role="_rBi04rCsEeKzo_FD3Yn8sw" propertyPath="_PBmHcrDIEeKzo_FD3Yn8sw"/>
             </ownedConnector>
@@ -184,41 +184,41 @@
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_bdSrgLFqEeK0T7edPe2X5A" name="Connector11" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_bdSrgbFqEeK0T7edPe2X5A" partWithPort="_nPhEALDIEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_68fSw7FpEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_68fSw7FpEeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_bdSrgrFqEeK0T7edPe2X5A" role="_YwTTU7DGEeKzo_FD3Yn8sw"/>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_txDWwLFqEeK0T7edPe2X5A" name="Connector12" kind="delegation">
               <end xmi:type="sysML:NestedConnectorEnd" xmi:id="_txDWwbFqEeK0T7edPe2X5A" role="_FjjisrCnEeKzo_FD3Yn8sw" propertyPath="_PBmHcrDIEeKzo_FD3Yn8sw"/>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_txDWwrFqEeK0T7edPe2X5A" partWithPort="_nPhEALDIEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_rYmHE7FpEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_rYmHE7FpEeK0T7edPe2X5A"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_uX4tQLFqEeK0T7edPe2X5A" name="Connector13" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_uX4tQbFqEeK0T7edPe2X5A" partWithPort="_nPhEALDIEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_w0LmA7FpEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_w0LmA7FpEeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="sysML:NestedConnectorEnd" xmi:id="_uX4tQrFqEeK0T7edPe2X5A" role="_VgypMrCsEeKzo_FD3Yn8sw" propertyPath="_PBmHcrDIEeKzo_FD3Yn8sw"/>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_ssftALFrEeK0T7edPe2X5A" name="Connector14" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_ssftAbFrEeK0T7edPe2X5A" partWithPort="_qnPNwrDIEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_JSfSg7FrEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_JSfSg7FrEeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_ssftArFrEeK0T7edPe2X5A" partWithPort="_nPhEALDIEeKzo_FD3Yn8sw">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_xJnDc7FpEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_xJnDc7FpEeK0T7edPe2X5A"/>
               </end>
             </ownedConnector>
           </nestedClassifier>
           <nestedClassifier xmi:type="sysML:Block" xmi:id="_zwTV8LDGEeKzo_FD3Yn8sw" name="GearType2">
             <generalization xmi:type="uml:Generalization" xmi:id="_LpPZoLDKEeKzo_FD3Yn8sw">
-              <general xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uY4d8LDJEeKzo_FD3Yn8sw"/>
+              <general xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uY4d8LDJEeKzo_FD3Yn8sw"/>
             </generalization>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_SFkO4LGxEeK316ztRocnAA" name="i">
               <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_y5hZsMeVEeKfMrYq53FfYw"/>
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_XBU-QLGxEeK316ztRocnAA" value="-99"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_X3MPQrGxEeK316ztRocnAA" name="Rv0">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_CiQ3wLCuEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_CiQ3wLCuEeKzo_FD3Yn8sw"/>
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_cBiv0LGxEeK316ztRocnAA" value="21.8"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_c6_gUrGxEeK316ztRocnAA" name="peak">
@@ -230,48 +230,48 @@
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_qnzOkLGxEeK316ztRocnAA" value="9.8"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_wMvd0LGxEeK316ztRocnAA" name="unitAngularVelocity">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2XcLkLCrEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2XcLkLCrEeKzo_FD3Yn8sw"/>
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_zm3bULGxEeK316ztRocnAA" value="1"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_0WCOcLGxEeK316ztRocnAA" name="unitTorque">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_CiQ3wLCuEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_CiQ3wLCuEeKzo_FD3Yn8sw"/>
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_3VY7gLGxEeK316ztRocnAA" value="1"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_IEDRMLGyEeKc4o4DciZSBQ" name="gear" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_i70jsLGYEeK0T7edPe2X5A"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_i70jsLGYEeK0T7edPe2X5A"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_Os_UELGyEeKc4o4DciZSBQ" name="bearingFriction" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_LYnXELGjEeK0T7edPe2X5A"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_LYnXELGjEeK0T7edPe2X5A"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_BqDz0bGzEeKgG5qcPzyCcg" name="gear2" type="_zwTV8LDGEeKzo_FD3Yn8sw"/>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_HeCkoLGzEeKgG5qcPzyCcg" name="Connector1" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_HeCkobGzEeKgG5qcPzyCcg" partWithPort="_IEDRMLGyEeKc4o4DciZSBQ">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_HeCkorGzEeKgG5qcPzyCcg" partWithPort="_Os_UELGyEeKc4o4DciZSBQ">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_JabY0LGzEeKgG5qcPzyCcg" name="Connector2" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_JabY0bGzEeKgG5qcPzyCcg" partWithPort="_Os_UELGyEeKc4o4DciZSBQ">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_JabY0rGzEeKgG5qcPzyCcg" partWithPort="_BqDz0bGzEeKgG5qcPzyCcg">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_PAu6ALGzEeKgG5qcPzyCcg" name="Connector3" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_PAu6AbGzEeKgG5qcPzyCcg" partWithPort="_IEDRMLGyEeKc4o4DciZSBQ">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_PAu6ArGzEeKgG5qcPzyCcg" partWithPort="_BqDz0bGzEeKgG5qcPzyCcg">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_1CX6c7DJEeKzo_FD3Yn8sw"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_1CX6c7DJEeKzo_FD3Yn8sw"/>
               </end>
             </ownedConnector>
           </nestedClassifier>
           <nestedClassifier xmi:type="sysML:Block" xmi:id="_cQ0-ULDHEeKzo_FD3Yn8sw" name="Motor">
             <ownedAttribute xmi:type="sysML:FlowPort" xmi:id="_KCFeg7DeEeK0T7edPe2X5A" name="flange_motor" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_iiujkLCuEeKzo_FD3Yn8sw"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_iiujkLCuEeKzo_FD3Yn8sw"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_1tEhorDnEeK0T7edPe2X5A" name="axisControlBus" type="_JHyGILChEeKV4bTJZ5Azxw" aggregation="composite"/>
           </nestedClassifier>
@@ -286,7 +286,7 @@
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_8yLPwLFuEeK0T7edPe2X5A" value="1.0"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_s6WbcrFuEeK0T7edPe2X5A" name="Ts">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_ChHIgLFvEeK0T7edPe2X5A" value="0.01"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_tpqYgrFuEeK0T7edPe2X5A" name="ratio">
@@ -294,97 +294,97 @@
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_HoBX8LFvEeK0T7edPe2X5A" value="1.0"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_v-wnorFuEeK0T7edPe2X5A" name="gain1" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_X-epALFvEeK0T7edPe2X5A"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_X-epALFvEeK0T7edPe2X5A"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_wxzOIrFuEeK0T7edPe2X5A" name="PI" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_A8jwELFwEeK0T7edPe2X5A"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_A8jwELFwEeK0T7edPe2X5A"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_xsbDUrFuEeK0T7edPe2X5A" name="feedback1" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_qlBJgLFzEeK0T7edPe2X5A"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_qlBJgLFzEeK0T7edPe2X5A"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_zKwCgrFuEeK0T7edPe2X5A" name="P" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_X-epALFvEeK0T7edPe2X5A"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_X-epALFvEeK0T7edPe2X5A"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_zxui8LFuEeK0T7edPe2X5A" name="add3" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_oY168LF1EeK0T7edPe2X5A"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_oY168LF1EeK0T7edPe2X5A"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_0kBikrFuEeK0T7edPe2X5A" name="gain2" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_X-epALFvEeK0T7edPe2X5A"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_X-epALFvEeK0T7edPe2X5A"/>
             </ownedAttribute>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_AebTgLF5EeK0T7edPe2X5A" name="Connector1" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_AebTgbF5EeK0T7edPe2X5A" partWithPort="_v-wnorFuEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uGb-o7FvEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uGb-o7FvEeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_AebTgrF5EeK0T7edPe2X5A" partWithPort="_xsbDUrFuEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_7SA10LF0EeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_7SA10LF0EeK0T7edPe2X5A"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_DlNeQLF5EeK0T7edPe2X5A" name="Connector2" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_DlNeQbF5EeK0T7edPe2X5A" partWithPort="_xsbDUrFuEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_bDDlkLF1EeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_bDDlkLF1EeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_DlNeQrF5EeK0T7edPe2X5A" partWithPort="_zKwCgrFuEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_nRNzQ7FvEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_nRNzQ7FvEeK0T7edPe2X5A"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_GPbBwLF5EeK0T7edPe2X5A" name="Connector3" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_GPbBwbF5EeK0T7edPe2X5A" partWithPort="_zKwCgrFuEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uGb-o7FvEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uGb-o7FvEeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_GPbBwrF5EeK0T7edPe2X5A" partWithPort="_zxui8LFuEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_8T4GA7F1EeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_8T4GA7F1EeK0T7edPe2X5A"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_KCRoULF5EeK0T7edPe2X5A" name="Connector4" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_KCRoUbF5EeK0T7edPe2X5A" partWithPort="_0kBikrFuEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uGb-o7FvEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uGb-o7FvEeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_KCRoUrF5EeK0T7edPe2X5A" partWithPort="_zxui8LFuEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_74M2o7F1EeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_74M2o7F1EeK0T7edPe2X5A"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_Md59QLF5EeK0T7edPe2X5A" name="Connector5" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_Md59QbF5EeK0T7edPe2X5A" partWithPort="_zxui8LFuEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_-SV907F1EeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_-SV907F1EeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_Md59QrF5EeK0T7edPe2X5A" partWithPort="_wxzOIrFuEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_Y5m_E7FwEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_Y5m_E7FwEeK0T7edPe2X5A"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_aqca0LGBEeK0T7edPe2X5A" name="Connector6" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_aqca0bGBEeK0T7edPe2X5A" partWithPort="_0kBikrFuEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_nRNzQ7FvEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_nRNzQ7FvEeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="sysML:NestedConnectorEnd" xmi:id="_aqca0rGBEeK0T7edPe2X5A" role="_VgypMrCsEeKzo_FD3Yn8sw" propertyPath="_sESk4rFoEeK0T7edPe2X5A"/>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_k_s-cLGBEeK0T7edPe2X5A" name="Connector7" kind="delegation">
               <end xmi:type="sysML:NestedConnectorEnd" xmi:id="_k_s-cbGBEeK0T7edPe2X5A" role="_FjjisrCnEeKzo_FD3Yn8sw" propertyPath="_sESk4rFoEeK0T7edPe2X5A"/>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_k_s-crGBEeK0T7edPe2X5A" partWithPort="_v-wnorFuEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_nRNzQ7FvEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_nRNzQ7FvEeK0T7edPe2X5A"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_u7pDILGBEeK0T7edPe2X5A" name="Connector8" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_u7pDIbGBEeK0T7edPe2X5A" partWithPort="_xsbDUrFuEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_Xv6Z07F1EeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_Xv6Z07F1EeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="sysML:NestedConnectorEnd" xmi:id="_u7pDIrGBEeK0T7edPe2X5A" role="_tIesMrCsEeKzo_FD3Yn8sw" propertyPath="_sESk4rFoEeK0T7edPe2X5A"/>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_zC3XMLGBEeK0T7edPe2X5A" name="Connector9" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_zC3XMbGBEeK0T7edPe2X5A" partWithPort="_zxui8LFuEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_89GCILF1EeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_89GCILF1EeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="sysML:NestedConnectorEnd" xmi:id="_zC3XMrGBEeK0T7edPe2X5A" role="_t9lvQrCsEeKzo_FD3Yn8sw" propertyPath="_sESk4rFoEeK0T7edPe2X5A"/>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_6Jc_YLGBEeK0T7edPe2X5A" name="Connector10" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_6Jc_YbGBEeK0T7edPe2X5A" partWithPort="_wxzOIrFuEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_b_t0Y7FwEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_b_t0Y7FwEeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="sysML:NestedConnectorEnd" xmi:id="_6Jc_YrGBEeK0T7edPe2X5A" role="_r1KqMLCsEeKzo_FD3Yn8sw" propertyPath="_sESk4rFoEeK0T7edPe2X5A"/>
             </ownedConnector>
           </nestedClassifier>
           <nestedClassifier xmi:type="sysML:Block" xmi:id="_EyxJcLFsEeK0T7edPe2X5A" name="ControlBus">
             <generalization xmi:type="uml:Generalization" xmi:id="_Okwn8LFsEeK0T7edPe2X5A">
-              <general xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_d3JRK7ChEeKV4bTJZ5Azxw"/>
+              <general xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_d3JRK7ChEeKV4bTJZ5Azxw"/>
             </generalization>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_CJST0rFuEeK0T7edPe2X5A" name="axisControlBus1" type="_JHyGILChEeKV4bTJZ5Azxw" aggregation="composite"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_MahTELFuEeK0T7edPe2X5A" name="axisControlBus2" type="_JHyGILChEeKV4bTJZ5Azxw" aggregation="composite"/>
@@ -401,7 +401,7 @@
               <specification xmi:type="uml:LiteralString" xmi:id="_WpUjYLGwEeK316ztRocnAA" value="a_rel = 0"/>
             </ownedRule>
             <generalization xmi:type="uml:Generalization" xmi:id="_67f60LGWEeK0T7edPe2X5A">
-              <general xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uY4d8LDJEeKzo_FD3Yn8sw"/>
+              <general xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_uY4d8LDJEeKzo_FD3Yn8sw"/>
             </generalization>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_ErWEQLGXEeK0T7edPe2X5A" name="i">
               <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_y5hZsMeVEeKfMrYq53FfYw"/>
@@ -416,7 +416,7 @@
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_vRyQQLGXEeK0T7edPe2X5A" value="0.005"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_GkSi4rGXEeK0T7edPe2X5A" name="Rv0">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_CiQ3wLCuEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_CiQ3wLCuEeKzo_FD3Yn8sw"/>
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_0UR5wLGXEeK0T7edPe2X5A" value="0.4"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_HmZgIrGXEeK0T7edPe2X5A" name="Rv1">
@@ -428,84 +428,84 @@
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_HU5rALGYEeK0T7edPe2X5A" value="1.0"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_JosIArGXEeK0T7edPe2X5A" name="a_rel">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_5u3aYLCrEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_5u3aYLCrEeKzo_FD3Yn8sw"/>
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_NqLLALGYEeK0T7edPe2X5A" value="der(spring.w_rel)"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_LaxwsLGXEeK0T7edPe2X5A" name="unitAngularVelocity">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2XcLkLCrEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2XcLkLCrEeKzo_FD3Yn8sw"/>
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_TqFfALGYEeK0T7edPe2X5A" value="1.0"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_NP6GUrGXEeK0T7edPe2X5A" name="unitTorque">
-              <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_CiQ3wLCuEeKzo_FD3Yn8sw"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_CiQ3wLCuEeKzo_FD3Yn8sw"/>
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_XMDJ4LGYEeK0T7edPe2X5A" value="1.0"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_Oq_kQLGXEeK0T7edPe2X5A" name="gear" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_i70jsLGYEeK0T7edPe2X5A"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_i70jsLGYEeK0T7edPe2X5A"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_Pnr2ArGXEeK0T7edPe2X5A" name="spring" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_r1A_sLGdEeK0T7edPe2X5A"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_r1A_sLGdEeK0T7edPe2X5A"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_QpfRQrGXEeK0T7edPe2X5A" name="bearingFriction" aggregation="composite">
-              <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_LYnXELGjEeK0T7edPe2X5A"/>
+              <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_LYnXELGjEeK0T7edPe2X5A"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_bkxmMbGvEeKX9dy6PtDLxA" name="gearType1" type="_3nd-QLGWEeK0T7edPe2X5A"/>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_M01uYLGsEeK0T7edPe2X5A" name="Connector1" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_M01uYbGsEeK0T7edPe2X5A" partWithPort="_QpfRQrGXEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_M01uYrGsEeK0T7edPe2X5A" partWithPort="_Pnr2ArGXEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_AsY3M7GeEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_AsY3M7GeEeK0T7edPe2X5A"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_PbWdoLGsEeK0T7edPe2X5A" name="Connector2" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_PbWdobGsEeK0T7edPe2X5A" partWithPort="_Pnr2ArGXEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_EI7PgLGeEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_EI7PgLGeEeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_PbWdorGsEeK0T7edPe2X5A" partWithPort="_Oq_kQLGXEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_kfjI0LGvEeKX9dy6PtDLxA" name="Connector3" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_kfjI0bGvEeKX9dy6PtDLxA" partWithPort="_QpfRQrGXEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_dEnDQ7GZEeK0T7edPe2X5A"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_kfjI0rGvEeKX9dy6PtDLxA" partWithPort="_bkxmMbGvEeKX9dy6PtDLxA">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_1CX6c7DJEeKzo_FD3Yn8sw"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_1CX6c7DJEeKzo_FD3Yn8sw"/>
               </end>
             </ownedConnector>
             <ownedConnector xmi:type="uml:Connector" xmi:id="_oJTdwLGvEeKX9dy6PtDLxA" name="Connector4" kind="delegation">
               <end xmi:type="uml:ConnectorEnd" xmi:id="_oJTdwbGvEeKX9dy6PtDLxA" partWithPort="_bkxmMbGvEeKX9dy6PtDLxA">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2zSec7DJEeKzo_FD3Yn8sw"/>
               </end>
               <end xmi:type="uml:ConnectorEnd" xmi:id="_oJTdwrGvEeKX9dy6PtDLxA" partWithPort="_Oq_kQLGXEeK0T7edPe2X5A">
-                <role xmi:type="sysML:FlowPort"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
+                <role xmi:type="sysML:FlowPort" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_hw3XA7GZEeK0T7edPe2X5A"/>
               </end>
             </ownedConnector>
           </nestedClassifier>
           <nestedClassifier xmi:type="sysML:Block" xmi:id="_2XyNgLumEeKpL8MCUeA_vw" name="PathPlanning1"/>
         </nestedClassifier>
         <nestedClassifier xmi:type="sysML:Block" xmi:id="_3id1S7CgEeKV4bTJZ5Azxw" name="fullRobot">
-          <generalization xmi:type="uml:Generalization" xmi:id="_duusILccEeKrB6yskAhl0w">
-            <general xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_OOuh8LccEeKrB6yskAhl0w"/>
+          <generalization xmi:type="uml:Generalization" xmi:id="_VxAq0M0ZEeKH2rWo0wnQfw">
+            <general xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_OOuh8LccEeKrB6yskAhl0w"/>
           </generalization>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_le7SArccEeKrB6yskAhl0w" name="mLoad">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_3RrXYLcbEeKrB6yskAhl0w"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_3RrXYLcbEeKrB6yskAhl0w"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="__LPfMLccEeKrB6yskAhl0w" value="15.0"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_mHjYQrccEeKrB6yskAhl0w" name="rLoad[3]">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_zaXuoLcbEeKrB6yskAhl0w"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_zaXuoLcbEeKrB6yskAhl0w"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_A5zSwLcdEeKrB6yskAhl0w" value="{0.1,0.25,0.1}"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_nhRkQrccEeKrB6yskAhl0w" name="g">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_8CYtULcbEeKrB6yskAhl0w"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_8CYtULcbEeKrB6yskAhl0w"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_B6Ec8LcdEeKrB6yskAhl0w" value="9.81"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_pP-hwrccEeKrB6yskAhl0w" name="refStartTime">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_CnwCULcdEeKrB6yskAhl0w" value="0.0"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_qHUZcrccEeKrB6yskAhl0w" name="refSwingTime">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_DRaqYLcdEeKrB6yskAhl0w" value="0.5"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_EP6S8rcdEeKrB6yskAhl0w" name="startAngle1">
@@ -557,11 +557,11 @@
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_539LMLcdEeKrB6yskAhl0w" value="45.0"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_7CymorcdEeKrB6yskAhl0w" name="refSpeedMax[6]">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2XcLkLCrEeKzo_FD3Yn8sw"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2XcLkLCrEeKzo_FD3Yn8sw"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_7NnhILceEeKrB6yskAhl0w" value="{3,1.5,5,3.1,3.1,4.1}"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_9jg28LcdEeKrB6yskAhl0w" name="refAccMax[6]">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_5u3aYLCrEeKzo_FD3Yn8sw"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_5u3aYLCrEeKzo_FD3Yn8sw"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_8eZzkLceEeKrB6yskAhl0w" value="{15,15,15,60,60,60}"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_-RVmQrcdEeKrB6yskAhl0w" name="kp1">
@@ -573,7 +573,7 @@
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_9xSXwLceEeKrB6yskAhl0w" value="0.5"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="__asbArcdEeKrB6yskAhl0w" name="Ts1">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_FFaFoLcfEeKrB6yskAhl0w" value="0.05"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="__7bwkrcdEeKrB6yskAhl0w" name="kp2">
@@ -585,7 +585,7 @@
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_AgIjoLcfEeKrB6yskAhl0w" value="0.5"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_BFYbMrceEeKrB6yskAhl0w" name="Ts2">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_FbbY8LcfEeKrB6yskAhl0w" value="0.05"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_Bs9_orceEeKrB6yskAhl0w" name="kp3">
@@ -597,7 +597,7 @@
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_BbNEwLcfEeKrB6yskAhl0w" value="0.5"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_ELR1ILceEeKrB6yskAhl0w" name="Ts3">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_F2EtkLcfEeKrB6yskAhl0w" value="0.05"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_EweM4rceEeKrB6yskAhl0w" name="kp4">
@@ -609,7 +609,7 @@
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_CbL7ELcfEeKrB6yskAhl0w" value="0.5"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_F1hwcLceEeKrB6yskAhl0w" name="Ts4">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_GeGW4LcfEeKrB6yskAhl0w" value="0.05"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_GqWforceEeKrB6yskAhl0w" name="kp5">
@@ -621,7 +621,7 @@
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_DVXEULcfEeKrB6yskAhl0w" value="0.5"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_HxUuwrceEeKrB6yskAhl0w" name="Ts5">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_G4SYgLcfEeKrB6yskAhl0w" value="0.05"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_IdNkYLceEeKrB6yskAhl0w" name="kp6">
@@ -633,7 +633,7 @@
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_EONX4LcfEeKrB6yskAhl0w" value="0.5"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_JxIqYrceEeKrB6yskAhl0w" name="Ts6">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_HVJ6sLcfEeKrB6yskAhl0w" value="0.05"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_ZZtsULcfEeKrB6yskAhl0w" name="axis1" type="_-SbPsLCsEeKzo_FD3Yn8sw"/>
@@ -645,11 +645,11 @@
           <ownedAttribute xmi:type="uml:Property" xmi:id="_6ZsUYLcfEeKrB6yskAhl0w" name="controlBus" visibility="protected" type="_EyxJcLFsEeK0T7edPe2X5A"/>
         </nestedClassifier>
         <nestedClassifier xmi:type="sysML:Block" xmi:id="_6OAOcLCgEeKV4bTJZ5Azxw" name="oneAxis">
-          <generalization xmi:type="uml:Generalization" xmi:id="_sxODQLujEeKpL8MCUeA_vw">
-            <general xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_OOuh8LccEeKrB6yskAhl0w"/>
+          <generalization xmi:type="uml:Generalization" xmi:id="_Wj118M0ZEeKH2rWo0wnQfw">
+            <general xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_OOuh8LccEeKrB6yskAhl0w"/>
           </generalization>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_wZi00LujEeKpL8MCUeA_vw" name="mLoad">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_3RrXYLcbEeKrB6yskAhl0w"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_3RrXYLcbEeKrB6yskAhl0w"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_xQ1zwLukEeKpL8MCUeA_vw" value="15"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="__UiNcLujEeKpL8MCUeA_vw" name="kp">
@@ -661,7 +661,7 @@
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_1-gcwLukEeKpL8MCUeA_vw" value="0.5"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_A50JMLukEeKpL8MCUeA_vw" name="Ts">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_A0-QALulEeKpL8MCUeA_vw" value="0.05"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_Btyj0rukEeKpL8MCUeA_vw" name="startAngle">
@@ -673,20 +673,20 @@
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_F2dM4LulEeKpL8MCUeA_vw" value="120.0"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_Di5rULukEeKpL8MCUeA_vw" name="swingTime">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_97jLULCtEeKzo_FD3Yn8sw"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_SgmkQLulEeKpL8MCUeA_vw" value="0.5"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_Ejp9sLukEeKpL8MCUeA_vw" name="refSpeedMax">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2XcLkLCrEeKzo_FD3Yn8sw"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_2XcLkLCrEeKzo_FD3Yn8sw"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_V-VPYLulEeKpL8MCUeA_vw" value="3.0"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_FkUJcrukEeKpL8MCUeA_vw" name="refAccMax">
-            <type xmi:type="uml:DataType"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_5u3aYLCrEeKzo_FD3Yn8sw"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_5u3aYLCrEeKzo_FD3Yn8sw"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_W8s8ILulEeKpL8MCUeA_vw" value="10.0"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_PjtKwLukEeKpL8MCUeA_vw" name="axis" type="_-SbPsLCsEeKzo_FD3Yn8sw" aggregation="composite"/>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_QZx3IrukEeKpL8MCUeA_vw" name="load" aggregation="composite">
-            <type xmi:type="sysML:Block"  href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_vx1psLulEeKpL8MCUeA_vw"/>
+            <type xmi:type="sysML:Block" href="pathmap://SysML4Modelica_LIBRARIES/modelica.library.sysml#_vx1psLulEeKpL8MCUeA_vw"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_XZ6SArukEeKpL8MCUeA_vw" name="controlBus" visibility="protected" type="_EyxJcLFsEeK0T7edPe2X5A" aggregation="composite"/>
         </nestedClassifier>
@@ -865,7 +865,7 @@
   <EquationsAndAlgorithms:ModelicaConnection xmi:id="_IVFhYLGzEeKgG5qcPzyCcg" base_Connector="_HeCkoLGzEeKgG5qcPzyCcg"/>
   <EquationsAndAlgorithms:ModelicaConnection xmi:id="_MEDGcLGzEeKgG5qcPzyCcg" base_Connector="_JabY0LGzEeKgG5qcPzyCcg"/>
   <EquationsAndAlgorithms:ModelicaConnection xmi:id="_QH_dALGzEeKgG5qcPzyCcg" base_Connector="_PAu6ALGzEeKgG5qcPzyCcg"/>
-  <Classes:ModelicaExtends xmi:id="_d_GDYLccEeKrB6yskAhl0w" base_Generalization="_duusILccEeKrB6yskAhl0w"/>
+  <Classes:ModelicaExtends xmi:id="_d_GDYLccEeKrB6yskAhl0w"/>
   <Components:ModelicaValueProperty xmi:id="_tBTeULccEeKrB6yskAhl0w" base_Property="_le7SArccEeKrB6yskAhl0w" variability="parameter" modification="min = 0"/>
   <Components:ModelicaValueProperty xmi:id="_uH2PoLccEeKrB6yskAhl0w" base_Property="_mHjYQrccEeKrB6yskAhl0w" variability="parameter"/>
   <Components:ModelicaValueProperty xmi:id="_vUea0LccEeKrB6yskAhl0w" base_Property="_nhRkQrccEeKrB6yskAhl0w" variability="parameter"/>
@@ -910,7 +910,7 @@
   <Components:ModelicaPart xmi:id="_lQ2SYLcfEeKrB6yskAhl0w" base_Property="_lHxO4LcfEeKrB6yskAhl0w" modification="k = 0.2608, w = 6250, D = 0.55, J = 0.00018, ratio = 79.2, Rv0 = 30.1, Rv1 = 0.03, peak = 39.6 / 30.1, kp = kp5, ks = ks5, Ts = Ts5"/>
   <Components:ModelicaPart xmi:id="_p7VrkLcfEeKrB6yskAhl0w" base_Property="_ngvRYLcfEeKrB6yskAhl0w" modification="k = 0.0842, w = 7400, D = 0.27, J = 0.000043, ratio = -99, Rv0 = 10.9, Rv1 = 3.92, peak = 16.8 / 10.9, kp = kp6, ks = ks6, Ts = Ts6"/>
   <Components:ModelicaPart xmi:id="_-whxwLcfEeKrB6yskAhl0w" base_Property="_6ZsUYLcfEeKrB6yskAhl0w"/>
-  <Classes:ModelicaExtends xmi:id="_txIBELujEeKpL8MCUeA_vw" base_Generalization="_sxODQLujEeKpL8MCUeA_vw"/>
+  <Classes:ModelicaExtends xmi:id="_txIBELujEeKpL8MCUeA_vw"/>
   <Components:ModelicaValueProperty xmi:id="_r2cnoLukEeKpL8MCUeA_vw" base_Property="_wZi00LujEeKpL8MCUeA_vw" variability="parameter" modification="min = 0"/>
   <Components:ModelicaValueProperty xmi:id="_sqhI4LukEeKpL8MCUeA_vw" base_Property="__UiNcLujEeKpL8MCUeA_vw" variability="parameter"/>
   <Components:ModelicaValueProperty xmi:id="_tK2OwLukEeKpL8MCUeA_vw" base_Property="_AIs1ULukEeKpL8MCUeA_vw" variability="parameter"/>
@@ -924,4 +924,6 @@
   <Components:ModelicaPart xmi:id="_PYlN8LumEeKpL8MCUeA_vw" base_Property="_XZ6SArukEeKpL8MCUeA_vw" modification=""/>
   <Components:ModelicaPart xmi:id="_SmSgELumEeKpL8MCUeA_vw" base_Property="_QZx3IrukEeKpL8MCUeA_vw" modification="J = 1.3 * mLoad"/>
   <Classes:ModelicaModel xmi:id="_68-IkLupEeKpL8MCUeA_vw" base_Block="_2XyNgLumEeKpL8MCUeA_vw"/>
+  <Classes:ModelicaExtends xmi:id="_WI8psM0ZEeKH2rWo0wnQfw" base_Generalization="_VxAq0M0ZEeKH2rWo0wnQfw"/>
+  <Classes:ModelicaExtends xmi:id="_XSGDEM0ZEeKH2rWo0wnQfw" base_Generalization="_Wj118M0ZEeKH2rWo0wnQfw"/>
 </xmi:XMI>
