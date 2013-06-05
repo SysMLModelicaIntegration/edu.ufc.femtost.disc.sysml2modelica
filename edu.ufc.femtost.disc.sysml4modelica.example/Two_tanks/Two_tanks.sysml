@@ -257,4 +257,8 @@
   <Components:ModelicaValueProperty xmi:id="_1ot9IMoBEeKyFO3phyTcZQ" base_Property="_lQk20K5yEeKQuMR9AcOvgg"/>
   <Components:ModelicaValueProperty xmi:id="_19i9oMoBEeKyFO3phyTcZQ" base_Property="_Jk_EEq5zEeKQuMR9AcOvgg" modification="unit = &quot;m&quot;"/>
   <Components:ModelicaValueProperty xmi:id="_2ZEcAMoBEeKyFO3phyTcZQ" base_Property="_MZ4_MK50EeKQuMR9AcOvgg" modification="unit = &quot;m3/s&quot;"/>
+  <Components:ModelicaFunctionParameter xmi:id="_3rJz0M3DEeKTqZwsgNs5rw" base_Parameter="_GT_lsK55EeKQuMR9AcOvgg"/>
+  <Components:ModelicaFunctionParameter xmi:id="_3-UncM3DEeKTqZwsgNs5rw" base_Parameter="_eLflUK6EEeKQuMR9AcOvgg"/>
+  <Components:ModelicaFunctionParameter xmi:id="_4QWLkM3DEeKTqZwsgNs5rw" base_Parameter="_1vL5IK6EEeKQuMR9AcOvgg"/>
+  <Components:ModelicaFunctionParameter xmi:id="_4kkIEM3DEeKTqZwsgNs5rw" base_Parameter="_6CmPEK6EEeKQuMR9AcOvgg" causality="output"/>
 </xmi:XMI>
