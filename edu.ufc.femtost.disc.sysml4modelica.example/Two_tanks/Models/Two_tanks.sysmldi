@@ -125,7 +125,7 @@
     </diagrams>
     <subdiagrams xmi:id="_FDSP8K5yEeKQuMR9AcOvgg">
       <model href="Two_tanks.sysml#_6wlRG65xEeKQuMR9AcOvgg"/>
-      <diagrams xmi:id="_FDSP8a5yEeKQuMR9AcOvgg" position="0,0" size="100,100" name="Interface" viewport="0,72">
+      <diagrams xmi:id="_FDSP8a5yEeKQuMR9AcOvgg" position="0,0" size="100,100" name="Interface" viewport="0,28">
         <property xmi:id="_FDcA8K5yEeKQuMR9AcOvgg" key="pageFormatName" value="A4"/>
         <property xmi:id="_FDcA8a5yEeKQuMR9AcOvgg" key="diagramWidth" value="840"/>
         <property xmi:id="_FDcA8q5yEeKQuMR9AcOvgg" key="diagramHeight" value="1188"/>
@@ -229,7 +229,7 @@
     </subdiagrams>
     <subdiagrams xmi:id="_XZ_PkK50EeKQuMR9AcOvgg">
       <model href="Two_tanks.sysml#_8eF7y65xEeKQuMR9AcOvgg"/>
-      <diagrams xmi:id="_XZ_Pka50EeKQuMR9AcOvgg" position="0,0" size="100,100" name="Components" viewport="1358,0">
+      <diagrams xmi:id="_XZ_Pka50EeKQuMR9AcOvgg" position="0,0" size="100,100" name="Components" viewport="653,216">
         <property xmi:id="_XaIZgK50EeKQuMR9AcOvgg" key="pageFormatName" value="A1"/>
         <property xmi:id="_XaIZga50EeKQuMR9AcOvgg" key="diagramWidth" value="2376"/>
         <property xmi:id="_XaIZgq50EeKQuMR9AcOvgg" key="diagramHeight" value="3364"/>

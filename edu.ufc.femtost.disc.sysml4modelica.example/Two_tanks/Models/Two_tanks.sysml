@@ -205,7 +205,7 @@
   <Classes:ModelicaPackage xmi:id="_gLjGYMoAEeKyFO3phyTcZQ" base_Classifier="_ptfji65xEeKQuMR9AcOvgg" base_Block="_ptfji65xEeKQuMR9AcOvgg"/>
   <Classes:ModelicaPackage xmi:id="_g8y9IMoAEeKyFO3phyTcZQ" base_Classifier="_6wlRG65xEeKQuMR9AcOvgg" base_Block="_6wlRG65xEeKQuMR9AcOvgg"/>
   <Classes:ModelicaPackage xmi:id="_hYeMgMoAEeKyFO3phyTcZQ" base_Classifier="_8eF7y65xEeKQuMR9AcOvgg" base_Block="_8eF7y65xEeKQuMR9AcOvgg"/>
-  <Classes:ModelicaConnector xmi:id="_icKeIMoAEeKyFO3phyTcZQ" base_Classifier="_FOvSC65yEeKQuMR9AcOvgg" base_Block="_FOvSC65yEeKQuMR9AcOvgg"/>
+  <Classes:ModelicaConnector xmi:id="_icKeIMoAEeKyFO3phyTcZQ" base_Classifier="_FOvSC65yEeKQuMR9AcOvgg" isReplaceable="true" base_Block="_FOvSC65yEeKQuMR9AcOvgg"/>
   <Classes:ModelicaConnector xmi:id="_i7HD8MoAEeKyFO3phyTcZQ" base_Classifier="_K_vAQK5yEeKQuMR9AcOvgg" base_Block="_K_vAQK5yEeKQuMR9AcOvgg"/>
   <Classes:ModelicaConnector xmi:id="_jKSIYMoAEeKyFO3phyTcZQ" base_Classifier="_QakRQK5yEeKQuMR9AcOvgg" base_Block="_QakRQK5yEeKQuMR9AcOvgg"/>
   <Classes:ModelicaModel xmi:id="_Wdq2YMoBEeKyFO3phyTcZQ" base_Classifier="_YyON0K50EeKQuMR9AcOvgg" isPartial="true" base_Block="_YyON0K50EeKQuMR9AcOvgg"/>
@@ -230,16 +230,16 @@
   <Components:ModelicaPort xmi:id="_grFFkMoBEeKyFO3phyTcZQ" base_Port="_x4aHw653EeKQuMR9AcOvgg"/>
   <Components:ModelicaPort xmi:id="_hNcy0MoBEeKyFO3phyTcZQ" base_Port="_nqSt8653EeKQuMR9AcOvgg"/>
   <Components:ModelicaPort xmi:id="_hf5NsMoBEeKyFO3phyTcZQ" base_Port="_u8VYMK53EeKQuMR9AcOvgg"/>
-  <Components:ModelicaValueProperty xmi:id="_iuvmcMoBEeKyFO3phyTcZQ" base_Property="_harRYq50EeKQuMR9AcOvgg"/>
-  <Components:ModelicaValueProperty xmi:id="_i-hH0MoBEeKyFO3phyTcZQ" base_Property="_rbWsIq50EeKQuMR9AcOvgg"/>
-  <Components:ModelicaValueProperty xmi:id="_jPLaAMoBEeKyFO3phyTcZQ" base_Property="_zRPDQq50EeKQuMR9AcOvgg"/>
+  <Components:ModelicaValueProperty xmi:id="_iuvmcMoBEeKyFO3phyTcZQ" base_Property="_harRYq50EeKQuMR9AcOvgg" variability="parameter"/>
+  <Components:ModelicaValueProperty xmi:id="_i-hH0MoBEeKyFO3phyTcZQ" base_Property="_rbWsIq50EeKQuMR9AcOvgg" variability="parameter"/>
+  <Components:ModelicaValueProperty xmi:id="_jPLaAMoBEeKyFO3phyTcZQ" base_Property="_zRPDQq50EeKQuMR9AcOvgg" variability="parameter"/>
   <Components:ModelicaValueProperty xmi:id="_jdBBsMoBEeKyFO3phyTcZQ" base_Property="_9BRZ8q50EeKQuMR9AcOvgg"/>
   <Components:ModelicaValueProperty xmi:id="_jtFeAMoBEeKyFO3phyTcZQ" base_Property="__uVdIK50EeKQuMR9AcOvgg"/>
-  <Components:ModelicaValueProperty xmi:id="_kRrY0MoBEeKyFO3phyTcZQ" base_Property="_mRh2Iq51EeKQuMR9AcOvgg"/>
-  <Components:ModelicaValueProperty xmi:id="_kwVDsMoBEeKyFO3phyTcZQ" base_Property="_1CUfAK53EeKQuMR9AcOvgg" modification="unit = &quot;m2&quot;"/>
-  <Components:ModelicaValueProperty xmi:id="_k_NNMMoBEeKyFO3phyTcZQ" base_Property="__jAPgq53EeKQuMR9AcOvgg" modification="unit = &quot;m2/s&quot;"/>
-  <Components:ModelicaValueProperty xmi:id="_lRgeIMoBEeKyFO3phyTcZQ" base_Property="_HO7ZYq54EeKQuMR9AcOvgg"/>
-  <Components:ModelicaValueProperty xmi:id="_liT6QMoBEeKyFO3phyTcZQ" base_Property="_K3y9gq54EeKQuMR9AcOvgg"/>
+  <Components:ModelicaValueProperty xmi:id="_kRrY0MoBEeKyFO3phyTcZQ" base_Property="_mRh2Iq51EeKQuMR9AcOvgg" variability="parameter"/>
+  <Components:ModelicaValueProperty xmi:id="_kwVDsMoBEeKyFO3phyTcZQ" base_Property="_1CUfAK53EeKQuMR9AcOvgg" variability="parameter" modification="unit = &quot;m2&quot;"/>
+  <Components:ModelicaValueProperty xmi:id="_k_NNMMoBEeKyFO3phyTcZQ" base_Property="__jAPgq53EeKQuMR9AcOvgg" variability="parameter" modification="unit = &quot;m2/s&quot;"/>
+  <Components:ModelicaValueProperty xmi:id="_lRgeIMoBEeKyFO3phyTcZQ" base_Property="_HO7ZYq54EeKQuMR9AcOvgg" variability="parameter"/>
+  <Components:ModelicaValueProperty xmi:id="_liT6QMoBEeKyFO3phyTcZQ" base_Property="_K3y9gq54EeKQuMR9AcOvgg" variability="parameter"/>
   <Components:ModelicaValueProperty xmi:id="_lwTS8MoBEeKyFO3phyTcZQ" base_Property="_QiZv4q54EeKQuMR9AcOvgg" modification="start = 0.0, unit = &quot;m&quot;"/>
   <Components:ModelicaValueProperty xmi:id="_mVMvwMoBEeKyFO3phyTcZQ" base_Property="_UdHHYq53EeKQuMR9AcOvgg"/>
   <Classes:ModelicaFunction xmi:id="_pV3EYMoBEeKyFO3phyTcZQ" base_Classifier="_5WemYK54EeKQuMR9AcOvgg" base_FunctionBehavior="_5WemYK54EeKQuMR9AcOvgg"/>
