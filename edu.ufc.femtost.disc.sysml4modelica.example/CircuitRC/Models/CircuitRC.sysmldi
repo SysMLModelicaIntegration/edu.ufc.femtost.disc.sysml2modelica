@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_xYBV0MznEeKH2rWo0wnQfw" activeDiagram="_xYBV0cznEeKH2rWo0wnQfw">
+  <model href="CircuitRC.sysml#idPackage"/>
+  <diagrams xmi:id="_xYBV0cznEeKH2rWo0wnQfw" position="0,0" size="100,100" name="CircuitRC" viewport="0,0">
+    <property xmi:id="_xgy3UMznEeKH2rWo0wnQfw" key="pageFormatName" value="A4"/>
+    <property xmi:id="_xgy3UcznEeKH2rWo0wnQfw" key="diagramWidth" value="840"/>
+    <property xmi:id="_xgy3UsznEeKH2rWo0wnQfw" key="diagramHeight" value="1188"/>
+    <property xmi:id="_xgy3U8znEeKH2rWo0wnQfw" key="pageMarginName" value="Small Margin"/>
+    <property xmi:id="_xgy3VMznEeKH2rWo0wnQfw" key="diagramTopMargin" value="20"/>
+    <property xmi:id="_xgy3VcznEeKH2rWo0wnQfw" key="diagramBottomMargin" value="20"/>
+    <property xmi:id="_xgy3VsznEeKH2rWo0wnQfw" key="diagramLeftMargin" value="20"/>
+    <property xmi:id="_xgy3V8znEeKH2rWo0wnQfw" key="diagramRightMargin" value="20"/>
+    <property xmi:id="_xgy3WMznEeKH2rWo0wnQfw" key="orientation" value="portrait"/>
+    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_xYBV0sznEeKH2rWo0wnQfw" presentation="org.topcased.modeler.sysml.blockdefinitiondiagram">
+      <element href="CircuitRC.sysml#idPackage"/>
+    </semanticModel>
+  </diagrams>
+</diagrams:Diagrams>

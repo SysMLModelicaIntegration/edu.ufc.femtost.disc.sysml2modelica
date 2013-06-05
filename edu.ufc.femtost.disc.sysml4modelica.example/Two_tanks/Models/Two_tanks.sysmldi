@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_F8uO0K5xEeKQuMR9AcOvgg" activeDiagram="_XZ_Pka50EeKQuMR9AcOvgg">
+  <model href="Two_tanks.sysml#idPackage"/>
+  <diagrams xmi:id="_F8uO0a5xEeKQuMR9AcOvgg" position="0,0" size="100,100" name="Two_tanks" viewport="0,0">
+    <property xmi:id="_GAmCMK5xEeKQuMR9AcOvgg" key="pageFormatName" value="A4"/>
+    <property xmi:id="_GAmCMa5xEeKQuMR9AcOvgg" key="diagramWidth" value="840"/>
+    <property xmi:id="_GAmCMq5xEeKQuMR9AcOvgg" key="diagramHeight" value="1188"/>
+    <property xmi:id="_GAmCM65xEeKQuMR9AcOvgg" key="pageMarginName" value="Small Margin"/>
+    <property xmi:id="_GAmCNK5xEeKQuMR9AcOvgg" key="diagramTopMargin" value="20"/>
+    <property xmi:id="_GAmCNa5xEeKQuMR9AcOvgg" key="diagramBottomMargin" value="20"/>
+    <property xmi:id="_GAmCNq5xEeKQuMR9AcOvgg" key="diagramLeftMargin" value="20"/>
+    <property xmi:id="_GAmCN65xEeKQuMR9AcOvgg" key="diagramRightMargin" value="20"/>
+    <property xmi:id="_GAmCOK5xEeKQuMR9AcOvgg" key="orientation" value="portrait"/>
+    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_F8uO0q5xEeKQuMR9AcOvgg" presentation="org.topcased.modeler.sysml.blockdefinitiondiagram">
+      <element href="Two_tanks.sysml#idPackage"/>
+    </semanticModel>
+    <contained xsi:type="di:GraphNode" xmi:id="_e3gRYK5xEeKQuMR9AcOvgg" position="36,50" size="184,-1">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_e3gRYa5xEeKQuMR9AcOvgg" presentation="default">
+        <element href="Two_tanks.sysml#_e389UK5xEeKQuMR9AcOvgg"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_e3gRYq5xEeKQuMR9AcOvgg">
+        <property xmi:id="_e3gRY65xEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="12"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_e3gRZK5xEeKQuMR9AcOvgg" presentation="constraints">
+          <element href="Two_tanks.sysml#_e389UK5xEeKQuMR9AcOvgg"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_e3gRZa5xEeKQuMR9AcOvgg">
+        <property xmi:id="_e3gRZq5xEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_e3gRZ65xEeKQuMR9AcOvgg" presentation="operations">
+          <element href="Two_tanks.sysml#_e389UK5xEeKQuMR9AcOvgg"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_e3gRaK5xEeKQuMR9AcOvgg">
+        <property xmi:id="_e3gRaa5xEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_e3gRaq5xEeKQuMR9AcOvgg" presentation="default">
+          <element href="Two_tanks.sysml#_e389UK5xEeKQuMR9AcOvgg"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_ptfjgK5xEeKQuMR9AcOvgg" position="251,50" size="219,-1">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ptfjga5xEeKQuMR9AcOvgg" presentation="default">
+        <element href="Two_tanks.sysml#_ptfji65xEeKQuMR9AcOvgg"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_ptfjgq5xEeKQuMR9AcOvgg">
+        <property xmi:id="_ptfjg65xEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="12"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ptfjhK5xEeKQuMR9AcOvgg" presentation="constraints">
+          <element href="Two_tanks.sysml#_ptfji65xEeKQuMR9AcOvgg"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_ptfjha5xEeKQuMR9AcOvgg">
+        <property xmi:id="_ptfjhq5xEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ptfjh65xEeKQuMR9AcOvgg" presentation="operations">
+          <element href="Two_tanks.sysml#_ptfji65xEeKQuMR9AcOvgg"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_ptfjiK5xEeKQuMR9AcOvgg">
+        <property xmi:id="_ptfjia5xEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ptfjiq5xEeKQuMR9AcOvgg" presentation="default">
+          <element href="Two_tanks.sysml#_ptfji65xEeKQuMR9AcOvgg"/>
+        </semanticModel>
+      </contained>
+    </contained>
+  </diagrams>
+  <subdiagrams xmi:id="_6jyLMK5xEeKQuMR9AcOvgg">
+    <model href="Two_tanks.sysml#_e389UK5xEeKQuMR9AcOvgg"/>
+    <diagrams xmi:id="_6jyLMa5xEeKQuMR9AcOvgg" position="0,0" size="100,100" name="Design" viewport="0,0">
+      <property xmi:id="_6kFGIK5xEeKQuMR9AcOvgg" key="pageFormatName" value="A4"/>
+      <property xmi:id="_6kFGIa5xEeKQuMR9AcOvgg" key="diagramWidth" value="840"/>
+      <property xmi:id="_6kFGIq5xEeKQuMR9AcOvgg" key="diagramHeight" value="1188"/>
+      <property xmi:id="_6kFGI65xEeKQuMR9AcOvgg" key="pageMarginName" value="Small Margin"/>
+      <property xmi:id="_6kFGJK5xEeKQuMR9AcOvgg" key="diagramTopMargin" value="20"/>
+      <property xmi:id="_6kFGJa5xEeKQuMR9AcOvgg" key="diagramBottomMargin" value="20"/>
+      <property xmi:id="_6kFGJq5xEeKQuMR9AcOvgg" key="diagramLeftMargin" value="20"/>
+      <property xmi:id="_6kFGJ65xEeKQuMR9AcOvgg" key="diagramRightMargin" value="20"/>
+      <property xmi:id="_6kFGKK5xEeKQuMR9AcOvgg" key="orientation" value="portrait"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6jyLMq5xEeKQuMR9AcOvgg" presentation="org.topcased.modeler.sysml.blockdefinitiondiagram">
+        <element href="Two_tanks.sysml#_e389UK5xEeKQuMR9AcOvgg"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_6wlREK5xEeKQuMR9AcOvgg" position="41,59" size="240,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6wlREa5xEeKQuMR9AcOvgg" presentation="default">
+          <element href="Two_tanks.sysml#_6wlRG65xEeKQuMR9AcOvgg"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_6wlREq5xEeKQuMR9AcOvgg">
+          <property xmi:id="_6wlRE65xEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="12"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6wlRFK5xEeKQuMR9AcOvgg" presentation="constraints">
+            <element href="Two_tanks.sysml#_6wlRG65xEeKQuMR9AcOvgg"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_6wlRFa5xEeKQuMR9AcOvgg">
+          <property xmi:id="_6wlRFq5xEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="47 50 "/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6wlRF65xEeKQuMR9AcOvgg" presentation="operations">
+            <element href="Two_tanks.sysml#_6wlRG65xEeKQuMR9AcOvgg"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_6wlRGK5xEeKQuMR9AcOvgg">
+          <property xmi:id="_6wlRGa5xEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6wlRGq5xEeKQuMR9AcOvgg" presentation="default">
+            <element href="Two_tanks.sysml#_6wlRG65xEeKQuMR9AcOvgg"/>
+          </semanticModel>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_8eF7wK5xEeKQuMR9AcOvgg" position="305,60" size="228,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_8eF7wa5xEeKQuMR9AcOvgg" presentation="default">
+          <element href="Two_tanks.sysml#_8eF7y65xEeKQuMR9AcOvgg"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_8eF7wq5xEeKQuMR9AcOvgg">
+          <property xmi:id="_8eF7w65xEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="12"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_8eF7xK5xEeKQuMR9AcOvgg" presentation="constraints">
+            <element href="Two_tanks.sysml#_8eF7y65xEeKQuMR9AcOvgg"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_8eF7xa5xEeKQuMR9AcOvgg">
+          <property xmi:id="_8eF7xq5xEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="47 50 "/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_8eF7x65xEeKQuMR9AcOvgg" presentation="operations">
+            <element href="Two_tanks.sysml#_8eF7y65xEeKQuMR9AcOvgg"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_8eF7yK5xEeKQuMR9AcOvgg">
+          <property xmi:id="_8eF7ya5xEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_8eF7yq5xEeKQuMR9AcOvgg" presentation="default">
+            <element href="Two_tanks.sysml#_8eF7y65xEeKQuMR9AcOvgg"/>
+          </semanticModel>
+        </contained>
+      </contained>
+    </diagrams>
+    <subdiagrams xmi:id="_FDSP8K5yEeKQuMR9AcOvgg">
+      <model href="Two_tanks.sysml#_6wlRG65xEeKQuMR9AcOvgg"/>
+      <diagrams xmi:id="_FDSP8a5yEeKQuMR9AcOvgg" position="0,0" size="100,100" name="Interface" viewport="0,28">
+        <property xmi:id="_FDcA8K5yEeKQuMR9AcOvgg" key="pageFormatName" value="A4"/>
+        <property xmi:id="_FDcA8a5yEeKQuMR9AcOvgg" key="diagramWidth" value="840"/>
+        <property xmi:id="_FDcA8q5yEeKQuMR9AcOvgg" key="diagramHeight" value="1188"/>
+        <property xmi:id="_FDcA865yEeKQuMR9AcOvgg" key="pageMarginName" value="Small Margin"/>
+        <property xmi:id="_FDcA9K5yEeKQuMR9AcOvgg" key="diagramTopMargin" value="20"/>
+        <property xmi:id="_FDcA9a5yEeKQuMR9AcOvgg" key="diagramBottomMargin" value="20"/>
+        <property xmi:id="_FDcA9q5yEeKQuMR9AcOvgg" key="diagramLeftMargin" value="20"/>
+        <property xmi:id="_FDcA965yEeKQuMR9AcOvgg" key="diagramRightMargin" value="20"/>
+        <property xmi:id="_FDcA-K5yEeKQuMR9AcOvgg" key="orientation" value="portrait"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_FDSP8q5yEeKQuMR9AcOvgg" presentation="org.topcased.modeler.sysml.blockdefinitiondiagram">
+          <element href="Two_tanks.sysml#_6wlRG65xEeKQuMR9AcOvgg"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_FOvSAK5yEeKQuMR9AcOvgg" position="18,36" size="366,-1">
+          <property xmi:id="_H-mKgK5yEeKQuMR9AcOvgg" key="backgroundColor" value="249,216,138"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_FOvSAa5yEeKQuMR9AcOvgg" presentation="default">
+            <element href="Two_tanks.sysml#_FOvSC65yEeKQuMR9AcOvgg"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_FOvSAq5yEeKQuMR9AcOvgg">
+            <property xmi:id="_FOvSA65yEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_FOvSBK5yEeKQuMR9AcOvgg" presentation="constraints">
+              <element href="Two_tanks.sysml#_FOvSC65yEeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_FOvSBa5yEeKQuMR9AcOvgg">
+            <property xmi:id="_FOvSBq5yEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_FOvSB65yEeKQuMR9AcOvgg" presentation="operations">
+              <element href="Two_tanks.sysml#_FOvSC65yEeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_FOvSCK5yEeKQuMR9AcOvgg">
+            <property xmi:id="_FOvSCa5yEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_FOvSCq5yEeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_FOvSC65yEeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_lP_A8K5yEeKQuMR9AcOvgg" position="0,0" size="-1,-1">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_lP_A8a5yEeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_lQk20K5yEeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_K_l2UK5yEeKQuMR9AcOvgg" position="20,203" size="367,-1">
+          <property xmi:id="_Po3ukK5yEeKQuMR9AcOvgg" key="backgroundColor" value="249,216,138"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_K_l2Ua5yEeKQuMR9AcOvgg" presentation="default">
+            <element href="Two_tanks.sysml#_K_vAQK5yEeKQuMR9AcOvgg"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_K_l2Uq5yEeKQuMR9AcOvgg">
+            <property xmi:id="_K_l2U65yEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_K_l2VK5yEeKQuMR9AcOvgg" presentation="constraints">
+              <element href="Two_tanks.sysml#_K_vAQK5yEeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_K_l2Va5yEeKQuMR9AcOvgg">
+            <property xmi:id="_K_l2Vq5yEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_K_l2V65yEeKQuMR9AcOvgg" presentation="operations">
+              <element href="Two_tanks.sysml#_K_vAQK5yEeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_K_l2WK5yEeKQuMR9AcOvgg">
+            <property xmi:id="_K_l2Wa5yEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_K_l2Wq5yEeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_K_vAQK5yEeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_Jk_EEK5zEeKQuMR9AcOvgg" position="0,0" size="-1,-1">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Jk_EEa5zEeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_Jk_EEq5zEeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_QaagQK5yEeKQuMR9AcOvgg" position="27,371" size="361,-1">
+          <property xmi:id="_R7t68K5yEeKQuMR9AcOvgg" key="backgroundColor" value="249,216,138"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_QaagQa5yEeKQuMR9AcOvgg" presentation="default">
+            <element href="Two_tanks.sysml#_QakRQK5yEeKQuMR9AcOvgg"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_QaagQq5yEeKQuMR9AcOvgg">
+            <property xmi:id="_QaagQ65yEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_QaagRK5yEeKQuMR9AcOvgg" presentation="constraints">
+              <element href="Two_tanks.sysml#_QakRQK5yEeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_QaagRa5yEeKQuMR9AcOvgg">
+            <property xmi:id="_QaagRq5yEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_QaagR65yEeKQuMR9AcOvgg" presentation="operations">
+              <element href="Two_tanks.sysml#_QakRQK5yEeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_QaagSK5yEeKQuMR9AcOvgg">
+            <property xmi:id="_QaagSa5yEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_QaagSq5yEeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_QakRQK5yEeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_MZv1QK50EeKQuMR9AcOvgg" position="0,0" size="-1,-1">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_MZv1Qa50EeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_MZ4_MK50EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+        </contained>
+      </diagrams>
+    </subdiagrams>
+    <subdiagrams xmi:id="_XZ_PkK50EeKQuMR9AcOvgg">
+      <model href="Two_tanks.sysml#_8eF7y65xEeKQuMR9AcOvgg"/>
+      <diagrams xmi:id="_XZ_Pka50EeKQuMR9AcOvgg" position="0,0" size="100,100" name="Components" viewport="653,216">
+        <property xmi:id="_XaIZgK50EeKQuMR9AcOvgg" key="pageFormatName" value="A1"/>
+        <property xmi:id="_XaIZga50EeKQuMR9AcOvgg" key="diagramWidth" value="2376"/>
+        <property xmi:id="_XaIZgq50EeKQuMR9AcOvgg" key="diagramHeight" value="3364"/>
+        <property xmi:id="_XaIZg650EeKQuMR9AcOvgg" key="pageMarginName" value="Small Margin"/>
+        <property xmi:id="_XaIZhK50EeKQuMR9AcOvgg" key="diagramTopMargin" value="20"/>
+        <property xmi:id="_XaIZha50EeKQuMR9AcOvgg" key="diagramBottomMargin" value="20"/>
+        <property xmi:id="_XaIZhq50EeKQuMR9AcOvgg" key="diagramLeftMargin" value="20"/>
+        <property xmi:id="_XaIZh650EeKQuMR9AcOvgg" key="diagramRightMargin" value="20"/>
+        <property xmi:id="_XaIZiK50EeKQuMR9AcOvgg" key="orientation" value="portrait"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_XZ_Pkq50EeKQuMR9AcOvgg" presentation="org.topcased.modeler.sysml.blockdefinitiondiagram">
+          <element href="Two_tanks.sysml#_8eF7y65xEeKQuMR9AcOvgg"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_YyFD4K50EeKQuMR9AcOvgg" position="200,43" size="369,-1">
+          <anchorage xmi:id="_Dc3u8a52EeKQuMR9AcOvgg" graphEdge="_Dc3u8q52EeKQuMR9AcOvgg"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_YyFD4a50EeKQuMR9AcOvgg" presentation="default">
+            <element href="Two_tanks.sysml#_YyON0K50EeKQuMR9AcOvgg"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_YyFD4q50EeKQuMR9AcOvgg">
+            <property xmi:id="_YyFD4650EeKQuMR9AcOvgg" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_YyFD5K50EeKQuMR9AcOvgg" presentation="constraints">
+              <element href="Two_tanks.sysml#_YyON0K50EeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_EIvL4K51EeKQuMR9AcOvgg" position="0,0" size="0,0">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_EIvL4a51EeKQuMR9AcOvgg" presentation="node">
+                <element href="Two_tanks.sysml#_EIvL4q51EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_NK8zQK51EeKQuMR9AcOvgg" position="0,0" size="0,0">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_NK8zQa51EeKQuMR9AcOvgg" presentation="node">
+                <element href="Two_tanks.sysml#_NK8zQq51EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_YyFD5a50EeKQuMR9AcOvgg">
+            <property xmi:id="_YyFD5q50EeKQuMR9AcOvgg" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_YyFD5650EeKQuMR9AcOvgg" presentation="operations">
+              <element href="Two_tanks.sysml#_YyON0K50EeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_YyFD6K50EeKQuMR9AcOvgg">
+            <property xmi:id="_YyFD6a50EeKQuMR9AcOvgg" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_YyFD6q50EeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_YyON0K50EeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_harRYK50EeKQuMR9AcOvgg" position="0,0" size="-1,-1">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_harRYa50EeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_harRYq50EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_rbWsIK50EeKQuMR9AcOvgg" position="0,0" size="-1,-1">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_rbWsIa50EeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_rbWsIq50EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_zRPDQK50EeKQuMR9AcOvgg" position="0,0" size="-1,-1">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_zRPDQa50EeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_zRPDQq50EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_9BRZ8K50EeKQuMR9AcOvgg" position="0,0" size="-1,-1">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9BRZ8a50EeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_9BRZ8q50EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="__uMTMK50EeKQuMR9AcOvgg" position="0,0" size="-1,-1">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__uMTMa50EeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#__uVdIK50EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_RstuQK51EeKQuMR9AcOvgg" position="7,65" size="15,15">
+            <property xmi:id="_RstuQa51EeKQuMR9AcOvgg" key="portPosition" value="1"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_RstuQq51EeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_RstuQ651EeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_V6evMK51EeKQuMR9AcOvgg" position="354,77" size="15,15">
+            <property xmi:id="_V6evMa51EeKQuMR9AcOvgg" key="portPosition" value="4"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_V6evMq51EeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_V6evM651EeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_d5RxwK51EeKQuMR9AcOvgg" position="780,57" size="612,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_d5Rxwa51EeKQuMR9AcOvgg" presentation="default">
+            <element href="Two_tanks.sysml#_d5biwK51EeKQuMR9AcOvgg"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_d5Rxwq51EeKQuMR9AcOvgg">
+            <property xmi:id="_d5Rxw651EeKQuMR9AcOvgg" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_d5RxxK51EeKQuMR9AcOvgg" presentation="constraints">
+              <element href="Two_tanks.sysml#_d5biwK51EeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_ydWSwK51EeKQuMR9AcOvgg" position="0,0" size="0,0">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ydWSwa51EeKQuMR9AcOvgg" presentation="node">
+                <element href="Two_tanks.sysml#_ydgDwK51EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_d5Rxxa51EeKQuMR9AcOvgg">
+            <property xmi:id="_d5Rxxq51EeKQuMR9AcOvgg" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_d5Rxx651EeKQuMR9AcOvgg" presentation="operations">
+              <element href="Two_tanks.sysml#_d5biwK51EeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_d5RxyK51EeKQuMR9AcOvgg">
+            <property xmi:id="_d5Rxya51EeKQuMR9AcOvgg" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_d5Rxyq51EeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_d5biwK51EeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_mRh2IK51EeKQuMR9AcOvgg" position="0,0" size="-1,-1">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_mRh2Ia51EeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_mRh2Iq51EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_g5gBgK51EeKQuMR9AcOvgg" position="235,12" size="15,15">
+            <property xmi:id="_g5gBga51EeKQuMR9AcOvgg" key="portPosition" value="4"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_g5gBgq51EeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_g5gBg651EeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="__OWgEK51EeKQuMR9AcOvgg" position="207,436" size="355,-1">
+          <anchorage xmi:id="_Dc3u8K52EeKQuMR9AcOvgg" graphEdge="_Dc3u8q52EeKQuMR9AcOvgg"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__OWgEa51EeKQuMR9AcOvgg" presentation="default">
+            <element href="Two_tanks.sysml#__OpbAK51EeKQuMR9AcOvgg"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="__OWgEq51EeKQuMR9AcOvgg">
+            <property xmi:id="__OWgE651EeKQuMR9AcOvgg" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__OWgFK51EeKQuMR9AcOvgg" presentation="constraints">
+              <element href="Two_tanks.sysml#__OpbAK51EeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_XjmXMK53EeKQuMR9AcOvgg" position="0,0" size="0,0">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_XjmXMa53EeKQuMR9AcOvgg" presentation="node">
+                <element href="Two_tanks.sysml#_XjmXMq53EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_bX6WUK53EeKQuMR9AcOvgg" position="0,0" size="0,0">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_bX6WUa53EeKQuMR9AcOvgg" presentation="node">
+                <element href="Two_tanks.sysml#_bX6WUq53EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="__OWgFa51EeKQuMR9AcOvgg">
+            <property xmi:id="__OWgFq51EeKQuMR9AcOvgg" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__OWgF651EeKQuMR9AcOvgg" presentation="operations">
+              <element href="Two_tanks.sysml#__OpbAK51EeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="__OWgGK51EeKQuMR9AcOvgg">
+            <property xmi:id="__OWgGa51EeKQuMR9AcOvgg" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__OWgGq51EeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#__OpbAK51EeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_UdHHYK53EeKQuMR9AcOvgg" position="0,0" size="-1,-1">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_UdHHYa53EeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_UdHHYq53EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_Dc3u8q52EeKQuMR9AcOvgg" anchor="_Dc3u8K52EeKQuMR9AcOvgg _Dc3u8a52EeKQuMR9AcOvgg">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Dc3u8652EeKQuMR9AcOvgg" presentation="default">
+            <element href="Two_tanks.sysml#_DdKp4K52EeKQuMR9AcOvgg"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_Dc3u9K52EeKQuMR9AcOvgg" visible="false" id="stereotypeEdgeObject"/>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_lZNcIK53EeKQuMR9AcOvgg" position="796,306" size="587,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_lZNcIa53EeKQuMR9AcOvgg" presentation="default">
+            <element href="Two_tanks.sysml#_lZNcK653EeKQuMR9AcOvgg"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_lZNcIq53EeKQuMR9AcOvgg">
+            <property xmi:id="_lZNcI653EeKQuMR9AcOvgg" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_lZNcJK53EeKQuMR9AcOvgg" presentation="constraints">
+              <element href="Two_tanks.sysml#_lZNcK653EeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_Z6x0gK54EeKQuMR9AcOvgg" position="0,0" size="0,0">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Z6x0ga54EeKQuMR9AcOvgg" presentation="node">
+                <element href="Two_tanks.sysml#_Z6x0gq54EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_kzcAIK54EeKQuMR9AcOvgg" position="0,0" size="0,0">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_kzcAIa54EeKQuMR9AcOvgg" presentation="node">
+                <element href="Two_tanks.sysml#_kzcAIq54EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_nXQnwK54EeKQuMR9AcOvgg" position="0,0" size="0,0">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_nXQnwa54EeKQuMR9AcOvgg" presentation="node">
+                <element href="Two_tanks.sysml#_nXQnwq54EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_vp3-MK54EeKQuMR9AcOvgg" position="0,0" size="0,0">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_vp3-Ma54EeKQuMR9AcOvgg" presentation="node">
+                <element href="Two_tanks.sysml#_vp3-Mq54EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_lZNcJa53EeKQuMR9AcOvgg">
+            <property xmi:id="_lZNcJq53EeKQuMR9AcOvgg" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_lZNcJ653EeKQuMR9AcOvgg" presentation="operations">
+              <element href="Two_tanks.sysml#_lZNcK653EeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_lZNcKK53EeKQuMR9AcOvgg">
+            <property xmi:id="_lZNcKa53EeKQuMR9AcOvgg" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_lZNcKq53EeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_lZNcK653EeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_1CLVEK53EeKQuMR9AcOvgg" position="0,0" size="-1,-1">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_1CLVEa53EeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_1CUfAK53EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="__jAPgK53EeKQuMR9AcOvgg" position="0,0" size="-1,-1">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__jAPga53EeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#__jAPgq53EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_HO7ZYK54EeKQuMR9AcOvgg" position="0,0" size="-1,-1">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_HO7ZYa54EeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_HO7ZYq54EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_K3y9gK54EeKQuMR9AcOvgg" position="0,0" size="-1,-1">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_K3y9ga54EeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_K3y9gq54EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_QiZv4K54EeKQuMR9AcOvgg" position="0,0" size="-1,-1">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_QiZv4a54EeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_QiZv4q54EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_nqSt8K53EeKQuMR9AcOvgg" position="-1,26" size="15,15">
+            <property xmi:id="_nqSt8a53EeKQuMR9AcOvgg" key="portPosition" value="1"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_nqSt8q53EeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_nqSt8653EeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_rAt3MK53EeKQuMR9AcOvgg" position="289,23" size="15,15">
+            <property xmi:id="_rAt3Ma53EeKQuMR9AcOvgg" key="portPosition" value="4"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_rAt3Mq53EeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_rA3BIK53EeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_u8LnMK53EeKQuMR9AcOvgg" position="4,81" size="15,15">
+            <property xmi:id="_u8LnMa53EeKQuMR9AcOvgg" key="portPosition" value="1"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_u8LnMq53EeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_u8VYMK53EeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_x4aHwK53EeKQuMR9AcOvgg" position="288,81" size="15,15">
+            <property xmi:id="_x4aHwa53EeKQuMR9AcOvgg" key="portPosition" value="4"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_x4aHwq53EeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_x4aHw653EeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_58uHAK54EeKQuMR9AcOvgg" position="1624,53" size="252,50">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_58uHAa54EeKQuMR9AcOvgg" presentation="default">
+            <element href="Two_tanks.sysml#_5WemYK54EeKQuMR9AcOvgg"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_728aMK6HEeKQuMR9AcOvgg" position="216,717" size="344,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_728aMa6HEeKQuMR9AcOvgg" presentation="default">
+            <element href="Two_tanks.sysml#_73GLMK6HEeKQuMR9AcOvgg"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_728aMq6HEeKQuMR9AcOvgg">
+            <property xmi:id="_728aM66HEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_728aNK6HEeKQuMR9AcOvgg" presentation="constraints">
+              <element href="Two_tanks.sysml#_73GLMK6HEeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_728aNa6HEeKQuMR9AcOvgg">
+            <property xmi:id="_728aNq6HEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_728aN66HEeKQuMR9AcOvgg" presentation="operations">
+              <element href="Two_tanks.sysml#_73GLMK6HEeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_728aOK6HEeKQuMR9AcOvgg">
+            <property xmi:id="_728aOa6HEeKQuMR9AcOvgg" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_728aOq6HEeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_73GLMK6HEeKQuMR9AcOvgg"/>
+            </semanticModel>
+          </contained>
+        </contained>
+      </diagrams>
+      <subdiagrams xmi:id="_CO-6UK6IEeKQuMR9AcOvgg">
+        <model href="Two_tanks.sysml#_73GLMK6HEeKQuMR9AcOvgg"/>
+        <diagrams xmi:id="_CO-6Ua6IEeKQuMR9AcOvgg" position="0,0" size="100,100" name="TanksConnectedPI" zoom="0.75" viewport="351,50">
+          <property xmi:id="_CPR1QK6IEeKQuMR9AcOvgg" key="pageFormatName" value="A1"/>
+          <property xmi:id="_CPR1Qa6IEeKQuMR9AcOvgg" key="diagramWidth" value="2376"/>
+          <property xmi:id="_CPR1Qq6IEeKQuMR9AcOvgg" key="diagramHeight" value="3364"/>
+          <property xmi:id="_CPR1Q66IEeKQuMR9AcOvgg" key="pageMarginName" value="Small Margin"/>
+          <property xmi:id="_CPR1RK6IEeKQuMR9AcOvgg" key="diagramTopMargin" value="20"/>
+          <property xmi:id="_CPR1Ra6IEeKQuMR9AcOvgg" key="diagramBottomMargin" value="20"/>
+          <property xmi:id="_CPR1Rq6IEeKQuMR9AcOvgg" key="diagramLeftMargin" value="20"/>
+          <property xmi:id="_CPR1R66IEeKQuMR9AcOvgg" key="diagramRightMargin" value="20"/>
+          <property xmi:id="_CPR1SK6IEeKQuMR9AcOvgg" key="orientation" value="portrait"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_CPIEQK6IEeKQuMR9AcOvgg" presentation="org.topcased.modeler.sysml.internalblockdiagram">
+            <element href="Two_tanks.sysml#_73GLMK6HEeKQuMR9AcOvgg"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_D9PL4K6IEeKQuMR9AcOvgg" position="165,152" size="212,67">
+            <property xmi:id="_D9Y84K6IEeKQuMR9AcOvgg" key="routeSelected" value="source"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_D9PL4a6IEeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_D9Y84a6IEeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_5in8QK6JEeKQuMR9AcOvgg" position="64,49" size="15,15">
+              <property xmi:id="_5in8Qa6JEeKQuMR9AcOvgg" key="portPosition" value="32"/>
+              <anchorage xmi:id="_8dDtEK6JEeKQuMR9AcOvgg" graphEdge="_8dDtEq6JEeKQuMR9AcOvgg"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_5in8Qq6JEeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_g5gBg651EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_mBkM4K6IEeKQuMR9AcOvgg" position="459,454" size="377,96">
+            <property xmi:id="_mBt94K6IEeKQuMR9AcOvgg" key="routeSelected" value="tank1"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_mBkM4a6IEeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_mBt94a6IEeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_HSBg8K6JEeKQuMR9AcOvgg" position="19,1" size="15,15">
+              <property xmi:id="_HSBg8a6JEeKQuMR9AcOvgg" key="portPosition" value="8"/>
+              <anchorage xmi:id="_OEViQa6JEeKQuMR9AcOvgg" graphEdge="_OEViQq6JEeKQuMR9AcOvgg"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_HSBg8q6JEeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_rA3BIK53EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_oDZFQK6JEeKQuMR9AcOvgg" position="364,11" size="15,15">
+              <property xmi:id="_oDZFQa6JEeKQuMR9AcOvgg" key="portPosition" value="4"/>
+              <anchorage xmi:id="_lZupcK6LEeKQuMR9AcOvgg" graphEdge="_lZupcq6LEeKQuMR9AcOvgg"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_oDZFQq6JEeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_x4aHw653EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_7zsnAK6JEeKQuMR9AcOvgg" position="1,64" size="15,15">
+              <property xmi:id="_7zsnAa6JEeKQuMR9AcOvgg" key="portPosition" value="1"/>
+              <anchorage xmi:id="_8dDtEa6JEeKQuMR9AcOvgg" graphEdge="_8dDtEq6JEeKQuMR9AcOvgg"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_7zsnAq6JEeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_u8VYMK53EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_FgbyEK6KEeKQuMR9AcOvgg" position="318,-1" size="15,15">
+              <property xmi:id="_FgbyEa6KEeKQuMR9AcOvgg" key="portPosition" value="8"/>
+              <anchorage xmi:id="_Ik3zcK6KEeKQuMR9AcOvgg" graphEdge="_Ik3zcq6KEeKQuMR9AcOvgg"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_FgbyEq6KEeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_nqSt8653EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_p6pXQK6IEeKQuMR9AcOvgg" position="1214,621" size="353,80">
+            <property xmi:id="_p6yhMK6IEeKQuMR9AcOvgg" key="routeSelected" value="tank2"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_p6pXQa6IEeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_p6yhMa6IEeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_S_miYK6JEeKQuMR9AcOvgg" position="5,-3" size="15,15">
+              <property xmi:id="_S_miYa6JEeKQuMR9AcOvgg" key="portPosition" value="8"/>
+              <anchorage xmi:id="_bTPzka6JEeKQuMR9AcOvgg" graphEdge="_bTPzkq6JEeKQuMR9AcOvgg"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_S_miYq6JEeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_nqSt8653EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_fi8uMK6JEeKQuMR9AcOvgg" position="299,1" size="15,15">
+              <property xmi:id="_fi8uMa6JEeKQuMR9AcOvgg" key="portPosition" value="8"/>
+              <anchorage xmi:id="_jnL_sa6JEeKQuMR9AcOvgg" graphEdge="_jnL_sq6JEeKQuMR9AcOvgg"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_fi8uMq6JEeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_rA3BIK53EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_vpf7AK6JEeKQuMR9AcOvgg" position="1,51" size="15,15">
+              <property xmi:id="_vpf7Aa6JEeKQuMR9AcOvgg" key="portPosition" value="1"/>
+              <anchorage xmi:id="_lZupca6LEeKQuMR9AcOvgg" graphEdge="_lZupcq6LEeKQuMR9AcOvgg"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_vpf7Aq6JEeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_u8VYMK53EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_z08dMK6IEeKQuMR9AcOvgg" position="474,262" size="325,75">
+            <property xmi:id="_z1FnIK6IEeKQuMR9AcOvgg" key="routeSelected" value="piContinuous1"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_z08dMa6IEeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_z1FnIa6IEeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_LD86cK6JEeKQuMR9AcOvgg" position="51,63" size="15,15">
+              <property xmi:id="_LD86ca6JEeKQuMR9AcOvgg" key="portPosition" value="32"/>
+              <anchorage xmi:id="_OEViQK6JEeKQuMR9AcOvgg" graphEdge="_OEViQq6JEeKQuMR9AcOvgg"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_LD86cq6JEeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_V6evM651EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_HpMOUK6KEeKQuMR9AcOvgg" position="263,61" size="15,15">
+              <property xmi:id="_HpMOUa6KEeKQuMR9AcOvgg" key="portPosition" value="32"/>
+              <anchorage xmi:id="_Ik3zca6KEeKQuMR9AcOvgg" graphEdge="_Ik3zcq6KEeKQuMR9AcOvgg"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_HpMOUq6KEeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_RstuQ651EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_5PLRQK6IEeKQuMR9AcOvgg" position="1243,339" size="290,64">
+            <property xmi:id="_5PeMMK6IEeKQuMR9AcOvgg" key="routeSelected" value="piContinuous2"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_5PLRQa6IEeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_5Pn9MK6IEeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_YmDNgK6JEeKQuMR9AcOvgg" position="11,46" size="15,15">
+              <property xmi:id="_YmDNga6JEeKQuMR9AcOvgg" key="portPosition" value="32"/>
+              <anchorage xmi:id="_bTPzkK6JEeKQuMR9AcOvgg" graphEdge="_bTPzkq6JEeKQuMR9AcOvgg"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_YmDNgq6JEeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_RstuQ651EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_i5NfYK6JEeKQuMR9AcOvgg" position="255,49" size="15,15">
+              <property xmi:id="_i5NfYa6JEeKQuMR9AcOvgg" key="portPosition" value="32"/>
+              <anchorage xmi:id="_jnL_sK6JEeKQuMR9AcOvgg" graphEdge="_jnL_sq6JEeKQuMR9AcOvgg"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_i5NfYq6JEeKQuMR9AcOvgg" presentation="default">
+                <element href="Two_tanks.sysml#_V6evM651EeKQuMR9AcOvgg"/>
+              </semanticModel>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphEdge" xmi:id="_OEViQq6JEeKQuMR9AcOvgg" anchor="_OEViQK6JEeKQuMR9AcOvgg _OEViQa6JEeKQuMR9AcOvgg">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_OEViQ66JEeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_OEfTQK6JEeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:EdgeObjectOffset" xmi:id="_OEViRK6JEeKQuMR9AcOvgg" visible="false" id="connectorMiddleNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_OEViRa6JEeKQuMR9AcOvgg" id="connectorSourceNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_OEViRq6JEeKQuMR9AcOvgg" id="connectorSourceCountEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_OEViR66JEeKQuMR9AcOvgg" id="connectorTargetCountEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_OEViSK6JEeKQuMR9AcOvgg" id="connectorTargetNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectOffset" xmi:id="_OEViSa6JEeKQuMR9AcOvgg" visible="false" id="connectorStereotypeEdgeObject"/>
+          </contained>
+          <contained xsi:type="di:GraphEdge" xmi:id="_bTPzkq6JEeKQuMR9AcOvgg" anchor="_bTPzkK6JEeKQuMR9AcOvgg _bTPzka6JEeKQuMR9AcOvgg">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_bTPzk66JEeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_bTr4cK6JEeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:EdgeObjectOffset" xmi:id="_bTPzlK6JEeKQuMR9AcOvgg" visible="false" id="connectorMiddleNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_bTPzla6JEeKQuMR9AcOvgg" id="connectorSourceNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_bTPzlq6JEeKQuMR9AcOvgg" id="connectorSourceCountEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_bTPzl66JEeKQuMR9AcOvgg" id="connectorTargetCountEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_bTPzmK6JEeKQuMR9AcOvgg" id="connectorTargetNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectOffset" xmi:id="_bTPzma6JEeKQuMR9AcOvgg" visible="false" id="connectorStereotypeEdgeObject"/>
+            <waypoints>[0, 119, 53, -118]</waypoints>
+            <waypoints>[-53, 119, 0, -118]</waypoints>
+          </contained>
+          <contained xsi:type="di:GraphEdge" xmi:id="_jnL_sq6JEeKQuMR9AcOvgg" anchor="_jnL_sK6JEeKQuMR9AcOvgg _jnL_sa6JEeKQuMR9AcOvgg">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_jnL_s66JEeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_jnVJoK6JEeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:EdgeObjectOffset" xmi:id="_jnL_tK6JEeKQuMR9AcOvgg" visible="false" id="connectorMiddleNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_jnL_ta6JEeKQuMR9AcOvgg" id="connectorSourceNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_jnL_tq6JEeKQuMR9AcOvgg" id="connectorSourceCountEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_jnL_t66JEeKQuMR9AcOvgg" id="connectorTargetCountEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_jnL_uK6JEeKQuMR9AcOvgg" id="connectorTargetNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectOffset" xmi:id="_jnL_ua6JEeKQuMR9AcOvgg" visible="false" id="connectorStereotypeEdgeObject"/>
+          </contained>
+          <contained xsi:type="di:GraphEdge" xmi:id="_8dDtEq6JEeKQuMR9AcOvgg" anchor="_8dDtEK6JEeKQuMR9AcOvgg _8dDtEa6JEeKQuMR9AcOvgg">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_8dDtE66JEeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_8dpi8K6JEeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:EdgeObjectOffset" xmi:id="_8dDtFK6JEeKQuMR9AcOvgg" visible="false" id="connectorMiddleNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_8dDtFa6JEeKQuMR9AcOvgg" id="connectorSourceNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_8dDtFq6JEeKQuMR9AcOvgg" id="connectorSourceCountEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_8dDtF66JEeKQuMR9AcOvgg" id="connectorTargetCountEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_8dDtGK6JEeKQuMR9AcOvgg" id="connectorTargetNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectOffset" xmi:id="_8dDtGa6JEeKQuMR9AcOvgg" visible="false" id="connectorStereotypeEdgeObject"/>
+          </contained>
+          <contained xsi:type="di:GraphEdge" xmi:id="_Ik3zcq6KEeKQuMR9AcOvgg" anchor="_Ik3zcK6KEeKQuMR9AcOvgg _Ik3zca6KEeKQuMR9AcOvgg">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Ik3zc66KEeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_IlKuYK6KEeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:EdgeObjectOffset" xmi:id="_Ik3zdK6KEeKQuMR9AcOvgg" visible="false" id="connectorMiddleNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_Ik3zda6KEeKQuMR9AcOvgg" id="connectorSourceNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_Ik3zdq6KEeKQuMR9AcOvgg" id="connectorSourceCountEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_Ik3zd66KEeKQuMR9AcOvgg" id="connectorTargetCountEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_Ik3zeK6KEeKQuMR9AcOvgg" id="connectorTargetNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectOffset" xmi:id="_Ik3zea6KEeKQuMR9AcOvgg" visible="false" id="connectorStereotypeEdgeObject"/>
+          </contained>
+          <contained xsi:type="di:GraphEdge" xmi:id="_lZupcq6LEeKQuMR9AcOvgg" anchor="_lZupcK6LEeKQuMR9AcOvgg _lZupca6LEeKQuMR9AcOvgg">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_lZupc66LEeKQuMR9AcOvgg" presentation="default">
+              <element href="Two_tanks.sysml#_laBkYK6LEeKQuMR9AcOvgg"/>
+            </semanticModel>
+            <contained xsi:type="di:EdgeObjectOffset" xmi:id="_lZupdK6LEeKQuMR9AcOvgg" visible="false" id="connectorMiddleNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_lZupda6LEeKQuMR9AcOvgg" id="connectorSourceNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_lZupdq6LEeKQuMR9AcOvgg" id="connectorSourceCountEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_lZupd66LEeKQuMR9AcOvgg" id="connectorTargetCountEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectUV" xmi:id="_lZupeK6LEeKQuMR9AcOvgg" id="connectorTargetNameEdgeObject"/>
+            <contained xsi:type="di:EdgeObjectOffset" xmi:id="_lZupea6LEeKQuMR9AcOvgg" visible="false" id="connectorStereotypeEdgeObject"/>
+          </contained>
+        </diagrams>
+      </subdiagrams>
+    </subdiagrams>
+  </subdiagrams>
+</diagrams:Diagrams>

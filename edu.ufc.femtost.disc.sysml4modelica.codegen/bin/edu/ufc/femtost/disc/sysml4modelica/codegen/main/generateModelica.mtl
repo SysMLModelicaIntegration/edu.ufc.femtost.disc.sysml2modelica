@@ -1,0 +1,38 @@
+[comment encoding = UTF-8 /]
+[**
+ * 
+ *  Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comté
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v1.0
+ *  which accompanies this distribution, and is available at
+ *  http://www.eclipse.org/legal/epl-v10.html
+ *  
+ *  Contributors:
+ *      Jean-Marie Gauthier and University of Franche-Comté - initial API and implementation
+ *
+ */]
+
+[module generateModelica('http://www.femto-st.fr/disc/Modelica.ecore')]
+[import edu::ufc::femtost::disc::sysml4modelica::codegen::files::generatePackage/]
+[import edu::ufc::femtost::disc::sysml4modelica::codegen::files::generateModelicaClassDefinition/]
+
+[**
+ * The documentation of the template generateModelica.
+ * @param aModelicaModel
+ */]
+[template public generateModelica(aModelicaModel : ModelicaModel)]
+[comment @main/]
+[file ('/'+aModelicaModel.name+'/package.mo', false, 'UTF-8')]
+package [aModelicaModel.name/]
+end [aModelicaModel.name/];
+[/file]
+
+[for (aModelicaClassDefinition : ModelicaClassDefinition | aModelicaModel.modelicaClasses)]
+[if(aModelicaClassDefinition.oclIsTypeOf(Package))][generatePackage(aModelicaClassDefinition.oclAsType(Package))/][/if]
+[/for]
+
+[for (aModelicaClassDefinition : ModelicaClassDefinition | aModelicaModel.modelicaClasses->select(mc | not mc.oclIsTypeOf(Package)))]
+[generateModelicaClassDefinition(aModelicaClassDefinition)/]
+[/for]
+
+[/template]
