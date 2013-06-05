@@ -23,16 +23,16 @@
         <nestedClassifier xmi:type="sysML:Block" xmi:id="_8eF7y65xEeKQuMR9AcOvgg" name="Components">
           <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_5WemYK54EeKQuMR9AcOvgg" name="limitValue">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_GT_lsK55EeKQuMR9AcOvgg" name="pMin">
-              <type xmi:type="uml:DataType" href="../../org.omg.sysml4modelica.library/library/sysml4modelica.library.sysml#_HeLJaJhKEeKwXumxm7CG2Q"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_y5hZsMeVEeKfMrYq53FfYw"/>
             </ownedParameter>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_eLflUK6EEeKQuMR9AcOvgg" name="pMax">
-              <type xmi:type="uml:DataType" href="../../org.omg.sysml4modelica.library/library/sysml4modelica.library.sysml#_HeLJaJhKEeKwXumxm7CG2Q"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_y5hZsMeVEeKfMrYq53FfYw"/>
             </ownedParameter>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_1vL5IK6EEeKQuMR9AcOvgg" name="p">
-              <type xmi:type="uml:DataType" href="../../org.omg.sysml4modelica.library/library/sysml4modelica.library.sysml#_HeLJaJhKEeKwXumxm7CG2Q"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_y5hZsMeVEeKfMrYq53FfYw"/>
             </ownedParameter>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_6CmPEK6EEeKQuMR9AcOvgg" name="pLim">
-              <type xmi:type="uml:DataType" href="../../org.omg.sysml4modelica.library/library/sysml4modelica.library.sysml#_HeLJaJhKEeKwXumxm7CG2Q"/>
+              <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_y5hZsMeVEeKfMrYq53FfYw"/>
             </ownedParameter>
             <language>Modelica</language>
             <body>pLim:=if p > pMax then pMax else if p &lt; pMin then pMin else p;</body>
@@ -211,7 +211,7 @@
   <Classes:ModelicaModel xmi:id="_Wdq2YMoBEeKyFO3phyTcZQ" base_Classifier="_YyON0K50EeKQuMR9AcOvgg" isPartial="true" base_Block="_YyON0K50EeKQuMR9AcOvgg"/>
   <Classes:ModelicaModel xmi:id="_XLovoMoBEeKyFO3phyTcZQ" base_Classifier="_d5biwK51EeKQuMR9AcOvgg" isReplaceable="true" base_Block="_d5biwK51EeKQuMR9AcOvgg"/>
   <Classes:ModelicaModel xmi:id="_XgwrEMoBEeKyFO3phyTcZQ" base_Classifier="_lZNcK653EeKQuMR9AcOvgg" base_Block="_lZNcK653EeKQuMR9AcOvgg"/>
-  <Classes:ModelicaExtends xmi:id="_X_HbAMoBEeKyFO3phyTcZQ" base_Generalization="_DdKp4K52EeKQuMR9AcOvgg"/>
+  <Classes:ModelicaExtends xmi:id="_X_HbAMoBEeKyFO3phyTcZQ" modification="K = 2, T = 10" base_Generalization="_DdKp4K52EeKQuMR9AcOvgg"/>
   <Classes:ModelicaModel xmi:id="_YSTcwMoBEeKyFO3phyTcZQ" base_Classifier="__OpbAK51EeKQuMR9AcOvgg" base_Block="__OpbAK51EeKQuMR9AcOvgg"/>
   <Classes:ModelicaModel xmi:id="_Yx14cMoBEeKyFO3phyTcZQ" base_Classifier="_73GLMK6HEeKQuMR9AcOvgg" base_Block="_73GLMK6HEeKQuMR9AcOvgg"/>
   <EquationsAndAlgorithms:ModelicaEquation xmi:id="_azbVsMoBEeKyFO3phyTcZQ" base_Constraint="_EIvL4q51EeKQuMR9AcOvgg"/>
@@ -236,25 +236,25 @@
   <Components:ModelicaValueProperty xmi:id="_jdBBsMoBEeKyFO3phyTcZQ" base_Property="_9BRZ8q50EeKQuMR9AcOvgg"/>
   <Components:ModelicaValueProperty xmi:id="_jtFeAMoBEeKyFO3phyTcZQ" base_Property="__uVdIK50EeKQuMR9AcOvgg"/>
   <Components:ModelicaValueProperty xmi:id="_kRrY0MoBEeKyFO3phyTcZQ" base_Property="_mRh2Iq51EeKQuMR9AcOvgg"/>
-  <Components:ModelicaValueProperty xmi:id="_kwVDsMoBEeKyFO3phyTcZQ" base_Property="_1CUfAK53EeKQuMR9AcOvgg"/>
-  <Components:ModelicaValueProperty xmi:id="_k_NNMMoBEeKyFO3phyTcZQ" base_Property="__jAPgq53EeKQuMR9AcOvgg"/>
+  <Components:ModelicaValueProperty xmi:id="_kwVDsMoBEeKyFO3phyTcZQ" base_Property="_1CUfAK53EeKQuMR9AcOvgg" modification="unit = &quot;m2&quot;"/>
+  <Components:ModelicaValueProperty xmi:id="_k_NNMMoBEeKyFO3phyTcZQ" base_Property="__jAPgq53EeKQuMR9AcOvgg" modification="unit = &quot;m2/s&quot;"/>
   <Components:ModelicaValueProperty xmi:id="_lRgeIMoBEeKyFO3phyTcZQ" base_Property="_HO7ZYq54EeKQuMR9AcOvgg"/>
   <Components:ModelicaValueProperty xmi:id="_liT6QMoBEeKyFO3phyTcZQ" base_Property="_K3y9gq54EeKQuMR9AcOvgg"/>
-  <Components:ModelicaValueProperty xmi:id="_lwTS8MoBEeKyFO3phyTcZQ" base_Property="_QiZv4q54EeKQuMR9AcOvgg"/>
+  <Components:ModelicaValueProperty xmi:id="_lwTS8MoBEeKyFO3phyTcZQ" base_Property="_QiZv4q54EeKQuMR9AcOvgg" modification="start = 0.0, unit = &quot;m&quot;"/>
   <Components:ModelicaValueProperty xmi:id="_mVMvwMoBEeKyFO3phyTcZQ" base_Property="_UdHHYq53EeKQuMR9AcOvgg"/>
   <Classes:ModelicaFunction xmi:id="_pV3EYMoBEeKyFO3phyTcZQ" base_Classifier="_5WemYK54EeKQuMR9AcOvgg" base_FunctionBehavior="_5WemYK54EeKQuMR9AcOvgg"/>
-  <Components:ModelicaPart xmi:id="_rXu1gMoBEeKyFO3phyTcZQ" base_Property="_z1FnIa6IEeKQuMR9AcOvgg"/>
-  <Components:ModelicaPart xmi:id="_roZuwMoBEeKyFO3phyTcZQ" base_Property="_mBt94a6IEeKQuMR9AcOvgg"/>
-  <Components:ModelicaPart xmi:id="_r62JoMoBEeKyFO3phyTcZQ" base_Property="_p6yhMa6IEeKQuMR9AcOvgg"/>
-  <Components:ModelicaPart xmi:id="_sNSkgMoBEeKyFO3phyTcZQ" base_Property="_5Pn9MK6IEeKQuMR9AcOvgg"/>
+  <Components:ModelicaPart xmi:id="_rXu1gMoBEeKyFO3phyTcZQ" base_Property="_z1FnIa6IEeKQuMR9AcOvgg" modification="ref = 0.25"/>
+  <Components:ModelicaPart xmi:id="_roZuwMoBEeKyFO3phyTcZQ" base_Property="_mBt94a6IEeKQuMR9AcOvgg" modification="area = 1"/>
+  <Components:ModelicaPart xmi:id="_r62JoMoBEeKyFO3phyTcZQ" base_Property="_p6yhMa6IEeKQuMR9AcOvgg" modification="area = 1.3"/>
+  <Components:ModelicaPart xmi:id="_sNSkgMoBEeKyFO3phyTcZQ" base_Property="_5Pn9MK6IEeKQuMR9AcOvgg" modification="ref = 0.4"/>
   <EquationsAndAlgorithms:ModelicaConnection xmi:id="_shFDMMoBEeKyFO3phyTcZQ" base_Connector="_bTr4cK6JEeKQuMR9AcOvgg"/>
   <EquationsAndAlgorithms:ModelicaConnection xmi:id="_s726sMoBEeKyFO3phyTcZQ" base_Connector="_jnVJoK6JEeKQuMR9AcOvgg"/>
   <EquationsAndAlgorithms:ModelicaConnection xmi:id="_tPWecMoBEeKyFO3phyTcZQ" base_Connector="_laBkYK6LEeKQuMR9AcOvgg"/>
   <EquationsAndAlgorithms:ModelicaConnection xmi:id="_tiZWQMoBEeKyFO3phyTcZQ" base_Connector="_IlKuYK6KEeKQuMR9AcOvgg"/>
   <EquationsAndAlgorithms:ModelicaConnection xmi:id="_t68ZIMoBEeKyFO3phyTcZQ" base_Connector="_OEfTQK6JEeKQuMR9AcOvgg"/>
   <EquationsAndAlgorithms:ModelicaConnection xmi:id="_uOSL4MoBEeKyFO3phyTcZQ" base_Connector="_8dpi8K6JEeKQuMR9AcOvgg"/>
-  <Components:ModelicaPart xmi:id="_upEDYMoBEeKyFO3phyTcZQ" base_Property="_D9Y84a6IEeKQuMR9AcOvgg"/>
+  <Components:ModelicaPart xmi:id="_upEDYMoBEeKyFO3phyTcZQ" base_Property="_D9Y84a6IEeKQuMR9AcOvgg" modification="flowLevel = 0.02"/>
   <Components:ModelicaValueProperty xmi:id="_1ot9IMoBEeKyFO3phyTcZQ" base_Property="_lQk20K5yEeKQuMR9AcOvgg"/>
-  <Components:ModelicaValueProperty xmi:id="_19i9oMoBEeKyFO3phyTcZQ" base_Property="_Jk_EEq5zEeKQuMR9AcOvgg"/>
-  <Components:ModelicaValueProperty xmi:id="_2ZEcAMoBEeKyFO3phyTcZQ" base_Property="_MZ4_MK50EeKQuMR9AcOvgg"/>
+  <Components:ModelicaValueProperty xmi:id="_19i9oMoBEeKyFO3phyTcZQ" base_Property="_Jk_EEq5zEeKQuMR9AcOvgg" modification="unit = &quot;m&quot;"/>
+  <Components:ModelicaValueProperty xmi:id="_2ZEcAMoBEeKyFO3phyTcZQ" base_Property="_MZ4_MK50EeKQuMR9AcOvgg" modification="unit = &quot;m3/s&quot;"/>
 </xmi:XMI>
