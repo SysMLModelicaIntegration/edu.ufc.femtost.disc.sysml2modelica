@@ -49,6 +49,7 @@ Contributors:
       <import plugin="org.eclipse.ui"/>
       <import plugin="org.eclipse.m2m.atl.core" version="3.2.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.common" version="2.7.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecore.xmi" version="2.7.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin

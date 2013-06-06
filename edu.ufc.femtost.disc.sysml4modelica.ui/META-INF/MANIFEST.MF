@@ -10,6 +10,9 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.m2m.atl.core;bundle-version="3.2.1",
  edu.ufc.femtost.disc.sysml4modelica.sysml2modelica;bundle-version="1.0.0",
  org.eclipse.emf.common;bundle-version="2.7.0",
- edu.ufc.femtost.disc.sysml4modelica.codegen;bundle-version="1.0.0"
+ edu.ufc.femtost.disc.sysml4modelica.codegen;bundle-version="1.0.0",
+ edu.ufc.femtost.disc.sysml4modelica.sysml2problem;bundle-version="1.0.0",
+ edu.ufc.femtost.disc.sysml4modelica.problemmetamodel;bundle-version="1.0.0",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.7.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

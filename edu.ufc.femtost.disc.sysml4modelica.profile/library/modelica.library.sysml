@@ -713,4 +713,5 @@
   <Components:ModelicaValueProperty xmi:id="_ES0EgMzrEeKH2rWo0wnQfw" base_Property="_3vzPUrGgEeK0T7edPe2X5A"/>
   <Components:ModelicaValueProperty xmi:id="_EgWxQMzrEeKH2rWo0wnQfw" base_Property="_yJs-8rGfEeK0T7edPe2X5A"/>
   <Components:ModelicaValueProperty xmi:id="_EwwkwMzrEeKH2rWo0wnQfw" base_Property="_1oHmkrGfEeK0T7edPe2X5A"/>
+  <Classes:ModelicaType xmi:id="_t56RcM6uEeKoKrt9EMuQyw"/>
 </xmi:XMI>

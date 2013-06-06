@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/edu.ufc.femtost.disc.sysml4modelica.feature_1.0.0.201306051451.jar" id="edu.ufc.femtost.disc.sysml4modelica.feature" version="1.0.0.201306051451"/>
+   <feature url="features/edu.ufc.femtost.disc.sysml4modelica.feature_1.0.0.201306061620.jar" id="edu.ufc.femtost.disc.sysml4modelica.feature" version="1.0.0.201306061620">
+      <category name="edu.ufc.femtost.disc.sysml4modelica"/>
+   </feature>
    <category-def name="edu.ufc.femtost.disc.sysml4modelica" label="ATL SysML4Modelica"/>
 </site>

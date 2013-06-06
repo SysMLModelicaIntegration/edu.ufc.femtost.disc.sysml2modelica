@@ -29,6 +29,12 @@
                label="Generate Modelica code"
                menubarPath="edu.ufc.femtost.disc.sysml4modelica.ui.menu.sysml4modelica/SysML4ModelicaGroup">
          </action>
+         <action
+               class="edu.ufc.femtost.disc.sysml4modelica.ui.actions.CheckModel"
+               id="edu.ufc.femtost.disc.sysml4modelica.ui.action.checkSysmlModel"
+               label="Check SysML model"
+               menubarPath="edu.ufc.femtost.disc.sysml4modelica.ui.menu.sysml4modelica/SysML4ModelicaGroup">
+         </action>
       </objectContribution>
    </extension>
 

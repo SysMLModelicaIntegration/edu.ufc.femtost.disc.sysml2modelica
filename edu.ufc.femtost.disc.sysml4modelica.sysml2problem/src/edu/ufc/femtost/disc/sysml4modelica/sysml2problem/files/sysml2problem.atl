@@ -31,6 +31,7 @@ helper context MMuml!NamedElement def: isModelicaClassDefinitionStereotyped() : 
 		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaOperator'
 	);
 
+
 helper context MMuml!NamedElement def: isModelicaClassStereotyped() : Boolean = 
 	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaClass');
 
@@ -53,7 +54,7 @@ helper context MMuml!NamedElement def: isModelicaFunctionStereotyped() : Boolean
 	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaFunction');
 
 helper context MMuml!NamedElement def: isModelicaAlgorithmStereotyped() : Boolean = 
-	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Equations And Algorithms::ModelicaAlgorithm');
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Equations and Algorithms::ModelicaAlgorithm');
 
 helper context MMuml!NamedElement def: isModelicaPartStereotyped() : Boolean = 
 	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Components::ModelicaPart');
@@ -65,7 +66,7 @@ helper context MMuml!NamedElement def: isModelicaValuePropertyStereotyped() : Bo
 	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Components::ModelicaValueProperty');
 
 helper context MMuml!NamedElement def: isModelicaEquationStereotyped() : Boolean = 
-	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Equations And Algorithms::ModelicaEquation');
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Equations and Algorithms::ModelicaEquation');
 
 helper context MMuml!NamedElement def: isModelicaFunctionParameterStereotyped() : Boolean = 
 	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Components::ModelicaFunctionParameter');
@@ -80,63 +81,27 @@ helper context MMuml!Dependency def: isModelicaConstraintByStereotyped() : Boole
 	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaConstrainedBy');
 
 helper context MMuml!Connector def: isModelicaConnectionStereotyped() : Boolean = 
-	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Equations And Algorithms::ModelicaConnection');
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Equations and Algorithms::ModelicaConnection');
+
+helper context MMuml!NamedElement def: isModelicaTypeStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaType');
 
 
 
 helper context MMsysml!Block def: getIsFinal() : Boolean = 
-	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Block = self)->first().isFinal;
+	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Classifier = self)->first().isFinal;
 
 helper context MMsysml!Block def: getIsPartial() : Boolean = 
-	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Block = self)->first().isPartial;
+	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Classifier = self)->first().isPartial;
 
---helper context MMsysml!Block def: getIsReplaceable() : Boolean = 
---	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Block = self)->first().isReplaceable;
---
---helper context MMsysml!Block def: getIsModelicaEncapsulated() : Boolean = 
---	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Block = self)->first().isModelicaEncapsulated;
---
---helper context MMsysml!Block def: getFromLibrary() : String = 
---	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Block = self)->first().fromLibrary;
---
---helper context MMsysml!Block def: getIsExpandable() : Boolean = 
---	MMmodelicaProfile!ModelicaConnector.allInstances()->select(mc | mc.base_Block = self)->first().isExpandable;
+helper context MMuml!FunctionBehavior def: getExternalLibrary() : Sequence(String) = 
+	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().externalLibrary;
 
-helper context MMuml!FunctionBehavior def: getIsReplaceable() : Boolean = 
-	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().isReplaceable;
-
-helper context MMuml!FunctionBehavior def: getIsModelicaEncapsulated() : Boolean = 
-	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().isModelicaEncapsulated;
-
-helper context MMuml!FunctionBehavior def: getFromLibrary() : String = 
-	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().fromLibrary;
-
-helper context MMuml!FunctionBehavior def: getIsExpandable() : Boolean = 
-	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().isExpandable;
-
-helper context MMuml!FunctionBehavior def: getIsExternal() : Boolean = 
-	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().isExternal;
-
-helper context MMuml!FunctionBehavior def: getExternalAnnotation() : String = 
-	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().externalAnnotation;
-
-helper context MMuml!FunctionBehavior def: getExternalFunctionSpecification() : String = 
-	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().externalFunctionSpecification;
-
-helper context MMuml!FunctionBehavior def: getExternalLanguage() : String = 
-	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().externalLanguage;
-
---helper context MMuml!Dependency def: getVariable() : String = 
---	MMmodelicaProfile!ModelicaDer.allInstances()->select(mc | mc.base_Dependency = self)->first().variable;
+helper context MMuml!FunctionBehavior def: getExternalInclude() : String = 
+	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().externalInclude;
 
 helper context MMuml!Generalization def: getVisibility() : String = 
 	MMmodelicaProfile!ModelicaExtends.allInstances()->select(mc | mc.base_Generalization = self)->first().visibility;
-
---helper context MMuml!Generalization def: getModification() : String = 
---	MMmodelicaProfile!ModelicaExtends.allInstances()->select(mc | mc.base_Generalization = self)->first().modification;
---
---helper context MMuml!Generalization def: getArraySize() : String = 
---	MMmodelicaProfile!ModelicaExtends.allInstances()->select(mc | mc.base_Generalization = self)->first().arraySize;
 
 helper context MMuml!Property def: getCausality() : String = 
 	MMmodelicaProfile!ModelicaValueProperty.allInstances()->select(mvp | mvp.base_Property = self)->first().causality;
@@ -152,58 +117,14 @@ helper context MMuml!NamedElement def: isNamed() :  Boolean =
 ------------------------------------------------------------------------
 ----------------------MODELICA CLASS DEFINTION--------------------------
 ------------------------------------------------------------------------
---[1] isFinal has the same value as isLeaf'
---context SysML4Modelica::Classes::ModelicaClassDefinition::isFinal : Boolean
---derive: self.baseClassifier.isLeaf
---[2] isPartial has the same value as isAbstract
---isPartial = self.isAbstract
---[3] Any generalization relationship to/from «modelicaClassDefinition» must be stereotyped to a «modelicaExtends
---» relationship.
---[4] A «modelicaClassDefinition» can only contain nestedClassifiers stereotyped to a restricted type specializing
---«modelicaClassDefinition».
+--[1] Any generalization relationship to/from «modelicaClassDefinition» must be stereotyped by a «modelicaExtends» relationship.
+--[2] A «modelicaClassDefinition» can only contain nestedClassifiers stereotyped by a restricted type specializing «modelicaClassDefinition».
 
 rule Constaints_1_MODELICA_CLASS_DEFINITION {
 	from sysml: MMsysml!Block(
 		not sysml.oclIsTypeOf(MMsysml!ConstraintBlock) and
-		if(sysml.isModelicaClassDefinitionStereotyped())then 
-			sysml.isNamed() and
-			sysml.getIsFinal() <> sysml.isLeaf
-		else
-			false
-		endif
-	)
-	to problem: MMproblem!Problem(
-		description <- 'The property isFinal of the block ' + sysml.name + ' must have the same value as isLeaf.', 
-		location <- sysml.getQualifiedName(), 
-		severity <- #error
-	)
-}
-
-rule Constaints_2_MODELICA_CLASS_DEFINITION {
-	from sysml: MMsysml!Block(
-		not sysml.oclIsTypeOf(MMsysml!ConstraintBlock) and
 		if(sysml.isModelicaClassDefinitionStereotyped()) then
 			sysml.isNamed() and
-			sysml.getIsFinal() = sysml.isLeaf and
-			sysml.getIsPartial() <> sysml.isAbstract
-		else
-			false
-		endif
-	)
-	to problem: MMproblem!Problem(
-		description <- 'The property isPartial of the block ' + sysml.name + ' must have the same value as isAbstract.', 
-		location <- sysml.getQualifiedName(), 
-		severity <- #error
-	)
-}
-
-rule Constaints_3_MODELICA_CLASS_DEFINITION {
-	from sysml: MMsysml!Block(
-		not sysml.oclIsTypeOf(MMsysml!ConstraintBlock) and
-		if(sysml.isModelicaClassDefinitionStereotyped()) then
-			sysml.isNamed() and
-			sysml.getIsFinal() = sysml.isLeaf and
-			sysml.getIsPartial() = sysml.isAbstract and
 			if(not sysml.generalization->first().oclIsUndefined()) then
 				not sysml.generalization->forAll(g | g.isModelicaExtendsStereotyped())
 			else
@@ -220,13 +141,11 @@ rule Constaints_3_MODELICA_CLASS_DEFINITION {
 	)
 }
 
-rule Constaints_4_MODELICA_CLASS_DEFINITION {
+rule Constaints_2_MODELICA_CLASS_DEFINITION {
 	from sysml: MMsysml!Block(
 		not sysml.oclIsTypeOf(MMsysml!ConstraintBlock) and
 		if(sysml.isModelicaClassDefinitionStereotyped()) then
 			sysml.isNamed() and
-			sysml.getIsFinal() = sysml.isLeaf and
-			sysml.getIsPartial() = sysml.isAbstract and
 			if(not sysml.generalization->first().oclIsUndefined()) then
 				sysml.generalization->forAll(g | g.isModelicaExtendsStereotyped()) and
 				not sysml.nestedClassifier->select(nc | nc.oclIsTypeOf(MMsysml!Block) and not nc.oclIsTypeOf(MMsysml!ConstraintBlock))->forAll(n | n.isModelicaClassDefinitionStereotyped())
@@ -243,6 +162,7 @@ rule Constaints_4_MODELICA_CLASS_DEFINITION {
 		severity <- #error
 	)
 }
+
 ------------------------------------------------------------------------
 -----------------------MODELICA CLASS / MODEL---------------------------
 ------------------------------------------------------------------------
@@ -489,6 +409,18 @@ rule Constaints_2_CONNECTOR {
 --[3] A «modelicaType» can only specialize other classifiers derived from «modelicaType». The stereotype «modelicaExtends» must be applied to the generalization relationship.
 --[4] All other attributes or associations inherited from «block» or Classifier may not be used. This includes the attributes: isActive, isEncapsulated; and the ownedElements: Property (including part, port and value properties), Behavior, Constraint.
 
+rule Constraints_1_TYPE{
+	from sysml: MMuml!DataType(
+		sysml.isModelicaTypeStereotyped() and
+		not sysml.isNamed()
+	)
+	to problem: MMproblem!Problem(
+		description <- 'A modelicaType must have a Name.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
 ------------------------------------------------------------------------
 ---------------------------MODELICA PACKAGE-----------------------------
 ------------------------------------------------------------------------
@@ -549,13 +481,12 @@ rule Constaints_3_PACKAGE {
 --[2] A «modelicaFunction» can only have Parameters that are stereotyped to «modelicaFunctionParameter».
 --[3] Any «modelicaFunctionParameter» (owned by an instance of «modelicaPackage») for which causality=input may not be assigned values in the body of the function (i.e., it is read-only).
 --[4] A «modelicaFunction» can only have zero or one body attribute.
---[5] If isExternal=false then externalLanguage, externalFunctionSpecification, and externalAnnotation must not be defined.
---[6] If isExternal=true then body and language must not be defined.
---[7] A «modelicaFunction» must have language=“Modelica” if the body attribute is defined.
---[8] The body of the function must be represented in the Modelica syntax and must constitute a valid Modelica algorithm section.
---[9] A «modelicaFunction» can only be contained in a «modelicaClassDefinition».
---[10] A «modelicaFunction» can only specialize other classifiers derived from «modelicaFunction». The stereotype «modelicaExtends» must be applied to the generalization relationship.
---[11] All other attributes or associations inherited from FunctionBehavior or Classifier may not be used.
+--[5] A «modelicaFunction» must have language= Modelica,  builtin,  C, or FORTRAN.
+--[6] If language= Modelica, then the body of the function must be represented in the Modelica syntax and must constitute a valid Modelica algorithm section.
+--[7] If language= C or FORTRAN, then the body of the function must be represented a valid functional call in the respective language (as specified in Modelica, v 3.1, sub clause 12.9.4).
+--[8] The optional attributes, externalLibrary and externalInclude, can only be used when language = C or FORTRAN.
+--[9] A «modelicaFunction» can only specialize other classifiers derived from «modelicaFunction». The stereotype «modelicaExtends» must be applied to the generalization relationship.
+--[10] All other attributes or associations inherited from FunctionBehavior or Classifier may not be used.
 
 rule Constraints_1_FUNCTION{
 	from sysml: MMuml!FunctionBehavior(
@@ -586,61 +517,43 @@ rule Constraints_2_FUNCTION{
 rule Constraints_5_FUNCTION{
 	from sysml: MMuml!FunctionBehavior(
 		if(sysml.isModelicaFunctionStereotyped())then
+			
 			sysml.isNamed() and
-			sysml.getIsExternal() = false and
+			sysml.language->first().toString() <> 'Modelica' and
+			sysml.language->first().toString() <> 'builtin' and
+			sysml.language->first().toString() <> 'C' and
+			sysml.language->first().toString() <> 'Fortran' 
+			
+		else
+			false
+		endif
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The modelicaFunction ' + sysml.name + ' must have language = Modelica,  builtin,  C, or FORTRAN.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_8_FUNCTION{
+	from sysml: MMuml!FunctionBehavior(
+		if(sysml.isModelicaFunctionStereotyped())then
+			sysml.isNamed() and
 			(
-				(sysml.getExternalLanguage() <> '' and sysml.getExternalLanguage() <> OclUndefined) or
-				(sysml.getExternalFunctionSpecification() <> '' and sysml.getExternalFunctionSpecification() <> OclUndefined) or
-				(sysml.getExternalAnnotation() <> '' and sysml.getExternalAnnotation() <> OclUndefined)
-			) and
+				sysml.language->first().toString() <> 'C' or
+				sysml.language->first().toString() <> 'Fortran' 
+				
+			)and
 			(
-				sysml.body->first().oclIsUndefined() or
-				sysml.language->first().toString() = 'Modelica'
+				(sysml.getExternalLibrary() <> '' and sysml.getExternalLibrary() <> OclUndefined) or
+				(sysml.getExternalInclude() <> '' and sysml.getExternalInclude() <> OclUndefined)
 			)
 		else
 			false
 		endif
 	)
 	to problem: MMproblem!Problem(
-		description <- 'If isExternal=false then externalLanguage, externalFunctionSpecification, and externalAnnotation must not be defined.', 
-		location <- sysml.getQualifiedName(), 
-		severity <- #error
-	)
-}
-
-rule Constraints_6_FUNCTION{
-	from sysml: MMuml!FunctionBehavior(
-		if(sysml.isModelicaFunctionStereotyped())then
-			sysml.isNamed() and
-			sysml.getIsExternal() = true and
-			(
-				(sysml.language->first() <> '' and not sysml.language->first().oclIsUndefined()) or
-				(sysml.body->first() <> '' and not sysml.body->first().oclIsUndefined())
-			)
-		else
-			false
-		endif
-	)
-	to problem: MMproblem!Problem(
-		description <- 'If isExternal=true then body and language must not be defined.', 
-		location <- sysml.getQualifiedName(), 
-		severity <- #error
-	)
-}
-
-rule Constraints_7_FUNCTION{
-	from sysml: MMuml!FunctionBehavior(
-		if(sysml.isModelicaFunctionStereotyped())then
-			sysml.getIsExternal() = false and
-			sysml.isNamed() and
-			not sysml.body->first().oclIsUndefined() and
-			sysml.language->first().toString() <> 'Modelica' 
-		else
-			false
-		endif
-	)
-	to problem: MMproblem!Problem(
-		description <- 'The modelicaFunction '+ sysml.name + ' must have language=Modelica if the body attribute is defined.', 
+		description <- 'The optional attributes, externalLibrary and externalInclude, can only be used when language = C or FORTRAN.', 
 		location <- sysml.getQualifiedName(), 
 		severity <- #error
 	)

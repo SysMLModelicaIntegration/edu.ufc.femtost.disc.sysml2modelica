@@ -117,7 +117,7 @@ public class Sysml2problem {
         this.inumlModel = factory.newModel(umlMetamodel);
         injector.inject(inumlModel, sysmlModelPath);
         this.inmodelicaprofileModel = factory.newModel(mmModelicaMetamodel);
-		injector.inject(inmodelicaprofileModel, "pathmap://SYSML4MODELICA_PROFILE/sysml4modelica.sysml");
+		injector.inject(inmodelicaprofileModel, sysmlModelPath);
         this.outproblemModel = factory.newModel(problemMetamodel);
     }
 	/**

@@ -2,7 +2,7 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
   <mtl:Module name="generatePackage" nsURI="edu::ufc::femtost::disc::sysml4modelica::codegen::files::generatePackage" startHeaderPosition="486" endHeaderPosition="654">
     <documentation xsi:type="mtl:ModuleDocumentation">
-      <body startPosition="32" endPosition="483" value="&#xD;&#xA;&#xD;&#xA;Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comt�&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;Jean-Marie Gauthier and University of Franche-Comt� - initial API and implementation&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+      <body startPosition="32" endPosition="483" value="&#xD;&#xA;&#xD;&#xA;Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comte&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
     </documentation>
     <input>
       <takesTypesFrom href="http://www.femto-st.fr/disc/Modelica.ecore#/"/>
