@@ -11,6 +11,7 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.util;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Block;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connect;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connector;
@@ -228,6 +229,12 @@ public class ModelicaSwitch<T> extends Switch<T> {
 			case ModelicaPackage.CONSTRAINED_BY_CLAUSE: {
 				ConstrainedByClause constrainedByClause = (ConstrainedByClause)theEObject;
 				T result = caseConstrainedByClause(constrainedByClause);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModelicaPackage.ANNOTATION: {
+				Annotation annotation = (Annotation)theEObject;
+				T result = caseAnnotation(annotation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -547,6 +554,21 @@ public class ModelicaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseConstrainedByClause(ConstrainedByClause object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Annotation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Annotation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAnnotation(Annotation object) {
 		return null;
 	}
 

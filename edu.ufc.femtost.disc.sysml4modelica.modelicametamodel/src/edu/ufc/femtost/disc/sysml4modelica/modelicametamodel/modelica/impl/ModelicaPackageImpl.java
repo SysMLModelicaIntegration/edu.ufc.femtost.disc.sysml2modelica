@@ -11,6 +11,7 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Block;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connect;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connector;
@@ -198,6 +199,13 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 	 * @generated
 	 */
 	private EClass constrainedByClauseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass annotationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -410,6 +418,15 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 	 */
 	public EReference getModelicaClassDefinition_AlgorithmSections() {
 		return (EReference)modelicaClassDefinitionEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModelicaClassDefinition_Annotations() {
+		return (EReference)modelicaClassDefinitionEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -1200,6 +1217,33 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAnnotation() {
+		return annotationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAnnotation_Body() {
+		return (EAttribute)annotationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAnnotation_OwnerMCD() {
+		return (EReference)annotationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getVisibilityKind() {
 		return visibilityKindEEnum;
 	}
@@ -1281,6 +1325,7 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		createEReference(modelicaClassDefinitionEClass, MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS);
 		createEReference(modelicaClassDefinitionEClass, MODELICA_CLASS_DEFINITION__EQUATION_SECTION);
 		createEReference(modelicaClassDefinitionEClass, MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS);
+		createEReference(modelicaClassDefinitionEClass, MODELICA_CLASS_DEFINITION__ANNOTATIONS);
 
 		classEClass = createEClass(CLASS);
 
@@ -1389,6 +1434,10 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		createEReference(constrainedByClauseEClass, CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE);
 		createEReference(constrainedByClauseEClass, CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY);
 
+		annotationEClass = createEClass(ANNOTATION);
+		createEAttribute(annotationEClass, ANNOTATION__BODY);
+		createEReference(annotationEClass, ANNOTATION__OWNER_MCD);
+
 		// Create enums
 		visibilityKindEEnum = createEEnum(VISIBILITY_KIND);
 		modelicaCausalityKindEEnum = createEEnum(MODELICA_CAUSALITY_KIND);
@@ -1451,6 +1500,7 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		initEReference(getModelicaClassDefinition_ModelicaComponents(), this.getModelicaComponent(), this.getModelicaComponent_OwnerModelicaClassDefinition(), "modelicaComponents", null, 0, -1, ModelicaClassDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModelicaClassDefinition_EquationSection(), this.getEquationSection(), this.getEquationSection_OwnerModelicaClassDefinition(), "equationSection", null, 0, 1, ModelicaClassDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModelicaClassDefinition_AlgorithmSections(), this.getAlgorithmSection(), this.getAlgorithmSection_OwnerModelicaClassDefinition(), "algorithmSections", null, 0, -1, ModelicaClassDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModelicaClassDefinition_Annotations(), this.getAnnotation(), this.getAnnotation_OwnerMCD(), "annotations", null, 0, -1, ModelicaClassDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(classEClass, edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Class.class, "Class", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1558,6 +1608,10 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		initEAttribute(getConstrainedByClause_Modification(), ecorePackage.getEString(), "modification", null, 0, 1, ConstrainedByClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConstrainedByClause_OwnerInstance(), this.getModelicaPart(), this.getModelicaPart_ConstrainedBy(), "ownerInstance", null, 0, 1, ConstrainedByClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConstrainedByClause_InstanceForConstrainedBy(), this.getModelicaPart(), null, "instanceForConstrainedBy", null, 0, 1, ConstrainedByClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(annotationEClass, Annotation.class, "Annotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAnnotation_Body(), ecorePackage.getEString(), "body", null, 0, 1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAnnotation_OwnerMCD(), this.getModelicaClassDefinition(), this.getModelicaClassDefinition_Annotations(), "ownerMCD", null, 0, 1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(visibilityKindEEnum, VisibilityKind.class, "VisibilityKind");

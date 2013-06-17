@@ -11,6 +11,7 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
@@ -54,6 +55,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#getModelicaComponents <em>Modelica Components</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#getEquationSection <em>Equation Section</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#getAlgorithmSections <em>Algorithm Sections</em>}</li>
+ *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#getAnnotations <em>Annotations</em>}</li>
  * </ul>
  * </p>
  *
@@ -219,6 +221,16 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 * @ordered
 	 */
 	protected EList<AlgorithmSection> algorithmSections;
+
+	/**
+	 * The cached value of the '{@link #getAnnotations() <em>Annotations</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAnnotations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Annotation> annotations;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -531,6 +543,18 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Annotation> getAnnotations() {
+		if (annotations == null) {
+			annotations = new EObjectContainmentWithInverseEList<Annotation>(Annotation.class, this, ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS, ModelicaPackage.ANNOTATION__OWNER_MCD);
+		}
+		return annotations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -553,6 +577,8 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 				return basicSetEquationSection((EquationSection)otherEnd, msgs);
 			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAlgorithmSections()).basicAdd(otherEnd, msgs);
+			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAnnotations()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -577,6 +603,8 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 				return basicSetEquationSection(null, msgs);
 			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
 				return ((InternalEList<?>)getAlgorithmSections()).basicRemove(otherEnd, msgs);
+			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
+				return ((InternalEList<?>)getAnnotations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -629,6 +657,8 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 				return getEquationSection();
 			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
 				return getAlgorithmSections();
+			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
+				return getAnnotations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -681,6 +711,10 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 				getAlgorithmSections().clear();
 				getAlgorithmSections().addAll((Collection<? extends AlgorithmSection>)newValue);
 				return;
+			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
+				getAnnotations().clear();
+				getAnnotations().addAll((Collection<? extends Annotation>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -729,6 +763,9 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
 				getAlgorithmSections().clear();
 				return;
+			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
+				getAnnotations().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -765,6 +802,8 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 				return equationSection != null;
 			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
 				return algorithmSections != null && !algorithmSections.isEmpty();
+			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
+				return annotations != null && !annotations.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

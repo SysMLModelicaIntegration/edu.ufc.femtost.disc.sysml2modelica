@@ -26,6 +26,8 @@
         containment="true" eOpposite="#//EquationSection/ownerModelicaClassDefinition"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="algorithmSections" upperBound="-1"
         eType="#//AlgorithmSection" containment="true" eOpposite="#//AlgorithmSection/ownerModelicaClassDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="annotations" upperBound="-1"
+        eType="#//Annotation" containment="true" eOpposite="#//Annotation/ownerMCD"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//ModelicaClassDefinition"/>
   <eClassifiers xsi:type="ecore:EClass" name="Connector" eSuperTypes="#//ModelicaClassDefinition">
@@ -197,5 +199,10 @@
         eOpposite="#//ModelicaPart/constrainedBy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="instanceForConstrainedBy"
         eType="#//ModelicaPart"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Annotation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="body" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownerMCD" eType="#//ModelicaClassDefinition"
+        eOpposite="#//ModelicaClassDefinition/annotations"/>
   </eClassifiers>
 </ecore:EPackage>

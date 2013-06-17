@@ -53,6 +53,9 @@ within [getWithin(aModelicaClassDefinition)/];
 [generateModelicaComponent(aModelicaComponent)/]
 [/for]
 [if(not aModelicaClassDefinition.equationSection.oclIsUndefined())][generateEquationSection(aModelicaClassDefinition.equationSection)/][/if]
+[for(aModelicaAnnotation : Annotation | aModelicaClassDefinition.annotations)]
+[generateModelicaAnnotation(aModelicaAnnotation)/]
+[/for]
 end [aModelicaClassDefinition.name/];
 [/file]
 [/template]
@@ -96,4 +99,8 @@ initial equation
 
 [template public generateEquation(aEquation : Equation)]
 	[aEquation._body/];
+[/template]
+
+[template public generateModelicaAnnotation(aModelicaAnnotation : Annotation)]
+	annotation([aModelicaAnnotation._body/]);
 [/template]

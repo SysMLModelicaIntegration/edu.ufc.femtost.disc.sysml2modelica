@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getModelicaComponents <em>Modelica Components</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getEquationSection <em>Equation Section</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getAlgorithmSections <em>Algorithm Sections</em>}</li>
+ *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getAnnotations <em>Annotations</em>}</li>
  * </ul>
  * </p>
  *
@@ -335,5 +336,23 @@ public interface ModelicaClassDefinition extends EObject {
 	 * @generated
 	 */
 	EList<AlgorithmSection> getAlgorithmSections();
+
+	/**
+	 * Returns the value of the '<em><b>Annotations</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation}.
+	 * It is bidirectional and its opposite is '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation#getOwnerMCD <em>Owner MCD</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Annotations</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Annotations</em>' containment reference list.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaClassDefinition_Annotations()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation#getOwnerMCD
+	 * @model opposite="ownerMCD" containment="true"
+	 * @generated
+	 */
+	EList<Annotation> getAnnotations();
 
 } // ModelicaClassDefinition

@@ -183,13 +183,22 @@ public interface ModelicaPackage extends EPackage {
 	int MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS = 11;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODELICA_CLASS_DEFINITION__ANNOTATIONS = 12;
+
+	/**
 	 * The number of structural features of the '<em>Class Definition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODELICA_CLASS_DEFINITION_FEATURE_COUNT = 12;
+	int MODELICA_CLASS_DEFINITION_FEATURE_COUNT = 13;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ClassImpl <em>Class</em>}' class.
@@ -308,6 +317,15 @@ public interface ModelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int CLASS__ALGORITHM_SECTIONS = MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS__ANNOTATIONS = MODELICA_CLASS_DEFINITION__ANNOTATIONS;
 
 	/**
 	 * The number of structural features of the '<em>Class</em>' class.
@@ -435,6 +453,15 @@ public interface ModelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONNECTOR__ALGORITHM_SECTIONS = MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTOR__ANNOTATIONS = MODELICA_CLASS_DEFINITION__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Is Expandable</b></em>' attribute.
@@ -573,6 +600,15 @@ public interface ModelicaPackage extends EPackage {
 	int MODEL__ALGORITHM_SECTIONS = MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL__ANNOTATIONS = MODELICA_CLASS_DEFINITION__ANNOTATIONS;
+
+	/**
 	 * The number of structural features of the '<em>Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -698,6 +734,15 @@ public interface ModelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int RECORD__ALGORITHM_SECTIONS = MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECORD__ANNOTATIONS = MODELICA_CLASS_DEFINITION__ANNOTATIONS;
 
 	/**
 	 * The number of structural features of the '<em>Record</em>' class.
@@ -827,6 +872,15 @@ public interface ModelicaPackage extends EPackage {
 	int BLOCK__ALGORITHM_SECTIONS = MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK__ANNOTATIONS = MODELICA_CLASS_DEFINITION__ANNOTATIONS;
+
+	/**
 	 * The number of structural features of the '<em>Block</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -952,6 +1006,15 @@ public interface ModelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int PACKAGE__ALGORITHM_SECTIONS = MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE__ANNOTATIONS = MODELICA_CLASS_DEFINITION__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Within Clause</b></em>' attribute.
@@ -1097,6 +1160,15 @@ public interface ModelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int FUNCTION__ALGORITHM_SECTIONS = MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__ANNOTATIONS = MODELICA_CLASS_DEFINITION__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>External Language</b></em>' attribute.
@@ -1260,6 +1332,15 @@ public interface ModelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int DER_FUNCTION__ALGORITHM_SECTIONS = FUNCTION__ALGORITHM_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DER_FUNCTION__ANNOTATIONS = FUNCTION__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>External Language</b></em>' attribute.
@@ -2291,6 +2372,43 @@ public interface ModelicaPackage extends EPackage {
 	int CONSTRAINED_BY_CLAUSE_FEATURE_COUNT = 3;
 
 	/**
+	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.AnnotationImpl <em>Annotation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.AnnotationImpl
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getAnnotation()
+	 * @generated
+	 */
+	int ANNOTATION = 21;
+
+	/**
+	 * The feature id for the '<em><b>Body</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANNOTATION__BODY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Owner MCD</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANNOTATION__OWNER_MCD = 1;
+
+	/**
+	 * The number of structural features of the '<em>Annotation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANNOTATION_FEATURE_COUNT = 2;
+
+	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind <em>Visibility Kind</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2298,7 +2416,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getVisibilityKind()
 	 * @generated
 	 */
-	int VISIBILITY_KIND = 21;
+	int VISIBILITY_KIND = 22;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaCausalityKind <em>Causality Kind</em>}' enum.
@@ -2308,7 +2426,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaCausalityKind()
 	 * @generated
 	 */
-	int MODELICA_CAUSALITY_KIND = 22;
+	int MODELICA_CAUSALITY_KIND = 23;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaVariabilityKind <em>Variability Kind</em>}' enum.
@@ -2318,7 +2436,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaVariabilityKind()
 	 * @generated
 	 */
-	int MODELICA_VARIABILITY_KIND = 23;
+	int MODELICA_VARIABILITY_KIND = 24;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFlowFlag <em>Flow Flag</em>}' enum.
@@ -2328,7 +2446,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaFlowFlag()
 	 * @generated
 	 */
-	int MODELICA_FLOW_FLAG = 24;
+	int MODELICA_FLOW_FLAG = 25;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaScopeKind <em>Scope Kind</em>}' enum.
@@ -2338,7 +2456,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaScopeKind()
 	 * @generated
 	 */
-	int MODELICA_SCOPE_KIND = 25;
+	int MODELICA_SCOPE_KIND = 26;
 
 
 	/**
@@ -2482,6 +2600,17 @@ public interface ModelicaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getModelicaClassDefinition_AlgorithmSections();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getAnnotations <em>Annotations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Annotations</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getAnnotations()
+	 * @see #getModelicaClassDefinition()
+	 * @generated
+	 */
+	EReference getModelicaClassDefinition_Annotations();
 
 	/**
 	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Class <em>Class</em>}'.
@@ -3421,6 +3550,38 @@ public interface ModelicaPackage extends EPackage {
 	EReference getConstrainedByClause_InstanceForConstrainedBy();
 
 	/**
+	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation <em>Annotation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Annotation</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation
+	 * @generated
+	 */
+	EClass getAnnotation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation#getBody <em>Body</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Body</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation#getBody()
+	 * @see #getAnnotation()
+	 * @generated
+	 */
+	EAttribute getAnnotation_Body();
+
+	/**
+	 * Returns the meta object for the container reference '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation#getOwnerMCD <em>Owner MCD</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Owner MCD</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation#getOwnerMCD()
+	 * @see #getAnnotation()
+	 * @generated
+	 */
+	EReference getAnnotation_OwnerMCD();
+
+	/**
 	 * Returns the meta object for enum '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind <em>Visibility Kind</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3597,6 +3758,14 @@ public interface ModelicaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS = eINSTANCE.getModelicaClassDefinition_AlgorithmSections();
+
+		/**
+		 * The meta object literal for the '<em><b>Annotations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODELICA_CLASS_DEFINITION__ANNOTATIONS = eINSTANCE.getModelicaClassDefinition_Annotations();
 
 		/**
 		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ClassImpl <em>Class</em>}' class.
@@ -4333,6 +4502,32 @@ public interface ModelicaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY = eINSTANCE.getConstrainedByClause_InstanceForConstrainedBy();
+
+		/**
+		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.AnnotationImpl <em>Annotation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.AnnotationImpl
+		 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getAnnotation()
+		 * @generated
+		 */
+		EClass ANNOTATION = eINSTANCE.getAnnotation();
+
+		/**
+		 * The meta object literal for the '<em><b>Body</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ANNOTATION__BODY = eINSTANCE.getAnnotation_Body();
+
+		/**
+		 * The meta object literal for the '<em><b>Owner MCD</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ANNOTATION__OWNER_MCD = eINSTANCE.getAnnotation_OwnerMCD();
 
 		/**
 		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind <em>Visibility Kind</em>}' enum.

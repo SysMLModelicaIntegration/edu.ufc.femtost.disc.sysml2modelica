@@ -492,6 +492,11 @@
         <references href="http://www.femto-st.fr/disc/Modelica.ecore#//Equation"/>
       </eAnnotations>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Annotation_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.femto-st.fr/disc/Modelica.ecore#//Annotation"/>
+      </eAnnotations>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Function_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://www.femto-st.fr/disc/Modelica.ecore#//Function"/>

@@ -86,7 +86,8 @@ helper context MMuml!Connector def: isModelicaConnectionStereotyped() : Boolean 
 helper context MMuml!Constraint def: isModelicaEquationStereotyped() : Boolean = 
 	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Equations and Algorithms::ModelicaEquation');
 
-
+helper context MMuml!Comment def: isModelicaAnnotationStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Other::ModelicaAnnotation');
 
 
 helper context MMsysml!Block def: getIsFinal() : Boolean = 
@@ -506,6 +507,15 @@ rule Dependency2ConstrainedBy{
 	)
 }
 
+rule Comment2Annotation{
+	from sysml: MMuml!Comment(
+		sysml.isModelicaAnnotationStereotyped()	
+	)
+	to modelica: MMmodelica!Annotation(
+		ownerMCD <- sysml.annotatedElement->first(), 
+		body <- sysml.body.toString()
+	)
+}
 ------------------------------------------------------------------------
 ---------------------------------IBD------------------------------------
 ------------------------------------------------------------------------

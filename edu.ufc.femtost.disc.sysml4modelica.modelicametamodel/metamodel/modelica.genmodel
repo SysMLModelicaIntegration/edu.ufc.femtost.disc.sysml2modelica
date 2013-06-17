@@ -52,6 +52,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelica.ecore#//ModelicaClassDefinition/modelicaComponents"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelica.ecore#//ModelicaClassDefinition/equationSection"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelica.ecore#//ModelicaClassDefinition/algorithmSections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelica.ecore#//ModelicaClassDefinition/annotations"/>
     </genClasses>
     <genClasses ecoreClass="modelica.ecore#//Class"/>
     <genClasses ecoreClass="modelica.ecore#//Connector">
@@ -155,6 +156,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ConstrainedByClause/modification"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference modelica.ecore#//ConstrainedByClause/ownerInstance"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modelica.ecore#//ConstrainedByClause/instanceForConstrainedBy"/>
+    </genClasses>
+    <genClasses ecoreClass="modelica.ecore#//Annotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//Annotation/body"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference modelica.ecore#//Annotation/ownerMCD"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
