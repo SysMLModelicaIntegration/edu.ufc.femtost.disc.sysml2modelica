@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="generateModelicaDerFunction" nsURI="edu::ufc::femtost::disc::sysml4modelica::codegen::files::generateModelicaDerFunction" startHeaderPosition="486" endHeaderPosition="666">
+    <documentation xsi:type="mtl:ModuleDocumentation">
+      <body startPosition="32" endPosition="483" value="&#xD;&#xA;&#xD;&#xA;Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comte&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+    </documentation>
+    <input>
+      <takesTypesFrom href="http://www.femto-st.fr/disc/Modelica.ecore#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateModelicaDerFunction" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;function "/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aDerFunction" referredVariable="/0/generateModelicaDerFunction/aDerFunction">
+          <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//DerFunction"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.femto-st.fr/disc/Modelica.ecore#//ModelicaClassDefinition/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = der("/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//Function"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aDerFunction" referredVariable="/0/generateModelicaDerFunction/aDerFunction">
+            <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//DerFunction"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.femto-st.fr/disc/Modelica.ecore#//DerFunction/der"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.femto-st.fr/disc/Modelica.ecore#//ModelicaClassDefinition/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", "/>
+      <body xsi:type="ocl.ecore:PropertyCallExp" eType="/8/OrderedSet(String)">
+        <source xsi:type="ocl.ecore:VariableExp" name="aDerFunction" referredVariable="/0/generateModelicaDerFunction/aDerFunction">
+          <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//DerFunction"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.femto-st.fr/disc/Modelica.ecore#//DerFunction/variable"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");"/>
+      <documentation xsi:type="mtl:ModuleElementDocumentation">
+        <body startPosition="574" endPosition="666" value="&#xD;&#xA;The documentation of the template generateModelicaDerFunction.&#xD;&#xA;@param aDerFunction&#xD;&#xA;&#xD;&#xA;"/>
+        <parametersDocumentation name="aDerFunction">
+          <body value=""/>
+        </parametersDocumentation>
+      </documentation>
+      <parameter name="aDerFunction">
+        <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//DerFunction"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateModelicaDerFunction">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateModelicaDerFunction"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aDerFunction">
+          <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//DerFunction"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DerFunction_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.femto-st.fr/disc/Modelica.ecore#//DerFunction"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//DerFunction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//DerFunction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//DerFunction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//DerFunction"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(String)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//DerFunction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/@documentation">
+      <details key="start" value="29"/>
+      <details key="end" value="485"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateModelicaDerFunction">
+      <details key="start" value="669"/>
+      <details key="end" value="844"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateModelicaDerFunction/@body.0">
+      <details key="start" value="743"/>
+      <details key="end" value="753"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateModelicaDerFunction/@body.1">
+      <details key="start" value="754"/>
+      <details key="end" value="771"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateModelicaDerFunction/@body.1/aDerFunction">
+      <details key="start" value="754"/>
+      <details key="end" value="766"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateModelicaDerFunction/@body.2">
+      <details key="start" value="773"/>
+      <details key="end" value="780"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateModelicaDerFunction/@body.3">
+      <details key="start" value="781"/>
+      <details key="end" value="802"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateModelicaDerFunction/@body.3/@source">
+      <details key="start" value="781"/>
+      <details key="end" value="797"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateModelicaDerFunction/@body.3/@source/aDerFunction">
+      <details key="start" value="781"/>
+      <details key="end" value="793"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateModelicaDerFunction/@body.4">
+      <details key="start" value="804"/>
+      <details key="end" value="806"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateModelicaDerFunction/@body.5">
+      <details key="start" value="807"/>
+      <details key="end" value="828"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateModelicaDerFunction/@body.5/aDerFunction">
+      <details key="start" value="807"/>
+      <details key="end" value="819"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateModelicaDerFunction/@body.6">
+      <details key="start" value="830"/>
+      <details key="end" value="832"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateModelicaDerFunction/@documentation">
+      <details key="start" value="571"/>
+      <details key="end" value="668"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateModelicaDerFunction/@documentation/aDerFunction">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateModelicaDerFunction/aDerFunction">
+      <details key="start" value="714"/>
+      <details key="end" value="740"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

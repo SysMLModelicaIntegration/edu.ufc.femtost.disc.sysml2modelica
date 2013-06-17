@@ -45,7 +45,7 @@
 [file (getPath(aModelicaClassDefinition), false, 'UTF-8')]
 within [getWithin(aModelicaClassDefinition)/];
 
-[if(aModelicaClassDefinition.isFinal)]final [/if][if(aModelicaClassDefinition.isModelicaEncapsulated)]encapsulated [/if][if(aModelicaClassDefinition.isPartial)]partial [/if][if(aModelicaClassDefinition.oclIsTypeOf(Connector) and aModelicaClassDefinition.oclAsType(Connector).isExpandable)]expandable [/if][aModelicaClassDefinition.eClass().name.toLower()/] [aModelicaClassDefinition.name/]
+[if(aModelicaClassDefinition.isReplaceable)]replaceable [/if][if(aModelicaClassDefinition.isFinal)]final [/if][if(aModelicaClassDefinition.isModelicaEncapsulated)]encapsulated [/if][if(aModelicaClassDefinition.isPartial)]partial [/if][if(aModelicaClassDefinition.oclIsTypeOf(Connector) and aModelicaClassDefinition.oclAsType(Connector).isExpandable)]expandable [/if][aModelicaClassDefinition.eClass().name.toLower()/] [aModelicaClassDefinition.name/]
 [for(aModelicaExtends : ExtendsClause | aModelicaClassDefinition.extends)]
 [generateModelicaExtends(aModelicaExtends)/]
 [/for]
@@ -74,7 +74,7 @@ end [aModelicaClassDefinition.name/];
 [/template]
 
 [template public generateModelicaPart(aModelicaPart : ModelicaPart)]
-[if(aModelicaPart.visibility.toString() <> 'public')][aModelicaPart.visibility.toString()/] [/if][aModelicaPart.type_specifier/] [aModelicaPart.name/][if(not aModelicaPart.modification.oclIsUndefined() and aModelicaPart.modification <> '')] ([aModelicaPart.modification/])[/if];
+[if(aModelicaPart.visibility.toString() <> 'public')][aModelicaPart.visibility.toString()/] [/if][aModelicaPart.type_specifier/] [aModelicaPart.name/][if(not aModelicaPart.constrainedBy.oclIsUndefined())] constrainedBy [aModelicaPart.constrainedBy.instanceForConstrainedBy.name/][if(not aModelicaPart.constrainedBy.modification.oclIsUndefined() and aModelicaPart.constrainedBy.modification.toString() <> '')]([aModelicaPart.constrainedBy.modification.toString()/])[/if][/if][if(not aModelicaPart.modification.oclIsUndefined() and aModelicaPart.modification <> '')] ([aModelicaPart.modification/])[/if];
 [/template]
 
 [template public generateEquationSection(aEquationSection : EquationSection)]

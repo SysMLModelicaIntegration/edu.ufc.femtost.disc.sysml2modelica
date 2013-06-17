@@ -1780,13 +1780,22 @@ public interface ModelicaPackage extends EPackage {
 	int MODELICA_PART__TYPE_PART = MODELICA_COMPONENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Constrained By</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODELICA_PART__CONSTRAINED_BY = MODELICA_COMPONENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Part</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODELICA_PART_FEATURE_COUNT = MODELICA_COMPONENT_FEATURE_COUNT + 3;
+	int MODELICA_PART_FEATURE_COUNT = MODELICA_COMPONENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPortImpl <em>Port</em>}' class.
@@ -1871,22 +1880,22 @@ public interface ModelicaPackage extends EPackage {
 	int MODELICA_PORT__TYPE_SPECIFIER = MODELICA_COMPONENT__TYPE_SPECIFIER;
 
 	/**
-	 * The feature id for the '<em><b>Causality</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODELICA_PORT__CAUSALITY = MODELICA_COMPONENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Type connector</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODELICA_PORT__TYPE_CONNECTOR = MODELICA_COMPONENT_FEATURE_COUNT + 1;
+	int MODELICA_PORT__TYPE_CONNECTOR = MODELICA_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Causality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODELICA_PORT__CAUSALITY = MODELICA_COMPONENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Port</em>' class.
@@ -2236,6 +2245,52 @@ public interface ModelicaPackage extends EPackage {
 	int ALGORITHM_SECTION_FEATURE_COUNT = 2;
 
 	/**
+	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ConstrainedByClauseImpl <em>Constrained By Clause</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ConstrainedByClauseImpl
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getConstrainedByClause()
+	 * @generated
+	 */
+	int CONSTRAINED_BY_CLAUSE = 20;
+
+	/**
+	 * The feature id for the '<em><b>Modification</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINED_BY_CLAUSE__MODIFICATION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Owner Instance</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Instance For Constrained By</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY = 2;
+
+	/**
+	 * The number of structural features of the '<em>Constrained By Clause</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINED_BY_CLAUSE_FEATURE_COUNT = 3;
+
+	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind <em>Visibility Kind</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2243,7 +2298,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getVisibilityKind()
 	 * @generated
 	 */
-	int VISIBILITY_KIND = 20;
+	int VISIBILITY_KIND = 21;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaCausalityKind <em>Causality Kind</em>}' enum.
@@ -2253,7 +2308,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaCausalityKind()
 	 * @generated
 	 */
-	int MODELICA_CAUSALITY_KIND = 21;
+	int MODELICA_CAUSALITY_KIND = 22;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaVariabilityKind <em>Variability Kind</em>}' enum.
@@ -2263,7 +2318,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaVariabilityKind()
 	 * @generated
 	 */
-	int MODELICA_VARIABILITY_KIND = 22;
+	int MODELICA_VARIABILITY_KIND = 23;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFlowFlag <em>Flow Flag</em>}' enum.
@@ -2273,7 +2328,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaFlowFlag()
 	 * @generated
 	 */
-	int MODELICA_FLOW_FLAG = 23;
+	int MODELICA_FLOW_FLAG = 24;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaScopeKind <em>Scope Kind</em>}' enum.
@@ -2283,7 +2338,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaScopeKind()
 	 * @generated
 	 */
-	int MODELICA_SCOPE_KIND = 24;
+	int MODELICA_SCOPE_KIND = 25;
 
 
 	/**
@@ -2933,6 +2988,17 @@ public interface ModelicaPackage extends EPackage {
 	EReference getModelicaPart_Type_part();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart#getConstrainedBy <em>Constrained By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Constrained By</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart#getConstrainedBy()
+	 * @see #getModelicaPart()
+	 * @generated
+	 */
+	EReference getModelicaPart_ConstrainedBy();
+
+	/**
 	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPort <em>Port</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3310,6 +3376,49 @@ public interface ModelicaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAlgorithmSection_Body();
+
+	/**
+	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause <em>Constrained By Clause</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Constrained By Clause</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause
+	 * @generated
+	 */
+	EClass getConstrainedByClause();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause#getModification <em>Modification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Modification</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause#getModification()
+	 * @see #getConstrainedByClause()
+	 * @generated
+	 */
+	EAttribute getConstrainedByClause_Modification();
+
+	/**
+	 * Returns the meta object for the container reference '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause#getOwnerInstance <em>Owner Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Owner Instance</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause#getOwnerInstance()
+	 * @see #getConstrainedByClause()
+	 * @generated
+	 */
+	EReference getConstrainedByClause_OwnerInstance();
+
+	/**
+	 * Returns the meta object for the reference '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause#getInstanceForConstrainedBy <em>Instance For Constrained By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Instance For Constrained By</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause#getInstanceForConstrainedBy()
+	 * @see #getConstrainedByClause()
+	 * @generated
+	 */
+	EReference getConstrainedByClause_InstanceForConstrainedBy();
 
 	/**
 	 * Returns the meta object for enum '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind <em>Visibility Kind</em>}'.
@@ -3892,6 +4001,14 @@ public interface ModelicaPackage extends EPackage {
 		EReference MODELICA_PART__TYPE_PART = eINSTANCE.getModelicaPart_Type_part();
 
 		/**
+		 * The meta object literal for the '<em><b>Constrained By</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODELICA_PART__CONSTRAINED_BY = eINSTANCE.getModelicaPart_ConstrainedBy();
+
+		/**
 		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPortImpl <em>Port</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4182,6 +4299,40 @@ public interface ModelicaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ALGORITHM_SECTION__BODY = eINSTANCE.getAlgorithmSection_Body();
+
+		/**
+		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ConstrainedByClauseImpl <em>Constrained By Clause</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ConstrainedByClauseImpl
+		 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getConstrainedByClause()
+		 * @generated
+		 */
+		EClass CONSTRAINED_BY_CLAUSE = eINSTANCE.getConstrainedByClause();
+
+		/**
+		 * The meta object literal for the '<em><b>Modification</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONSTRAINED_BY_CLAUSE__MODIFICATION = eINSTANCE.getConstrainedByClause_Modification();
+
+		/**
+		 * The meta object literal for the '<em><b>Owner Instance</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE = eINSTANCE.getConstrainedByClause_OwnerInstance();
+
+		/**
+		 * The meta object literal for the '<em><b>Instance For Constrained By</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY = eINSTANCE.getConstrainedByClause_InstanceForConstrainedBy();
 
 		/**
 		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind <em>Visibility Kind</em>}' enum.

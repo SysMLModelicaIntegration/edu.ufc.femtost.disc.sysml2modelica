@@ -12,24 +12,20 @@ package edu.ufc.femtost.disc.sysml4modelica.ui.utils;
 
 import org.eclipse.swt.widgets.Display;
 
-//Referenced classes of package fr.femtost.disc.problem.util:
-//         DisplayUtil
 
-class DisplayUtilThread extends Thread
-{
+class DisplayUtilThread extends Thread {
 
- DisplayUtilThread(Display display, String s)
- {
-	 super();
-	 val$display = display;
-     val$msg = s;
- }
+	private final Display display;
+	private final String valmsg;
 
- public void run()
- {
-     val$display.syncExec(new DisplayUtilRun(this, val$msg));
- }
+	DisplayUtilThread(Display display, String s){
+		super();
+		this.display = display;
+		this.valmsg = s;
+	}
 
- private final Display val$display;
- private final String val$msg;
+	public void run()
+	{
+		display.syncExec(new DisplayUtilRun(this, valmsg));
+	}
 }

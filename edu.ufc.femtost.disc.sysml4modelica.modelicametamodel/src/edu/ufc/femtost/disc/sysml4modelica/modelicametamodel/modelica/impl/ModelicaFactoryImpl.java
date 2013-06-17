@@ -14,6 +14,7 @@ import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmS
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Block;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connect;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connector;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.DerFunction;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Equation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection;
@@ -105,6 +106,7 @@ public class ModelicaFactoryImpl extends EFactoryImpl implements ModelicaFactory
 			case ModelicaPackage.EQUATION_SECTION: return createEquationSection();
 			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER: return createModelicaFunctionParameter();
 			case ModelicaPackage.ALGORITHM_SECTION: return createAlgorithmSection();
+			case ModelicaPackage.CONSTRAINED_BY_CLAUSE: return createConstrainedByClause();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -334,6 +336,16 @@ public class ModelicaFactoryImpl extends EFactoryImpl implements ModelicaFactory
 	public AlgorithmSection createAlgorithmSection() {
 		AlgorithmSectionImpl algorithmSection = new AlgorithmSectionImpl();
 		return algorithmSection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstrainedByClause createConstrainedByClause() {
+		ConstrainedByClauseImpl constrainedByClause = new ConstrainedByClauseImpl();
+		return constrainedByClause;
 	}
 
 	/**

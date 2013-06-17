@@ -108,10 +108,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ModelicaPart/visibility"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ModelicaPart/scope"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modelica.ecore#//ModelicaPart/type_part"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelica.ecore#//ModelicaPart/constrainedBy"/>
     </genClasses>
     <genClasses ecoreClass="modelica.ecore#//ModelicaPort">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ModelicaPort/causality"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modelica.ecore#//ModelicaPort/type_connector"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ModelicaPort/causality"/>
     </genClasses>
     <genClasses ecoreClass="modelica.ecore#//Equation">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference modelica.ecore#//Equation/ownerEquationSection"/>
@@ -149,6 +150,11 @@
     <genClasses ecoreClass="modelica.ecore#//AlgorithmSection">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference modelica.ecore#//AlgorithmSection/ownerModelicaClassDefinition"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//AlgorithmSection/body"/>
+    </genClasses>
+    <genClasses ecoreClass="modelica.ecore#//ConstrainedByClause">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ConstrainedByClause/modification"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference modelica.ecore#//ConstrainedByClause/ownerInstance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modelica.ecore#//ConstrainedByClause/instanceForConstrainedBy"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

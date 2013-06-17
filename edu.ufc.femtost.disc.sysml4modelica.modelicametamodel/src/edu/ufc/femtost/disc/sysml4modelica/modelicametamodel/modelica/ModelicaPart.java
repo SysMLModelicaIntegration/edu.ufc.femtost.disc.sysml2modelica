@@ -22,6 +22,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart#getScope <em>Scope</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart#getType_part <em>Type part</em>}</li>
+ *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart#getConstrainedBy <em>Constrained By</em>}</li>
  * </ul>
  * </p>
  *
@@ -113,5 +114,33 @@ public interface ModelicaPart extends ModelicaComponent {
 	 * @generated
 	 */
 	void setType_part(ModelicaClassDefinition value);
+
+	/**
+	 * Returns the value of the '<em><b>Constrained By</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause#getOwnerInstance <em>Owner Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Constrained By</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Constrained By</em>' containment reference.
+	 * @see #setConstrainedBy(ConstrainedByClause)
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaPart_ConstrainedBy()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause#getOwnerInstance
+	 * @model opposite="ownerInstance" containment="true"
+	 * @generated
+	 */
+	ConstrainedByClause getConstrainedBy();
+
+	/**
+	 * Sets the value of the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart#getConstrainedBy <em>Constrained By</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Constrained By</em>' containment reference.
+	 * @see #getConstrainedBy()
+	 * @generated
+	 */
+	void setConstrainedBy(ConstrainedByClause value);
 
 } // ModelicaPart

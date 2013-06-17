@@ -130,11 +130,13 @@
         eType="#//VisibilityKind"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="scope" lowerBound="1" eType="#//ModelicaScopeKind"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type_part" eType="#//ModelicaClassDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constrainedBy" eType="#//ConstrainedByClause"
+        containment="true" eOpposite="#//ConstrainedByClause/ownerInstance"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModelicaPort" eSuperTypes="#//ModelicaComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type_connector" eType="#//Connector"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="causality" lowerBound="1"
         eType="#//ModelicaCausalityKind"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type_connector" eType="#//Connector"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Equation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownerEquationSection" eType="#//EquationSection"
@@ -188,5 +190,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownerModelicaClassDefinition"
         lowerBound="1" eType="#//ModelicaClassDefinition" eOpposite="#//ModelicaClassDefinition/algorithmSections"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="body" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstrainedByClause">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modification" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownerInstance" eType="#//ModelicaPart"
+        eOpposite="#//ModelicaPart/constrainedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instanceForConstrainedBy"
+        eType="#//ModelicaPart"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -29,14 +29,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPortImpl#getCausality <em>Causality</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPortImpl#getType_connector <em>Type connector</em>}</li>
+ *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPortImpl#getCausality <em>Causality</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class ModelicaPortImpl extends ModelicaComponentImpl implements ModelicaPort {
+	/**
+	 * The cached value of the '{@link #getType_connector() <em>Type connector</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType_connector()
+	 * @generated
+	 * @ordered
+	 */
+	protected Connector type_connector;
+
 	/**
 	 * The default value of the '{@link #getCausality() <em>Causality</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -56,16 +66,6 @@ public class ModelicaPortImpl extends ModelicaComponentImpl implements ModelicaP
 	 * @ordered
 	 */
 	protected ModelicaCausalityKind causality = CAUSALITY_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getType_connector() <em>Type connector</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType_connector()
-	 * @generated
-	 * @ordered
-	 */
-	protected Connector type_connector;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -153,11 +153,11 @@ public class ModelicaPortImpl extends ModelicaComponentImpl implements ModelicaP
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_PORT__CAUSALITY:
-				return getCausality();
 			case ModelicaPackage.MODELICA_PORT__TYPE_CONNECTOR:
 				if (resolve) return getType_connector();
 				return basicGetType_connector();
+			case ModelicaPackage.MODELICA_PORT__CAUSALITY:
+				return getCausality();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -170,11 +170,11 @@ public class ModelicaPortImpl extends ModelicaComponentImpl implements ModelicaP
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_PORT__CAUSALITY:
-				setCausality((ModelicaCausalityKind)newValue);
-				return;
 			case ModelicaPackage.MODELICA_PORT__TYPE_CONNECTOR:
 				setType_connector((Connector)newValue);
+				return;
+			case ModelicaPackage.MODELICA_PORT__CAUSALITY:
+				setCausality((ModelicaCausalityKind)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -188,11 +188,11 @@ public class ModelicaPortImpl extends ModelicaComponentImpl implements ModelicaP
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_PORT__CAUSALITY:
-				setCausality(CAUSALITY_EDEFAULT);
-				return;
 			case ModelicaPackage.MODELICA_PORT__TYPE_CONNECTOR:
 				setType_connector((Connector)null);
+				return;
+			case ModelicaPackage.MODELICA_PORT__CAUSALITY:
+				setCausality(CAUSALITY_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -206,10 +206,10 @@ public class ModelicaPortImpl extends ModelicaComponentImpl implements ModelicaP
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_PORT__CAUSALITY:
-				return causality != CAUSALITY_EDEFAULT;
 			case ModelicaPackage.MODELICA_PORT__TYPE_CONNECTOR:
 				return type_connector != null;
+			case ModelicaPackage.MODELICA_PORT__CAUSALITY:
+				return causality != CAUSALITY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

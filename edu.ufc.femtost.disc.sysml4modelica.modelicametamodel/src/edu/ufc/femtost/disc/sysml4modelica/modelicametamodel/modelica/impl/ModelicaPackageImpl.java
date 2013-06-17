@@ -14,6 +14,7 @@ import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmS
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Block;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connect;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connector;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.DerFunction;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Equation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection;
@@ -190,6 +191,13 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 	 * @generated
 	 */
 	private EClass algorithmSectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass constrainedByClauseEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -832,6 +840,15 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getModelicaPart_ConstrainedBy() {
+		return (EReference)modelicaPartEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getModelicaPort() {
 		return modelicaPortEClass;
 	}
@@ -842,7 +859,7 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 	 * @generated
 	 */
 	public EAttribute getModelicaPort_Causality() {
-		return (EAttribute)modelicaPortEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)modelicaPortEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -851,7 +868,7 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 	 * @generated
 	 */
 	public EReference getModelicaPort_Type_connector() {
-		return (EReference)modelicaPortEClass.getEStructuralFeatures().get(1);
+		return (EReference)modelicaPortEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1147,6 +1164,42 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getConstrainedByClause() {
+		return constrainedByClauseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getConstrainedByClause_Modification() {
+		return (EAttribute)constrainedByClauseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConstrainedByClause_OwnerInstance() {
+		return (EReference)constrainedByClauseEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConstrainedByClause_InstanceForConstrainedBy() {
+		return (EReference)constrainedByClauseEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getVisibilityKind() {
 		return visibilityKindEEnum;
 	}
@@ -1288,10 +1341,11 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		createEAttribute(modelicaPartEClass, MODELICA_PART__VISIBILITY);
 		createEAttribute(modelicaPartEClass, MODELICA_PART__SCOPE);
 		createEReference(modelicaPartEClass, MODELICA_PART__TYPE_PART);
+		createEReference(modelicaPartEClass, MODELICA_PART__CONSTRAINED_BY);
 
 		modelicaPortEClass = createEClass(MODELICA_PORT);
-		createEAttribute(modelicaPortEClass, MODELICA_PORT__CAUSALITY);
 		createEReference(modelicaPortEClass, MODELICA_PORT__TYPE_CONNECTOR);
+		createEAttribute(modelicaPortEClass, MODELICA_PORT__CAUSALITY);
 
 		equationEClass = createEClass(EQUATION);
 		createEReference(equationEClass, EQUATION__OWNER_EQUATION_SECTION);
@@ -1329,6 +1383,11 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		algorithmSectionEClass = createEClass(ALGORITHM_SECTION);
 		createEReference(algorithmSectionEClass, ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION);
 		createEAttribute(algorithmSectionEClass, ALGORITHM_SECTION__BODY);
+
+		constrainedByClauseEClass = createEClass(CONSTRAINED_BY_CLAUSE);
+		createEAttribute(constrainedByClauseEClass, CONSTRAINED_BY_CLAUSE__MODIFICATION);
+		createEReference(constrainedByClauseEClass, CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE);
+		createEReference(constrainedByClauseEClass, CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY);
 
 		// Create enums
 		visibilityKindEEnum = createEEnum(VISIBILITY_KIND);
@@ -1452,10 +1511,11 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		initEAttribute(getModelicaPart_Visibility(), this.getVisibilityKind(), "visibility", null, 1, 1, ModelicaPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModelicaPart_Scope(), this.getModelicaScopeKind(), "scope", null, 1, 1, ModelicaPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModelicaPart_Type_part(), this.getModelicaClassDefinition(), null, "type_part", null, 0, 1, ModelicaPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModelicaPart_ConstrainedBy(), this.getConstrainedByClause(), this.getConstrainedByClause_OwnerInstance(), "constrainedBy", null, 0, 1, ModelicaPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(modelicaPortEClass, ModelicaPort.class, "ModelicaPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getModelicaPort_Causality(), this.getModelicaCausalityKind(), "causality", null, 1, 1, ModelicaPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModelicaPort_Type_connector(), this.getConnector(), null, "type_connector", null, 0, 1, ModelicaPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelicaPort_Causality(), this.getModelicaCausalityKind(), "causality", null, 1, 1, ModelicaPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(equationEClass, Equation.class, "Equation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEquation_OwnerEquationSection(), this.getEquationSection(), this.getEquationSection_Equations(), "ownerEquationSection", null, 0, 1, Equation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1493,6 +1553,11 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		initEClass(algorithmSectionEClass, AlgorithmSection.class, "AlgorithmSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAlgorithmSection_OwnerModelicaClassDefinition(), this.getModelicaClassDefinition(), this.getModelicaClassDefinition_AlgorithmSections(), "ownerModelicaClassDefinition", null, 1, 1, AlgorithmSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAlgorithmSection_Body(), ecorePackage.getEString(), "body", null, 0, 1, AlgorithmSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(constrainedByClauseEClass, ConstrainedByClause.class, "ConstrainedByClause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getConstrainedByClause_Modification(), ecorePackage.getEString(), "modification", null, 0, 1, ConstrainedByClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstrainedByClause_OwnerInstance(), this.getModelicaPart(), this.getModelicaPart_ConstrainedBy(), "ownerInstance", null, 0, 1, ConstrainedByClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstrainedByClause_InstanceForConstrainedBy(), this.getModelicaPart(), null, "instanceForConstrainedBy", null, 0, 1, ConstrainedByClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(visibilityKindEEnum, VisibilityKind.class, "VisibilityKind");

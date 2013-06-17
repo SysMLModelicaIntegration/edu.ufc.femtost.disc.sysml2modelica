@@ -10,6 +10,7 @@
  *******************************************************************************/
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart;
@@ -18,6 +19,7 @@ import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Visibility
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -33,6 +35,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPartImpl#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPartImpl#getScope <em>Scope</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPartImpl#getType_part <em>Type part</em>}</li>
+ *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPartImpl#getConstrainedBy <em>Constrained By</em>}</li>
  * </ul>
  * </p>
  *
@@ -88,6 +91,16 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 	 * @ordered
 	 */
 	protected ModelicaClassDefinition type_part;
+
+	/**
+	 * The cached value of the '{@link #getConstrainedBy() <em>Constrained By</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConstrainedBy()
+	 * @generated
+	 * @ordered
+	 */
+	protected ConstrainedByClause constrainedBy;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -193,6 +206,79 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ConstrainedByClause getConstrainedBy() {
+		return constrainedBy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetConstrainedBy(ConstrainedByClause newConstrainedBy, NotificationChain msgs) {
+		ConstrainedByClause oldConstrainedBy = constrainedBy;
+		constrainedBy = newConstrainedBy;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_PART__CONSTRAINED_BY, oldConstrainedBy, newConstrainedBy);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConstrainedBy(ConstrainedByClause newConstrainedBy) {
+		if (newConstrainedBy != constrainedBy) {
+			NotificationChain msgs = null;
+			if (constrainedBy != null)
+				msgs = ((InternalEObject)constrainedBy).eInverseRemove(this, ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE, ConstrainedByClause.class, msgs);
+			if (newConstrainedBy != null)
+				msgs = ((InternalEObject)newConstrainedBy).eInverseAdd(this, ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE, ConstrainedByClause.class, msgs);
+			msgs = basicSetConstrainedBy(newConstrainedBy, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_PART__CONSTRAINED_BY, newConstrainedBy, newConstrainedBy));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelicaPackage.MODELICA_PART__CONSTRAINED_BY:
+				if (constrainedBy != null)
+					msgs = ((InternalEObject)constrainedBy).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelicaPackage.MODELICA_PART__CONSTRAINED_BY, null, msgs);
+				return basicSetConstrainedBy((ConstrainedByClause)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelicaPackage.MODELICA_PART__CONSTRAINED_BY:
+				return basicSetConstrainedBy(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -203,6 +289,8 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 			case ModelicaPackage.MODELICA_PART__TYPE_PART:
 				if (resolve) return getType_part();
 				return basicGetType_part();
+			case ModelicaPackage.MODELICA_PART__CONSTRAINED_BY:
+				return getConstrainedBy();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -223,6 +311,9 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 				return;
 			case ModelicaPackage.MODELICA_PART__TYPE_PART:
 				setType_part((ModelicaClassDefinition)newValue);
+				return;
+			case ModelicaPackage.MODELICA_PART__CONSTRAINED_BY:
+				setConstrainedBy((ConstrainedByClause)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -245,6 +336,9 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 			case ModelicaPackage.MODELICA_PART__TYPE_PART:
 				setType_part((ModelicaClassDefinition)null);
 				return;
+			case ModelicaPackage.MODELICA_PART__CONSTRAINED_BY:
+				setConstrainedBy((ConstrainedByClause)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -263,6 +357,8 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 				return scope != SCOPE_EDEFAULT;
 			case ModelicaPackage.MODELICA_PART__TYPE_PART:
 				return type_part != null;
+			case ModelicaPackage.MODELICA_PART__CONSTRAINED_BY:
+				return constrainedBy != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -12,22 +12,21 @@ package edu.ufc.femtost.disc.sysml4modelica.ui.utils;
 
 import org.eclipse.ui.*;
 
-class DisplayUtilRun
-    implements Runnable
+class DisplayUtilRun implements Runnable
 {
 
-    DisplayUtilRun(DisplayUtilThread displayutil$1, String s)
+    DisplayUtilRun(DisplayUtilThread displayutil, String s)
     {
     	super();
-    	this$1 = displayutil$1;
-        val$msg = s;
+    	this.display = displayutil;
+        this.valmsg = s;
     }
 
     public void run()
     {
-        ((IViewSite)PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart().getSite()).getActionBars().getStatusLineManager().setMessage(val$msg);
+        ((IViewSite)PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart().getSite()).getActionBars().getStatusLineManager().setMessage(valmsg);
     }
 
-    final DisplayUtilThread this$1;
-    private final String val$msg;
+    final DisplayUtilThread display;
+    private final String valmsg;
 }

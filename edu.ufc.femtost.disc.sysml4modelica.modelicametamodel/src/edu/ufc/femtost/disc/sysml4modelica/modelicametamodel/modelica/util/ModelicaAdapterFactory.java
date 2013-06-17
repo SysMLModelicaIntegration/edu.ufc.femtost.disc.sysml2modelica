@@ -14,6 +14,7 @@ import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmS
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Block;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connect;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connector;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.DerFunction;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Equation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection;
@@ -172,6 +173,10 @@ public class ModelicaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseAlgorithmSection(AlgorithmSection object) {
 				return createAlgorithmSectionAdapter();
+			}
+			@Override
+			public Adapter caseConstrainedByClause(ConstrainedByClause object) {
+				return createConstrainedByClauseAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -470,6 +475,20 @@ public class ModelicaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAlgorithmSectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause <em>Constrained By Clause</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause
+	 * @generated
+	 */
+	public Adapter createConstrainedByClauseAdapter() {
 		return null;
 	}
 

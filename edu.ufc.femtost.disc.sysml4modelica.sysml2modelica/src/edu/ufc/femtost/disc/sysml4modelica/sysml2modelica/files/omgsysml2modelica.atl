@@ -65,6 +65,9 @@ helper context MMuml!NamedElement def: isModelicaFunctionParameterStereotyped() 
 helper context MMuml!Dependency def: isModelicaDerStereotyped() : Boolean = 
 	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaDer');
 
+helper context MMuml!Dependency def: isModelicaConstrainedByStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaConstrainedBy');
+
 helper context MMuml!Generalization def: isModelicaExtendsStereotyped() : Boolean = 
 	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaExtends');
 
@@ -119,6 +122,9 @@ helper context MMuml!Generalization def: getModification() : String =
 helper context MMuml!Parameter def: getModification() : String = 
 	MMmodelicaProfile!ModelicaFunctionParameter.allInstances()->select(mc | mc.base_Parameter = self)->first().modification;
 
+helper context MMuml!Dependency def: getModification() : String = 
+	MMmodelicaProfile!ModelicaConstrainedBy.allInstances()->select(mc | mc.base_Dependency = self)->first().modification;
+
 helper context MMuml!Property def: getModification() : String = 
 	MMmodelicaProfile!ModelicaValueProperty.allInstances()->
 		union(MMmodelicaProfile!ModelicaPart.allInstances())->
@@ -171,12 +177,6 @@ helper context MMuml!Generalization def: getVisibility() : String =
 
 helper context MMuml!Property def: getVisibility() : String = 
 	MMmodelicaProfile!ModelicaValueProperty.allInstances()->select(mc | mc.base_Property = self)->first().visibility;
-
---helper context MMsysml!Block def: getFromLibrary() : String = 
---	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Classifier = self)->first().fromLibrary;
---
---helper context MMuml!FunctionBehavior def: getFromLibrary() : String = 
---	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().fromLibrary;
 
 helper context MMuml!Generalization def: getArraySize() : String = 
 	MMmodelicaProfile!ModelicaExtends.allInstances()->select(mc | mc.base_Generalization = self)->first().arraySize;
@@ -272,7 +272,6 @@ rule Model2Model{
 	to  modelica_model: MMmodelica!ModelicaModel(
 		name <- sysml.name
 	)
-	
 }
 
 abstract rule Block2ModelicaClassDefinition{
@@ -287,7 +286,6 @@ abstract rule Block2ModelicaClassDefinition{
 		isPartial <- sysml.getIsPartial(), 
 		isReplaceable <- sysml.getIsReplaceable()
 	)
-	
 }
 
 rule Block2Package_1 extends Block2ModelicaClassDefinition{
@@ -433,7 +431,8 @@ rule Property2ModelicaValueProperty extends Property2ModelicaComponent{
 rule FunctionBehavior2ModelicaFunction{
 	from sysml: MMuml!FunctionBehavior(
 		sysml.owner.oclIsTypeOf(MMsysml!Block) and
-		sysml.isModelicaFunctionStereotyped()
+		sysml.isModelicaFunctionStereotyped() and 
+		not MMuml!Dependency.allInstances()->exists(d | d.isModelicaDerStereotyped() and d.client->first() = sysml)
 	)
 	to modelica: MMmodelica!Function(
 		name <- sysml.name,
@@ -483,6 +482,30 @@ rule FunctionParameter2ModelicaParameter{
 							endif
 	)
 }
+
+rule Dependency2DerivativeFunction{
+	from sysml: MMuml!Dependency(
+		sysml.isModelicaDerStereotyped()
+	)
+	to modelica: MMmodelica!DerFunction(
+		der <- sysml.supplier->first(), 
+		ownerPackage <- sysml.client->first().owner, 
+		name <- sysml.client->first().name, 
+		variable <- sysml.getVariable()
+	)
+}
+
+rule Dependency2ConstrainedBy{
+	from sysml: MMuml!Dependency(
+		sysml.isModelicaConstrainedByStereotyped().debug()
+	)
+	to modelica: MMmodelica!ConstrainedByClause(
+		modification <- sysml.getModification(), 
+		ownerInstance <- sysml.client->first(), 
+		instanceForConstrainedBy <- sysml.supplier->first()
+	)
+}
+
 ------------------------------------------------------------------------
 ---------------------------------IBD------------------------------------
 ------------------------------------------------------------------------

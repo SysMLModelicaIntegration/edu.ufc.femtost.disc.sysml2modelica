@@ -19,8 +19,8 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPort#getCausality <em>Causality</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPort#getType_connector <em>Type connector</em>}</li>
+ *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPort#getCausality <em>Causality</em>}</li>
  * </ul>
  * </p>
  *

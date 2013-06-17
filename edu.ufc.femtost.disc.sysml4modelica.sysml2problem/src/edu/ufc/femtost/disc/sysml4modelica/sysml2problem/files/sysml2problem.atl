@@ -631,10 +631,16 @@ rule Constraints_1_DER{
 rule Constraints_1_CONSTRAINED_BY{
 	from sysml: MMuml!Dependency(
 		sysml.isModelicaConstraintByStereotyped() and
-		(
-			not sysml.client->first().isModelicaClassDefinitionStereotyped() or
-			not sysml.supplier->first().isModelicaClassDefinitionStereotyped()
-		)
+		if(sysml.client->first().oclIsTypeOf(MMuml!Property) and sysml.supplier->first().oclIsTypeOf(MMuml!Property))then
+			if(sysml.client->first().type.oclIsTypeOf(MMsysml!Block) and sysml.supplier->first().type.oclIsTypeOf(MMsysml!Block))then
+				not sysml.client->first().type.isModelicaClassDefinitionStereotyped() or
+				not sysml.supplier->first().type.isModelicaClassDefinitionStereotyped()
+			else
+				true
+			endif
+		else
+			true
+		endif
 	)
 	to problem: MMproblem!Problem(
 		description <- 'Both the source: '+sysml.client->first().name+' and target: '+ sysml.supplier->first().name + ' of a modelicaConstrainedBy relation must be typed to instances of a specialization of modelicaClassDefinition.', 

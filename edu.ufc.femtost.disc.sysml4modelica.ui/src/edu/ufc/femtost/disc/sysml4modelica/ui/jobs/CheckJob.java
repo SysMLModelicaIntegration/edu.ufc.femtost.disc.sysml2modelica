@@ -61,11 +61,11 @@ public class CheckJob extends Job {
 		return Status.OK_STATUS;
 	}
 	
-	private void performCheck(final IFile workFile,
-			final IProgressMonitor monitor) throws IOException,
-			ATLCoreException, CoreException {
+	private void performCheck(final IFile workFile, final IProgressMonitor monitor) throws IOException, ATLCoreException, CoreException {
+		
 		monitor.beginTask("Checking model", 100);
-
+		
+		this.inputModelFile.deleteMarkers(null, true, IResource.DEPTH_INFINITE);
 		// Compute path
 		IPath pathSelected = workFile.getLocation();
 		IPath pathToOutModel = pathSelected.removeFileExtension()

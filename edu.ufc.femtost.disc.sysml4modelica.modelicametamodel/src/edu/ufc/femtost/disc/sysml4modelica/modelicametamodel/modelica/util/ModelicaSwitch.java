@@ -14,6 +14,7 @@ import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmS
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Block;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connect;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connector;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.DerFunction;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Equation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection;
@@ -221,6 +222,12 @@ public class ModelicaSwitch<T> extends Switch<T> {
 			case ModelicaPackage.ALGORITHM_SECTION: {
 				AlgorithmSection algorithmSection = (AlgorithmSection)theEObject;
 				T result = caseAlgorithmSection(algorithmSection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModelicaPackage.CONSTRAINED_BY_CLAUSE: {
+				ConstrainedByClause constrainedByClause = (ConstrainedByClause)theEObject;
+				T result = caseConstrainedByClause(constrainedByClause);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -525,6 +532,21 @@ public class ModelicaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAlgorithmSection(AlgorithmSection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Constrained By Clause</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Constrained By Clause</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConstrainedByClause(ConstrainedByClause object) {
 		return null;
 	}
 
