@@ -95,6 +95,9 @@
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_jBimcLFyEeK0T7edPe2X5A" value=""/>
           </ownedAttribute>
         </nestedClassifier>
+        <nestedClassifier xmi:type="sysML:Block" xmi:id="_C0ttQPOXEeKOWJiMNt5a0A" name="Integrator">
+          <generalization xmi:type="uml:Generalization" xmi:id="_KV38IPOYEeKOWJiMNt5a0A" general="_JsWxy7FwEeK0T7edPe2X5A"/>
+        </nestedClassifier>
       </nestedClassifier>
       <nestedClassifier xmi:type="sysML:Block" xmi:id="_wn_qgLFxEeK0T7edPe2X5A" name="Types">
         <nestedClassifier xmi:type="uml:DataType" xmi:id="_2ABfILFxEeK0T7edPe2X5A" name="Init"/>
@@ -103,7 +106,51 @@
     <packagedElement xmi:type="sysML:Block" xmi:id="_hmiP0LCoEeKzo_FD3Yn8sw" name="ComplexBlocks"/>
     <packagedElement xmi:type="sysML:Block" xmi:id="_lLNQcLCoEeKzo_FD3Yn8sw" name="ComplexMath"/>
     <packagedElement xmi:type="sysML:Block" xmi:id="_p3INALCoEeKzo_FD3Yn8sw" name="Constants"/>
-    <packagedElement xmi:type="sysML:Block" xmi:id="_tFCTcLCoEeKzo_FD3Yn8sw" name="Electrical"/>
+    <packagedElement xmi:type="sysML:Block" xmi:id="_tFCTcLCoEeKzo_FD3Yn8sw" name="Electrical">
+      <nestedClassifier xmi:type="sysML:Block" xmi:id="_hQ91UPOMEeKZTvPG-EQK_w" name="Analog">
+        <nestedClassifier xmi:type="sysML:Block" xmi:id="_268OcPOMEeKZTvPG-EQK_w" name="Basic"/>
+        <nestedClassifier xmi:type="sysML:Block" xmi:id="_3zVPAPOMEeKZTvPG-EQK_w" name="Examples"/>
+        <nestedClassifier xmi:type="sysML:Block" xmi:id="_5LG6QPOMEeKZTvPG-EQK_w" name="Ideal"/>
+        <nestedClassifier xmi:type="sysML:Block" xmi:id="_5xe9wPOMEeKZTvPG-EQK_w" name="Interfaces">
+          <nestedClassifier xmi:type="sysML:Block" xmi:id="_H-8iAPONEeKZTvPG-EQK_w" name="Pin">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_MUHLcvONEeKZTvPG-EQK_w" name="v" type="_zHA8oLCrEeKzo_FD3Yn8sw"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_QsQQYvONEeKZTvPG-EQK_w" name="i" type="_PaHtQLCpEeKzo_FD3Yn8sw"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="sysML:Block" xmi:id="_X6fYsPONEeKZTvPG-EQK_w" name="PositivePin">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_X6fYsfONEeKZTvPG-EQK_w" name="v" type="_zHA8oLCrEeKzo_FD3Yn8sw"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_X6fYsvONEeKZTvPG-EQK_w" name="i" type="_PaHtQLCpEeKzo_FD3Yn8sw"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="sysML:Block" xmi:id="_foHywPONEeKZTvPG-EQK_w" name="NegativePin">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_foHywfONEeKZTvPG-EQK_w" name="v" type="_zHA8oLCrEeKzo_FD3Yn8sw"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_foHywvONEeKZTvPG-EQK_w" name="i" type="_PaHtQLCpEeKzo_FD3Yn8sw"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="sysML:Block" xmi:id="_ovK20PONEeKZTvPG-EQK_w" name="OnePort" isAbstract="true">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_8fveUvONEeKZTvPG-EQK_w" name="Constraint1">
+              <specification xmi:type="uml:LiteralString" xmi:id="_9O5qYPONEeKZTvPG-EQK_w" value="v = p.v - n.v"/>
+            </ownedRule>
+            <ownedRule xmi:type="uml:Constraint" xmi:id="__wUeQvONEeKZTvPG-EQK_w" name="Constraint2">
+              <specification xmi:type="uml:LiteralString" xmi:id="_AKza0POOEeKZTvPG-EQK_w" value="0 = p.i + n.i"/>
+            </ownedRule>
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_Bq6isvOOEeKZTvPG-EQK_w" name="Constraint3">
+              <specification xmi:type="uml:LiteralString" xmi:id="_CZCM8POOEeKZTvPG-EQK_w" value="i = p.i"/>
+            </ownedRule>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_sb3LAvONEeKZTvPG-EQK_w" name="v" type="_zHA8oLCrEeKzo_FD3Yn8sw"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_sta1EPONEeKZTvPG-EQK_w" name="i" type="_PaHtQLCpEeKzo_FD3Yn8sw"/>
+            <ownedAttribute xmi:type="sysML:FlowPort" xmi:id="_t5cjUPONEeKZTvPG-EQK_w" name="p" type="_X6fYsPONEeKZTvPG-EQK_w" aggregation="composite"/>
+            <ownedAttribute xmi:type="sysML:FlowPort" xmi:id="_u1swMPONEeKZTvPG-EQK_w" name="n" type="_foHywPONEeKZTvPG-EQK_w" aggregation="composite"/>
+          </nestedClassifier>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="sysML:Block" xmi:id="_7aOdMPOMEeKZTvPG-EQK_w" name="Lines"/>
+        <nestedClassifier xmi:type="sysML:Block" xmi:id="_7-YTIPOMEeKZTvPG-EQK_w" name="Semiconductors"/>
+        <nestedClassifier xmi:type="sysML:Block" xmi:id="_883UoPOMEeKZTvPG-EQK_w" name="Sensors"/>
+        <nestedClassifier xmi:type="sysML:Block" xmi:id="_9qFnAPOMEeKZTvPG-EQK_w" name="Sources"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="sysML:Block" xmi:id="_itzmwPOMEeKZTvPG-EQK_w" name="Digital"/>
+      <nestedClassifier xmi:type="sysML:Block" xmi:id="_mg5d4POMEeKZTvPG-EQK_w" name="Machines"/>
+      <nestedClassifier xmi:type="sysML:Block" xmi:id="_osADgPOMEeKZTvPG-EQK_w" name="MultiPhase"/>
+      <nestedClassifier xmi:type="sysML:Block" xmi:id="_s7Xm8POMEeKZTvPG-EQK_w" name="QuasiStationnary"/>
+      <nestedClassifier xmi:type="sysML:Block" xmi:id="_zjX1sPOMEeKZTvPG-EQK_w" name="Spice3"/>
+    </packagedElement>
     <packagedElement xmi:type="sysML:Block" xmi:id="_vOprULCoEeKzo_FD3Yn8sw" name="Fluid"/>
     <packagedElement xmi:type="sysML:Block" xmi:id="_xrAZALCoEeKzo_FD3Yn8sw" name="Icons">
       <nestedClassifier xmi:type="sysML:Block" xmi:id="_d3JRK7ChEeKV4bTJZ5Azxw" name="SignalBus"/>
@@ -416,6 +463,7 @@
       <nestedClassifier xmi:type="uml:DataType" xmi:id="_zaXuoLcbEeKrB6yskAhl0w" name="Position"/>
       <nestedClassifier xmi:type="uml:DataType" xmi:id="_3RrXYLcbEeKrB6yskAhl0w" name="Mass"/>
       <nestedClassifier xmi:type="uml:DataType" xmi:id="_8CYtULcbEeKrB6yskAhl0w" name="Acceleration"/>
+      <nestedClassifier xmi:type="uml:DataType" xmi:id="_56x8UPOPEeKOWJiMNt5a0A" name="Inductance"/>
     </packagedElement>
     <packagedElement xmi:type="sysML:Block" xmi:id="_--b98LCoEeKzo_FD3Yn8sw" name="StateGraph"/>
     <packagedElement xmi:type="sysML:Block" xmi:id="_BAUWILCpEeKzo_FD3Yn8sw" name="Thermal">
@@ -714,4 +762,44 @@
   <Components:ModelicaValueProperty xmi:id="_EgWxQMzrEeKH2rWo0wnQfw" base_Property="_yJs-8rGfEeK0T7edPe2X5A"/>
   <Components:ModelicaValueProperty xmi:id="_EwwkwMzrEeKH2rWo0wnQfw" base_Property="_1oHmkrGfEeK0T7edPe2X5A"/>
   <Classes:ModelicaType xmi:id="_t56RcM6uEeKoKrt9EMuQyw"/>
+  <Classes:ModelicaPackage xmi:id="_kFSXEPOMEeKZTvPG-EQK_w" base_Classifier="_hQ91UPOMEeKZTvPG-EQK_w" base_Block="_hQ91UPOMEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaPackage xmi:id="_kaHXkPOMEeKZTvPG-EQK_w" base_Classifier="_itzmwPOMEeKZTvPG-EQK_w" base_Block="_itzmwPOMEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaPackage xmi:id="_nZ4UUPOMEeKZTvPG-EQK_w" base_Classifier="_mg5d4POMEeKZTvPG-EQK_w" base_Block="_mg5d4POMEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaPackage xmi:id="_xJZGkPOMEeKZTvPG-EQK_w" base_Classifier="_s7Xm8POMEeKZTvPG-EQK_w" base_Block="_s7Xm8POMEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaPackage xmi:id="_yWmgkPOMEeKZTvPG-EQK_w" base_Classifier="_osADgPOMEeKZTvPG-EQK_w" base_Block="_osADgPOMEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaPackage xmi:id="_00TSEPOMEeKZTvPG-EQK_w" base_Classifier="_zjX1sPOMEeKZTvPG-EQK_w" base_Block="_zjX1sPOMEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaPackage xmi:id="_-qzdIPOMEeKZTvPG-EQK_w" base_Classifier="_268OcPOMEeKZTvPG-EQK_w" base_Block="_268OcPOMEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaPackage xmi:id="__H96QPOMEeKZTvPG-EQK_w" base_Classifier="_3zVPAPOMEeKZTvPG-EQK_w" base_Block="_3zVPAPOMEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaPackage xmi:id="__c8EsPOMEeKZTvPG-EQK_w" base_Classifier="_5LG6QPOMEeKZTvPG-EQK_w" base_Block="_5LG6QPOMEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaPackage xmi:id="__tmW4POMEeKZTvPG-EQK_w" base_Classifier="_5xe9wPOMEeKZTvPG-EQK_w" base_Block="_5xe9wPOMEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaPackage xmi:id="_AApOsPONEeKZTvPG-EQK_w" base_Classifier="_7aOdMPOMEeKZTvPG-EQK_w" base_Block="_7aOdMPOMEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaPackage xmi:id="_AR590PONEeKZTvPG-EQK_w" base_Classifier="_7-YTIPOMEeKZTvPG-EQK_w" base_Block="_7-YTIPOMEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaPackage xmi:id="_AjA78PONEeKZTvPG-EQK_w" base_Classifier="_883UoPOMEeKZTvPG-EQK_w" base_Block="_883UoPOMEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaPackage xmi:id="_AxvUcPONEeKZTvPG-EQK_w" base_Classifier="_9qFnAPOMEeKZTvPG-EQK_w" base_Block="_9qFnAPOMEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaConnector xmi:id="_IxrmgPONEeKZTvPG-EQK_w" base_Classifier="_H-8iAPONEeKZTvPG-EQK_w" base_Block="_H-8iAPONEeKZTvPG-EQK_w"/>
+  <Components:ModelicaValueProperty xmi:id="_Ox9t8PONEeKZTvPG-EQK_w" base_Property="_MUHLcvONEeKZTvPG-EQK_w"/>
+  <Components:ModelicaValueProperty xmi:id="_SZToEPONEeKZTvPG-EQK_w" base_Property="_QsQQYvONEeKZTvPG-EQK_w" flowFlag="flow"/>
+  <Components:ModelicaValueProperty xmi:id="_amUs0PONEeKZTvPG-EQK_w" base_Property="_X6fYsfONEeKZTvPG-EQK_w"/>
+  <Components:ModelicaValueProperty xmi:id="_a6HLgPONEeKZTvPG-EQK_w" base_Property="_X6fYsvONEeKZTvPG-EQK_w" flowFlag="flow"/>
+  <Classes:ModelicaConnector xmi:id="_bS9JUPONEeKZTvPG-EQK_w" base_Classifier="_X6fYsPONEeKZTvPG-EQK_w" base_Block="_X6fYsPONEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaConnector xmi:id="_jZImQPONEeKZTvPG-EQK_w" base_Classifier="_foHywPONEeKZTvPG-EQK_w" base_Block="_foHywPONEeKZTvPG-EQK_w"/>
+  <Components:ModelicaValueProperty xmi:id="_j12XcPONEeKZTvPG-EQK_w" base_Property="_foHywfONEeKZTvPG-EQK_w"/>
+  <Components:ModelicaValueProperty xmi:id="_kH2tcPONEeKZTvPG-EQK_w" base_Property="_foHywvONEeKZTvPG-EQK_w" flowFlag="flow"/>
+  <Classes:ModelicaModel xmi:id="_pxOJsPONEeKZTvPG-EQK_w" base_Classifier="_ovK20PONEeKZTvPG-EQK_w" isPartial="true" base_Block="_ovK20PONEeKZTvPG-EQK_w"/>
+  <Components:ModelicaPort xmi:id="_x5yMQPONEeKZTvPG-EQK_w" base_Port="_u1swMPONEeKZTvPG-EQK_w"/>
+  <Components:ModelicaPort xmi:id="_yMYYIPONEeKZTvPG-EQK_w" base_Port="_t5cjUPONEeKZTvPG-EQK_w"/>
+  <Components:ModelicaValueProperty xmi:id="_ykevEPONEeKZTvPG-EQK_w" base_Property="_sb3LAvONEeKZTvPG-EQK_w"/>
+  <Components:ModelicaValueProperty xmi:id="_y3hm4PONEeKZTvPG-EQK_w" base_Property="_sta1EPONEeKZTvPG-EQK_w"/>
+  <EquationsAndAlgorithms:ModelicaEquation xmi:id="_Q6o_wPOPEeKOWJiMNt5a0A" base_Constraint="_8fveUvONEeKZTvPG-EQK_w"/>
+  <EquationsAndAlgorithms:ModelicaEquation xmi:id="_RJTG0POPEeKOWJiMNt5a0A" base_Constraint="__wUeQvONEeKZTvPG-EQK_w"/>
+  <EquationsAndAlgorithms:ModelicaEquation xmi:id="_RZZ_YPOPEeKOWJiMNt5a0A" base_Constraint="_Bq6isvOOEeKZTvPG-EQK_w"/>
+  <Classes:ModelicaType xmi:id="_6j0SQPOPEeKOWJiMNt5a0A" base_Classifier="_56x8UPOPEeKOWJiMNt5a0A" base_DataType="_56x8UPOPEeKOWJiMNt5a0A"/>
+  <Classes:ModelicaBlock xmi:id="_JZ874POXEeKOWJiMNt5a0A" base_Classifier="_C0ttQPOXEeKOWJiMNt5a0A" base_Block="_C0ttQPOXEeKOWJiMNt5a0A"/>
+  <Components:ModelicaValueProperty xmi:id="_K-htAPOXEeKOWJiMNt5a0A" base_Property="_YwBv0LFxEeK0T7edPe2X5A"/>
+  <Components:ModelicaValueProperty xmi:id="_LTyLUPOXEeKOWJiMNt5a0A" base_Property="_mychsrFxEeK0T7edPe2X5A"/>
+  <Components:ModelicaValueProperty xmi:id="_MPciUPOXEeKOWJiMNt5a0A" base_Property="_74yCQrFxEeK0T7edPe2X5A"/>
+  <Components:ModelicaValueProperty xmi:id="_MjWVwPOXEeKOWJiMNt5a0A" base_Property="_WcbgErFyEeK0T7edPe2X5A"/>
+  <Components:ModelicaValueProperty xmi:id="_M0X0UPOXEeKOWJiMNt5a0A" base_Property="_bFtYUrFyEeK0T7edPe2X5A"/>
+  <Components:ModelicaValueProperty xmi:id="_NGwk0POXEeKOWJiMNt5a0A" base_Property="_fkROUrFyEeK0T7edPe2X5A"/>
+  <Classes:ModelicaExtends xmi:id="_LQUyMPOYEeKOWJiMNt5a0A" base_Generalization="_KV38IPOYEeKOWJiMNt5a0A"/>
 </xmi:XMI>

@@ -559,7 +559,7 @@ rule Property2ModelicaPart extends Property2ModelicaComponent{
 	to modelica: MMmodelica!ModelicaPart(
 		visibility <- sysml.visibility, 
 		scope <- sysml.getScope(), 
-		type_part <- if(sysml.type.isModelicaClassStereotyped() or sysml.type.isModelicaModelStereotyped() or sysml.type.isModelicaBlockStereotyped())then
+		type_part <- if((sysml.type.isModelicaClassStereotyped() or sysml.type.isModelicaModelStereotyped() or sysml.type.isModelicaBlockStereotyped()) and not sysml.type.getQualifiedName().startsWith('Modelica::'))then
 							sysml.type
 						else
 							OclUndefined

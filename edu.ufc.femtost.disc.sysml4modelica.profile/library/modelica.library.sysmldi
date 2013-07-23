@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_X3WmQIGsEeKNP44oH7JSbw" activeDiagram="_D9tUULCpEeKzo_FD3Yn8sw">
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_X3WmQIGsEeKNP44oH7JSbw" activeDiagram="_80ThQbFvEeK0T7edPe2X5A">
   <model href="modelica.library.sysml#idModel"/>
   <diagrams xmi:id="_dacp4LCoEeKzo_FD3Yn8sw" position="0,0" size="100,100" name="Modelica" viewport="207,8">
     <property xmi:id="_dbDG0LCoEeKzo_FD3Yn8sw" key="pageFormatName" value="A1"/>
@@ -343,7 +343,7 @@
   <subdiagrams xmi:id="_--HDQLCnEeKzo_FD3Yn8sw"/>
   <subdiagrams xmi:id="_D9jjULCpEeKzo_FD3Yn8sw">
     <model href="modelica.library.sysml#_84PtgLCoEeKzo_FD3Yn8sw"/>
-    <diagrams xmi:id="_D9tUULCpEeKzo_FD3Yn8sw" position="0,0" size="100,100" name="SIunits" viewport="0,0">
+    <diagrams xmi:id="_D9tUULCpEeKzo_FD3Yn8sw" position="0,0" size="100,100" name="SIunits" viewport="1529,0">
       <property xmi:id="_D-KAQLCpEeKzo_FD3Yn8sw" key="pageFormatName" value="A1"/>
       <property xmi:id="_D-KAQbCpEeKzo_FD3Yn8sw" key="diagramWidth" value="2376"/>
       <property xmi:id="_D-KAQrCpEeKzo_FD3Yn8sw" key="diagramHeight" value="3364"/>
@@ -659,6 +659,23 @@
           <property xmi:id="_8CFLVrcbEeKrB6yskAhl0w" key="eStructuralFeatureID" value="37"/>
           <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_8CFLV7cbEeKrB6yskAhl0w" presentation="properties">
             <element href="modelica.library.sysml#_8CYtULcbEeKrB6yskAhl0w"/>
+          </semanticModel>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_555ykPOPEeKOWJiMNt5a0A" position="1630,128" size="270,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_555ykfOPEeKOWJiMNt5a0A" presentation="default">
+          <element href="modelica.library.sysml#_56x8UPOPEeKOWJiMNt5a0A"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_555ykvOPEeKOWJiMNt5a0A">
+          <property xmi:id="_555yk_OPEeKOWJiMNt5a0A" key="eStructuralFeatureID" value="38"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_555ylPOPEeKOWJiMNt5a0A" presentation="operations">
+            <element href="modelica.library.sysml#_56x8UPOPEeKOWJiMNt5a0A"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_555ylfOPEeKOWJiMNt5a0A">
+          <property xmi:id="_555ylvOPEeKOWJiMNt5a0A" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_556ZoPOPEeKOWJiMNt5a0A" presentation="properties">
+            <element href="modelica.library.sysml#_56x8UPOPEeKOWJiMNt5a0A"/>
           </semanticModel>
         </contained>
       </contained>
@@ -2885,7 +2902,7 @@
     </subdiagrams>
     <subdiagrams xmi:id="_80ThQLFvEeK0T7edPe2X5A">
       <model href="modelica.library.sysml#_6DrzwLFvEeK0T7edPe2X5A"/>
-      <diagrams xmi:id="_80ThQbFvEeK0T7edPe2X5A" position="0,0" size="100,100" name="Continuous" viewport="0,0">
+      <diagrams xmi:id="_80ThQbFvEeK0T7edPe2X5A" position="0,0" size="100,100" name="Continuous" viewport="17,0">
         <property xmi:id="_80mcMLFvEeK0T7edPe2X5A" key="pageFormatName" value="A2"/>
         <property xmi:id="_80mcMbFvEeK0T7edPe2X5A" key="diagramWidth" value="1680"/>
         <property xmi:id="_80mcMrFvEeK0T7edPe2X5A" key="diagramHeight" value="2376"/>
@@ -2953,7 +2970,7 @@
           </contained>
         </contained>
         <contained xsi:type="di:GraphNode" xmi:id="_QRonMLFxEeK0T7edPe2X5A" position="196,45" size="206,-1">
-          <anchorage xmi:id="_SFaR8bFxEeK0T7edPe2X5A" graphEdge="_SFaR8rFxEeK0T7edPe2X5A"/>
+          <anchorage xmi:id="_SFaR8bFxEeK0T7edPe2X5A" graphEdge="_SFaR8rFxEeK0T7edPe2X5A _KVED0POYEeKOWJiMNt5a0A"/>
           <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_QRonMbFxEeK0T7edPe2X5A" presentation="default">
             <element href="modelica.library.sysml#_JsWxy7FwEeK0T7edPe2X5A"/>
           </semanticModel>
@@ -2981,6 +2998,37 @@
             <element href="modelica.library.sysml#_SFkC8LFxEeK0T7edPe2X5A"/>
           </semanticModel>
           <contained xsi:type="di:EdgeObjectOffset" xmi:id="_SFaR9LFxEeK0T7edPe2X5A" visible="false" id="stereotypeEdgeObject"/>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_C0GCMPOXEeKOWJiMNt5a0A" position="592,241" size="261,-1">
+          <anchorage xmi:id="_KVBAgPOYEeKOWJiMNt5a0A" graphEdge="_KVED0POYEeKOWJiMNt5a0A"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_C0GCMfOXEeKOWJiMNt5a0A" presentation="default">
+            <element href="modelica.library.sysml#_C0ttQPOXEeKOWJiMNt5a0A"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_C0GCMvOXEeKOWJiMNt5a0A">
+            <property xmi:id="_C0GCM_OXEeKOWJiMNt5a0A" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_C0GCNPOXEeKOWJiMNt5a0A" presentation="constraints">
+              <element href="modelica.library.sysml#_C0ttQPOXEeKOWJiMNt5a0A"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_C0GCNfOXEeKOWJiMNt5a0A">
+            <property xmi:id="_C0GCNvOXEeKOWJiMNt5a0A" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_C0GCN_OXEeKOWJiMNt5a0A" presentation="operations">
+              <element href="modelica.library.sysml#_C0ttQPOXEeKOWJiMNt5a0A"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_C0GCOPOXEeKOWJiMNt5a0A">
+            <property xmi:id="_C0GCOfOXEeKOWJiMNt5a0A" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_C0GCOvOXEeKOWJiMNt5a0A" presentation="default">
+              <element href="modelica.library.sysml#_C0ttQPOXEeKOWJiMNt5a0A"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_KVED0POYEeKOWJiMNt5a0A" anchor="_KVBAgPOYEeKOWJiMNt5a0A _SFaR8bFxEeK0T7edPe2X5A">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_KVED0fOYEeKOWJiMNt5a0A" presentation="default">
+            <element href="modelica.library.sysml#_KV38IPOYEeKOWJiMNt5a0A"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_KVED0vOYEeKOWJiMNt5a0A" visible="false" id="stereotypeEdgeObject"/>
+          <waypoints>[0, -149, 423, 47]</waypoints>
         </contained>
       </diagrams>
     </subdiagrams>
@@ -3239,6 +3287,575 @@
               <element href="modelica.library.sysml#_n8fkELGfEeK0T7edPe2X5A"/>
             </semanticModel>
             <contained xsi:type="di:EdgeObjectOffset" xmi:id="_n8TW1LGfEeK0T7edPe2X5A" visible="false" id="stereotypeEdgeObject"/>
+          </contained>
+        </diagrams>
+      </subdiagrams>
+    </subdiagrams>
+  </subdiagrams>
+  <subdiagrams xmi:id="_fZzfYPOMEeKZTvPG-EQK_w">
+    <model href="modelica.library.sysml#_tFCTcLCoEeKzo_FD3Yn8sw"/>
+    <diagrams xmi:id="_fZ8pUPOMEeKZTvPG-EQK_w" position="0,0" size="100,100" name="Electrical" viewport="0,0">
+      <property xmi:id="_fceY4POMEeKZTvPG-EQK_w" key="pageFormatName" value="A4"/>
+      <property xmi:id="_fceY4fOMEeKZTvPG-EQK_w" key="diagramWidth" value="840"/>
+      <property xmi:id="_fceY4vOMEeKZTvPG-EQK_w" key="diagramHeight" value="1188"/>
+      <property xmi:id="_fceY4_OMEeKZTvPG-EQK_w" key="pageMarginName" value="Small Margin"/>
+      <property xmi:id="_fceY5POMEeKZTvPG-EQK_w" key="diagramTopMargin" value="20"/>
+      <property xmi:id="_fceY5fOMEeKZTvPG-EQK_w" key="diagramBottomMargin" value="20"/>
+      <property xmi:id="_fceY5vOMEeKZTvPG-EQK_w" key="diagramLeftMargin" value="20"/>
+      <property xmi:id="_fceY5_OMEeKZTvPG-EQK_w" key="diagramRightMargin" value="20"/>
+      <property xmi:id="_fceY6POMEeKZTvPG-EQK_w" key="orientation" value="portrait"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_fZ8pUfOMEeKZTvPG-EQK_w" presentation="org.topcased.modeler.sysml.blockdefinitiondiagram">
+        <element href="modelica.library.sysml#_tFCTcLCoEeKzo_FD3Yn8sw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_hQX_cPOMEeKZTvPG-EQK_w" position="8,36" size="208,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_hQX_cfOMEeKZTvPG-EQK_w" presentation="default">
+          <element href="modelica.library.sysml#_hQ91UPOMEeKZTvPG-EQK_w"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_hQX_cvOMEeKZTvPG-EQK_w">
+          <property xmi:id="_hQX_c_OMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_hQX_dPOMEeKZTvPG-EQK_w" presentation="constraints">
+            <element href="modelica.library.sysml#_hQ91UPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_hQX_dfOMEeKZTvPG-EQK_w">
+          <property xmi:id="_hQX_dvOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_hQX_d_OMEeKZTvPG-EQK_w" presentation="operations">
+            <element href="modelica.library.sysml#_hQ91UPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_hQX_ePOMEeKZTvPG-EQK_w">
+          <property xmi:id="_hQX_efOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_hQX_evOMEeKZTvPG-EQK_w" presentation="default">
+            <element href="modelica.library.sysml#_hQ91UPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_itNJ0POMEeKZTvPG-EQK_w" position="223,36" size="215,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_itNJ0fOMEeKZTvPG-EQK_w" presentation="default">
+          <element href="modelica.library.sysml#_itzmwPOMEeKZTvPG-EQK_w"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_itNJ0vOMEeKZTvPG-EQK_w">
+          <property xmi:id="_itNJ0_OMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_itNJ1POMEeKZTvPG-EQK_w" presentation="constraints">
+            <element href="modelica.library.sysml#_itzmwPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_itNJ1fOMEeKZTvPG-EQK_w">
+          <property xmi:id="_itNJ1vOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_itNJ1_OMEeKZTvPG-EQK_w" presentation="operations">
+            <element href="modelica.library.sysml#_itzmwPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_itNJ2POMEeKZTvPG-EQK_w">
+          <property xmi:id="_itNJ2fOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_itNJ2vOMEeKZTvPG-EQK_w" presentation="default">
+            <element href="modelica.library.sysml#_itzmwPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_mgToAPOMEeKZTvPG-EQK_w" position="448,36" size="208,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_mgToAfOMEeKZTvPG-EQK_w" presentation="default">
+          <element href="modelica.library.sysml#_mg5d4POMEeKZTvPG-EQK_w"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_mgToAvOMEeKZTvPG-EQK_w">
+          <property xmi:id="_mgToA_OMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_mgToBPOMEeKZTvPG-EQK_w" presentation="constraints">
+            <element href="modelica.library.sysml#_mg5d4POMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_mgToBfOMEeKZTvPG-EQK_w">
+          <property xmi:id="_mgToBvOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_mgToB_OMEeKZTvPG-EQK_w" presentation="operations">
+            <element href="modelica.library.sysml#_mg5d4POMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_mgToCPOMEeKZTvPG-EQK_w">
+          <property xmi:id="_mgToCfOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_mgToCvOMEeKZTvPG-EQK_w" presentation="default">
+            <element href="modelica.library.sysml#_mg5d4POMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_opBoAPOMEeKZTvPG-EQK_w" position="10,190" size="206,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_opBoAfOMEeKZTvPG-EQK_w" presentation="default">
+          <element href="modelica.library.sysml#_osADgPOMEeKZTvPG-EQK_w"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_opBoAvOMEeKZTvPG-EQK_w">
+          <property xmi:id="_opBoA_OMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_opBoBPOMEeKZTvPG-EQK_w" presentation="constraints">
+            <element href="modelica.library.sysml#_osADgPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_opBoBfOMEeKZTvPG-EQK_w">
+          <property xmi:id="_opBoBvOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_opBoB_OMEeKZTvPG-EQK_w" presentation="operations">
+            <element href="modelica.library.sysml#_osADgPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_opBoCPOMEeKZTvPG-EQK_w">
+          <property xmi:id="_opBoCfOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_opBoCvOMEeKZTvPG-EQK_w" presentation="default">
+            <element href="modelica.library.sysml#_osADgPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_s667APOMEeKZTvPG-EQK_w" position="222,190" size="198,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_s667AfOMEeKZTvPG-EQK_w" presentation="default">
+          <element href="modelica.library.sysml#_s7Xm8POMEeKZTvPG-EQK_w"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_s667AvOMEeKZTvPG-EQK_w">
+          <property xmi:id="_s667A_OMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_s667BPOMEeKZTvPG-EQK_w" presentation="constraints">
+            <element href="modelica.library.sysml#_s7Xm8POMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_s667BfOMEeKZTvPG-EQK_w">
+          <property xmi:id="_s667BvOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_s667B_OMEeKZTvPG-EQK_w" presentation="operations">
+            <element href="modelica.library.sysml#_s7Xm8POMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_s667CPOMEeKZTvPG-EQK_w">
+          <property xmi:id="_s667CfOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_s667CvOMEeKZTvPG-EQK_w" presentation="default">
+            <element href="modelica.library.sysml#_s7Xm8POMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_zixYwPOMEeKZTvPG-EQK_w" position="428,192" size="190,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_zixYwfOMEeKZTvPG-EQK_w" presentation="default">
+          <element href="modelica.library.sysml#_zjX1sPOMEeKZTvPG-EQK_w"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_zixYwvOMEeKZTvPG-EQK_w">
+          <property xmi:id="_zixYw_OMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_zixYxPOMEeKZTvPG-EQK_w" presentation="constraints">
+            <element href="modelica.library.sysml#_zjX1sPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_zixYxfOMEeKZTvPG-EQK_w">
+          <property xmi:id="_zixYxvOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_zixYx_OMEeKZTvPG-EQK_w" presentation="operations">
+            <element href="modelica.library.sysml#_zjX1sPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_zixYyPOMEeKZTvPG-EQK_w">
+          <property xmi:id="_zixYyfOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_zixYyvOMEeKZTvPG-EQK_w" presentation="default">
+            <element href="modelica.library.sysml#_zjX1sPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+        </contained>
+      </contained>
+    </diagrams>
+    <subdiagrams xmi:id="_2hpksPOMEeKZTvPG-EQK_w">
+      <model href="modelica.library.sysml#_hQ91UPOMEeKZTvPG-EQK_w"/>
+      <diagrams xmi:id="_2hzVsPOMEeKZTvPG-EQK_w" position="0,0" size="100,100" name="Analog" viewport="0,0">
+        <property xmi:id="_2isGgPOMEeKZTvPG-EQK_w" key="pageFormatName" value="A4"/>
+        <property xmi:id="_2isGgfOMEeKZTvPG-EQK_w" key="diagramWidth" value="840"/>
+        <property xmi:id="_2isGgvOMEeKZTvPG-EQK_w" key="diagramHeight" value="1188"/>
+        <property xmi:id="_2isGg_OMEeKZTvPG-EQK_w" key="pageMarginName" value="Small Margin"/>
+        <property xmi:id="_2isGhPOMEeKZTvPG-EQK_w" key="diagramTopMargin" value="20"/>
+        <property xmi:id="_2isGhfOMEeKZTvPG-EQK_w" key="diagramBottomMargin" value="20"/>
+        <property xmi:id="_2isGhvOMEeKZTvPG-EQK_w" key="diagramLeftMargin" value="20"/>
+        <property xmi:id="_2isGh_OMEeKZTvPG-EQK_w" key="diagramRightMargin" value="20"/>
+        <property xmi:id="_2isGiPOMEeKZTvPG-EQK_w" key="orientation" value="portrait"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_2hzVsfOMEeKZTvPG-EQK_w" presentation="org.topcased.modeler.sysml.blockdefinitiondiagram">
+          <element href="modelica.library.sysml#_hQ91UPOMEeKZTvPG-EQK_w"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_26WYkPOMEeKZTvPG-EQK_w" position="26,56" size="100,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_26WYkfOMEeKZTvPG-EQK_w" presentation="default">
+            <element href="modelica.library.sysml#_268OcPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_26WYkvOMEeKZTvPG-EQK_w">
+            <property xmi:id="_26WYk_OMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_26WYlPOMEeKZTvPG-EQK_w" presentation="constraints">
+              <element href="modelica.library.sysml#_268OcPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_26WYlfOMEeKZTvPG-EQK_w">
+            <property xmi:id="_26WYlvOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_26WYl_OMEeKZTvPG-EQK_w" presentation="operations">
+              <element href="modelica.library.sysml#_268OcPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_26WYmPOMEeKZTvPG-EQK_w">
+            <property xmi:id="_26WYmfOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_26WYmvOMEeKZTvPG-EQK_w" presentation="default">
+              <element href="modelica.library.sysml#_268OcPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_3yuyEPOMEeKZTvPG-EQK_w" position="212,103" size="100,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_3yuyEfOMEeKZTvPG-EQK_w" presentation="default">
+            <element href="modelica.library.sysml#_3zVPAPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_3yuyEvOMEeKZTvPG-EQK_w">
+            <property xmi:id="_3yuyE_OMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_3yuyFPOMEeKZTvPG-EQK_w" presentation="constraints">
+              <element href="modelica.library.sysml#_3zVPAPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_3yuyFfOMEeKZTvPG-EQK_w">
+            <property xmi:id="_3yuyFvOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_3yuyF_OMEeKZTvPG-EQK_w" presentation="operations">
+              <element href="modelica.library.sysml#_3zVPAPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_3yuyGPOMEeKZTvPG-EQK_w">
+            <property xmi:id="_3yuyGfOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_3yuyGvOMEeKZTvPG-EQK_w" presentation="default">
+              <element href="modelica.library.sysml#_3zVPAPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_5KgdUPOMEeKZTvPG-EQK_w" position="401,116" size="100,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_5KgdUfOMEeKZTvPG-EQK_w" presentation="default">
+            <element href="modelica.library.sysml#_5LG6QPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_5KgdUvOMEeKZTvPG-EQK_w">
+            <property xmi:id="_5KgdU_OMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_5KgdVPOMEeKZTvPG-EQK_w" presentation="constraints">
+              <element href="modelica.library.sysml#_5LG6QPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_5KgdVfOMEeKZTvPG-EQK_w">
+            <property xmi:id="_5KgdVvOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_5KgdV_OMEeKZTvPG-EQK_w" presentation="operations">
+              <element href="modelica.library.sysml#_5LG6QPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_5KgdWPOMEeKZTvPG-EQK_w">
+            <property xmi:id="_5KgdWfOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_5KgdWvOMEeKZTvPG-EQK_w" presentation="default">
+              <element href="modelica.library.sysml#_5LG6QPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_5w5H4POMEeKZTvPG-EQK_w" position="600,132" size="100,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_5w5H4fOMEeKZTvPG-EQK_w" presentation="default">
+            <element href="modelica.library.sysml#_5xe9wPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_5w5H4vOMEeKZTvPG-EQK_w">
+            <property xmi:id="_5w5H4_OMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_5w5H5POMEeKZTvPG-EQK_w" presentation="constraints">
+              <element href="modelica.library.sysml#_5xe9wPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_5w5H5fOMEeKZTvPG-EQK_w">
+            <property xmi:id="_5w5H5vOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_5w5H5_OMEeKZTvPG-EQK_w" presentation="operations">
+              <element href="modelica.library.sysml#_5xe9wPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_5w5H6POMEeKZTvPG-EQK_w">
+            <property xmi:id="_5w5H6fOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_5w5H6vOMEeKZTvPG-EQK_w" presentation="default">
+              <element href="modelica.library.sysml#_5xe9wPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_7ZoAQPOMEeKZTvPG-EQK_w" position="55,319" size="100,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_7ZoAQfOMEeKZTvPG-EQK_w" presentation="default">
+            <element href="modelica.library.sysml#_7aOdMPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_7ZoAQvOMEeKZTvPG-EQK_w">
+            <property xmi:id="_7ZoAQ_OMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_7ZoARPOMEeKZTvPG-EQK_w" presentation="constraints">
+              <element href="modelica.library.sysml#_7aOdMPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_7ZoARfOMEeKZTvPG-EQK_w">
+            <property xmi:id="_7ZoARvOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_7ZoAR_OMEeKZTvPG-EQK_w" presentation="operations">
+              <element href="modelica.library.sysml#_7aOdMPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_7ZoASPOMEeKZTvPG-EQK_w">
+            <property xmi:id="_7ZoASfOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_7ZoASvOMEeKZTvPG-EQK_w" presentation="default">
+              <element href="modelica.library.sysml#_7aOdMPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_79x2MPOMEeKZTvPG-EQK_w" position="226,349" size="100,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_79x2MfOMEeKZTvPG-EQK_w" presentation="default">
+            <element href="modelica.library.sysml#_7-YTIPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_79x2MvOMEeKZTvPG-EQK_w">
+            <property xmi:id="_79x2M_OMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_79x2NPOMEeKZTvPG-EQK_w" presentation="constraints">
+              <element href="modelica.library.sysml#_7-YTIPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_79x2NfOMEeKZTvPG-EQK_w">
+            <property xmi:id="_79x2NvOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_79x2N_OMEeKZTvPG-EQK_w" presentation="operations">
+              <element href="modelica.library.sysml#_7-YTIPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_79x2OPOMEeKZTvPG-EQK_w">
+            <property xmi:id="_79x2OfOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_79x2OvOMEeKZTvPG-EQK_w" presentation="default">
+              <element href="modelica.library.sysml#_7-YTIPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_88Q3sPOMEeKZTvPG-EQK_w" position="399,329" size="100,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_88Q3sfOMEeKZTvPG-EQK_w" presentation="default">
+            <element href="modelica.library.sysml#_883UoPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_88Q3svOMEeKZTvPG-EQK_w">
+            <property xmi:id="_88Q3s_OMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_88Q3tPOMEeKZTvPG-EQK_w" presentation="constraints">
+              <element href="modelica.library.sysml#_883UoPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_88Q3tfOMEeKZTvPG-EQK_w">
+            <property xmi:id="_88Q3tvOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_88Q3t_OMEeKZTvPG-EQK_w" presentation="operations">
+              <element href="modelica.library.sysml#_883UoPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_88Q3uPOMEeKZTvPG-EQK_w">
+            <property xmi:id="_88Q3ufOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_88Q3uvOMEeKZTvPG-EQK_w" presentation="default">
+              <element href="modelica.library.sysml#_883UoPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_9pfxIPOMEeKZTvPG-EQK_w" position="622,321" size="100,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9pfxIfOMEeKZTvPG-EQK_w" presentation="default">
+            <element href="modelica.library.sysml#_9qFnAPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_9pfxIvOMEeKZTvPG-EQK_w">
+            <property xmi:id="_9pfxI_OMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9pfxJPOMEeKZTvPG-EQK_w" presentation="constraints">
+              <element href="modelica.library.sysml#_9qFnAPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9pfxJfOMEeKZTvPG-EQK_w">
+            <property xmi:id="_9pfxJvOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9pfxJ_OMEeKZTvPG-EQK_w" presentation="operations">
+              <element href="modelica.library.sysml#_9qFnAPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9pfxKPOMEeKZTvPG-EQK_w">
+            <property xmi:id="_9pfxKfOMEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9pfxKvOMEeKZTvPG-EQK_w" presentation="default">
+              <element href="modelica.library.sysml#_9qFnAPOMEeKZTvPG-EQK_w"/>
+            </semanticModel>
+          </contained>
+        </contained>
+      </diagrams>
+      <subdiagrams xmi:id="_CQz6gPONEeKZTvPG-EQK_w">
+        <model href="modelica.library.sysml#_5xe9wPOMEeKZTvPG-EQK_w"/>
+        <diagrams xmi:id="_CQ9EcPONEeKZTvPG-EQK_w" position="0,0" size="100,100" name="Interfaces" viewport="0,80">
+          <property xmi:id="_CR2cUPONEeKZTvPG-EQK_w" key="pageFormatName" value="A1"/>
+          <property xmi:id="_CR2cUfONEeKZTvPG-EQK_w" key="diagramWidth" value="2376"/>
+          <property xmi:id="_CR2cUvONEeKZTvPG-EQK_w" key="diagramHeight" value="3364"/>
+          <property xmi:id="_CR2cU_ONEeKZTvPG-EQK_w" key="pageMarginName" value="Small Margin"/>
+          <property xmi:id="_CR2cVPONEeKZTvPG-EQK_w" key="diagramTopMargin" value="20"/>
+          <property xmi:id="_CR2cVfONEeKZTvPG-EQK_w" key="diagramBottomMargin" value="20"/>
+          <property xmi:id="_CR2cVvONEeKZTvPG-EQK_w" key="diagramLeftMargin" value="20"/>
+          <property xmi:id="_CR2cV_ONEeKZTvPG-EQK_w" key="diagramRightMargin" value="20"/>
+          <property xmi:id="_CR2cWPONEeKZTvPG-EQK_w" key="orientation" value="portrait"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_CQ9EcfONEeKZTvPG-EQK_w" presentation="org.topcased.modeler.sysml.blockdefinitiondiagram">
+            <element href="modelica.library.sysml#_5xe9wPOMEeKZTvPG-EQK_w"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_H-DxMPONEeKZTvPG-EQK_w" position="32,65" size="421,-1">
+            <property xmi:id="_JfpfwPONEeKZTvPG-EQK_w" key="backgroundColor" value="255,209,187"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_H-DxMfONEeKZTvPG-EQK_w" presentation="default">
+              <element href="modelica.library.sysml#_H-8iAPONEeKZTvPG-EQK_w"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_H-DxMvONEeKZTvPG-EQK_w">
+              <property xmi:id="_H-DxM_ONEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_H-DxNPONEeKZTvPG-EQK_w" presentation="constraints">
+                <element href="modelica.library.sysml#_H-8iAPONEeKZTvPG-EQK_w"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_H-DxNfONEeKZTvPG-EQK_w">
+              <property xmi:id="_H-DxNvONEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_H-DxN_ONEeKZTvPG-EQK_w" presentation="operations">
+                <element href="modelica.library.sysml#_H-8iAPONEeKZTvPG-EQK_w"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_H-DxOPONEeKZTvPG-EQK_w">
+              <property xmi:id="_H-DxOfONEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_H-DxOvONEeKZTvPG-EQK_w" presentation="default">
+                <element href="modelica.library.sysml#_H-8iAPONEeKZTvPG-EQK_w"/>
+              </semanticModel>
+              <contained xsi:type="di:GraphNode" xmi:id="_MUHLcPONEeKZTvPG-EQK_w" position="0,0" size="-1,-1">
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_MUHLcfONEeKZTvPG-EQK_w" presentation="default">
+                  <element href="modelica.library.sysml#_MUHLcvONEeKZTvPG-EQK_w"/>
+                </semanticModel>
+              </contained>
+              <contained xsi:type="di:GraphNode" xmi:id="_QsQQYPONEeKZTvPG-EQK_w" position="0,0" size="-1,-1">
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_QsQQYfONEeKZTvPG-EQK_w" presentation="default">
+                  <element href="modelica.library.sysml#_QsQQYvONEeKZTvPG-EQK_w"/>
+                </semanticModel>
+              </contained>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_X68EoPONEeKZTvPG-EQK_w" position="31,246" size="421,-1">
+            <property xmi:id="_YUhpUPONEeKZTvPG-EQK_w" key="backgroundColor" value="255,209,187"/>
+            <property xmi:id="_YUhpUfONEeKZTvPG-EQK_w" key="foregroundColor" value=""/>
+            <property xmi:id="_YUhpUvONEeKZTvPG-EQK_w" key="font" value=""/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_X68EofONEeKZTvPG-EQK_w" presentation="default">
+              <element href="modelica.library.sysml#_X6fYsPONEeKZTvPG-EQK_w"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_X68EovONEeKZTvPG-EQK_w" size="421,-1">
+              <property xmi:id="_X68Eo_ONEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+              <property xmi:id="_YUhpU_ONEeKZTvPG-EQK_w" key="backgroundColor" value="255,209,187"/>
+              <property xmi:id="_YUhpVPONEeKZTvPG-EQK_w" key="foregroundColor" value=""/>
+              <property xmi:id="_YUhpVfONEeKZTvPG-EQK_w" key="font" value=""/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_X68EpPONEeKZTvPG-EQK_w" presentation="constraints">
+                <element href="modelica.library.sysml#_X6fYsPONEeKZTvPG-EQK_w"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_X68EpfONEeKZTvPG-EQK_w" size="421,-1">
+              <property xmi:id="_X68EpvONEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+              <property xmi:id="_YUraUPONEeKZTvPG-EQK_w" key="backgroundColor" value="255,209,187"/>
+              <property xmi:id="_YUraUfONEeKZTvPG-EQK_w" key="foregroundColor" value=""/>
+              <property xmi:id="_YUraUvONEeKZTvPG-EQK_w" key="font" value=""/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_X68Ep_ONEeKZTvPG-EQK_w" presentation="operations">
+                <element href="modelica.library.sysml#_X6fYsPONEeKZTvPG-EQK_w"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_X68EqPONEeKZTvPG-EQK_w" size="421,-1">
+              <property xmi:id="_X68EqfONEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+              <property xmi:id="_YUraU_ONEeKZTvPG-EQK_w" key="backgroundColor" value="255,209,187"/>
+              <property xmi:id="_YUraVPONEeKZTvPG-EQK_w" key="foregroundColor" value=""/>
+              <property xmi:id="_YUraVfONEeKZTvPG-EQK_w" key="font" value=""/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_X68EqvONEeKZTvPG-EQK_w" presentation="default">
+                <element href="modelica.library.sysml#_X6fYsPONEeKZTvPG-EQK_w"/>
+              </semanticModel>
+              <contained xsi:type="di:GraphNode" xmi:id="_YSJqwPONEeKZTvPG-EQK_w" position="0,0" size="-1,-1">
+                <property xmi:id="_YUraVvONEeKZTvPG-EQK_w" key="backgroundColor" value=""/>
+                <property xmi:id="_YUraV_ONEeKZTvPG-EQK_w" key="foregroundColor" value=""/>
+                <property xmi:id="_YUraWPONEeKZTvPG-EQK_w" key="font" value=""/>
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_YSJqwfONEeKZTvPG-EQK_w" presentation="default">
+                  <element href="modelica.library.sysml#_X6fYsfONEeKZTvPG-EQK_w"/>
+                </semanticModel>
+              </contained>
+              <contained xsi:type="di:GraphNode" xmi:id="_YSJqwvONEeKZTvPG-EQK_w" position="0,0" size="-1,-1">
+                <property xmi:id="_YUraWfONEeKZTvPG-EQK_w" key="backgroundColor" value=""/>
+                <property xmi:id="_YUraWvONEeKZTvPG-EQK_w" key="foregroundColor" value=""/>
+                <property xmi:id="_YUraW_ONEeKZTvPG-EQK_w" key="font" value=""/>
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_YSJqw_ONEeKZTvPG-EQK_w" presentation="default">
+                  <element href="modelica.library.sysml#_X6fYsvONEeKZTvPG-EQK_w"/>
+                </semanticModel>
+              </contained>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_foRjwPONEeKZTvPG-EQK_w" position="459,64" size="421,-1">
+            <property xmi:id="_f2jQUPONEeKZTvPG-EQK_w" key="backgroundColor" value="255,209,187"/>
+            <property xmi:id="_f2jQUfONEeKZTvPG-EQK_w" key="foregroundColor" value=""/>
+            <property xmi:id="_f2jQUvONEeKZTvPG-EQK_w" key="font" value=""/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_foRjwfONEeKZTvPG-EQK_w" presentation="default">
+              <element href="modelica.library.sysml#_foHywPONEeKZTvPG-EQK_w"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_foRjwvONEeKZTvPG-EQK_w" size="421,-1">
+              <property xmi:id="_foRjw_ONEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+              <property xmi:id="_f2jQU_ONEeKZTvPG-EQK_w" key="backgroundColor" value="255,209,187"/>
+              <property xmi:id="_f2jQVPONEeKZTvPG-EQK_w" key="foregroundColor" value=""/>
+              <property xmi:id="_f2jQVfONEeKZTvPG-EQK_w" key="font" value=""/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_foRjxPONEeKZTvPG-EQK_w" presentation="constraints">
+                <element href="modelica.library.sysml#_foHywPONEeKZTvPG-EQK_w"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_foRjxfONEeKZTvPG-EQK_w" size="421,-1">
+              <property xmi:id="_foRjxvONEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+              <property xmi:id="_f2jQVvONEeKZTvPG-EQK_w" key="backgroundColor" value="255,209,187"/>
+              <property xmi:id="_f2jQV_ONEeKZTvPG-EQK_w" key="foregroundColor" value=""/>
+              <property xmi:id="_f2jQWPONEeKZTvPG-EQK_w" key="font" value=""/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_foRjx_ONEeKZTvPG-EQK_w" presentation="operations">
+                <element href="modelica.library.sysml#_foHywPONEeKZTvPG-EQK_w"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_foRjyPONEeKZTvPG-EQK_w" size="421,-1">
+              <property xmi:id="_foRjyfONEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+              <property xmi:id="_f2jQWfONEeKZTvPG-EQK_w" key="backgroundColor" value="255,209,187"/>
+              <property xmi:id="_f2jQWvONEeKZTvPG-EQK_w" key="foregroundColor" value=""/>
+              <property xmi:id="_f2jQW_ONEeKZTvPG-EQK_w" key="font" value=""/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_foRjyvONEeKZTvPG-EQK_w" presentation="default">
+                <element href="modelica.library.sysml#_foHywPONEeKZTvPG-EQK_w"/>
+              </semanticModel>
+              <contained xsi:type="di:GraphNode" xmi:id="_f1ECkPONEeKZTvPG-EQK_w" position="0,0" size="-1,-1">
+                <property xmi:id="_f2jQXPONEeKZTvPG-EQK_w" key="backgroundColor" value=""/>
+                <property xmi:id="_f2jQXfONEeKZTvPG-EQK_w" key="foregroundColor" value=""/>
+                <property xmi:id="_f2jQXvONEeKZTvPG-EQK_w" key="font" value=""/>
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_f1ECkfONEeKZTvPG-EQK_w" presentation="default">
+                  <element href="modelica.library.sysml#_foHywfONEeKZTvPG-EQK_w"/>
+                </semanticModel>
+              </contained>
+              <contained xsi:type="di:GraphNode" xmi:id="_f1zpcPONEeKZTvPG-EQK_w" position="0,0" size="-1,-1">
+                <property xmi:id="_f2jQX_ONEeKZTvPG-EQK_w" key="backgroundColor" value=""/>
+                <property xmi:id="_f2jQYPONEeKZTvPG-EQK_w" key="foregroundColor" value=""/>
+                <property xmi:id="_f2jQYfONEeKZTvPG-EQK_w" key="font" value=""/>
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_f1zpcfONEeKZTvPG-EQK_w" presentation="default">
+                  <element href="modelica.library.sysml#_foHywvONEeKZTvPG-EQK_w"/>
+                </semanticModel>
+              </contained>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_ot-kAPONEeKZTvPG-EQK_w" position="32,435" size="500,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ot-kAfONEeKZTvPG-EQK_w" presentation="default">
+              <element href="modelica.library.sysml#_ovK20PONEeKZTvPG-EQK_w"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_ot-kAvONEeKZTvPG-EQK_w">
+              <property xmi:id="_ot-kA_ONEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="12"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ot-kBPONEeKZTvPG-EQK_w" presentation="constraints">
+                <element href="modelica.library.sysml#_ovK20PONEeKZTvPG-EQK_w"/>
+              </semanticModel>
+              <contained xsi:type="di:GraphNode" xmi:id="_8fveUPONEeKZTvPG-EQK_w" position="0,0" size="0,0">
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_8fveUfONEeKZTvPG-EQK_w" presentation="node">
+                  <element href="modelica.library.sysml#_8fveUvONEeKZTvPG-EQK_w"/>
+                </semanticModel>
+              </contained>
+              <contained xsi:type="di:GraphNode" xmi:id="__wUeQPONEeKZTvPG-EQK_w" position="0,0" size="0,0">
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__wUeQfONEeKZTvPG-EQK_w" presentation="node">
+                  <element href="modelica.library.sysml#__wUeQvONEeKZTvPG-EQK_w"/>
+                </semanticModel>
+              </contained>
+              <contained xsi:type="di:GraphNode" xmi:id="_Bq6isPOOEeKZTvPG-EQK_w" position="0,0" size="0,0">
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Bq6isfOOEeKZTvPG-EQK_w" presentation="node">
+                  <element href="modelica.library.sysml#_Bq6isvOOEeKZTvPG-EQK_w"/>
+                </semanticModel>
+              </contained>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_ot-kBfONEeKZTvPG-EQK_w">
+              <property xmi:id="_ot-kBvONEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="47 50 "/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ot-kB_ONEeKZTvPG-EQK_w" presentation="operations">
+                <element href="modelica.library.sysml#_ovK20PONEeKZTvPG-EQK_w"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_ot-kCPONEeKZTvPG-EQK_w">
+              <property xmi:id="_ot-kCfONEeKZTvPG-EQK_w" key="eStructuralFeatureID" value="37"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ot-kCvONEeKZTvPG-EQK_w" presentation="default">
+                <element href="modelica.library.sysml#_ovK20PONEeKZTvPG-EQK_w"/>
+              </semanticModel>
+              <contained xsi:type="di:GraphNode" xmi:id="_sb3LAPONEeKZTvPG-EQK_w" position="0,0" size="-1,-1">
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_sb3LAfONEeKZTvPG-EQK_w" presentation="default">
+                  <element href="modelica.library.sysml#_sb3LAvONEeKZTvPG-EQK_w"/>
+                </semanticModel>
+              </contained>
+              <contained xsi:type="di:GraphNode" xmi:id="_stRrIPONEeKZTvPG-EQK_w" position="0,0" size="-1,-1">
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_stRrIfONEeKZTvPG-EQK_w" presentation="default">
+                  <element href="modelica.library.sysml#_sta1EPONEeKZTvPG-EQK_w"/>
+                </semanticModel>
+              </contained>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_t5SyUPONEeKZTvPG-EQK_w" position="227,88" size="15,15">
+              <property xmi:id="_t5SyUfONEeKZTvPG-EQK_w" key="portPosition" value="4"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_t5SyUvONEeKZTvPG-EQK_w" presentation="default">
+                <element href="modelica.library.sysml#_t5cjUPONEeKZTvPG-EQK_w"/>
+              </semanticModel>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_u1i_MPONEeKZTvPG-EQK_w" position="486,137" size="15,15">
+              <property xmi:id="_u1i_MfONEeKZTvPG-EQK_w" key="portPosition" value="4"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_u1i_MvONEeKZTvPG-EQK_w" presentation="default">
+                <element href="modelica.library.sysml#_u1swMPONEeKZTvPG-EQK_w"/>
+              </semanticModel>
+            </contained>
           </contained>
         </diagrams>
       </subdiagrams>
