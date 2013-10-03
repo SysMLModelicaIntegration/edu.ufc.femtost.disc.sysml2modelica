@@ -1,0 +1,698 @@
+--
+--  Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comté
+--  All rights reserved. This program and the accompanying materials
+--  are made available under the terms of the Eclipse Public License v1.0
+--  which accompanies this distribution, and is available at
+--  http://www.eclipse.org/legal/epl-v10.html
+--  
+--  Contributors:
+--      Jean-Marie Gauthier and University of Franche-Comté - initial API and implementation
+--
+ 
+-- @nsURI MMproblem=http://www.femto-st.fr/disc/problem
+-- @nsURI MMsysml=http://www.eclipse.org/papyrus/0.7.0/SysML
+-- @nsURI MMuml=http://www.eclipse.org/uml2/4.0.0/UML
+-- @path MMmodelicaProfile=http://www.femto-st.fr/disc/SysML4Modelica
+
+module sysml2problem;
+create OUTproblem : MMproblem from INuml : MMuml, INsysml : MMsysml, INmodelicaProfile: MMmodelicaProfile;
+
+------------------------------------------------------------------------
+-------------------------------HELPERS----------------------------------
+------------------------------------------------------------------------
+helper def: isBlockStereotyped(c: MMuml!Class) : Boolean = 
+	c.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::Blocks::Block');
+
+helper def: isConstraintBlockStereotyped(c: MMuml!Class) : Boolean = 
+	c.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::Constraints::ConstraintBlock');
+
+helper def: isFlowPortStereotyped(p: MMuml!Port) : Boolean = 
+	p.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::PortAndFlows::FlowPort');
+
+helper context MMuml!NamedElement def: isModelicaClassDefinitionStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | 
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaClass' or
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaModel' or
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaRecord' or
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaBlock' or
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaPackage' or
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaConnector' or
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaOperator'
+	);
+
+
+helper context MMuml!NamedElement def: isModelicaClassStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaClass');
+
+helper context MMuml!NamedElement def: isModelicaModelStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaModel');
+
+helper context MMuml!NamedElement def: isModelicaRecordStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaRecord');
+
+helper context MMuml!NamedElement def: isModelicaBlockStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaBlock');
+
+helper context MMuml!NamedElement def: isModelicaConnectorStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaConnector');
+
+helper context MMuml!NamedElement def: isModelicaPackageStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaPackage');
+
+helper context MMuml!NamedElement def: isModelicaFunctionStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaFunction');
+
+helper context MMuml!NamedElement def: isModelicaAlgorithmStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Equations And Algorithms::ModelicaAlgorithm');
+
+helper context MMuml!NamedElement def: isModelicaPartStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Components::ModelicaPart');
+
+helper context MMuml!NamedElement def: isModelicaPortStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Components::ModelicaPort');
+
+helper context MMuml!NamedElement def: isModelicaValuePropertyStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Components::ModelicaValueProperty');
+
+helper context MMuml!NamedElement def: isModelicaEquationStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Equations And Algorithms::ModelicaEquation');
+
+helper context MMuml!NamedElement def: isModelicaFunctionParameterStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Components::ModelicaFunctionParameter');
+
+helper context MMuml!Dependency def: isModelicaDerStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaDer');
+
+helper context MMuml!Generalization def: isModelicaExtendsStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaExtends');
+
+helper context MMuml!Dependency def: isModelicaConstraintByStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaConstrainedBy');
+
+helper context MMuml!Connector def: isModelicaConnectionStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Equations And Algorithms::ModelicaConnection');
+
+helper context MMuml!NamedElement def: isModelicaTypeStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaType');
+
+
+
+helper context MMsysml!Block def: getIsFinal() : Boolean = 
+	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Classifier = self)->first().isFinal;
+
+helper context MMsysml!Block def: getIsPartial() : Boolean = 
+	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Classifier = self)->first().isPartial;
+
+helper context MMuml!FunctionBehavior def: getExternalLibrary() : Sequence(String) = 
+	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().externalLibrary;
+
+helper context MMuml!FunctionBehavior def: getExternalInclude() : String = 
+	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().externalInclude;
+
+helper context MMuml!Generalization def: getVisibility() : String = 
+	MMmodelicaProfile!ModelicaExtends.allInstances()->select(mc | mc.base_Generalization = self)->first().visibility;
+
+helper context MMuml!Property def: getCausality() : String = 
+	MMmodelicaProfile!ModelicaValueProperty.allInstances()->select(mvp | mvp.base_Property = self)->first().causality;
+
+helper context MMuml!Property def: getVariability() : String = 
+	MMmodelicaProfile!ModelicaValueProperty.allInstances()->select(mvp | mvp.base_Property = self)->first().variability;
+
+helper context MMuml!NamedElement def: isNamed() :  Boolean =
+	self.name <> '' and
+	not self.name.oclIsUndefined();
+
+
+------------------------------------------------------------------------
+----------------------MODELICA CLASS DEFINTION--------------------------
+------------------------------------------------------------------------
+--[1] Any generalization relationship to/from «modelicaClassDefinition» must be stereotyped by a «modelicaExtends» relationship.
+--[2] A «modelicaClassDefinition» can only contain nestedClassifiers stereotyped by a restricted type specializing «modelicaClassDefinition».
+
+rule Constraints_1_MODELICA_CLASS_DEFINITION {
+	from sysml: MMuml!Class(
+		thisModule.isBlockStereotyped(sysml) and
+		not thisModule.isConstraintBlockStereotyped(sysml) and
+		if(sysml.isModelicaClassDefinitionStereotyped()) then
+			sysml.isNamed() and
+			if(not sysml.generalization->first().oclIsUndefined()) then
+				not sysml.generalization->forAll(g | g.isModelicaExtendsStereotyped())
+			else
+				false
+			endif
+		else
+			false
+		endif
+	)
+	to problem: MMproblem!Problem(
+		description <- 'Any generalization relationship to/from modelicaClassDefinition must be stereotyped to a modelicaExtends relationship.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_2_MODELICA_CLASS_DEFINITION {
+	from sysml: MMuml!Class(
+		thisModule.isBlockStereotyped(sysml) and
+		not thisModule.isConstraintBlockStereotyped(sysml) and
+		if(sysml.isModelicaClassDefinitionStereotyped()) then
+			sysml.isNamed() and
+			if(not sysml.generalization->first().oclIsUndefined()) then
+				sysml.generalization->forAll(g | g.isModelicaExtendsStereotyped()) and
+				not sysml.nestedClassifier->select(nc | thisModule.isBlockStereotyped(nc) and not thisModule.isConstraintBlockStereotyped(nc))->forAll(n | n.isModelicaClassDefinitionStereotyped())
+			else
+				not sysml.nestedClassifier->select(nc | thisModule.isBlockStereotyped(nc) and not thisModule.isConstraintBlockStereotyped(nc))->forAll(n | n.isModelicaClassDefinitionStereotyped())
+			endif
+		else
+			false
+		endif
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The modelicaClassDefinition '+ sysml.name + ' can only contain nestedClassifiers stereotyped to a restricted type specializing modelicaClassDefinition.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+------------------------------------------------------------------------
+-----------------------MODELICA CLASS / MODEL---------------------------
+------------------------------------------------------------------------
+--[1] A «modelicaModel» must have a Name.
+--[2] A «modelicaModel» can only have Properties that are stereotyped to «modelicaPart», «modelicaPort», or «modelicaValueProperty».
+--[3] A «modelicaModel» can only contain Behaviors that are stereotyped to «modelicaFunction», or «modelicaAlgorithm».
+--[4] A «modelicaModel» can only be contained in a «modelicaClassDefinition».
+--[5] A «modelicaModel» can only specialize other classifiers derived from «modelicaBlock», or «modelicaRecord». The stereotype «modelicaExtends» must be applied to the generalization relationship.
+--[6] All other attributes or associations inherited from «block» or Classifier are not relevant and should be set to their default values. This includes the attributes: isActive, isEncapsulated.
+
+rule Constraints_1_CLASS_MODEL {
+	from sysml: MMuml!Class(
+		not thisModule.isConstraintBlockStereotyped(sysml) and
+		(	
+			sysml.isModelicaClassStereotyped() or
+			sysml.isModelicaModelStereotyped()
+				
+		) and not sysml.isNamed()
+		
+	)
+	to problem: MMproblem!Problem(
+		description <- 'A modelicaModel/modelicaClass must have a Name.', 
+		location <- sysml.owner.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_2_CLASS_MODEL {
+	from sysml: MMuml!Property(
+		sysml.isNamed() and
+		(
+			sysml.owner.isModelicaClassStereotyped() or
+			sysml.owner.isModelicaModelStereotyped()
+			
+		) and
+		not sysml.isModelicaPartStereotyped() and
+		not sysml.isModelicaPortStereotyped() and
+		not sysml.isModelicaValuePropertyStereotyped()
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The block ' + sysml.owner.name + ' can only have Properties that are stereotyped to modelicaPart, modelicaPort, or modelicaValueProperty', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_3_CLASS_MODEL {
+	from sysml: MMuml!Behavior(
+		(
+			sysml.owner.isModelicaClassStereotyped() or
+			sysml.owner.isModelicaModelStereotyped()
+			
+		) and
+		not sysml.isModelicaFunctionStereotyped() and
+		not sysml.isModelicaAlgorithmStereotyped() and
+		sysml.isNamed()
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The block ' + sysml.owner.name + ' can only contain Behaviors that are stereotyped to modelicaFunction, or modelicaAlgorithm', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_4_CLASS_MODEL {
+	from sysml: MMuml!Class(
+		not thisModule.isConstraintBlockStereotyped(sysml) and
+		(	
+			sysml.isModelicaClassStereotyped() or
+			sysml.isModelicaModelStereotyped()
+				
+		) and 
+		sysml.isNamed() and
+		not sysml.owner.isModelicaClassDefinitionStereotyped()
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The modelicaModel/modelicaClass ' + sysml.name + ' can only be contained in a modelicaClassDefinition.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+------------------------------------------------------------------------
+---------------------------MODELICA RECORD------------------------------
+------------------------------------------------------------------------
+--[1] A «modelicaRecord» must have a Name.
+--[2] A «modelicaRecord» can only have Properties that are stereotyped to «modelicaValueProperty».
+--[3] Any «modelicaValueProperty» owned by an instance of «modelicaRecord» must have visibility=public, flowFlag=nonflow, causality=null, scope=null.
+--[4] A «modelicaRecord» can only be contained in a «modelicaClassDefinition».
+--[5] A «modelicaRecord» can only specialize other classifiers derived from «modelicaRecord». The stereotype «modelicaExtends» must be applied to the generalization relationship.
+--[6] All other attributes or associations inherited from «block» or Classifier may not be used. This includes the attributes: isActive, isEncapsulated; and the ownedElements: Behavior, Constraint.
+
+rule Constraints_1_RECORD {
+	from sysml: MMuml!Class(
+		not thisModule.isConstraintBlockStereotyped(sysml) and
+		sysml.isModelicaRecordStereotyped() and 
+		not sysml.isNamed()
+	)
+	to problem: MMproblem!Problem(
+		description <- 'A modelicaRecord must have a Name.', 
+		location <- sysml.owner.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_2_RECORD {
+	from sysml: MMuml!Property(
+		sysml.isNamed() and
+		sysml.owner.isModelicaRecordStereotyped() and
+		not sysml.isModelicaValuePropertyStereotyped()
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The ModelicaRecord ' + sysml.owner.name + ' can only have Properties that are stereotyped to modelicaValueProperty', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+------------------------------------------------------------------------
+---------------------------MODELICA BLOCK-------------------------------
+------------------------------------------------------------------------
+--[1] A «modelicaBlock» must have a Name.
+--[2] A «modelicaBlock» can only have Properties that are stereotyped to «modelicaPart», «modelicaPort», or «modelicaValueProperty».
+--[3] Any «modelicaValueProperty» owned by an instance of «modelicaBlock» must have causality=input or output.
+--[4] A «modelicaBlock» can only contain Behaviors that are stereotyped to «modelicaFunction», «modelicaAlgorithm», or «modelicaInitialAlgorithm».
+--[5] A «modelicaBlock» can only contain Constraints that are stereotyped to «modelicaEquation» or «modelicaInitialEquation».
+--[6] A «modelicaBlock» can only be contained in a «modelicaClassDefinition».
+--[7] A «modelicaBlock» can only specialize other classifiers derived from «modelicaBlock» or «modelicaRecord». The stereotype «modelicaExtends» must be applied to the generalization relationship.
+--[8] All other attributes or associations inherited from «block» or Classifier may not be used. This includes the attributes: isActive, isEncapsulated.
+
+rule Constraints_1_BLOCK {
+	from sysml: MMuml!Class(
+		not thisModule.isConstraintBlockStereotyped(sysml) and
+		sysml.isModelicaBlockStereotyped() and 
+		not sysml.isNamed()
+	)
+	to problem: MMproblem!Problem(
+		description <- 'A modelicaBlock must have a Name.', 
+		location <- sysml.owner.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_2_BLOCK {
+	from sysml: MMuml!Property(
+		sysml.isNamed() and
+		sysml.owner.isModelicaBlockStereotyped() and
+		not sysml.isModelicaPartStereotyped() and
+		not sysml.isModelicaPortStereotyped() and
+		not sysml.isModelicaValuePropertyStereotyped()	
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The modelicaBlock ' + sysml.owner.name + ' can only have Properties that are stereotyped to modelicaPart, modelicaPort, or modelicaValueProperty', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_3_BLOCK {
+	from sysml: MMuml!Property(
+		sysml.isNamed() and
+		sysml.owner.isModelicaBlockStereotyped() and
+		if(sysml.isModelicaValuePropertyStereotyped())then 
+			sysml.getCausality() = #none
+		else
+			false
+		endif
+	)
+	to problem: MMproblem!Problem(
+		description <- 'Any modelicaValueProperty owned by '+ sysml.owner.name+' must have causality=input or output.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_4_BLOCK {
+	from sysml: MMuml!Behavior(
+		sysml.isNamed() and
+		sysml.owner.isModelicaBlockStereotyped() and
+		not sysml.isModelicaFunctionStereotyped() and 
+		not sysml.isModelicaAlgorithmStereotyped()
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The modelicaBlock '+ sysml.owner.name + ' can only contain Behaviors that are stereotyped to modelicaFunction, modelicaAlgorithm.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_5_BLOCK {
+	from sysml: MMuml!Constraint(
+		sysml.owner.isModelicaBlockStereotyped() and
+		not sysml.isModelicaEquationStereotyped()
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The modelicaBlock '+ sysml.owner.name + ' can only contain Constraints that are stereotyped to modelicaEquation', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+------------------------------------------------------------------------
+------------------------MODELICA CONNECTOR------------------------------
+------------------------------------------------------------------------
+--[1] A «modelicaConnector» must have a Name.
+--[2] A «modelicaConnector» can only have Properties that are stereotyped to «modelicaPart», «modelicaPort», or «modelicaValueProperty».
+--[3] None of the Properties owned by an instance of «modelicaConnector» can contain Behaviors or Constraints (at any level of containment).
+--[4] A «modelicaConnector» can only be contained in a «modelicaClassDefinition».
+--[5] A «modelicaConnector» can only specialize other classifiers derived from «modelicaConnector», «modelicaType», or «modelicaRecord». The stereotype «modelicaExtends» must be applied to the generalization relationship.
+--[6] All other attributes or associations inherited from «block» or Classifier may not be used. This includes the attributes: isActive, isEncapsulated; and the ownedElements: Behavior, Constraint.
+
+rule Constraints_1_CONNECTOR{
+	from sysml: MMuml!Class(
+		not thisModule.isConstraintBlockStereotyped(sysml) and
+		sysml.isModelicaConnectorStereotyped() and 
+		not sysml.isNamed()
+	)
+	to problem: MMproblem!Problem(
+		description <- 'A modelicaConnector must have a Name.', 
+		location <- sysml.owner.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_2_CONNECTOR {
+	from sysml: MMuml!Property(
+		sysml.isNamed() and
+		sysml.owner.isModelicaConnectorStereotyped() and
+		not sysml.isModelicaPartStereotyped() and
+		not sysml.isModelicaPortStereotyped() and
+		not sysml.isModelicaValuePropertyStereotyped()	
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The modelicaConnector ' + sysml.owner.name + ' can only have Properties that are stereotyped to modelicaPart, modelicaPort, or modelicaValueProperty', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+------------------------------------------------------------------------
+----------------------------MODELICA TYPE-------------------------------
+------------------------------------------------------------------------
+--[1] A «modelicaType» must have a Name.
+--[2] A «modelicaType» can only be contained in a «modelicaClassDefinition».
+--[3] A «modelicaType» can only specialize other classifiers derived from «modelicaType». The stereotype «modelicaExtends» must be applied to the generalization relationship.
+--[4] All other attributes or associations inherited from «block» or Classifier may not be used. This includes the attributes: isActive, isEncapsulated; and the ownedElements: Property (including part, port and value properties), Behavior, Constraint.
+
+rule Constraints_1_TYPE{
+	from sysml: MMuml!DataType(
+		sysml.isModelicaTypeStereotyped() and
+		not sysml.isNamed()
+	)
+	to problem: MMproblem!Problem(
+		description <- 'A modelicaType must have a Name.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+------------------------------------------------------------------------
+---------------------------MODELICA PACKAGE-----------------------------
+------------------------------------------------------------------------
+--[1] A «modelicaPackage» must have a Name.
+--[2] A «modelicaPackage» can only have Properties that are stereotyped to «modelicaValueProperty».
+--[3] Any «modelicaValueProperty» owned by an instance of «modelicaPackage» must have variability=constant. (ref. Modelica Specification 4.6, package)
+--[4] A «modelicaPackage» can be contained in a «modelicaClassDefinition» or in a UML4SysML::Package.
+--[5] A «modelicaPackage» can only specialize other classifiers derived from «modelicaPackage». The stereotype «modelicaExtends» must be applied to the generalization relationship.
+--[6] All other attributes or associations inherited from «block» or Classifier may not be used. This includes the attributes: isActive, isEncapsulated; and the ownedElements: Behavior, Constraint.
+
+rule Constraints_1_PACKAGE{
+	from sysml: MMuml!Class(
+		not thisModule.isConstraintBlockStereotyped(sysml) and
+		sysml.isModelicaPackageStereotyped() and 
+		not sysml.isNamed()
+	)
+	to problem: MMproblem!Problem(
+		description <- 'A modelicaPackage must have a Name.', 
+		location <- sysml.owner.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_2_PACKAGE {
+	from sysml: MMuml!Property(
+		sysml.isNamed() and
+		sysml.owner.isModelicaPackageStereotyped() and
+		not sysml.isModelicaValuePropertyStereotyped()
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The ModelicaPackage ' + sysml.owner.name + ' can only have Properties that are stereotyped to modelicaValueProperty', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_3_PACKAGE {
+	from sysml: MMuml!Property(
+		sysml.isNamed() and
+		sysml.owner.isModelicaPackageStereotyped() and
+		if(sysml.isModelicaValuePropertyStereotyped())then 
+			sysml.getVariability() <> #constant
+		else
+			false
+		endif
+	)
+	to problem: MMproblem!Problem(
+		description <- 'Any modelicaValueProperty owned by '+ sysml.owner.name+' must have variability = constant.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+------------------------------------------------------------------------
+---------------------------MODELICA FUNCTION----------------------------
+------------------------------------------------------------------------
+--[1] A «modelicaFunction» must have a Name.
+--[2] A «modelicaFunction» can only have Parameters that are stereotyped to «modelicaFunctionParameter».
+--[3] Any «modelicaFunctionParameter» (owned by an instance of «modelicaPackage») for which causality=input may not be assigned values in the body of the function (i.e., it is read-only).
+--[4] A «modelicaFunction» can only have zero or one body attribute.
+--[5] A «modelicaFunction» must have language= Modelica,  builtin,  C, or FORTRAN.
+--[6] If language= Modelica, then the body of the function must be represented in the Modelica syntax and must constitute a valid Modelica algorithm section.
+--[7] If language= C or FORTRAN, then the body of the function must be represented a valid functional call in the respective language (as specified in Modelica, v 3.1, sub clause 12.9.4).
+--[8] The optional attributes, externalLibrary and externalInclude, can only be used when language = C or FORTRAN.
+--[9] A «modelicaFunction» can only specialize other classifiers derived from «modelicaFunction». The stereotype «modelicaExtends» must be applied to the generalization relationship.
+--[10] All other attributes or associations inherited from FunctionBehavior or Classifier may not be used.
+
+rule Constraints_1_FUNCTION{
+	from sysml: MMuml!FunctionBehavior(
+		sysml.isModelicaFunctionStereotyped() and 
+		not sysml.isNamed()
+	)
+	to problem: MMproblem!Problem(
+		description <- 'A modelicaFunction must have a Name.', 
+		location <- sysml.owner.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_2_FUNCTION{
+	from sysml: MMuml!Parameter(
+		sysml.owner.oclIsTypeOf(MMuml!FunctionBehavior) and
+		sysml.owner.isModelicaFunctionStereotyped() and
+		not sysml.isModelicaFunctionParameterStereotyped() and 
+		sysml.isNamed()
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The modelicaFunction '+ sysml.owner.name +' can only have Parameters that are stereotyped to modelicaFunctionParameter', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_5_FUNCTION{
+	from sysml: MMuml!FunctionBehavior(
+		if(sysml.isModelicaFunctionStereotyped())then
+			
+			sysml.isNamed() and
+			sysml.language->first().toString() <> 'Modelica' and
+			sysml.language->first().toString() <> 'builtin' and
+			sysml.language->first().toString() <> 'C' and
+			sysml.language->first().toString() <> 'Fortran' 
+			
+		else
+			false
+		endif
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The modelicaFunction ' + sysml.name + ' must have language = Modelica,  builtin,  C, or FORTRAN.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_8_FUNCTION{
+	from sysml: MMuml!FunctionBehavior(
+		if(sysml.isModelicaFunctionStereotyped())then
+			sysml.isNamed() and
+			(
+				sysml.language->first().toString() <> 'C' or
+				sysml.language->first().toString() <> 'Fortran' 
+				
+			)and
+			(
+				(sysml.getExternalLibrary() <> '' and sysml.getExternalLibrary() <> OclUndefined) or
+				(sysml.getExternalInclude() <> '' and sysml.getExternalInclude() <> OclUndefined)
+			)
+		else
+			false
+		endif
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The optional attributes, externalLibrary and externalInclude, can only be used when language = C or FORTRAN.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+------------------------------------------------------------------------
+----------------------------MODELICA EXTENDS----------------------------
+------------------------------------------------------------------------
+--[1] Both the source and target of a «modelicaExtends» relation must be typed to instances of a specialization of «modelicaClassDefinition».
+--[2] The visibility attribute of «modelicaExtends» can only take on values of public or protected.
+
+rule Constraints_1_EXTENDS{
+	from sysml: MMuml!Generalization(
+		if(sysml.isModelicaExtendsStereotyped())then
+			(
+				sysml.getVisibility() = #public or
+				sysml.getVisibility() = #protected 
+			)and
+			(
+				not sysml.owner.isModelicaClassDefinitionStereotyped() or
+				not sysml.general.isModelicaClassDefinitionStereotyped()	
+			)
+		else
+			false
+		endif
+	)
+	to problem: MMproblem!Problem(
+		description <- 'Both the source: ' + sysml.owner.name + ' and target: '+ sysml.general.name + ' of a modelicaExtends relation must be typed to instances of a specialization of modelicaClassDefinition.', 
+		location <- sysml.owner.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule Constraints_2_EXTENDS{
+	from sysml: MMuml!Generalization(
+		if(sysml.isModelicaExtendsStereotyped())then
+			sysml.getVisibility() <> #public and
+			sysml.getVisibility() <> #protected
+		else
+			false
+		endif
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The visibility attribute of the modelicaExtends between '+ sysml.owner.name +' and '+ sysml.general.name + ' can only take on values of public or protected.', 
+		location <- sysml.owner.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+------------------------------------------------------------------------
+------------------------------MODELICA DER------------------------------
+------------------------------------------------------------------------
+--[1] Both the source and target of a «modelicaDer» relation must be typed to instances of «modelicaFunction».
+
+rule Constraints_1_DER{
+	from sysml: MMuml!Dependency(
+		sysml.isModelicaDerStereotyped() and
+		not (
+			 	sysml.client->first().isModelicaFunctionStereotyped() and
+				sysml.supplier->first().isModelicaFunctionStereotyped()
+			)
+	)
+	to problem: MMproblem!Problem(
+		description <- 'Both the source: '+sysml.client->first().name+' and target: '+ sysml.supplier->first().name + ' of a modelicaDer relation must be typed to instances of modelicaFunction.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+------------------------------------------------------------------------
+------------------------MODELICA CONSTRAINED BY-------------------------
+------------------------------------------------------------------------
+--[1] Both the source and target of a «modelicaConstrainedBy» relation must be typed to instances of a specialization of «modelicaClassDefinition».
+
+rule Constraints_1_CONSTRAINED_BY{
+	from sysml: MMuml!Dependency(
+		sysml.isModelicaConstraintByStereotyped() and
+		if(sysml.client->first().oclIsTypeOf(MMuml!Property) and sysml.supplier->first().oclIsTypeOf(MMuml!Property))then
+			if(thisModule.isBlockStereotyped(sysml.client->first().type) and thisModule.isBlockStereotyped(sysml.supplier->first().type))then
+				not sysml.client->first().type.isModelicaClassDefinitionStereotyped() or
+				not sysml.supplier->first().type.isModelicaClassDefinitionStereotyped()
+			else
+				true
+			endif
+		else
+			true
+		endif
+	)
+	to problem: MMproblem!Problem(
+		description <- 'Both the source: '+sysml.client->first().name+' and target: '+ sysml.supplier->first().name + ' of a modelicaConstrainedBy relation must be typed to instances of a specialization of modelicaClassDefinition.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+------------------------------------------------------------------------
+--------------------------MODELICA CONNECTION---------------------------
+------------------------------------------------------------------------
+--[1]The start and end of a «modelicaConnection» must be a «modelicaPort».
+
+rule Constraints_1_CONNECTION{
+	from sysml: MMuml!Connector(
+		sysml.isModelicaConnectionStereotyped()	and
+		(
+			not thisModule.isFlowPortStereotyped(sysml.end->at(1).role) or
+			not sysml.end->at(1).role.isModelicaPortStereotyped() or 
+			not thisModule.isFlowPortStereotyped(sysml.end->at(2).role) or
+			not sysml.end->at(2).role.isModelicaPortStereotyped()
+		)
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The start and end of the modelicaConnection '+ sysml.name +' must be a modelicaPort.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+------------------------------------------------------------------------
+--------------------------MODELICA EQUATION---------------------------
+------------------------------------------------------------------------
+rule Constraints_1_EQUATION{
+	from sysml: MMuml!Constraint(
+		not sysml.isModelicaEquationStereotyped() and
+		thisModule.isBlockStereotyped(sysml.owner)
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The constraint of the block '+ sysml.owner.name +' must be a modelicaEquation.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
