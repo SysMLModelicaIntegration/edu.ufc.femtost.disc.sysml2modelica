@@ -111,8 +111,10 @@ public class Omgsysml2modelica {
 	public Omgsysml2modelica() throws IOException {
 		properties = new Properties();
 		properties.load(getFileURL("Omgsysml2modelica.properties").openStream());
+		EPackage.Registry.INSTANCE.put(getMetamodelUri("MMmodelica"), edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage.eINSTANCE);
 		EPackage.Registry.INSTANCE.put(getMetamodelUri("MMsysml"), org.eclipse.papyrus.sysml.SysmlPackage.eINSTANCE);
 		EPackage.Registry.INSTANCE.put(getMetamodelUri("MMuml"), org.eclipse.uml2.uml.UMLPackage.eINSTANCE);
+		EPackage.Registry.INSTANCE.put(getMetamodelUri("MMmodelicaProfile"), edu.ufc.femtost.disc.sysml4modelica.profile.sysml4modelica.Sysml4modelicaPackage.eINSTANCE);
 		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl());
 	}
 	

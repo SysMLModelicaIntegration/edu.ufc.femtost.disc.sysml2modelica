@@ -37,6 +37,62 @@
 	endif			
 /]
 
+[query public getHasArraySize(c : Connect) : Boolean =
+	if(not c.fromModelicaPart.oclIsUndefined())then
+		if(c.fromModelicaPart.arraySize->notEmpty())then
+			true
+		else
+			if(not c.toModelicaPart.oclIsUndefined())then
+				if(c.toModelicaPart.arraySize->notEmpty())then
+					true
+				else
+					false
+				endif
+			else
+				false
+			endif
+		endif
+	else
+		if(not c.toModelicaPart.oclIsUndefined())then
+			if(c.toModelicaPart.arraySize->notEmpty())then
+				true
+			else
+				false
+			endif
+		else
+			false
+		endif
+	endif
+/]
+
+[query public getArraySize(c : Connect) : Sequence(String) =
+	if(not c.fromModelicaPart.oclIsUndefined())then
+		if(c.fromModelicaPart.arraySize->notEmpty())then
+			c.fromModelicaPart.arraySize->asSequence()
+		else
+			if(not c.toModelicaPart.oclIsUndefined())then
+				if(c.toModelicaPart.arraySize->notEmpty())then
+					c.toModelicaPart.arraySize->asSequence()
+				else
+					Sequence{}
+				endif
+			else
+				Sequence{}
+			endif
+		endif
+	else
+		if(not c.toModelicaPart.oclIsUndefined())then
+			if(c.toModelicaPart.arraySize->notEmpty())then
+				c.toModelicaPart.arraySize->asSequence()
+			else
+				Sequence{}
+			endif
+		else
+			Sequence{}
+		endif
+	endif
+/]
+
 [**
  * The documentation of the template generateModel.
  * @param aModel
@@ -73,11 +129,11 @@ end [aModelicaClassDefinition.name/];
 [/template]
 
 [template public generateModelicaPort(aModelicaPort : ModelicaPort)]
-[if(aModelicaPort.causality.toString() <> 'none')][aModelicaPort.causality.toString()/] [/if][aModelicaPort.type_specifier/] [aModelicaPort.name/][if(not aModelicaPort.modification.oclIsUndefined() and aModelicaPort.modification <> '')] ([aModelicaPort.modification/])[/if][if(not aModelicaPort.conditionalExpression.oclIsUndefined() and aModelicaPort.conditionalExpression <> '')] [aModelicaPort.conditionalExpression/][/if];
+[if(aModelicaPort.causality.toString() <> 'none')][aModelicaPort.causality.toString()/] [/if][aModelicaPort.type_specifier/] [aModelicaPort.name/][if (not aModelicaPort.arraySize->first().oclIsUndefined())][ '[' /][for(arraySize : String | aModelicaPort.arraySize) separator(', ')][arraySize/][/for][ ']' /] [/if][if(not aModelicaPort.modification.oclIsUndefined() and aModelicaPort.modification <> '')] ([aModelicaPort.modification/])[/if][if(not aModelicaPort.conditionalExpression.oclIsUndefined() and aModelicaPort.conditionalExpression <> '')] [aModelicaPort.conditionalExpression/][/if];
 [/template]
 
 [template public generateModelicaPart(aModelicaPart : ModelicaPart)]
-[if(aModelicaPart.visibility.toString() <> 'public')][aModelicaPart.visibility.toString()/] [/if][aModelicaPart.type_specifier/] [aModelicaPart.name/][if(not aModelicaPart.constrainedBy.oclIsUndefined())] constrainedBy [aModelicaPart.constrainedBy.instanceForConstrainedBy.name/][if(not aModelicaPart.constrainedBy.modification.oclIsUndefined() and aModelicaPart.constrainedBy.modification.toString() <> '')]([aModelicaPart.constrainedBy.modification.toString()/])[/if][/if][if(not aModelicaPart.modification.oclIsUndefined() and aModelicaPart.modification <> '')] ([aModelicaPart.modification/])[/if];
+[if(aModelicaPart.visibility.toString() <> 'public')][aModelicaPart.visibility.toString()/] [/if][aModelicaPart.type_specifier/] [aModelicaPart.name/][if (not aModelicaPart.arraySize->first().oclIsUndefined())][ '[' /][for(arraySize : String | aModelicaPart.arraySize) separator(', ')][arraySize/][/for][ ']' /] [/if][if(not aModelicaPart.constrainedBy.oclIsUndefined())] constrainedBy [aModelicaPart.constrainedBy.instanceForConstrainedBy.name/][if(not aModelicaPart.constrainedBy.modification.oclIsUndefined() and aModelicaPart.constrainedBy.modification.toString() <> '')]([aModelicaPart.constrainedBy.modification.toString()/])[/if][/if][if(not aModelicaPart.modification.oclIsUndefined() and aModelicaPart.modification <> '')] ([aModelicaPart.modification/])[/if][if(not aModelicaPart.conditionalExpression.oclIsUndefined())] [aModelicaPart.conditionalExpression.toString()/][/if];
 [/template]
 
 [template public generateEquationSection(aEquationSection : EquationSection)]
@@ -94,7 +150,22 @@ initial equation
 [/template]
 
 [template public generateConnect(aConnect : Connect)]
-	connect([if(not aConnect.fromModelicaPart.oclIsUndefined())][aConnect.fromModelicaPart.name/][if(not aConnect.from.oclIsUndefined() or not aConnect.fromPort.oclIsUndefined())].[/if][/if][if(not aConnect.fromPart.oclIsUndefined())][aConnect.fromPart/][if(not aConnect.from.oclIsUndefined() or not aConnect.fromPort.oclIsUndefined())].[/if][/if][if(not aConnect.from.oclIsUndefined())][aConnect.from.name/][/if][if(not aConnect.fromPort.oclIsUndefined())][aConnect.fromPort/][/if], [if(not aConnect.toModelicaPart.oclIsUndefined())][aConnect.toModelicaPart.name/][if(not aConnect.to.oclIsUndefined() or not aConnect.toPort.oclIsUndefined())].[/if][/if][if(not aConnect.toPart.oclIsUndefined())][aConnect.toPart/][if(not aConnect.to.oclIsUndefined() or not aConnect.toPort.oclIsUndefined())].[/if][/if][if(not aConnect.to.oclIsUndefined())][aConnect.to.name/][/if][if(not aConnect.toPort.oclIsUndefined())][aConnect.toPort/][/if]);
+	[let ok : Boolean = getHasArraySize(aConnect)]
+	[if(ok = true)]	
+		[let sequenceArray : Sequence(String) = getArraySize(aConnect)] 
+		 [let sequenceLetter : Sequence(String) = Sequence{'i', 'j', 'k'}]
+		 	[for(i : Integer | Sequence{1..sequenceArray->size()})]
+	for [sequenceLetter->at(i)/] in 1:[sequenceArray->at(i)/] loop
+			[/for]
+		connect([if(not aConnect.fromModelicaPart.oclIsUndefined())][aConnect.fromModelicaPart.name/][if(aConnect.fromModelicaPart.arraySize->size()>0)][ '[' /][for(i : Integer | Sequence{1..sequenceArray->size()}) separator(',')][sequenceLetter->at(i)/][/for][ ']' /][/if][if(not aConnect.from.oclIsUndefined() or not aConnect.fromPort.oclIsUndefined())].[/if][/if][if(not aConnect.fromPart.oclIsUndefined())][aConnect.fromPart/][if(not aConnect.from.oclIsUndefined() or not aConnect.fromPort.oclIsUndefined())].[/if][/if][if(not aConnect.from.oclIsUndefined())][aConnect.from.name/][if(aConnect.from.arraySize->size()>0)][ '[' /][for(i : Integer | Sequence{1..aConnect.from.arraySize->size()}) separator(',')][sequenceLetter->at(i)/][/for][ ']' /][/if][/if][if(not aConnect.fromPort.oclIsUndefined())][aConnect.fromPort/][/if], [if(not aConnect.toModelicaPart.oclIsUndefined())][aConnect.toModelicaPart.name/][if(aConnect.toModelicaPart.arraySize->size()>0)][ '[' /][for(i : Integer | Sequence{1..sequenceArray->size()}) separator(',')][sequenceLetter->at(i)/][/for][ ']' /][/if][if(not aConnect.to.oclIsUndefined() or not aConnect.toPort.oclIsUndefined())].[/if][/if][if(not aConnect.toPart.oclIsUndefined())][aConnect.toPart/][if(not aConnect.to.oclIsUndefined() or not aConnect.toPort.oclIsUndefined())].[/if][/if][if(not aConnect.to.oclIsUndefined())][aConnect.to.name/][if(aConnect.to.arraySize->size()>0)][ '[' /][for(i : Integer | Sequence{1..aConnect.to.arraySize->size()}) separator(',')][sequenceLetter->at(i)/][/for][ ']' /][/if][/if][if(not aConnect.toPort.oclIsUndefined())][aConnect.toPort/][/if]);
+			[for(i : Integer | Sequence{1..sequenceArray->size()})]
+	end for;
+			[/for]
+		 [/let]
+		[/let]
+	[else]	connect([if(not aConnect.fromModelicaPart.oclIsUndefined())][aConnect.fromModelicaPart.name/][if(not aConnect.from.oclIsUndefined() or not aConnect.fromPort.oclIsUndefined())].[/if][/if][if(not aConnect.fromPart.oclIsUndefined())][aConnect.fromPart/][if(not aConnect.from.oclIsUndefined() or not aConnect.fromPort.oclIsUndefined())].[/if][/if][if(not aConnect.from.oclIsUndefined())][aConnect.from.name/][/if][if(not aConnect.fromPort.oclIsUndefined())][aConnect.fromPort/][/if], [if(not aConnect.toModelicaPart.oclIsUndefined())][aConnect.toModelicaPart.name/][if(not aConnect.to.oclIsUndefined() or not aConnect.toPort.oclIsUndefined())].[/if][/if][if(not aConnect.toPart.oclIsUndefined())][aConnect.toPart/][if(not aConnect.to.oclIsUndefined() or not aConnect.toPort.oclIsUndefined())].[/if][/if][if(not aConnect.to.oclIsUndefined())][aConnect.to.name/][/if][if(not aConnect.toPort.oclIsUndefined())][aConnect.toPort/][/if]);
+	[/if]
+	[/let]
 [/template]
 
 [template public generateEquation(aEquation : Equation)]

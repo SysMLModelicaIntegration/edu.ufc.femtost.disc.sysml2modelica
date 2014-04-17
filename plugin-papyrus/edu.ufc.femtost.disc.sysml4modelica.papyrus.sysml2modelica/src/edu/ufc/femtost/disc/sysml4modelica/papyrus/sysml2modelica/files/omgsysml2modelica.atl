@@ -203,8 +203,8 @@ helper context MMuml!Property def: getVisibility() : String =
 helper context MMuml!Generalization def: getArraySize() : String = 
 	thisModule.Sequence2String(MMmodelicaProfile!ModelicaExtends.allInstances()->select(mc | mc.base_Generalization = self)->first().arraySize, 1);
 
-helper context MMuml!Property def: getArraySize() : String = 
-	thisModule.Sequence2String(MMmodelicaProfile!ModelicaValueProperty.allInstances()->
+helper context MMuml!Property def: getArraySize() : Sequence(String) = 
+	MMmodelicaProfile!ModelicaValueProperty.allInstances()->
 		union(MMmodelicaProfile!ModelicaPart.allInstances())->
 			union(MMmodelicaProfile!ModelicaPort.allInstances())->
 				select(mc | 
@@ -213,7 +213,7 @@ helper context MMuml!Property def: getArraySize() : String =
 					else
 						mc.base_Port = self
 					endif
-				)->first().arraySize, 1);
+				)->first().arraySize;
 
 helper context MMuml!Parameter def: getArraySize() : String = 
 	thisModule.Sequence2String(MMmodelicaProfile!ModelicaFunctionParameter.allInstances()->select(mc | mc.base_Parameter = self)->first().arraySize, 1);
@@ -415,7 +415,7 @@ abstract rule Property2ModelicaComponent{
 		isFinal <- sysml.getIsFinal(), 
 		modification <- sysml.getModification(),
 		isReplaceable <- sysml.getIsReplaceable(), 
-		arraySize <- sysml.getArraySize(), 
+		arraySize <- if (sysml.getArraySize()->size()<= 0) then Sequence{} else sysml.getArraySize() endif, 
 		type_specifier <- sysml.type.getQualifiedName().regexReplaceAll('::', '.')
 	)
 }

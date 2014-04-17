@@ -682,6 +682,18 @@ rule Constraints_1_CONNECTION{
 	)
 }
 
+--[2-B]A Connector have to be stereotyped to ModelicaConnection
+
+rule Constraints_2_CONNECTION{
+	from sysml: MMuml!Connector(
+		not sysml.isModelicaConnectionStereotyped()	
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The Connector '+ sysml.name +' have to be ModelicaConnection stereotyped.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
 ------------------------------------------------------------------------
 --------------------------MODELICA EQUATION---------------------------
 ------------------------------------------------------------------------
