@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modelica"
-    nsURI="http://www.femto-st.fr/disc/Modelica.ecore" nsPrefix="Modelica">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modelica" nsURI="http://www.femto-st.fr/disc/Modelica.ecore"
+    nsPrefix="Modelica">
   <eClassifiers xsi:type="ecore:EClass" name="ModelicaClassDefinition" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPartial" lowerBound="1"
@@ -28,6 +27,8 @@
         eType="#//AlgorithmSection" containment="true" eOpposite="#//AlgorithmSection/ownerModelicaClassDefinition"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="annotations" upperBound="-1"
         eType="#//Annotation" containment="true" eOpposite="#//Annotation/ownerMCD"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="comments" upperBound="-1"
+        eType="#//Comment" containment="true" eOpposite="#//Comment/ownerModelicaClassDefinition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//ModelicaClassDefinition"/>
   <eClassifiers xsi:type="ecore:EClass" name="Connector" eSuperTypes="#//ModelicaClassDefinition">
@@ -204,5 +205,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="body" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownerMCD" eType="#//ModelicaClassDefinition"
         eOpposite="#//ModelicaClassDefinition/annotations"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Comment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownerModelicaClassDefinition"
+        eType="#//ModelicaClassDefinition" eOpposite="#//ModelicaClassDefinition/comments"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="body" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

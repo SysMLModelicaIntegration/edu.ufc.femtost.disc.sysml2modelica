@@ -189,7 +189,7 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 	 */
 	public ModelicaClassDefinition getOwnerModelicaClassDefinition() {
 		if (eContainerFeatureID() != ModelicaPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION) return null;
-		return (ModelicaClassDefinition)eContainer();
+		return (ModelicaClassDefinition)eInternalContainer();
 	}
 
 	/**

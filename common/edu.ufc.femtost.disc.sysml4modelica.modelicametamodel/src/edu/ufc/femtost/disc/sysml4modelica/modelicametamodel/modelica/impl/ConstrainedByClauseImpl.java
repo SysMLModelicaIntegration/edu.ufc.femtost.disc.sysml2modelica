@@ -114,7 +114,7 @@ public class ConstrainedByClauseImpl extends EObjectImpl implements ConstrainedB
 	 */
 	public ModelicaPart getOwnerInstance() {
 		if (eContainerFeatureID() != ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE) return null;
-		return (ModelicaPart)eContainer();
+		return (ModelicaPart)eInternalContainer();
 	}
 
 	/**

@@ -107,7 +107,7 @@ public class EquationImpl extends EObjectImpl implements Equation {
 	 */
 	public EquationSection getOwnerEquationSection() {
 		if (eContainerFeatureID() != ModelicaPackage.EQUATION__OWNER_EQUATION_SECTION) return null;
-		return (EquationSection)eContainer();
+		return (EquationSection)eInternalContainer();
 	}
 
 	/**

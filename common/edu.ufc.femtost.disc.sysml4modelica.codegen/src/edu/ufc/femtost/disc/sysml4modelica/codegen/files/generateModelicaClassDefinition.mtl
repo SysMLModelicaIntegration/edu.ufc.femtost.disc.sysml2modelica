@@ -105,6 +105,11 @@ within [getWithin(aModelicaClassDefinition)/];
 [for(aModelicaExtends : ExtendsClause | aModelicaClassDefinition.extends)]
 [generateModelicaExtends(aModelicaExtends)/]
 [/for]
+/* Generated with the plugin UFC - SysML4Modelica
+[for (aModelicaComment: Comment | aModelicaClassDefinition.comments)]
+[generateComment(aModelicaComment)/]
+[/for]
+*/
 [for(aModelicaComponent : ModelicaComponent | aModelicaClassDefinition.modelicaComponents)]
 [generateModelicaComponent(aModelicaComponent)/]
 [/for]
@@ -174,4 +179,8 @@ initial equation
 
 [template public generateModelicaAnnotation(aModelicaAnnotation : Annotation)]
 	annotation([aModelicaAnnotation._body/]);
+[/template]
+
+[template public generateComment(aModelicaComment : Comment)]
+	[aModelicaComment._body/]
 [/template]

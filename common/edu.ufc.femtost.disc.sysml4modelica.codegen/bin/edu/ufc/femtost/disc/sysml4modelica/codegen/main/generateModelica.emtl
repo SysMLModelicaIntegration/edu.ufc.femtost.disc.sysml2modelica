@@ -28,9 +28,9 @@
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.femto-st.fr/disc/Modelica.ecore#//ModelicaModel/name"/>
         </body>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=";&#xA;"/>
-        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/+">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <source xsi:type="ocl.ecore:OperationCallExp">
+          <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/+">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -42,12 +42,10 @@
               </source>
               <referredProperty xsi:type="ecore:EAttribute" href="http://www.femto-st.fr/disc/Modelica.ecore#//ModelicaModel/name"/>
             </argument>
-            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/+"/>
           </source>
           <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/package.mo">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
-          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/+"/>
         </fileUrl>
         <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -61,7 +59,7 @@
             <definition href="../files/generatePackage.emtl#/0/generatePackage"/>
             <argument xsi:type="ocl.ecore:OperationCallExp">
               <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//Package"/>
-              <source xsi:type="ocl.ecore:VariableExp" name="aModelicaClassDefinition" referredVariable="/0/generateModelica/%.2/aModelicaClassDefinition">
+              <source xsi:type="ocl.ecore:VariableExp" name="aModelicaClassDefinition" referredVariable="/0/generateModelica/@body.2/aModelicaClassDefinition">
                 <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//ModelicaClassDefinition"/>
               </source>
               <argument xsi:type="ocl.ecore:TypeExp" eType="/13/Package">
@@ -72,7 +70,7 @@
           </body>
           <ifExpr xsi:type="ocl.ecore:OperationCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="aModelicaClassDefinition" referredVariable="/0/generateModelica/%.2/aModelicaClassDefinition">
+            <source xsi:type="ocl.ecore:VariableExp" name="aModelicaClassDefinition" referredVariable="/0/generateModelica/@body.2/aModelicaClassDefinition">
               <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//ModelicaClassDefinition"/>
             </source>
             <argument xsi:type="ocl.ecore:TypeExp" eType="/13/Package">
@@ -97,7 +95,7 @@
         <body xsi:type="mtl:TemplateInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <definition href="../files/generateModelicaClassDefinition.emtl#/0/generateModelicaClassDefinition"/>
-          <argument xsi:type="ocl.ecore:VariableExp" name="aModelicaClassDefinition" referredVariable="/0/generateModelica/%.4/aModelicaClassDefinition">
+          <argument xsi:type="ocl.ecore:VariableExp" name="aModelicaClassDefinition" referredVariable="/0/generateModelica/@body.4/aModelicaClassDefinition">
             <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//ModelicaClassDefinition"/>
           </argument>
         </body>
@@ -116,7 +114,7 @@
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
             <source xsi:type="ocl.ecore:OperationCallExp">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
-              <source xsi:type="ocl.ecore:VariableExp" name="mc" referredVariable="/0/generateModelica/%.4/select/mc">
+              <source xsi:type="ocl.ecore:VariableExp" name="mc" referredVariable="/0/generateModelica/@body.4/select/mc">
                 <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//ModelicaClassDefinition"/>
               </source>
               <argument xsi:type="ocl.ecore:TypeExp" eType="/13/Package">
@@ -148,6 +146,13 @@
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
       </eAnnotations>
+      <eOperations name="+">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="other">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        </eParameters>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Integer_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
@@ -350,7 +355,7 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
-    <eAnnotations source="positions.0" references="/0/%">
+    <eAnnotations source="positions.0" references="/0/@documentation">
       <details key="start" value="29"/>
       <details key="end" value="485"/>
       <details key="line" value="0"/>
@@ -360,232 +365,232 @@
       <details key="end" value="1480"/>
       <details key="line" value="23"/>
     </eAnnotations>
-    <eAnnotations source="positions.2" references="/0/generateModelica/%">
+    <eAnnotations source="positions.2" references="/0/generateModelica/@body.0">
       <details key="start" value="915"/>
       <details key="end" value="1044"/>
       <details key="line" value="25"/>
     </eAnnotations>
-    <eAnnotations source="positions.3" references="/0/generateModelica/%/%">
+    <eAnnotations source="positions.3" references="/0/generateModelica/@body.0/@body.0">
       <details key="start" value="978"/>
       <details key="end" value="986"/>
       <details key="line" value="26"/>
     </eAnnotations>
-    <eAnnotations source="positions.4" references="/0/generateModelica/%/%.1">
+    <eAnnotations source="positions.4" references="/0/generateModelica/@body.0/@body.1">
       <details key="start" value="987"/>
       <details key="end" value="1006"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.5" references="/0/generateModelica/%/%.1/aModelicaModel">
+    <eAnnotations source="positions.5" references="/0/generateModelica/@body.0/@body.1/aModelicaModel">
       <details key="start" value="987"/>
       <details key="end" value="1001"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.6" references="/0/generateModelica/%/%.2">
+    <eAnnotations source="positions.6" references="/0/generateModelica/@body.0/@body.2">
       <details key="start" value="1008"/>
       <details key="end" value="1013"/>
       <details key="line" value="27"/>
     </eAnnotations>
-    <eAnnotations source="positions.7" references="/0/generateModelica/%/%.3">
+    <eAnnotations source="positions.7" references="/0/generateModelica/@body.0/@body.3">
       <details key="start" value="1014"/>
       <details key="end" value="1033"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.8" references="/0/generateModelica/%/%.3/aModelicaModel">
+    <eAnnotations source="positions.8" references="/0/generateModelica/@body.0/@body.3/aModelicaModel">
       <details key="start" value="1014"/>
       <details key="end" value="1028"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.9" references="/0/generateModelica/%/%.4">
+    <eAnnotations source="positions.9" references="/0/generateModelica/@body.0/@body.4">
       <details key="start" value="1035"/>
       <details key="end" value="1037"/>
       <details key="line" value="27"/>
     </eAnnotations>
-    <eAnnotations source="positions.10" references="/0/generateModelica/%/%.5">
+    <eAnnotations source="positions.10" references="/0/generateModelica/@body.0/@fileUrl">
       <details key="start" value="922"/>
       <details key="end" value="959"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.11" references="/0/generateModelica/%/%.5/%">
+    <eAnnotations source="positions.11" references="/0/generateModelica/@body.0/@fileUrl/@source">
       <details key="start" value="922"/>
       <details key="end" value="945"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.12" references="/0/generateModelica/%/%.5/%/%">
+    <eAnnotations source="positions.12" references="/0/generateModelica/@body.0/@fileUrl/@source/@source">
       <details key="start" value="922"/>
       <details key="end" value="925"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.13" references="/0/generateModelica/%/%.5/%/%.1">
+    <eAnnotations source="positions.13" references="/0/generateModelica/@body.0/@fileUrl/@source/@argument.0">
       <details key="start" value="926"/>
       <details key="end" value="945"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.14" references="/0/generateModelica/%/%.5/%/%.1/aModelicaModel">
+    <eAnnotations source="positions.14" references="/0/generateModelica/@body.0/@fileUrl/@source/@argument.0/aModelicaModel">
       <details key="start" value="926"/>
       <details key="end" value="940"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.15" references="/0/generateModelica/%/%.5/%.1">
+    <eAnnotations source="positions.15" references="/0/generateModelica/@body.0/@fileUrl/@argument.0">
       <details key="start" value="946"/>
       <details key="end" value="959"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.16" references="/0/generateModelica/%/%.6">
+    <eAnnotations source="positions.16" references="/0/generateModelica/@body.0/@charset">
       <details key="start" value="968"/>
       <details key="end" value="975"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.17" references="/0/generateModelica/%.1">
+    <eAnnotations source="positions.17" references="/0/generateModelica/@body.1">
       <details key="start" value="1045"/>
       <details key="end" value="1046"/>
       <details key="line" value="29"/>
     </eAnnotations>
-    <eAnnotations source="positions.18" references="/0/generateModelica/%.2">
+    <eAnnotations source="positions.18" references="/0/generateModelica/@body.2">
       <details key="start" value="1046"/>
       <details key="end" value="1264"/>
       <details key="line" value="30"/>
     </eAnnotations>
-    <eAnnotations source="positions.19" references="/0/generateModelica/%.2/%">
+    <eAnnotations source="positions.19" references="/0/generateModelica/@body.2/@body.0">
       <details key="start" value="1138"/>
       <details key="end" value="1257"/>
       <details key="line" value="31"/>
     </eAnnotations>
-    <eAnnotations source="positions.20" references="/0/generateModelica/%.2/%/%">
+    <eAnnotations source="positions.20" references="/0/generateModelica/@body.2/@body.0/@body.0">
       <details key="start" value="1190"/>
       <details key="end" value="1250"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.21" references="/0/generateModelica/%.2/%/%/%">
+    <eAnnotations source="positions.21" references="/0/generateModelica/@body.2/@body.0/@body.0/@argument.0">
       <details key="start" value="1206"/>
       <details key="end" value="1249"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.22" references="/0/generateModelica/%.2/%/%/%/aModelicaClassDefinition">
+    <eAnnotations source="positions.22" references="/0/generateModelica/@body.2/@body.0/@body.0/@argument.0/aModelicaClassDefinition">
       <details key="start" value="1206"/>
       <details key="end" value="1230"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.23" references="/0/generateModelica/%.2/%/%/%/%">
+    <eAnnotations source="positions.23" references="/0/generateModelica/@body.2/@body.0/@body.0/@argument.0/@argument.0">
       <details key="start" value="1241"/>
       <details key="end" value="1248"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.24" references="/0/generateModelica/%.2/%/%.1">
+    <eAnnotations source="positions.24" references="/0/generateModelica/@body.2/@body.0/@ifExpr">
       <details key="start" value="1141"/>
       <details key="end" value="1188"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.25" references="/0/generateModelica/%.2/%/%.1/aModelicaClassDefinition">
+    <eAnnotations source="positions.25" references="/0/generateModelica/@body.2/@body.0/@ifExpr/aModelicaClassDefinition">
       <details key="start" value="1142"/>
       <details key="end" value="1166"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.26" references="/0/generateModelica/%.2/%/%.1/%">
+    <eAnnotations source="positions.26" references="/0/generateModelica/@body.2/@body.0/@ifExpr/@argument.0">
       <details key="start" value="1179"/>
       <details key="end" value="1186"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.27" references="/0/generateModelica/%.2/%.1">
+    <eAnnotations source="positions.27" references="/0/generateModelica/@body.2/@body.1">
       <details key="start" value="1257"/>
       <details key="end" value="1258"/>
       <details key="line" value="32"/>
     </eAnnotations>
-    <eAnnotations source="positions.28" references="/0/generateModelica/%.2/aModelicaClassDefinition">
+    <eAnnotations source="positions.28" references="/0/generateModelica/@body.2/aModelicaClassDefinition">
       <details key="start" value="1052"/>
       <details key="end" value="1102"/>
       <details key="line" value="30"/>
     </eAnnotations>
-    <eAnnotations source="positions.29" references="/0/generateModelica/%.2/%.2">
+    <eAnnotations source="positions.29" references="/0/generateModelica/@body.2/@iterSet">
       <details key="start" value="1105"/>
       <details key="end" value="1135"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.30" references="/0/generateModelica/%.2/%.2/aModelicaModel">
+    <eAnnotations source="positions.30" references="/0/generateModelica/@body.2/@iterSet/aModelicaModel">
       <details key="start" value="1105"/>
       <details key="end" value="1119"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.31" references="/0/generateModelica/%.3">
+    <eAnnotations source="positions.31" references="/0/generateModelica/@body.3">
       <details key="start" value="1265"/>
       <details key="end" value="1266"/>
       <details key="line" value="33"/>
     </eAnnotations>
-    <eAnnotations source="positions.32" references="/0/generateModelica/%.4">
+    <eAnnotations source="positions.32" references="/0/generateModelica/@body.4">
       <details key="start" value="1266"/>
       <details key="end" value="1467"/>
       <details key="line" value="34"/>
     </eAnnotations>
-    <eAnnotations source="positions.33" references="/0/generateModelica/%.4/%">
+    <eAnnotations source="positions.33" references="/0/generateModelica/@body.4/@body.0">
       <details key="start" value="1401"/>
       <details key="end" value="1458"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.34" references="/0/generateModelica/%.4/%/aModelicaClassDefinition">
+    <eAnnotations source="positions.34" references="/0/generateModelica/@body.4/@body.0/aModelicaClassDefinition">
       <details key="start" value="1433"/>
       <details key="end" value="1457"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.35" references="/0/generateModelica/%.4/%.1">
+    <eAnnotations source="positions.35" references="/0/generateModelica/@body.4/@body.1">
       <details key="start" value="1460"/>
       <details key="end" value="1461"/>
       <details key="line" value="36"/>
     </eAnnotations>
-    <eAnnotations source="positions.36" references="/0/generateModelica/%.4/aModelicaClassDefinition">
+    <eAnnotations source="positions.36" references="/0/generateModelica/@body.4/aModelicaClassDefinition">
       <details key="start" value="1272"/>
       <details key="end" value="1322"/>
       <details key="line" value="34"/>
     </eAnnotations>
-    <eAnnotations source="positions.37" references="/0/generateModelica/%.4/select">
+    <eAnnotations source="positions.37" references="/0/generateModelica/@body.4/select">
       <details key="start" value="1325"/>
       <details key="end" value="1397"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.38" references="/0/generateModelica/%.4/select/%">
+    <eAnnotations source="positions.38" references="/0/generateModelica/@body.4/select/@source">
       <details key="start" value="1325"/>
       <details key="end" value="1355"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.39" references="/0/generateModelica/%.4/select/%/aModelicaModel">
+    <eAnnotations source="positions.39" references="/0/generateModelica/@body.4/select/@source/aModelicaModel">
       <details key="start" value="1325"/>
       <details key="end" value="1339"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.40" references="/0/generateModelica/%.4/select/%.1">
+    <eAnnotations source="positions.40" references="/0/generateModelica/@body.4/select/@body">
       <details key="start" value="1369"/>
       <details key="end" value="1396"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.41" references="/0/generateModelica/%.4/select/%.1/%">
+    <eAnnotations source="positions.41" references="/0/generateModelica/@body.4/select/@body/@source">
       <details key="start" value="1373"/>
       <details key="end" value="1396"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.42" references="/0/generateModelica/%.4/select/%.1/%/mc">
+    <eAnnotations source="positions.42" references="/0/generateModelica/@body.4/select/@body/@source/mc">
       <details key="start" value="1373"/>
       <details key="end" value="1375"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.43" references="/0/generateModelica/%.4/select/%.1/%/%">
+    <eAnnotations source="positions.43" references="/0/generateModelica/@body.4/select/@body/@source/@argument.0">
       <details key="start" value="1388"/>
       <details key="end" value="1395"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.44" references="/0/generateModelica/%.4/select/mc">
+    <eAnnotations source="positions.44" references="/0/generateModelica/@body.4/select/mc">
       <details key="start" value="1364"/>
       <details key="end" value="1366"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.45" references="/0/generateModelica/%.5">
+    <eAnnotations source="positions.45" references="/0/generateModelica/@body.5">
       <details key="start" value="1468"/>
       <details key="end" value="1469"/>
       <details key="line" value="37"/>
     </eAnnotations>
-    <eAnnotations source="positions.46" references="/0/generateModelica/%.6">
+    <eAnnotations source="positions.46" references="/0/generateModelica/@documentation">
       <details key="start" value="742"/>
       <details key="end" value="830"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.47" references="/0/generateModelica/%.6/aModelicaModel">
+    <eAnnotations source="positions.47" references="/0/generateModelica/@documentation/aModelicaModel">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>

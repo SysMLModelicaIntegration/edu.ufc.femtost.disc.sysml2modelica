@@ -13,6 +13,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Block;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connect;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connector;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause;
@@ -206,6 +207,13 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 	 * @generated
 	 */
 	private EClass annotationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass commentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -427,6 +435,15 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 	 */
 	public EReference getModelicaClassDefinition_Annotations() {
 		return (EReference)modelicaClassDefinitionEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModelicaClassDefinition_Comments() {
+		return (EReference)modelicaClassDefinitionEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -1244,6 +1261,33 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getComment() {
+		return commentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComment_OwnerModelicaClassDefinition() {
+		return (EReference)commentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getComment_Body() {
+		return (EAttribute)commentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getVisibilityKind() {
 		return visibilityKindEEnum;
 	}
@@ -1326,6 +1370,7 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		createEReference(modelicaClassDefinitionEClass, MODELICA_CLASS_DEFINITION__EQUATION_SECTION);
 		createEReference(modelicaClassDefinitionEClass, MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS);
 		createEReference(modelicaClassDefinitionEClass, MODELICA_CLASS_DEFINITION__ANNOTATIONS);
+		createEReference(modelicaClassDefinitionEClass, MODELICA_CLASS_DEFINITION__COMMENTS);
 
 		classEClass = createEClass(CLASS);
 
@@ -1438,6 +1483,10 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		createEAttribute(annotationEClass, ANNOTATION__BODY);
 		createEReference(annotationEClass, ANNOTATION__OWNER_MCD);
 
+		commentEClass = createEClass(COMMENT);
+		createEReference(commentEClass, COMMENT__OWNER_MODELICA_CLASS_DEFINITION);
+		createEAttribute(commentEClass, COMMENT__BODY);
+
 		// Create enums
 		visibilityKindEEnum = createEEnum(VISIBILITY_KIND);
 		modelicaCausalityKindEEnum = createEEnum(MODELICA_CAUSALITY_KIND);
@@ -1501,6 +1550,7 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		initEReference(getModelicaClassDefinition_EquationSection(), this.getEquationSection(), this.getEquationSection_OwnerModelicaClassDefinition(), "equationSection", null, 0, 1, ModelicaClassDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModelicaClassDefinition_AlgorithmSections(), this.getAlgorithmSection(), this.getAlgorithmSection_OwnerModelicaClassDefinition(), "algorithmSections", null, 0, -1, ModelicaClassDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModelicaClassDefinition_Annotations(), this.getAnnotation(), this.getAnnotation_OwnerMCD(), "annotations", null, 0, -1, ModelicaClassDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModelicaClassDefinition_Comments(), this.getComment(), this.getComment_OwnerModelicaClassDefinition(), "comments", null, 0, -1, ModelicaClassDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(classEClass, edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Class.class, "Class", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1612,6 +1662,10 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		initEClass(annotationEClass, Annotation.class, "Annotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAnnotation_Body(), ecorePackage.getEString(), "body", null, 0, 1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAnnotation_OwnerMCD(), this.getModelicaClassDefinition(), this.getModelicaClassDefinition_Annotations(), "ownerMCD", null, 0, 1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(commentEClass, Comment.class, "Comment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getComment_OwnerModelicaClassDefinition(), this.getModelicaClassDefinition(), this.getModelicaClassDefinition_Comments(), "ownerModelicaClassDefinition", null, 0, 1, Comment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComment_Body(), ecorePackage.getEString(), "body", null, 0, 1, Comment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(visibilityKindEEnum, VisibilityKind.class, "VisibilityKind");

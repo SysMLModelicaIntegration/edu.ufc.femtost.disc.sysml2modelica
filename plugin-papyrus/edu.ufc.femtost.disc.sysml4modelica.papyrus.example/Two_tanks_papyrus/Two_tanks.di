@@ -16,6 +16,9 @@
     <availablePage>
       <emfPageIdentifier href="Two_tanks.notation#_dEJq8CrUEeO_MbbH-EGeJw"/>
     </availablePage>
+    <availablePage>
+      <emfPageIdentifier href="Two_tanks.notation#_N486IM96EeOjeMaviPd-Tw"/>
+    </availablePage>
   </pageList>
   <sashModel currentSelection="//@sashModel/@windows.0/@children.0">
     <windows>
@@ -34,6 +37,9 @@
         </children>
         <children>
           <emfPageIdentifier href="Two_tanks.notation#_dEJq8CrUEeO_MbbH-EGeJw"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="Two_tanks.notation#_N486IM96EeOjeMaviPd-Tw"/>
         </children>
       </children>
     </windows>

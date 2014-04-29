@@ -192,13 +192,22 @@ public interface ModelicaPackage extends EPackage {
 	int MODELICA_CLASS_DEFINITION__ANNOTATIONS = 12;
 
 	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODELICA_CLASS_DEFINITION__COMMENTS = 13;
+
+	/**
 	 * The number of structural features of the '<em>Class Definition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODELICA_CLASS_DEFINITION_FEATURE_COUNT = 13;
+	int MODELICA_CLASS_DEFINITION_FEATURE_COUNT = 14;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ClassImpl <em>Class</em>}' class.
@@ -326,6 +335,15 @@ public interface ModelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int CLASS__ANNOTATIONS = MODELICA_CLASS_DEFINITION__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
 
 	/**
 	 * The number of structural features of the '<em>Class</em>' class.
@@ -462,6 +480,15 @@ public interface ModelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONNECTOR__ANNOTATIONS = MODELICA_CLASS_DEFINITION__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTOR__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Is Expandable</b></em>' attribute.
@@ -609,6 +636,15 @@ public interface ModelicaPackage extends EPackage {
 	int MODEL__ANNOTATIONS = MODELICA_CLASS_DEFINITION__ANNOTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
+
+	/**
 	 * The number of structural features of the '<em>Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -743,6 +779,15 @@ public interface ModelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int RECORD__ANNOTATIONS = MODELICA_CLASS_DEFINITION__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECORD__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
 
 	/**
 	 * The number of structural features of the '<em>Record</em>' class.
@@ -881,6 +926,15 @@ public interface ModelicaPackage extends EPackage {
 	int BLOCK__ANNOTATIONS = MODELICA_CLASS_DEFINITION__ANNOTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
+
+	/**
 	 * The number of structural features of the '<em>Block</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1015,6 +1069,15 @@ public interface ModelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int PACKAGE__ANNOTATIONS = MODELICA_CLASS_DEFINITION__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Within Clause</b></em>' attribute.
@@ -1169,6 +1232,15 @@ public interface ModelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int FUNCTION__ANNOTATIONS = MODELICA_CLASS_DEFINITION__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>External Language</b></em>' attribute.
@@ -1341,6 +1413,15 @@ public interface ModelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int DER_FUNCTION__ANNOTATIONS = FUNCTION__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DER_FUNCTION__COMMENTS = FUNCTION__COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>External Language</b></em>' attribute.
@@ -2409,6 +2490,43 @@ public interface ModelicaPackage extends EPackage {
 	int ANNOTATION_FEATURE_COUNT = 2;
 
 	/**
+	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.CommentImpl <em>Comment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.CommentImpl
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getComment()
+	 * @generated
+	 */
+	int COMMENT = 22;
+
+	/**
+	 * The feature id for the '<em><b>Owner Modelica Class Definition</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMENT__OWNER_MODELICA_CLASS_DEFINITION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Body</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMENT__BODY = 1;
+
+	/**
+	 * The number of structural features of the '<em>Comment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMENT_FEATURE_COUNT = 2;
+
+	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind <em>Visibility Kind</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2416,7 +2534,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getVisibilityKind()
 	 * @generated
 	 */
-	int VISIBILITY_KIND = 22;
+	int VISIBILITY_KIND = 23;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaCausalityKind <em>Causality Kind</em>}' enum.
@@ -2426,7 +2544,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaCausalityKind()
 	 * @generated
 	 */
-	int MODELICA_CAUSALITY_KIND = 23;
+	int MODELICA_CAUSALITY_KIND = 24;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaVariabilityKind <em>Variability Kind</em>}' enum.
@@ -2436,7 +2554,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaVariabilityKind()
 	 * @generated
 	 */
-	int MODELICA_VARIABILITY_KIND = 24;
+	int MODELICA_VARIABILITY_KIND = 25;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFlowFlag <em>Flow Flag</em>}' enum.
@@ -2446,7 +2564,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaFlowFlag()
 	 * @generated
 	 */
-	int MODELICA_FLOW_FLAG = 25;
+	int MODELICA_FLOW_FLAG = 26;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaScopeKind <em>Scope Kind</em>}' enum.
@@ -2456,7 +2574,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaScopeKind()
 	 * @generated
 	 */
-	int MODELICA_SCOPE_KIND = 26;
+	int MODELICA_SCOPE_KIND = 27;
 
 
 	/**
@@ -2611,6 +2729,17 @@ public interface ModelicaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getModelicaClassDefinition_Annotations();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getComments <em>Comments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Comments</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getComments()
+	 * @see #getModelicaClassDefinition()
+	 * @generated
+	 */
+	EReference getModelicaClassDefinition_Comments();
 
 	/**
 	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Class <em>Class</em>}'.
@@ -3582,6 +3711,38 @@ public interface ModelicaPackage extends EPackage {
 	EReference getAnnotation_OwnerMCD();
 
 	/**
+	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment <em>Comment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Comment</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment
+	 * @generated
+	 */
+	EClass getComment();
+
+	/**
+	 * Returns the meta object for the container reference '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment#getOwnerModelicaClassDefinition <em>Owner Modelica Class Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Owner Modelica Class Definition</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment#getOwnerModelicaClassDefinition()
+	 * @see #getComment()
+	 * @generated
+	 */
+	EReference getComment_OwnerModelicaClassDefinition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment#getBody <em>Body</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Body</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment#getBody()
+	 * @see #getComment()
+	 * @generated
+	 */
+	EAttribute getComment_Body();
+
+	/**
 	 * Returns the meta object for enum '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind <em>Visibility Kind</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3766,6 +3927,14 @@ public interface ModelicaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MODELICA_CLASS_DEFINITION__ANNOTATIONS = eINSTANCE.getModelicaClassDefinition_Annotations();
+
+		/**
+		 * The meta object literal for the '<em><b>Comments</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODELICA_CLASS_DEFINITION__COMMENTS = eINSTANCE.getModelicaClassDefinition_Comments();
 
 		/**
 		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ClassImpl <em>Class</em>}' class.
@@ -4528,6 +4697,32 @@ public interface ModelicaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ANNOTATION__OWNER_MCD = eINSTANCE.getAnnotation_OwnerMCD();
+
+		/**
+		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.CommentImpl <em>Comment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.CommentImpl
+		 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getComment()
+		 * @generated
+		 */
+		EClass COMMENT = eINSTANCE.getComment();
+
+		/**
+		 * The meta object literal for the '<em><b>Owner Modelica Class Definition</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMMENT__OWNER_MODELICA_CLASS_DEFINITION = eINSTANCE.getComment_OwnerModelicaClassDefinition();
+
+		/**
+		 * The meta object literal for the '<em><b>Body</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMMENT__BODY = eINSTANCE.getComment_Body();
 
 		/**
 		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind <em>Visibility Kind</em>}' enum.

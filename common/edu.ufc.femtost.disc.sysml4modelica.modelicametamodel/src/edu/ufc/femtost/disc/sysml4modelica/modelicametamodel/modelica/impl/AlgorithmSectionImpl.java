@@ -86,7 +86,7 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 	 */
 	public ModelicaClassDefinition getOwnerModelicaClassDefinition() {
 		if (eContainerFeatureID() != ModelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION) return null;
-		return (ModelicaClassDefinition)eContainer();
+		return (ModelicaClassDefinition)eInternalContainer();
 	}
 
 	/**

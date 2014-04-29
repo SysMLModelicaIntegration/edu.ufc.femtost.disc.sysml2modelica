@@ -718,3 +718,19 @@ rule Constraint2ModelicaEquation{
 		body <- sysml.specification.value.toString()
 	)
 }
+
+------------------------------------------------------------------------
+------------------------REQUIREMENTS DIAGRAM----------------------------
+------------------------------------------------------------------------
+
+rule Requirement2Comment {
+	from
+		sysmlRequirement: MMsysml!Requirement(
+			sysmlRequirement.oclIsTypeOf(MMsysml!Requirement)
+		)
+	to
+		comment: MMmodelica!Comment(
+			ownerModelicaClassDefinition <- sysmlRequirement.satisfiedBy->first(),
+			body <- '@ReqID: ' + sysmlRequirement.id + ' : ' + sysmlRequirement.text
+		)		
+}

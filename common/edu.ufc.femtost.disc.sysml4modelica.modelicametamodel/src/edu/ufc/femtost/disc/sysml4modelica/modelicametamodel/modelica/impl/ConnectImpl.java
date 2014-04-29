@@ -195,7 +195,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 	 */
 	public EquationSection getOwnerEquationSection() {
 		if (eContainerFeatureID() != ModelicaPackage.CONNECT__OWNER_EQUATION_SECTION) return null;
-		return (EquationSection)eContainer();
+		return (EquationSection)eInternalContainer();
 	}
 
 	/**

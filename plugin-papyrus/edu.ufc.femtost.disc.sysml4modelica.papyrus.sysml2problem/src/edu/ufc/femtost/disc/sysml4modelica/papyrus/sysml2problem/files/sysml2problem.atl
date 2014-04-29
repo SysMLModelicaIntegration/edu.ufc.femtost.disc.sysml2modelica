@@ -695,7 +695,7 @@ rule Constraints_2_CONNECTION{
 	)
 }
 ------------------------------------------------------------------------
---------------------------MODELICA EQUATION---------------------------
+---------------------------MODELICA EQUATION----------------------------
 ------------------------------------------------------------------------
 rule Constraints_1_EQUATION{
 	from sysml: MMuml!Constraint(
@@ -707,4 +707,21 @@ rule Constraints_1_EQUATION{
 		location <- sysml.getQualifiedName(), 
 		severity <- #error
 	)
+}
+
+------------------------------------------------------------------------
+-------------------------REQUIREMENTS DIAGRAM---------------------------
+------------------------------------------------------------------------
+rule requirementWithoutSatisfiedBy {
+	from 
+		sysmlRequirement: MMsysml!Requirement(
+			sysmlRequirement.oclIsTypeOf(MMsysml!Requirement) and
+			sysmlRequirement.satisfiedBy->first().oclIsUndefined()
+		)
+	to
+		problem: MMproblem!Problem(
+			description <- 'The requirement \''+sysmlRequirement.base_Class.name+'\' is not link to one SysML element via the satisfy relationship', 
+			location <- 'root::'+sysmlRequirement.base_Class.getQualifiedName(),
+			severity <- #warning
+		)
 }

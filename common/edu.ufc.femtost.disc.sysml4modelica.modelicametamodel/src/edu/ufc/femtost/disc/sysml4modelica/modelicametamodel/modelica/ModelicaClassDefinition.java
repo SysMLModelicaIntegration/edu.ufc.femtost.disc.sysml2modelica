@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getEquationSection <em>Equation Section</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getAlgorithmSections <em>Algorithm Sections</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getAnnotations <em>Annotations</em>}</li>
+ *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getComments <em>Comments</em>}</li>
  * </ul>
  * </p>
  *
@@ -354,5 +355,23 @@ public interface ModelicaClassDefinition extends EObject {
 	 * @generated
 	 */
 	EList<Annotation> getAnnotations();
+
+	/**
+	 * Returns the value of the '<em><b>Comments</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment}.
+	 * It is bidirectional and its opposite is '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment#getOwnerModelicaClassDefinition <em>Owner Modelica Class Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Comments</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Comments</em>' containment reference list.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaClassDefinition_Comments()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment#getOwnerModelicaClassDefinition
+	 * @model opposite="ownerModelicaClassDefinition" containment="true"
+	 * @generated
+	 */
+	EList<Comment> getComments();
 
 } // ModelicaClassDefinition

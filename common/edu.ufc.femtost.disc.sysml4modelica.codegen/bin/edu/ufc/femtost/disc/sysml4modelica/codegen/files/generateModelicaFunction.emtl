@@ -20,7 +20,7 @@
       <body xsi:type="mtl:ForBlock">
         <body xsi:type="mtl:TemplateInvocation" definition="/0/generateModelicaFunctionParameter">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <argument xsi:type="ocl.ecore:VariableExp" name="aModelicaFunctionParameter" referredVariable="/0/generateModelicaFunction/%.3/aModelicaFunctionParameter">
+          <argument xsi:type="ocl.ecore:VariableExp" name="aModelicaFunctionParameter" referredVariable="/0/generateModelicaFunction/@body.3/aModelicaFunctionParameter">
             <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//ModelicaFunctionParameter"/>
           </argument>
         </body>
@@ -38,7 +38,7 @@
       <body xsi:type="mtl:ForBlock">
         <body xsi:type="mtl:TemplateInvocation" definition="/0/generateModelicaAlgorithmSection">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <argument xsi:type="ocl.ecore:VariableExp" name="aModelicaAlgorithm" referredVariable="/0/generateModelicaFunction/%.4/aModelicaAlgorithm">
+          <argument xsi:type="ocl.ecore:VariableExp" name="aModelicaAlgorithm" referredVariable="/0/generateModelicaFunction/@body.4/aModelicaAlgorithm">
             <eType xsi:type="ecore:EClass" href="http://www.femto-st.fr/disc/Modelica.ecore#//AlgorithmSection"/>
           </argument>
         </body>
@@ -306,7 +306,7 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
-    <eAnnotations source="positions.0" references="/0/%">
+    <eAnnotations source="positions.0" references="/0/@documentation">
       <details key="start" value="29"/>
       <details key="end" value="485"/>
       <details key="line" value="0"/>
@@ -316,122 +316,122 @@
       <details key="end" value="1087"/>
       <details key="line" value="21"/>
     </eAnnotations>
-    <eAnnotations source="positions.2" references="/0/generateModelicaFunction/%">
+    <eAnnotations source="positions.2" references="/0/generateModelicaFunction/@body.0">
       <details key="start" value="725"/>
       <details key="end" value="735"/>
       <details key="line" value="22"/>
     </eAnnotations>
-    <eAnnotations source="positions.3" references="/0/generateModelicaFunction/%.1">
+    <eAnnotations source="positions.3" references="/0/generateModelicaFunction/@body.1">
       <details key="start" value="736"/>
       <details key="end" value="750"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.4" references="/0/generateModelicaFunction/%.1/aFunction">
+    <eAnnotations source="positions.4" references="/0/generateModelicaFunction/@body.1/aFunction">
       <details key="start" value="736"/>
       <details key="end" value="745"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.5" references="/0/generateModelicaFunction/%.2">
+    <eAnnotations source="positions.5" references="/0/generateModelicaFunction/@body.2">
       <details key="start" value="752"/>
       <details key="end" value="753"/>
       <details key="line" value="23"/>
     </eAnnotations>
-    <eAnnotations source="positions.6" references="/0/generateModelicaFunction/%.3">
+    <eAnnotations source="positions.6" references="/0/generateModelicaFunction/@body.3">
       <details key="start" value="754"/>
       <details key="end" value="911"/>
       <details key="line" value="23"/>
     </eAnnotations>
-    <eAnnotations source="positions.7" references="/0/generateModelicaFunction/%.3/%">
+    <eAnnotations source="positions.7" references="/0/generateModelicaFunction/@body.3/@body.0">
       <details key="start" value="840"/>
       <details key="end" value="901"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.8" references="/0/generateModelicaFunction/%.3/%/aModelicaFunctionParameter">
+    <eAnnotations source="positions.8" references="/0/generateModelicaFunction/@body.3/@body.0/aModelicaFunctionParameter">
       <details key="start" value="874"/>
       <details key="end" value="900"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.9" references="/0/generateModelicaFunction/%.3/%.1">
+    <eAnnotations source="positions.9" references="/0/generateModelicaFunction/@body.3/@body.1">
       <details key="start" value="903"/>
       <details key="end" value="904"/>
       <details key="line" value="24"/>
     </eAnnotations>
-    <eAnnotations source="positions.10" references="/0/generateModelicaFunction/%.3/aModelicaFunctionParameter">
+    <eAnnotations source="positions.10" references="/0/generateModelicaFunction/@body.3/aModelicaFunctionParameter">
       <details key="start" value="760"/>
       <details key="end" value="814"/>
       <details key="line" value="23"/>
     </eAnnotations>
-    <eAnnotations source="positions.11" references="/0/generateModelicaFunction/%.3/%.2">
+    <eAnnotations source="positions.11" references="/0/generateModelicaFunction/@body.3/@iterSet">
       <details key="start" value="817"/>
       <details key="end" value="837"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.12" references="/0/generateModelicaFunction/%.3/%.2/aFunction">
+    <eAnnotations source="positions.12" references="/0/generateModelicaFunction/@body.3/@iterSet/aFunction">
       <details key="start" value="817"/>
       <details key="end" value="826"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.13" references="/0/generateModelicaFunction/%.4">
+    <eAnnotations source="positions.13" references="/0/generateModelicaFunction/@body.4">
       <details key="start" value="913"/>
       <details key="end" value="1051"/>
       <details key="line" value="25"/>
     </eAnnotations>
-    <eAnnotations source="positions.14" references="/0/generateModelicaFunction/%.4/%">
+    <eAnnotations source="positions.14" references="/0/generateModelicaFunction/@body.4/@body.0">
       <details key="start" value="989"/>
       <details key="end" value="1041"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.15" references="/0/generateModelicaFunction/%.4/%/aModelicaAlgorithm">
+    <eAnnotations source="positions.15" references="/0/generateModelicaFunction/@body.4/@body.0/aModelicaAlgorithm">
       <details key="start" value="1022"/>
       <details key="end" value="1040"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.16" references="/0/generateModelicaFunction/%.4/%.1">
+    <eAnnotations source="positions.16" references="/0/generateModelicaFunction/@body.4/@body.1">
       <details key="start" value="1043"/>
       <details key="end" value="1044"/>
       <details key="line" value="26"/>
     </eAnnotations>
-    <eAnnotations source="positions.17" references="/0/generateModelicaFunction/%.4/aModelicaAlgorithm">
+    <eAnnotations source="positions.17" references="/0/generateModelicaFunction/@body.4/aModelicaAlgorithm">
       <details key="start" value="919"/>
       <details key="end" value="956"/>
       <details key="line" value="25"/>
     </eAnnotations>
-    <eAnnotations source="positions.18" references="/0/generateModelicaFunction/%.4/%.2">
+    <eAnnotations source="positions.18" references="/0/generateModelicaFunction/@body.4/@iterSet">
       <details key="start" value="959"/>
       <details key="end" value="986"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.19" references="/0/generateModelicaFunction/%.4/%.2/aFunction">
+    <eAnnotations source="positions.19" references="/0/generateModelicaFunction/@body.4/@iterSet/aFunction">
       <details key="start" value="959"/>
       <details key="end" value="968"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.20" references="/0/generateModelicaFunction/%.5">
+    <eAnnotations source="positions.20" references="/0/generateModelicaFunction/@body.5">
       <details key="start" value="1052"/>
       <details key="end" value="1057"/>
       <details key="line" value="27"/>
     </eAnnotations>
-    <eAnnotations source="positions.21" references="/0/generateModelicaFunction/%.6">
+    <eAnnotations source="positions.21" references="/0/generateModelicaFunction/@body.6">
       <details key="start" value="1058"/>
       <details key="end" value="1072"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.22" references="/0/generateModelicaFunction/%.6/aFunction">
+    <eAnnotations source="positions.22" references="/0/generateModelicaFunction/@body.6/aFunction">
       <details key="start" value="1058"/>
       <details key="end" value="1067"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.23" references="/0/generateModelicaFunction/%.7">
+    <eAnnotations source="positions.23" references="/0/generateModelicaFunction/@body.7">
       <details key="start" value="1074"/>
       <details key="end" value="1075"/>
       <details key="line" value="27"/>
     </eAnnotations>
-    <eAnnotations source="positions.24" references="/0/generateModelicaFunction/%.8">
+    <eAnnotations source="positions.24" references="/0/generateModelicaFunction/@documentation">
       <details key="start" value="568"/>
       <details key="end" value="659"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.25" references="/0/generateModelicaFunction/%.8/aFunction">
+    <eAnnotations source="positions.25" references="/0/generateModelicaFunction/@documentation/aFunction">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
@@ -446,57 +446,57 @@
       <details key="end" value="1341"/>
       <details key="line" value="30"/>
     </eAnnotations>
-    <eAnnotations source="positions.28" references="/0/generateModelicaFunctionParameter/%">
+    <eAnnotations source="positions.28" references="/0/generateModelicaFunctionParameter/@body.0">
       <details key="start" value="1197"/>
       <details key="end" value="1198"/>
       <details key="line" value="31"/>
     </eAnnotations>
-    <eAnnotations source="positions.29" references="/0/generateModelicaFunctionParameter/%.1">
+    <eAnnotations source="positions.29" references="/0/generateModelicaFunctionParameter/@body.1">
       <details key="start" value="1199"/>
       <details key="end" value="1246"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.30" references="/0/generateModelicaFunctionParameter/%.1/%">
+    <eAnnotations source="positions.30" references="/0/generateModelicaFunctionParameter/@body.1/@source">
       <details key="start" value="1199"/>
       <details key="end" value="1235"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.31" references="/0/generateModelicaFunctionParameter/%.1/%/aModelicaFunctionParameter">
+    <eAnnotations source="positions.31" references="/0/generateModelicaFunctionParameter/@body.1/@source/aModelicaFunctionParameter">
       <details key="start" value="1199"/>
       <details key="end" value="1225"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.32" references="/0/generateModelicaFunctionParameter/%.2">
+    <eAnnotations source="positions.32" references="/0/generateModelicaFunctionParameter/@body.2">
       <details key="start" value="1248"/>
       <details key="end" value="1249"/>
       <details key="line" value="31"/>
     </eAnnotations>
-    <eAnnotations source="positions.33" references="/0/generateModelicaFunctionParameter/%.3">
+    <eAnnotations source="positions.33" references="/0/generateModelicaFunctionParameter/@body.3">
       <details key="start" value="1250"/>
       <details key="end" value="1291"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.34" references="/0/generateModelicaFunctionParameter/%.3/aModelicaFunctionParameter">
+    <eAnnotations source="positions.34" references="/0/generateModelicaFunctionParameter/@body.3/aModelicaFunctionParameter">
       <details key="start" value="1250"/>
       <details key="end" value="1276"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.35" references="/0/generateModelicaFunctionParameter/%.4">
+    <eAnnotations source="positions.35" references="/0/generateModelicaFunctionParameter/@body.4">
       <details key="start" value="1293"/>
       <details key="end" value="1294"/>
       <details key="line" value="31"/>
     </eAnnotations>
-    <eAnnotations source="positions.36" references="/0/generateModelicaFunctionParameter/%.5">
+    <eAnnotations source="positions.36" references="/0/generateModelicaFunctionParameter/@body.5">
       <details key="start" value="1295"/>
       <details key="end" value="1326"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.37" references="/0/generateModelicaFunctionParameter/%.5/aModelicaFunctionParameter">
+    <eAnnotations source="positions.37" references="/0/generateModelicaFunctionParameter/@body.5/aModelicaFunctionParameter">
       <details key="start" value="1295"/>
       <details key="end" value="1321"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.38" references="/0/generateModelicaFunctionParameter/%.6">
+    <eAnnotations source="positions.38" references="/0/generateModelicaFunctionParameter/@body.6">
       <details key="start" value="1328"/>
       <details key="end" value="1329"/>
       <details key="line" value="31"/>
@@ -511,17 +511,17 @@
       <details key="end" value="1485"/>
       <details key="line" value="34"/>
     </eAnnotations>
-    <eAnnotations source="positions.41" references="/0/generateModelicaAlgorithmSection/%">
+    <eAnnotations source="positions.41" references="/0/generateModelicaAlgorithmSection/@body.0">
       <details key="start" value="1433"/>
       <details key="end" value="1446"/>
       <details key="line" value="35"/>
     </eAnnotations>
-    <eAnnotations source="positions.42" references="/0/generateModelicaAlgorithmSection/%.1">
+    <eAnnotations source="positions.42" references="/0/generateModelicaAlgorithmSection/@body.1">
       <details key="start" value="1447"/>
       <details key="end" value="1471"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.43" references="/0/generateModelicaAlgorithmSection/%.1/aModelicaAlgorithm">
+    <eAnnotations source="positions.43" references="/0/generateModelicaAlgorithmSection/@body.1/aModelicaAlgorithm">
       <details key="start" value="1447"/>
       <details key="end" value="1465"/>
       <details key="line" value="0"/>

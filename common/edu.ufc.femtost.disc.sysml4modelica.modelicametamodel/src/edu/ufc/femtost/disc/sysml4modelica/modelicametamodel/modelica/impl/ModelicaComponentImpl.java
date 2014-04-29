@@ -324,7 +324,7 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 	 */
 	public ModelicaClassDefinition getOwnerModelicaClassDefinition() {
 		if (eContainerFeatureID() != ModelicaPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION) return null;
-		return (ModelicaClassDefinition)eContainer();
+		return (ModelicaClassDefinition)eInternalContainer();
 	}
 
 	/**

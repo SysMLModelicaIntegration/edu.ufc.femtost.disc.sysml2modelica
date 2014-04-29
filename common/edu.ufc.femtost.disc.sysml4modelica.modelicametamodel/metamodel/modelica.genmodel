@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.ufc.femtost.disc.sysml4modelica.modelicametamodel/src"
     editDirectory="/edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.edit/src"
     editorDirectory="/edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.editor/src"
@@ -53,6 +52,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelica.ecore#//ModelicaClassDefinition/equationSection"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelica.ecore#//ModelicaClassDefinition/algorithmSections"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelica.ecore#//ModelicaClassDefinition/annotations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelica.ecore#//ModelicaClassDefinition/comments"/>
     </genClasses>
     <genClasses ecoreClass="modelica.ecore#//Class"/>
     <genClasses ecoreClass="modelica.ecore#//Connector">
@@ -160,6 +160,10 @@
     <genClasses ecoreClass="modelica.ecore#//Annotation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//Annotation/body"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference modelica.ecore#//Annotation/ownerMCD"/>
+    </genClasses>
+    <genClasses ecoreClass="modelica.ecore#//Comment">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference modelica.ecore#//Comment/ownerModelicaClassDefinition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//Comment/body"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

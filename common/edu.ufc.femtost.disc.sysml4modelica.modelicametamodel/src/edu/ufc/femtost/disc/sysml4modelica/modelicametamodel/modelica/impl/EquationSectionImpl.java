@@ -95,7 +95,7 @@ public class EquationSectionImpl extends EObjectImpl implements EquationSection 
 	 */
 	public ModelicaClassDefinition getOwnerModelicaClassDefinition() {
 		if (eContainerFeatureID() != ModelicaPackage.EQUATION_SECTION__OWNER_MODELICA_CLASS_DEFINITION) return null;
-		return (ModelicaClassDefinition)eContainer();
+		return (ModelicaClassDefinition)eInternalContainer();
 	}
 
 	/**

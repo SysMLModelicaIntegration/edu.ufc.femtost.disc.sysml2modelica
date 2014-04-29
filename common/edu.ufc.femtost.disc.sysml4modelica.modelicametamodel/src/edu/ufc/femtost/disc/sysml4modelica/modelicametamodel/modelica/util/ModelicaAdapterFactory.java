@@ -13,6 +13,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.util;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Block;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connect;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connector;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause;
@@ -182,6 +183,10 @@ public class ModelicaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseAnnotation(Annotation object) {
 				return createAnnotationAdapter();
+			}
+			@Override
+			public Adapter caseComment(Comment object) {
+				return createCommentAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -508,6 +513,20 @@ public class ModelicaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAnnotationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment <em>Comment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment
+	 * @generated
+	 */
+	public Adapter createCommentAdapter() {
 		return null;
 	}
 

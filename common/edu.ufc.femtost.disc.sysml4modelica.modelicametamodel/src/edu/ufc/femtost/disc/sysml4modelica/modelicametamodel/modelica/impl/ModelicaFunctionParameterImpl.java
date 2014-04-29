@@ -251,7 +251,7 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 	 */
 	public Function getOwnerFunction() {
 		if (eContainerFeatureID() != ModelicaPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION) return null;
-		return (Function)eContainer();
+		return (Function)eInternalContainer();
 	}
 
 	/**

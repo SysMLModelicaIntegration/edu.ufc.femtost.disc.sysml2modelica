@@ -13,6 +13,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Block;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connect;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connector;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause;
@@ -60,7 +61,7 @@ public class ModelicaFactoryImpl extends EFactoryImpl implements ModelicaFactory
 	 */
 	public static ModelicaFactory init() {
 		try {
-			ModelicaFactory theModelicaFactory = (ModelicaFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.femto-st.fr/disc/Modelica.ecore"); 
+			ModelicaFactory theModelicaFactory = (ModelicaFactory)EPackage.Registry.INSTANCE.getEFactory(ModelicaPackage.eNS_URI);
 			if (theModelicaFactory != null) {
 				return theModelicaFactory;
 			}
@@ -109,6 +110,7 @@ public class ModelicaFactoryImpl extends EFactoryImpl implements ModelicaFactory
 			case ModelicaPackage.ALGORITHM_SECTION: return createAlgorithmSection();
 			case ModelicaPackage.CONSTRAINED_BY_CLAUSE: return createConstrainedByClause();
 			case ModelicaPackage.ANNOTATION: return createAnnotation();
+			case ModelicaPackage.COMMENT: return createComment();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -358,6 +360,16 @@ public class ModelicaFactoryImpl extends EFactoryImpl implements ModelicaFactory
 	public Annotation createAnnotation() {
 		AnnotationImpl annotation = new AnnotationImpl();
 		return annotation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Comment createComment() {
+		CommentImpl comment = new CommentImpl();
+		return comment;
 	}
 
 	/**

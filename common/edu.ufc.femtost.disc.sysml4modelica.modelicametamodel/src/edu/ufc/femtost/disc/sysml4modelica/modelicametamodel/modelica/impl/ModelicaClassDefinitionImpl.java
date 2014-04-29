@@ -12,6 +12,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
@@ -56,6 +57,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#getEquationSection <em>Equation Section</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#getAlgorithmSections <em>Algorithm Sections</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#getAnnotations <em>Annotations</em>}</li>
+ *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#getComments <em>Comments</em>}</li>
  * </ul>
  * </p>
  *
@@ -233,6 +235,16 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	protected EList<Annotation> annotations;
 
 	/**
+	 * The cached value of the '{@link #getComments() <em>Comments</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getComments()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Comment> comments;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -396,7 +408,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 */
 	public ModelicaModel getOwnerModel() {
 		if (eContainerFeatureID() != ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL) return null;
-		return (ModelicaModel)eContainer();
+		return (ModelicaModel)eInternalContainer();
 	}
 
 	/**
@@ -437,7 +449,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 */
 	public edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package getOwnerPackage() {
 		if (eContainerFeatureID() != ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE) return null;
-		return (edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package)eContainer();
+		return (edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package)eInternalContainer();
 	}
 
 	/**
@@ -555,6 +567,18 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Comment> getComments() {
+		if (comments == null) {
+			comments = new EObjectContainmentWithInverseEList<Comment>(Comment.class, this, ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS, ModelicaPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION);
+		}
+		return comments;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -579,6 +603,8 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAlgorithmSections()).basicAdd(otherEnd, msgs);
 			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAnnotations()).basicAdd(otherEnd, msgs);
+			case ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getComments()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -605,6 +631,8 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 				return ((InternalEList<?>)getAlgorithmSections()).basicRemove(otherEnd, msgs);
 			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
 				return ((InternalEList<?>)getAnnotations()).basicRemove(otherEnd, msgs);
+			case ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
+				return ((InternalEList<?>)getComments()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -659,6 +687,8 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 				return getAlgorithmSections();
 			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
 				return getAnnotations();
+			case ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
+				return getComments();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -715,6 +745,10 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 				getAnnotations().clear();
 				getAnnotations().addAll((Collection<? extends Annotation>)newValue);
 				return;
+			case ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
+				getComments().clear();
+				getComments().addAll((Collection<? extends Comment>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -766,6 +800,9 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
 				getAnnotations().clear();
 				return;
+			case ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
+				getComments().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -804,6 +841,8 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 				return algorithmSections != null && !algorithmSections.isEmpty();
 			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
 				return annotations != null && !annotations.isEmpty();
+			case ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
+				return comments != null && !comments.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -134,7 +134,7 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
-    <eAnnotations source="positions.0" references="/0/%">
+    <eAnnotations source="positions.0" references="/0/@documentation">
       <details key="start" value="29"/>
       <details key="end" value="485"/>
       <details key="line" value="0"/>
@@ -144,67 +144,67 @@
       <details key="end" value="844"/>
       <details key="line" value="21"/>
     </eAnnotations>
-    <eAnnotations source="positions.2" references="/0/generateModelicaDerFunction/%">
+    <eAnnotations source="positions.2" references="/0/generateModelicaDerFunction/@body.0">
       <details key="start" value="743"/>
       <details key="end" value="753"/>
       <details key="line" value="22"/>
     </eAnnotations>
-    <eAnnotations source="positions.3" references="/0/generateModelicaDerFunction/%.1">
+    <eAnnotations source="positions.3" references="/0/generateModelicaDerFunction/@body.1">
       <details key="start" value="754"/>
       <details key="end" value="771"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.4" references="/0/generateModelicaDerFunction/%.1/aDerFunction">
+    <eAnnotations source="positions.4" references="/0/generateModelicaDerFunction/@body.1/aDerFunction">
       <details key="start" value="754"/>
       <details key="end" value="766"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.5" references="/0/generateModelicaDerFunction/%.2">
+    <eAnnotations source="positions.5" references="/0/generateModelicaDerFunction/@body.2">
       <details key="start" value="773"/>
       <details key="end" value="780"/>
       <details key="line" value="22"/>
     </eAnnotations>
-    <eAnnotations source="positions.6" references="/0/generateModelicaDerFunction/%.3">
+    <eAnnotations source="positions.6" references="/0/generateModelicaDerFunction/@body.3">
       <details key="start" value="781"/>
       <details key="end" value="802"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.7" references="/0/generateModelicaDerFunction/%.3/%">
+    <eAnnotations source="positions.7" references="/0/generateModelicaDerFunction/@body.3/@source">
       <details key="start" value="781"/>
       <details key="end" value="797"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.8" references="/0/generateModelicaDerFunction/%.3/%/aDerFunction">
+    <eAnnotations source="positions.8" references="/0/generateModelicaDerFunction/@body.3/@source/aDerFunction">
       <details key="start" value="781"/>
       <details key="end" value="793"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.9" references="/0/generateModelicaDerFunction/%.4">
+    <eAnnotations source="positions.9" references="/0/generateModelicaDerFunction/@body.4">
       <details key="start" value="804"/>
       <details key="end" value="806"/>
       <details key="line" value="22"/>
     </eAnnotations>
-    <eAnnotations source="positions.10" references="/0/generateModelicaDerFunction/%.5">
+    <eAnnotations source="positions.10" references="/0/generateModelicaDerFunction/@body.5">
       <details key="start" value="807"/>
       <details key="end" value="828"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.11" references="/0/generateModelicaDerFunction/%.5/aDerFunction">
+    <eAnnotations source="positions.11" references="/0/generateModelicaDerFunction/@body.5/aDerFunction">
       <details key="start" value="807"/>
       <details key="end" value="819"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.12" references="/0/generateModelicaDerFunction/%.6">
+    <eAnnotations source="positions.12" references="/0/generateModelicaDerFunction/@body.6">
       <details key="start" value="830"/>
       <details key="end" value="832"/>
       <details key="line" value="22"/>
     </eAnnotations>
-    <eAnnotations source="positions.13" references="/0/generateModelicaDerFunction/%.7">
+    <eAnnotations source="positions.13" references="/0/generateModelicaDerFunction/@documentation">
       <details key="start" value="571"/>
       <details key="end" value="668"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.14" references="/0/generateModelicaDerFunction/%.7/aDerFunction">
+    <eAnnotations source="positions.14" references="/0/generateModelicaDerFunction/@documentation/aDerFunction">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
