@@ -111,7 +111,7 @@ within [getWithin(aModelicaClassDefinition)/];
 [/for]
 */
 [for(aModelicaComponent : ModelicaComponent | aModelicaClassDefinition.modelicaComponents)]
-[generateModelicaComponent(aModelicaComponent)/]
+[if(aModelicaComponent.isFinal)]	final [/if][if(aModelicaComponent.isReplaceable)]	replaceable [/if][generateModelicaComponent(aModelicaComponent)/]
 [/for]
 [if(not aModelicaClassDefinition.equationSection.oclIsUndefined())][generateEquationSection(aModelicaClassDefinition.equationSection)/][/if]
 [for(aModelicaAnnotation : Annotation | aModelicaClassDefinition.annotations)]
@@ -125,8 +125,16 @@ end [aModelicaClassDefinition.name/];
 	extends [if(not aModelicaExtends.from_modelica_standard_library.oclIsUndefined())][aModelicaExtends.from_modelica_standard_library/][/if][if(not aModelicaExtends.extendedModelicaClass.oclIsUndefined())][aModelicaExtends.extendedModelicaClass.getWithin()+'.'+aModelicaExtends.extendedModelicaClass.name/][/if][if(not aModelicaExtends.modification.oclIsUndefined() and aModelicaExtends.modification <> '')] ([aModelicaExtends.modification/])[/if];
 [/template]
 
-[template public generateModelicaComponent(aModelicaComponent : ModelicaComponent)]
-	[if(aModelicaComponent.isFinal)]final [/if][if(aModelicaComponent.isReplaceable)]replaceable [/if][if(aModelicaComponent.oclIsTypeOf(ModelicaValueProperty))][generateModelicaValueProperty(aModelicaComponent.oclAsType(ModelicaValueProperty))/][/if][if(aModelicaComponent.oclIsTypeOf(ModelicaPort))][generateModelicaPort(aModelicaComponent.oclAsType(ModelicaPort))/][/if][if(aModelicaComponent.oclIsTypeOf(ModelicaPart))][generateModelicaPart(aModelicaComponent.oclAsType(ModelicaPart))/][/if]
+[template public generateModelicaComponent(aModelicaComponent : ModelicaComponent) ? (aModelicaComponent.oclIsTypeOf(ModelicaValueProperty))]
+	[generateModelicaValueProperty(aModelicaComponent.oclAsType(ModelicaValueProperty))/]
+[/template]
+
+[template public generateModelicaComponent(aModelicaComponent : ModelicaComponent) ? (aModelicaComponent.oclIsTypeOf(ModelicaPort))]
+	[generateModelicaPort(aModelicaComponent.oclAsType(ModelicaPort))/]
+[/template]
+
+[template public generateModelicaComponent(aModelicaComponent : ModelicaComponent) ? (aModelicaComponent.oclIsTypeOf(ModelicaPart))]
+	[generateModelicaPart(aModelicaComponent.oclAsType(ModelicaPart))/]
 [/template]
 
 [template public generateModelicaValueProperty(aModelicaValueProperty : ModelicaValueProperty)]
