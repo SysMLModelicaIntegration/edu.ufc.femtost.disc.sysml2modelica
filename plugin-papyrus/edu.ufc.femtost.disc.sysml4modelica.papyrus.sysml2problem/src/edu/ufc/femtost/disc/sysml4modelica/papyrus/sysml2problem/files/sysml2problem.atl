@@ -23,6 +23,9 @@ create OUTproblem : MMproblem from INuml : MMuml, INsysml : MMsysml, INmodelicaP
 helper def: isBlockStereotyped(c: MMuml!Class) : Boolean = 
 	c.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::Blocks::Block');
 
+helper context MMuml!DataType def: isValueTypeStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::Blocks::ValueType');
+
 helper def: isConstraintBlockStereotyped(c: MMuml!Class) : Boolean = 
 	c.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::Constraints::ConstraintBlock');
 
@@ -37,7 +40,8 @@ helper context MMuml!NamedElement def: isModelicaClassDefinitionStereotyped() : 
 		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaBlock' or
 		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaPackage' or
 		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaConnector' or
-		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaOperator'
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaOperator' or
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaType'
 	);
 
 
@@ -112,8 +116,14 @@ helper context MMuml!FunctionBehavior def: getExternalInclude() : String =
 helper context MMuml!Generalization def: getVisibility() : String = 
 	MMmodelicaProfile!ModelicaExtends.allInstances()->select(mc | mc.base_Generalization = self)->first().visibility;
 
+helper context MMuml!Property def: getFlowFlag() : String = 
+	MMmodelicaProfile!ModelicaValueProperty.allInstances()->select(mc | mc.base_Property = self)->first().flowFlag;
+
 helper context MMuml!Property def: getCausality() : String = 
 	MMmodelicaProfile!ModelicaValueProperty.allInstances()->select(mvp | mvp.base_Property = self)->first().causality;
+
+helper context MMuml!Property def: getScope() : String = 
+	MMmodelicaProfile!ModelicaValueProperty.allInstances()->select(mvp | mvp.base_Property = self)->first().scope;
 
 helper context MMuml!Property def: getVariability() : String = 
 	MMmodelicaProfile!ModelicaValueProperty.allInstances()->select(mvp | mvp.base_Property = self)->first().variability;
@@ -291,6 +301,43 @@ rule Constraints_2_RECORD {
 	)
 }
 
+rule Constraints_3_RECORD {
+	from sysml: MMuml!Property(
+		sysml.isNamed() and
+		if sysml.owner.isModelicaRecordStereotyped() and sysml.isModelicaValuePropertyStereotyped() then
+		
+			sysml.visibility <> #public or
+			sysml.getFlowFlag() <> #none or
+			sysml.getCausality() <> #none or
+			sysml.getScope() <> #none
+		else
+			false
+		endif
+	)
+	to problem: MMproblem!Problem(
+		description <- 'The modelicaValueProperty ' + sysml.name + ' owned by the modelicaRecord ' + sysml.owner.name + ' must have visibility=public, flowFlag=none, causality=none, scope=none.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
+
+rule PublicSection_not_allowed{
+	from sysml: MMuml!Class(
+		sysml.isNamed() and
+		not thisModule.isConstraintBlockStereotyped(sysml) and
+		sysml.isModelicaRecordStereotyped() and 
+		(
+			sysml.ownedElement->exists(c | c.oclIsTypeOf(MMuml!Constraint)) or
+			sysml.ownedElement->exists(c | c.oclIsTypeOf(MMuml!Connector)) or
+			sysml.ownedElement->exists(p | p.oclIsTypeOf(MMuml!Port))
+		)
+	)
+	to problem: MMproblem!Problem(
+		description <- 'Only public sections are allowed in the definition or in any of record components (i.e., equation, algorithm, initial equation, initial algorithm and protected sections are not allowed)', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
 ------------------------------------------------------------------------
 ---------------------------MODELICA BLOCK-------------------------------
 ------------------------------------------------------------------------
@@ -422,6 +469,7 @@ rule Constraints_2_CONNECTOR {
 
 rule Constraints_1_TYPE{
 	from sysml: MMuml!DataType(
+		sysml.isValueTypeStereotyped() and
 		sysml.isModelicaTypeStereotyped() and
 		not sysml.isNamed()
 	)
@@ -432,6 +480,24 @@ rule Constraints_1_TYPE{
 	)
 }
 
+rule Constraints_3_TYPE{
+	from sysml: MMuml!DataType(
+		sysml.isValueTypeStereotyped() and
+		sysml.isModelicaTypeStereotyped() and
+		sysml.isNamed() and 
+		if not sysml.generalization->first().oclIsUndefined() then
+			not sysml.generalization->first().general.isModelicaTypeStereotyped() or
+			not sysml.generalization->first().isModelicaExtendsStereotyped()
+		else
+			true
+		endif
+	)
+	to problem: MMproblem!Problem(
+		description <- 'A ModelicaType can only specialize other classifiers derived from ModelicaType. The stereotype ModelicaExtends must be applied to the generalization relationship.', 
+		location <- sysml.getQualifiedName(), 
+		severity <- #error
+	)
+}
 ------------------------------------------------------------------------
 ---------------------------MODELICA PACKAGE-----------------------------
 ------------------------------------------------------------------------
