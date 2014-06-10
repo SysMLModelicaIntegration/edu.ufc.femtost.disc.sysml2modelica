@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EReference;
  * <ul>
  *   <li>each class,</li>
  *   <li>each feature of each class,</li>
- *   <li>each operation of each class,</li>
  *   <li>each enum,</li>
  *   <li>and each data type</li>
  * </ul>
@@ -1023,6 +1022,7 @@ public interface ClassesPackage extends EPackage {
 	 */
 	int MODELICA_DER_FEATURE_COUNT = 2;
 
+
 	/**
 	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.profile.classes.ModelicaClassDefinition <em>Modelica Class Definition</em>}'.
 	 * <!-- begin-user-doc -->
@@ -1366,7 +1366,6 @@ public interface ClassesPackage extends EPackage {
 	 * <ul>
 	 *   <li>each class,</li>
 	 *   <li>each feature of each class,</li>
-	 *   <li>each operation of each class,</li>
 	 *   <li>each enum,</li>
 	 *   <li>and each data type</li>
 	 * </ul>

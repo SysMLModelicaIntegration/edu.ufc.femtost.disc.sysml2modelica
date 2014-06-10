@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EReference;
  * <ul>
  *   <li>each class,</li>
  *   <li>each feature of each class,</li>
- *   <li>each operation of each class,</li>
  *   <li>each enum,</li>
  *   <li>and each data type</li>
  * </ul>
@@ -102,6 +101,7 @@ public interface OtherPackage extends EPackage {
 	 */
 	int MODELICA_SIMULATION_FEATURE_COUNT = 0;
 
+
 	/**
 	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.profile.other.ModelicaAnnotation <em>Modelica Annotation</em>}'.
 	 * <!-- begin-user-doc -->
@@ -148,7 +148,6 @@ public interface OtherPackage extends EPackage {
 	 * <ul>
 	 *   <li>each class,</li>
 	 *   <li>each feature of each class,</li>
-	 *   <li>each operation of each class,</li>
 	 *   <li>each enum,</li>
 	 *   <li>and each data type</li>
 	 * </ul>

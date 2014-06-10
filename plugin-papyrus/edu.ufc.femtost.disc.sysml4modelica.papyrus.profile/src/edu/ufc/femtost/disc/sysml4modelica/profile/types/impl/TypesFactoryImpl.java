@@ -57,11 +57,6 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case TypesPackage.MODELICA_REAL: return createModelicaReal();
-			case TypesPackage.MODELICA_INTEGER: return createModelicaInteger();
-			case TypesPackage.MODELICA_STRING: return createModelicaString();
-			case TypesPackage.MODELICA_BOOLEAN: return createModelicaBoolean();
-			case TypesPackage.MODELICA_EXTERNAL_OBJECT: return createModelicaExternalObject();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -111,56 +106,6 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory {
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ModelicaReal createModelicaReal() {
-		ModelicaRealImpl modelicaReal = new ModelicaRealImpl();
-		return modelicaReal;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ModelicaInteger createModelicaInteger() {
-		ModelicaIntegerImpl modelicaInteger = new ModelicaIntegerImpl();
-		return modelicaInteger;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ModelicaString createModelicaString() {
-		ModelicaStringImpl modelicaString = new ModelicaStringImpl();
-		return modelicaString;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ModelicaBoolean createModelicaBoolean() {
-		ModelicaBooleanImpl modelicaBoolean = new ModelicaBooleanImpl();
-		return modelicaBoolean;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ModelicaExternalObject createModelicaExternalObject() {
-		ModelicaExternalObjectImpl modelicaExternalObject = new ModelicaExternalObjectImpl();
-		return modelicaExternalObject;
 	}
 
 	/**

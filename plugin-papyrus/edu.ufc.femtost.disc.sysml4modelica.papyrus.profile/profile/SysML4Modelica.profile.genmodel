@@ -108,11 +108,6 @@
         <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaScopeKind/outer"/>
         <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaScopeKind/innerOuter"/>
       </genEnums>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//types/ModelicaReal"/>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//types/ModelicaInteger"/>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//types/ModelicaString"/>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//types/ModelicaBoolean"/>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//types/ModelicaExternalObject"/>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Components" basePackage="edu.ufc.femtost.disc.sysml4modelica.profile"
         resource="XML" disposableProviderFactory="true" ecorePackage="sysml4modelica.ecore#//components">

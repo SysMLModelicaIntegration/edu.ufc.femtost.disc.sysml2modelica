@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EReference;
  * <ul>
  *   <li>each class,</li>
  *   <li>each feature of each class,</li>
- *   <li>each operation of each class,</li>
  *   <li>each enum,</li>
  *   <li>and each data type</li>
  * </ul>
@@ -428,6 +427,7 @@ public interface ComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int MODELICA_FUNCTION_PARAMETER_FEATURE_COUNT = 8;
+
 
 	/**
 	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.profile.components.ModelicaValueProperty <em>Modelica Value Property</em>}'.
@@ -847,7 +847,6 @@ public interface ComponentsPackage extends EPackage {
 	 * <ul>
 	 *   <li>each class,</li>
 	 *   <li>each feature of each class,</li>
-	 *   <li>each operation of each class,</li>
 	 *   <li>each enum,</li>
 	 *   <li>and each data type</li>
 	 * </ul>

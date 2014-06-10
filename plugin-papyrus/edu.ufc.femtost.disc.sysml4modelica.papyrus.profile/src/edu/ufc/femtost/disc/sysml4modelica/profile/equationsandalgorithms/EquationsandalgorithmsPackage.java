@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EReference;
  * <ul>
  *   <li>each class,</li>
  *   <li>each feature of each class,</li>
- *   <li>each operation of each class,</li>
  *   <li>each enum,</li>
  *   <li>and each data type</li>
  * </ul>
@@ -158,6 +157,7 @@ public interface EquationsandalgorithmsPackage extends EPackage {
 	 */
 	int MODELICA_CONNECTION_FEATURE_COUNT = 1;
 
+
 	/**
 	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.profile.equationsandalgorithms.ModelicaEquation <em>Modelica Equation</em>}'.
 	 * <!-- begin-user-doc -->
@@ -258,7 +258,6 @@ public interface EquationsandalgorithmsPackage extends EPackage {
 	 * <ul>
 	 *   <li>each class,</li>
 	 *   <li>each feature of each class,</li>
-	 *   <li>each operation of each class,</li>
 	 *   <li>each enum,</li>
 	 *   <li>and each data type</li>
 	 * </ul>

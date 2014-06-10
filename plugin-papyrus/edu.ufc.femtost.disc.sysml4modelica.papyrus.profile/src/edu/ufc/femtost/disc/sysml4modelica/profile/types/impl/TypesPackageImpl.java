@@ -22,20 +22,14 @@ import edu.ufc.femtost.disc.sysml4modelica.profile.sysml4modelica.Sysml4modelica
 
 import edu.ufc.femtost.disc.sysml4modelica.profile.sysml4modelica.impl.Sysml4modelicaPackageImpl;
 
-import edu.ufc.femtost.disc.sysml4modelica.profile.types.ModelicaBoolean;
 import edu.ufc.femtost.disc.sysml4modelica.profile.types.ModelicaCausalityKind;
-import edu.ufc.femtost.disc.sysml4modelica.profile.types.ModelicaExternalObject;
 import edu.ufc.femtost.disc.sysml4modelica.profile.types.ModelicaFlowFlagKind;
-import edu.ufc.femtost.disc.sysml4modelica.profile.types.ModelicaInteger;
-import edu.ufc.femtost.disc.sysml4modelica.profile.types.ModelicaReal;
 import edu.ufc.femtost.disc.sysml4modelica.profile.types.ModelicaScopeKind;
 import edu.ufc.femtost.disc.sysml4modelica.profile.types.ModelicaStateSelect;
-import edu.ufc.femtost.disc.sysml4modelica.profile.types.ModelicaString;
 import edu.ufc.femtost.disc.sysml4modelica.profile.types.ModelicaVariabilityKind;
 import edu.ufc.femtost.disc.sysml4modelica.profile.types.TypesFactory;
 import edu.ufc.femtost.disc.sysml4modelica.profile.types.TypesPackage;
 
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -50,41 +44,6 @@ import org.eclipse.papyrus.sysml.SysmlPackage;
  * @generated
  */
 public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass modelicaRealEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass modelicaIntegerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass modelicaStringEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass modelicaBooleanEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass modelicaExternalObjectEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -206,51 +165,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getModelicaReal() {
-		return modelicaRealEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getModelicaInteger() {
-		return modelicaIntegerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getModelicaString() {
-		return modelicaStringEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getModelicaBoolean() {
-		return modelicaBooleanEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getModelicaExternalObject() {
-		return modelicaExternalObjectEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getModelicaFlowFlagKind() {
 		return modelicaFlowFlagKindEEnum;
 	}
@@ -318,17 +232,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		if (isCreated) return;
 		isCreated = true;
 
-		// Create classes and their features
-		modelicaRealEClass = createEClass(MODELICA_REAL);
-
-		modelicaIntegerEClass = createEClass(MODELICA_INTEGER);
-
-		modelicaStringEClass = createEClass(MODELICA_STRING);
-
-		modelicaBooleanEClass = createEClass(MODELICA_BOOLEAN);
-
-		modelicaExternalObjectEClass = createEClass(MODELICA_EXTERNAL_OBJECT);
-
 		// Create enums
 		modelicaFlowFlagKindEEnum = createEEnum(MODELICA_FLOW_FLAG_KIND);
 		modelicaCausalityKindEEnum = createEEnum(MODELICA_CAUSALITY_KIND);
@@ -359,23 +262,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		setName(eNAME);
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
-
-		// Create type parameters
-
-		// Set bounds for type parameters
-
-		// Add supertypes to classes
-
-		// Initialize classes and features; add operations and parameters
-		initEClass(modelicaRealEClass, ModelicaReal.class, "ModelicaReal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(modelicaIntegerEClass, ModelicaInteger.class, "ModelicaInteger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(modelicaStringEClass, ModelicaString.class, "ModelicaString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(modelicaBooleanEClass, ModelicaBoolean.class, "ModelicaBoolean", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(modelicaExternalObjectEClass, ModelicaExternalObject.class, "ModelicaExternalObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(modelicaFlowFlagKindEEnum, ModelicaFlowFlagKind.class, "ModelicaFlowFlagKind");

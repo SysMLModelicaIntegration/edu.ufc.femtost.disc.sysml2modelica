@@ -104,11 +104,6 @@
       <eLiterals name="avoid" value="3"/>
       <eLiterals name="default" value="4"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ModelicaReal"/>
-    <eClassifiers xsi:type="ecore:EClass" name="ModelicaInteger"/>
-    <eClassifiers xsi:type="ecore:EClass" name="ModelicaString"/>
-    <eClassifiers xsi:type="ecore:EClass" name="ModelicaBoolean"/>
-    <eClassifiers xsi:type="ecore:EClass" name="ModelicaExternalObject"/>
     <eClassifiers xsi:type="ecore:EEnum" name="ModelicaScopeKind">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Modelica Spec 3.1, &#xD;&#xA;Section 5.4"/>
