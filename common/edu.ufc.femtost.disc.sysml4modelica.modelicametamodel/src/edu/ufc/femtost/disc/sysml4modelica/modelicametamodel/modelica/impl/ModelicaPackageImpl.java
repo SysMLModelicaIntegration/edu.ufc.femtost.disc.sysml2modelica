@@ -37,6 +37,7 @@ import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaSc
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaValueProperty;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaVariabilityKind;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Record;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Type;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -214,6 +215,13 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 	 * @generated
 	 */
 	private EClass commentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass typeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -660,6 +668,15 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 	 */
 	public EAttribute getExtendsClause_From_modelica_standard_library() {
 		return (EAttribute)extendsClauseEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExtendsClause_From_modelica_primitive_types() {
+		return (EAttribute)extendsClauseEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1288,6 +1305,15 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getType() {
+		return typeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getVisibilityKind() {
 		return visibilityKindEEnum;
 	}
@@ -1404,6 +1430,7 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		createEAttribute(extendsClauseEClass, EXTENDS_CLAUSE__VISIBILITY);
 		createEReference(extendsClauseEClass, EXTENDS_CLAUSE__EXTENDED_MODELICA_CLASS);
 		createEAttribute(extendsClauseEClass, EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY);
+		createEAttribute(extendsClauseEClass, EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES);
 
 		modelicaModelEClass = createEClass(MODELICA_MODEL);
 		createEAttribute(modelicaModelEClass, MODELICA_MODEL__NAME);
@@ -1487,6 +1514,8 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		createEReference(commentEClass, COMMENT__OWNER_MODELICA_CLASS_DEFINITION);
 		createEAttribute(commentEClass, COMMENT__BODY);
 
+		typeEClass = createEClass(TYPE);
+
 		// Create enums
 		visibilityKindEEnum = createEEnum(VISIBILITY_KIND);
 		modelicaCausalityKindEEnum = createEEnum(MODELICA_CAUSALITY_KIND);
@@ -1534,6 +1563,7 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		modelicaValuePropertyEClass.getESuperTypes().add(this.getModelicaComponent());
 		modelicaPartEClass.getESuperTypes().add(this.getModelicaComponent());
 		modelicaPortEClass.getESuperTypes().add(this.getModelicaComponent());
+		typeEClass.getESuperTypes().add(this.getModelicaClassDefinition());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(modelicaClassDefinitionEClass, ModelicaClassDefinition.class, "ModelicaClassDefinition", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1584,6 +1614,7 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		initEAttribute(getExtendsClause_Visibility(), this.getVisibilityKind(), "visibility", null, 1, 1, ExtendsClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getExtendsClause_ExtendedModelicaClass(), this.getModelicaClassDefinition(), null, "extendedModelicaClass", null, 0, 1, ExtendsClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getExtendsClause_From_modelica_standard_library(), ecorePackage.getEString(), "from_modelica_standard_library", null, 0, 1, ExtendsClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExtendsClause_From_modelica_primitive_types(), ecorePackage.getEString(), "from_modelica_primitive_types", null, 0, 1, ExtendsClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(modelicaModelEClass, ModelicaModel.class, "ModelicaModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getModelicaModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, ModelicaModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1666,6 +1697,8 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		initEClass(commentEClass, Comment.class, "Comment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComment_OwnerModelicaClassDefinition(), this.getModelicaClassDefinition(), this.getModelicaClassDefinition_Comments(), "ownerModelicaClassDefinition", null, 0, 1, Comment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComment_Body(), ecorePackage.getEString(), "body", null, 0, 1, Comment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(visibilityKindEEnum, VisibilityKind.class, "VisibilityKind");

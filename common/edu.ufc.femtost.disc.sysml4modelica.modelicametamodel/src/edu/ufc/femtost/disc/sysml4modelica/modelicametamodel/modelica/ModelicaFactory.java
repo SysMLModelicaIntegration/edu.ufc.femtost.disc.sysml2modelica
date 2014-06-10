@@ -219,6 +219,15 @@ public interface ModelicaFactory extends EFactory {
 	Comment createComment();
 
 	/**
+	 * Returns a new object of class '<em>Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Type</em>'.
+	 * @generated
+	 */
+	Type createType();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

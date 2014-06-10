@@ -33,6 +33,7 @@ import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPo
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaValueProperty;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Record;
 
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Type;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -242,6 +243,13 @@ public class ModelicaSwitch<T> extends Switch<T> {
 			case ModelicaPackage.COMMENT: {
 				Comment comment = (Comment)theEObject;
 				T result = caseComment(comment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModelicaPackage.TYPE: {
+				Type type = (Type)theEObject;
+				T result = caseType(type);
+				if (result == null) result = caseModelicaClassDefinition(type);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -591,6 +599,21 @@ public class ModelicaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseComment(Comment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseType(Type object) {
 		return null;
 	}
 

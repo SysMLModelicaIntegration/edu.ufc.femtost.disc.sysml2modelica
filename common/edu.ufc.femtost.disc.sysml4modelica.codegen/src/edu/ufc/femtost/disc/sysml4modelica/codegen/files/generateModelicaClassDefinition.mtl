@@ -103,7 +103,7 @@ within [getWithin(aModelicaClassDefinition)/];
 
 [if(aModelicaClassDefinition.isReplaceable)]replaceable [/if][if(aModelicaClassDefinition.isFinal)]final [/if][if(aModelicaClassDefinition.isModelicaEncapsulated)]encapsulated [/if][if(aModelicaClassDefinition.isPartial)]partial [/if][if(aModelicaClassDefinition.oclIsTypeOf(Connector) and aModelicaClassDefinition.oclAsType(Connector).isExpandable)]expandable [/if][aModelicaClassDefinition.eClass().name.toLower()/] [aModelicaClassDefinition.name/]
 [for(aModelicaExtends : ExtendsClause | aModelicaClassDefinition.extends)]
-[generateModelicaExtends(aModelicaExtends)/]
+[generateModelicaExtends(aModelicaExtends)/][if(not aModelicaExtends.modification.oclIsUndefined() and aModelicaExtends.modification <> '')]([aModelicaExtends.modification/])[/if];
 [/for]
 /* Generated with the plugin UFC - SysML4Modelica
 [for (aModelicaComment: Comment | aModelicaClassDefinition.comments)]
@@ -121,9 +121,30 @@ end [aModelicaClassDefinition.name/];
 [/file]
 [/template]
 
-[template public generateModelicaExtends(aModelicaExtends : ExtendsClause)]
-	extends [if(not aModelicaExtends.from_modelica_standard_library.oclIsUndefined())][aModelicaExtends.from_modelica_standard_library/][/if][if(not aModelicaExtends.extendedModelicaClass.oclIsUndefined())][aModelicaExtends.extendedModelicaClass.getWithin()+'.'+aModelicaExtends.extendedModelicaClass.name/][/if][if(not aModelicaExtends.modification.oclIsUndefined() and aModelicaExtends.modification <> '')] ([aModelicaExtends.modification/])[/if];
+[template public generateModelicaExtends(aModelicaExtends : ExtendsClause) ? (not aModelicaExtends.from_modelica_primitive_types.oclIsUndefined() and aModelicaExtends.from_modelica_primitive_types.contains('ModelicaReal'))]
+	extends Real
 [/template]
+
+[template public generateModelicaExtends(aModelicaExtends : ExtendsClause) ? (not aModelicaExtends.from_modelica_primitive_types.oclIsUndefined() and aModelicaExtends.from_modelica_primitive_types.contains('ModelicaInteger'))]
+	extends Integer
+[/template]
+
+[template public generateModelicaExtends(aModelicaExtends : ExtendsClause) ? (not aModelicaExtends.from_modelica_primitive_types.oclIsUndefined() and aModelicaExtends.from_modelica_primitive_types.contains('ModelicaBoolean'))]
+	extends Boolean
+[/template]
+
+[template public generateModelicaExtends(aModelicaExtends : ExtendsClause) ? (not aModelicaExtends.from_modelica_primitive_types.oclIsUndefined() and aModelicaExtends.from_modelica_primitive_types.contains('ModelicaString'))]
+	extends String
+[/template]
+
+[template public generateModelicaExtends(aModelicaExtends : ExtendsClause) ? (not aModelicaExtends.from_modelica_standard_library.oclIsUndefined())]
+	extends [aModelicaExtends.from_modelica_standard_library/]
+[/template]
+
+[template public generateModelicaExtends(aModelicaExtends : ExtendsClause) ? (not aModelicaExtends.extendedModelicaClass.oclIsUndefined())]
+	extends [aModelicaExtends.extendedModelicaClass.getWithin()+'.'+aModelicaExtends.extendedModelicaClass.name/]
+[/template]
+
 
 [template public generateModelicaComponent(aModelicaComponent : ModelicaComponent) ? (aModelicaComponent.oclIsTypeOf(ModelicaValueProperty))]
 	[generateModelicaValueProperty(aModelicaComponent.oclAsType(ModelicaValueProperty))/]

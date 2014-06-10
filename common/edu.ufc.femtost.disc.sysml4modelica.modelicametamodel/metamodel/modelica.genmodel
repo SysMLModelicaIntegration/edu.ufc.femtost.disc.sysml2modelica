@@ -82,6 +82,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ExtendsClause/visibility"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modelica.ecore#//ExtendsClause/extendedModelicaClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ExtendsClause/from_modelica_standard_library"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ExtendsClause/from_modelica_primitive_types"/>
     </genClasses>
     <genClasses ecoreClass="modelica.ecore#//ModelicaModel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ModelicaModel/name"/>
@@ -165,5 +166,6 @@
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference modelica.ecore#//Comment/ownerModelicaClassDefinition"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//Comment/body"/>
     </genClasses>
+    <genClasses ecoreClass="modelica.ecore#//Type"/>
   </genPackages>
 </genmodel:GenModel>

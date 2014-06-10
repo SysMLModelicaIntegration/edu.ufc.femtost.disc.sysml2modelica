@@ -73,6 +73,8 @@
         eType="#//ModelicaClassDefinition"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from_modelica_standard_library"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="from_modelica_primitive_types"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModelicaModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -211,4 +213,5 @@
         eType="#//ModelicaClassDefinition" eOpposite="#//ModelicaClassDefinition/comments"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="body" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Type" eSuperTypes="#//ModelicaClassDefinition"/>
 </ecore:EPackage>

@@ -1551,13 +1551,22 @@ public interface ModelicaPackage extends EPackage {
 	int EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY = 5;
 
 	/**
+	 * The feature id for the '<em><b>From modelica primitive types</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES = 6;
+
+	/**
 	 * The number of structural features of the '<em>Extends Clause</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXTENDS_CLAUSE_FEATURE_COUNT = 6;
+	int EXTENDS_CLAUSE_FEATURE_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaModelImpl <em>Model</em>}' class.
@@ -2527,6 +2536,151 @@ public interface ModelicaPackage extends EPackage {
 	int COMMENT_FEATURE_COUNT = 2;
 
 	/**
+	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.TypeImpl <em>Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.TypeImpl
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getType()
+	 * @generated
+	 */
+	int TYPE = 23;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__NAME = MODELICA_CLASS_DEFINITION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Is Partial</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__IS_PARTIAL = MODELICA_CLASS_DEFINITION__IS_PARTIAL;
+
+	/**
+	 * The feature id for the '<em><b>Is Final</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__IS_FINAL = MODELICA_CLASS_DEFINITION__IS_FINAL;
+
+	/**
+	 * The feature id for the '<em><b>Is Modelica Encapsulated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__IS_MODELICA_ENCAPSULATED = MODELICA_CLASS_DEFINITION__IS_MODELICA_ENCAPSULATED;
+
+	/**
+	 * The feature id for the '<em><b>From Library</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__FROM_LIBRARY = MODELICA_CLASS_DEFINITION__FROM_LIBRARY;
+
+	/**
+	 * The feature id for the '<em><b>Is Replaceable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__IS_REPLACEABLE = MODELICA_CLASS_DEFINITION__IS_REPLACEABLE;
+
+	/**
+	 * The feature id for the '<em><b>Extends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__EXTENDS = MODELICA_CLASS_DEFINITION__EXTENDS;
+
+	/**
+	 * The feature id for the '<em><b>Owner Model</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__OWNER_MODEL = MODELICA_CLASS_DEFINITION__OWNER_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Owner Package</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__OWNER_PACKAGE = MODELICA_CLASS_DEFINITION__OWNER_PACKAGE;
+
+	/**
+	 * The feature id for the '<em><b>Modelica Components</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__MODELICA_COMPONENTS = MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>Equation Section</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__EQUATION_SECTION = MODELICA_CLASS_DEFINITION__EQUATION_SECTION;
+
+	/**
+	 * The feature id for the '<em><b>Algorithm Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__ALGORITHM_SECTIONS = MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__ANNOTATIONS = MODELICA_CLASS_DEFINITION__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
+
+	/**
+	 * The number of structural features of the '<em>Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_FEATURE_COUNT = MODELICA_CLASS_DEFINITION_FEATURE_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind <em>Visibility Kind</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2534,7 +2688,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getVisibilityKind()
 	 * @generated
 	 */
-	int VISIBILITY_KIND = 23;
+	int VISIBILITY_KIND = 24;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaCausalityKind <em>Causality Kind</em>}' enum.
@@ -2544,7 +2698,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaCausalityKind()
 	 * @generated
 	 */
-	int MODELICA_CAUSALITY_KIND = 24;
+	int MODELICA_CAUSALITY_KIND = 25;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaVariabilityKind <em>Variability Kind</em>}' enum.
@@ -2554,7 +2708,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaVariabilityKind()
 	 * @generated
 	 */
-	int MODELICA_VARIABILITY_KIND = 25;
+	int MODELICA_VARIABILITY_KIND = 26;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFlowFlag <em>Flow Flag</em>}' enum.
@@ -2564,7 +2718,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaFlowFlag()
 	 * @generated
 	 */
-	int MODELICA_FLOW_FLAG = 26;
+	int MODELICA_FLOW_FLAG = 27;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaScopeKind <em>Scope Kind</em>}' enum.
@@ -2574,7 +2728,7 @@ public interface ModelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getModelicaScopeKind()
 	 * @generated
 	 */
-	int MODELICA_SCOPE_KIND = 27;
+	int MODELICA_SCOPE_KIND = 28;
 
 
 	/**
@@ -2995,6 +3149,17 @@ public interface ModelicaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getExtendsClause_From_modelica_standard_library();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause#getFrom_modelica_primitive_types <em>From modelica primitive types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>From modelica primitive types</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause#getFrom_modelica_primitive_types()
+	 * @see #getExtendsClause()
+	 * @generated
+	 */
+	EAttribute getExtendsClause_From_modelica_primitive_types();
 
 	/**
 	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaModel <em>Model</em>}'.
@@ -3743,6 +3908,16 @@ public interface ModelicaPackage extends EPackage {
 	EAttribute getComment_Body();
 
 	/**
+	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Type <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Type</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Type
+	 * @generated
+	 */
+	EClass getType();
+
+	/**
 	 * Returns the meta object for enum '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind <em>Visibility Kind</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4145,6 +4320,14 @@ public interface ModelicaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY = eINSTANCE.getExtendsClause_From_modelica_standard_library();
+
+		/**
+		 * The meta object literal for the '<em><b>From modelica primitive types</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES = eINSTANCE.getExtendsClause_From_modelica_primitive_types();
 
 		/**
 		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaModelImpl <em>Model</em>}' class.
@@ -4723,6 +4906,16 @@ public interface ModelicaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COMMENT__BODY = eINSTANCE.getComment_Body();
+
+		/**
+		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.TypeImpl <em>Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.TypeImpl
+		 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPackageImpl#getType()
+		 * @generated
+		 */
+		EClass TYPE = eINSTANCE.getType();
 
 		/**
 		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind <em>Visibility Kind</em>}' enum.

@@ -35,6 +35,7 @@ import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaSc
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaValueProperty;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaVariabilityKind;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Record;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Type;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind;
 
 import org.eclipse.emf.ecore.EClass;
@@ -111,6 +112,7 @@ public class ModelicaFactoryImpl extends EFactoryImpl implements ModelicaFactory
 			case ModelicaPackage.CONSTRAINED_BY_CLAUSE: return createConstrainedByClause();
 			case ModelicaPackage.ANNOTATION: return createAnnotation();
 			case ModelicaPackage.COMMENT: return createComment();
+			case ModelicaPackage.TYPE: return createType();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -370,6 +372,16 @@ public class ModelicaFactoryImpl extends EFactoryImpl implements ModelicaFactory
 	public Comment createComment() {
 		CommentImpl comment = new CommentImpl();
 		return comment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Type createType() {
+		TypeImpl type = new TypeImpl();
+		return type;
 	}
 
 	/**

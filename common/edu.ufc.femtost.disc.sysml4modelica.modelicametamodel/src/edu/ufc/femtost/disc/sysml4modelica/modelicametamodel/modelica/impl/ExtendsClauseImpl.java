@@ -44,6 +44,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ExtendsClauseImpl#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ExtendsClauseImpl#getExtendedModelicaClass <em>Extended Modelica Class</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ExtendsClauseImpl#getFrom_modelica_standard_library <em>From modelica standard library</em>}</li>
+ *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ExtendsClauseImpl#getFrom_modelica_primitive_types <em>From modelica primitive types</em>}</li>
  * </ul>
  * </p>
  *
@@ -129,6 +130,26 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 	 * @ordered
 	 */
 	protected String from_modelica_standard_library = FROM_MODELICA_STANDARD_LIBRARY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFrom_modelica_primitive_types() <em>From modelica primitive types</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFrom_modelica_primitive_types()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FROM_MODELICA_PRIMITIVE_TYPES_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getFrom_modelica_primitive_types() <em>From modelica primitive types</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFrom_modelica_primitive_types()
+	 * @generated
+	 * @ordered
+	 */
+	protected String from_modelica_primitive_types = FROM_MODELICA_PRIMITIVE_TYPES_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -308,6 +329,27 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getFrom_modelica_primitive_types() {
+		return from_modelica_primitive_types;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFrom_modelica_primitive_types(String newFrom_modelica_primitive_types) {
+		String oldFrom_modelica_primitive_types = from_modelica_primitive_types;
+		from_modelica_primitive_types = newFrom_modelica_primitive_types;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES, oldFrom_modelica_primitive_types, from_modelica_primitive_types));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -368,6 +410,8 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 				return basicGetExtendedModelicaClass();
 			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY:
 				return getFrom_modelica_standard_library();
+			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES:
+				return getFrom_modelica_primitive_types();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -400,6 +444,9 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY:
 				setFrom_modelica_standard_library((String)newValue);
 				return;
+			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES:
+				setFrom_modelica_primitive_types((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -430,6 +477,9 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY:
 				setFrom_modelica_standard_library(FROM_MODELICA_STANDARD_LIBRARY_EDEFAULT);
 				return;
+			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES:
+				setFrom_modelica_primitive_types(FROM_MODELICA_PRIMITIVE_TYPES_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -454,6 +504,8 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 				return extendedModelicaClass != null;
 			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY:
 				return FROM_MODELICA_STANDARD_LIBRARY_EDEFAULT == null ? from_modelica_standard_library != null : !FROM_MODELICA_STANDARD_LIBRARY_EDEFAULT.equals(from_modelica_standard_library);
+			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES:
+				return FROM_MODELICA_PRIMITIVE_TYPES_EDEFAULT == null ? from_modelica_primitive_types != null : !FROM_MODELICA_PRIMITIVE_TYPES_EDEFAULT.equals(from_modelica_primitive_types);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -476,6 +528,8 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 		result.append(visibility);
 		result.append(", from_modelica_standard_library: ");
 		result.append(from_modelica_standard_library);
+		result.append(", from_modelica_primitive_types: ");
+		result.append(from_modelica_primitive_types);
 		result.append(')');
 		return result.toString();
 	}

@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause#getExtendedModelicaClass <em>Extended Modelica Class</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause#getFrom_modelica_standard_library <em>From modelica standard library</em>}</li>
+ *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause#getFrom_modelica_primitive_types <em>From modelica primitive types</em>}</li>
  * </ul>
  * </p>
  *
@@ -186,5 +187,31 @@ public interface ExtendsClause extends EObject {
 	 * @generated
 	 */
 	void setFrom_modelica_standard_library(String value);
+
+	/**
+	 * Returns the value of the '<em><b>From modelica primitive types</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>From modelica primitive types</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>From modelica primitive types</em>' attribute.
+	 * @see #setFrom_modelica_primitive_types(String)
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getExtendsClause_From_modelica_primitive_types()
+	 * @model
+	 * @generated
+	 */
+	String getFrom_modelica_primitive_types();
+
+	/**
+	 * Sets the value of the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause#getFrom_modelica_primitive_types <em>From modelica primitive types</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>From modelica primitive types</em>' attribute.
+	 * @see #getFrom_modelica_primitive_types()
+	 * @generated
+	 */
+	void setFrom_modelica_primitive_types(String value);
 
 } // ExtendsClause
