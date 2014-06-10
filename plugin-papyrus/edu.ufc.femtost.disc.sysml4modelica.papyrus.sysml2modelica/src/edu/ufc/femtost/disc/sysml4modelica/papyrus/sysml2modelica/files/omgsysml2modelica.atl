@@ -40,6 +40,9 @@ helper def: isConstraintBlockStereotyped(c: MMuml!Class) : Boolean =
 helper def: isFlowPortStereotyped(p: MMuml!Port) : Boolean = 
 	p.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::PortAndFlows::FlowPort');
 
+helper context MMuml!DataType def: isValueTypeStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::Blocks::ValueType');
+
 helper context MMuml!NamedElement def: isModelicaClassDefinitionStereotyped() : Boolean = 
 	self.getAppliedStereotypes()->exists(s | 
 		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaClass' or
@@ -48,7 +51,8 @@ helper context MMuml!NamedElement def: isModelicaClassDefinitionStereotyped() : 
 		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaBlock' or
 		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaPackage' or
 		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaConnector' or
-		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaOperator'
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaOperator' or 
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaType'
 	);
 
 helper context MMuml!NamedElement def: isModelicaComponentStereotyped() : Boolean = 
@@ -75,6 +79,9 @@ helper context MMuml!NamedElement def: isModelicaConnectorStereotyped() : Boolea
 
 helper context MMuml!NamedElement def: isModelicaPackageStereotyped() : Boolean = 
 	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaPackage');
+
+helper context MMuml!NamedElement def: isModelicaTypeStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaType');
 
 helper context MMuml!NamedElement def: isModelicaFunctionStereotyped() : Boolean = 
 	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaFunction');
@@ -131,11 +138,17 @@ helper context MMuml!FunctionBehavior def: getIsFinal() : Boolean =
 helper context MMuml!Parameter def: getIsFinal() : String = 
 	MMmodelicaProfile!ModelicaFunctionParameter.allInstances()->select(mc | mc.base_Parameter = self)->first().isFinal;
 
+helper context MMuml!DataType def: getIsFinal() : String = 
+	MMmodelicaProfile!ModelicaType.allInstances()->select(mt | mt.base_DataType = self)->first().isFinal;
+
 helper context MMuml!Class def: getIsPartial() : Boolean = 
 	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Classifier = self)->first().isPartial;
 
 helper context MMuml!FunctionBehavior def: getIsPartial() : Boolean = 
 	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().isPartial;
+
+helper context MMuml!DataType def: getIsPartial() : Boolean = 
+	MMmodelicaProfile!ModelicaType.allInstances()->select(mt | mt.base_DataType = self)->first().isPartial;
 
 helper context MMuml!Generalization def: getModification() : String = 
 	thisModule.Sequence2String(MMmodelicaProfile!ModelicaExtends.allInstances()->select(mc | mc.base_Generalization = self)->first().modification, 1);
@@ -167,6 +180,9 @@ helper context MMuml!FunctionBehavior def: getIsReplaceable() : Boolean =
 
 helper context MMuml!Parameter def: getIsReplaceable() : String = 
 	MMmodelicaProfile!ModelicaFunctionParameter.allInstances()->select(mc | mc.base_Parameter = self)->first().isReplaceable;
+
+helper context MMuml!DataType def: getIsReplaceable() : String = 
+	MMmodelicaProfile!ModelicaType.allInstances()->select(mt | mt.base_DataType = self)->first().isReplaceable;
 
 helper context MMuml!Property def: getIsReplaceable() : String = 
 	MMmodelicaProfile!ModelicaValueProperty.allInstances()->
@@ -220,6 +236,9 @@ helper context MMuml!Parameter def: getArraySize() : String =
 
 helper context MMuml!Class def: getIsModelicaEncapsulated() : Boolean = 
 	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Classifier = self)->first().isModelicaEncapsulated;
+
+helper context MMuml!DataType def: getIsModelicaEncapsulated() : Boolean = 
+	MMmodelicaProfile!ModelicaType.allInstances()->select(mt | mt.base_DataType = self)->first().isModelicaEncapsulated;
 
 helper context MMuml!FunctionBehavior def: getIsModelicaEncapsulated() : Boolean = 
 	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().isModelicaEncapsulated;
@@ -378,13 +397,67 @@ rule Block2Block extends Block2ModelicaClassDefinition{
 	)						
 }
 
+rule Block2ModelicaConnector extends Block2ModelicaClassDefinition{
+	from sysml: MMuml!Class(
+		thisModule.isBlockStereotyped(sysml) and
+		sysml.isModelicaConnectorStereotyped()
+	)
+	to modelica: MMmodelica!Connector(
+		isExpandable <- sysml.getIsExpandable(), 
+		ownerPackage <- sysml.owner
+	)
+}
+
+rule Block2ModelicaRecord extends Block2ModelicaClassDefinition{
+	from sysml: MMuml!Class(
+		thisModule.isBlockStereotyped(sysml) and
+		sysml.isModelicaRecordStereotyped()
+	)
+	to modelica: MMmodelica!Record(
+		ownerModel <- if(not thisModule.isBlockStereotyped(sysml.owner))then
+							sysml.getModel()
+						else
+							OclUndefined
+						endif, 
+		ownerPackage <- if(thisModule.isBlockStereotyped(sysml.owner))then
+							sysml.owner
+						else
+							OclUndefined
+						endif	
+	)
+}
+
+rule ValueType2Type{
+	from sysml: MMuml!DataType(
+		sysml.isValueTypeStereotyped() and
+		sysml.isModelicaTypeStereotyped()
+	)
+	to modelica: MMmodelica!Type(
+		name <- sysml.name,
+		isModelicaEncapsulated <- sysml.getIsModelicaEncapsulated(), 
+		isFinal <- sysml.getIsFinal(), 
+		isPartial <- sysml.getIsPartial(), 
+		isReplaceable <- sysml.getIsReplaceable(),
+		ownerModel <- if(not thisModule.isBlockStereotyped(sysml.owner))then
+							sysml.getModel()
+						else
+							OclUndefined
+						endif, 
+		ownerPackage <- if(thisModule.isBlockStereotyped(sysml.owner))then
+							sysml.owner
+						else
+							OclUndefined
+						endif
+	)
+}
+
 rule Generalization2ModelicaExtends{
 	from sysml: MMuml!Generalization(
 		sysml.isModelicaExtendsStereotyped()	
 	)
 	to modelica: MMmodelica!ExtendsClause(
 		ownerModelicaClassDefinition <- sysml.owner, 
-		extendedModelicaClass <- if(sysml.general.getQualifiedName().startsWith('Modelica::'))then
+		extendedModelicaClass <- if(sysml.general.getQualifiedName().startsWith('Modelica::') or sysml.general.getQualifiedName().startsWith('SysML4Modelica::Types'))then
 									OclUndefined
 								else
 									sysml.general
@@ -396,7 +469,12 @@ rule Generalization2ModelicaExtends{
 												sysml.general.getQualifiedName().regexReplaceAll('::', '.')
 											else
 												OclUndefined
-											endif 
+											endif, 
+		from_modelica_primitive_types <-  if (sysml.general.getQualifiedName().startsWith('SysML4Modelica::Types::ModelicaPredefinedTypes')) then
+											sysml.general.name
+										  else
+										  	OclUndefined
+										  endif
 	)
 }
 
@@ -568,16 +646,7 @@ rule Property2ModelicaPort extends Property2ModelicaComponent{
 	)
 }
 
-rule Block2ModelicaConnector extends Block2ModelicaClassDefinition{
-	from sysml: MMuml!Class(
-		thisModule.isBlockStereotyped(sysml) and
-		sysml.isModelicaConnectorStereotyped()
-	)
-	to modelica: MMmodelica!Connector(
-		isExpandable <- sysml.getIsExpandable(), 
-		ownerPackage <- sysml.owner
-	)
-}
+
 
 rule Property2ModelicaPart extends Property2ModelicaComponent{
 	from sysml: MMuml!Property(
