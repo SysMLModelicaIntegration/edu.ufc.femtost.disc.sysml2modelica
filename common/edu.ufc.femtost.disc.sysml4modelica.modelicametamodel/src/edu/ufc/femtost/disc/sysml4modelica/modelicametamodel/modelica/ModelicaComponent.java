@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaComponent()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaComponent()
  * @model abstract="true"
  * @generated
  */
@@ -48,7 +48,7 @@ public interface ModelicaComponent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Conditional Expression</em>' attribute.
 	 * @see #setConditionalExpression(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaComponent_ConditionalExpression()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaComponent_ConditionalExpression()
 	 * @model
 	 * @generated
 	 */
@@ -74,7 +74,7 @@ public interface ModelicaComponent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaComponent_Name()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaComponent_Name()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -100,7 +100,7 @@ public interface ModelicaComponent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Final</em>' attribute.
 	 * @see #setIsFinal(boolean)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaComponent_IsFinal()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaComponent_IsFinal()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -126,7 +126,7 @@ public interface ModelicaComponent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modification</em>' attribute.
 	 * @see #setModification(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaComponent_Modification()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaComponent_Modification()
 	 * @model
 	 * @generated
 	 */
@@ -152,7 +152,7 @@ public interface ModelicaComponent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Replaceable</em>' attribute.
 	 * @see #setIsReplaceable(boolean)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaComponent_IsReplaceable()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaComponent_IsReplaceable()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -178,7 +178,7 @@ public interface ModelicaComponent extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Array Size</em>' attribute list.
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaComponent_ArraySize()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaComponent_ArraySize()
 	 * @model
 	 * @generated
 	 */
@@ -195,7 +195,7 @@ public interface ModelicaComponent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owner Modelica Class Definition</em>' container reference.
 	 * @see #setOwnerModelicaClassDefinition(ModelicaClassDefinition)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaComponent_OwnerModelicaClassDefinition()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaComponent_OwnerModelicaClassDefinition()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getModelicaComponents
 	 * @model opposite="modelicaComponents" transient="false"
 	 * @generated
@@ -222,7 +222,7 @@ public interface ModelicaComponent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type specifier</em>' attribute.
 	 * @see #setType_specifier(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaComponent_Type_specifier()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaComponent_Type_specifier()
 	 * @model
 	 * @generated
 	 */

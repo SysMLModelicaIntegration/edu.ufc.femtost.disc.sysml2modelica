@@ -10,6 +10,7 @@
  *******************************************************************************/
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 
 import org.eclipse.emf.ecore.EClass;
@@ -40,7 +41,7 @@ public class ClassImpl extends ModelicaClassDefinitionImpl implements edu.ufc.fe
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.CLASS;
+		return MoPackage.Literals.CLASS;
 	}
 
 } //ClassImpl

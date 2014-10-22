@@ -11,6 +11,7 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart;
@@ -118,7 +119,7 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.MODELICA_PART;
+		return MoPackage.Literals.MODELICA_PART;
 	}
 
 	/**
@@ -139,7 +140,7 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 		VisibilityKind oldVisibility = visibility;
 		visibility = newVisibility == null ? VISIBILITY_EDEFAULT : newVisibility;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_PART__VISIBILITY, oldVisibility, visibility));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_PART__VISIBILITY, oldVisibility, visibility));
 	}
 
 	/**
@@ -160,7 +161,7 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 		ModelicaScopeKind oldScope = scope;
 		scope = newScope == null ? SCOPE_EDEFAULT : newScope;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_PART__SCOPE, oldScope, scope));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_PART__SCOPE, oldScope, scope));
 	}
 
 	/**
@@ -174,7 +175,7 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 			type_part = (ModelicaClassDefinition)eResolveProxy(oldType_part);
 			if (type_part != oldType_part) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelicaPackage.MODELICA_PART__TYPE_PART, oldType_part, type_part));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MoPackage.MODELICA_PART__TYPE_PART, oldType_part, type_part));
 			}
 		}
 		return type_part;
@@ -198,7 +199,7 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 		ModelicaClassDefinition oldType_part = type_part;
 		type_part = newType_part;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_PART__TYPE_PART, oldType_part, type_part));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_PART__TYPE_PART, oldType_part, type_part));
 	}
 
 	/**
@@ -219,7 +220,7 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 		ConstrainedByClause oldConstrainedBy = constrainedBy;
 		constrainedBy = newConstrainedBy;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_PART__CONSTRAINED_BY, oldConstrainedBy, newConstrainedBy);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_PART__CONSTRAINED_BY, oldConstrainedBy, newConstrainedBy);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -234,14 +235,14 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 		if (newConstrainedBy != constrainedBy) {
 			NotificationChain msgs = null;
 			if (constrainedBy != null)
-				msgs = ((InternalEObject)constrainedBy).eInverseRemove(this, ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE, ConstrainedByClause.class, msgs);
+				msgs = ((InternalEObject)constrainedBy).eInverseRemove(this, MoPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE, ConstrainedByClause.class, msgs);
 			if (newConstrainedBy != null)
-				msgs = ((InternalEObject)newConstrainedBy).eInverseAdd(this, ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE, ConstrainedByClause.class, msgs);
+				msgs = ((InternalEObject)newConstrainedBy).eInverseAdd(this, MoPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE, ConstrainedByClause.class, msgs);
 			msgs = basicSetConstrainedBy(newConstrainedBy, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_PART__CONSTRAINED_BY, newConstrainedBy, newConstrainedBy));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_PART__CONSTRAINED_BY, newConstrainedBy, newConstrainedBy));
 	}
 
 	/**
@@ -252,9 +253,9 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_PART__CONSTRAINED_BY:
+			case MoPackage.MODELICA_PART__CONSTRAINED_BY:
 				if (constrainedBy != null)
-					msgs = ((InternalEObject)constrainedBy).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelicaPackage.MODELICA_PART__CONSTRAINED_BY, null, msgs);
+					msgs = ((InternalEObject)constrainedBy).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MoPackage.MODELICA_PART__CONSTRAINED_BY, null, msgs);
 				return basicSetConstrainedBy((ConstrainedByClause)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -268,7 +269,7 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_PART__CONSTRAINED_BY:
+			case MoPackage.MODELICA_PART__CONSTRAINED_BY:
 				return basicSetConstrainedBy(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -282,14 +283,14 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_PART__VISIBILITY:
+			case MoPackage.MODELICA_PART__VISIBILITY:
 				return getVisibility();
-			case ModelicaPackage.MODELICA_PART__SCOPE:
+			case MoPackage.MODELICA_PART__SCOPE:
 				return getScope();
-			case ModelicaPackage.MODELICA_PART__TYPE_PART:
+			case MoPackage.MODELICA_PART__TYPE_PART:
 				if (resolve) return getType_part();
 				return basicGetType_part();
-			case ModelicaPackage.MODELICA_PART__CONSTRAINED_BY:
+			case MoPackage.MODELICA_PART__CONSTRAINED_BY:
 				return getConstrainedBy();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -303,16 +304,16 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_PART__VISIBILITY:
+			case MoPackage.MODELICA_PART__VISIBILITY:
 				setVisibility((VisibilityKind)newValue);
 				return;
-			case ModelicaPackage.MODELICA_PART__SCOPE:
+			case MoPackage.MODELICA_PART__SCOPE:
 				setScope((ModelicaScopeKind)newValue);
 				return;
-			case ModelicaPackage.MODELICA_PART__TYPE_PART:
+			case MoPackage.MODELICA_PART__TYPE_PART:
 				setType_part((ModelicaClassDefinition)newValue);
 				return;
-			case ModelicaPackage.MODELICA_PART__CONSTRAINED_BY:
+			case MoPackage.MODELICA_PART__CONSTRAINED_BY:
 				setConstrainedBy((ConstrainedByClause)newValue);
 				return;
 		}
@@ -327,16 +328,16 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_PART__VISIBILITY:
+			case MoPackage.MODELICA_PART__VISIBILITY:
 				setVisibility(VISIBILITY_EDEFAULT);
 				return;
-			case ModelicaPackage.MODELICA_PART__SCOPE:
+			case MoPackage.MODELICA_PART__SCOPE:
 				setScope(SCOPE_EDEFAULT);
 				return;
-			case ModelicaPackage.MODELICA_PART__TYPE_PART:
+			case MoPackage.MODELICA_PART__TYPE_PART:
 				setType_part((ModelicaClassDefinition)null);
 				return;
-			case ModelicaPackage.MODELICA_PART__CONSTRAINED_BY:
+			case MoPackage.MODELICA_PART__CONSTRAINED_BY:
 				setConstrainedBy((ConstrainedByClause)null);
 				return;
 		}
@@ -351,13 +352,13 @@ public class ModelicaPartImpl extends ModelicaComponentImpl implements ModelicaP
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_PART__VISIBILITY:
+			case MoPackage.MODELICA_PART__VISIBILITY:
 				return visibility != VISIBILITY_EDEFAULT;
-			case ModelicaPackage.MODELICA_PART__SCOPE:
+			case MoPackage.MODELICA_PART__SCOPE:
 				return scope != SCOPE_EDEFAULT;
-			case ModelicaPackage.MODELICA_PART__TYPE_PART:
+			case MoPackage.MODELICA_PART__TYPE_PART:
 				return type_part != null;
-			case ModelicaPackage.MODELICA_PART__CONSTRAINED_BY:
+			case MoPackage.MODELICA_PART__CONSTRAINED_BY:
 				return constrainedBy != null;
 		}
 		return super.eIsSet(featureID);

@@ -3,6 +3,7 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 
@@ -67,7 +68,7 @@ public class CommentImpl extends EObjectImpl implements Comment {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.COMMENT;
+		return MoPackage.Literals.COMMENT;
 	}
 
 	/**
@@ -76,7 +77,7 @@ public class CommentImpl extends EObjectImpl implements Comment {
 	 * @generated
 	 */
 	public ModelicaClassDefinition getOwnerModelicaClassDefinition() {
-		if (eContainerFeatureID() != ModelicaPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION) return null;
+		if (eContainerFeatureID() != MoPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION) return null;
 		return (ModelicaClassDefinition)eInternalContainer();
 	}
 
@@ -86,7 +87,7 @@ public class CommentImpl extends EObjectImpl implements Comment {
 	 * @generated
 	 */
 	public NotificationChain basicSetOwnerModelicaClassDefinition(ModelicaClassDefinition newOwnerModelicaClassDefinition, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newOwnerModelicaClassDefinition, ModelicaPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOwnerModelicaClassDefinition, MoPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION, msgs);
 		return msgs;
 	}
 
@@ -96,19 +97,19 @@ public class CommentImpl extends EObjectImpl implements Comment {
 	 * @generated
 	 */
 	public void setOwnerModelicaClassDefinition(ModelicaClassDefinition newOwnerModelicaClassDefinition) {
-		if (newOwnerModelicaClassDefinition != eInternalContainer() || (eContainerFeatureID() != ModelicaPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION && newOwnerModelicaClassDefinition != null)) {
+		if (newOwnerModelicaClassDefinition != eInternalContainer() || (eContainerFeatureID() != MoPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION && newOwnerModelicaClassDefinition != null)) {
 			if (EcoreUtil.isAncestor(this, newOwnerModelicaClassDefinition))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOwnerModelicaClassDefinition != null)
-				msgs = ((InternalEObject)newOwnerModelicaClassDefinition).eInverseAdd(this, ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS, ModelicaClassDefinition.class, msgs);
+				msgs = ((InternalEObject)newOwnerModelicaClassDefinition).eInverseAdd(this, MoPackage.MODELICA_CLASS_DEFINITION__COMMENTS, ModelicaClassDefinition.class, msgs);
 			msgs = basicSetOwnerModelicaClassDefinition(newOwnerModelicaClassDefinition, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION, newOwnerModelicaClassDefinition, newOwnerModelicaClassDefinition));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION, newOwnerModelicaClassDefinition, newOwnerModelicaClassDefinition));
 	}
 
 	/**
@@ -129,7 +130,7 @@ public class CommentImpl extends EObjectImpl implements Comment {
 		String oldBody = body;
 		body = newBody;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.COMMENT__BODY, oldBody, body));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.COMMENT__BODY, oldBody, body));
 	}
 
 	/**
@@ -140,7 +141,7 @@ public class CommentImpl extends EObjectImpl implements Comment {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnerModelicaClassDefinition((ModelicaClassDefinition)otherEnd, msgs);
@@ -156,7 +157,7 @@ public class CommentImpl extends EObjectImpl implements Comment {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION:
 				return basicSetOwnerModelicaClassDefinition(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -170,8 +171,8 @@ public class CommentImpl extends EObjectImpl implements Comment {
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case ModelicaPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION:
-				return eInternalContainer().eInverseRemove(this, ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS, ModelicaClassDefinition.class, msgs);
+			case MoPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION:
+				return eInternalContainer().eInverseRemove(this, MoPackage.MODELICA_CLASS_DEFINITION__COMMENTS, ModelicaClassDefinition.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -184,9 +185,9 @@ public class CommentImpl extends EObjectImpl implements Comment {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelicaPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION:
 				return getOwnerModelicaClassDefinition();
-			case ModelicaPackage.COMMENT__BODY:
+			case MoPackage.COMMENT__BODY:
 				return getBody();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -200,10 +201,10 @@ public class CommentImpl extends EObjectImpl implements Comment {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelicaPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION:
 				setOwnerModelicaClassDefinition((ModelicaClassDefinition)newValue);
 				return;
-			case ModelicaPackage.COMMENT__BODY:
+			case MoPackage.COMMENT__BODY:
 				setBody((String)newValue);
 				return;
 		}
@@ -218,10 +219,10 @@ public class CommentImpl extends EObjectImpl implements Comment {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION:
 				setOwnerModelicaClassDefinition((ModelicaClassDefinition)null);
 				return;
-			case ModelicaPackage.COMMENT__BODY:
+			case MoPackage.COMMENT__BODY:
 				setBody(BODY_EDEFAULT);
 				return;
 		}
@@ -236,9 +237,9 @@ public class CommentImpl extends EObjectImpl implements Comment {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION:
 				return getOwnerModelicaClassDefinition() != null;
-			case ModelicaPackage.COMMENT__BODY:
+			case MoPackage.COMMENT__BODY:
 				return BODY_EDEFAULT == null ? body != null : !BODY_EDEFAULT.equals(body);
 		}
 		return super.eIsSet(featureID);

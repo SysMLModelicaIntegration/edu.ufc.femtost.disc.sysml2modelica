@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getEquation()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getEquation()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface Equation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owner Equation Section</em>' container reference.
 	 * @see #setOwnerEquationSection(EquationSection)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getEquation_OwnerEquationSection()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getEquation_OwnerEquationSection()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection#getEquations
 	 * @model opposite="equations" transient="false"
 	 * @generated
@@ -69,7 +69,7 @@ public interface Equation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Initial</em>' attribute.
 	 * @see #setIsInitial(boolean)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getEquation_IsInitial()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getEquation_IsInitial()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -95,7 +95,7 @@ public interface Equation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Body</em>' attribute.
 	 * @see #setBody(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getEquation_Body()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getEquation_Body()
 	 * @model required="true"
 	 * @generated
 	 */

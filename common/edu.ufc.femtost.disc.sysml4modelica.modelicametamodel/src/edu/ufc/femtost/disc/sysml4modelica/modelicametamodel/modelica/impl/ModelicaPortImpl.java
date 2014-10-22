@@ -11,6 +11,7 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connector;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaCausalityKind;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPort;
@@ -83,7 +84,7 @@ public class ModelicaPortImpl extends ModelicaComponentImpl implements ModelicaP
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.MODELICA_PORT;
+		return MoPackage.Literals.MODELICA_PORT;
 	}
 
 	/**
@@ -104,7 +105,7 @@ public class ModelicaPortImpl extends ModelicaComponentImpl implements ModelicaP
 		ModelicaCausalityKind oldCausality = causality;
 		causality = newCausality == null ? CAUSALITY_EDEFAULT : newCausality;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_PORT__CAUSALITY, oldCausality, causality));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_PORT__CAUSALITY, oldCausality, causality));
 	}
 
 	/**
@@ -118,7 +119,7 @@ public class ModelicaPortImpl extends ModelicaComponentImpl implements ModelicaP
 			type_connector = (Connector)eResolveProxy(oldType_connector);
 			if (type_connector != oldType_connector) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelicaPackage.MODELICA_PORT__TYPE_CONNECTOR, oldType_connector, type_connector));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MoPackage.MODELICA_PORT__TYPE_CONNECTOR, oldType_connector, type_connector));
 			}
 		}
 		return type_connector;
@@ -142,7 +143,7 @@ public class ModelicaPortImpl extends ModelicaComponentImpl implements ModelicaP
 		Connector oldType_connector = type_connector;
 		type_connector = newType_connector;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_PORT__TYPE_CONNECTOR, oldType_connector, type_connector));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_PORT__TYPE_CONNECTOR, oldType_connector, type_connector));
 	}
 
 	/**
@@ -153,10 +154,10 @@ public class ModelicaPortImpl extends ModelicaComponentImpl implements ModelicaP
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_PORT__TYPE_CONNECTOR:
+			case MoPackage.MODELICA_PORT__TYPE_CONNECTOR:
 				if (resolve) return getType_connector();
 				return basicGetType_connector();
-			case ModelicaPackage.MODELICA_PORT__CAUSALITY:
+			case MoPackage.MODELICA_PORT__CAUSALITY:
 				return getCausality();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -170,10 +171,10 @@ public class ModelicaPortImpl extends ModelicaComponentImpl implements ModelicaP
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_PORT__TYPE_CONNECTOR:
+			case MoPackage.MODELICA_PORT__TYPE_CONNECTOR:
 				setType_connector((Connector)newValue);
 				return;
-			case ModelicaPackage.MODELICA_PORT__CAUSALITY:
+			case MoPackage.MODELICA_PORT__CAUSALITY:
 				setCausality((ModelicaCausalityKind)newValue);
 				return;
 		}
@@ -188,10 +189,10 @@ public class ModelicaPortImpl extends ModelicaComponentImpl implements ModelicaP
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_PORT__TYPE_CONNECTOR:
+			case MoPackage.MODELICA_PORT__TYPE_CONNECTOR:
 				setType_connector((Connector)null);
 				return;
-			case ModelicaPackage.MODELICA_PORT__CAUSALITY:
+			case MoPackage.MODELICA_PORT__CAUSALITY:
 				setCausality(CAUSALITY_EDEFAULT);
 				return;
 		}
@@ -206,9 +207,9 @@ public class ModelicaPortImpl extends ModelicaComponentImpl implements ModelicaP
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_PORT__TYPE_CONNECTOR:
+			case MoPackage.MODELICA_PORT__TYPE_CONNECTOR:
 				return type_connector != null;
-			case ModelicaPackage.MODELICA_PORT__CAUSALITY:
+			case MoPackage.MODELICA_PORT__CAUSALITY:
 				return causality != CAUSALITY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

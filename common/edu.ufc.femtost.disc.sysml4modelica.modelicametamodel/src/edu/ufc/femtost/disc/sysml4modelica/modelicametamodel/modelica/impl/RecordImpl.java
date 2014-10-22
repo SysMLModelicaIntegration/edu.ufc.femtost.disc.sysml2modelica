@@ -10,6 +10,7 @@
  *******************************************************************************/
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Record;
 
@@ -41,7 +42,7 @@ public class RecordImpl extends ModelicaClassDefinitionImpl implements Record {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.RECORD;
+		return MoPackage.Literals.RECORD;
 	}
 
 } //RecordImpl

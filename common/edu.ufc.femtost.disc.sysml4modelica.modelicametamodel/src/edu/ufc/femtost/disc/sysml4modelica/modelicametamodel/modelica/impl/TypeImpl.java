@@ -2,6 +2,7 @@
  */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Type;
 
@@ -33,7 +34,7 @@ public class TypeImpl extends ModelicaClassDefinitionImpl implements Type {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.TYPE;
+		return MoPackage.Literals.TYPE;
 	}
 
 } //TypeImpl

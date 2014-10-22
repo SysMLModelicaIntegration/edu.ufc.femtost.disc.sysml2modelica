@@ -24,7 +24,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaPort()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaPort()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface ModelicaPort extends ModelicaComponent {
 	 * @return the value of the '<em>Causality</em>' attribute.
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaCausalityKind
 	 * @see #setCausality(ModelicaCausalityKind)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaPort_Causality()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaPort_Causality()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -68,7 +68,7 @@ public interface ModelicaPort extends ModelicaComponent {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type connector</em>' reference.
 	 * @see #setType_connector(Connector)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaPort_Type_connector()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaPort_Type_connector()
 	 * @model
 	 * @generated
 	 */

@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getDerFunction()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getDerFunction()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface DerFunction extends Function {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Der</em>' reference.
 	 * @see #setDer(Function)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getDerFunction_Der()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getDerFunction_Der()
 	 * @model
 	 * @generated
 	 */
@@ -66,7 +66,7 @@ public interface DerFunction extends Function {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable</em>' attribute list.
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getDerFunction_Variable()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getDerFunction_Variable()
 	 * @model required="true"
 	 * @generated
 	 */

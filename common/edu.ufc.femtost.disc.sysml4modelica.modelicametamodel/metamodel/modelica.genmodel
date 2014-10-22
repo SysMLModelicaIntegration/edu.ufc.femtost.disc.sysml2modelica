@@ -10,7 +10,7 @@
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
     editPluginID="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.edit" editorPluginID="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.editor">
   <foreignModel>modelica.ecore</foreignModel>
-  <genPackages prefix="Modelica" basePackage="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel"
+  <genPackages prefix="Mo" basePackage="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel"
       disposableProviderFactory="true" ecorePackage="modelica.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="modelica.ecore#//VisibilityKind">
       <genEnumLiterals ecoreEnumLiteral="modelica.ecore#//VisibilityKind/public"/>
@@ -148,6 +148,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ModelicaFunctionParameter/arraySize"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ModelicaFunctionParameter/variability"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ModelicaFunctionParameter/type_specifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ModelicaFunctionParameter/isProtected"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ModelicaFunctionParameter/default_value"/>
     </genClasses>
     <genClasses ecoreClass="modelica.ecore#//AlgorithmSection">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference modelica.ecore#//AlgorithmSection/ownerModelicaClassDefinition"/>

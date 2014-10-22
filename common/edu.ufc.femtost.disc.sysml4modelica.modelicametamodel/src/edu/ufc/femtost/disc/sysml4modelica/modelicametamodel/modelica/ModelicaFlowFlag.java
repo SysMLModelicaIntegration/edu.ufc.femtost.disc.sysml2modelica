@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Flow Flag</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaFlowFlag()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaFlowFlag()
  * @model
  * @generated
  */
@@ -102,7 +102,7 @@ public enum ModelicaFlowFlag implements Enumerator {
 	public static final int STREAM_VALUE = 2;
 
 	/**
-	 * An array of all the '<em><b>Flow Flag</b></em>' enumerators.
+	 * An array of all the '<em><b>Modelica Flow Flag</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -115,7 +115,7 @@ public enum ModelicaFlowFlag implements Enumerator {
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Flow Flag</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Modelica Flow Flag</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -123,7 +123,7 @@ public enum ModelicaFlowFlag implements Enumerator {
 	public static final List<ModelicaFlowFlag> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Flow Flag</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Modelica Flow Flag</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -139,7 +139,7 @@ public enum ModelicaFlowFlag implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Flow Flag</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Modelica Flow Flag</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -155,7 +155,7 @@ public enum ModelicaFlowFlag implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Flow Flag</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Modelica Flow Flag</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

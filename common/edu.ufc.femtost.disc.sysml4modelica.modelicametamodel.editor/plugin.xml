@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated modelica -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.presentation.MoModelWizardID"
+            name="%_UI_MoModelWizard_label"
+            class="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.presentation.MoModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MoModelFile.gif">
+         <description>%_UI_MoModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated modelica -->
+      <editor
+            id="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.presentation.MoEditorID"
+            name="%_UI_MoEditor_label"
+            icon="icons/full/obj16/MoModelFile.gif"
+            extensions="mo"
+            class="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.presentation.MoEditor"
+            contributorClass="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.presentation.MoActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

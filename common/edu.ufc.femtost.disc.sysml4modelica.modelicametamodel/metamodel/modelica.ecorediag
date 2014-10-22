@@ -614,6 +614,14 @@
         <element xmi:type="ecore:EAttribute" href="modelica.ecore#//ModelicaFunctionParameter/type_specifier"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_eH37ga6CEeKQuMR9AcOvgg"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_JvlAcCefEeSlE6482mOlAg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="modelica.ecore#//ModelicaFunctionParameter/isProtected"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_JvlAcSefEeSlE6482mOlAg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_EU_O4CiCEeS8Fc1D-m5D-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="modelica.ecore#//ModelicaFunctionParameter/default_value"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_EU_O4SiCEeS8Fc1D-m5D-A"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_a08kda59EeKQuMR9AcOvgg"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_a08kdq59EeKQuMR9AcOvgg"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_a08kd659EeKQuMR9AcOvgg"/>

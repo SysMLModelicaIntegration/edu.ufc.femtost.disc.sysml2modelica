@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getFunction()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getFunction()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface Function extends ModelicaClassDefinition {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>External Language</em>' attribute.
 	 * @see #setExternalLanguage(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getFunction_ExternalLanguage()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getFunction_ExternalLanguage()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -68,7 +68,7 @@ public interface Function extends ModelicaClassDefinition {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>External Include</em>' attribute.
 	 * @see #setExternalInclude(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getFunction_ExternalInclude()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getFunction_ExternalInclude()
 	 * @model
 	 * @generated
 	 */
@@ -94,7 +94,7 @@ public interface Function extends ModelicaClassDefinition {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>External Library</em>' attribute list.
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getFunction_ExternalLibrary()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getFunction_ExternalLibrary()
 	 * @model
 	 * @generated
 	 */
@@ -111,7 +111,7 @@ public interface Function extends ModelicaClassDefinition {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameters</em>' containment reference list.
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getFunction_Parameters()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getFunction_Parameters()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFunctionParameter#getOwnerFunction
 	 * @model opposite="ownerFunction" containment="true"
 	 * @generated

@@ -26,7 +26,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaPart()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaPart()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface ModelicaPart extends ModelicaComponent {
 	 * @return the value of the '<em>Visibility</em>' attribute.
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind
 	 * @see #setVisibility(VisibilityKind)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaPart_Visibility()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaPart_Visibility()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -72,7 +72,7 @@ public interface ModelicaPart extends ModelicaComponent {
 	 * @return the value of the '<em>Scope</em>' attribute.
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaScopeKind
 	 * @see #setScope(ModelicaScopeKind)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaPart_Scope()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaPart_Scope()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -99,7 +99,7 @@ public interface ModelicaPart extends ModelicaComponent {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type part</em>' reference.
 	 * @see #setType_part(ModelicaClassDefinition)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaPart_Type_part()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaPart_Type_part()
 	 * @model
 	 * @generated
 	 */
@@ -126,7 +126,7 @@ public interface ModelicaPart extends ModelicaComponent {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Constrained By</em>' containment reference.
 	 * @see #setConstrainedBy(ConstrainedByClause)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaPart_ConstrainedBy()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaPart_ConstrainedBy()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause#getOwnerInstance
 	 * @model opposite="ownerInstance" containment="true"
 	 * @generated

@@ -23,7 +23,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConnector()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnector()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface Connector extends ModelicaClassDefinition {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Expandable</em>' attribute.
 	 * @see #setIsExpandable(boolean)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConnector_IsExpandable()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnector_IsExpandable()
 	 * @model required="true"
 	 * @generated
 	 */

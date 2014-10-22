@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getComment()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getComment()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Comment extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owner Modelica Class Definition</em>' container reference.
 	 * @see #setOwnerModelicaClassDefinition(ModelicaClassDefinition)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getComment_OwnerModelicaClassDefinition()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getComment_OwnerModelicaClassDefinition()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getComments
 	 * @model opposite="comments" transient="false"
 	 * @generated
@@ -60,7 +60,7 @@ public interface Comment extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Body</em>' attribute.
 	 * @see #setBody(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getComment_Body()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getComment_Body()
 	 * @model
 	 * @generated
 	 */

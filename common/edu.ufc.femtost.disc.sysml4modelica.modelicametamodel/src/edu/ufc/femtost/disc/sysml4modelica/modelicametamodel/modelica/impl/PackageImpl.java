@@ -10,6 +10,7 @@
  *******************************************************************************/
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 
@@ -89,7 +90,7 @@ public class PackageImpl extends ModelicaClassDefinitionImpl implements edu.ufc.
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.PACKAGE;
+		return MoPackage.Literals.PACKAGE;
 	}
 
 	/**
@@ -110,7 +111,7 @@ public class PackageImpl extends ModelicaClassDefinitionImpl implements edu.ufc.
 		String oldWithinClause = withinClause;
 		withinClause = newWithinClause;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.PACKAGE__WITHIN_CLAUSE, oldWithinClause, withinClause));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.PACKAGE__WITHIN_CLAUSE, oldWithinClause, withinClause));
 	}
 
 	/**
@@ -120,7 +121,7 @@ public class PackageImpl extends ModelicaClassDefinitionImpl implements edu.ufc.
 	 */
 	public EList<ModelicaClassDefinition> getModelicaClasses() {
 		if (modelicaClasses == null) {
-			modelicaClasses = new EObjectContainmentWithInverseEList<ModelicaClassDefinition>(ModelicaClassDefinition.class, this, ModelicaPackage.PACKAGE__MODELICA_CLASSES, ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE);
+			modelicaClasses = new EObjectContainmentWithInverseEList<ModelicaClassDefinition>(ModelicaClassDefinition.class, this, MoPackage.PACKAGE__MODELICA_CLASSES, MoPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE);
 		}
 		return modelicaClasses;
 	}
@@ -134,7 +135,7 @@ public class PackageImpl extends ModelicaClassDefinitionImpl implements edu.ufc.
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.PACKAGE__MODELICA_CLASSES:
+			case MoPackage.PACKAGE__MODELICA_CLASSES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getModelicaClasses()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -148,7 +149,7 @@ public class PackageImpl extends ModelicaClassDefinitionImpl implements edu.ufc.
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.PACKAGE__MODELICA_CLASSES:
+			case MoPackage.PACKAGE__MODELICA_CLASSES:
 				return ((InternalEList<?>)getModelicaClasses()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -162,9 +163,9 @@ public class PackageImpl extends ModelicaClassDefinitionImpl implements edu.ufc.
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelicaPackage.PACKAGE__WITHIN_CLAUSE:
+			case MoPackage.PACKAGE__WITHIN_CLAUSE:
 				return getWithinClause();
-			case ModelicaPackage.PACKAGE__MODELICA_CLASSES:
+			case MoPackage.PACKAGE__MODELICA_CLASSES:
 				return getModelicaClasses();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -179,10 +180,10 @@ public class PackageImpl extends ModelicaClassDefinitionImpl implements edu.ufc.
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelicaPackage.PACKAGE__WITHIN_CLAUSE:
+			case MoPackage.PACKAGE__WITHIN_CLAUSE:
 				setWithinClause((String)newValue);
 				return;
-			case ModelicaPackage.PACKAGE__MODELICA_CLASSES:
+			case MoPackage.PACKAGE__MODELICA_CLASSES:
 				getModelicaClasses().clear();
 				getModelicaClasses().addAll((Collection<? extends ModelicaClassDefinition>)newValue);
 				return;
@@ -198,10 +199,10 @@ public class PackageImpl extends ModelicaClassDefinitionImpl implements edu.ufc.
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.PACKAGE__WITHIN_CLAUSE:
+			case MoPackage.PACKAGE__WITHIN_CLAUSE:
 				setWithinClause(WITHIN_CLAUSE_EDEFAULT);
 				return;
-			case ModelicaPackage.PACKAGE__MODELICA_CLASSES:
+			case MoPackage.PACKAGE__MODELICA_CLASSES:
 				getModelicaClasses().clear();
 				return;
 		}
@@ -216,9 +217,9 @@ public class PackageImpl extends ModelicaClassDefinitionImpl implements edu.ufc.
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.PACKAGE__WITHIN_CLAUSE:
+			case MoPackage.PACKAGE__WITHIN_CLAUSE:
 				return WITHIN_CLAUSE_EDEFAULT == null ? withinClause != null : !WITHIN_CLAUSE_EDEFAULT.equals(withinClause);
-			case ModelicaPackage.PACKAGE__MODELICA_CLASSES:
+			case MoPackage.PACKAGE__MODELICA_CLASSES:
 				return modelicaClasses != null && !modelicaClasses.isEmpty();
 		}
 		return super.eIsSet(featureID);

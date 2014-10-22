@@ -11,6 +11,7 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 
@@ -76,7 +77,7 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.ALGORITHM_SECTION;
+		return MoPackage.Literals.ALGORITHM_SECTION;
 	}
 
 	/**
@@ -85,7 +86,7 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 	 * @generated
 	 */
 	public ModelicaClassDefinition getOwnerModelicaClassDefinition() {
-		if (eContainerFeatureID() != ModelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION) return null;
+		if (eContainerFeatureID() != MoPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION) return null;
 		return (ModelicaClassDefinition)eInternalContainer();
 	}
 
@@ -95,7 +96,7 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 	 * @generated
 	 */
 	public NotificationChain basicSetOwnerModelicaClassDefinition(ModelicaClassDefinition newOwnerModelicaClassDefinition, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newOwnerModelicaClassDefinition, ModelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOwnerModelicaClassDefinition, MoPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION, msgs);
 		return msgs;
 	}
 
@@ -105,19 +106,19 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 	 * @generated
 	 */
 	public void setOwnerModelicaClassDefinition(ModelicaClassDefinition newOwnerModelicaClassDefinition) {
-		if (newOwnerModelicaClassDefinition != eInternalContainer() || (eContainerFeatureID() != ModelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION && newOwnerModelicaClassDefinition != null)) {
+		if (newOwnerModelicaClassDefinition != eInternalContainer() || (eContainerFeatureID() != MoPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION && newOwnerModelicaClassDefinition != null)) {
 			if (EcoreUtil.isAncestor(this, newOwnerModelicaClassDefinition))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOwnerModelicaClassDefinition != null)
-				msgs = ((InternalEObject)newOwnerModelicaClassDefinition).eInverseAdd(this, ModelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS, ModelicaClassDefinition.class, msgs);
+				msgs = ((InternalEObject)newOwnerModelicaClassDefinition).eInverseAdd(this, MoPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS, ModelicaClassDefinition.class, msgs);
 			msgs = basicSetOwnerModelicaClassDefinition(newOwnerModelicaClassDefinition, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION, newOwnerModelicaClassDefinition, newOwnerModelicaClassDefinition));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION, newOwnerModelicaClassDefinition, newOwnerModelicaClassDefinition));
 	}
 
 	/**
@@ -138,7 +139,7 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 		String oldBody = body;
 		body = newBody;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.ALGORITHM_SECTION__BODY, oldBody, body));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.ALGORITHM_SECTION__BODY, oldBody, body));
 	}
 
 	/**
@@ -149,7 +150,7 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnerModelicaClassDefinition((ModelicaClassDefinition)otherEnd, msgs);
@@ -165,7 +166,7 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
 				return basicSetOwnerModelicaClassDefinition(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -179,8 +180,8 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case ModelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
-				return eInternalContainer().eInverseRemove(this, ModelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS, ModelicaClassDefinition.class, msgs);
+			case MoPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
+				return eInternalContainer().eInverseRemove(this, MoPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS, ModelicaClassDefinition.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -193,9 +194,9 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
 				return getOwnerModelicaClassDefinition();
-			case ModelicaPackage.ALGORITHM_SECTION__BODY:
+			case MoPackage.ALGORITHM_SECTION__BODY:
 				return getBody();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -209,10 +210,10 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
 				setOwnerModelicaClassDefinition((ModelicaClassDefinition)newValue);
 				return;
-			case ModelicaPackage.ALGORITHM_SECTION__BODY:
+			case MoPackage.ALGORITHM_SECTION__BODY:
 				setBody((String)newValue);
 				return;
 		}
@@ -227,10 +228,10 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
 				setOwnerModelicaClassDefinition((ModelicaClassDefinition)null);
 				return;
-			case ModelicaPackage.ALGORITHM_SECTION__BODY:
+			case MoPackage.ALGORITHM_SECTION__BODY:
 				setBody(BODY_EDEFAULT);
 				return;
 		}
@@ -245,9 +246,9 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
 				return getOwnerModelicaClassDefinition() != null;
-			case ModelicaPackage.ALGORITHM_SECTION__BODY:
+			case MoPackage.ALGORITHM_SECTION__BODY:
 				return BODY_EDEFAULT == null ? body != null : !BODY_EDEFAULT.equals(body);
 		}
 		return super.eIsSet(featureID);

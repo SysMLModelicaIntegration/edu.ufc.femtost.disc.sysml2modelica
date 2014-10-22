@@ -11,6 +11,7 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind;
@@ -167,7 +168,7 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.EXTENDS_CLAUSE;
+		return MoPackage.Literals.EXTENDS_CLAUSE;
 	}
 
 	/**
@@ -188,7 +189,7 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 		String oldModification = modification;
 		modification = newModification;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.EXTENDS_CLAUSE__MODIFICATION, oldModification, modification));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.EXTENDS_CLAUSE__MODIFICATION, oldModification, modification));
 	}
 
 	/**
@@ -198,7 +199,7 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 	 */
 	public EList<String> getArraySize() {
 		if (arraySize == null) {
-			arraySize = new EDataTypeUniqueEList<String>(String.class, this, ModelicaPackage.EXTENDS_CLAUSE__ARRAY_SIZE);
+			arraySize = new EDataTypeUniqueEList<String>(String.class, this, MoPackage.EXTENDS_CLAUSE__ARRAY_SIZE);
 		}
 		return arraySize;
 	}
@@ -209,7 +210,7 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 	 * @generated
 	 */
 	public ModelicaClassDefinition getOwnerModelicaClassDefinition() {
-		if (eContainerFeatureID() != ModelicaPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION) return null;
+		if (eContainerFeatureID() != MoPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION) return null;
 		return (ModelicaClassDefinition)eInternalContainer();
 	}
 
@@ -219,7 +220,7 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 	 * @generated
 	 */
 	public NotificationChain basicSetOwnerModelicaClassDefinition(ModelicaClassDefinition newOwnerModelicaClassDefinition, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newOwnerModelicaClassDefinition, ModelicaPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOwnerModelicaClassDefinition, MoPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION, msgs);
 		return msgs;
 	}
 
@@ -229,19 +230,19 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 	 * @generated
 	 */
 	public void setOwnerModelicaClassDefinition(ModelicaClassDefinition newOwnerModelicaClassDefinition) {
-		if (newOwnerModelicaClassDefinition != eInternalContainer() || (eContainerFeatureID() != ModelicaPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION && newOwnerModelicaClassDefinition != null)) {
+		if (newOwnerModelicaClassDefinition != eInternalContainer() || (eContainerFeatureID() != MoPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION && newOwnerModelicaClassDefinition != null)) {
 			if (EcoreUtil.isAncestor(this, newOwnerModelicaClassDefinition))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOwnerModelicaClassDefinition != null)
-				msgs = ((InternalEObject)newOwnerModelicaClassDefinition).eInverseAdd(this, ModelicaPackage.MODELICA_CLASS_DEFINITION__EXTENDS, ModelicaClassDefinition.class, msgs);
+				msgs = ((InternalEObject)newOwnerModelicaClassDefinition).eInverseAdd(this, MoPackage.MODELICA_CLASS_DEFINITION__EXTENDS, ModelicaClassDefinition.class, msgs);
 			msgs = basicSetOwnerModelicaClassDefinition(newOwnerModelicaClassDefinition, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION, newOwnerModelicaClassDefinition, newOwnerModelicaClassDefinition));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION, newOwnerModelicaClassDefinition, newOwnerModelicaClassDefinition));
 	}
 
 	/**
@@ -262,7 +263,7 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 		VisibilityKind oldVisibility = visibility;
 		visibility = newVisibility == null ? VISIBILITY_EDEFAULT : newVisibility;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.EXTENDS_CLAUSE__VISIBILITY, oldVisibility, visibility));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.EXTENDS_CLAUSE__VISIBILITY, oldVisibility, visibility));
 	}
 
 	/**
@@ -276,7 +277,7 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 			extendedModelicaClass = (ModelicaClassDefinition)eResolveProxy(oldExtendedModelicaClass);
 			if (extendedModelicaClass != oldExtendedModelicaClass) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelicaPackage.EXTENDS_CLAUSE__EXTENDED_MODELICA_CLASS, oldExtendedModelicaClass, extendedModelicaClass));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MoPackage.EXTENDS_CLAUSE__EXTENDED_MODELICA_CLASS, oldExtendedModelicaClass, extendedModelicaClass));
 			}
 		}
 		return extendedModelicaClass;
@@ -300,7 +301,7 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 		ModelicaClassDefinition oldExtendedModelicaClass = extendedModelicaClass;
 		extendedModelicaClass = newExtendedModelicaClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.EXTENDS_CLAUSE__EXTENDED_MODELICA_CLASS, oldExtendedModelicaClass, extendedModelicaClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.EXTENDS_CLAUSE__EXTENDED_MODELICA_CLASS, oldExtendedModelicaClass, extendedModelicaClass));
 	}
 
 	/**
@@ -321,7 +322,7 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 		String oldFrom_modelica_standard_library = from_modelica_standard_library;
 		from_modelica_standard_library = newFrom_modelica_standard_library;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY, oldFrom_modelica_standard_library, from_modelica_standard_library));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY, oldFrom_modelica_standard_library, from_modelica_standard_library));
 	}
 
 	/**
@@ -342,7 +343,7 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 		String oldFrom_modelica_primitive_types = from_modelica_primitive_types;
 		from_modelica_primitive_types = newFrom_modelica_primitive_types;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES, oldFrom_modelica_primitive_types, from_modelica_primitive_types));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES, oldFrom_modelica_primitive_types, from_modelica_primitive_types));
 	}
 
 	/**
@@ -353,7 +354,7 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnerModelicaClassDefinition((ModelicaClassDefinition)otherEnd, msgs);
@@ -369,7 +370,7 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION:
 				return basicSetOwnerModelicaClassDefinition(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -383,8 +384,8 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case ModelicaPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION:
-				return eInternalContainer().eInverseRemove(this, ModelicaPackage.MODELICA_CLASS_DEFINITION__EXTENDS, ModelicaClassDefinition.class, msgs);
+			case MoPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION:
+				return eInternalContainer().eInverseRemove(this, MoPackage.MODELICA_CLASS_DEFINITION__EXTENDS, ModelicaClassDefinition.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -397,20 +398,20 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelicaPackage.EXTENDS_CLAUSE__MODIFICATION:
+			case MoPackage.EXTENDS_CLAUSE__MODIFICATION:
 				return getModification();
-			case ModelicaPackage.EXTENDS_CLAUSE__ARRAY_SIZE:
+			case MoPackage.EXTENDS_CLAUSE__ARRAY_SIZE:
 				return getArraySize();
-			case ModelicaPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION:
 				return getOwnerModelicaClassDefinition();
-			case ModelicaPackage.EXTENDS_CLAUSE__VISIBILITY:
+			case MoPackage.EXTENDS_CLAUSE__VISIBILITY:
 				return getVisibility();
-			case ModelicaPackage.EXTENDS_CLAUSE__EXTENDED_MODELICA_CLASS:
+			case MoPackage.EXTENDS_CLAUSE__EXTENDED_MODELICA_CLASS:
 				if (resolve) return getExtendedModelicaClass();
 				return basicGetExtendedModelicaClass();
-			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY:
+			case MoPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY:
 				return getFrom_modelica_standard_library();
-			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES:
+			case MoPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES:
 				return getFrom_modelica_primitive_types();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -425,26 +426,26 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelicaPackage.EXTENDS_CLAUSE__MODIFICATION:
+			case MoPackage.EXTENDS_CLAUSE__MODIFICATION:
 				setModification((String)newValue);
 				return;
-			case ModelicaPackage.EXTENDS_CLAUSE__ARRAY_SIZE:
+			case MoPackage.EXTENDS_CLAUSE__ARRAY_SIZE:
 				getArraySize().clear();
 				getArraySize().addAll((Collection<? extends String>)newValue);
 				return;
-			case ModelicaPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION:
 				setOwnerModelicaClassDefinition((ModelicaClassDefinition)newValue);
 				return;
-			case ModelicaPackage.EXTENDS_CLAUSE__VISIBILITY:
+			case MoPackage.EXTENDS_CLAUSE__VISIBILITY:
 				setVisibility((VisibilityKind)newValue);
 				return;
-			case ModelicaPackage.EXTENDS_CLAUSE__EXTENDED_MODELICA_CLASS:
+			case MoPackage.EXTENDS_CLAUSE__EXTENDED_MODELICA_CLASS:
 				setExtendedModelicaClass((ModelicaClassDefinition)newValue);
 				return;
-			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY:
+			case MoPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY:
 				setFrom_modelica_standard_library((String)newValue);
 				return;
-			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES:
+			case MoPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES:
 				setFrom_modelica_primitive_types((String)newValue);
 				return;
 		}
@@ -459,25 +460,25 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.EXTENDS_CLAUSE__MODIFICATION:
+			case MoPackage.EXTENDS_CLAUSE__MODIFICATION:
 				setModification(MODIFICATION_EDEFAULT);
 				return;
-			case ModelicaPackage.EXTENDS_CLAUSE__ARRAY_SIZE:
+			case MoPackage.EXTENDS_CLAUSE__ARRAY_SIZE:
 				getArraySize().clear();
 				return;
-			case ModelicaPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION:
 				setOwnerModelicaClassDefinition((ModelicaClassDefinition)null);
 				return;
-			case ModelicaPackage.EXTENDS_CLAUSE__VISIBILITY:
+			case MoPackage.EXTENDS_CLAUSE__VISIBILITY:
 				setVisibility(VISIBILITY_EDEFAULT);
 				return;
-			case ModelicaPackage.EXTENDS_CLAUSE__EXTENDED_MODELICA_CLASS:
+			case MoPackage.EXTENDS_CLAUSE__EXTENDED_MODELICA_CLASS:
 				setExtendedModelicaClass((ModelicaClassDefinition)null);
 				return;
-			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY:
+			case MoPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY:
 				setFrom_modelica_standard_library(FROM_MODELICA_STANDARD_LIBRARY_EDEFAULT);
 				return;
-			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES:
+			case MoPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES:
 				setFrom_modelica_primitive_types(FROM_MODELICA_PRIMITIVE_TYPES_EDEFAULT);
 				return;
 		}
@@ -492,19 +493,19 @@ public class ExtendsClauseImpl extends EObjectImpl implements ExtendsClause {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.EXTENDS_CLAUSE__MODIFICATION:
+			case MoPackage.EXTENDS_CLAUSE__MODIFICATION:
 				return MODIFICATION_EDEFAULT == null ? modification != null : !MODIFICATION_EDEFAULT.equals(modification);
-			case ModelicaPackage.EXTENDS_CLAUSE__ARRAY_SIZE:
+			case MoPackage.EXTENDS_CLAUSE__ARRAY_SIZE:
 				return arraySize != null && !arraySize.isEmpty();
-			case ModelicaPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION:
+			case MoPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION:
 				return getOwnerModelicaClassDefinition() != null;
-			case ModelicaPackage.EXTENDS_CLAUSE__VISIBILITY:
+			case MoPackage.EXTENDS_CLAUSE__VISIBILITY:
 				return visibility != VISIBILITY_EDEFAULT;
-			case ModelicaPackage.EXTENDS_CLAUSE__EXTENDED_MODELICA_CLASS:
+			case MoPackage.EXTENDS_CLAUSE__EXTENDED_MODELICA_CLASS:
 				return extendedModelicaClass != null;
-			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY:
+			case MoPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY:
 				return FROM_MODELICA_STANDARD_LIBRARY_EDEFAULT == null ? from_modelica_standard_library != null : !FROM_MODELICA_STANDARD_LIBRARY_EDEFAULT.equals(from_modelica_standard_library);
-			case ModelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES:
+			case MoPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES:
 				return FROM_MODELICA_PRIMITIVE_TYPES_EDEFAULT == null ? from_modelica_primitive_types != null : !FROM_MODELICA_PRIMITIVE_TYPES_EDEFAULT.equals(from_modelica_primitive_types);
 		}
 		return super.eIsSet(featureID);

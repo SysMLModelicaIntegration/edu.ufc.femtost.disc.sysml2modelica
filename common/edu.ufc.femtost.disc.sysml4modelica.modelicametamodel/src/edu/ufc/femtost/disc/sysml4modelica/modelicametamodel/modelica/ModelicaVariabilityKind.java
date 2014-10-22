@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Variability Kind</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaVariabilityKind()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaVariabilityKind()
  * @model
  * @generated
  */
@@ -127,7 +127,7 @@ public enum ModelicaVariabilityKind implements Enumerator {
 	public static final int DISCRETE_VALUE = 3;
 
 	/**
-	 * An array of all the '<em><b>Variability Kind</b></em>' enumerators.
+	 * An array of all the '<em><b>Modelica Variability Kind</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -141,7 +141,7 @@ public enum ModelicaVariabilityKind implements Enumerator {
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Variability Kind</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Modelica Variability Kind</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -149,7 +149,7 @@ public enum ModelicaVariabilityKind implements Enumerator {
 	public static final List<ModelicaVariabilityKind> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Variability Kind</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Modelica Variability Kind</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -165,7 +165,7 @@ public enum ModelicaVariabilityKind implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Variability Kind</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Modelica Variability Kind</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -181,7 +181,7 @@ public enum ModelicaVariabilityKind implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Variability Kind</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Modelica Variability Kind</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

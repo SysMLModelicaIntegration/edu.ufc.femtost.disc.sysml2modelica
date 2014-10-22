@@ -17,4 +17,12 @@
             genModel="metamodel/modelica.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated modelica -->
+      <package
+            uri="http://www.femto-st.fr/disc/Modelica.ecore"
+            class="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage"
+            genModel="metamodel/modelica.genmodel"/>
+   </extension>
+
 </plugin>

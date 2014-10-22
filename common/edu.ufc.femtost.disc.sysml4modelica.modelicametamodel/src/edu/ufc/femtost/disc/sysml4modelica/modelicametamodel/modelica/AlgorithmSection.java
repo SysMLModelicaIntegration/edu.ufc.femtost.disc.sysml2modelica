@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getAlgorithmSection()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getAlgorithmSection()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface AlgorithmSection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owner Modelica Class Definition</em>' container reference.
 	 * @see #setOwnerModelicaClassDefinition(ModelicaClassDefinition)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getAlgorithmSection_OwnerModelicaClassDefinition()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getAlgorithmSection_OwnerModelicaClassDefinition()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getAlgorithmSections
 	 * @model opposite="algorithmSections" required="true" transient="false"
 	 * @generated
@@ -68,7 +68,7 @@ public interface AlgorithmSection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Body</em>' attribute.
 	 * @see #setBody(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getAlgorithmSection_Body()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getAlgorithmSection_Body()
 	 * @model
 	 * @generated
 	 */

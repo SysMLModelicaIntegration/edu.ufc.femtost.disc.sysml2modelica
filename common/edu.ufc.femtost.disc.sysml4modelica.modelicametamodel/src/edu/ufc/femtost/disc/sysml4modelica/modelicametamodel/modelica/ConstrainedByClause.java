@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConstrainedByClause()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConstrainedByClause()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface ConstrainedByClause extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modification</em>' attribute.
 	 * @see #setModification(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConstrainedByClause_Modification()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConstrainedByClause_Modification()
 	 * @model
 	 * @generated
 	 */
@@ -64,7 +64,7 @@ public interface ConstrainedByClause extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owner Instance</em>' container reference.
 	 * @see #setOwnerInstance(ModelicaPart)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConstrainedByClause_OwnerInstance()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConstrainedByClause_OwnerInstance()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart#getConstrainedBy
 	 * @model opposite="constrainedBy" transient="false"
 	 * @generated
@@ -91,7 +91,7 @@ public interface ConstrainedByClause extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Instance For Constrained By</em>' reference.
 	 * @see #setInstanceForConstrainedBy(ModelicaPart)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConstrainedByClause_InstanceForConstrainedBy()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConstrainedByClause_InstanceForConstrainedBy()
 	 * @model
 	 * @generated
 	 */

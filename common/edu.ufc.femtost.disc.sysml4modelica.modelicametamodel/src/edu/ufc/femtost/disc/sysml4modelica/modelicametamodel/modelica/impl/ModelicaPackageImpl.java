@@ -1188,6 +1188,24 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getModelicaFunctionParameter_IsProtected() {
+		return (EAttribute)modelicaFunctionParameterEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModelicaFunctionParameter_Default_value() {
+		return (EAttribute)modelicaFunctionParameterEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAlgorithmSection() {
 		return algorithmSectionEClass;
 	}
@@ -1496,6 +1514,8 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		createEAttribute(modelicaFunctionParameterEClass, MODELICA_FUNCTION_PARAMETER__ARRAY_SIZE);
 		createEAttribute(modelicaFunctionParameterEClass, MODELICA_FUNCTION_PARAMETER__VARIABILITY);
 		createEAttribute(modelicaFunctionParameterEClass, MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER);
+		createEAttribute(modelicaFunctionParameterEClass, MODELICA_FUNCTION_PARAMETER__IS_PROTECTED);
+		createEAttribute(modelicaFunctionParameterEClass, MODELICA_FUNCTION_PARAMETER__DEFAULT_VALUE);
 
 		algorithmSectionEClass = createEClass(ALGORITHM_SECTION);
 		createEReference(algorithmSectionEClass, ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION);
@@ -1680,6 +1700,8 @@ public class ModelicaPackageImpl extends EPackageImpl implements ModelicaPackage
 		initEAttribute(getModelicaFunctionParameter_ArraySize(), ecorePackage.getEString(), "arraySize", null, 0, -1, ModelicaFunctionParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModelicaFunctionParameter_Variability(), this.getModelicaVariabilityKind(), "variability", null, 1, 1, ModelicaFunctionParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModelicaFunctionParameter_Type_specifier(), ecorePackage.getEString(), "type_specifier", null, 1, 1, ModelicaFunctionParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelicaFunctionParameter_IsProtected(), ecorePackage.getEBoolean(), "isProtected", null, 1, 1, ModelicaFunctionParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelicaFunctionParameter_Default_value(), ecorePackage.getEString(), "default_value", null, 0, 1, ModelicaFunctionParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(algorithmSectionEClass, AlgorithmSection.class, "AlgorithmSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAlgorithmSection_OwnerModelicaClassDefinition(), this.getModelicaClassDefinition(), this.getModelicaClassDefinition_AlgorithmSections(), "ownerModelicaClassDefinition", null, 1, 1, AlgorithmSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

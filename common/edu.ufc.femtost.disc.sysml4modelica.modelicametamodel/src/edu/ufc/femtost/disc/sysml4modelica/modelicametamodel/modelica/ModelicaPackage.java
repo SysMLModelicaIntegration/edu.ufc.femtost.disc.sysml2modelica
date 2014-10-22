@@ -2370,13 +2370,31 @@ public interface ModelicaPackage extends EPackage {
 	int MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER = 9;
 
 	/**
+	 * The feature id for the '<em><b>Is Protected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODELICA_FUNCTION_PARAMETER__IS_PROTECTED = 10;
+
+	/**
+	 * The feature id for the '<em><b>Default value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODELICA_FUNCTION_PARAMETER__DEFAULT_VALUE = 11;
+
+	/**
 	 * The number of structural features of the '<em>Function Parameter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODELICA_FUNCTION_PARAMETER_FEATURE_COUNT = 10;
+	int MODELICA_FUNCTION_PARAMETER_FEATURE_COUNT = 12;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.AlgorithmSectionImpl <em>Algorithm Section</em>}' class.
@@ -3769,6 +3787,28 @@ public interface ModelicaPackage extends EPackage {
 	EAttribute getModelicaFunctionParameter_Type_specifier();
 
 	/**
+	 * Returns the meta object for the attribute '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFunctionParameter#isIsProtected <em>Is Protected</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Protected</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFunctionParameter#isIsProtected()
+	 * @see #getModelicaFunctionParameter()
+	 * @generated
+	 */
+	EAttribute getModelicaFunctionParameter_IsProtected();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFunctionParameter#getDefault_value <em>Default value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default value</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFunctionParameter#getDefault_value()
+	 * @see #getModelicaFunctionParameter()
+	 * @generated
+	 */
+	EAttribute getModelicaFunctionParameter_Default_value();
+
+	/**
 	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection <em>Algorithm Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4794,6 +4834,22 @@ public interface ModelicaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER = eINSTANCE.getModelicaFunctionParameter_Type_specifier();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Protected</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODELICA_FUNCTION_PARAMETER__IS_PROTECTED = eINSTANCE.getModelicaFunctionParameter_IsProtected();
+
+		/**
+		 * The meta object literal for the '<em><b>Default value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODELICA_FUNCTION_PARAMETER__DEFAULT_VALUE = eINSTANCE.getModelicaFunctionParameter_Default_value();
 
 		/**
 		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.AlgorithmSectionImpl <em>Algorithm Section</em>}' class.

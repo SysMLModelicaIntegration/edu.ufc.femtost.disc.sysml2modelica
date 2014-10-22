@@ -11,6 +11,7 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Block;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 
 import org.eclipse.emf.ecore.EClass;
@@ -41,7 +42,7 @@ public class BlockImpl extends ModelicaClassDefinitionImpl implements Block {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.BLOCK;
+		return MoPackage.Literals.BLOCK;
 	}
 
 } //BlockImpl

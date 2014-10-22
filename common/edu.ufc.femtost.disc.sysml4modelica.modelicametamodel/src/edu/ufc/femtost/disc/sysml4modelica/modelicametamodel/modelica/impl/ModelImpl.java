@@ -10,6 +10,7 @@
  *******************************************************************************/
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Model;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 
@@ -41,7 +42,7 @@ public class ModelImpl extends ModelicaClassDefinitionImpl implements Model {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.MODEL;
+		return MoPackage.Literals.MODEL;
 	}
 
 } //ModelImpl

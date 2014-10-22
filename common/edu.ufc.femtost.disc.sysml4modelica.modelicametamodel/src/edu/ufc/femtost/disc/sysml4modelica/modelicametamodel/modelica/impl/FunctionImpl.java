@@ -11,6 +11,7 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Function;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFunctionParameter;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 
@@ -123,7 +124,7 @@ public class FunctionImpl extends ModelicaClassDefinitionImpl implements Functio
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.FUNCTION;
+		return MoPackage.Literals.FUNCTION;
 	}
 
 	/**
@@ -144,7 +145,7 @@ public class FunctionImpl extends ModelicaClassDefinitionImpl implements Functio
 		String oldExternalLanguage = externalLanguage;
 		externalLanguage = newExternalLanguage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.FUNCTION__EXTERNAL_LANGUAGE, oldExternalLanguage, externalLanguage));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.FUNCTION__EXTERNAL_LANGUAGE, oldExternalLanguage, externalLanguage));
 	}
 
 	/**
@@ -165,7 +166,7 @@ public class FunctionImpl extends ModelicaClassDefinitionImpl implements Functio
 		String oldExternalInclude = externalInclude;
 		externalInclude = newExternalInclude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.FUNCTION__EXTERNAL_INCLUDE, oldExternalInclude, externalInclude));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.FUNCTION__EXTERNAL_INCLUDE, oldExternalInclude, externalInclude));
 	}
 
 	/**
@@ -175,7 +176,7 @@ public class FunctionImpl extends ModelicaClassDefinitionImpl implements Functio
 	 */
 	public EList<String> getExternalLibrary() {
 		if (externalLibrary == null) {
-			externalLibrary = new EDataTypeUniqueEList<String>(String.class, this, ModelicaPackage.FUNCTION__EXTERNAL_LIBRARY);
+			externalLibrary = new EDataTypeUniqueEList<String>(String.class, this, MoPackage.FUNCTION__EXTERNAL_LIBRARY);
 		}
 		return externalLibrary;
 	}
@@ -187,7 +188,7 @@ public class FunctionImpl extends ModelicaClassDefinitionImpl implements Functio
 	 */
 	public EList<ModelicaFunctionParameter> getParameters() {
 		if (parameters == null) {
-			parameters = new EObjectContainmentWithInverseEList<ModelicaFunctionParameter>(ModelicaFunctionParameter.class, this, ModelicaPackage.FUNCTION__PARAMETERS, ModelicaPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION);
+			parameters = new EObjectContainmentWithInverseEList<ModelicaFunctionParameter>(ModelicaFunctionParameter.class, this, MoPackage.FUNCTION__PARAMETERS, MoPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION);
 		}
 		return parameters;
 	}
@@ -201,7 +202,7 @@ public class FunctionImpl extends ModelicaClassDefinitionImpl implements Functio
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.FUNCTION__PARAMETERS:
+			case MoPackage.FUNCTION__PARAMETERS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getParameters()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -215,7 +216,7 @@ public class FunctionImpl extends ModelicaClassDefinitionImpl implements Functio
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.FUNCTION__PARAMETERS:
+			case MoPackage.FUNCTION__PARAMETERS:
 				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -229,13 +230,13 @@ public class FunctionImpl extends ModelicaClassDefinitionImpl implements Functio
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelicaPackage.FUNCTION__EXTERNAL_LANGUAGE:
+			case MoPackage.FUNCTION__EXTERNAL_LANGUAGE:
 				return getExternalLanguage();
-			case ModelicaPackage.FUNCTION__EXTERNAL_INCLUDE:
+			case MoPackage.FUNCTION__EXTERNAL_INCLUDE:
 				return getExternalInclude();
-			case ModelicaPackage.FUNCTION__EXTERNAL_LIBRARY:
+			case MoPackage.FUNCTION__EXTERNAL_LIBRARY:
 				return getExternalLibrary();
-			case ModelicaPackage.FUNCTION__PARAMETERS:
+			case MoPackage.FUNCTION__PARAMETERS:
 				return getParameters();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -250,17 +251,17 @@ public class FunctionImpl extends ModelicaClassDefinitionImpl implements Functio
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelicaPackage.FUNCTION__EXTERNAL_LANGUAGE:
+			case MoPackage.FUNCTION__EXTERNAL_LANGUAGE:
 				setExternalLanguage((String)newValue);
 				return;
-			case ModelicaPackage.FUNCTION__EXTERNAL_INCLUDE:
+			case MoPackage.FUNCTION__EXTERNAL_INCLUDE:
 				setExternalInclude((String)newValue);
 				return;
-			case ModelicaPackage.FUNCTION__EXTERNAL_LIBRARY:
+			case MoPackage.FUNCTION__EXTERNAL_LIBRARY:
 				getExternalLibrary().clear();
 				getExternalLibrary().addAll((Collection<? extends String>)newValue);
 				return;
-			case ModelicaPackage.FUNCTION__PARAMETERS:
+			case MoPackage.FUNCTION__PARAMETERS:
 				getParameters().clear();
 				getParameters().addAll((Collection<? extends ModelicaFunctionParameter>)newValue);
 				return;
@@ -276,16 +277,16 @@ public class FunctionImpl extends ModelicaClassDefinitionImpl implements Functio
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.FUNCTION__EXTERNAL_LANGUAGE:
+			case MoPackage.FUNCTION__EXTERNAL_LANGUAGE:
 				setExternalLanguage(EXTERNAL_LANGUAGE_EDEFAULT);
 				return;
-			case ModelicaPackage.FUNCTION__EXTERNAL_INCLUDE:
+			case MoPackage.FUNCTION__EXTERNAL_INCLUDE:
 				setExternalInclude(EXTERNAL_INCLUDE_EDEFAULT);
 				return;
-			case ModelicaPackage.FUNCTION__EXTERNAL_LIBRARY:
+			case MoPackage.FUNCTION__EXTERNAL_LIBRARY:
 				getExternalLibrary().clear();
 				return;
-			case ModelicaPackage.FUNCTION__PARAMETERS:
+			case MoPackage.FUNCTION__PARAMETERS:
 				getParameters().clear();
 				return;
 		}
@@ -300,13 +301,13 @@ public class FunctionImpl extends ModelicaClassDefinitionImpl implements Functio
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.FUNCTION__EXTERNAL_LANGUAGE:
+			case MoPackage.FUNCTION__EXTERNAL_LANGUAGE:
 				return EXTERNAL_LANGUAGE_EDEFAULT == null ? externalLanguage != null : !EXTERNAL_LANGUAGE_EDEFAULT.equals(externalLanguage);
-			case ModelicaPackage.FUNCTION__EXTERNAL_INCLUDE:
+			case MoPackage.FUNCTION__EXTERNAL_INCLUDE:
 				return EXTERNAL_INCLUDE_EDEFAULT == null ? externalInclude != null : !EXTERNAL_INCLUDE_EDEFAULT.equals(externalInclude);
-			case ModelicaPackage.FUNCTION__EXTERNAL_LIBRARY:
+			case MoPackage.FUNCTION__EXTERNAL_LIBRARY:
 				return externalLibrary != null && !externalLibrary.isEmpty();
-			case ModelicaPackage.FUNCTION__PARAMETERS:
+			case MoPackage.FUNCTION__PARAMETERS:
 				return parameters != null && !parameters.isEmpty();
 		}
 		return super.eIsSet(featureID);

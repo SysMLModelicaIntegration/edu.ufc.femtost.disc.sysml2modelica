@@ -15,6 +15,7 @@ import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaComponent;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaModel;
@@ -260,7 +261,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.MODELICA_CLASS_DEFINITION;
+		return MoPackage.Literals.MODELICA_CLASS_DEFINITION;
 	}
 
 	/**
@@ -281,7 +282,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_CLASS_DEFINITION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_CLASS_DEFINITION__NAME, oldName, name));
 	}
 
 	/**
@@ -302,7 +303,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 		boolean oldIsPartial = isPartial;
 		isPartial = newIsPartial;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_PARTIAL, oldIsPartial, isPartial));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_CLASS_DEFINITION__IS_PARTIAL, oldIsPartial, isPartial));
 	}
 
 	/**
@@ -323,7 +324,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 		boolean oldIsFinal = isFinal;
 		isFinal = newIsFinal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_FINAL, oldIsFinal, isFinal));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_CLASS_DEFINITION__IS_FINAL, oldIsFinal, isFinal));
 	}
 
 	/**
@@ -344,7 +345,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 		boolean oldIsModelicaEncapsulated = isModelicaEncapsulated;
 		isModelicaEncapsulated = newIsModelicaEncapsulated;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_MODELICA_ENCAPSULATED, oldIsModelicaEncapsulated, isModelicaEncapsulated));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_CLASS_DEFINITION__IS_MODELICA_ENCAPSULATED, oldIsModelicaEncapsulated, isModelicaEncapsulated));
 	}
 
 	/**
@@ -365,7 +366,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 		String oldFromLibrary = fromLibrary;
 		fromLibrary = newFromLibrary;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_CLASS_DEFINITION__FROM_LIBRARY, oldFromLibrary, fromLibrary));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_CLASS_DEFINITION__FROM_LIBRARY, oldFromLibrary, fromLibrary));
 	}
 
 	/**
@@ -386,7 +387,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 		boolean oldIsReplaceable = isReplaceable;
 		isReplaceable = newIsReplaceable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_REPLACEABLE, oldIsReplaceable, isReplaceable));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_CLASS_DEFINITION__IS_REPLACEABLE, oldIsReplaceable, isReplaceable));
 	}
 
 	/**
@@ -396,7 +397,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 */
 	public EList<ExtendsClause> getExtends() {
 		if (extends_ == null) {
-			extends_ = new EObjectContainmentWithInverseEList<ExtendsClause>(ExtendsClause.class, this, ModelicaPackage.MODELICA_CLASS_DEFINITION__EXTENDS, ModelicaPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION);
+			extends_ = new EObjectContainmentWithInverseEList<ExtendsClause>(ExtendsClause.class, this, MoPackage.MODELICA_CLASS_DEFINITION__EXTENDS, MoPackage.EXTENDS_CLAUSE__OWNER_MODELICA_CLASS_DEFINITION);
 		}
 		return extends_;
 	}
@@ -407,7 +408,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public ModelicaModel getOwnerModel() {
-		if (eContainerFeatureID() != ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL) return null;
+		if (eContainerFeatureID() != MoPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL) return null;
 		return (ModelicaModel)eInternalContainer();
 	}
 
@@ -417,7 +418,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public NotificationChain basicSetOwnerModel(ModelicaModel newOwnerModel, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newOwnerModel, ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOwnerModel, MoPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL, msgs);
 		return msgs;
 	}
 
@@ -427,19 +428,19 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public void setOwnerModel(ModelicaModel newOwnerModel) {
-		if (newOwnerModel != eInternalContainer() || (eContainerFeatureID() != ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL && newOwnerModel != null)) {
+		if (newOwnerModel != eInternalContainer() || (eContainerFeatureID() != MoPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL && newOwnerModel != null)) {
 			if (EcoreUtil.isAncestor(this, newOwnerModel))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOwnerModel != null)
-				msgs = ((InternalEObject)newOwnerModel).eInverseAdd(this, ModelicaPackage.MODELICA_MODEL__MODELICA_CLASSES, ModelicaModel.class, msgs);
+				msgs = ((InternalEObject)newOwnerModel).eInverseAdd(this, MoPackage.MODELICA_MODEL__MODELICA_CLASSES, ModelicaModel.class, msgs);
 			msgs = basicSetOwnerModel(newOwnerModel, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL, newOwnerModel, newOwnerModel));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL, newOwnerModel, newOwnerModel));
 	}
 
 	/**
@@ -448,7 +449,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package getOwnerPackage() {
-		if (eContainerFeatureID() != ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE) return null;
+		if (eContainerFeatureID() != MoPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE) return null;
 		return (edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package)eInternalContainer();
 	}
 
@@ -458,7 +459,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public NotificationChain basicSetOwnerPackage(edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package newOwnerPackage, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newOwnerPackage, ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOwnerPackage, MoPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE, msgs);
 		return msgs;
 	}
 
@@ -468,19 +469,19 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public void setOwnerPackage(edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package newOwnerPackage) {
-		if (newOwnerPackage != eInternalContainer() || (eContainerFeatureID() != ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE && newOwnerPackage != null)) {
+		if (newOwnerPackage != eInternalContainer() || (eContainerFeatureID() != MoPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE && newOwnerPackage != null)) {
 			if (EcoreUtil.isAncestor(this, newOwnerPackage))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOwnerPackage != null)
-				msgs = ((InternalEObject)newOwnerPackage).eInverseAdd(this, ModelicaPackage.PACKAGE__MODELICA_CLASSES, edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package.class, msgs);
+				msgs = ((InternalEObject)newOwnerPackage).eInverseAdd(this, MoPackage.PACKAGE__MODELICA_CLASSES, edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package.class, msgs);
 			msgs = basicSetOwnerPackage(newOwnerPackage, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE, newOwnerPackage, newOwnerPackage));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE, newOwnerPackage, newOwnerPackage));
 	}
 
 	/**
@@ -490,7 +491,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 */
 	public EList<ModelicaComponent> getModelicaComponents() {
 		if (modelicaComponents == null) {
-			modelicaComponents = new EObjectContainmentWithInverseEList<ModelicaComponent>(ModelicaComponent.class, this, ModelicaPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS, ModelicaPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION);
+			modelicaComponents = new EObjectContainmentWithInverseEList<ModelicaComponent>(ModelicaComponent.class, this, MoPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS, MoPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION);
 		}
 		return modelicaComponents;
 	}
@@ -513,7 +514,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 		EquationSection oldEquationSection = equationSection;
 		equationSection = newEquationSection;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION, oldEquationSection, newEquationSection);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION, oldEquationSection, newEquationSection);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -528,14 +529,14 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 		if (newEquationSection != equationSection) {
 			NotificationChain msgs = null;
 			if (equationSection != null)
-				msgs = ((InternalEObject)equationSection).eInverseRemove(this, ModelicaPackage.EQUATION_SECTION__OWNER_MODELICA_CLASS_DEFINITION, EquationSection.class, msgs);
+				msgs = ((InternalEObject)equationSection).eInverseRemove(this, MoPackage.EQUATION_SECTION__OWNER_MODELICA_CLASS_DEFINITION, EquationSection.class, msgs);
 			if (newEquationSection != null)
-				msgs = ((InternalEObject)newEquationSection).eInverseAdd(this, ModelicaPackage.EQUATION_SECTION__OWNER_MODELICA_CLASS_DEFINITION, EquationSection.class, msgs);
+				msgs = ((InternalEObject)newEquationSection).eInverseAdd(this, MoPackage.EQUATION_SECTION__OWNER_MODELICA_CLASS_DEFINITION, EquationSection.class, msgs);
 			msgs = basicSetEquationSection(newEquationSection, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION, newEquationSection, newEquationSection));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION, newEquationSection, newEquationSection));
 	}
 
 	/**
@@ -545,7 +546,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 */
 	public EList<AlgorithmSection> getAlgorithmSections() {
 		if (algorithmSections == null) {
-			algorithmSections = new EObjectContainmentWithInverseEList<AlgorithmSection>(AlgorithmSection.class, this, ModelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS, ModelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION);
+			algorithmSections = new EObjectContainmentWithInverseEList<AlgorithmSection>(AlgorithmSection.class, this, MoPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS, MoPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION);
 		}
 		return algorithmSections;
 	}
@@ -557,7 +558,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 */
 	public EList<Annotation> getAnnotations() {
 		if (annotations == null) {
-			annotations = new EObjectContainmentWithInverseEList<Annotation>(Annotation.class, this, ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS, ModelicaPackage.ANNOTATION__OWNER_MCD);
+			annotations = new EObjectContainmentWithInverseEList<Annotation>(Annotation.class, this, MoPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS, MoPackage.ANNOTATION__OWNER_MCD);
 		}
 		return annotations;
 	}
@@ -569,7 +570,7 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 */
 	public EList<Comment> getComments() {
 		if (comments == null) {
-			comments = new EObjectContainmentWithInverseEList<Comment>(Comment.class, this, ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS, ModelicaPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION);
+			comments = new EObjectContainmentWithInverseEList<Comment>(Comment.class, this, MoPackage.MODELICA_CLASS_DEFINITION__COMMENTS, MoPackage.COMMENT__OWNER_MODELICA_CLASS_DEFINITION);
 		}
 		return comments;
 	}
@@ -583,27 +584,27 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__EXTENDS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__EXTENDS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getExtends()).basicAdd(otherEnd, msgs);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL:
+			case MoPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnerModel((ModelicaModel)otherEnd, msgs);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE:
+			case MoPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnerPackage((edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package)otherEnd, msgs);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getModelicaComponents()).basicAdd(otherEnd, msgs);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION:
+			case MoPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION:
 				if (equationSection != null)
-					msgs = ((InternalEObject)equationSection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelicaPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION, null, msgs);
+					msgs = ((InternalEObject)equationSection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MoPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION, null, msgs);
 				return basicSetEquationSection((EquationSection)otherEnd, msgs);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAlgorithmSections()).basicAdd(otherEnd, msgs);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAnnotations()).basicAdd(otherEnd, msgs);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getComments()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -617,21 +618,21 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__EXTENDS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__EXTENDS:
 				return ((InternalEList<?>)getExtends()).basicRemove(otherEnd, msgs);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL:
+			case MoPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL:
 				return basicSetOwnerModel(null, msgs);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE:
+			case MoPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE:
 				return basicSetOwnerPackage(null, msgs);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS:
 				return ((InternalEList<?>)getModelicaComponents()).basicRemove(otherEnd, msgs);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION:
+			case MoPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION:
 				return basicSetEquationSection(null, msgs);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
 				return ((InternalEList<?>)getAlgorithmSections()).basicRemove(otherEnd, msgs);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
 				return ((InternalEList<?>)getAnnotations()).basicRemove(otherEnd, msgs);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
 				return ((InternalEList<?>)getComments()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -645,10 +646,10 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL:
-				return eInternalContainer().eInverseRemove(this, ModelicaPackage.MODELICA_MODEL__MODELICA_CLASSES, ModelicaModel.class, msgs);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE:
-				return eInternalContainer().eInverseRemove(this, ModelicaPackage.PACKAGE__MODELICA_CLASSES, edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package.class, msgs);
+			case MoPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL:
+				return eInternalContainer().eInverseRemove(this, MoPackage.MODELICA_MODEL__MODELICA_CLASSES, ModelicaModel.class, msgs);
+			case MoPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE:
+				return eInternalContainer().eInverseRemove(this, MoPackage.PACKAGE__MODELICA_CLASSES, edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -661,33 +662,33 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__NAME:
+			case MoPackage.MODELICA_CLASS_DEFINITION__NAME:
 				return getName();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_PARTIAL:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_PARTIAL:
 				return isIsPartial();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_FINAL:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_FINAL:
 				return isIsFinal();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_MODELICA_ENCAPSULATED:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_MODELICA_ENCAPSULATED:
 				return isIsModelicaEncapsulated();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__FROM_LIBRARY:
+			case MoPackage.MODELICA_CLASS_DEFINITION__FROM_LIBRARY:
 				return getFromLibrary();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_REPLACEABLE:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_REPLACEABLE:
 				return isIsReplaceable();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__EXTENDS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__EXTENDS:
 				return getExtends();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL:
+			case MoPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL:
 				return getOwnerModel();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE:
+			case MoPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE:
 				return getOwnerPackage();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS:
 				return getModelicaComponents();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION:
+			case MoPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION:
 				return getEquationSection();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
 				return getAlgorithmSections();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
 				return getAnnotations();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
 				return getComments();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -702,50 +703,50 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__NAME:
+			case MoPackage.MODELICA_CLASS_DEFINITION__NAME:
 				setName((String)newValue);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_PARTIAL:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_PARTIAL:
 				setIsPartial((Boolean)newValue);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_FINAL:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_FINAL:
 				setIsFinal((Boolean)newValue);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_MODELICA_ENCAPSULATED:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_MODELICA_ENCAPSULATED:
 				setIsModelicaEncapsulated((Boolean)newValue);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__FROM_LIBRARY:
+			case MoPackage.MODELICA_CLASS_DEFINITION__FROM_LIBRARY:
 				setFromLibrary((String)newValue);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_REPLACEABLE:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_REPLACEABLE:
 				setIsReplaceable((Boolean)newValue);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__EXTENDS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__EXTENDS:
 				getExtends().clear();
 				getExtends().addAll((Collection<? extends ExtendsClause>)newValue);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL:
+			case MoPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL:
 				setOwnerModel((ModelicaModel)newValue);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE:
+			case MoPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE:
 				setOwnerPackage((edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package)newValue);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS:
 				getModelicaComponents().clear();
 				getModelicaComponents().addAll((Collection<? extends ModelicaComponent>)newValue);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION:
+			case MoPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION:
 				setEquationSection((EquationSection)newValue);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
 				getAlgorithmSections().clear();
 				getAlgorithmSections().addAll((Collection<? extends AlgorithmSection>)newValue);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
 				getAnnotations().clear();
 				getAnnotations().addAll((Collection<? extends Annotation>)newValue);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
 				getComments().clear();
 				getComments().addAll((Collection<? extends Comment>)newValue);
 				return;
@@ -761,46 +762,46 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__NAME:
+			case MoPackage.MODELICA_CLASS_DEFINITION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_PARTIAL:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_PARTIAL:
 				setIsPartial(IS_PARTIAL_EDEFAULT);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_FINAL:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_FINAL:
 				setIsFinal(IS_FINAL_EDEFAULT);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_MODELICA_ENCAPSULATED:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_MODELICA_ENCAPSULATED:
 				setIsModelicaEncapsulated(IS_MODELICA_ENCAPSULATED_EDEFAULT);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__FROM_LIBRARY:
+			case MoPackage.MODELICA_CLASS_DEFINITION__FROM_LIBRARY:
 				setFromLibrary(FROM_LIBRARY_EDEFAULT);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_REPLACEABLE:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_REPLACEABLE:
 				setIsReplaceable(IS_REPLACEABLE_EDEFAULT);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__EXTENDS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__EXTENDS:
 				getExtends().clear();
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL:
+			case MoPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL:
 				setOwnerModel((ModelicaModel)null);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE:
+			case MoPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE:
 				setOwnerPackage((edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package)null);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS:
 				getModelicaComponents().clear();
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION:
+			case MoPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION:
 				setEquationSection((EquationSection)null);
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
 				getAlgorithmSections().clear();
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
 				getAnnotations().clear();
 				return;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
 				getComments().clear();
 				return;
 		}
@@ -815,33 +816,33 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__NAME:
+			case MoPackage.MODELICA_CLASS_DEFINITION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_PARTIAL:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_PARTIAL:
 				return isPartial != IS_PARTIAL_EDEFAULT;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_FINAL:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_FINAL:
 				return isFinal != IS_FINAL_EDEFAULT;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_MODELICA_ENCAPSULATED:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_MODELICA_ENCAPSULATED:
 				return isModelicaEncapsulated != IS_MODELICA_ENCAPSULATED_EDEFAULT;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__FROM_LIBRARY:
+			case MoPackage.MODELICA_CLASS_DEFINITION__FROM_LIBRARY:
 				return FROM_LIBRARY_EDEFAULT == null ? fromLibrary != null : !FROM_LIBRARY_EDEFAULT.equals(fromLibrary);
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__IS_REPLACEABLE:
+			case MoPackage.MODELICA_CLASS_DEFINITION__IS_REPLACEABLE:
 				return isReplaceable != IS_REPLACEABLE_EDEFAULT;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__EXTENDS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__EXTENDS:
 				return extends_ != null && !extends_.isEmpty();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL:
+			case MoPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL:
 				return getOwnerModel() != null;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE:
+			case MoPackage.MODELICA_CLASS_DEFINITION__OWNER_PACKAGE:
 				return getOwnerPackage() != null;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS:
 				return modelicaComponents != null && !modelicaComponents.isEmpty();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION:
+			case MoPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION:
 				return equationSection != null;
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
 				return algorithmSections != null && !algorithmSections.isEmpty();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
 				return annotations != null && !annotations.isEmpty();
-			case ModelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
+			case MoPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
 				return comments != null && !comments.isEmpty();
 		}
 		return super.eIsSet(featureID);

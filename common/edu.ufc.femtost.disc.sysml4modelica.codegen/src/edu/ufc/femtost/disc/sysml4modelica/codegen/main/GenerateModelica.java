@@ -22,7 +22,10 @@ import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 
 /**
  * Entry point of the 'GenerateModelica' generation module.
@@ -116,9 +119,11 @@ public class GenerateModelica extends AbstractAcceleoGenerator {
      * 
      * @param args
      *            Arguments of the generation.
-     * @generated
+     * @generated NOT
      */
     public static void main(String[] args) {
+    	ModelicaPackage packageInstance = ModelicaPackage.eINSTANCE;
+    	EPackage.Registry.INSTANCE.put(packageInstance.getNsURI(), packageInstance);
         try {
             if (args.length < 2) {
                 System.out.println("Arguments not valid : {model, folder}.");

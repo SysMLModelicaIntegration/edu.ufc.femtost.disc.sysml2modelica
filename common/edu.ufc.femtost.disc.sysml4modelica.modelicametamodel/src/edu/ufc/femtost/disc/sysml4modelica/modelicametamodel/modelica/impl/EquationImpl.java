@@ -12,6 +12,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Equation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -97,7 +98,7 @@ public class EquationImpl extends EObjectImpl implements Equation {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.EQUATION;
+		return MoPackage.Literals.EQUATION;
 	}
 
 	/**
@@ -106,7 +107,7 @@ public class EquationImpl extends EObjectImpl implements Equation {
 	 * @generated
 	 */
 	public EquationSection getOwnerEquationSection() {
-		if (eContainerFeatureID() != ModelicaPackage.EQUATION__OWNER_EQUATION_SECTION) return null;
+		if (eContainerFeatureID() != MoPackage.EQUATION__OWNER_EQUATION_SECTION) return null;
 		return (EquationSection)eInternalContainer();
 	}
 
@@ -116,7 +117,7 @@ public class EquationImpl extends EObjectImpl implements Equation {
 	 * @generated
 	 */
 	public NotificationChain basicSetOwnerEquationSection(EquationSection newOwnerEquationSection, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newOwnerEquationSection, ModelicaPackage.EQUATION__OWNER_EQUATION_SECTION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOwnerEquationSection, MoPackage.EQUATION__OWNER_EQUATION_SECTION, msgs);
 		return msgs;
 	}
 
@@ -126,19 +127,19 @@ public class EquationImpl extends EObjectImpl implements Equation {
 	 * @generated
 	 */
 	public void setOwnerEquationSection(EquationSection newOwnerEquationSection) {
-		if (newOwnerEquationSection != eInternalContainer() || (eContainerFeatureID() != ModelicaPackage.EQUATION__OWNER_EQUATION_SECTION && newOwnerEquationSection != null)) {
+		if (newOwnerEquationSection != eInternalContainer() || (eContainerFeatureID() != MoPackage.EQUATION__OWNER_EQUATION_SECTION && newOwnerEquationSection != null)) {
 			if (EcoreUtil.isAncestor(this, newOwnerEquationSection))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOwnerEquationSection != null)
-				msgs = ((InternalEObject)newOwnerEquationSection).eInverseAdd(this, ModelicaPackage.EQUATION_SECTION__EQUATIONS, EquationSection.class, msgs);
+				msgs = ((InternalEObject)newOwnerEquationSection).eInverseAdd(this, MoPackage.EQUATION_SECTION__EQUATIONS, EquationSection.class, msgs);
 			msgs = basicSetOwnerEquationSection(newOwnerEquationSection, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.EQUATION__OWNER_EQUATION_SECTION, newOwnerEquationSection, newOwnerEquationSection));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.EQUATION__OWNER_EQUATION_SECTION, newOwnerEquationSection, newOwnerEquationSection));
 	}
 
 	/**
@@ -159,7 +160,7 @@ public class EquationImpl extends EObjectImpl implements Equation {
 		boolean oldIsInitial = isInitial;
 		isInitial = newIsInitial;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.EQUATION__IS_INITIAL, oldIsInitial, isInitial));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.EQUATION__IS_INITIAL, oldIsInitial, isInitial));
 	}
 
 	/**
@@ -180,7 +181,7 @@ public class EquationImpl extends EObjectImpl implements Equation {
 		String oldBody = body;
 		body = newBody;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.EQUATION__BODY, oldBody, body));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.EQUATION__BODY, oldBody, body));
 	}
 
 	/**
@@ -191,7 +192,7 @@ public class EquationImpl extends EObjectImpl implements Equation {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.EQUATION__OWNER_EQUATION_SECTION:
+			case MoPackage.EQUATION__OWNER_EQUATION_SECTION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnerEquationSection((EquationSection)otherEnd, msgs);
@@ -207,7 +208,7 @@ public class EquationImpl extends EObjectImpl implements Equation {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.EQUATION__OWNER_EQUATION_SECTION:
+			case MoPackage.EQUATION__OWNER_EQUATION_SECTION:
 				return basicSetOwnerEquationSection(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -221,8 +222,8 @@ public class EquationImpl extends EObjectImpl implements Equation {
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case ModelicaPackage.EQUATION__OWNER_EQUATION_SECTION:
-				return eInternalContainer().eInverseRemove(this, ModelicaPackage.EQUATION_SECTION__EQUATIONS, EquationSection.class, msgs);
+			case MoPackage.EQUATION__OWNER_EQUATION_SECTION:
+				return eInternalContainer().eInverseRemove(this, MoPackage.EQUATION_SECTION__EQUATIONS, EquationSection.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -235,11 +236,11 @@ public class EquationImpl extends EObjectImpl implements Equation {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelicaPackage.EQUATION__OWNER_EQUATION_SECTION:
+			case MoPackage.EQUATION__OWNER_EQUATION_SECTION:
 				return getOwnerEquationSection();
-			case ModelicaPackage.EQUATION__IS_INITIAL:
+			case MoPackage.EQUATION__IS_INITIAL:
 				return isIsInitial();
-			case ModelicaPackage.EQUATION__BODY:
+			case MoPackage.EQUATION__BODY:
 				return getBody();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -253,13 +254,13 @@ public class EquationImpl extends EObjectImpl implements Equation {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelicaPackage.EQUATION__OWNER_EQUATION_SECTION:
+			case MoPackage.EQUATION__OWNER_EQUATION_SECTION:
 				setOwnerEquationSection((EquationSection)newValue);
 				return;
-			case ModelicaPackage.EQUATION__IS_INITIAL:
+			case MoPackage.EQUATION__IS_INITIAL:
 				setIsInitial((Boolean)newValue);
 				return;
-			case ModelicaPackage.EQUATION__BODY:
+			case MoPackage.EQUATION__BODY:
 				setBody((String)newValue);
 				return;
 		}
@@ -274,13 +275,13 @@ public class EquationImpl extends EObjectImpl implements Equation {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.EQUATION__OWNER_EQUATION_SECTION:
+			case MoPackage.EQUATION__OWNER_EQUATION_SECTION:
 				setOwnerEquationSection((EquationSection)null);
 				return;
-			case ModelicaPackage.EQUATION__IS_INITIAL:
+			case MoPackage.EQUATION__IS_INITIAL:
 				setIsInitial(IS_INITIAL_EDEFAULT);
 				return;
-			case ModelicaPackage.EQUATION__BODY:
+			case MoPackage.EQUATION__BODY:
 				setBody(BODY_EDEFAULT);
 				return;
 		}
@@ -295,11 +296,11 @@ public class EquationImpl extends EObjectImpl implements Equation {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.EQUATION__OWNER_EQUATION_SECTION:
+			case MoPackage.EQUATION__OWNER_EQUATION_SECTION:
 				return getOwnerEquationSection() != null;
-			case ModelicaPackage.EQUATION__IS_INITIAL:
+			case MoPackage.EQUATION__IS_INITIAL:
 				return isInitial != IS_INITIAL_EDEFAULT;
-			case ModelicaPackage.EQUATION__BODY:
+			case MoPackage.EQUATION__BODY:
 				return BODY_EDEFAULT == null ? body != null : !BODY_EDEFAULT.equals(body);
 		}
 		return super.eIsSet(featureID);

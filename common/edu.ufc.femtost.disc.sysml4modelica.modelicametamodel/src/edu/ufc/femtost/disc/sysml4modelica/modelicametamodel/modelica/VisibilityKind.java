@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Visibility Kind</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getVisibilityKind()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getVisibilityKind()
  * @model
  * @generated
  */

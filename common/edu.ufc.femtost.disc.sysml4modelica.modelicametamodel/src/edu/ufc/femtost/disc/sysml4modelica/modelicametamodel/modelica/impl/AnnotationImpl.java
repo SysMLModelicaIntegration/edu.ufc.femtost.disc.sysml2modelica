@@ -7,6 +7,7 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 
@@ -72,7 +73,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.ANNOTATION;
+		return MoPackage.Literals.ANNOTATION;
 	}
 
 	/**
@@ -93,7 +94,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation {
 		String oldBody = body;
 		body = newBody;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.ANNOTATION__BODY, oldBody, body));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.ANNOTATION__BODY, oldBody, body));
 	}
 
 	/**
@@ -102,7 +103,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation {
 	 * @generated
 	 */
 	public ModelicaClassDefinition getOwnerMCD() {
-		if (eContainerFeatureID() != ModelicaPackage.ANNOTATION__OWNER_MCD) return null;
+		if (eContainerFeatureID() != MoPackage.ANNOTATION__OWNER_MCD) return null;
 		return (ModelicaClassDefinition)eInternalContainer();
 	}
 
@@ -112,7 +113,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation {
 	 * @generated
 	 */
 	public NotificationChain basicSetOwnerMCD(ModelicaClassDefinition newOwnerMCD, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newOwnerMCD, ModelicaPackage.ANNOTATION__OWNER_MCD, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOwnerMCD, MoPackage.ANNOTATION__OWNER_MCD, msgs);
 		return msgs;
 	}
 
@@ -122,19 +123,19 @@ public class AnnotationImpl extends EObjectImpl implements Annotation {
 	 * @generated
 	 */
 	public void setOwnerMCD(ModelicaClassDefinition newOwnerMCD) {
-		if (newOwnerMCD != eInternalContainer() || (eContainerFeatureID() != ModelicaPackage.ANNOTATION__OWNER_MCD && newOwnerMCD != null)) {
+		if (newOwnerMCD != eInternalContainer() || (eContainerFeatureID() != MoPackage.ANNOTATION__OWNER_MCD && newOwnerMCD != null)) {
 			if (EcoreUtil.isAncestor(this, newOwnerMCD))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOwnerMCD != null)
-				msgs = ((InternalEObject)newOwnerMCD).eInverseAdd(this, ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS, ModelicaClassDefinition.class, msgs);
+				msgs = ((InternalEObject)newOwnerMCD).eInverseAdd(this, MoPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS, ModelicaClassDefinition.class, msgs);
 			msgs = basicSetOwnerMCD(newOwnerMCD, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.ANNOTATION__OWNER_MCD, newOwnerMCD, newOwnerMCD));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.ANNOTATION__OWNER_MCD, newOwnerMCD, newOwnerMCD));
 	}
 
 	/**
@@ -145,7 +146,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.ANNOTATION__OWNER_MCD:
+			case MoPackage.ANNOTATION__OWNER_MCD:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnerMCD((ModelicaClassDefinition)otherEnd, msgs);
@@ -161,7 +162,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.ANNOTATION__OWNER_MCD:
+			case MoPackage.ANNOTATION__OWNER_MCD:
 				return basicSetOwnerMCD(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -175,8 +176,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation {
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case ModelicaPackage.ANNOTATION__OWNER_MCD:
-				return eInternalContainer().eInverseRemove(this, ModelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS, ModelicaClassDefinition.class, msgs);
+			case MoPackage.ANNOTATION__OWNER_MCD:
+				return eInternalContainer().eInverseRemove(this, MoPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS, ModelicaClassDefinition.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -189,9 +190,9 @@ public class AnnotationImpl extends EObjectImpl implements Annotation {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelicaPackage.ANNOTATION__BODY:
+			case MoPackage.ANNOTATION__BODY:
 				return getBody();
-			case ModelicaPackage.ANNOTATION__OWNER_MCD:
+			case MoPackage.ANNOTATION__OWNER_MCD:
 				return getOwnerMCD();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -205,10 +206,10 @@ public class AnnotationImpl extends EObjectImpl implements Annotation {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelicaPackage.ANNOTATION__BODY:
+			case MoPackage.ANNOTATION__BODY:
 				setBody((String)newValue);
 				return;
-			case ModelicaPackage.ANNOTATION__OWNER_MCD:
+			case MoPackage.ANNOTATION__OWNER_MCD:
 				setOwnerMCD((ModelicaClassDefinition)newValue);
 				return;
 		}
@@ -223,10 +224,10 @@ public class AnnotationImpl extends EObjectImpl implements Annotation {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.ANNOTATION__BODY:
+			case MoPackage.ANNOTATION__BODY:
 				setBody(BODY_EDEFAULT);
 				return;
-			case ModelicaPackage.ANNOTATION__OWNER_MCD:
+			case MoPackage.ANNOTATION__OWNER_MCD:
 				setOwnerMCD((ModelicaClassDefinition)null);
 				return;
 		}
@@ -241,9 +242,9 @@ public class AnnotationImpl extends EObjectImpl implements Annotation {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.ANNOTATION__BODY:
+			case MoPackage.ANNOTATION__BODY:
 				return BODY_EDEFAULT == null ? body != null : !BODY_EDEFAULT.equals(body);
-			case ModelicaPackage.ANNOTATION__OWNER_MCD:
+			case MoPackage.ANNOTATION__OWNER_MCD:
 				return getOwnerMCD() != null;
 		}
 		return super.eIsSet(featureID);

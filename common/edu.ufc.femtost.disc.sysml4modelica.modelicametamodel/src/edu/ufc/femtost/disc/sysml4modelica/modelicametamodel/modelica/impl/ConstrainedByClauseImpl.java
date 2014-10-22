@@ -7,6 +7,7 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart;
@@ -83,7 +84,7 @@ public class ConstrainedByClauseImpl extends EObjectImpl implements ConstrainedB
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.CONSTRAINED_BY_CLAUSE;
+		return MoPackage.Literals.CONSTRAINED_BY_CLAUSE;
 	}
 
 	/**
@@ -104,7 +105,7 @@ public class ConstrainedByClauseImpl extends EObjectImpl implements ConstrainedB
 		String oldModification = modification;
 		modification = newModification;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.CONSTRAINED_BY_CLAUSE__MODIFICATION, oldModification, modification));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.CONSTRAINED_BY_CLAUSE__MODIFICATION, oldModification, modification));
 	}
 
 	/**
@@ -113,7 +114,7 @@ public class ConstrainedByClauseImpl extends EObjectImpl implements ConstrainedB
 	 * @generated
 	 */
 	public ModelicaPart getOwnerInstance() {
-		if (eContainerFeatureID() != ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE) return null;
+		if (eContainerFeatureID() != MoPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE) return null;
 		return (ModelicaPart)eInternalContainer();
 	}
 
@@ -123,7 +124,7 @@ public class ConstrainedByClauseImpl extends EObjectImpl implements ConstrainedB
 	 * @generated
 	 */
 	public NotificationChain basicSetOwnerInstance(ModelicaPart newOwnerInstance, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newOwnerInstance, ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOwnerInstance, MoPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE, msgs);
 		return msgs;
 	}
 
@@ -133,19 +134,19 @@ public class ConstrainedByClauseImpl extends EObjectImpl implements ConstrainedB
 	 * @generated
 	 */
 	public void setOwnerInstance(ModelicaPart newOwnerInstance) {
-		if (newOwnerInstance != eInternalContainer() || (eContainerFeatureID() != ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE && newOwnerInstance != null)) {
+		if (newOwnerInstance != eInternalContainer() || (eContainerFeatureID() != MoPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE && newOwnerInstance != null)) {
 			if (EcoreUtil.isAncestor(this, newOwnerInstance))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOwnerInstance != null)
-				msgs = ((InternalEObject)newOwnerInstance).eInverseAdd(this, ModelicaPackage.MODELICA_PART__CONSTRAINED_BY, ModelicaPart.class, msgs);
+				msgs = ((InternalEObject)newOwnerInstance).eInverseAdd(this, MoPackage.MODELICA_PART__CONSTRAINED_BY, ModelicaPart.class, msgs);
 			msgs = basicSetOwnerInstance(newOwnerInstance, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE, newOwnerInstance, newOwnerInstance));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE, newOwnerInstance, newOwnerInstance));
 	}
 
 	/**
@@ -159,7 +160,7 @@ public class ConstrainedByClauseImpl extends EObjectImpl implements ConstrainedB
 			instanceForConstrainedBy = (ModelicaPart)eResolveProxy(oldInstanceForConstrainedBy);
 			if (instanceForConstrainedBy != oldInstanceForConstrainedBy) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelicaPackage.CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY, oldInstanceForConstrainedBy, instanceForConstrainedBy));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MoPackage.CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY, oldInstanceForConstrainedBy, instanceForConstrainedBy));
 			}
 		}
 		return instanceForConstrainedBy;
@@ -183,7 +184,7 @@ public class ConstrainedByClauseImpl extends EObjectImpl implements ConstrainedB
 		ModelicaPart oldInstanceForConstrainedBy = instanceForConstrainedBy;
 		instanceForConstrainedBy = newInstanceForConstrainedBy;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY, oldInstanceForConstrainedBy, instanceForConstrainedBy));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY, oldInstanceForConstrainedBy, instanceForConstrainedBy));
 	}
 
 	/**
@@ -194,7 +195,7 @@ public class ConstrainedByClauseImpl extends EObjectImpl implements ConstrainedB
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE:
+			case MoPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnerInstance((ModelicaPart)otherEnd, msgs);
@@ -210,7 +211,7 @@ public class ConstrainedByClauseImpl extends EObjectImpl implements ConstrainedB
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE:
+			case MoPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE:
 				return basicSetOwnerInstance(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -224,8 +225,8 @@ public class ConstrainedByClauseImpl extends EObjectImpl implements ConstrainedB
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE:
-				return eInternalContainer().eInverseRemove(this, ModelicaPackage.MODELICA_PART__CONSTRAINED_BY, ModelicaPart.class, msgs);
+			case MoPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE:
+				return eInternalContainer().eInverseRemove(this, MoPackage.MODELICA_PART__CONSTRAINED_BY, ModelicaPart.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -238,11 +239,11 @@ public class ConstrainedByClauseImpl extends EObjectImpl implements ConstrainedB
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelicaPackage.CONSTRAINED_BY_CLAUSE__MODIFICATION:
+			case MoPackage.CONSTRAINED_BY_CLAUSE__MODIFICATION:
 				return getModification();
-			case ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE:
+			case MoPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE:
 				return getOwnerInstance();
-			case ModelicaPackage.CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY:
+			case MoPackage.CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY:
 				if (resolve) return getInstanceForConstrainedBy();
 				return basicGetInstanceForConstrainedBy();
 		}
@@ -257,13 +258,13 @@ public class ConstrainedByClauseImpl extends EObjectImpl implements ConstrainedB
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelicaPackage.CONSTRAINED_BY_CLAUSE__MODIFICATION:
+			case MoPackage.CONSTRAINED_BY_CLAUSE__MODIFICATION:
 				setModification((String)newValue);
 				return;
-			case ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE:
+			case MoPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE:
 				setOwnerInstance((ModelicaPart)newValue);
 				return;
-			case ModelicaPackage.CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY:
+			case MoPackage.CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY:
 				setInstanceForConstrainedBy((ModelicaPart)newValue);
 				return;
 		}
@@ -278,13 +279,13 @@ public class ConstrainedByClauseImpl extends EObjectImpl implements ConstrainedB
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.CONSTRAINED_BY_CLAUSE__MODIFICATION:
+			case MoPackage.CONSTRAINED_BY_CLAUSE__MODIFICATION:
 				setModification(MODIFICATION_EDEFAULT);
 				return;
-			case ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE:
+			case MoPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE:
 				setOwnerInstance((ModelicaPart)null);
 				return;
-			case ModelicaPackage.CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY:
+			case MoPackage.CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY:
 				setInstanceForConstrainedBy((ModelicaPart)null);
 				return;
 		}
@@ -299,11 +300,11 @@ public class ConstrainedByClauseImpl extends EObjectImpl implements ConstrainedB
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.CONSTRAINED_BY_CLAUSE__MODIFICATION:
+			case MoPackage.CONSTRAINED_BY_CLAUSE__MODIFICATION:
 				return MODIFICATION_EDEFAULT == null ? modification != null : !MODIFICATION_EDEFAULT.equals(modification);
-			case ModelicaPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE:
+			case MoPackage.CONSTRAINED_BY_CLAUSE__OWNER_INSTANCE:
 				return getOwnerInstance() != null;
-			case ModelicaPackage.CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY:
+			case MoPackage.CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY:
 				return instanceForConstrainedBy != null;
 		}
 		return super.eIsSet(featureID);

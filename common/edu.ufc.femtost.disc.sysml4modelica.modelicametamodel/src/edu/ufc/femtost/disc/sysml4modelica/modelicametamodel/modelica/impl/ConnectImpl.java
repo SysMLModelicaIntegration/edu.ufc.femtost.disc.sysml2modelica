@@ -12,6 +12,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connect;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPort;
@@ -185,7 +186,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.CONNECT;
+		return MoPackage.Literals.CONNECT;
 	}
 
 	/**
@@ -194,7 +195,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 	 * @generated
 	 */
 	public EquationSection getOwnerEquationSection() {
-		if (eContainerFeatureID() != ModelicaPackage.CONNECT__OWNER_EQUATION_SECTION) return null;
+		if (eContainerFeatureID() != MoPackage.CONNECT__OWNER_EQUATION_SECTION) return null;
 		return (EquationSection)eInternalContainer();
 	}
 
@@ -204,7 +205,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 	 * @generated
 	 */
 	public NotificationChain basicSetOwnerEquationSection(EquationSection newOwnerEquationSection, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newOwnerEquationSection, ModelicaPackage.CONNECT__OWNER_EQUATION_SECTION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOwnerEquationSection, MoPackage.CONNECT__OWNER_EQUATION_SECTION, msgs);
 		return msgs;
 	}
 
@@ -214,19 +215,19 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 	 * @generated
 	 */
 	public void setOwnerEquationSection(EquationSection newOwnerEquationSection) {
-		if (newOwnerEquationSection != eInternalContainer() || (eContainerFeatureID() != ModelicaPackage.CONNECT__OWNER_EQUATION_SECTION && newOwnerEquationSection != null)) {
+		if (newOwnerEquationSection != eInternalContainer() || (eContainerFeatureID() != MoPackage.CONNECT__OWNER_EQUATION_SECTION && newOwnerEquationSection != null)) {
 			if (EcoreUtil.isAncestor(this, newOwnerEquationSection))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOwnerEquationSection != null)
-				msgs = ((InternalEObject)newOwnerEquationSection).eInverseAdd(this, ModelicaPackage.EQUATION_SECTION__CONNECTS, EquationSection.class, msgs);
+				msgs = ((InternalEObject)newOwnerEquationSection).eInverseAdd(this, MoPackage.EQUATION_SECTION__CONNECTS, EquationSection.class, msgs);
 			msgs = basicSetOwnerEquationSection(newOwnerEquationSection, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.CONNECT__OWNER_EQUATION_SECTION, newOwnerEquationSection, newOwnerEquationSection));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.CONNECT__OWNER_EQUATION_SECTION, newOwnerEquationSection, newOwnerEquationSection));
 	}
 
 	/**
@@ -240,7 +241,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 			from = (ModelicaPort)eResolveProxy(oldFrom);
 			if (from != oldFrom) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelicaPackage.CONNECT__FROM, oldFrom, from));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MoPackage.CONNECT__FROM, oldFrom, from));
 			}
 		}
 		return from;
@@ -264,7 +265,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 		ModelicaPort oldFrom = from;
 		from = newFrom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.CONNECT__FROM, oldFrom, from));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.CONNECT__FROM, oldFrom, from));
 	}
 
 	/**
@@ -278,7 +279,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 			to = (ModelicaPort)eResolveProxy(oldTo);
 			if (to != oldTo) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelicaPackage.CONNECT__TO, oldTo, to));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MoPackage.CONNECT__TO, oldTo, to));
 			}
 		}
 		return to;
@@ -302,7 +303,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 		ModelicaPort oldTo = to;
 		to = newTo;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.CONNECT__TO, oldTo, to));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.CONNECT__TO, oldTo, to));
 	}
 
 	/**
@@ -316,7 +317,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 			fromModelicaPart = (ModelicaPart)eResolveProxy(oldFromModelicaPart);
 			if (fromModelicaPart != oldFromModelicaPart) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelicaPackage.CONNECT__FROM_MODELICA_PART, oldFromModelicaPart, fromModelicaPart));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MoPackage.CONNECT__FROM_MODELICA_PART, oldFromModelicaPart, fromModelicaPart));
 			}
 		}
 		return fromModelicaPart;
@@ -340,7 +341,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 		ModelicaPart oldFromModelicaPart = fromModelicaPart;
 		fromModelicaPart = newFromModelicaPart;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.CONNECT__FROM_MODELICA_PART, oldFromModelicaPart, fromModelicaPart));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.CONNECT__FROM_MODELICA_PART, oldFromModelicaPart, fromModelicaPart));
 	}
 
 	/**
@@ -354,7 +355,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 			toModelicaPart = (ModelicaPart)eResolveProxy(oldToModelicaPart);
 			if (toModelicaPart != oldToModelicaPart) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelicaPackage.CONNECT__TO_MODELICA_PART, oldToModelicaPart, toModelicaPart));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MoPackage.CONNECT__TO_MODELICA_PART, oldToModelicaPart, toModelicaPart));
 			}
 		}
 		return toModelicaPart;
@@ -378,7 +379,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 		ModelicaPart oldToModelicaPart = toModelicaPart;
 		toModelicaPart = newToModelicaPart;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.CONNECT__TO_MODELICA_PART, oldToModelicaPart, toModelicaPart));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.CONNECT__TO_MODELICA_PART, oldToModelicaPart, toModelicaPart));
 	}
 
 	/**
@@ -399,7 +400,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 		String oldFromPort = fromPort;
 		fromPort = newFromPort;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.CONNECT__FROM_PORT, oldFromPort, fromPort));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.CONNECT__FROM_PORT, oldFromPort, fromPort));
 	}
 
 	/**
@@ -420,7 +421,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 		String oldToPort = toPort;
 		toPort = newToPort;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.CONNECT__TO_PORT, oldToPort, toPort));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.CONNECT__TO_PORT, oldToPort, toPort));
 	}
 
 	/**
@@ -441,7 +442,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 		String oldFromPart = fromPart;
 		fromPart = newFromPart;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.CONNECT__FROM_PART, oldFromPart, fromPart));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.CONNECT__FROM_PART, oldFromPart, fromPart));
 	}
 
 	/**
@@ -462,7 +463,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 		String oldToPart = toPart;
 		toPart = newToPart;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.CONNECT__TO_PART, oldToPart, toPart));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.CONNECT__TO_PART, oldToPart, toPart));
 	}
 
 	/**
@@ -473,7 +474,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.CONNECT__OWNER_EQUATION_SECTION:
+			case MoPackage.CONNECT__OWNER_EQUATION_SECTION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnerEquationSection((EquationSection)otherEnd, msgs);
@@ -489,7 +490,7 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.CONNECT__OWNER_EQUATION_SECTION:
+			case MoPackage.CONNECT__OWNER_EQUATION_SECTION:
 				return basicSetOwnerEquationSection(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -503,8 +504,8 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case ModelicaPackage.CONNECT__OWNER_EQUATION_SECTION:
-				return eInternalContainer().eInverseRemove(this, ModelicaPackage.EQUATION_SECTION__CONNECTS, EquationSection.class, msgs);
+			case MoPackage.CONNECT__OWNER_EQUATION_SECTION:
+				return eInternalContainer().eInverseRemove(this, MoPackage.EQUATION_SECTION__CONNECTS, EquationSection.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -517,27 +518,27 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelicaPackage.CONNECT__OWNER_EQUATION_SECTION:
+			case MoPackage.CONNECT__OWNER_EQUATION_SECTION:
 				return getOwnerEquationSection();
-			case ModelicaPackage.CONNECT__FROM:
+			case MoPackage.CONNECT__FROM:
 				if (resolve) return getFrom();
 				return basicGetFrom();
-			case ModelicaPackage.CONNECT__TO:
+			case MoPackage.CONNECT__TO:
 				if (resolve) return getTo();
 				return basicGetTo();
-			case ModelicaPackage.CONNECT__FROM_MODELICA_PART:
+			case MoPackage.CONNECT__FROM_MODELICA_PART:
 				if (resolve) return getFromModelicaPart();
 				return basicGetFromModelicaPart();
-			case ModelicaPackage.CONNECT__TO_MODELICA_PART:
+			case MoPackage.CONNECT__TO_MODELICA_PART:
 				if (resolve) return getToModelicaPart();
 				return basicGetToModelicaPart();
-			case ModelicaPackage.CONNECT__FROM_PORT:
+			case MoPackage.CONNECT__FROM_PORT:
 				return getFromPort();
-			case ModelicaPackage.CONNECT__TO_PORT:
+			case MoPackage.CONNECT__TO_PORT:
 				return getToPort();
-			case ModelicaPackage.CONNECT__FROM_PART:
+			case MoPackage.CONNECT__FROM_PART:
 				return getFromPart();
-			case ModelicaPackage.CONNECT__TO_PART:
+			case MoPackage.CONNECT__TO_PART:
 				return getToPart();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -551,31 +552,31 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelicaPackage.CONNECT__OWNER_EQUATION_SECTION:
+			case MoPackage.CONNECT__OWNER_EQUATION_SECTION:
 				setOwnerEquationSection((EquationSection)newValue);
 				return;
-			case ModelicaPackage.CONNECT__FROM:
+			case MoPackage.CONNECT__FROM:
 				setFrom((ModelicaPort)newValue);
 				return;
-			case ModelicaPackage.CONNECT__TO:
+			case MoPackage.CONNECT__TO:
 				setTo((ModelicaPort)newValue);
 				return;
-			case ModelicaPackage.CONNECT__FROM_MODELICA_PART:
+			case MoPackage.CONNECT__FROM_MODELICA_PART:
 				setFromModelicaPart((ModelicaPart)newValue);
 				return;
-			case ModelicaPackage.CONNECT__TO_MODELICA_PART:
+			case MoPackage.CONNECT__TO_MODELICA_PART:
 				setToModelicaPart((ModelicaPart)newValue);
 				return;
-			case ModelicaPackage.CONNECT__FROM_PORT:
+			case MoPackage.CONNECT__FROM_PORT:
 				setFromPort((String)newValue);
 				return;
-			case ModelicaPackage.CONNECT__TO_PORT:
+			case MoPackage.CONNECT__TO_PORT:
 				setToPort((String)newValue);
 				return;
-			case ModelicaPackage.CONNECT__FROM_PART:
+			case MoPackage.CONNECT__FROM_PART:
 				setFromPart((String)newValue);
 				return;
-			case ModelicaPackage.CONNECT__TO_PART:
+			case MoPackage.CONNECT__TO_PART:
 				setToPart((String)newValue);
 				return;
 		}
@@ -590,31 +591,31 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.CONNECT__OWNER_EQUATION_SECTION:
+			case MoPackage.CONNECT__OWNER_EQUATION_SECTION:
 				setOwnerEquationSection((EquationSection)null);
 				return;
-			case ModelicaPackage.CONNECT__FROM:
+			case MoPackage.CONNECT__FROM:
 				setFrom((ModelicaPort)null);
 				return;
-			case ModelicaPackage.CONNECT__TO:
+			case MoPackage.CONNECT__TO:
 				setTo((ModelicaPort)null);
 				return;
-			case ModelicaPackage.CONNECT__FROM_MODELICA_PART:
+			case MoPackage.CONNECT__FROM_MODELICA_PART:
 				setFromModelicaPart((ModelicaPart)null);
 				return;
-			case ModelicaPackage.CONNECT__TO_MODELICA_PART:
+			case MoPackage.CONNECT__TO_MODELICA_PART:
 				setToModelicaPart((ModelicaPart)null);
 				return;
-			case ModelicaPackage.CONNECT__FROM_PORT:
+			case MoPackage.CONNECT__FROM_PORT:
 				setFromPort(FROM_PORT_EDEFAULT);
 				return;
-			case ModelicaPackage.CONNECT__TO_PORT:
+			case MoPackage.CONNECT__TO_PORT:
 				setToPort(TO_PORT_EDEFAULT);
 				return;
-			case ModelicaPackage.CONNECT__FROM_PART:
+			case MoPackage.CONNECT__FROM_PART:
 				setFromPart(FROM_PART_EDEFAULT);
 				return;
-			case ModelicaPackage.CONNECT__TO_PART:
+			case MoPackage.CONNECT__TO_PART:
 				setToPart(TO_PART_EDEFAULT);
 				return;
 		}
@@ -629,23 +630,23 @@ public class ConnectImpl extends EObjectImpl implements Connect {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.CONNECT__OWNER_EQUATION_SECTION:
+			case MoPackage.CONNECT__OWNER_EQUATION_SECTION:
 				return getOwnerEquationSection() != null;
-			case ModelicaPackage.CONNECT__FROM:
+			case MoPackage.CONNECT__FROM:
 				return from != null;
-			case ModelicaPackage.CONNECT__TO:
+			case MoPackage.CONNECT__TO:
 				return to != null;
-			case ModelicaPackage.CONNECT__FROM_MODELICA_PART:
+			case MoPackage.CONNECT__FROM_MODELICA_PART:
 				return fromModelicaPart != null;
-			case ModelicaPackage.CONNECT__TO_MODELICA_PART:
+			case MoPackage.CONNECT__TO_MODELICA_PART:
 				return toModelicaPart != null;
-			case ModelicaPackage.CONNECT__FROM_PORT:
+			case MoPackage.CONNECT__FROM_PORT:
 				return FROM_PORT_EDEFAULT == null ? fromPort != null : !FROM_PORT_EDEFAULT.equals(fromPort);
-			case ModelicaPackage.CONNECT__TO_PORT:
+			case MoPackage.CONNECT__TO_PORT:
 				return TO_PORT_EDEFAULT == null ? toPort != null : !TO_PORT_EDEFAULT.equals(toPort);
-			case ModelicaPackage.CONNECT__FROM_PART:
+			case MoPackage.CONNECT__FROM_PART:
 				return FROM_PART_EDEFAULT == null ? fromPart != null : !FROM_PART_EDEFAULT.equals(fromPart);
-			case ModelicaPackage.CONNECT__TO_PART:
+			case MoPackage.CONNECT__TO_PART:
 				return TO_PART_EDEFAULT == null ? toPart != null : !TO_PART_EDEFAULT.equals(toPart);
 		}
 		return super.eIsSet(featureID);

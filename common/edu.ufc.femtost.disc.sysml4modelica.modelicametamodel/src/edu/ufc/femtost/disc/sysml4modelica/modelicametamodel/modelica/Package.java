@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getPackage()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getPackage()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface Package extends ModelicaClassDefinition {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Within Clause</em>' attribute.
 	 * @see #setWithinClause(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getPackage_WithinClause()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getPackage_WithinClause()
 	 * @model
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface Package extends ModelicaClassDefinition {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modelica Classes</em>' containment reference list.
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getPackage_ModelicaClasses()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getPackage_ModelicaClasses()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getOwnerPackage
 	 * @model opposite="ownerPackage" containment="true"
 	 * @generated

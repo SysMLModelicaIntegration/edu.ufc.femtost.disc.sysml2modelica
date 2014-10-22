@@ -11,6 +11,7 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Function;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaCausalityKind;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFunctionParameter;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
@@ -49,6 +50,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaFunctionParameterImpl#getArraySize <em>Array Size</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaFunctionParameterImpl#getVariability <em>Variability</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaFunctionParameterImpl#getType_specifier <em>Type specifier</em>}</li>
+ *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaFunctionParameterImpl#isIsProtected <em>Is Protected</em>}</li>
+ *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaFunctionParameterImpl#getDefault_value <em>Default value</em>}</li>
  * </ul>
  * </p>
  *
@@ -226,6 +229,46 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 	protected String type_specifier = TYPE_SPECIFIER_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #isIsProtected() <em>Is Protected</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsProtected()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_PROTECTED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsProtected() <em>Is Protected</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsProtected()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isProtected = IS_PROTECTED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefault_value() <em>Default value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefault_value()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_VALUE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDefault_value() <em>Default value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefault_value()
+	 * @generated
+	 * @ordered
+	 */
+	protected String default_value = DEFAULT_VALUE_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -241,7 +284,7 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelicaPackage.Literals.MODELICA_FUNCTION_PARAMETER;
+		return MoPackage.Literals.MODELICA_FUNCTION_PARAMETER;
 	}
 
 	/**
@@ -250,7 +293,7 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 	 * @generated
 	 */
 	public Function getOwnerFunction() {
-		if (eContainerFeatureID() != ModelicaPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION) return null;
+		if (eContainerFeatureID() != MoPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION) return null;
 		return (Function)eInternalContainer();
 	}
 
@@ -260,7 +303,7 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 	 * @generated
 	 */
 	public NotificationChain basicSetOwnerFunction(Function newOwnerFunction, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newOwnerFunction, ModelicaPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOwnerFunction, MoPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION, msgs);
 		return msgs;
 	}
 
@@ -270,19 +313,19 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 	 * @generated
 	 */
 	public void setOwnerFunction(Function newOwnerFunction) {
-		if (newOwnerFunction != eInternalContainer() || (eContainerFeatureID() != ModelicaPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION && newOwnerFunction != null)) {
+		if (newOwnerFunction != eInternalContainer() || (eContainerFeatureID() != MoPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION && newOwnerFunction != null)) {
 			if (EcoreUtil.isAncestor(this, newOwnerFunction))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOwnerFunction != null)
-				msgs = ((InternalEObject)newOwnerFunction).eInverseAdd(this, ModelicaPackage.FUNCTION__PARAMETERS, Function.class, msgs);
+				msgs = ((InternalEObject)newOwnerFunction).eInverseAdd(this, MoPackage.FUNCTION__PARAMETERS, Function.class, msgs);
 			msgs = basicSetOwnerFunction(newOwnerFunction, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION, newOwnerFunction, newOwnerFunction));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION, newOwnerFunction, newOwnerFunction));
 	}
 
 	/**
@@ -303,7 +346,7 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_FUNCTION_PARAMETER__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_FUNCTION_PARAMETER__NAME, oldName, name));
 	}
 
 	/**
@@ -324,7 +367,7 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 		ModelicaCausalityKind oldCausality = causality;
 		causality = newCausality == null ? CAUSALITY_EDEFAULT : newCausality;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_FUNCTION_PARAMETER__CAUSALITY, oldCausality, causality));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_FUNCTION_PARAMETER__CAUSALITY, oldCausality, causality));
 	}
 
 	/**
@@ -345,7 +388,7 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 		String oldModification = modification;
 		modification = newModification;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_FUNCTION_PARAMETER__MODIFICATION, oldModification, modification));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_FUNCTION_PARAMETER__MODIFICATION, oldModification, modification));
 	}
 
 	/**
@@ -366,7 +409,7 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 		boolean oldIsReplaceable = isReplaceable;
 		isReplaceable = newIsReplaceable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_FUNCTION_PARAMETER__IS_REPLACEABLE, oldIsReplaceable, isReplaceable));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_FUNCTION_PARAMETER__IS_REPLACEABLE, oldIsReplaceable, isReplaceable));
 	}
 
 	/**
@@ -387,7 +430,7 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 		String oldDeclarationEquation = declarationEquation;
 		declarationEquation = newDeclarationEquation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_FUNCTION_PARAMETER__DECLARATION_EQUATION, oldDeclarationEquation, declarationEquation));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_FUNCTION_PARAMETER__DECLARATION_EQUATION, oldDeclarationEquation, declarationEquation));
 	}
 
 	/**
@@ -408,7 +451,7 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 		boolean oldIsFinal = isFinal;
 		isFinal = newIsFinal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_FUNCTION_PARAMETER__IS_FINAL, oldIsFinal, isFinal));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_FUNCTION_PARAMETER__IS_FINAL, oldIsFinal, isFinal));
 	}
 
 	/**
@@ -418,7 +461,7 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 	 */
 	public EList<String> getArraySize() {
 		if (arraySize == null) {
-			arraySize = new EDataTypeUniqueEList<String>(String.class, this, ModelicaPackage.MODELICA_FUNCTION_PARAMETER__ARRAY_SIZE);
+			arraySize = new EDataTypeUniqueEList<String>(String.class, this, MoPackage.MODELICA_FUNCTION_PARAMETER__ARRAY_SIZE);
 		}
 		return arraySize;
 	}
@@ -441,7 +484,7 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 		ModelicaVariabilityKind oldVariability = variability;
 		variability = newVariability == null ? VARIABILITY_EDEFAULT : newVariability;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_FUNCTION_PARAMETER__VARIABILITY, oldVariability, variability));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_FUNCTION_PARAMETER__VARIABILITY, oldVariability, variability));
 	}
 
 	/**
@@ -462,7 +505,49 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 		String oldType_specifier = type_specifier;
 		type_specifier = newType_specifier;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelicaPackage.MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER, oldType_specifier, type_specifier));
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER, oldType_specifier, type_specifier));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isIsProtected() {
+		return isProtected;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsProtected(boolean newIsProtected) {
+		boolean oldIsProtected = isProtected;
+		isProtected = newIsProtected;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_FUNCTION_PARAMETER__IS_PROTECTED, oldIsProtected, isProtected));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDefault_value() {
+		return default_value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDefault_value(String newDefault_value) {
+		String oldDefault_value = default_value;
+		default_value = newDefault_value;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_FUNCTION_PARAMETER__DEFAULT_VALUE, oldDefault_value, default_value));
 	}
 
 	/**
@@ -473,7 +558,7 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnerFunction((Function)otherEnd, msgs);
@@ -489,7 +574,7 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION:
 				return basicSetOwnerFunction(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -503,8 +588,8 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION:
-				return eInternalContainer().eInverseRemove(this, ModelicaPackage.FUNCTION__PARAMETERS, Function.class, msgs);
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION:
+				return eInternalContainer().eInverseRemove(this, MoPackage.FUNCTION__PARAMETERS, Function.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -517,26 +602,30 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION:
 				return getOwnerFunction();
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__NAME:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__NAME:
 				return getName();
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__CAUSALITY:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__CAUSALITY:
 				return getCausality();
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__MODIFICATION:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__MODIFICATION:
 				return getModification();
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__IS_REPLACEABLE:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__IS_REPLACEABLE:
 				return isIsReplaceable();
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__DECLARATION_EQUATION:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__DECLARATION_EQUATION:
 				return getDeclarationEquation();
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__IS_FINAL:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__IS_FINAL:
 				return isIsFinal();
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__ARRAY_SIZE:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__ARRAY_SIZE:
 				return getArraySize();
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__VARIABILITY:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__VARIABILITY:
 				return getVariability();
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER:
 				return getType_specifier();
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__IS_PROTECTED:
+				return isIsProtected();
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__DEFAULT_VALUE:
+				return getDefault_value();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -550,36 +639,42 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION:
 				setOwnerFunction((Function)newValue);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__NAME:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__NAME:
 				setName((String)newValue);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__CAUSALITY:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__CAUSALITY:
 				setCausality((ModelicaCausalityKind)newValue);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__MODIFICATION:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__MODIFICATION:
 				setModification((String)newValue);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__IS_REPLACEABLE:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__IS_REPLACEABLE:
 				setIsReplaceable((Boolean)newValue);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__DECLARATION_EQUATION:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__DECLARATION_EQUATION:
 				setDeclarationEquation((String)newValue);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__IS_FINAL:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__IS_FINAL:
 				setIsFinal((Boolean)newValue);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__ARRAY_SIZE:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__ARRAY_SIZE:
 				getArraySize().clear();
 				getArraySize().addAll((Collection<? extends String>)newValue);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__VARIABILITY:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__VARIABILITY:
 				setVariability((ModelicaVariabilityKind)newValue);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER:
 				setType_specifier((String)newValue);
+				return;
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__IS_PROTECTED:
+				setIsProtected((Boolean)newValue);
+				return;
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__DEFAULT_VALUE:
+				setDefault_value((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -593,35 +688,41 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION:
 				setOwnerFunction((Function)null);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__NAME:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__CAUSALITY:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__CAUSALITY:
 				setCausality(CAUSALITY_EDEFAULT);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__MODIFICATION:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__MODIFICATION:
 				setModification(MODIFICATION_EDEFAULT);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__IS_REPLACEABLE:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__IS_REPLACEABLE:
 				setIsReplaceable(IS_REPLACEABLE_EDEFAULT);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__DECLARATION_EQUATION:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__DECLARATION_EQUATION:
 				setDeclarationEquation(DECLARATION_EQUATION_EDEFAULT);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__IS_FINAL:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__IS_FINAL:
 				setIsFinal(IS_FINAL_EDEFAULT);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__ARRAY_SIZE:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__ARRAY_SIZE:
 				getArraySize().clear();
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__VARIABILITY:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__VARIABILITY:
 				setVariability(VARIABILITY_EDEFAULT);
 				return;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER:
 				setType_specifier(TYPE_SPECIFIER_EDEFAULT);
+				return;
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__IS_PROTECTED:
+				setIsProtected(IS_PROTECTED_EDEFAULT);
+				return;
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__DEFAULT_VALUE:
+				setDefault_value(DEFAULT_VALUE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -635,26 +736,30 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__OWNER_FUNCTION:
 				return getOwnerFunction() != null;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__NAME:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__CAUSALITY:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__CAUSALITY:
 				return causality != CAUSALITY_EDEFAULT;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__MODIFICATION:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__MODIFICATION:
 				return MODIFICATION_EDEFAULT == null ? modification != null : !MODIFICATION_EDEFAULT.equals(modification);
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__IS_REPLACEABLE:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__IS_REPLACEABLE:
 				return isReplaceable != IS_REPLACEABLE_EDEFAULT;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__DECLARATION_EQUATION:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__DECLARATION_EQUATION:
 				return DECLARATION_EQUATION_EDEFAULT == null ? declarationEquation != null : !DECLARATION_EQUATION_EDEFAULT.equals(declarationEquation);
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__IS_FINAL:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__IS_FINAL:
 				return isFinal != IS_FINAL_EDEFAULT;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__ARRAY_SIZE:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__ARRAY_SIZE:
 				return arraySize != null && !arraySize.isEmpty();
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__VARIABILITY:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__VARIABILITY:
 				return variability != VARIABILITY_EDEFAULT;
-			case ModelicaPackage.MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER:
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER:
 				return TYPE_SPECIFIER_EDEFAULT == null ? type_specifier != null : !TYPE_SPECIFIER_EDEFAULT.equals(type_specifier);
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__IS_PROTECTED:
+				return isProtected != IS_PROTECTED_EDEFAULT;
+			case MoPackage.MODELICA_FUNCTION_PARAMETER__DEFAULT_VALUE:
+				return DEFAULT_VALUE_EDEFAULT == null ? default_value != null : !DEFAULT_VALUE_EDEFAULT.equals(default_value);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -687,6 +792,10 @@ public class ModelicaFunctionParameterImpl extends EObjectImpl implements Modeli
 		result.append(variability);
 		result.append(", type_specifier: ");
 		result.append(type_specifier);
+		result.append(", isProtected: ");
+		result.append(isProtected);
+		result.append(", default_value: ");
+		result.append(default_value);
 		result.append(')');
 		return result.toString();
 	}

@@ -17,7 +17,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getClass_()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getClass_()
  * @model
  * @generated
  */

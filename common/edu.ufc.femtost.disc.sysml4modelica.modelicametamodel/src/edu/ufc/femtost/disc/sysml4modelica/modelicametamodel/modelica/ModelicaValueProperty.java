@@ -28,7 +28,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaValueProperty()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaValueProperty()
  * @model
  * @generated
  */
@@ -45,7 +45,7 @@ public interface ModelicaValueProperty extends ModelicaComponent {
 	 * @return the value of the '<em>Visibility</em>' attribute.
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind
 	 * @see #setVisibility(VisibilityKind)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaValueProperty_Visibility()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaValueProperty_Visibility()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -74,7 +74,7 @@ public interface ModelicaValueProperty extends ModelicaComponent {
 	 * @return the value of the '<em>Causality</em>' attribute.
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaCausalityKind
 	 * @see #setCausality(ModelicaCausalityKind)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaValueProperty_Causality()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaValueProperty_Causality()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -103,7 +103,7 @@ public interface ModelicaValueProperty extends ModelicaComponent {
 	 * @return the value of the '<em>Variability</em>' attribute.
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaVariabilityKind
 	 * @see #setVariability(ModelicaVariabilityKind)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaValueProperty_Variability()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaValueProperty_Variability()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -132,7 +132,7 @@ public interface ModelicaValueProperty extends ModelicaComponent {
 	 * @return the value of the '<em>Flow Flag</em>' attribute.
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFlowFlag
 	 * @see #setFlowFlag(ModelicaFlowFlag)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaValueProperty_FlowFlag()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaValueProperty_FlowFlag()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -161,7 +161,7 @@ public interface ModelicaValueProperty extends ModelicaComponent {
 	 * @return the value of the '<em>Scope</em>' attribute.
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaScopeKind
 	 * @see #setScope(ModelicaScopeKind)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaValueProperty_Scope()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaValueProperty_Scope()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -188,7 +188,7 @@ public interface ModelicaValueProperty extends ModelicaComponent {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Default value</em>' attribute.
 	 * @see #setDefault_value(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getModelicaValueProperty_Default_value()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaValueProperty_Default_value()
 	 * @model
 	 * @generated
 	 */

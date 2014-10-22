@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConnect()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect()
  * @model
  * @generated
  */
@@ -48,7 +48,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owner Equation Section</em>' container reference.
 	 * @see #setOwnerEquationSection(EquationSection)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConnect_OwnerEquationSection()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_OwnerEquationSection()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection#getConnects
 	 * @model opposite="connects" transient="false"
 	 * @generated
@@ -75,7 +75,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From</em>' reference.
 	 * @see #setFrom(ModelicaPort)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConnect_From()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_From()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -101,7 +101,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To</em>' reference.
 	 * @see #setTo(ModelicaPort)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConnect_To()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_To()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -127,7 +127,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Modelica Part</em>' reference.
 	 * @see #setFromModelicaPart(ModelicaPart)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConnect_FromModelicaPart()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_FromModelicaPart()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -153,7 +153,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Modelica Part</em>' reference.
 	 * @see #setToModelicaPart(ModelicaPart)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConnect_ToModelicaPart()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_ToModelicaPart()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -179,7 +179,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Port</em>' attribute.
 	 * @see #setFromPort(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConnect_FromPort()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_FromPort()
 	 * @model
 	 * @generated
 	 */
@@ -205,7 +205,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Port</em>' attribute.
 	 * @see #setToPort(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConnect_ToPort()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_ToPort()
 	 * @model
 	 * @generated
 	 */
@@ -231,7 +231,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Part</em>' attribute.
 	 * @see #setFromPart(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConnect_FromPart()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_FromPart()
 	 * @model
 	 * @generated
 	 */
@@ -257,7 +257,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Part</em>' attribute.
 	 * @see #setToPart(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage#getConnect_ToPart()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_ToPart()
 	 * @model
 	 * @generated
 	 */
