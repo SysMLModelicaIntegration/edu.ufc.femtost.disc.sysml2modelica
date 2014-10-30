@@ -21,4 +21,5 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
 Export-Package: edu.ufc.femtost.disc.sysml4modelica.codegen.main
+Import-Package: edu.ufc.femtost.disc.sysml4modelica.profile.classes
 

@@ -20,15 +20,18 @@
  */]
 [template public generateModelicaFunction(aFunction : Function)]
 	function [aFunction.name/]
-	[for (aModelicaFunctionParameter : ModelicaFunctionParameter | aFunction.parameters)][generateModelicaFunctionParameter(aModelicaFunctionParameter)/]
+	[for (aModelicaFunctionParameter : ModelicaFunctionParameter | aFunction.parameters->select(p | not p.isProtected))][generateModelicaFunctionParameter(aModelicaFunctionParameter)/]
 	[/for]
+	[if (aFunction.parameters->exists(p | p.isProtected))]protected
+	[for (aModelicaFunctionParameter : ModelicaFunctionParameter | aFunction.parameters->select(p | p.isProtected))][generateModelicaFunctionParameter(aModelicaFunctionParameter)/]
+	[/for][/if]
 	[for (aModelicaAlgorithm : AlgorithmSection | aFunction.algorithmSections)][generateModelicaAlgorithmSection(aModelicaAlgorithm)/]
 	[/for]
 	end [aFunction.name/];
 [/template]
 
 [template public generateModelicaFunctionParameter(aModelicaFunctionParameter : ModelicaFunctionParameter)]
-	[aModelicaFunctionParameter.causality.toString()/] [aModelicaFunctionParameter.type_specifier/] [aModelicaFunctionParameter.name/];
+	[if (not aModelicaFunctionParameter.causality.toString().contains('none'))][aModelicaFunctionParameter.causality.toString()/][/if][if(aModelicaFunctionParameter.variability.toString().contains('constant'))]constant[/if] [aModelicaFunctionParameter.type_specifier/] [aModelicaFunctionParameter.name/][if(not aModelicaFunctionParameter.default_value.oclIsUndefined())] = [aModelicaFunctionParameter.default_value.toString()/][/if];
 [/template]
 
 [template public generateModelicaAlgorithmSection(aModelicaAlgorithm : AlgorithmSection)]

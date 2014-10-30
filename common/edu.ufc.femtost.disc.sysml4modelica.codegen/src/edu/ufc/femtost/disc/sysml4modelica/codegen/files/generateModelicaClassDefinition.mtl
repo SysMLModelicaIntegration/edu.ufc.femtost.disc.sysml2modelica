@@ -159,7 +159,7 @@ end [aModelicaClassDefinition.name/];
 [/template]
 
 [template public generateModelicaValueProperty(aModelicaValueProperty : ModelicaValueProperty)]
-[if(aModelicaValueProperty.visibility.toString() <> 'public')][aModelicaValueProperty.visibility.toString()/] [/if][if(aModelicaValueProperty.flowFlag.toString() <> 'none')][aModelicaValueProperty.flowFlag.toString()/] [/if][if(aModelicaValueProperty.variability.toString() <> 'continuous')][aModelicaValueProperty.variability.toString()/] [/if][if(aModelicaValueProperty.causality.toString() <> 'none')][aModelicaValueProperty.causality.toString()/] [/if][aModelicaValueProperty.type_specifier/] [aModelicaValueProperty.name/][if(not aModelicaValueProperty.modification.oclIsUndefined() and aModelicaValueProperty.modification <> '')] ([aModelicaValueProperty.modification/])[/if][if(aModelicaValueProperty.default_value <> 'null' and not aModelicaValueProperty.default_value.oclIsUndefined())] = [aModelicaValueProperty.default_value/][/if];
+[if(aModelicaValueProperty.visibility.toString() <> 'public')][aModelicaValueProperty.visibility.toString()/] [/if][if(aModelicaValueProperty.flowFlag.toString() <> 'none')][aModelicaValueProperty.flowFlag.toString()/] [/if][if(aModelicaValueProperty.variability.toString() <> 'continuous')][aModelicaValueProperty.variability.toString()/] [/if][if(aModelicaValueProperty.causality.toString() <> 'none')][aModelicaValueProperty.causality.toString()/] [/if][aModelicaValueProperty.type_specifier/] [aModelicaValueProperty.name/][if (not aModelicaValueProperty.arraySize->first().oclIsUndefined())][ '[' /][for(arraySize : String | aModelicaValueProperty.arraySize) separator(', ')][arraySize/][/for][ ']' /] [/if][if(not aModelicaValueProperty.modification.oclIsUndefined() and aModelicaValueProperty.modification <> '')] ([aModelicaValueProperty.modification/])[/if][if(aModelicaValueProperty.default_value <> 'null' and not aModelicaValueProperty.default_value.oclIsUndefined())] = [aModelicaValueProperty.default_value/][/if];
 [/template]
 
 [template public generateModelicaPort(aModelicaPort : ModelicaPort)]
@@ -171,16 +171,16 @@ end [aModelicaClassDefinition.name/];
 [/template]
 
 [template public generateEquationSection(aEquationSection : EquationSection)]
-equation
-	[for(aConnects : Connect | aEquationSection.connects)][generateConnect(aConnects)/]
-[/for]
-	[for(aEquation : Equation | aEquationSection.equations->select(e | not e.isInitial))][generateEquation(aEquation)/]
-[/for]
 [if(aEquationSection.equations->exists(e | e.isInitial))]
 initial equation
 	[for(aEquation : Equation | aEquationSection.equations->select(e | e.isInitial))][generateEquation(aEquation)/]
 [/for]
 [/if]
+equation
+	[for(aConnects : Connect | aEquationSection.connects)][generateConnect(aConnects)/]
+[/for]
+	[for(aEquation : Equation | aEquationSection.equations->select(e | not e.isInitial))][generateEquation(aEquation)/]
+[/for]
 [/template]
 
 [template public generateConnect(aConnect : Connect)]

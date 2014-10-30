@@ -18,7 +18,7 @@
         <acceleoCompiler 
             sourceFolder="${target.folder}"
             outputFolder="${target.folder}"
-            dependencies="${target.folder}/../../edu.ufc.femtost.disc.sysml4modelica.modelicametamodel;"
+            dependencies="${target.folder}/../../edu.ufc.femtost.disc.sysml4modelica.modelicametamodel;${target.folder}/../../edu.ufc.femtost.disc.sysml4modelica.papyrus.profile;"
             binaryResource="false"
             packagesToRegister="">
         </acceleoCompiler>
