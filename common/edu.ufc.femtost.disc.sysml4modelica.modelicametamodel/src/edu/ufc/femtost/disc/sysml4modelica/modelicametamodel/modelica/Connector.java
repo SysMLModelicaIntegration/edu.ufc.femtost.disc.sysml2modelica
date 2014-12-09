@@ -1,13 +1,5 @@
-/*******************************************************************************
- * Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comte
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * Contributors:
- *     Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation
- *******************************************************************************/
+/**
+ */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
 
 
@@ -23,7 +15,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnector()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getConnector()
  * @model
  * @generated
  */
@@ -38,7 +30,7 @@ public interface Connector extends ModelicaClassDefinition {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Expandable</em>' attribute.
 	 * @see #setIsExpandable(boolean)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnector_IsExpandable()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getConnector_IsExpandable()
 	 * @model required="true"
 	 * @generated
 	 */

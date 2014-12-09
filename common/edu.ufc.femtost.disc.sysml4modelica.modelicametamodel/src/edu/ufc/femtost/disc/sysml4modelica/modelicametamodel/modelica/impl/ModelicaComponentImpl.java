@@ -1,19 +1,10 @@
-/*******************************************************************************
- * Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comte
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * Contributors:
- *     Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation
- *******************************************************************************/
+/**
+ */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaComponent;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 
@@ -33,7 +24,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Component</b></em>'.
+ * An implementation of the model object '<em><b>Modelica Component</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -198,7 +189,7 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MoPackage.Literals.MODELICA_COMPONENT;
+		return modelicaPackage.Literals.MODELICA_COMPONENT;
 	}
 
 	/**
@@ -219,7 +210,7 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 		String oldConditionalExpression = conditionalExpression;
 		conditionalExpression = newConditionalExpression;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_COMPONENT__CONDITIONAL_EXPRESSION, oldConditionalExpression, conditionalExpression));
+			eNotify(new ENotificationImpl(this, Notification.SET, modelicaPackage.MODELICA_COMPONENT__CONDITIONAL_EXPRESSION, oldConditionalExpression, conditionalExpression));
 	}
 
 	/**
@@ -240,7 +231,7 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_COMPONENT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, modelicaPackage.MODELICA_COMPONENT__NAME, oldName, name));
 	}
 
 	/**
@@ -261,7 +252,7 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 		boolean oldIsFinal = isFinal;
 		isFinal = newIsFinal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_COMPONENT__IS_FINAL, oldIsFinal, isFinal));
+			eNotify(new ENotificationImpl(this, Notification.SET, modelicaPackage.MODELICA_COMPONENT__IS_FINAL, oldIsFinal, isFinal));
 	}
 
 	/**
@@ -282,7 +273,7 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 		String oldModification = modification;
 		modification = newModification;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_COMPONENT__MODIFICATION, oldModification, modification));
+			eNotify(new ENotificationImpl(this, Notification.SET, modelicaPackage.MODELICA_COMPONENT__MODIFICATION, oldModification, modification));
 	}
 
 	/**
@@ -303,7 +294,7 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 		boolean oldIsReplaceable = isReplaceable;
 		isReplaceable = newIsReplaceable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_COMPONENT__IS_REPLACEABLE, oldIsReplaceable, isReplaceable));
+			eNotify(new ENotificationImpl(this, Notification.SET, modelicaPackage.MODELICA_COMPONENT__IS_REPLACEABLE, oldIsReplaceable, isReplaceable));
 	}
 
 	/**
@@ -313,7 +304,7 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 	 */
 	public EList<String> getArraySize() {
 		if (arraySize == null) {
-			arraySize = new EDataTypeUniqueEList<String>(String.class, this, MoPackage.MODELICA_COMPONENT__ARRAY_SIZE);
+			arraySize = new EDataTypeUniqueEList<String>(String.class, this, modelicaPackage.MODELICA_COMPONENT__ARRAY_SIZE);
 		}
 		return arraySize;
 	}
@@ -324,7 +315,7 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 	 * @generated
 	 */
 	public ModelicaClassDefinition getOwnerModelicaClassDefinition() {
-		if (eContainerFeatureID() != MoPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION) return null;
+		if (eContainerFeatureID() != modelicaPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION) return null;
 		return (ModelicaClassDefinition)eInternalContainer();
 	}
 
@@ -334,7 +325,7 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 	 * @generated
 	 */
 	public NotificationChain basicSetOwnerModelicaClassDefinition(ModelicaClassDefinition newOwnerModelicaClassDefinition, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newOwnerModelicaClassDefinition, MoPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOwnerModelicaClassDefinition, modelicaPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION, msgs);
 		return msgs;
 	}
 
@@ -344,19 +335,19 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 	 * @generated
 	 */
 	public void setOwnerModelicaClassDefinition(ModelicaClassDefinition newOwnerModelicaClassDefinition) {
-		if (newOwnerModelicaClassDefinition != eInternalContainer() || (eContainerFeatureID() != MoPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION && newOwnerModelicaClassDefinition != null)) {
+		if (newOwnerModelicaClassDefinition != eInternalContainer() || (eContainerFeatureID() != modelicaPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION && newOwnerModelicaClassDefinition != null)) {
 			if (EcoreUtil.isAncestor(this, newOwnerModelicaClassDefinition))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOwnerModelicaClassDefinition != null)
-				msgs = ((InternalEObject)newOwnerModelicaClassDefinition).eInverseAdd(this, MoPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS, ModelicaClassDefinition.class, msgs);
+				msgs = ((InternalEObject)newOwnerModelicaClassDefinition).eInverseAdd(this, modelicaPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS, ModelicaClassDefinition.class, msgs);
 			msgs = basicSetOwnerModelicaClassDefinition(newOwnerModelicaClassDefinition, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION, newOwnerModelicaClassDefinition, newOwnerModelicaClassDefinition));
+			eNotify(new ENotificationImpl(this, Notification.SET, modelicaPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION, newOwnerModelicaClassDefinition, newOwnerModelicaClassDefinition));
 	}
 
 	/**
@@ -377,7 +368,7 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 		String oldType_specifier = type_specifier;
 		type_specifier = newType_specifier;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_COMPONENT__TYPE_SPECIFIER, oldType_specifier, type_specifier));
+			eNotify(new ENotificationImpl(this, Notification.SET, modelicaPackage.MODELICA_COMPONENT__TYPE_SPECIFIER, oldType_specifier, type_specifier));
 	}
 
 	/**
@@ -388,7 +379,7 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MoPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION:
+			case modelicaPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnerModelicaClassDefinition((ModelicaClassDefinition)otherEnd, msgs);
@@ -404,7 +395,7 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MoPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION:
+			case modelicaPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION:
 				return basicSetOwnerModelicaClassDefinition(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -418,8 +409,8 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case MoPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION:
-				return eInternalContainer().eInverseRemove(this, MoPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS, ModelicaClassDefinition.class, msgs);
+			case modelicaPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION:
+				return eInternalContainer().eInverseRemove(this, modelicaPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS, ModelicaClassDefinition.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -432,21 +423,21 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MoPackage.MODELICA_COMPONENT__CONDITIONAL_EXPRESSION:
+			case modelicaPackage.MODELICA_COMPONENT__CONDITIONAL_EXPRESSION:
 				return getConditionalExpression();
-			case MoPackage.MODELICA_COMPONENT__NAME:
+			case modelicaPackage.MODELICA_COMPONENT__NAME:
 				return getName();
-			case MoPackage.MODELICA_COMPONENT__IS_FINAL:
+			case modelicaPackage.MODELICA_COMPONENT__IS_FINAL:
 				return isIsFinal();
-			case MoPackage.MODELICA_COMPONENT__MODIFICATION:
+			case modelicaPackage.MODELICA_COMPONENT__MODIFICATION:
 				return getModification();
-			case MoPackage.MODELICA_COMPONENT__IS_REPLACEABLE:
+			case modelicaPackage.MODELICA_COMPONENT__IS_REPLACEABLE:
 				return isIsReplaceable();
-			case MoPackage.MODELICA_COMPONENT__ARRAY_SIZE:
+			case modelicaPackage.MODELICA_COMPONENT__ARRAY_SIZE:
 				return getArraySize();
-			case MoPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION:
+			case modelicaPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION:
 				return getOwnerModelicaClassDefinition();
-			case MoPackage.MODELICA_COMPONENT__TYPE_SPECIFIER:
+			case modelicaPackage.MODELICA_COMPONENT__TYPE_SPECIFIER:
 				return getType_specifier();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -461,29 +452,29 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MoPackage.MODELICA_COMPONENT__CONDITIONAL_EXPRESSION:
+			case modelicaPackage.MODELICA_COMPONENT__CONDITIONAL_EXPRESSION:
 				setConditionalExpression((String)newValue);
 				return;
-			case MoPackage.MODELICA_COMPONENT__NAME:
+			case modelicaPackage.MODELICA_COMPONENT__NAME:
 				setName((String)newValue);
 				return;
-			case MoPackage.MODELICA_COMPONENT__IS_FINAL:
+			case modelicaPackage.MODELICA_COMPONENT__IS_FINAL:
 				setIsFinal((Boolean)newValue);
 				return;
-			case MoPackage.MODELICA_COMPONENT__MODIFICATION:
+			case modelicaPackage.MODELICA_COMPONENT__MODIFICATION:
 				setModification((String)newValue);
 				return;
-			case MoPackage.MODELICA_COMPONENT__IS_REPLACEABLE:
+			case modelicaPackage.MODELICA_COMPONENT__IS_REPLACEABLE:
 				setIsReplaceable((Boolean)newValue);
 				return;
-			case MoPackage.MODELICA_COMPONENT__ARRAY_SIZE:
+			case modelicaPackage.MODELICA_COMPONENT__ARRAY_SIZE:
 				getArraySize().clear();
 				getArraySize().addAll((Collection<? extends String>)newValue);
 				return;
-			case MoPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION:
+			case modelicaPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION:
 				setOwnerModelicaClassDefinition((ModelicaClassDefinition)newValue);
 				return;
-			case MoPackage.MODELICA_COMPONENT__TYPE_SPECIFIER:
+			case modelicaPackage.MODELICA_COMPONENT__TYPE_SPECIFIER:
 				setType_specifier((String)newValue);
 				return;
 		}
@@ -498,28 +489,28 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MoPackage.MODELICA_COMPONENT__CONDITIONAL_EXPRESSION:
+			case modelicaPackage.MODELICA_COMPONENT__CONDITIONAL_EXPRESSION:
 				setConditionalExpression(CONDITIONAL_EXPRESSION_EDEFAULT);
 				return;
-			case MoPackage.MODELICA_COMPONENT__NAME:
+			case modelicaPackage.MODELICA_COMPONENT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case MoPackage.MODELICA_COMPONENT__IS_FINAL:
+			case modelicaPackage.MODELICA_COMPONENT__IS_FINAL:
 				setIsFinal(IS_FINAL_EDEFAULT);
 				return;
-			case MoPackage.MODELICA_COMPONENT__MODIFICATION:
+			case modelicaPackage.MODELICA_COMPONENT__MODIFICATION:
 				setModification(MODIFICATION_EDEFAULT);
 				return;
-			case MoPackage.MODELICA_COMPONENT__IS_REPLACEABLE:
+			case modelicaPackage.MODELICA_COMPONENT__IS_REPLACEABLE:
 				setIsReplaceable(IS_REPLACEABLE_EDEFAULT);
 				return;
-			case MoPackage.MODELICA_COMPONENT__ARRAY_SIZE:
+			case modelicaPackage.MODELICA_COMPONENT__ARRAY_SIZE:
 				getArraySize().clear();
 				return;
-			case MoPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION:
+			case modelicaPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION:
 				setOwnerModelicaClassDefinition((ModelicaClassDefinition)null);
 				return;
-			case MoPackage.MODELICA_COMPONENT__TYPE_SPECIFIER:
+			case modelicaPackage.MODELICA_COMPONENT__TYPE_SPECIFIER:
 				setType_specifier(TYPE_SPECIFIER_EDEFAULT);
 				return;
 		}
@@ -534,21 +525,21 @@ public abstract class ModelicaComponentImpl extends EObjectImpl implements Model
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MoPackage.MODELICA_COMPONENT__CONDITIONAL_EXPRESSION:
+			case modelicaPackage.MODELICA_COMPONENT__CONDITIONAL_EXPRESSION:
 				return CONDITIONAL_EXPRESSION_EDEFAULT == null ? conditionalExpression != null : !CONDITIONAL_EXPRESSION_EDEFAULT.equals(conditionalExpression);
-			case MoPackage.MODELICA_COMPONENT__NAME:
+			case modelicaPackage.MODELICA_COMPONENT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case MoPackage.MODELICA_COMPONENT__IS_FINAL:
+			case modelicaPackage.MODELICA_COMPONENT__IS_FINAL:
 				return isFinal != IS_FINAL_EDEFAULT;
-			case MoPackage.MODELICA_COMPONENT__MODIFICATION:
+			case modelicaPackage.MODELICA_COMPONENT__MODIFICATION:
 				return MODIFICATION_EDEFAULT == null ? modification != null : !MODIFICATION_EDEFAULT.equals(modification);
-			case MoPackage.MODELICA_COMPONENT__IS_REPLACEABLE:
+			case modelicaPackage.MODELICA_COMPONENT__IS_REPLACEABLE:
 				return isReplaceable != IS_REPLACEABLE_EDEFAULT;
-			case MoPackage.MODELICA_COMPONENT__ARRAY_SIZE:
+			case modelicaPackage.MODELICA_COMPONENT__ARRAY_SIZE:
 				return arraySize != null && !arraySize.isEmpty();
-			case MoPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION:
+			case modelicaPackage.MODELICA_COMPONENT__OWNER_MODELICA_CLASS_DEFINITION:
 				return getOwnerModelicaClassDefinition() != null;
-			case MoPackage.MODELICA_COMPONENT__TYPE_SPECIFIER:
+			case modelicaPackage.MODELICA_COMPONENT__TYPE_SPECIFIER:
 				return TYPE_SPECIFIER_EDEFAULT == null ? type_specifier != null : !TYPE_SPECIFIER_EDEFAULT.equals(type_specifier);
 		}
 		return super.eIsSet(featureID);

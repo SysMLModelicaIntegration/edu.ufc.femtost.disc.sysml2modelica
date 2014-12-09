@@ -1,13 +1,5 @@
-/*******************************************************************************
- * Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comte
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * Contributors:
- *     Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation
- *******************************************************************************/
+/**
+ */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
 
 import org.eclipse.emf.common.util.EList;
@@ -16,7 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Function Parameter</b></em>'.
+ * A representation of the model object '<em><b>Modelica Function Parameter</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -37,7 +29,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaFunctionParameter()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaFunctionParameter()
  * @model
  * @generated
  */
@@ -53,7 +45,7 @@ public interface ModelicaFunctionParameter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owner Function</em>' container reference.
 	 * @see #setOwnerFunction(Function)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaFunctionParameter_OwnerFunction()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaFunctionParameter_OwnerFunction()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Function#getParameters
 	 * @model opposite="parameters" transient="false"
 	 * @generated
@@ -80,7 +72,7 @@ public interface ModelicaFunctionParameter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaFunctionParameter_Name()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaFunctionParameter_Name()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -108,7 +100,7 @@ public interface ModelicaFunctionParameter extends EObject {
 	 * @return the value of the '<em>Causality</em>' attribute.
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaCausalityKind
 	 * @see #setCausality(ModelicaCausalityKind)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaFunctionParameter_Causality()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaFunctionParameter_Causality()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -135,7 +127,7 @@ public interface ModelicaFunctionParameter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modification</em>' attribute.
 	 * @see #setModification(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaFunctionParameter_Modification()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaFunctionParameter_Modification()
 	 * @model
 	 * @generated
 	 */
@@ -161,7 +153,7 @@ public interface ModelicaFunctionParameter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Replaceable</em>' attribute.
 	 * @see #setIsReplaceable(boolean)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaFunctionParameter_IsReplaceable()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaFunctionParameter_IsReplaceable()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -187,7 +179,7 @@ public interface ModelicaFunctionParameter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Declaration Equation</em>' attribute.
 	 * @see #setDeclarationEquation(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaFunctionParameter_DeclarationEquation()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaFunctionParameter_DeclarationEquation()
 	 * @model
 	 * @generated
 	 */
@@ -213,7 +205,7 @@ public interface ModelicaFunctionParameter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Final</em>' attribute.
 	 * @see #setIsFinal(boolean)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaFunctionParameter_IsFinal()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaFunctionParameter_IsFinal()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -239,7 +231,7 @@ public interface ModelicaFunctionParameter extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Array Size</em>' attribute list.
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaFunctionParameter_ArraySize()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaFunctionParameter_ArraySize()
 	 * @model
 	 * @generated
 	 */
@@ -257,7 +249,7 @@ public interface ModelicaFunctionParameter extends EObject {
 	 * @return the value of the '<em>Variability</em>' attribute.
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaVariabilityKind
 	 * @see #setVariability(ModelicaVariabilityKind)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaFunctionParameter_Variability()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaFunctionParameter_Variability()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -284,7 +276,7 @@ public interface ModelicaFunctionParameter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type specifier</em>' attribute.
 	 * @see #setType_specifier(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaFunctionParameter_Type_specifier()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaFunctionParameter_Type_specifier()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -310,7 +302,7 @@ public interface ModelicaFunctionParameter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Protected</em>' attribute.
 	 * @see #setIsProtected(boolean)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaFunctionParameter_IsProtected()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaFunctionParameter_IsProtected()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -336,7 +328,7 @@ public interface ModelicaFunctionParameter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Default value</em>' attribute.
 	 * @see #setDefault_value(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaFunctionParameter_Default_value()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaFunctionParameter_Default_value()
 	 * @model
 	 * @generated
 	 */

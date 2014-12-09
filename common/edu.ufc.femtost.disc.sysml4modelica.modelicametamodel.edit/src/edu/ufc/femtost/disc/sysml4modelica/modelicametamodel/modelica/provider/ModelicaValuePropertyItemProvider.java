@@ -3,9 +3,8 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaValueProperty;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,12 +13,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -29,14 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModelicaValuePropertyItemProvider
-	extends ModelicaComponentItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class ModelicaValuePropertyItemProvider extends ModelicaComponentItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -81,7 +68,7 @@ public class ModelicaValuePropertyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaValueProperty_visibility_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaValueProperty_visibility_feature", "_UI_ModelicaValueProperty_type"),
-				 MoPackage.Literals.MODELICA_VALUE_PROPERTY__VISIBILITY,
+				 modelicaPackage.Literals.MODELICA_VALUE_PROPERTY__VISIBILITY,
 				 true,
 				 false,
 				 false,
@@ -103,7 +90,7 @@ public class ModelicaValuePropertyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaValueProperty_causality_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaValueProperty_causality_feature", "_UI_ModelicaValueProperty_type"),
-				 MoPackage.Literals.MODELICA_VALUE_PROPERTY__CAUSALITY,
+				 modelicaPackage.Literals.MODELICA_VALUE_PROPERTY__CAUSALITY,
 				 true,
 				 false,
 				 false,
@@ -125,7 +112,7 @@ public class ModelicaValuePropertyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaValueProperty_variability_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaValueProperty_variability_feature", "_UI_ModelicaValueProperty_type"),
-				 MoPackage.Literals.MODELICA_VALUE_PROPERTY__VARIABILITY,
+				 modelicaPackage.Literals.MODELICA_VALUE_PROPERTY__VARIABILITY,
 				 true,
 				 false,
 				 false,
@@ -147,7 +134,7 @@ public class ModelicaValuePropertyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaValueProperty_flowFlag_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaValueProperty_flowFlag_feature", "_UI_ModelicaValueProperty_type"),
-				 MoPackage.Literals.MODELICA_VALUE_PROPERTY__FLOW_FLAG,
+				 modelicaPackage.Literals.MODELICA_VALUE_PROPERTY__FLOW_FLAG,
 				 true,
 				 false,
 				 false,
@@ -169,7 +156,7 @@ public class ModelicaValuePropertyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaValueProperty_scope_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaValueProperty_scope_feature", "_UI_ModelicaValueProperty_type"),
-				 MoPackage.Literals.MODELICA_VALUE_PROPERTY__SCOPE,
+				 modelicaPackage.Literals.MODELICA_VALUE_PROPERTY__SCOPE,
 				 true,
 				 false,
 				 false,
@@ -191,7 +178,7 @@ public class ModelicaValuePropertyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaValueProperty_default_value_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaValueProperty_default_value_feature", "_UI_ModelicaValueProperty_type"),
-				 MoPackage.Literals.MODELICA_VALUE_PROPERTY__DEFAULT_VALUE,
+				 modelicaPackage.Literals.MODELICA_VALUE_PROPERTY__DEFAULT_VALUE,
 				 true,
 				 false,
 				 false,
@@ -224,6 +211,7 @@ public class ModelicaValuePropertyItemProvider
 			getString("_UI_ModelicaValueProperty_type") :
 			getString("_UI_ModelicaValueProperty_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -237,12 +225,12 @@ public class ModelicaValuePropertyItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ModelicaValueProperty.class)) {
-			case MoPackage.MODELICA_VALUE_PROPERTY__VISIBILITY:
-			case MoPackage.MODELICA_VALUE_PROPERTY__CAUSALITY:
-			case MoPackage.MODELICA_VALUE_PROPERTY__VARIABILITY:
-			case MoPackage.MODELICA_VALUE_PROPERTY__FLOW_FLAG:
-			case MoPackage.MODELICA_VALUE_PROPERTY__SCOPE:
-			case MoPackage.MODELICA_VALUE_PROPERTY__DEFAULT_VALUE:
+			case modelicaPackage.MODELICA_VALUE_PROPERTY__VISIBILITY:
+			case modelicaPackage.MODELICA_VALUE_PROPERTY__CAUSALITY:
+			case modelicaPackage.MODELICA_VALUE_PROPERTY__VARIABILITY:
+			case modelicaPackage.MODELICA_VALUE_PROPERTY__FLOW_FLAG:
+			case modelicaPackage.MODELICA_VALUE_PROPERTY__SCOPE:
+			case modelicaPackage.MODELICA_VALUE_PROPERTY__DEFAULT_VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

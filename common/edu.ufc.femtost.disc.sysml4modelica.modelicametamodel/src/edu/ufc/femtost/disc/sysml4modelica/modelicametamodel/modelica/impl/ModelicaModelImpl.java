@@ -1,19 +1,10 @@
-/*******************************************************************************
- * Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comte
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * Contributors:
- *     Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation
- *******************************************************************************/
+/**
+ */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaModel;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 
@@ -33,7 +24,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Model</b></em>'.
+ * An implementation of the model object '<em><b>Modelica Model</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -92,7 +83,7 @@ public class ModelicaModelImpl extends EObjectImpl implements ModelicaModel {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MoPackage.Literals.MODELICA_MODEL;
+		return modelicaPackage.Literals.MODELICA_MODEL;
 	}
 
 	/**
@@ -113,7 +104,7 @@ public class ModelicaModelImpl extends EObjectImpl implements ModelicaModel {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.MODELICA_MODEL__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, modelicaPackage.MODELICA_MODEL__NAME, oldName, name));
 	}
 
 	/**
@@ -123,7 +114,7 @@ public class ModelicaModelImpl extends EObjectImpl implements ModelicaModel {
 	 */
 	public EList<ModelicaClassDefinition> getModelicaClasses() {
 		if (modelicaClasses == null) {
-			modelicaClasses = new EObjectContainmentWithInverseEList<ModelicaClassDefinition>(ModelicaClassDefinition.class, this, MoPackage.MODELICA_MODEL__MODELICA_CLASSES, MoPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL);
+			modelicaClasses = new EObjectContainmentWithInverseEList<ModelicaClassDefinition>(ModelicaClassDefinition.class, this, modelicaPackage.MODELICA_MODEL__MODELICA_CLASSES, modelicaPackage.MODELICA_CLASS_DEFINITION__OWNER_MODEL);
 		}
 		return modelicaClasses;
 	}
@@ -137,7 +128,7 @@ public class ModelicaModelImpl extends EObjectImpl implements ModelicaModel {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MoPackage.MODELICA_MODEL__MODELICA_CLASSES:
+			case modelicaPackage.MODELICA_MODEL__MODELICA_CLASSES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getModelicaClasses()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -151,7 +142,7 @@ public class ModelicaModelImpl extends EObjectImpl implements ModelicaModel {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MoPackage.MODELICA_MODEL__MODELICA_CLASSES:
+			case modelicaPackage.MODELICA_MODEL__MODELICA_CLASSES:
 				return ((InternalEList<?>)getModelicaClasses()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -165,9 +156,9 @@ public class ModelicaModelImpl extends EObjectImpl implements ModelicaModel {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MoPackage.MODELICA_MODEL__NAME:
+			case modelicaPackage.MODELICA_MODEL__NAME:
 				return getName();
-			case MoPackage.MODELICA_MODEL__MODELICA_CLASSES:
+			case modelicaPackage.MODELICA_MODEL__MODELICA_CLASSES:
 				return getModelicaClasses();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -182,10 +173,10 @@ public class ModelicaModelImpl extends EObjectImpl implements ModelicaModel {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MoPackage.MODELICA_MODEL__NAME:
+			case modelicaPackage.MODELICA_MODEL__NAME:
 				setName((String)newValue);
 				return;
-			case MoPackage.MODELICA_MODEL__MODELICA_CLASSES:
+			case modelicaPackage.MODELICA_MODEL__MODELICA_CLASSES:
 				getModelicaClasses().clear();
 				getModelicaClasses().addAll((Collection<? extends ModelicaClassDefinition>)newValue);
 				return;
@@ -201,10 +192,10 @@ public class ModelicaModelImpl extends EObjectImpl implements ModelicaModel {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MoPackage.MODELICA_MODEL__NAME:
+			case modelicaPackage.MODELICA_MODEL__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case MoPackage.MODELICA_MODEL__MODELICA_CLASSES:
+			case modelicaPackage.MODELICA_MODEL__MODELICA_CLASSES:
 				getModelicaClasses().clear();
 				return;
 		}
@@ -219,9 +210,9 @@ public class ModelicaModelImpl extends EObjectImpl implements ModelicaModel {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MoPackage.MODELICA_MODEL__NAME:
+			case modelicaPackage.MODELICA_MODEL__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case MoPackage.MODELICA_MODEL__MODELICA_CLASSES:
+			case modelicaPackage.MODELICA_MODEL__MODELICA_CLASSES:
 				return modelicaClasses != null && !modelicaClasses.isEmpty();
 		}
 		return super.eIsSet(featureID);

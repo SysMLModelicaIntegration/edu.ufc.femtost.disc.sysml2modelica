@@ -4,10 +4,8 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoFactory;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFactory;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaFactory;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -34,7 +32,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EquationSectionItemProvider
+public class EquationSectionItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -79,8 +77,8 @@ public class EquationSectionItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MoPackage.Literals.EQUATION_SECTION__EQUATIONS);
-			childrenFeatures.add(MoPackage.Literals.EQUATION_SECTION__CONNECTS);
+			childrenFeatures.add(modelicaPackage.Literals.EQUATION_SECTION__EQUATIONS);
+			childrenFeatures.add(modelicaPackage.Literals.EQUATION_SECTION__CONNECTS);
 		}
 		return childrenFeatures;
 	}
@@ -119,6 +117,7 @@ public class EquationSectionItemProvider
 	public String getText(Object object) {
 		return getString("_UI_EquationSection_type");
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -132,8 +131,8 @@ public class EquationSectionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EquationSection.class)) {
-			case MoPackage.EQUATION_SECTION__EQUATIONS:
-			case MoPackage.EQUATION_SECTION__CONNECTS:
+			case modelicaPackage.EQUATION_SECTION__EQUATIONS:
+			case modelicaPackage.EQUATION_SECTION__CONNECTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -153,13 +152,13 @@ public class EquationSectionItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.EQUATION_SECTION__EQUATIONS,
-				 MoFactory.eINSTANCE.createEquation()));
+				(modelicaPackage.Literals.EQUATION_SECTION__EQUATIONS,
+				 modelicaFactory.eINSTANCE.createEquation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.EQUATION_SECTION__CONNECTS,
-				 MoFactory.eINSTANCE.createConnect()));
+				(modelicaPackage.Literals.EQUATION_SECTION__CONNECTS,
+				 modelicaFactory.eINSTANCE.createConnect()));
 	}
 
 	/**

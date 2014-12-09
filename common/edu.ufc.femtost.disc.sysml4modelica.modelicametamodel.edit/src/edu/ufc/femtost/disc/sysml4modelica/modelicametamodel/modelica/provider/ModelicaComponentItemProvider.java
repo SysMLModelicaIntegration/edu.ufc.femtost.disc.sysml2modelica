@@ -3,9 +3,8 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaComponent;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -32,7 +31,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModelicaComponentItemProvider
+public class ModelicaComponentItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -85,7 +84,7 @@ public class ModelicaComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaComponent_conditionalExpression_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaComponent_conditionalExpression_feature", "_UI_ModelicaComponent_type"),
-				 MoPackage.Literals.MODELICA_COMPONENT__CONDITIONAL_EXPRESSION,
+				 modelicaPackage.Literals.MODELICA_COMPONENT__CONDITIONAL_EXPRESSION,
 				 true,
 				 false,
 				 false,
@@ -107,7 +106,7 @@ public class ModelicaComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaComponent_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaComponent_name_feature", "_UI_ModelicaComponent_type"),
-				 MoPackage.Literals.MODELICA_COMPONENT__NAME,
+				 modelicaPackage.Literals.MODELICA_COMPONENT__NAME,
 				 true,
 				 false,
 				 false,
@@ -129,7 +128,7 @@ public class ModelicaComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaComponent_isFinal_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaComponent_isFinal_feature", "_UI_ModelicaComponent_type"),
-				 MoPackage.Literals.MODELICA_COMPONENT__IS_FINAL,
+				 modelicaPackage.Literals.MODELICA_COMPONENT__IS_FINAL,
 				 true,
 				 false,
 				 false,
@@ -151,7 +150,7 @@ public class ModelicaComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaComponent_modification_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaComponent_modification_feature", "_UI_ModelicaComponent_type"),
-				 MoPackage.Literals.MODELICA_COMPONENT__MODIFICATION,
+				 modelicaPackage.Literals.MODELICA_COMPONENT__MODIFICATION,
 				 true,
 				 false,
 				 false,
@@ -173,7 +172,7 @@ public class ModelicaComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaComponent_isReplaceable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaComponent_isReplaceable_feature", "_UI_ModelicaComponent_type"),
-				 MoPackage.Literals.MODELICA_COMPONENT__IS_REPLACEABLE,
+				 modelicaPackage.Literals.MODELICA_COMPONENT__IS_REPLACEABLE,
 				 true,
 				 false,
 				 false,
@@ -195,7 +194,7 @@ public class ModelicaComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaComponent_arraySize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaComponent_arraySize_feature", "_UI_ModelicaComponent_type"),
-				 MoPackage.Literals.MODELICA_COMPONENT__ARRAY_SIZE,
+				 modelicaPackage.Literals.MODELICA_COMPONENT__ARRAY_SIZE,
 				 true,
 				 false,
 				 false,
@@ -217,7 +216,7 @@ public class ModelicaComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaComponent_type_specifier_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaComponent_type_specifier_feature", "_UI_ModelicaComponent_type"),
-				 MoPackage.Literals.MODELICA_COMPONENT__TYPE_SPECIFIER,
+				 modelicaPackage.Literals.MODELICA_COMPONENT__TYPE_SPECIFIER,
 				 true,
 				 false,
 				 false,
@@ -239,6 +238,7 @@ public class ModelicaComponentItemProvider
 			getString("_UI_ModelicaComponent_type") :
 			getString("_UI_ModelicaComponent_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -252,13 +252,13 @@ public class ModelicaComponentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ModelicaComponent.class)) {
-			case MoPackage.MODELICA_COMPONENT__CONDITIONAL_EXPRESSION:
-			case MoPackage.MODELICA_COMPONENT__NAME:
-			case MoPackage.MODELICA_COMPONENT__IS_FINAL:
-			case MoPackage.MODELICA_COMPONENT__MODIFICATION:
-			case MoPackage.MODELICA_COMPONENT__IS_REPLACEABLE:
-			case MoPackage.MODELICA_COMPONENT__ARRAY_SIZE:
-			case MoPackage.MODELICA_COMPONENT__TYPE_SPECIFIER:
+			case modelicaPackage.MODELICA_COMPONENT__CONDITIONAL_EXPRESSION:
+			case modelicaPackage.MODELICA_COMPONENT__NAME:
+			case modelicaPackage.MODELICA_COMPONENT__IS_FINAL:
+			case modelicaPackage.MODELICA_COMPONENT__MODIFICATION:
+			case modelicaPackage.MODELICA_COMPONENT__IS_REPLACEABLE:
+			case modelicaPackage.MODELICA_COMPONENT__ARRAY_SIZE:
+			case modelicaPackage.MODELICA_COMPONENT__TYPE_SPECIFIER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -4,8 +4,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Equation;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -32,7 +31,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EquationItemProvider
+public class EquationItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -80,7 +79,7 @@ public class EquationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Equation_isInitial_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Equation_isInitial_feature", "_UI_Equation_type"),
-				 MoPackage.Literals.EQUATION__IS_INITIAL,
+				 modelicaPackage.Literals.EQUATION__IS_INITIAL,
 				 true,
 				 false,
 				 false,
@@ -102,7 +101,7 @@ public class EquationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Equation_body_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Equation_body_feature", "_UI_Equation_type"),
-				 MoPackage.Literals.EQUATION__BODY,
+				 modelicaPackage.Literals.EQUATION__BODY,
 				 true,
 				 false,
 				 false,
@@ -133,6 +132,7 @@ public class EquationItemProvider
 		Equation equation = (Equation)object;
 		return getString("_UI_Equation_type") + " " + equation.isIsInitial();
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -146,8 +146,8 @@ public class EquationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Equation.class)) {
-			case MoPackage.EQUATION__IS_INITIAL:
-			case MoPackage.EQUATION__BODY:
+			case modelicaPackage.EQUATION__IS_INITIAL:
+			case modelicaPackage.EQUATION__BODY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -3,11 +3,9 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoFactory;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFactory;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaModel;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaFactory;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -36,7 +34,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModelicaModelItemProvider
+public class ModelicaModelItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -83,7 +81,7 @@ public class ModelicaModelItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaModel_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaModel_name_feature", "_UI_ModelicaModel_type"),
-				 MoPackage.Literals.MODELICA_MODEL__NAME,
+				 modelicaPackage.Literals.MODELICA_MODEL__NAME,
 				 true,
 				 false,
 				 false,
@@ -104,7 +102,7 @@ public class ModelicaModelItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MoPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES);
+			childrenFeatures.add(modelicaPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES);
 		}
 		return childrenFeatures;
 	}
@@ -146,6 +144,7 @@ public class ModelicaModelItemProvider
 			getString("_UI_ModelicaModel_type") :
 			getString("_UI_ModelicaModel_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -159,10 +158,10 @@ public class ModelicaModelItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ModelicaModel.class)) {
-			case MoPackage.MODELICA_MODEL__NAME:
+			case modelicaPackage.MODELICA_MODEL__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MoPackage.MODELICA_MODEL__MODELICA_CLASSES:
+			case modelicaPackage.MODELICA_MODEL__MODELICA_CLASSES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -182,48 +181,48 @@ public class ModelicaModelItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createClass()));
+				(modelicaPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createClass()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createConnector()));
+				(modelicaPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createConnector()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createModel()));
+				(modelicaPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createModel()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createRecord()));
+				(modelicaPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createRecord()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createBlock()));
+				(modelicaPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createBlock()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createPackage()));
+				(modelicaPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createPackage()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createFunction()));
+				(modelicaPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createDerFunction()));
+				(modelicaPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createDerFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createType()));
+				(modelicaPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createType()));
 	}
 
 	/**

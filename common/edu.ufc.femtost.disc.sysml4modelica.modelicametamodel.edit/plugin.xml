@@ -10,7 +10,7 @@
       <!-- @generated modelica -->
       <factory
             uri="http://www.femto-st.fr/disc/Modelica.ecore"
-            class="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider.MoItemProviderAdapterFactory"
+            class="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider.modelicaItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

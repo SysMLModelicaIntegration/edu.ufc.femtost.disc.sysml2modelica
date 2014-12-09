@@ -3,11 +3,9 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoFactory;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFactory;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaFactory;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -36,7 +34,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModelicaClassDefinitionItemProvider
+public class ModelicaClassDefinitionItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -89,7 +87,7 @@ public class ModelicaClassDefinitionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaClassDefinition_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaClassDefinition_name_feature", "_UI_ModelicaClassDefinition_type"),
-				 MoPackage.Literals.MODELICA_CLASS_DEFINITION__NAME,
+				 modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__NAME,
 				 true,
 				 false,
 				 false,
@@ -111,7 +109,7 @@ public class ModelicaClassDefinitionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaClassDefinition_isPartial_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaClassDefinition_isPartial_feature", "_UI_ModelicaClassDefinition_type"),
-				 MoPackage.Literals.MODELICA_CLASS_DEFINITION__IS_PARTIAL,
+				 modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__IS_PARTIAL,
 				 true,
 				 false,
 				 false,
@@ -133,7 +131,7 @@ public class ModelicaClassDefinitionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaClassDefinition_isFinal_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaClassDefinition_isFinal_feature", "_UI_ModelicaClassDefinition_type"),
-				 MoPackage.Literals.MODELICA_CLASS_DEFINITION__IS_FINAL,
+				 modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__IS_FINAL,
 				 true,
 				 false,
 				 false,
@@ -155,7 +153,7 @@ public class ModelicaClassDefinitionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaClassDefinition_isModelicaEncapsulated_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaClassDefinition_isModelicaEncapsulated_feature", "_UI_ModelicaClassDefinition_type"),
-				 MoPackage.Literals.MODELICA_CLASS_DEFINITION__IS_MODELICA_ENCAPSULATED,
+				 modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__IS_MODELICA_ENCAPSULATED,
 				 true,
 				 false,
 				 false,
@@ -177,7 +175,7 @@ public class ModelicaClassDefinitionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaClassDefinition_fromLibrary_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaClassDefinition_fromLibrary_feature", "_UI_ModelicaClassDefinition_type"),
-				 MoPackage.Literals.MODELICA_CLASS_DEFINITION__FROM_LIBRARY,
+				 modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__FROM_LIBRARY,
 				 true,
 				 false,
 				 false,
@@ -199,7 +197,7 @@ public class ModelicaClassDefinitionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaClassDefinition_isReplaceable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaClassDefinition_isReplaceable_feature", "_UI_ModelicaClassDefinition_type"),
-				 MoPackage.Literals.MODELICA_CLASS_DEFINITION__IS_REPLACEABLE,
+				 modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__IS_REPLACEABLE,
 				 true,
 				 false,
 				 false,
@@ -221,7 +219,7 @@ public class ModelicaClassDefinitionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaClassDefinition_extends_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaClassDefinition_extends_feature", "_UI_ModelicaClassDefinition_type"),
-				 MoPackage.Literals.MODELICA_CLASS_DEFINITION__EXTENDS,
+				 modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__EXTENDS,
 				 true,
 				 false,
 				 true,
@@ -242,11 +240,11 @@ public class ModelicaClassDefinitionItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MoPackage.Literals.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS);
-			childrenFeatures.add(MoPackage.Literals.MODELICA_CLASS_DEFINITION__EQUATION_SECTION);
-			childrenFeatures.add(MoPackage.Literals.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS);
-			childrenFeatures.add(MoPackage.Literals.MODELICA_CLASS_DEFINITION__ANNOTATIONS);
-			childrenFeatures.add(MoPackage.Literals.MODELICA_CLASS_DEFINITION__COMMENTS);
+			childrenFeatures.add(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS);
+			childrenFeatures.add(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__EQUATION_SECTION);
+			childrenFeatures.add(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS);
+			childrenFeatures.add(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__ANNOTATIONS);
+			childrenFeatures.add(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__COMMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -277,6 +275,7 @@ public class ModelicaClassDefinitionItemProvider
 			getString("_UI_ModelicaClassDefinition_type") :
 			getString("_UI_ModelicaClassDefinition_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -290,19 +289,19 @@ public class ModelicaClassDefinitionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ModelicaClassDefinition.class)) {
-			case MoPackage.MODELICA_CLASS_DEFINITION__NAME:
-			case MoPackage.MODELICA_CLASS_DEFINITION__IS_PARTIAL:
-			case MoPackage.MODELICA_CLASS_DEFINITION__IS_FINAL:
-			case MoPackage.MODELICA_CLASS_DEFINITION__IS_MODELICA_ENCAPSULATED:
-			case MoPackage.MODELICA_CLASS_DEFINITION__FROM_LIBRARY:
-			case MoPackage.MODELICA_CLASS_DEFINITION__IS_REPLACEABLE:
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__NAME:
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__IS_PARTIAL:
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__IS_FINAL:
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__IS_MODELICA_ENCAPSULATED:
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__FROM_LIBRARY:
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__IS_REPLACEABLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MoPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS:
-			case MoPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION:
-			case MoPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
-			case MoPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
-			case MoPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS:
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__EQUATION_SECTION:
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -322,38 +321,38 @@ public class ModelicaClassDefinitionItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS,
-				 MoFactory.eINSTANCE.createModelicaValueProperty()));
+				(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS,
+				 modelicaFactory.eINSTANCE.createModelicaValueProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS,
-				 MoFactory.eINSTANCE.createModelicaPart()));
+				(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS,
+				 modelicaFactory.eINSTANCE.createModelicaPart()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS,
-				 MoFactory.eINSTANCE.createModelicaPort()));
+				(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__MODELICA_COMPONENTS,
+				 modelicaFactory.eINSTANCE.createModelicaPort()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_CLASS_DEFINITION__EQUATION_SECTION,
-				 MoFactory.eINSTANCE.createEquationSection()));
+				(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__EQUATION_SECTION,
+				 modelicaFactory.eINSTANCE.createEquationSection()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS,
-				 MoFactory.eINSTANCE.createAlgorithmSection()));
+				(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS,
+				 modelicaFactory.eINSTANCE.createAlgorithmSection()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_CLASS_DEFINITION__ANNOTATIONS,
-				 MoFactory.eINSTANCE.createAnnotation()));
+				(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__ANNOTATIONS,
+				 modelicaFactory.eINSTANCE.createAnnotation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_CLASS_DEFINITION__COMMENTS,
-				 MoFactory.eINSTANCE.createComment()));
+				(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__COMMENTS,
+				 modelicaFactory.eINSTANCE.createComment()));
 	}
 
 	/**

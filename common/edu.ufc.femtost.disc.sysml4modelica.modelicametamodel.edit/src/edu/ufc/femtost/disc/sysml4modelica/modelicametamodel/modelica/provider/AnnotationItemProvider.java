@@ -4,8 +4,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -32,7 +31,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AnnotationItemProvider
+public class AnnotationItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -79,7 +78,7 @@ public class AnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Annotation_body_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Annotation_body_feature", "_UI_Annotation_type"),
-				 MoPackage.Literals.ANNOTATION__BODY,
+				 modelicaPackage.Literals.ANNOTATION__BODY,
 				 true,
 				 false,
 				 false,
@@ -112,6 +111,7 @@ public class AnnotationItemProvider
 			getString("_UI_Annotation_type") :
 			getString("_UI_Annotation_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -125,7 +125,7 @@ public class AnnotationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Annotation.class)) {
-			case MoPackage.ANNOTATION__BODY:
+			case modelicaPackage.ANNOTATION__BODY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

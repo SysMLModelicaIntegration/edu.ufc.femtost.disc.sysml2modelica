@@ -4,8 +4,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connector;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,12 +13,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -29,14 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConnectorItemProvider
-	extends ModelicaClassDefinitionItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class ConnectorItemProvider extends ModelicaClassDefinitionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -76,7 +63,7 @@ public class ConnectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Connector_isExpandable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Connector_isExpandable_feature", "_UI_Connector_type"),
-				 MoPackage.Literals.CONNECTOR__IS_EXPANDABLE,
+				 modelicaPackage.Literals.CONNECTOR__IS_EXPANDABLE,
 				 true,
 				 false,
 				 false,
@@ -109,6 +96,7 @@ public class ConnectorItemProvider
 			getString("_UI_Connector_type") :
 			getString("_UI_Connector_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -122,7 +110,7 @@ public class ConnectorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Connector.class)) {
-			case MoPackage.CONNECTOR__IS_EXPANDABLE:
+			case modelicaPackage.CONNECTOR__IS_EXPANDABLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -4,10 +4,8 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Function;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoFactory;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFactory;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaFactory;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -18,12 +16,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -33,14 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FunctionItemProvider
-	extends ModelicaClassDefinitionItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class FunctionItemProvider extends ModelicaClassDefinitionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -82,7 +68,7 @@ public class FunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Function_externalLanguage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Function_externalLanguage_feature", "_UI_Function_type"),
-				 MoPackage.Literals.FUNCTION__EXTERNAL_LANGUAGE,
+				 modelicaPackage.Literals.FUNCTION__EXTERNAL_LANGUAGE,
 				 true,
 				 false,
 				 false,
@@ -104,7 +90,7 @@ public class FunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Function_externalInclude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Function_externalInclude_feature", "_UI_Function_type"),
-				 MoPackage.Literals.FUNCTION__EXTERNAL_INCLUDE,
+				 modelicaPackage.Literals.FUNCTION__EXTERNAL_INCLUDE,
 				 true,
 				 false,
 				 false,
@@ -126,7 +112,7 @@ public class FunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Function_externalLibrary_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Function_externalLibrary_feature", "_UI_Function_type"),
-				 MoPackage.Literals.FUNCTION__EXTERNAL_LIBRARY,
+				 modelicaPackage.Literals.FUNCTION__EXTERNAL_LIBRARY,
 				 true,
 				 false,
 				 false,
@@ -147,7 +133,7 @@ public class FunctionItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MoPackage.Literals.FUNCTION__PARAMETERS);
+			childrenFeatures.add(modelicaPackage.Literals.FUNCTION__PARAMETERS);
 		}
 		return childrenFeatures;
 	}
@@ -189,6 +175,7 @@ public class FunctionItemProvider
 			getString("_UI_Function_type") :
 			getString("_UI_Function_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -202,12 +189,12 @@ public class FunctionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Function.class)) {
-			case MoPackage.FUNCTION__EXTERNAL_LANGUAGE:
-			case MoPackage.FUNCTION__EXTERNAL_INCLUDE:
-			case MoPackage.FUNCTION__EXTERNAL_LIBRARY:
+			case modelicaPackage.FUNCTION__EXTERNAL_LANGUAGE:
+			case modelicaPackage.FUNCTION__EXTERNAL_INCLUDE:
+			case modelicaPackage.FUNCTION__EXTERNAL_LIBRARY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MoPackage.FUNCTION__PARAMETERS:
+			case modelicaPackage.FUNCTION__PARAMETERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -227,8 +214,8 @@ public class FunctionItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.FUNCTION__PARAMETERS,
-				 MoFactory.eINSTANCE.createModelicaFunctionParameter()));
+				(modelicaPackage.Literals.FUNCTION__PARAMETERS,
+				 modelicaFactory.eINSTANCE.createModelicaFunctionParameter()));
 	}
 
 }

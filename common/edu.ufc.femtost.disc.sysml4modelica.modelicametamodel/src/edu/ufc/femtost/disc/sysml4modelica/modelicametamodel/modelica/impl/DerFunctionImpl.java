@@ -1,19 +1,10 @@
-/*******************************************************************************
- * Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comte
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * Contributors:
- *     Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation
- *******************************************************************************/
+/**
+ */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.DerFunction;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Function;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 
@@ -79,7 +70,7 @@ public class DerFunctionImpl extends FunctionImpl implements DerFunction {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MoPackage.Literals.DER_FUNCTION;
+		return modelicaPackage.Literals.DER_FUNCTION;
 	}
 
 	/**
@@ -93,7 +84,7 @@ public class DerFunctionImpl extends FunctionImpl implements DerFunction {
 			der = (Function)eResolveProxy(oldDer);
 			if (der != oldDer) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MoPackage.DER_FUNCTION__DER, oldDer, der));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, modelicaPackage.DER_FUNCTION__DER, oldDer, der));
 			}
 		}
 		return der;
@@ -117,7 +108,7 @@ public class DerFunctionImpl extends FunctionImpl implements DerFunction {
 		Function oldDer = der;
 		der = newDer;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.DER_FUNCTION__DER, oldDer, der));
+			eNotify(new ENotificationImpl(this, Notification.SET, modelicaPackage.DER_FUNCTION__DER, oldDer, der));
 	}
 
 	/**
@@ -127,7 +118,7 @@ public class DerFunctionImpl extends FunctionImpl implements DerFunction {
 	 */
 	public EList<String> getVariable() {
 		if (variable == null) {
-			variable = new EDataTypeUniqueEList<String>(String.class, this, MoPackage.DER_FUNCTION__VARIABLE);
+			variable = new EDataTypeUniqueEList<String>(String.class, this, modelicaPackage.DER_FUNCTION__VARIABLE);
 		}
 		return variable;
 	}
@@ -140,10 +131,10 @@ public class DerFunctionImpl extends FunctionImpl implements DerFunction {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MoPackage.DER_FUNCTION__DER:
+			case modelicaPackage.DER_FUNCTION__DER:
 				if (resolve) return getDer();
 				return basicGetDer();
-			case MoPackage.DER_FUNCTION__VARIABLE:
+			case modelicaPackage.DER_FUNCTION__VARIABLE:
 				return getVariable();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -158,10 +149,10 @@ public class DerFunctionImpl extends FunctionImpl implements DerFunction {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MoPackage.DER_FUNCTION__DER:
+			case modelicaPackage.DER_FUNCTION__DER:
 				setDer((Function)newValue);
 				return;
-			case MoPackage.DER_FUNCTION__VARIABLE:
+			case modelicaPackage.DER_FUNCTION__VARIABLE:
 				getVariable().clear();
 				getVariable().addAll((Collection<? extends String>)newValue);
 				return;
@@ -177,10 +168,10 @@ public class DerFunctionImpl extends FunctionImpl implements DerFunction {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MoPackage.DER_FUNCTION__DER:
+			case modelicaPackage.DER_FUNCTION__DER:
 				setDer((Function)null);
 				return;
-			case MoPackage.DER_FUNCTION__VARIABLE:
+			case modelicaPackage.DER_FUNCTION__VARIABLE:
 				getVariable().clear();
 				return;
 		}
@@ -195,9 +186,9 @@ public class DerFunctionImpl extends FunctionImpl implements DerFunction {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MoPackage.DER_FUNCTION__DER:
+			case modelicaPackage.DER_FUNCTION__DER:
 				return der != null;
-			case MoPackage.DER_FUNCTION__VARIABLE:
+			case modelicaPackage.DER_FUNCTION__VARIABLE:
 				return variable != null && !variable.isEmpty();
 		}
 		return super.eIsSet(featureID);

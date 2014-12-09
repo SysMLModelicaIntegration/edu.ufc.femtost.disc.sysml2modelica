@@ -3,9 +3,8 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPort;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,12 +13,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -29,14 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModelicaPortItemProvider
-	extends ModelicaComponentItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class ModelicaPortItemProvider extends ModelicaComponentItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -77,7 +64,7 @@ public class ModelicaPortItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaPort_type_connector_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaPort_type_connector_feature", "_UI_ModelicaPort_type"),
-				 MoPackage.Literals.MODELICA_PORT__TYPE_CONNECTOR,
+				 modelicaPackage.Literals.MODELICA_PORT__TYPE_CONNECTOR,
 				 true,
 				 false,
 				 true,
@@ -99,7 +86,7 @@ public class ModelicaPortItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaPort_causality_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaPort_causality_feature", "_UI_ModelicaPort_type"),
-				 MoPackage.Literals.MODELICA_PORT__CAUSALITY,
+				 modelicaPackage.Literals.MODELICA_PORT__CAUSALITY,
 				 true,
 				 false,
 				 false,
@@ -132,6 +119,7 @@ public class ModelicaPortItemProvider
 			getString("_UI_ModelicaPort_type") :
 			getString("_UI_ModelicaPort_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -145,7 +133,7 @@ public class ModelicaPortItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ModelicaPort.class)) {
-			case MoPackage.MODELICA_PORT__CAUSALITY:
+			case modelicaPackage.MODELICA_PORT__CAUSALITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -1,13 +1,5 @@
-/*******************************************************************************
- * Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comte
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * Contributors:
- *     Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation
- *******************************************************************************/
+/**
+ */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
 
 import org.eclipse.emf.common.util.EList;
@@ -32,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getExtendsClause()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getExtendsClause()
  * @model
  * @generated
  */
@@ -47,7 +39,7 @@ public interface ExtendsClause extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modification</em>' attribute.
 	 * @see #setModification(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getExtendsClause_Modification()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getExtendsClause_Modification()
 	 * @model
 	 * @generated
 	 */
@@ -73,7 +65,7 @@ public interface ExtendsClause extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Array Size</em>' attribute list.
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getExtendsClause_ArraySize()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getExtendsClause_ArraySize()
 	 * @model
 	 * @generated
 	 */
@@ -90,7 +82,7 @@ public interface ExtendsClause extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owner Modelica Class Definition</em>' container reference.
 	 * @see #setOwnerModelicaClassDefinition(ModelicaClassDefinition)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getExtendsClause_OwnerModelicaClassDefinition()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getExtendsClause_OwnerModelicaClassDefinition()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getExtends
 	 * @model opposite="extends" transient="false"
 	 * @generated
@@ -119,7 +111,7 @@ public interface ExtendsClause extends EObject {
 	 * @return the value of the '<em>Visibility</em>' attribute.
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind
 	 * @see #setVisibility(VisibilityKind)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getExtendsClause_Visibility()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getExtendsClause_Visibility()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -146,7 +138,7 @@ public interface ExtendsClause extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Extended Modelica Class</em>' reference.
 	 * @see #setExtendedModelicaClass(ModelicaClassDefinition)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getExtendsClause_ExtendedModelicaClass()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getExtendsClause_ExtendedModelicaClass()
 	 * @model
 	 * @generated
 	 */
@@ -172,7 +164,7 @@ public interface ExtendsClause extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From modelica standard library</em>' attribute.
 	 * @see #setFrom_modelica_standard_library(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getExtendsClause_From_modelica_standard_library()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getExtendsClause_From_modelica_standard_library()
 	 * @model
 	 * @generated
 	 */
@@ -198,7 +190,7 @@ public interface ExtendsClause extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From modelica primitive types</em>' attribute.
 	 * @see #setFrom_modelica_primitive_types(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getExtendsClause_From_modelica_primitive_types()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getExtendsClause_From_modelica_primitive_types()
 	 * @model
 	 * @generated
 	 */

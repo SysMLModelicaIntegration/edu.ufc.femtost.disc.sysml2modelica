@@ -10,7 +10,7 @@
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
     editPluginID="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.edit" editorPluginID="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.editor">
   <foreignModel>modelica.ecore</foreignModel>
-  <genPackages prefix="Mo" basePackage="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel"
+  <genPackages prefix="modelica" basePackage="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel"
       disposableProviderFactory="true" ecorePackage="modelica.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="modelica.ecore#//VisibilityKind">
       <genEnumLiterals ecoreEnumLiteral="modelica.ecore#//VisibilityKind/public"/>

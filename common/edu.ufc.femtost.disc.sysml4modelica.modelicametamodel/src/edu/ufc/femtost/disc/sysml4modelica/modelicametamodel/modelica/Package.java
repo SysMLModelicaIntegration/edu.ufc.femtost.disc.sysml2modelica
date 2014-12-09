@@ -1,13 +1,5 @@
-/*******************************************************************************
- * Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comte
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * Contributors:
- *     Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation
- *******************************************************************************/
+/**
+ */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
 
 import org.eclipse.emf.common.util.EList;
@@ -25,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getPackage()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getPackage()
  * @model
  * @generated
  */
@@ -40,7 +32,7 @@ public interface Package extends ModelicaClassDefinition {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Within Clause</em>' attribute.
 	 * @see #setWithinClause(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getPackage_WithinClause()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getPackage_WithinClause()
 	 * @model
 	 * @generated
 	 */
@@ -67,7 +59,7 @@ public interface Package extends ModelicaClassDefinition {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modelica Classes</em>' containment reference list.
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getPackage_ModelicaClasses()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getPackage_ModelicaClasses()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getOwnerPackage
 	 * @model opposite="ownerPackage" containment="true"
 	 * @generated

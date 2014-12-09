@@ -3,9 +3,8 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFunctionParameter;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -32,7 +31,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModelicaFunctionParameterItemProvider
+public class ModelicaFunctionParameterItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -89,7 +88,7 @@ public class ModelicaFunctionParameterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaFunctionParameter_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaFunctionParameter_name_feature", "_UI_ModelicaFunctionParameter_type"),
-				 MoPackage.Literals.MODELICA_FUNCTION_PARAMETER__NAME,
+				 modelicaPackage.Literals.MODELICA_FUNCTION_PARAMETER__NAME,
 				 true,
 				 false,
 				 false,
@@ -111,7 +110,7 @@ public class ModelicaFunctionParameterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaFunctionParameter_causality_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaFunctionParameter_causality_feature", "_UI_ModelicaFunctionParameter_type"),
-				 MoPackage.Literals.MODELICA_FUNCTION_PARAMETER__CAUSALITY,
+				 modelicaPackage.Literals.MODELICA_FUNCTION_PARAMETER__CAUSALITY,
 				 true,
 				 false,
 				 false,
@@ -133,7 +132,7 @@ public class ModelicaFunctionParameterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaFunctionParameter_modification_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaFunctionParameter_modification_feature", "_UI_ModelicaFunctionParameter_type"),
-				 MoPackage.Literals.MODELICA_FUNCTION_PARAMETER__MODIFICATION,
+				 modelicaPackage.Literals.MODELICA_FUNCTION_PARAMETER__MODIFICATION,
 				 true,
 				 false,
 				 false,
@@ -155,7 +154,7 @@ public class ModelicaFunctionParameterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaFunctionParameter_isReplaceable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaFunctionParameter_isReplaceable_feature", "_UI_ModelicaFunctionParameter_type"),
-				 MoPackage.Literals.MODELICA_FUNCTION_PARAMETER__IS_REPLACEABLE,
+				 modelicaPackage.Literals.MODELICA_FUNCTION_PARAMETER__IS_REPLACEABLE,
 				 true,
 				 false,
 				 false,
@@ -177,7 +176,7 @@ public class ModelicaFunctionParameterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaFunctionParameter_declarationEquation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaFunctionParameter_declarationEquation_feature", "_UI_ModelicaFunctionParameter_type"),
-				 MoPackage.Literals.MODELICA_FUNCTION_PARAMETER__DECLARATION_EQUATION,
+				 modelicaPackage.Literals.MODELICA_FUNCTION_PARAMETER__DECLARATION_EQUATION,
 				 true,
 				 false,
 				 false,
@@ -199,7 +198,7 @@ public class ModelicaFunctionParameterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaFunctionParameter_isFinal_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaFunctionParameter_isFinal_feature", "_UI_ModelicaFunctionParameter_type"),
-				 MoPackage.Literals.MODELICA_FUNCTION_PARAMETER__IS_FINAL,
+				 modelicaPackage.Literals.MODELICA_FUNCTION_PARAMETER__IS_FINAL,
 				 true,
 				 false,
 				 false,
@@ -221,7 +220,7 @@ public class ModelicaFunctionParameterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaFunctionParameter_arraySize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaFunctionParameter_arraySize_feature", "_UI_ModelicaFunctionParameter_type"),
-				 MoPackage.Literals.MODELICA_FUNCTION_PARAMETER__ARRAY_SIZE,
+				 modelicaPackage.Literals.MODELICA_FUNCTION_PARAMETER__ARRAY_SIZE,
 				 true,
 				 false,
 				 false,
@@ -243,7 +242,7 @@ public class ModelicaFunctionParameterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaFunctionParameter_variability_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaFunctionParameter_variability_feature", "_UI_ModelicaFunctionParameter_type"),
-				 MoPackage.Literals.MODELICA_FUNCTION_PARAMETER__VARIABILITY,
+				 modelicaPackage.Literals.MODELICA_FUNCTION_PARAMETER__VARIABILITY,
 				 true,
 				 false,
 				 false,
@@ -265,7 +264,7 @@ public class ModelicaFunctionParameterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaFunctionParameter_type_specifier_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaFunctionParameter_type_specifier_feature", "_UI_ModelicaFunctionParameter_type"),
-				 MoPackage.Literals.MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER,
+				 modelicaPackage.Literals.MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER,
 				 true,
 				 false,
 				 false,
@@ -287,7 +286,7 @@ public class ModelicaFunctionParameterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaFunctionParameter_isProtected_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaFunctionParameter_isProtected_feature", "_UI_ModelicaFunctionParameter_type"),
-				 MoPackage.Literals.MODELICA_FUNCTION_PARAMETER__IS_PROTECTED,
+				 modelicaPackage.Literals.MODELICA_FUNCTION_PARAMETER__IS_PROTECTED,
 				 true,
 				 false,
 				 false,
@@ -309,7 +308,7 @@ public class ModelicaFunctionParameterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaFunctionParameter_default_value_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaFunctionParameter_default_value_feature", "_UI_ModelicaFunctionParameter_type"),
-				 MoPackage.Literals.MODELICA_FUNCTION_PARAMETER__DEFAULT_VALUE,
+				 modelicaPackage.Literals.MODELICA_FUNCTION_PARAMETER__DEFAULT_VALUE,
 				 true,
 				 false,
 				 false,
@@ -342,6 +341,7 @@ public class ModelicaFunctionParameterItemProvider
 			getString("_UI_ModelicaFunctionParameter_type") :
 			getString("_UI_ModelicaFunctionParameter_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -355,17 +355,17 @@ public class ModelicaFunctionParameterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ModelicaFunctionParameter.class)) {
-			case MoPackage.MODELICA_FUNCTION_PARAMETER__NAME:
-			case MoPackage.MODELICA_FUNCTION_PARAMETER__CAUSALITY:
-			case MoPackage.MODELICA_FUNCTION_PARAMETER__MODIFICATION:
-			case MoPackage.MODELICA_FUNCTION_PARAMETER__IS_REPLACEABLE:
-			case MoPackage.MODELICA_FUNCTION_PARAMETER__DECLARATION_EQUATION:
-			case MoPackage.MODELICA_FUNCTION_PARAMETER__IS_FINAL:
-			case MoPackage.MODELICA_FUNCTION_PARAMETER__ARRAY_SIZE:
-			case MoPackage.MODELICA_FUNCTION_PARAMETER__VARIABILITY:
-			case MoPackage.MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER:
-			case MoPackage.MODELICA_FUNCTION_PARAMETER__IS_PROTECTED:
-			case MoPackage.MODELICA_FUNCTION_PARAMETER__DEFAULT_VALUE:
+			case modelicaPackage.MODELICA_FUNCTION_PARAMETER__NAME:
+			case modelicaPackage.MODELICA_FUNCTION_PARAMETER__CAUSALITY:
+			case modelicaPackage.MODELICA_FUNCTION_PARAMETER__MODIFICATION:
+			case modelicaPackage.MODELICA_FUNCTION_PARAMETER__IS_REPLACEABLE:
+			case modelicaPackage.MODELICA_FUNCTION_PARAMETER__DECLARATION_EQUATION:
+			case modelicaPackage.MODELICA_FUNCTION_PARAMETER__IS_FINAL:
+			case modelicaPackage.MODELICA_FUNCTION_PARAMETER__ARRAY_SIZE:
+			case modelicaPackage.MODELICA_FUNCTION_PARAMETER__VARIABILITY:
+			case modelicaPackage.MODELICA_FUNCTION_PARAMETER__TYPE_SPECIFIER:
+			case modelicaPackage.MODELICA_FUNCTION_PARAMETER__IS_PROTECTED:
+			case modelicaPackage.MODELICA_FUNCTION_PARAMETER__DEFAULT_VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

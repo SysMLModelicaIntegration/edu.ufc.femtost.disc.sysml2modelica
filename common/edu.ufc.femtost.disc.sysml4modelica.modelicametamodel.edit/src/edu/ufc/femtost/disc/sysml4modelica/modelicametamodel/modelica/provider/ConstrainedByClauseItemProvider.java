@@ -4,8 +4,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -32,7 +31,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConstrainedByClauseItemProvider
+public class ConstrainedByClauseItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -80,7 +79,7 @@ public class ConstrainedByClauseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConstrainedByClause_modification_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConstrainedByClause_modification_feature", "_UI_ConstrainedByClause_type"),
-				 MoPackage.Literals.CONSTRAINED_BY_CLAUSE__MODIFICATION,
+				 modelicaPackage.Literals.CONSTRAINED_BY_CLAUSE__MODIFICATION,
 				 true,
 				 false,
 				 false,
@@ -102,7 +101,7 @@ public class ConstrainedByClauseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConstrainedByClause_instanceForConstrainedBy_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConstrainedByClause_instanceForConstrainedBy_feature", "_UI_ConstrainedByClause_type"),
-				 MoPackage.Literals.CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY,
+				 modelicaPackage.Literals.CONSTRAINED_BY_CLAUSE__INSTANCE_FOR_CONSTRAINED_BY,
 				 true,
 				 false,
 				 true,
@@ -135,6 +134,7 @@ public class ConstrainedByClauseItemProvider
 			getString("_UI_ConstrainedByClause_type") :
 			getString("_UI_ConstrainedByClause_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -148,7 +148,7 @@ public class ConstrainedByClauseItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConstrainedByClause.class)) {
-			case MoPackage.CONSTRAINED_BY_CLAUSE__MODIFICATION:
+			case modelicaPackage.CONSTRAINED_BY_CLAUSE__MODIFICATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -3,11 +3,9 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoFactory;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFactory;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaFactory;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -18,12 +16,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -33,14 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModelicaPartItemProvider
-	extends ModelicaComponentItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class ModelicaPartItemProvider extends ModelicaComponentItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -82,7 +68,7 @@ public class ModelicaPartItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaPart_visibility_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaPart_visibility_feature", "_UI_ModelicaPart_type"),
-				 MoPackage.Literals.MODELICA_PART__VISIBILITY,
+				 modelicaPackage.Literals.MODELICA_PART__VISIBILITY,
 				 true,
 				 false,
 				 false,
@@ -104,7 +90,7 @@ public class ModelicaPartItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaPart_scope_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaPart_scope_feature", "_UI_ModelicaPart_type"),
-				 MoPackage.Literals.MODELICA_PART__SCOPE,
+				 modelicaPackage.Literals.MODELICA_PART__SCOPE,
 				 true,
 				 false,
 				 false,
@@ -126,7 +112,7 @@ public class ModelicaPartItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ModelicaPart_type_part_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelicaPart_type_part_feature", "_UI_ModelicaPart_type"),
-				 MoPackage.Literals.MODELICA_PART__TYPE_PART,
+				 modelicaPackage.Literals.MODELICA_PART__TYPE_PART,
 				 true,
 				 false,
 				 true,
@@ -147,7 +133,7 @@ public class ModelicaPartItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MoPackage.Literals.MODELICA_PART__CONSTRAINED_BY);
+			childrenFeatures.add(modelicaPackage.Literals.MODELICA_PART__CONSTRAINED_BY);
 		}
 		return childrenFeatures;
 	}
@@ -189,6 +175,7 @@ public class ModelicaPartItemProvider
 			getString("_UI_ModelicaPart_type") :
 			getString("_UI_ModelicaPart_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -202,11 +189,11 @@ public class ModelicaPartItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ModelicaPart.class)) {
-			case MoPackage.MODELICA_PART__VISIBILITY:
-			case MoPackage.MODELICA_PART__SCOPE:
+			case modelicaPackage.MODELICA_PART__VISIBILITY:
+			case modelicaPackage.MODELICA_PART__SCOPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MoPackage.MODELICA_PART__CONSTRAINED_BY:
+			case modelicaPackage.MODELICA_PART__CONSTRAINED_BY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -226,8 +213,8 @@ public class ModelicaPartItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.MODELICA_PART__CONSTRAINED_BY,
-				 MoFactory.eINSTANCE.createConstrainedByClause()));
+				(modelicaPackage.Literals.MODELICA_PART__CONSTRAINED_BY,
+				 modelicaFactory.eINSTANCE.createConstrainedByClause()));
 	}
 
 }

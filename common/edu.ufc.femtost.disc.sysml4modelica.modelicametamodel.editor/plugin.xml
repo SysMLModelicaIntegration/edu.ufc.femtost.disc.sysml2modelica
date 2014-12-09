@@ -12,12 +12,12 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.presentation.MoModelWizardID"
-            name="%_UI_MoModelWizard_label"
-            class="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.presentation.MoModelWizard"
+            id="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.presentation.modelicaModelWizardID"
+            name="%_UI_modelicaModelWizard_label"
+            class="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.presentation.modelicaModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/MoModelFile.gif">
-         <description>%_UI_MoModelWizard_description</description>
+            icon="icons/full/obj16/modelicaModelFile.gif">
+         <description>%_UI_modelicaModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
@@ -25,13 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated modelica -->
       <editor
-            id="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.presentation.MoEditorID"
-            name="%_UI_MoEditor_label"
-            icon="icons/full/obj16/MoModelFile.gif"
-            extensions="mo"
-            class="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.presentation.MoEditor"
-            contributorClass="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.presentation.MoActionBarContributor">
+            id="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.presentation.modelicaEditorID"
+            name="%_UI_modelicaEditor_label"
+            icon="icons/full/obj16/modelicaModelFile.gif"
+            extensions="modelica"
+            class="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.presentation.modelicaEditor"
+            contributorClass="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.presentation.modelicaActionBarContributor">
       </editor>
    </extension>
-
 </plugin>

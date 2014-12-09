@@ -4,8 +4,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connect;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -32,7 +31,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConnectItemProvider
+public class ConnectItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -86,7 +85,7 @@ public class ConnectItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Connect_from_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Connect_from_feature", "_UI_Connect_type"),
-				 MoPackage.Literals.CONNECT__FROM,
+				 modelicaPackage.Literals.CONNECT__FROM,
 				 true,
 				 false,
 				 true,
@@ -108,7 +107,7 @@ public class ConnectItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Connect_to_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Connect_to_feature", "_UI_Connect_type"),
-				 MoPackage.Literals.CONNECT__TO,
+				 modelicaPackage.Literals.CONNECT__TO,
 				 true,
 				 false,
 				 true,
@@ -130,7 +129,7 @@ public class ConnectItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Connect_fromModelicaPart_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Connect_fromModelicaPart_feature", "_UI_Connect_type"),
-				 MoPackage.Literals.CONNECT__FROM_MODELICA_PART,
+				 modelicaPackage.Literals.CONNECT__FROM_MODELICA_PART,
 				 true,
 				 false,
 				 true,
@@ -152,7 +151,7 @@ public class ConnectItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Connect_toModelicaPart_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Connect_toModelicaPart_feature", "_UI_Connect_type"),
-				 MoPackage.Literals.CONNECT__TO_MODELICA_PART,
+				 modelicaPackage.Literals.CONNECT__TO_MODELICA_PART,
 				 true,
 				 false,
 				 true,
@@ -174,7 +173,7 @@ public class ConnectItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Connect_fromPort_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Connect_fromPort_feature", "_UI_Connect_type"),
-				 MoPackage.Literals.CONNECT__FROM_PORT,
+				 modelicaPackage.Literals.CONNECT__FROM_PORT,
 				 true,
 				 false,
 				 false,
@@ -196,7 +195,7 @@ public class ConnectItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Connect_toPort_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Connect_toPort_feature", "_UI_Connect_type"),
-				 MoPackage.Literals.CONNECT__TO_PORT,
+				 modelicaPackage.Literals.CONNECT__TO_PORT,
 				 true,
 				 false,
 				 false,
@@ -218,7 +217,7 @@ public class ConnectItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Connect_fromPart_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Connect_fromPart_feature", "_UI_Connect_type"),
-				 MoPackage.Literals.CONNECT__FROM_PART,
+				 modelicaPackage.Literals.CONNECT__FROM_PART,
 				 true,
 				 false,
 				 false,
@@ -240,7 +239,7 @@ public class ConnectItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Connect_toPart_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Connect_toPart_feature", "_UI_Connect_type"),
-				 MoPackage.Literals.CONNECT__TO_PART,
+				 modelicaPackage.Literals.CONNECT__TO_PART,
 				 true,
 				 false,
 				 false,
@@ -273,6 +272,7 @@ public class ConnectItemProvider
 			getString("_UI_Connect_type") :
 			getString("_UI_Connect_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -286,10 +286,10 @@ public class ConnectItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Connect.class)) {
-			case MoPackage.CONNECT__FROM_PORT:
-			case MoPackage.CONNECT__TO_PORT:
-			case MoPackage.CONNECT__FROM_PART:
-			case MoPackage.CONNECT__TO_PART:
+			case modelicaPackage.CONNECT__FROM_PORT:
+			case modelicaPackage.CONNECT__TO_PORT:
+			case modelicaPackage.CONNECT__FROM_PART:
+			case modelicaPackage.CONNECT__TO_PART:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -9,7 +9,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getType()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getType()
  * @model
  * @generated
  */

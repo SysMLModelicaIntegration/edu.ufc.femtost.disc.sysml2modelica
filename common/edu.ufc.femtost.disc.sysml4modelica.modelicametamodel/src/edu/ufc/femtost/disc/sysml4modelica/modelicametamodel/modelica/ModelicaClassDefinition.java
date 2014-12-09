@@ -1,13 +1,5 @@
-/*******************************************************************************
- * Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comte
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * Contributors:
- *     Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation
- *******************************************************************************/
+/**
+ */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
 
 import org.eclipse.emf.common.util.EList;
@@ -16,7 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Class Definition</b></em>'.
+ * A representation of the model object '<em><b>Modelica Class Definition</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -39,7 +31,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaClassDefinition()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaClassDefinition()
  * @model abstract="true"
  * @generated
  */
@@ -54,7 +46,7 @@ public interface ModelicaClassDefinition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaClassDefinition_Name()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaClassDefinition_Name()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -80,7 +72,7 @@ public interface ModelicaClassDefinition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Partial</em>' attribute.
 	 * @see #setIsPartial(boolean)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaClassDefinition_IsPartial()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaClassDefinition_IsPartial()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -106,7 +98,7 @@ public interface ModelicaClassDefinition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Final</em>' attribute.
 	 * @see #setIsFinal(boolean)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaClassDefinition_IsFinal()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaClassDefinition_IsFinal()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -132,7 +124,7 @@ public interface ModelicaClassDefinition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Modelica Encapsulated</em>' attribute.
 	 * @see #setIsModelicaEncapsulated(boolean)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaClassDefinition_IsModelicaEncapsulated()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaClassDefinition_IsModelicaEncapsulated()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -158,7 +150,7 @@ public interface ModelicaClassDefinition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Library</em>' attribute.
 	 * @see #setFromLibrary(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaClassDefinition_FromLibrary()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaClassDefinition_FromLibrary()
 	 * @model
 	 * @generated
 	 */
@@ -184,7 +176,7 @@ public interface ModelicaClassDefinition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Replaceable</em>' attribute.
 	 * @see #setIsReplaceable(boolean)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaClassDefinition_IsReplaceable()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaClassDefinition_IsReplaceable()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -211,7 +203,7 @@ public interface ModelicaClassDefinition extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Extends</em>' containment reference list.
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaClassDefinition_Extends()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaClassDefinition_Extends()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause#getOwnerModelicaClassDefinition
 	 * @model opposite="ownerModelicaClassDefinition" containment="true"
 	 * @generated
@@ -229,7 +221,7 @@ public interface ModelicaClassDefinition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owner Model</em>' container reference.
 	 * @see #setOwnerModel(ModelicaModel)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaClassDefinition_OwnerModel()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaClassDefinition_OwnerModel()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaModel#getModelicaClasses
 	 * @model opposite="modelicaClasses" transient="false"
 	 * @generated
@@ -257,7 +249,7 @@ public interface ModelicaClassDefinition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owner Package</em>' container reference.
 	 * @see #setOwnerPackage(edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaClassDefinition_OwnerPackage()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaClassDefinition_OwnerPackage()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package#getModelicaClasses
 	 * @model opposite="modelicaClasses" transient="false"
 	 * @generated
@@ -285,7 +277,7 @@ public interface ModelicaClassDefinition extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modelica Components</em>' containment reference list.
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaClassDefinition_ModelicaComponents()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaClassDefinition_ModelicaComponents()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaComponent#getOwnerModelicaClassDefinition
 	 * @model opposite="ownerModelicaClassDefinition" containment="true"
 	 * @generated
@@ -303,7 +295,7 @@ public interface ModelicaClassDefinition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Equation Section</em>' containment reference.
 	 * @see #setEquationSection(EquationSection)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaClassDefinition_EquationSection()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaClassDefinition_EquationSection()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection#getOwnerModelicaClassDefinition
 	 * @model opposite="ownerModelicaClassDefinition" containment="true"
 	 * @generated
@@ -331,7 +323,7 @@ public interface ModelicaClassDefinition extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Algorithm Sections</em>' containment reference list.
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaClassDefinition_AlgorithmSections()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaClassDefinition_AlgorithmSections()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection#getOwnerModelicaClassDefinition
 	 * @model opposite="ownerModelicaClassDefinition" containment="true"
 	 * @generated
@@ -349,7 +341,7 @@ public interface ModelicaClassDefinition extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Annotations</em>' containment reference list.
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaClassDefinition_Annotations()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaClassDefinition_Annotations()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation#getOwnerMCD
 	 * @model opposite="ownerMCD" containment="true"
 	 * @generated
@@ -367,7 +359,7 @@ public interface ModelicaClassDefinition extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Comments</em>' containment reference list.
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getModelicaClassDefinition_Comments()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaClassDefinition_Comments()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment#getOwnerModelicaClassDefinition
 	 * @model opposite="ownerModelicaClassDefinition" containment="true"
 	 * @generated

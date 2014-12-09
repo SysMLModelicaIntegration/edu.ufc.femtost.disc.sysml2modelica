@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
 
@@ -21,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getAnnotation()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getAnnotation()
  * @model
  * @generated
  */
@@ -36,7 +32,7 @@ public interface Annotation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Body</em>' attribute.
 	 * @see #setBody(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getAnnotation_Body()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getAnnotation_Body()
 	 * @model
 	 * @generated
 	 */
@@ -63,7 +59,7 @@ public interface Annotation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owner MCD</em>' container reference.
 	 * @see #setOwnerMCD(ModelicaClassDefinition)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getAnnotation_OwnerMCD()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getAnnotation_OwnerMCD()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getAnnotations
 	 * @model opposite="annotations" transient="false"
 	 * @generated

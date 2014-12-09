@@ -4,8 +4,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -32,7 +31,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CommentItemProvider
+public class CommentItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -79,7 +78,7 @@ public class CommentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Comment_body_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Comment_body_feature", "_UI_Comment_type"),
-				 MoPackage.Literals.COMMENT__BODY,
+				 modelicaPackage.Literals.COMMENT__BODY,
 				 true,
 				 false,
 				 false,
@@ -112,6 +111,7 @@ public class CommentItemProvider
 			getString("_UI_Comment_type") :
 			getString("_UI_Comment_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -125,7 +125,7 @@ public class CommentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Comment.class)) {
-			case MoPackage.COMMENT__BODY:
+			case modelicaPackage.COMMENT__BODY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

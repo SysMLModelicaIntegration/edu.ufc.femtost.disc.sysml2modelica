@@ -1,13 +1,5 @@
-/*******************************************************************************
- * Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comte
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * Contributors:
- *     Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation
- *******************************************************************************/
+/**
+ */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
 
 import org.eclipse.emf.ecore.EObject;
@@ -26,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getEquation()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getEquation()
  * @model
  * @generated
  */
@@ -42,7 +34,7 @@ public interface Equation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owner Equation Section</em>' container reference.
 	 * @see #setOwnerEquationSection(EquationSection)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getEquation_OwnerEquationSection()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getEquation_OwnerEquationSection()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection#getEquations
 	 * @model opposite="equations" transient="false"
 	 * @generated
@@ -69,7 +61,7 @@ public interface Equation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Initial</em>' attribute.
 	 * @see #setIsInitial(boolean)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getEquation_IsInitial()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getEquation_IsInitial()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -95,7 +87,7 @@ public interface Equation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Body</em>' attribute.
 	 * @see #setBody(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getEquation_Body()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getEquation_Body()
 	 * @model required="true"
 	 * @generated
 	 */

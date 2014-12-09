@@ -2,9 +2,8 @@
  */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Type;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -34,7 +33,7 @@ public class TypeImpl extends ModelicaClassDefinitionImpl implements Type {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MoPackage.Literals.TYPE;
+		return modelicaPackage.Literals.TYPE;
 	}
 
 } //TypeImpl

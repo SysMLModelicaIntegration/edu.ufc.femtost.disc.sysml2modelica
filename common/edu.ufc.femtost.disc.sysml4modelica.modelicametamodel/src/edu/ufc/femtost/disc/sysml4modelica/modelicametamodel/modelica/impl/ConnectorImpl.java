@@ -1,18 +1,9 @@
-/*******************************************************************************
- * Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comte
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * Contributors:
- *     Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation
- *******************************************************************************/
+/**
+ */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connector;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -70,7 +61,7 @@ public class ConnectorImpl extends ModelicaClassDefinitionImpl implements Connec
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MoPackage.Literals.CONNECTOR;
+		return modelicaPackage.Literals.CONNECTOR;
 	}
 
 	/**
@@ -91,7 +82,7 @@ public class ConnectorImpl extends ModelicaClassDefinitionImpl implements Connec
 		boolean oldIsExpandable = isExpandable;
 		isExpandable = newIsExpandable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MoPackage.CONNECTOR__IS_EXPANDABLE, oldIsExpandable, isExpandable));
+			eNotify(new ENotificationImpl(this, Notification.SET, modelicaPackage.CONNECTOR__IS_EXPANDABLE, oldIsExpandable, isExpandable));
 	}
 
 	/**
@@ -102,7 +93,7 @@ public class ConnectorImpl extends ModelicaClassDefinitionImpl implements Connec
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MoPackage.CONNECTOR__IS_EXPANDABLE:
+			case modelicaPackage.CONNECTOR__IS_EXPANDABLE:
 				return isIsExpandable();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -116,7 +107,7 @@ public class ConnectorImpl extends ModelicaClassDefinitionImpl implements Connec
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MoPackage.CONNECTOR__IS_EXPANDABLE:
+			case modelicaPackage.CONNECTOR__IS_EXPANDABLE:
 				setIsExpandable((Boolean)newValue);
 				return;
 		}
@@ -131,7 +122,7 @@ public class ConnectorImpl extends ModelicaClassDefinitionImpl implements Connec
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MoPackage.CONNECTOR__IS_EXPANDABLE:
+			case modelicaPackage.CONNECTOR__IS_EXPANDABLE:
 				setIsExpandable(IS_EXPANDABLE_EDEFAULT);
 				return;
 		}
@@ -146,7 +137,7 @@ public class ConnectorImpl extends ModelicaClassDefinitionImpl implements Connec
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MoPackage.CONNECTOR__IS_EXPANDABLE:
+			case modelicaPackage.CONNECTOR__IS_EXPANDABLE:
 				return isExpandable != IS_EXPANDABLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

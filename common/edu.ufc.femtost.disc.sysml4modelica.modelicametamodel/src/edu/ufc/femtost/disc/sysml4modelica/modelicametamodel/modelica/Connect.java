@@ -1,13 +1,5 @@
-/*******************************************************************************
- * Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comte
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * Contributors:
- *     Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation
- *******************************************************************************/
+/**
+ */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
 
 import org.eclipse.emf.ecore.EObject;
@@ -32,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect()
+ * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getConnect()
  * @model
  * @generated
  */
@@ -48,7 +40,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owner Equation Section</em>' container reference.
 	 * @see #setOwnerEquationSection(EquationSection)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_OwnerEquationSection()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getConnect_OwnerEquationSection()
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection#getConnects
 	 * @model opposite="connects" transient="false"
 	 * @generated
@@ -75,7 +67,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From</em>' reference.
 	 * @see #setFrom(ModelicaPort)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_From()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getConnect_From()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -101,7 +93,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To</em>' reference.
 	 * @see #setTo(ModelicaPort)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_To()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getConnect_To()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -127,7 +119,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Modelica Part</em>' reference.
 	 * @see #setFromModelicaPart(ModelicaPart)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_FromModelicaPart()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getConnect_FromModelicaPart()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -153,7 +145,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Modelica Part</em>' reference.
 	 * @see #setToModelicaPart(ModelicaPart)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_ToModelicaPart()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getConnect_ToModelicaPart()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -179,7 +171,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Port</em>' attribute.
 	 * @see #setFromPort(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_FromPort()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getConnect_FromPort()
 	 * @model
 	 * @generated
 	 */
@@ -205,7 +197,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Port</em>' attribute.
 	 * @see #setToPort(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_ToPort()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getConnect_ToPort()
 	 * @model
 	 * @generated
 	 */
@@ -231,7 +223,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Part</em>' attribute.
 	 * @see #setFromPart(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_FromPart()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getConnect_FromPart()
 	 * @model
 	 * @generated
 	 */
@@ -257,7 +249,7 @@ public interface Connect extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Part</em>' attribute.
 	 * @see #setToPart(String)
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage#getConnect_ToPart()
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getConnect_ToPart()
 	 * @model
 	 * @generated
 	 */

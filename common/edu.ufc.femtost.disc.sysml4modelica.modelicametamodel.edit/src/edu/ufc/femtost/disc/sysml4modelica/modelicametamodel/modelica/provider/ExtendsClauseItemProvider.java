@@ -4,8 +4,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -32,7 +31,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ExtendsClauseItemProvider
+public class ExtendsClauseItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -84,7 +83,7 @@ public class ExtendsClauseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ExtendsClause_modification_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ExtendsClause_modification_feature", "_UI_ExtendsClause_type"),
-				 MoPackage.Literals.EXTENDS_CLAUSE__MODIFICATION,
+				 modelicaPackage.Literals.EXTENDS_CLAUSE__MODIFICATION,
 				 true,
 				 false,
 				 false,
@@ -106,7 +105,7 @@ public class ExtendsClauseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ExtendsClause_arraySize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ExtendsClause_arraySize_feature", "_UI_ExtendsClause_type"),
-				 MoPackage.Literals.EXTENDS_CLAUSE__ARRAY_SIZE,
+				 modelicaPackage.Literals.EXTENDS_CLAUSE__ARRAY_SIZE,
 				 true,
 				 false,
 				 false,
@@ -128,7 +127,7 @@ public class ExtendsClauseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ExtendsClause_visibility_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ExtendsClause_visibility_feature", "_UI_ExtendsClause_type"),
-				 MoPackage.Literals.EXTENDS_CLAUSE__VISIBILITY,
+				 modelicaPackage.Literals.EXTENDS_CLAUSE__VISIBILITY,
 				 true,
 				 false,
 				 false,
@@ -150,7 +149,7 @@ public class ExtendsClauseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ExtendsClause_extendedModelicaClass_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ExtendsClause_extendedModelicaClass_feature", "_UI_ExtendsClause_type"),
-				 MoPackage.Literals.EXTENDS_CLAUSE__EXTENDED_MODELICA_CLASS,
+				 modelicaPackage.Literals.EXTENDS_CLAUSE__EXTENDED_MODELICA_CLASS,
 				 true,
 				 false,
 				 true,
@@ -172,7 +171,7 @@ public class ExtendsClauseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ExtendsClause_from_modelica_standard_library_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ExtendsClause_from_modelica_standard_library_feature", "_UI_ExtendsClause_type"),
-				 MoPackage.Literals.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY,
+				 modelicaPackage.Literals.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY,
 				 true,
 				 false,
 				 false,
@@ -194,7 +193,7 @@ public class ExtendsClauseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ExtendsClause_from_modelica_primitive_types_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ExtendsClause_from_modelica_primitive_types_feature", "_UI_ExtendsClause_type"),
-				 MoPackage.Literals.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES,
+				 modelicaPackage.Literals.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES,
 				 true,
 				 false,
 				 false,
@@ -227,6 +226,7 @@ public class ExtendsClauseItemProvider
 			getString("_UI_ExtendsClause_type") :
 			getString("_UI_ExtendsClause_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -240,11 +240,11 @@ public class ExtendsClauseItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ExtendsClause.class)) {
-			case MoPackage.EXTENDS_CLAUSE__MODIFICATION:
-			case MoPackage.EXTENDS_CLAUSE__ARRAY_SIZE:
-			case MoPackage.EXTENDS_CLAUSE__VISIBILITY:
-			case MoPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY:
-			case MoPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES:
+			case modelicaPackage.EXTENDS_CLAUSE__MODIFICATION:
+			case modelicaPackage.EXTENDS_CLAUSE__ARRAY_SIZE:
+			case modelicaPackage.EXTENDS_CLAUSE__VISIBILITY:
+			case modelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_STANDARD_LIBRARY:
+			case modelicaPackage.EXTENDS_CLAUSE__FROM_MODELICA_PRIMITIVE_TYPES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

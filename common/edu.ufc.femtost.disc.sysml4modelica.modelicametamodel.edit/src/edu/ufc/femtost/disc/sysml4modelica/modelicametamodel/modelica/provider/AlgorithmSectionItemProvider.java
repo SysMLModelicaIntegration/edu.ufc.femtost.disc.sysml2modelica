@@ -4,8 +4,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -32,7 +31,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AlgorithmSectionItemProvider
+public class AlgorithmSectionItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -79,7 +78,7 @@ public class AlgorithmSectionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AlgorithmSection_body_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AlgorithmSection_body_feature", "_UI_AlgorithmSection_type"),
-				 MoPackage.Literals.ALGORITHM_SECTION__BODY,
+				 modelicaPackage.Literals.ALGORITHM_SECTION__BODY,
 				 true,
 				 false,
 				 false,
@@ -112,6 +111,7 @@ public class AlgorithmSectionItemProvider
 			getString("_UI_AlgorithmSection_type") :
 			getString("_UI_AlgorithmSection_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -125,7 +125,7 @@ public class AlgorithmSectionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AlgorithmSection.class)) {
-			case MoPackage.ALGORITHM_SECTION__BODY:
+			case modelicaPackage.ALGORITHM_SECTION__BODY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

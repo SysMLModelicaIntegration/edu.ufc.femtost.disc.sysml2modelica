@@ -3,10 +3,8 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoFactory;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFactory;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaFactory;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -17,12 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -32,14 +25,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PackageItemProvider
-	extends ModelicaClassDefinitionItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class PackageItemProvider extends ModelicaClassDefinitionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -79,7 +65,7 @@ public class PackageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Package_withinClause_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Package_withinClause_feature", "_UI_Package_type"),
-				 MoPackage.Literals.PACKAGE__WITHIN_CLAUSE,
+				 modelicaPackage.Literals.PACKAGE__WITHIN_CLAUSE,
 				 true,
 				 false,
 				 false,
@@ -100,7 +86,7 @@ public class PackageItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MoPackage.Literals.PACKAGE__MODELICA_CLASSES);
+			childrenFeatures.add(modelicaPackage.Literals.PACKAGE__MODELICA_CLASSES);
 		}
 		return childrenFeatures;
 	}
@@ -142,6 +128,7 @@ public class PackageItemProvider
 			getString("_UI_Package_type") :
 			getString("_UI_Package_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -155,10 +142,10 @@ public class PackageItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Package.class)) {
-			case MoPackage.PACKAGE__WITHIN_CLAUSE:
+			case modelicaPackage.PACKAGE__WITHIN_CLAUSE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MoPackage.PACKAGE__MODELICA_CLASSES:
+			case modelicaPackage.PACKAGE__MODELICA_CLASSES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -178,48 +165,48 @@ public class PackageItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.PACKAGE__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createClass()));
+				(modelicaPackage.Literals.PACKAGE__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createClass()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.PACKAGE__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createConnector()));
+				(modelicaPackage.Literals.PACKAGE__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createConnector()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.PACKAGE__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createModel()));
+				(modelicaPackage.Literals.PACKAGE__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createModel()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.PACKAGE__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createRecord()));
+				(modelicaPackage.Literals.PACKAGE__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createRecord()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.PACKAGE__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createBlock()));
+				(modelicaPackage.Literals.PACKAGE__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createBlock()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.PACKAGE__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createPackage()));
+				(modelicaPackage.Literals.PACKAGE__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createPackage()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.PACKAGE__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createFunction()));
+				(modelicaPackage.Literals.PACKAGE__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.PACKAGE__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createDerFunction()));
+				(modelicaPackage.Literals.PACKAGE__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createDerFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MoPackage.Literals.PACKAGE__MODELICA_CLASSES,
-				 MoFactory.eINSTANCE.createType()));
+				(modelicaPackage.Literals.PACKAGE__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createType()));
 	}
 
 }

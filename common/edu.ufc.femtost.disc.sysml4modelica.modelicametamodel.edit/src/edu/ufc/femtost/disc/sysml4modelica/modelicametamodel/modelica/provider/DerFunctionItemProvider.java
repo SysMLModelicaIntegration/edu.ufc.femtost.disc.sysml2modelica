@@ -4,8 +4,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.DerFunction;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.MoPackage;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPackage;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,12 +13,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -29,14 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DerFunctionItemProvider
-	extends FunctionItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class DerFunctionItemProvider extends FunctionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -77,7 +64,7 @@ public class DerFunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DerFunction_der_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DerFunction_der_feature", "_UI_DerFunction_type"),
-				 MoPackage.Literals.DER_FUNCTION__DER,
+				 modelicaPackage.Literals.DER_FUNCTION__DER,
 				 true,
 				 false,
 				 true,
@@ -99,7 +86,7 @@ public class DerFunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DerFunction_variable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DerFunction_variable_feature", "_UI_DerFunction_type"),
-				 MoPackage.Literals.DER_FUNCTION__VARIABLE,
+				 modelicaPackage.Literals.DER_FUNCTION__VARIABLE,
 				 true,
 				 false,
 				 false,
@@ -132,6 +119,7 @@ public class DerFunctionItemProvider
 			getString("_UI_DerFunction_type") :
 			getString("_UI_DerFunction_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -145,7 +133,7 @@ public class DerFunctionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DerFunction.class)) {
-			case MoPackage.DER_FUNCTION__VARIABLE:
+			case modelicaPackage.DER_FUNCTION__VARIABLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
