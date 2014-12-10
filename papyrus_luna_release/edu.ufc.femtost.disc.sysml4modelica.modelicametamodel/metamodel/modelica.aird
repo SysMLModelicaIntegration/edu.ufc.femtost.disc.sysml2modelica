@@ -669,7 +669,7 @@
             </children>
             <styles xmi:type="notation:ConnectorStyle" xmi:id="_XVk5AYBoEeSDGcH-tq9Kkg" routing="Tree"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_XVk5AoBoEeSDGcH-tq9Kkg" fontName="Segoe UI" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XVk5A4BoEeSDGcH-tq9Kkg" points="[0, 0, 763, 60]$[-763, -60, 0, 0]"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XVk5A4BoEeSDGcH-tq9Kkg" points="[0, 0, 765, 140]$[0, -115, 765, 25]$[-694, -115, 71, 25]$[-694, -140, 71, 0]"/>
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XVs00IBoEeSDGcH-tq9Kkg" id="(0.5,0.0)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XVtb4IBoEeSDGcH-tq9Kkg" id="(0.49808429118773945,1.0)"/>
           </edges>
