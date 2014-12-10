@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generateModelica" name="edu.ufc.femtost.disc.sysml4modelica.codegen">
-    <property name="ECLIPSE_HOME" value="../../../../../../../Applications/VM-EarlyPrototype"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../../../Documents/ws/wsESIGroup"/>
+    <property name="ECLIPSE_HOME" value="../../../../../Windows/eclipse_Luna"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../../workspaceSysML4ModelicaLuna"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="edu.ufc.femtost.disc.sysml4modelica.codegen.libraryclasspath">
