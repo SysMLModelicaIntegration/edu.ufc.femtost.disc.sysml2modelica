@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/edu.ufc.femtost.disc.sysml4modelica.papyrus.feature_1.0.0.201412101405.jar" id="edu.ufc.femtost.disc.sysml4modelica.papyrus.feature" version="1.0.0.201412101405">
+   <feature url="features/edu.ufc.femtost.disc.sysml4modelica.papyrus.feature_1.0.0.201412101412.jar" id="edu.ufc.femtost.disc.sysml4modelica.papyrus.feature" version="1.0.0.201412101412">
       <category name="edu.ufc.femtost.disc.sysml4modelica.papyrus"/>
    </feature>
    <category-def name="edu.ufc.femtost.disc.sysml4modelica.papyrus" label="UFC - SysML-Modelica Transformation">

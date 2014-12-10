@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:Classes="http://www.femto-st.fr/disc/SysML4Modelica/Classes" xmlns:Components="http://www.femto-st.fr/disc/SysML4Modelica/Components" xmlns:Requirements="http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://www.femto-st.fr/disc/SysML4Modelica/Classes http://www.femto-st.fr/disc/SysML4Modelica#//classes http://www.femto-st.fr/disc/SysML4Modelica/Components http://www.femto-st.fr/disc/SysML4Modelica#//components http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements http://www.eclipse.org/papyrus/0.7.0/SysML#//requirements">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:Classes="http://www.femto-st.fr/disc/SysML4Modelica/Classes" xmlns:Components="http://www.femto-st.fr/disc/SysML4Modelica/Components" xmlns:Requirements="http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements" xmlns:css="http://www.eclipse.org/papyrus/infra/gmfdiag/css" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/viewpoints/policy/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://www.femto-st.fr/disc/SysML4Modelica/Classes http://www.femto-st.fr/disc/SysML4Modelica#//classes http://www.femto-st.fr/disc/SysML4Modelica/Components http://www.femto-st.fr/disc/SysML4Modelica#//components http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements http://www.eclipse.org/papyrus/0.7.0/SysML#//requirements">
   <notation:Diagram xmi:id="_kAsQ0CqIEeOAKMp9jIGVCg" type="BlockDefinition" name="Two_tanks" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_phj4YCqIEeOAKMp9jIGVCg" type="shape_sysml_block_as_classifier">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_t-YB8CqIEeOAKMp9jIGVCg" source="Stereotype_Annotation">
@@ -103,6 +103,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Eh8Hcc96EeOjeMaviPd-Tw" x="435" y="170" height="151"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_kAsQ0SqIEeOAKMp9jIGVCg"/>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_bucvAIBuEeSw7NT8MBnrYg" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <element xmi:type="uml:Model" href="Two_tanks.uml#_ifaEQCqIEeOAKMp9jIGVCg"/>
   </notation:Diagram>
   <notation:Diagram xmi:id="_waHroCqIEeOAKMp9jIGVCg" type="BlockDefinition" name="Design" measurementUnit="Pixel">
@@ -255,7 +256,11 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3q-qISqIEeOAKMp9jIGVCg" x="380" y="100" width="151" height="150"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_waHroSqIEeOAKMp9jIGVCg"/>
-    <element xmi:type="uml:Class" href="Two_tanks.uml#_pg4i8CqIEeOAKMp9jIGVCg"/>
+    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_cIwFYIBuEeSw7NT8MBnrYg">
+      <owner xmi:type="uml:Class" href="Two_tanks.uml#_pg4i8CqIEeOAKMp9jIGVCg"/>
+    </styles>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_cIwscIBuEeSw7NT8MBnrYg" name="diagram_compatibility_version" stringValue="1.0.0"/>
+    <element xmi:type="uml:Model" href="Two_tanks.uml#_ifaEQCqIEeOAKMp9jIGVCg"/>
   </notation:Diagram>
   <notation:Diagram xmi:id="_kyWc0CrAEeO_MbbH-EGeJw" type="BlockDefinition" name="Interface" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_lg1TcCrAEeO_MbbH-EGeJw" type="shape_sysml_block_as_classifier">
@@ -517,7 +522,11 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FXF6YSrBEeO_MbbH-EGeJw" x="465" y="20" width="211" height="150"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_kyWc0SrAEeO_MbbH-EGeJw"/>
-    <element xmi:type="uml:Class" href="Two_tanks.uml#_xnIRUCqIEeOAKMp9jIGVCg"/>
+    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_cRqJwIBuEeSw7NT8MBnrYg">
+      <owner xmi:type="uml:Class" href="Two_tanks.uml#_xnIRUCqIEeOAKMp9jIGVCg"/>
+    </styles>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_cRqw0IBuEeSw7NT8MBnrYg" name="diagram_compatibility_version" stringValue="1.0.0"/>
+    <element xmi:type="uml:Model" href="Two_tanks.uml#_ifaEQCqIEeOAKMp9jIGVCg"/>
   </notation:Diagram>
   <notation:Diagram xmi:id="_oIdAgCrBEeO_MbbH-EGeJw" type="BlockDefinition" name="Components" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_pvfPwCrBEeO_MbbH-EGeJw" type="shape_sysml_block_as_classifier">
@@ -1153,7 +1162,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rrUQUs9yEeOjeMaviPd-Tw"/>
       </children>
       <element xmi:type="uml:Class" href="Two_tanks.uml#_Jj-VECrCEeO_MbbH-EGeJw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JkerYSrCEeO_MbbH-EGeJw" x="455" y="75" width="241" height="230"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JkerYSrCEeO_MbbH-EGeJw" x="455" y="8" width="241" height="297"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_ReqTsCrCEeO_MbbH-EGeJw" type="shape_sysml_block_as_classifier">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WabqICrCEeO_MbbH-EGeJw" source="Stereotype_Annotation">
@@ -1270,7 +1279,11 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ReqTsSrCEeO_MbbH-EGeJw" x="455" y="325" width="241" height="170"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_oIdAgSrBEeO_MbbH-EGeJw"/>
-    <element xmi:type="uml:Class" href="Two_tanks.uml#_3qdswCqIEeOAKMp9jIGVCg"/>
+    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_cXAj0IBuEeSw7NT8MBnrYg">
+      <owner xmi:type="uml:Class" href="Two_tanks.uml#_3qdswCqIEeOAKMp9jIGVCg"/>
+    </styles>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_cXBK4IBuEeSw7NT8MBnrYg" name="diagram_compatibility_version" stringValue="1.0.0"/>
+    <element xmi:type="uml:Model" href="Two_tanks.uml#_ifaEQCqIEeOAKMp9jIGVCg"/>
     <edges xmi:type="notation:Connector" xmi:id="_9asPECrBEeO_MbbH-EGeJw" type="link_uml_generalization" source="_0BTd0CrBEeO_MbbH-EGeJw" target="_pvfPwCrBEeO_MbbH-EGeJw">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-KWKYCrBEeO_MbbH-EGeJw" source="Stereotype_Annotation">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-KWKYSrBEeO_MbbH-EGeJw" key="StereotypeWithQualifiedNameList" value=""/>
@@ -1607,6 +1620,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dEJq-yrUEeO_MbbH-EGeJw" x="40" y="40" width="911" height="366"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_dEJq_CrUEeO_MbbH-EGeJw"/>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_cjzCoIBuEeSw7NT8MBnrYg" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <element xmi:type="uml:Class" href="Two_tanks.uml#_ReLLgCrCEeO_MbbH-EGeJw"/>
     <edges xmi:type="notation:Connector" xmi:id="_5zXBYCrUEeO_MbbH-EGeJw" type="link_uml_connector" source="_jHMygCrUEeO_MbbH-EGeJw" target="_yGnYICrUEeO_MbbH-EGeJw" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_5zXocCrUEeO_MbbH-EGeJw" type="linklabel_uml_appliedstereotype">
@@ -1853,6 +1867,9 @@
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NiGD4c97EeOjeMaviPd-Tw" key="Stereotype_Presentation_Kind" value="Compartment"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NiGD4s97EeOjeMaviPd-Tw" key="PropStereoDisplay" value="SysML::Requirements::Requirement.id,SysML::Requirements::Requirement.text"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NiGD4897EeOjeMaviPd-Tw" key="StereotypePropertyLocation" value="Compartment"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__LidQIBvEeSw7NT8MBnrYg" source="ShadowFigure">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__LjEUIBvEeSw7NT8MBnrYg" key="ShadowFigure_Value" value="false"/>
       </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_NhkfcM97EeOjeMaviPd-Tw" type="5029"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_Nhkfcc97EeOjeMaviPd-Tw" visible="false" type="7017">
@@ -2101,4 +2118,5 @@
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EicBcc-gEeOW1ZojtwsShQ" id="(0.2288135593220339,0.3253968253968254)"/>
     </edges>
   </notation:Diagram>
+  <css:ModelStyleSheets xmi:id="_Qnl54IBvEeSw7NT8MBnrYg"/>
 </xmi:XMI>

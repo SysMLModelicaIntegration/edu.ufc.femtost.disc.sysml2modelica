@@ -36,7 +36,6 @@ API and implementation
       <import plugin="org.eclipse.core.resources" version="3.7.101" match="greaterOrEqual"/>
       <import plugin="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui.workbench"/>
-      <import plugin="org.eclipse.uml2.uml.profile.l2"/>
       <import plugin="org.eclipse.papyrus.sysml"/>
       <import plugin="org.eclipse.uml2.types"/>
       <import plugin="org.eclipse.uml2.uml"/>

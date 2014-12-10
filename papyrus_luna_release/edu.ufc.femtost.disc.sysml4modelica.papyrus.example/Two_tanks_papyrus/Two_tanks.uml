@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:Classes="http://www.femto-st.fr/disc/SysML4Modelica/Classes" xmlns:Components="http://www.femto-st.fr/disc/SysML4Modelica/Components" xmlns:EquationsAndAlgorithms="http://www.femto-st.fr/disc/SysML4Modelica/EquationsAndAlgorithms" xmlns:PortAndFlows="http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows" xmlns:Requirements="http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://www.femto-st.fr/disc/SysML4Modelica/Classes http://www.femto-st.fr/disc/SysML4Modelica#//classes http://www.femto-st.fr/disc/SysML4Modelica/Components http://www.femto-st.fr/disc/SysML4Modelica#//components http://www.femto-st.fr/disc/SysML4Modelica/EquationsAndAlgorithms http://www.femto-st.fr/disc/SysML4Modelica#//equationsandalgorithms http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements http://www.eclipse.org/papyrus/0.7.0/SysML#//requirements">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:Classes="http://www.femto-st.fr/disc/SysML4Modelica/Classes" xmlns:Components="http://www.femto-st.fr/disc/SysML4Modelica/Components" xmlns:EquationsAndAlgorithms="http://www.femto-st.fr/disc/SysML4Modelica/EquationsAndAlgorithms" xmlns:PortAndFlows="http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows" xmlns:Requirements="http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://www.femto-st.fr/disc/SysML4Modelica/Classes http://www.femto-st.fr/disc/SysML4Modelica#//classes http://www.femto-st.fr/disc/SysML4Modelica/Components http://www.femto-st.fr/disc/SysML4Modelica#//components http://www.femto-st.fr/disc/SysML4Modelica/EquationsAndAlgorithms http://www.femto-st.fr/disc/SysML4Modelica#//equationsandalgorithms http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements http://www.eclipse.org/papyrus/0.7.0/SysML#//requirements">
   <uml:Model xmi:id="_ifaEQCqIEeOAKMp9jIGVCg" name="Two_tanks">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_z-lWcCrAEeO_MbbH-EGeJw">
       <importedPackage xmi:type="uml:Profile" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_73GR4CmvEeOqNeVB2HB3cA"/>
@@ -8,33 +8,33 @@
       <nestedClassifier xmi:type="uml:Class" xmi:id="_xnIRUCqIEeOAKMp9jIGVCg" name="Interface">
         <nestedClassifier xmi:type="uml:Class" xmi:id="_lf6GYCrAEeO_MbbH-EGeJw" name="ActSignal">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_tNKtACrAEeO_MbbH-EGeJw" name="act">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
           </ownedAttribute>
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_9kp40CrAEeO_MbbH-EGeJw" name="ReadSignal">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_CsBbQCrBEeO_MbbH-EGeJw" name="val">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
           </ownedAttribute>
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_FWnZQCrBEeO_MbbH-EGeJw" name="LiquidFlow">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_Omr2cCrBEeO_MbbH-EGeJw" name="lflow">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
           </ownedAttribute>
         </nestedClassifier>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_3qdswCqIEeOAKMp9jIGVCg" name="Components">
         <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_fJ1Y4CszEeORjY0gZtrwiA" name="limitValue">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_tv-i4CszEeORjY0gZtrwiA" name="pMin">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_rn5moCs0EeORjMAZExQRfQ" name="pMax">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_-2osYCs0EeORjMAZExQRfQ" name="p">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_IRv78Cs1EeORjMAZExQRfQ" name="pLim">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
           </ownedParameter>
           <language>Modelica</language>
           <body>pLim:=if p > pMax then pMax else if p &lt; pMin then pMin else p;</body>
@@ -47,24 +47,24 @@
             <specification xmi:type="uml:LiteralString" xmi:id="_4d95kCrFEeO_MbbH-EGeJw" name="constraintSpec" value="cOut.act = outCtr"/>
           </ownedRule>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_a0RYMCrCEeO_MbbH-EGeJw" name="K">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_lgKBMCrEEeO_MbbH-EGeJw" value="2.0"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_boIeJCrCEeO_MbbH-EGeJw" name="T">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_pm1isCrEEeO_MbbH-EGeJw" name="" value="10.0"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_cljIkCrCEeO_MbbH-EGeJw" name="ref">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_emu9MCrCEeO_MbbH-EGeJw" name="error">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_fmvBoCrCEeO_MbbH-EGeJw" name="outCtr">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
           </ownedAttribute>
         </nestedClassifier>
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_0A0VoCrBEeO_MbbH-EGeJw" clientDependency="_uC8DcM98EeOjeMaviPd-Tw" name="Controller">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_0A0VoCrBEeO_MbbH-EGeJw" name="Controller">
           <ownedRule xmi:type="uml:Constraint" xmi:id="_cSjEUCrTEeO_MbbH-EGeJw" name="Constraint1">
             <specification xmi:type="uml:LiteralString" xmi:id="_dxbdICrTEeO_MbbH-EGeJw" name="constraintSpec" value="der(x) = error / T"/>
           </ownedRule>
@@ -73,7 +73,7 @@
           </ownedRule>
           <generalization xmi:type="uml:Generalization" xmi:id="_9aNt8CrBEeO_MbbH-EGeJw" general="_pvB8wCrBEeO_MbbH-EGeJw"/>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_WlKqwCrTEeO_MbbH-EGeJw" name="x">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Port" xmi:id="_nuDzcCrVEeO_MbbH-EGeJw" name="cOut" visibility="public" type="_lf6GYCrAEeO_MbbH-EGeJw" aggregation="composite">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_o7Lt4CrVEeO_MbbH-EGeJw" value="1"/>
@@ -90,7 +90,7 @@
             </defaultValue>
           </ownedAttribute>
         </nestedClassifier>
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_DTz-kCrCEeO_MbbH-EGeJw" clientDependency="_Ehu20M-gEeOW1ZojtwsShQ" name="LiquidSource">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_DTz-kCrCEeO_MbbH-EGeJw" name="LiquidSource">
           <ownedRule xmi:type="uml:Constraint" xmi:id="_Slb5oCsyEeORjY0gZtrwiA" name="Constraint1">
             <specification xmi:type="uml:LiteralString" xmi:id="_UjtkMCsyEeORjY0gZtrwiA" name="constraintSpec" value="qOut.lflow = if time > 150 then 3 * flowLevel else flowLevel"/>
           </ownedRule>
@@ -102,7 +102,7 @@
             </defaultValue>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_FZdAgCsyEeORjY0gZtrwiA" name="flowLevel">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_MzskgCsyEeORjY0gZtrwiA" value="0.02"/>
           </ownedAttribute>
         </nestedClassifier>
@@ -151,26 +151,26 @@
             </defaultValue>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_Zs0zECsyEeORjY0gZtrwiA" name="area">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_xbOiECsyEeORjY0gZtrwiA" value="0.5"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_agV6sCsyEeORjY0gZtrwiA" name="flowGain">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_9sZ_0CsyEeORjY0gZtrwiA" value="0.05"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_cERLkCsyEeORjY0gZtrwiA" name="minV">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_Gqmp4CszEeORjY0gZtrwiA" value="0.0"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_dUvU8CsyEeORjY0gZtrwiA" name="maxV">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_MSxzUCszEeORjY0gZtrwiA" value="10.0"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_e1IJoCsyEeORjY0gZtrwiA" name="h">
-            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_MQjVICnHEeOqNeVB2HB3cA"/>
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
           </ownedAttribute>
         </nestedClassifier>
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_ReLLgCrCEeO_MbbH-EGeJw" clientDependency="_bX4SgM98EeOjeMaviPd-Tw" name="TanksConnectedPI">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_ReLLgCrCEeO_MbbH-EGeJw" name="TanksConnectedPI">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_0SZvsCrTEeO_MbbH-EGeJw" name="source" visibility="public" type="_DTz-kCrCEeO_MbbH-EGeJw" aggregation="composite" association="_3c4HoCrTEeO_MbbH-EGeJw">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_36cNYCrTEeO_MbbH-EGeJw" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_36q24CrTEeO_MbbH-EGeJw" value="1"/>
