@@ -1,0 +1,805 @@
+--
+--  Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comte
+--  All rights reserved. This program and the accompanying materials
+--  are made available under the terms of the Eclipse Public License v1.0
+--  which accompanies this distribution, and is available at
+--  http://www.eclipse.org/legal/epl-v10.html
+--  
+--  Contributors:
+--      Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation
+--
+
+-- @nsURI MMmodelica=http://www.femto-st.fr/disc/Modelica.ecore
+-- @nsURI MMsysml=http://www.eclipse.org/papyrus/0.7.0/SysML
+-- @nsURI MMuml=http://www.eclipse.org/uml2/4.0.0/UML
+-- @nsURI MMmodelicaProfile=http://www.femto-st.fr/disc/SysML4Modelica
+
+module omgsysml2modelica;
+create OUTmodelica : MMmodelica from INuml : MMuml, INsysml : MMsysml, INmodelicaProfile: MMmodelicaProfile;
+
+------------------------------------------------------------------------
+-------------------------------HELPERS----------------------------------
+------------------------------------------------------------------------
+helper def: Sequence2String(seq: Sequence(String), size: Integer) : String = 
+	if(seq.size() <> 0) then 
+		if(size = seq.size()) then
+			seq.at(size).toString()
+		else
+			thisModule.Sequence2String(seq, size + 1).concat(', '+seq.at(size).toString())
+		endif
+	else
+		''
+	endif;
+
+helper def: isBlockStereotyped(c: MMuml!Class) : Boolean = 
+	c.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::Blocks::Block');
+
+helper def: isConstraintBlockStereotyped(c: MMuml!Class) : Boolean = 
+	c.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::Constraints::ConstraintBlock');
+
+helper def: isFlowPortStereotyped(p: MMuml!Port) : Boolean = 
+	p.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::PortAndFlows::FlowPort');
+
+helper context MMuml!DataType def: isValueTypeStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::Blocks::ValueType');
+
+helper context MMuml!NamedElement def: isModelicaClassDefinitionStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | 
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaClass' or
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaModel' or
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaRecord' or
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaBlock' or
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaPackage' or
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaConnector' or
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaOperator' or 
+		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaType'
+	);
+
+helper context MMuml!NamedElement def: isModelicaComponentStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | 
+		s.qualifiedName = 'SysML4Modelica::Components::ModelicaValueProperty' or
+		s.qualifiedName = 'SysML4Modelica::Components::ModelicaPart' or
+		s.qualifiedName = 'SysML4Modelica::Components::ModelicaPort'
+	);
+
+helper context MMuml!NamedElement def: isModelicaClassStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaClass');
+
+helper context MMuml!NamedElement def: isModelicaModelStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaModel');
+
+helper context MMuml!NamedElement def: isModelicaRecordStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaRecord');
+
+helper context MMuml!NamedElement def: isModelicaBlockStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaBlock');
+
+helper context MMuml!NamedElement def: isModelicaConnectorStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaConnector');
+
+helper context MMuml!NamedElement def: isModelicaPackageStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaPackage');
+
+helper context MMuml!NamedElement def: isModelicaTypeStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaType');
+
+helper context MMuml!NamedElement def: isModelicaFunctionStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaFunction');
+
+helper context MMuml!NamedElement def: isModelicaFunctionParameterStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Components::ModelicaFunctionParameter');
+
+helper context MMuml!Dependency def: isModelicaDerStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaDer');
+
+helper context MMuml!Dependency def: isModelicaConstrainedByStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaConstrainedBy');
+
+helper context MMuml!Generalization def: isModelicaExtendsStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Classes::ModelicaExtends');
+
+helper context MMuml!Property def: isModelicaValuePropertyStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Components::ModelicaValueProperty');
+
+helper context MMuml!Property def: isModelicaPartStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Components::ModelicaPart');
+
+helper context MMuml!Property def: isModelicaPortStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Components::ModelicaPort');
+
+helper context MMuml!Connector def: isModelicaConnectionStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Equations And Algorithms::ModelicaConnection');
+
+helper context MMuml!Constraint def: isModelicaEquationStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Equations And Algorithms::ModelicaEquation');
+
+helper context MMuml!Comment def: isModelicaAnnotationStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Other::ModelicaAnnotation');
+
+
+helper context MMuml!Class def: getIsFinal() : Boolean = 
+	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Classifier = self)->first().isFinal;
+
+helper context MMuml!Property def: getIsFinal() : String = 
+	MMmodelicaProfile!ModelicaValueProperty.allInstances()->
+		union(MMmodelicaProfile!ModelicaPart.allInstances())->
+			union(MMmodelicaProfile!ModelicaPort.allInstances())->
+				select(mc | 
+					if(mc.oclIsTypeOf(MMmodelicaProfile!ModelicaValueProperty) or mc.oclIsTypeOf(MMmodelicaProfile!ModelicaPart))then
+						mc.base_Property = self
+					else
+						mc.base_Port = self
+					endif
+				)->first().isFinal;
+
+helper context MMuml!FunctionBehavior def: getIsFinal() : Boolean = 
+	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().isFinal;
+
+helper context MMuml!Parameter def: getIsFinal() : String = 
+	MMmodelicaProfile!ModelicaFunctionParameter.allInstances()->select(mc | mc.base_Parameter = self)->first().isFinal;
+
+helper context MMuml!DataType def: getIsFinal() : String = 
+	MMmodelicaProfile!ModelicaType.allInstances()->select(mt | mt.base_DataType = self)->first().isFinal;
+
+helper context MMuml!Class def: getIsPartial() : Boolean = 
+	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Classifier = self)->first().isPartial;
+
+helper context MMuml!FunctionBehavior def: getIsPartial() : Boolean = 
+	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().isPartial;
+
+helper context MMuml!DataType def: getIsPartial() : Boolean = 
+	MMmodelicaProfile!ModelicaType.allInstances()->select(mt | mt.base_DataType = self)->first().isPartial;
+
+helper context MMuml!Generalization def: getModification() : String = 
+	thisModule.Sequence2String(MMmodelicaProfile!ModelicaExtends.allInstances()->select(mc | mc.base_Generalization = self)->first().modification, 1);
+
+helper context MMuml!Parameter def: getModification() : String = 
+	thisModule.Sequence2String(MMmodelicaProfile!ModelicaFunctionParameter.allInstances()->select(mc | mc.base_Parameter = self)->first().modification, 1);
+
+helper context MMuml!Dependency def: getModification() : String = 
+	thisModule.Sequence2String(MMmodelicaProfile!ModelicaConstrainedBy.allInstances()->select(mc | mc.base_Dependency = self)->first().modification, 1);
+
+helper context MMuml!Property def: getModification() : String = 
+	thisModule.Sequence2String(
+		MMmodelicaProfile!ModelicaValueProperty.allInstances()->
+			union(MMmodelicaProfile!ModelicaPart.allInstances())->
+				union(MMmodelicaProfile!ModelicaPort.allInstances())->
+					select(mc | 
+						if(mc.oclIsTypeOf(MMmodelicaProfile!ModelicaValueProperty) or mc.oclIsTypeOf(MMmodelicaProfile!ModelicaPart))then
+							mc.base_Property = self
+						else
+							mc.base_Port = self
+						endif
+					)->first().modification, 1);
+
+helper context MMuml!Class def: getIsReplaceable() : Boolean = 
+	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Classifier = self)->first().isReplaceable;
+
+helper context MMuml!FunctionBehavior def: getIsReplaceable() : Boolean = 
+	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().isReplaceable;
+
+helper context MMuml!Parameter def: getIsReplaceable() : String = 
+	MMmodelicaProfile!ModelicaFunctionParameter.allInstances()->select(mc | mc.base_Parameter = self)->first().isReplaceable;
+
+helper context MMuml!DataType def: getIsReplaceable() : String = 
+	MMmodelicaProfile!ModelicaType.allInstances()->select(mt | mt.base_DataType = self)->first().isReplaceable;
+
+helper context MMuml!Property def: getIsReplaceable() : String = 
+	MMmodelicaProfile!ModelicaValueProperty.allInstances()->
+		union(MMmodelicaProfile!ModelicaPart.allInstances())->
+			union(MMmodelicaProfile!ModelicaPort.allInstances())->
+				select(mc | 
+					if(mc.oclIsTypeOf(MMmodelicaProfile!ModelicaValueProperty) or mc.oclIsTypeOf(MMmodelicaProfile!ModelicaPart))then
+						mc.base_Property = self
+					else
+						mc.base_Port = self
+					endif
+				)->first().isReplaceable;
+
+helper context MMuml!Property def: getCausality() : String = 
+	MMmodelicaProfile!ModelicaValueProperty.allInstances()->
+			union(MMmodelicaProfile!ModelicaPort.allInstances())->
+				select(mc | 
+					if(mc.oclIsTypeOf(MMmodelicaProfile!ModelicaValueProperty))then
+						mc.base_Property = self
+					else
+						mc.base_Port = self
+					endif
+				)->first().causality;
+
+helper context MMuml!Parameter def: getCausality() : String = 
+	MMmodelicaProfile!ModelicaFunctionParameter.allInstances()->select(mc | mc.base_Parameter = self)->first().causality;
+
+helper context MMuml!Generalization def: getVisibility() : String = 
+	MMmodelicaProfile!ModelicaExtends.allInstances()->select(mc | mc.base_Generalization = self)->first().visibility;
+
+helper context MMuml!Property def: getVisibility() : String = 
+	MMmodelicaProfile!ModelicaValueProperty.allInstances()->select(mc | mc.base_Property = self)->first().visibility;
+
+helper context MMuml!Generalization def: getArraySize() : String = 
+	thisModule.Sequence2String(MMmodelicaProfile!ModelicaExtends.allInstances()->select(mc | mc.base_Generalization = self)->first().arraySize, 1);
+
+helper context MMuml!Property def: getArraySize() : Sequence(String) = 
+	MMmodelicaProfile!ModelicaValueProperty.allInstances()->
+		union(MMmodelicaProfile!ModelicaPart.allInstances())->
+			union(MMmodelicaProfile!ModelicaPort.allInstances())->
+				select(mc | 
+					if(mc.oclIsTypeOf(MMmodelicaProfile!ModelicaValueProperty) or mc.oclIsTypeOf(MMmodelicaProfile!ModelicaPart))then
+						mc.base_Property = self
+					else
+						mc.base_Port = self
+					endif
+				)->first().arraySize;
+
+helper context MMuml!Parameter def: getArraySize() : String = 
+	thisModule.Sequence2String(MMmodelicaProfile!ModelicaFunctionParameter.allInstances()->select(mc | mc.base_Parameter = self)->first().arraySize, 1);
+
+helper context MMuml!Class def: getIsModelicaEncapsulated() : Boolean = 
+	MMmodelicaProfile!ModelicaClassDefinition.allInstances()->select(mc | mc.base_Classifier = self)->first().isModelicaEncapsulated;
+
+helper context MMuml!DataType def: getIsModelicaEncapsulated() : Boolean = 
+	MMmodelicaProfile!ModelicaType.allInstances()->select(mt | mt.base_DataType = self)->first().isModelicaEncapsulated;
+
+helper context MMuml!FunctionBehavior def: getIsModelicaEncapsulated() : Boolean = 
+	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().isModelicaEncapsulated;
+
+helper context MMuml!Class def: getIsExpandable() : Boolean = 
+	MMmodelicaProfile!ModelicaConnector.allInstances()->select(mc | mc.base_Classifier = self)->first().isExpandable;
+
+helper context MMuml!FunctionBehavior def: getIsExpandable() : Boolean = 
+	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().isExpandable;
+
+helper context MMuml!Property def: getVariability() : String = 
+	MMmodelicaProfile!ModelicaValueProperty.allInstances()->select(mc | mc.base_Property = self)->first().variability;
+
+helper context MMuml!Parameter def: getVariability() : String = 
+	MMmodelicaProfile!ModelicaFunctionParameter.allInstances()->select(mc | mc.base_Parameter = self)->first().variability;
+
+helper context MMuml!FunctionBehavior def: getExternalLibrary() : Sequence(String) = 
+	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().externalLibrary;
+
+helper context MMuml!FunctionBehavior def: getExternalInclude() : String = 
+	MMmodelicaProfile!ModelicaFunction.allInstances()->select(mc | mc.base_FunctionBehavior = self)->first().externalInclude;
+
+helper context MMuml!Dependency def: getVariable() : String = 
+	MMmodelicaProfile!ModelicaDer.allInstances()->select(mc | mc.base_Dependency = self)->first().variable;
+
+helper context MMuml!Property def: getConditionalExpression() : String = 
+	MMmodelicaProfile!ModelicaValueProperty.allInstances()->
+		union(MMmodelicaProfile!ModelicaPart.allInstances())->
+			union(MMmodelicaProfile!ModelicaPort.allInstances())->
+				select(mc | 
+					if(mc.oclIsTypeOf(MMmodelicaProfile!ModelicaValueProperty) or mc.oclIsTypeOf(MMmodelicaProfile!ModelicaPart))then
+						mc.base_Property = self
+					else
+						mc.base_Port = self
+					endif
+				)->first().conditionalExpression;
+
+
+helper context MMuml!Parameter def: getDeclarationEquation() : String = 
+	MMmodelicaProfile!ModelicaFunctionParameter.allInstances()->select(mc | mc.base_Parameter = self)->first().declarationEquation;
+
+
+helper context MMuml!Property def: getFlowFlag() : String = 
+	MMmodelicaProfile!ModelicaValueProperty.allInstances()->select(mc | mc.base_Property = self)->first().flowFlag;
+
+helper context MMuml!Property def: getScope() : String = 
+	MMmodelicaProfile!ModelicaValueProperty.allInstances()->
+		union(MMmodelicaProfile!ModelicaPart.allInstances())->
+				select(mc | mc.base_Property = self)->first().scope;
+
+helper context MMuml!NamedElement def: getWithinClause(): String =
+		if (self.owner.oclIsTypeOf(MMuml!Model)) then 
+			self.owner.name
+    	else 
+    		if(self.owner.oclIsTypeOf(MMuml!Package)) then
+				self.owner.getWithinClause()
+    		else
+    			self.owner.getWithinClause().concat('/'.concat(self.owner.name))
+			endif
+		endif;
+
+helper context MMuml!Constraint def: getIsInitial() : String = 
+	MMmodelicaProfile!ModelicaEquation.allInstances()->select(mc | mc.base_Constraint = self)->first().isInitial;
+
+------------------------------------------------------------------------
+---------------------------------BDD------------------------------------
+------------------------------------------------------------------------
+rule Model2Model{
+	from sysml: MMuml!Model(
+		sysml.oclIsTypeOf(MMuml!Model)
+	) 
+	to  modelica_model: MMmodelica!ModelicaModel(
+		name <- sysml.name
+	)
+}
+
+abstract rule Block2ModelicaClassDefinition{
+	from sysml: MMuml!Class(
+		thisModule.isBlockStereotyped(sysml) and
+		not thisModule.isConstraintBlockStereotyped(sysml) and
+		sysml.isModelicaClassDefinitionStereotyped()
+	)
+	to modelica: MMmodelica!ModelicaClassDefinition(
+		name <- sysml.name,
+		isModelicaEncapsulated <- sysml.getIsModelicaEncapsulated(), 
+		isFinal <- sysml.getIsFinal(), 
+		isPartial <- sysml.getIsPartial(), 
+		isReplaceable <- sysml.getIsReplaceable()
+	)
+}
+
+rule Block2Package_1 extends Block2ModelicaClassDefinition{
+	from sysml: MMuml!Class(
+		thisModule.isBlockStereotyped(sysml) and
+		not thisModule.isConstraintBlockStereotyped(sysml) and
+		sysml.isModelicaPackageStereotyped() and
+		not (sysml.owner.oclIsTypeOf(MMuml!Class) and thisModule.isBlockStereotyped(sysml.owner))
+	)
+	to modelica: MMmodelica!Package(
+		withinClause <- sysml.getWithinClause(), 
+		ownerModel <- sysml.getModel()
+	)
+}
+
+rule Block2Package_2 extends Block2ModelicaClassDefinition{
+	from sysml: MMuml!Class(
+		thisModule.isBlockStereotyped(sysml) and
+		not thisModule.isConstraintBlockStereotyped(sysml) and
+		sysml.isModelicaPackageStereotyped() and
+		sysml.owner.oclIsTypeOf(MMuml!Class) and 
+		thisModule.isBlockStereotyped(sysml.owner) and
+		sysml.owner.isModelicaPackageStereotyped()
+	)
+	to modelica: MMmodelica!Package(
+		withinClause <- sysml.getWithinClause(), 
+		ownerPackage <- sysml.owner
+		
+	)
+}
+
+rule Block2Model extends Block2ModelicaClassDefinition{
+	from sysml: MMuml!Class(
+		thisModule.isBlockStereotyped(sysml) and
+		sysml.isModelicaModelStereotyped()
+	)
+	to modelica: MMmodelica!Model(
+		ownerModel <- if(not thisModule.isBlockStereotyped(sysml.owner))then
+							sysml.getModel()
+						else
+							OclUndefined
+						endif, 
+		ownerPackage <- if(thisModule.isBlockStereotyped(sysml.owner))then
+							sysml.owner
+						else
+							OclUndefined
+						endif
+	)						
+}
+
+rule Block2Block extends Block2ModelicaClassDefinition{
+	from sysml: MMuml!Class(
+		thisModule.isBlockStereotyped(sysml) and
+		sysml.isModelicaBlockStereotyped()
+	)
+	to modelica: MMmodelica!Block(
+		ownerModel <- if(not thisModule.isBlockStereotyped(sysml.owner))then
+							sysml.getModel()
+						else
+							OclUndefined
+						endif, 
+		ownerPackage <- if(thisModule.isBlockStereotyped(sysml.owner))then
+							sysml.owner
+						else
+							OclUndefined
+						endif	
+	)						
+}
+
+rule Block2ModelicaConnector extends Block2ModelicaClassDefinition{
+	from sysml: MMuml!Class(
+		thisModule.isBlockStereotyped(sysml) and
+		sysml.isModelicaConnectorStereotyped()
+	)
+	to modelica: MMmodelica!Connector(
+		isExpandable <- sysml.getIsExpandable(), 
+		ownerPackage <- sysml.owner
+	)
+}
+
+rule Block2ModelicaRecord extends Block2ModelicaClassDefinition{
+	from sysml: MMuml!Class(
+		thisModule.isBlockStereotyped(sysml) and
+		sysml.isModelicaRecordStereotyped()
+	)
+	to modelica: MMmodelica!Record(
+		ownerModel <- if(not thisModule.isBlockStereotyped(sysml.owner))then
+							sysml.getModel()
+						else
+							OclUndefined
+						endif, 
+		ownerPackage <- if(thisModule.isBlockStereotyped(sysml.owner))then
+							sysml.owner
+						else
+							OclUndefined
+						endif	
+	)
+}
+
+rule ValueType2Type{
+	from sysml: MMuml!DataType(
+		sysml.isValueTypeStereotyped() and
+		sysml.isModelicaTypeStereotyped()
+	)
+	to modelica: MMmodelica!Type(
+		name <- sysml.name,
+		isModelicaEncapsulated <- sysml.getIsModelicaEncapsulated(), 
+		isFinal <- sysml.getIsFinal(), 
+		isPartial <- sysml.getIsPartial(), 
+		isReplaceable <- sysml.getIsReplaceable(),
+		ownerModel <- if(not thisModule.isBlockStereotyped(sysml.owner))then
+							sysml.getModel()
+						else
+							OclUndefined
+						endif, 
+		ownerPackage <- if(thisModule.isBlockStereotyped(sysml.owner))then
+							sysml.owner
+						else
+							OclUndefined
+						endif
+	)
+}
+
+rule Generalization2ModelicaExtends{
+	from sysml: MMuml!Generalization(
+		sysml.isModelicaExtendsStereotyped()	
+	)
+	to modelica: MMmodelica!ExtendsClause(
+		ownerModelicaClassDefinition <- sysml.owner, 
+		extendedModelicaClass <- if(sysml.general.getQualifiedName().startsWith('Modelica::') or sysml.general.getQualifiedName().startsWith('SysML4Modelica::Types'))then
+									OclUndefined
+								else
+									sysml.general
+								endif, 
+		visibility <- sysml.getVisibility(), 
+		arraySize <- sysml.getArraySize(), 
+		modification <- sysml.getModification(), 
+		from_modelica_standard_library <-	if(sysml.general.getQualifiedName().startsWith('Modelica::'))then
+												sysml.general.getQualifiedName().regexReplaceAll('::', '.')
+											else
+												OclUndefined
+											endif, 
+		from_modelica_primitive_types <-  if (sysml.general.getQualifiedName().startsWith('SysML4Modelica::Types::ModelicaPredefinedTypes')) then
+											sysml.general.name
+										  else
+										  	OclUndefined
+										  endif
+	)
+}
+
+abstract rule Property2ModelicaComponent{
+	from sysml: MMuml!Property(
+		sysml.isModelicaComponentStereotyped()	
+	)	
+	to modelica: MMmodelica!ModelicaComponent(
+		name <- sysml.name, 
+		ownerModelicaClassDefinition <- sysml.owner, 
+		conditionalExpression <- if(sysml.getConditionalExpression() = '' or sysml.getConditionalExpression().oclIsUndefined())then
+									OclUndefined
+								else
+									sysml.getConditionalExpression()
+								endif,
+		isFinal <- sysml.getIsFinal(), 
+		modification <- sysml.getModification(),
+		isReplaceable <- sysml.getIsReplaceable(), 
+		arraySize <- if (sysml.getArraySize()->size()<= 0) then Sequence{} else sysml.getArraySize() endif, 
+		type_specifier <- sysml.type.getQualifiedName().regexReplaceAll('::', '.')
+	)
+}
+
+rule Property2ModelicaValueProperty extends Property2ModelicaComponent{
+	from sysml: MMuml!Property(
+		not thisModule.isBlockStereotyped(sysml.type) and
+		sysml.isModelicaValuePropertyStereotyped()
+	)
+	to modelica: MMmodelica!ModelicaValueProperty(
+		visibility <- sysml.visibility, 
+		causality <- sysml.getCausality(), 
+		variability <- sysml.getVariability(), 
+		flowFlag <- sysml.getFlowFlag(), 
+		scope <- sysml.getScope(), 
+		default_value <- if(sysml.getDefault() <> OclUndefined or sysml.getDefault() <> '')then
+							sysml.getDefault()
+						else
+							'null'
+						endif, 
+		type_specifier <- if(sysml.type.name='ModelicaReal')then
+							'Real'
+							else
+								if(sysml.type.name='ModelicaBoolean')then
+									'Boolean'
+								else
+									if(sysml.type.name='ModelicaStateSelect')then
+										'StateSelect'
+									else
+										if(sysml.type.name='ModelicaInteger')then
+											'Integer'
+										else
+											sysml.type.getQualifiedName().regexReplaceAll('::', '.')
+										endif
+									endif	
+								endif
+							endif
+	)
+}
+
+rule FunctionBehavior2ModelicaFunction{
+	from sysml: MMuml!FunctionBehavior(
+		thisModule.isBlockStereotyped(sysml.owner) and
+		sysml.isModelicaFunctionStereotyped() and 
+		not MMuml!Dependency.allInstances()->exists(d | d.isModelicaDerStereotyped() and d.client->first() = sysml)
+	)
+	to modelica: MMmodelica!Function(
+		name <- sysml.name,
+		isModelicaEncapsulated <- sysml.getIsModelicaEncapsulated(), 
+		isPartial <- sysml.getIsPartial(),
+		isFinal <- sysml.getIsFinal(), 
+		isReplaceable <- sysml.getIsReplaceable(), 
+		externalLanguage <- if(sysml.language->first() <> '' and not sysml.language.oclIsUndefined()) then
+								sysml.language->first()
+							else
+								OclUndefined
+							endif, 
+		externalLibrary <- sysml.getExternalLibrary(), 
+		externalInclude <- sysml.getExternalInclude(), 
+		ownerPackage <- sysml.owner
+	), 
+	modelica_algorithm: MMmodelica!AlgorithmSection(
+		ownerModelicaClassDefinition <- modelica, 
+		body <- if(not sysml.body.oclIsUndefined())then
+					sysml.body->first()
+				else
+					''
+				endif
+	)
+}
+
+rule FunctionParameter2ModelicaParameter{
+	from sysml: MMuml!Parameter(
+		sysml.owner.oclIsTypeOf(MMuml!FunctionBehavior) and
+		sysml.isModelicaFunctionParameterStereotyped() and
+		sysml.owner.isModelicaFunctionStereotyped()
+	)
+	to modelica: MMmodelica!ModelicaFunctionParameter(
+		name <- sysml.name, 
+		causality <- sysml.getCausality(), 
+		modification <- sysml.getModification(), 
+		isReplaceable <- sysml.getIsReplaceable(), 
+		declarationEquation <- sysml.getDeclarationEquation(), 
+		isFinal <- sysml.getIsFinal(), 
+		arraySize <- sysml.getArraySize(), 
+		variability <- sysml.getVariability(), 
+		ownerFunction <- sysml.owner, 
+		type_specifier <- if(sysml.type.name='ModelicaReal')then
+							'Real'
+							else
+								sysml.type.getQualifiedName().regexReplaceAll('::', '.')
+							endif
+	)
+}
+
+rule Dependency2DerivativeFunction{
+	from sysml: MMuml!Dependency(
+		sysml.isModelicaDerStereotyped()
+	)
+	to modelica: MMmodelica!DerFunction(
+		der <- sysml.supplier->first(), 
+		ownerPackage <- sysml.client->first().owner, 
+		name <- sysml.client->first().name, 
+		variable <- sysml.getVariable()
+	)
+}
+
+rule Dependency2ConstrainedBy{
+	from sysml: MMuml!Dependency(
+		sysml.isModelicaConstrainedByStereotyped()
+	)
+	to modelica: MMmodelica!ConstrainedByClause(
+		modification <- sysml.getModification(), 
+		ownerInstance <- sysml.client->first(), 
+		instanceForConstrainedBy <- sysml.supplier->first()
+	)
+}
+
+rule Comment2Annotation{
+	from sysml: MMuml!Comment(
+		sysml.isModelicaAnnotationStereotyped()	
+	)
+	to modelica: MMmodelica!Annotation(
+		ownerMCD <- sysml.annotatedElement->first(), 
+		body <- sysml.body.toString()
+	)
+}
+------------------------------------------------------------------------
+---------------------------------IBD------------------------------------
+------------------------------------------------------------------------
+rule Property2ModelicaPort extends Property2ModelicaComponent{
+	from sysml: MMuml!Port(
+		thisModule.isFlowPortStereotyped(sysml) and
+		sysml.isModelicaPortStereotyped()
+	)
+	to modelica: MMmodelica!ModelicaPort(
+		causality <- sysml.getCausality(), 
+		type_connector <- 	if(sysml.type.isModelicaConnectorStereotyped())then
+								sysml.type
+							else
+								OclUndefined
+							endif, 
+		type_specifier <- if(sysml.type.isModelicaConnectorStereotyped() and not sysml.type.getQualifiedName().startsWith('Modelica::'))then
+								thisModule.resolveTemp(sysml.type.owner, 'modelica').withinClause.regexReplaceAll('/', '.')
+								+'.'+thisModule.resolveTemp(sysml.type.owner, 'modelica').name
+								+'.'+sysml.type.name
+							else
+								sysml.type.getQualifiedName().regexReplaceAll('::', '.')
+							endif
+	)
+}
+
+
+
+rule Property2ModelicaPart extends Property2ModelicaComponent{
+	from sysml: MMuml!Property(
+		thisModule.isBlockStereotyped(sysml.type) and
+		sysml.isModelicaPartStereotyped()
+	)
+	to modelica: MMmodelica!ModelicaPart(
+		visibility <- sysml.visibility, 
+		scope <- sysml.getScope(), 
+		type_part <- if((sysml.type.isModelicaClassStereotyped() or sysml.type.isModelicaModelStereotyped() or sysml.type.isModelicaBlockStereotyped()) and not sysml.type.getQualifiedName().startsWith('Modelica::'))then
+							sysml.type
+						else
+							OclUndefined
+						endif, 
+		type_specifier <- if(not sysml.type.getQualifiedName().startsWith('Modelica::') and (sysml.type.isModelicaClassStereotyped() or sysml.type.isModelicaModelStereotyped() or sysml.type.isModelicaBlockStereotyped() or sysml.type.isModelicaConnectorStereotyped()))then
+								thisModule.resolveTemp(sysml.type.owner, 'modelica').withinClause.regexReplaceAll('/', '.')
+								+'.'+thisModule.resolveTemp(sysml.type.owner, 'modelica').name
+								+'.'+sysml.type.name
+							else
+								sysml.type.getQualifiedName().regexReplaceAll('::', '.')
+							endif, 
+		modification <- sysml.getModification()
+	)
+}
+
+------------------------------------------------------------------------
+--------------------------EQUATION SECTION------------------------------
+------------------------------------------------------------------------
+unique lazy rule Block2EquationSection{
+	from sysml: MMuml!Class(
+		thisModule.isBlockStereotyped(sysml)	
+	)
+	to modelica: MMmodelica!EquationSection(
+		ownerModelicaClassDefinition <- sysml	
+	)
+}
+
+rule Connector2ModelicaConnect_1{
+	from sysml: MMuml!Connector(
+		sysml.isModelicaConnectionStereotyped() and
+		thisModule.isBlockStereotyped(sysml.owner) and
+		thisModule.isFlowPortStereotyped(sysml.end->at(1).role) and
+		thisModule.isFlowPortStereotyped(sysml.end->at(2).role)
+	)
+	to modelica: MMmodelica!Connect(
+		ownerEquationSection <- thisModule.Block2EquationSection(sysml.owner), 
+		from <- if(not sysml.end->at(1).role.getQualifiedName().startsWith('Modelica::')) then
+					sysml.end->at(1).role
+				else
+					OclUndefined
+				endif, 
+		to <- 	if(not sysml.end->at(2).role.getQualifiedName().startsWith('Modelica::')) then
+					sysml.end->at(2).role
+				else
+					OclUndefined
+				endif, 
+		fromModelicaPart <- if(not sysml.end->at(1).partWithPort.oclIsUndefined()) then
+								sysml.end->at(1).partWithPort	
+							else
+								OclUndefined
+							endif, 
+		toModelicaPart <- 	if(not sysml.end->at(2).partWithPort.oclIsUndefined()) then
+								sysml.end->at(2).partWithPort
+							else
+								OclUndefined
+							endif, 
+		fromPort <- if(sysml.end->at(1).role.getQualifiedName().startsWith('Modelica::')) then
+						sysml.end->at(1).role.name
+					else
+						OclUndefined
+					endif, 
+		toPort <- 	if(sysml.end->at(2).role.getQualifiedName().startsWith('Modelica::')) then
+						sysml.end->at(2).role.name
+					else
+						OclUndefined
+					endif
+	)
+}
+
+rule Connector2ModelicaConnect_2{
+	from sysml: MMuml!Connector(
+		sysml.isModelicaConnectionStereotyped() and
+		thisModule.isBlockStereotyped(sysml.owner) and
+		(
+			sysml.end->at(1).role.oclIsTypeOf(MMuml!Property) or
+			sysml.end->at(2).role.oclIsTypeOf(MMuml!Property)
+		)
+	)
+	to modelica: MMmodelica!Connect(
+		ownerEquationSection <- thisModule.Block2EquationSection(sysml.owner), 
+		fromPart <- if(sysml.end->at(1).oclIsTypeOf(MMuml!ConnectorEnd))then
+						if(thisModule.isFlowPortStereotyped(sysml.end->at(1).role))then
+							sysml.end->at(1).partWithPort.name
+						else
+							sysml.end->at(1).role.name
+						endif
+					else
+						sysml.end->at(1).propertyPath->first().name
+					endif, 
+		toPart <- if(sysml.end->at(2).oclIsTypeOf(MMuml!ConnectorEnd))then
+						if(thisModule.isFlowPortStereotyped(sysml.end->at(2).role))then
+							sysml.end->at(2).partWithPort.name
+						else
+							sysml.end->at(2).role.name
+						endif
+					else
+						sysml.end->at(2).propertyPath->first().name
+					endif, 
+		fromPort <- if(sysml.end->at(1).oclIsTypeOf(MMuml!ConnectorEnd))then
+						if(thisModule.isFlowPortStereotyped(sysml.end->at(1).role))then
+							sysml.end->at(1).role.name
+						else
+							OclUndefined
+						endif
+					else
+						sysml.end->at(1).role.name
+					endif, 
+		toPort <- if(sysml.end->at(2).oclIsTypeOf(MMuml!ConnectorEnd))then
+						if(thisModule.isFlowPortStereotyped(sysml.end->at(2).role))then
+							sysml.end->at(2).role.name
+						else
+							OclUndefined
+						endif
+					else
+						sysml.end->at(2).role.name
+					endif
+	)
+}
+
+rule Constraint2ModelicaEquation{
+	from sysml: MMuml!Constraint(
+		sysml.isModelicaEquationStereotyped() and
+		sysml.specification.oclIsTypeOf(MMuml!LiteralString)
+	)
+	to modelica: MMmodelica!Equation(
+		ownerEquationSection <- thisModule.Block2EquationSection(sysml.owner), 
+		isInitial <- sysml.getIsInitial(), 
+		body <- sysml.specification.value.toString()
+	)
+}
+
+------------------------------------------------------------------------
+------------------------REQUIREMENTS DIAGRAM----------------------------
+------------------------------------------------------------------------
+
+rule Requirement2Comment {
+	from
+		sysmlRequirement: MMsysml!Requirement(
+			sysmlRequirement.oclIsTypeOf(MMsysml!Requirement)
+		)
+	to
+		comment: MMmodelica!Comment(
+			ownerModelicaClassDefinition <- sysmlRequirement.satisfiedBy->first(),
+			body <- '@ReqID: ' + sysmlRequirement.id + ' : ' + sysmlRequirement.text
+		)		
+}

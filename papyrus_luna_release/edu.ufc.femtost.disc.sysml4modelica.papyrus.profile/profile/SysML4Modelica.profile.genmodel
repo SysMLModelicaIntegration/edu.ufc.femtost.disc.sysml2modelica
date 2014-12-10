@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    modelDirectory="/edu.ufc.femtost.disc.sysml4modelica.papyrus.profile/src"
+    modelPluginID="edu.ufc.femtost.disc.sysml4modelica.papyrus.profile" dynamicTemplates="true"
+    modelName="SysML4Modelica" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.uml2.uml.ecore.importer" complianceLevel="6.0" copyrightFields="false"
+    usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.uml2.uml.profile.l2/model/L2.genmodel#//l2 ../../org.eclipse.papyrus.sysml/model/sysml.genmodel#//sysml ../../org.eclipse.uml2.types/model/Types.genmodel#//types ../../org.eclipse.uml2.uml/model/UML.genmodel#//uml"
+    pluginKey="sysml4modelica">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_FEATURES" value="DISCARD"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+    <details key="REDEFINING_OPERATIONS" value="REPORT"/>
+    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+  </genAnnotations>
+  <foreignModel>SysML4Modelica.profile.uml</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Sysml4modelica" basePackage="edu.ufc.femtost.disc.sysml4modelica.profile"
+      resource="XML" disposableProviderFactory="true" generateExampleClass="false"
+      multipleEditorPages="false" generateModelWizard="false" ecorePackage="sysml4modelica.ecore#/">
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="sysml4modelica.ecore#//Dummy"/>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Classes" basePackage="edu.ufc.femtost.disc.sysml4modelica.profile"
+        resource="XML" disposableProviderFactory="true" ecorePackage="sysml4modelica.ecore#//classes">
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="sysml4modelica.ecore#//classes/ModelicaClassDefinition">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference sysml4modelica.ecore#//classes/ModelicaClassDefinition/base_Classifier"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//classes/ModelicaClassDefinition/isFinal"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//classes/ModelicaClassDefinition/isPartial"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//classes/ModelicaClassDefinition/isModelicaEncapsulated"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//classes/ModelicaClassDefinition/isReplaceable"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//classes/ModelicaClass"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//classes/ModelicaModel"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//classes/ModelicaBlock"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//classes/ModelicaRecord"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//classes/ModelicaOperator"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//classes/ModelicaConnector">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//classes/ModelicaConnector/isExpandable"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//classes/ModelicaPackage"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//classes/ModelicaType"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//classes/ModelicaFunction">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference sysml4modelica.ecore#//classes/ModelicaFunction/base_FunctionBehavior"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//classes/ModelicaFunction/scope"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//classes/ModelicaFunction/externalLibrary"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//classes/ModelicaFunction/externalInclude"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//classes/ModelicaExtends">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//classes/ModelicaExtends/modification"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference sysml4modelica.ecore#//classes/ModelicaExtends/base_Generalization"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//classes/ModelicaExtends/visibility"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//classes/ModelicaExtends/arraySize"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//classes/ModelicaConstrainedBy">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//classes/ModelicaConstrainedBy/modification"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference sysml4modelica.ecore#//classes/ModelicaConstrainedBy/base_Dependency"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//classes/ModelicaDer">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//classes/ModelicaDer/variable"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference sysml4modelica.ecore#//classes/ModelicaDer/base_Dependency"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Types" basePackage="edu.ufc.femtost.disc.sysml4modelica.profile"
+        resource="XML" disposableProviderFactory="true" ecorePackage="sysml4modelica.ecore#//types">
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="sysml4modelica.ecore#//types/ModelicaFlowFlagKind">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaFlowFlagKind/none"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaFlowFlagKind/flow"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaFlowFlagKind/stream"/>
+      </genEnums>
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="sysml4modelica.ecore#//types/ModelicaCausalityKind">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaCausalityKind/none"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaCausalityKind/input"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaCausalityKind/output"/>
+      </genEnums>
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="sysml4modelica.ecore#//types/ModelicaVariabilityKind">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaVariabilityKind/continuous"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaVariabilityKind/constant"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaVariabilityKind/parameter"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaVariabilityKind/discrete"/>
+      </genEnums>
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="sysml4modelica.ecore#//types/ModelicaStateSelect">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaStateSelect/always"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaStateSelect/never"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaStateSelect/prefer"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaStateSelect/avoid"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaStateSelect/default"/>
+      </genEnums>
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="sysml4modelica.ecore#//types/ModelicaScopeKind">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaScopeKind/none"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaScopeKind/inner"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaScopeKind/outer"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="sysml4modelica.ecore#//types/ModelicaScopeKind/innerOuter"/>
+      </genEnums>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Components" basePackage="edu.ufc.femtost.disc.sysml4modelica.profile"
+        resource="XML" disposableProviderFactory="true" ecorePackage="sysml4modelica.ecore#//components">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//components/ModelicaValueProperty">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaValueProperty/causality"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaValueProperty/variability"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaValueProperty/flowFlag"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaValueProperty/scope"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaValueProperty/isFinal"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaValueProperty/conditionalExpression"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaValueProperty/modification"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaValueProperty/isReplaceable"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaValueProperty/declarationEquation"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaValueProperty/arraySize"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference sysml4modelica.ecore#//components/ModelicaValueProperty/base_Property"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//components/ModelicaPart">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaPart/arraySize"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaPart/scope"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaPart/modification"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaPart/isReplaceable"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaPart/conditionalExpression"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaPart/isFinal"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference sysml4modelica.ecore#//components/ModelicaPart/base_Property"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//components/ModelicaPort">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaPort/isReplaceable"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaPort/conditionalExpression"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaPort/modification"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaPort/arraySize"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaPort/causality"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaPort/isFinal"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference sysml4modelica.ecore#//components/ModelicaPort/base_Port"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//components/ModelicaFunctionParameter">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference sysml4modelica.ecore#//components/ModelicaFunctionParameter/base_Parameter"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaFunctionParameter/declarationEquation"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaFunctionParameter/isReplaceable"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaFunctionParameter/variability"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaFunctionParameter/causality"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaFunctionParameter/isFinal"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaFunctionParameter/modification"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//components/ModelicaFunctionParameter/arraySize"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Equationsandalgorithms"
+        basePackage="edu.ufc.femtost.disc.sysml4modelica.profile" resource="XML" disposableProviderFactory="true"
+        ecorePackage="sysml4modelica.ecore#//equationsandalgorithms">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//equationsandalgorithms/ModelicaEquation">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//equationsandalgorithms/ModelicaEquation/isInitial"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference sysml4modelica.ecore#//equationsandalgorithms/ModelicaEquation/base_Constraint"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//equationsandalgorithms/ModelicaAlgorithm">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute sysml4modelica.ecore#//equationsandalgorithms/ModelicaAlgorithm/isInitial"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference sysml4modelica.ecore#//equationsandalgorithms/ModelicaAlgorithm/base_Behavior"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//equationsandalgorithms/ModelicaConnection">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference sysml4modelica.ecore#//equationsandalgorithms/ModelicaConnection/base_Connector"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Other" basePackage="edu.ufc.femtost.disc.sysml4modelica.profile"
+        resource="XML" disposableProviderFactory="true" ecorePackage="sysml4modelica.ecore#//other">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//other/ModelicaAnnotation">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference sysml4modelica.ecore#//other/ModelicaAnnotation/base_Comment"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="sysml4modelica.ecore#//other/ModelicaSimulation"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

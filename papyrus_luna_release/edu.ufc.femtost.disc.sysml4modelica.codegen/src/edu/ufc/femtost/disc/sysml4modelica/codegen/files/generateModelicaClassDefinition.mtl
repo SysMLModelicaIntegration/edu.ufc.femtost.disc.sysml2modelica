@@ -1,0 +1,215 @@
+[comment encoding = UTF-8 /]
+[**
+ * 
+ *  Copyright (c) 2013 Jean-Marie Gauthier and University of Franche-Comte
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v1.0
+ *  which accompanies this distribution, and is available at
+ *  http://www.eclipse.org/legal/epl-v10.html
+ *  
+ *  Contributors:
+ *      Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation
+ *
+ */]
+[module generateModelicaClassDefinition('http://www.femto-st.fr/disc/Modelica.ecore')]
+
+[query public getPath(am : ModelicaClassDefinition) : String =
+	if (not am.ownerModel.oclIsUndefined()) then
+		'/'+am.ownerModel.name+'/'+am.name+'.mo'
+	else
+		if (not am.ownerPackage.oclIsUndefined()) then
+			'/'+am.ownerPackage.withinClause+'/'+am.ownerPackage.name+'/'+am.name+'.mo'
+		else
+			''
+		endif
+	endif			
+/]
+
+[query public getWithin(am : ModelicaClassDefinition) : String =
+	if (not am.ownerModel.oclIsUndefined()) then
+		am.ownerModel.name
+	else
+		if (not am.ownerPackage.oclIsUndefined()) then
+			am.ownerPackage.withinClause.replaceAll('/', '.').concat('.'.concat(am.ownerPackage.name))
+		else
+			''
+		endif
+	endif			
+/]
+
+[query public getHasArraySize(c : Connect) : Boolean =
+	if(not c.fromModelicaPart.oclIsUndefined())then
+		if(c.fromModelicaPart.arraySize->notEmpty())then
+			true
+		else
+			if(not c.toModelicaPart.oclIsUndefined())then
+				if(c.toModelicaPart.arraySize->notEmpty())then
+					true
+				else
+					false
+				endif
+			else
+				false
+			endif
+		endif
+	else
+		if(not c.toModelicaPart.oclIsUndefined())then
+			if(c.toModelicaPart.arraySize->notEmpty())then
+				true
+			else
+				false
+			endif
+		else
+			false
+		endif
+	endif
+/]
+
+[query public getArraySize(c : Connect) : Sequence(String) =
+	if(not c.fromModelicaPart.oclIsUndefined())then
+		if(c.fromModelicaPart.arraySize->notEmpty())then
+			c.fromModelicaPart.arraySize->asSequence()
+		else
+			if(not c.toModelicaPart.oclIsUndefined())then
+				if(c.toModelicaPart.arraySize->notEmpty())then
+					c.toModelicaPart.arraySize->asSequence()
+				else
+					Sequence{}
+				endif
+			else
+				Sequence{}
+			endif
+		endif
+	else
+		if(not c.toModelicaPart.oclIsUndefined())then
+			if(c.toModelicaPart.arraySize->notEmpty())then
+				c.toModelicaPart.arraySize->asSequence()
+			else
+				Sequence{}
+			endif
+		else
+			Sequence{}
+		endif
+	endif
+/]
+
+[**
+ * The documentation of the template generateModel.
+ * @param aModel
+ */]
+[template public generateModelicaClassDefinition(aModelicaClassDefinition : ModelicaClassDefinition)]
+[file (getPath(aModelicaClassDefinition), false, 'UTF-8')]
+within [getWithin(aModelicaClassDefinition)/];
+
+[if(aModelicaClassDefinition.isReplaceable)]replaceable [/if][if(aModelicaClassDefinition.isFinal)]final [/if][if(aModelicaClassDefinition.isModelicaEncapsulated)]encapsulated [/if][if(aModelicaClassDefinition.isPartial)]partial [/if][if(aModelicaClassDefinition.oclIsTypeOf(Connector) and aModelicaClassDefinition.oclAsType(Connector).isExpandable)]expandable [/if][aModelicaClassDefinition.eClass().name.toLower()/] [aModelicaClassDefinition.name/]
+[for(aModelicaExtends : ExtendsClause | aModelicaClassDefinition.extends)]
+[generateModelicaExtends(aModelicaExtends)/][if(not aModelicaExtends.modification.oclIsUndefined() and aModelicaExtends.modification <> '')]([aModelicaExtends.modification/])[/if];
+[/for]
+/* Generated with the plugin UFC - SysML4Modelica
+[for (aModelicaComment: Comment | aModelicaClassDefinition.comments)]
+[generateComment(aModelicaComment)/]
+[/for]
+*/
+[for(aModelicaComponent : ModelicaComponent | aModelicaClassDefinition.modelicaComponents)]
+[if(aModelicaComponent.isFinal)]	final [/if][if(aModelicaComponent.isReplaceable)]	replaceable [/if][generateModelicaComponent(aModelicaComponent)/]
+[/for]
+[if(not aModelicaClassDefinition.equationSection.oclIsUndefined())][generateEquationSection(aModelicaClassDefinition.equationSection)/][/if]
+[for(aModelicaAnnotation : Annotation | aModelicaClassDefinition.annotations)]
+[generateModelicaAnnotation(aModelicaAnnotation)/]
+[/for]
+end [aModelicaClassDefinition.name/];
+[/file]
+[/template]
+
+[template public generateModelicaExtends(aModelicaExtends : ExtendsClause) ? (not aModelicaExtends.from_modelica_primitive_types.oclIsUndefined() and aModelicaExtends.from_modelica_primitive_types.contains('ModelicaReal'))]
+	extends Real
+[/template]
+
+[template public generateModelicaExtends(aModelicaExtends : ExtendsClause) ? (not aModelicaExtends.from_modelica_primitive_types.oclIsUndefined() and aModelicaExtends.from_modelica_primitive_types.contains('ModelicaInteger'))]
+	extends Integer
+[/template]
+
+[template public generateModelicaExtends(aModelicaExtends : ExtendsClause) ? (not aModelicaExtends.from_modelica_primitive_types.oclIsUndefined() and aModelicaExtends.from_modelica_primitive_types.contains('ModelicaBoolean'))]
+	extends Boolean
+[/template]
+
+[template public generateModelicaExtends(aModelicaExtends : ExtendsClause) ? (not aModelicaExtends.from_modelica_primitive_types.oclIsUndefined() and aModelicaExtends.from_modelica_primitive_types.contains('ModelicaString'))]
+	extends String
+[/template]
+
+[template public generateModelicaExtends(aModelicaExtends : ExtendsClause) ? (not aModelicaExtends.from_modelica_standard_library.oclIsUndefined())]
+	extends [aModelicaExtends.from_modelica_standard_library/]
+[/template]
+
+[template public generateModelicaExtends(aModelicaExtends : ExtendsClause) ? (not aModelicaExtends.extendedModelicaClass.oclIsUndefined())]
+	extends [aModelicaExtends.extendedModelicaClass.getWithin()+'.'+aModelicaExtends.extendedModelicaClass.name/]
+[/template]
+
+
+[template public generateModelicaComponent(aModelicaComponent : ModelicaComponent) ? (aModelicaComponent.oclIsTypeOf(ModelicaValueProperty))]
+	[generateModelicaValueProperty(aModelicaComponent.oclAsType(ModelicaValueProperty))/]
+[/template]
+
+[template public generateModelicaComponent(aModelicaComponent : ModelicaComponent) ? (aModelicaComponent.oclIsTypeOf(ModelicaPort))]
+	[generateModelicaPort(aModelicaComponent.oclAsType(ModelicaPort))/]
+[/template]
+
+[template public generateModelicaComponent(aModelicaComponent : ModelicaComponent) ? (aModelicaComponent.oclIsTypeOf(ModelicaPart))]
+	[generateModelicaPart(aModelicaComponent.oclAsType(ModelicaPart))/]
+[/template]
+
+[template public generateModelicaValueProperty(aModelicaValueProperty : ModelicaValueProperty)]
+[if(aModelicaValueProperty.visibility.toString() <> 'public')][aModelicaValueProperty.visibility.toString()/] [/if][if(aModelicaValueProperty.flowFlag.toString() <> 'none')][aModelicaValueProperty.flowFlag.toString()/] [/if][if(aModelicaValueProperty.variability.toString() <> 'continuous')][aModelicaValueProperty.variability.toString()/] [/if][if(aModelicaValueProperty.causality.toString() <> 'none')][aModelicaValueProperty.causality.toString()/] [/if][aModelicaValueProperty.type_specifier/] [aModelicaValueProperty.name/][if (not aModelicaValueProperty.arraySize->first().oclIsUndefined())][ '[' /][for(arraySize : String | aModelicaValueProperty.arraySize) separator(', ')][arraySize/][/for][ ']' /] [/if][if(not aModelicaValueProperty.modification.oclIsUndefined() and aModelicaValueProperty.modification <> '')] ([aModelicaValueProperty.modification/])[/if][if(aModelicaValueProperty.default_value <> 'null' and not aModelicaValueProperty.default_value.oclIsUndefined())] = [aModelicaValueProperty.default_value/][/if];
+[/template]
+
+[template public generateModelicaPort(aModelicaPort : ModelicaPort)]
+[if(aModelicaPort.causality.toString() <> 'none')][aModelicaPort.causality.toString()/] [/if][aModelicaPort.type_specifier/] [aModelicaPort.name/][if (not aModelicaPort.arraySize->first().oclIsUndefined())][ '[' /][for(arraySize : String | aModelicaPort.arraySize) separator(', ')][arraySize/][/for][ ']' /] [/if][if(not aModelicaPort.modification.oclIsUndefined() and aModelicaPort.modification <> '')] ([aModelicaPort.modification/])[/if][if(not aModelicaPort.conditionalExpression.oclIsUndefined() and aModelicaPort.conditionalExpression <> '')] [aModelicaPort.conditionalExpression/][/if];
+[/template]
+
+[template public generateModelicaPart(aModelicaPart : ModelicaPart)]
+[if(aModelicaPart.visibility.toString() <> 'public')][aModelicaPart.visibility.toString()/] [/if][aModelicaPart.type_specifier/] [aModelicaPart.name/][if (not aModelicaPart.arraySize->first().oclIsUndefined())][ '[' /][for(arraySize : String | aModelicaPart.arraySize) separator(', ')][arraySize/][/for][ ']' /] [/if][if(not aModelicaPart.constrainedBy.oclIsUndefined())] constrainedBy [aModelicaPart.constrainedBy.instanceForConstrainedBy.name/][if(not aModelicaPart.constrainedBy.modification.oclIsUndefined() and aModelicaPart.constrainedBy.modification.toString() <> '')]([aModelicaPart.constrainedBy.modification.toString()/])[/if][/if][if(not aModelicaPart.modification.oclIsUndefined() and aModelicaPart.modification <> '')] ([aModelicaPart.modification/])[/if][if(not aModelicaPart.conditionalExpression.oclIsUndefined())] [aModelicaPart.conditionalExpression.toString()/][/if];
+[/template]
+
+[template public generateEquationSection(aEquationSection : EquationSection)]
+[if(aEquationSection.equations->exists(e | e.isInitial))]
+initial equation
+	[for(aEquation : Equation | aEquationSection.equations->select(e | e.isInitial))][generateEquation(aEquation)/]
+[/for]
+[/if]
+equation
+	[for(aConnects : Connect | aEquationSection.connects)][generateConnect(aConnects)/]
+[/for]
+	[for(aEquation : Equation | aEquationSection.equations->select(e | not e.isInitial))][generateEquation(aEquation)/]
+[/for]
+[/template]
+
+[template public generateConnect(aConnect : Connect)]
+	[let ok : Boolean = getHasArraySize(aConnect)]
+	[if(ok = true)]	
+		[let sequenceArray : Sequence(String) = getArraySize(aConnect)] 
+		 [let sequenceLetter : Sequence(String) = Sequence{'i', 'j', 'k'}]
+		 	[for(i : Integer | Sequence{1..sequenceArray->size()})]
+	for [sequenceLetter->at(i)/] in 1:[sequenceArray->at(i)/] loop
+			[/for]
+		connect([if(not aConnect.fromModelicaPart.oclIsUndefined())][aConnect.fromModelicaPart.name/][if(aConnect.fromModelicaPart.arraySize->size()>0)][ '[' /][for(i : Integer | Sequence{1..sequenceArray->size()}) separator(',')][sequenceLetter->at(i)/][/for][ ']' /][/if][if(not aConnect.from.oclIsUndefined() or not aConnect.fromPort.oclIsUndefined())].[/if][/if][if(not aConnect.fromPart.oclIsUndefined())][aConnect.fromPart/][if(not aConnect.from.oclIsUndefined() or not aConnect.fromPort.oclIsUndefined())].[/if][/if][if(not aConnect.from.oclIsUndefined())][aConnect.from.name/][if(aConnect.from.arraySize->size()>0)][ '[' /][for(i : Integer | Sequence{1..aConnect.from.arraySize->size()}) separator(',')][sequenceLetter->at(i)/][/for][ ']' /][/if][/if][if(not aConnect.fromPort.oclIsUndefined())][aConnect.fromPort/][/if], [if(not aConnect.toModelicaPart.oclIsUndefined())][aConnect.toModelicaPart.name/][if(aConnect.toModelicaPart.arraySize->size()>0)][ '[' /][for(i : Integer | Sequence{1..sequenceArray->size()}) separator(',')][sequenceLetter->at(i)/][/for][ ']' /][/if][if(not aConnect.to.oclIsUndefined() or not aConnect.toPort.oclIsUndefined())].[/if][/if][if(not aConnect.toPart.oclIsUndefined())][aConnect.toPart/][if(not aConnect.to.oclIsUndefined() or not aConnect.toPort.oclIsUndefined())].[/if][/if][if(not aConnect.to.oclIsUndefined())][aConnect.to.name/][if(aConnect.to.arraySize->size()>0)][ '[' /][for(i : Integer | Sequence{1..aConnect.to.arraySize->size()}) separator(',')][sequenceLetter->at(i)/][/for][ ']' /][/if][/if][if(not aConnect.toPort.oclIsUndefined())][aConnect.toPort/][/if]);
+			[for(i : Integer | Sequence{1..sequenceArray->size()})]
+	end for;
+			[/for]
+		 [/let]
+		[/let]
+	[else]	connect([if(not aConnect.fromModelicaPart.oclIsUndefined())][aConnect.fromModelicaPart.name/][if(not aConnect.from.oclIsUndefined() or not aConnect.fromPort.oclIsUndefined())].[/if][/if][if(not aConnect.fromPart.oclIsUndefined())][aConnect.fromPart/][if(not aConnect.from.oclIsUndefined() or not aConnect.fromPort.oclIsUndefined())].[/if][/if][if(not aConnect.from.oclIsUndefined())][aConnect.from.name/][/if][if(not aConnect.fromPort.oclIsUndefined())][aConnect.fromPort/][/if], [if(not aConnect.toModelicaPart.oclIsUndefined())][aConnect.toModelicaPart.name/][if(not aConnect.to.oclIsUndefined() or not aConnect.toPort.oclIsUndefined())].[/if][/if][if(not aConnect.toPart.oclIsUndefined())][aConnect.toPart/][if(not aConnect.to.oclIsUndefined() or not aConnect.toPort.oclIsUndefined())].[/if][/if][if(not aConnect.to.oclIsUndefined())][aConnect.to.name/][/if][if(not aConnect.toPort.oclIsUndefined())][aConnect.toPort/][/if]);
+	[/if]
+	[/let]
+[/template]
+
+[template public generateEquation(aEquation : Equation)]
+	[aEquation._body/];
+[/template]
+
+[template public generateModelicaAnnotation(aModelicaAnnotation : Annotation)]
+	annotation([aModelicaAnnotation._body/]);
+[/template]
+
+[template public generateComment(aModelicaComment : Comment)]
+	[aModelicaComment._body/]
+[/template]
