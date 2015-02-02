@@ -17,7 +17,7 @@
 module omgsysml2modelica;
 create OUTmodelica : MMmodelica from INuml : MMuml, INsysml : MMsysml, INmodelicaProfile: MMmodelicaProfile;
 
-------------------------------------------------------------------------
+-----------------------------------------------------------------------
 -------------------------------HELPERS----------------------------------
 ------------------------------------------------------------------------
 helper def: Sequence2String(seq: Sequence(String), size: Integer) : String = 
@@ -112,6 +112,9 @@ helper context MMuml!Connector def: isModelicaConnectionStereotyped() : Boolean 
 
 helper context MMuml!Constraint def: isModelicaEquationStereotyped() : Boolean = 
 	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Equations And Algorithms::ModelicaEquation');
+
+helper context MMuml!Behavior def: isModelicaAlgorithmStereotyped() : Boolean = 
+	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Equations And Algorithms::ModelicaAlgorithm');
 
 helper context MMuml!Comment def: isModelicaAnnotationStereotyped() : Boolean = 
 	self.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML4Modelica::Other::ModelicaAnnotation');
@@ -303,6 +306,33 @@ helper context MMuml!NamedElement def: getWithinClause(): String =
 helper context MMuml!Constraint def: getIsInitial() : String = 
 	MMmodelicaProfile!ModelicaEquation.allInstances()->select(mc | mc.base_Constraint = self)->first().isInitial;
 
+helper context MMuml!NamedElement def: getStateMachine() : MMuml!StateMachine = 
+	if self.owner.oclIsTypeOf(MMuml!StateMachine) then
+		self.owner
+	else
+		self.owner.getStateMachine()
+	endif;
+
+helper def:initializeTriggerEvent(seqLifeline:Sequence(MMuml!Lifeline), size:Integer):String =
+	if(size=seqLifeline.size())then
+		thisModule.getEventsFromLifeline(seqLifeline->at(size).represents.type, seqLifeline->at(size).represents, 1)
+	else
+		thisModule.initializeTriggerEvent(seqLifeline, size + 1).concat(thisModule.getEventsFromLifeline(seqLifeline->at(size).represents.type, seqLifeline->at(size).represents, 1))
+	endif;
+	
+helper def:getEventsFromLifeline(c:MMuml!Class, p:MMuml!Property, size:Integer) : String = 
+	if(size=MMuml!CallEvent.allInstances()->select(ce | c.ownedOperation->exists(o | o = ce.operation)).size()) then
+		p.name + '.' + MMuml!CallEvent.allInstances()->select(ce | c.ownedOperation->exists(o | o = ce.operation))->at(size).name + ' := false;\n'
+	else
+		thisModule.getEventsFromLifeline(c, p, size + 1).concat(p.name + '.' + MMuml!CallEvent.allInstances()->select(ce | c.ownedOperation->exists(o | o = ce.operation))->at(size).name + ' := false;\n')
+	endif;
+
+helper def: isMaxTimeValue(value:Integer, seqDurationConstraint:Sequence(MMuml!DurationConstraint)) : Boolean = 
+	if seqDurationConstraint->select(dc | dc.specification.max.expr.value >= value).size() <> 1 then
+		false
+	else 
+		true
+	endif;
 ------------------------------------------------------------------------
 ---------------------------------BDD------------------------------------
 ------------------------------------------------------------------------
@@ -555,13 +585,16 @@ rule FunctionBehavior2ModelicaFunction{
 		externalInclude <- sysml.getExternalInclude(), 
 		ownerPackage <- sysml.owner
 	), 
-	modelica_algorithm: MMmodelica!AlgorithmSection(
-		ownerModelicaClassDefinition <- modelica, 
+	modelica_algorithm_section: MMmodelica!AlgorithmSection(
+		ownerModelicaClassDefinition <- modelica
+	), 
+	modelica_algorithm: MMmodelica!Algorithm(
 		body <- if(not sysml.body.oclIsUndefined())then
 					sysml.body->first()
 				else
 					''
-				endif
+				endif, 
+		algorithmsection <- modelica_algorithm_section
 	)
 }
 
@@ -584,7 +617,19 @@ rule FunctionParameter2ModelicaParameter{
 		type_specifier <- if(sysml.type.name='ModelicaReal')then
 							'Real'
 							else
-								sysml.type.getQualifiedName().regexReplaceAll('::', '.')
+								if(sysml.type.name='ModelicaBoolean')then
+									'Boolean'
+								else
+									if(sysml.type.name='ModelicaStateSelect')then
+										'StateSelect'
+									else
+										if(sysml.type.name='ModelicaInteger')then
+											'Integer'
+										else
+											sysml.type.getQualifiedName().regexReplaceAll('::', '.')
+										endif
+									endif	
+								endif
 							endif
 	)
 }
@@ -672,6 +717,28 @@ rule Property2ModelicaPart extends Property2ModelicaComponent{
 	)
 }
 
+------------------------------------------------------------------------
+-------------------------ALGORITHM SECTION------------------------------
+------------------------------------------------------------------------
+unique lazy rule Block2AlgorithmSection{
+	from sysml: MMuml!Class(
+		thisModule.isBlockStereotyped(sysml)	
+	)
+	to modelica: MMmodelica!AlgorithmSection(
+		ownerModelicaClassDefinition <- sysml	
+	)
+}
+
+rule OpaqueBehavior2Algorithm{
+	from sysml: MMuml!OpaqueBehavior(
+		sysml.owner.oclIsTypeOf(MMuml!Class) and
+		not sysml.oclIsTypeOf(MMuml!FunctionBehavior)
+	)
+	to modelica: MMmodelica!Algorithm(
+		body <- sysml.body->first(), 
+		algorithmsection <- thisModule.Block2AlgorithmSection(sysml.owner)
+	)
+}
 ------------------------------------------------------------------------
 --------------------------EQUATION SECTION------------------------------
 ------------------------------------------------------------------------
@@ -789,6 +856,224 @@ rule Constraint2ModelicaEquation{
 }
 
 ------------------------------------------------------------------------
+------------------------STATEMACHINE DIAGRAM----------------------------
+------------------------------------------------------------------------
+rule InitialState2ModelicaPart{
+	from initialState: MMuml!Pseudostate(
+		initialState.kind = #initial	
+	)
+	to part: MMmodelica!ModelicaPart(
+		name <- initialState.name,
+		ownerModelicaClassDefinition <- initialState.getStateMachine().owner, 
+		type_specifier <- 'Boolean'
+	), 
+	whenStatement: MMmodelica!Algorithm(
+		algorithmsection <- thisModule.Block2AlgorithmSection(initialState.getStateMachine().owner), 
+		body <- 'when initial() then\n'+
+				'	'+initialState.name+' := true;\n'+
+				'end when;\n'
+	)
+}
+rule State2ModelicaPart{
+	from simpleState: MMuml!State(
+		not simpleState.oclIsTypeOf(MMuml!FinalState) and
+		not simpleState.isComposite and
+		simpleState.submachine.oclIsUndefined()	
+	)
+	to part: MMmodelica!ModelicaPart(
+		name <- simpleState.name,
+		ownerModelicaClassDefinition <- simpleState.getStateMachine().owner, 
+		type_specifier <- 'Boolean'
+	)
+}
+
+rule Trigger2ModelicaPart{
+	from trigger: MMuml!Trigger	
+	to part: MMmodelica!ModelicaPart(
+		name <- trigger.event.name, 
+		ownerModelicaClassDefinition <- trigger.getStateMachine().owner, 
+		type_specifier <- 'Boolean'
+	)
+}
+
+rule Transition2Algorithm{
+	from sysml: MMuml!Transition(
+		sysml.kind <> #internal and
+		sysml.getStateMachine().owner.oclIsTypeOf(MMuml!Class)
+	)	
+	to whenStatement: MMmodelica!Algorithm(
+		algorithmsection <- thisModule.Block2AlgorithmSection(sysml.getStateMachine().owner),
+		body <- 'when pre('+sysml.source.name+')' + 
+			
+			if not sysml.guard.oclIsUndefined() then 
+				if sysml.guard.oclIsTypeOf(MMuml!Constraint) then
+					if sysml.guard.specification.language->exists(l | l.toString() = 'Modelica') then
+						' and ' + sysml.guard.specification.body->first().toString()
+					else
+						''
+					endif
+				else
+					''
+				endif
+			else
+				''
+			endif+
+			if not sysml.trigger->first().oclIsUndefined() then
+				' and ' + sysml.trigger->first().event.name
+			else
+				''
+			endif
+			+' then\n'+ 
+			if not sysml.target.oclIsTypeOf(MMuml!FinalState) then
+				'	'+sysml.source.name + ':= false;\n' +
+				'	'+sysml.target.name + ':= true;\n'
+			else
+				if sysml.target.oclIsTypeOf(MMuml!FinalState) then 
+					'	'+sysml.source.name + ':= false;\n'
+				else
+					''
+				endif
+			endif +
+			if not sysml.effect.oclIsUndefined() then 
+				if sysml.effect.oclIsTypeOf(MMuml!OpaqueBehavior) then
+					if sysml.effect.language->exists(l | l.toString() = 'Modelica') then
+						'	' + sysml.effect.body->first().toString()
+					else
+						''
+					endif
+				else
+					''
+				endif
+			else
+				''
+			endif
+			+'\n'+'end when;\n'
+	)
+}
+
+------------------------------------------------------------------------
+------------------------SEQUENCE DIAGRAM----------------------------
+------------------------------------------------------------------------
+--These rules enables simulations of test cases specified with UML 
+--sequence diagrams. Interaction is transformed into a Modelica model 
+--containing Modelica parts derived from life lines. A test case is  
+--then specified with a Modelica algorithm that is derived from 
+--asynchronous messages and duration constraints on action execution 
+--specification. Typically, "when" statements on time events that trigger 
+--specific action of the plant model. 
+--
+--EXAMPLE:
+--model TestCase
+--	Plant plant1;
+-- 	AnotherPlant plant2;
+--algorithm
+--	when initial() then
+--		plant.trigger1 := false;
+--		plant2.trigger2 := false;
+--		[..]
+--	when time > 0 and time <  60 then
+--		plant1.trigger1 := true;
+--		plant2.trigger2 := true;
+--		[..]
+--	end when;
+--	[..]
+--end TestCase;
+--
+--We assess that, at the simulation level, time must be the only variable that triggers events. 
+--There is two main arguments to justify this choice: 
+--	-First time is the common dimension to each known real physical phenomenon. Every equation 
+--	 of the plant model are resolved in function of time.
+--	-Every human interactions with physical machines can be modeled as a list of actions 
+--	 upon the time line . 
+
+
+rule Interaction2Model {
+	from uml: MMuml!Interaction(
+		uml.isModelicaModelStereotyped()	
+	)
+	to modelica: MMmodelica!Model(
+		name <- uml.name, 
+		ownerModel <- if(not thisModule.isBlockStereotyped(uml.owner))then
+							uml.getModel()
+						else
+							OclUndefined
+						endif, 
+		ownerPackage <- if(thisModule.isBlockStereotyped(uml.owner))then
+							uml.owner
+						else
+							OclUndefined
+						endif
+	), 
+	algorithmSection: MMmodelica!AlgorithmSection(
+		ownerModelicaClassDefinition <- uml	
+	), 
+	algorithm: MMmodelica!Algorithm(
+		algorithmsection <- algorithmSection, 
+		body <- 'when initial() then\n' + 
+			thisModule.initializeTriggerEvent(
+				uml.lifeline->select(l | l.represents.isModelicaPartStereotyped() and l.represents.type.isModelicaModelStereotyped())
+				, 1
+			) +
+			'end when;\n'
+	)
+}
+
+unique lazy rule Interaction2AlgorithmSection{
+	from uml: MMuml!Interaction
+	to modelica: MMmodelica!AlgorithmSection(
+		ownerModelicaClassDefinition <- uml	
+	)
+}
+
+rule LifeLine2ModelicaPart{
+	from uml: MMuml!Lifeline(
+		if uml.represents.oclIsKindOf(MMuml!Property) then
+			uml.represents.isModelicaPartStereotyped() and
+			uml.represents.type.isModelicaModelStereotyped()
+		else
+			false
+		endif
+	)
+	to modelicaPart: MMmodelica!ModelicaPart(
+		ownerModelicaClassDefinition <- uml.owner, 
+		type_part <- if((uml.represents.type.isModelicaClassStereotyped() or uml.represents.type.isModelicaModelStereotyped() or uml.represents.type.isModelicaBlockStereotyped()) and not uml.represents.type.getQualifiedName().startsWith('Modelica::'))then
+							uml.represents.type
+						else
+							OclUndefined
+						endif, 
+		type_specifier <- if(not uml.represents.type.getQualifiedName().startsWith('Modelica::') and (uml.represents.type.isModelicaClassStereotyped() or uml.represents.type.isModelicaModelStereotyped() or uml.represents.type.isModelicaBlockStereotyped() or uml.represents.type.isModelicaConnectorStereotyped()))then
+								thisModule.resolveTemp(uml.represents.type.owner, 'modelica').withinClause.regexReplaceAll('/', '.')
+								+'.'+thisModule.resolveTemp(uml.represents.type.owner, 'modelica').name
+								+'.'+uml.represents.type.name
+							else
+								uml.represents.type.getQualifiedName().regexReplaceAll('::', '.')
+							endif, 
+		name <- uml.represents.name
+	)
+}
+
+rule Message2WhenStatement{
+	from uml:MMuml!Message
+	to whenStatement:MMmodelica!Algorithm(
+		algorithmsection <- thisModule.resolveTemp(uml.owner, 'algorithmSection'), 
+		body <- 'when time > ' + MMuml!DurationConstraint.allInstances()->select(d | d.owner = uml.owner and d.constrainedElement->exists(e | e = uml.receiveEvent))->first().specification.min.expr.value + ' and time <= ' + MMuml!DurationConstraint.allInstances()->select(d | d.constrainedElement->exists(e | e = uml.receiveEvent))->first().specification.max.expr.value + ' then \n' +
+					thisModule.resolveTemp(MMuml!Lifeline.allInstances()->select(l | l.coveredBy->exists(c | c = uml.receiveEvent))->first(), 'modelicaPart').name + '.' +
+					MMuml!CallEvent.allInstances()->select(e | e.operation = uml.signature)->first().name + ' := true;\n' +
+				'end when;\n' +
+				if thisModule.isMaxTimeValue(MMuml!DurationConstraint.allInstances()->select(d | d.constrainedElement->exists(e | e = uml.receiveEvent))->first().specification.max.expr.value, MMuml!DurationConstraint.allInstances()->select(d | d.owner = uml.owner)) then
+					'when time > ' + MMuml!DurationConstraint.allInstances()->select(d | d.constrainedElement->exists(e | e = uml.receiveEvent))->first().specification.max.expr.value + ' then \n' +
+					thisModule.initializeTriggerEvent(
+						uml.owner.lifeline->select(l | l.represents.isModelicaPartStereotyped() and l.represents.type.isModelicaModelStereotyped())
+						, 1
+					)
+					+'end when;\n'
+				else
+					''
+				endif
+	)
+}
+
+------------------------------------------------------------------------
 ------------------------REQUIREMENTS DIAGRAM----------------------------
 ------------------------------------------------------------------------
 
@@ -803,3 +1088,175 @@ rule Requirement2Comment {
 			body <- '@ReqID: ' + sysmlRequirement.id + ' : ' + sysmlRequirement.text
 		)		
 }
+
+--rule StateMachine2Algorithm{
+--	from statemachine: MMuml!StateMachine(
+--		statemachine.owner.oclIsTypeOf(MMuml!Class)	
+--	)
+--	to algorithmSection: MMmodelica!AlgorithmSection(
+--		ownerModelicaClassDefinition <- statemachine.owner,
+--		body <- ''
+--	)
+--}
+--
+
+--rule StateMachine2Record{
+--	from statemachine: MMuml!StateMachine(
+--		statemachine.owner.oclIsTypeOf(MMuml!Class)	
+--	)
+--	to recordStatemachine: MMmodelica!Record(
+--		name <- 'SM_'+statemachine.name, 
+--		ownerModelicaClassDefinition <- statemachine.owner, 
+--		stateMachineElementType <- #statemachine
+--	),
+--	recordInitialState: MMmodelica!Record(
+--		name <- 'InitialState', 
+--		ownerModelicaClassDefinition <- recordStatemachine, 
+--		stateMachineElementType <- #initialstate
+--	),
+--	recordFinalState: MMmodelica!Record(
+--		name <- 'FinalState', 
+--		ownerModelicaClassDefinition <-recordStatemachine, 
+--		stateMachineElementType <- #finalstate
+--	),
+--	recordSimpleState: MMmodelica!Record(
+--		name <- 'SimpleState', 
+--		ownerModelicaClassDefinition <- recordStatemachine, 
+--		stateMachineElementType <- #simplestate
+--	), 
+--	stateMachineInstance: MMmodelica!ModelicaPart(
+--		name <- statemachine.name,
+--		ownerModelicaClassDefinition <- statemachine.owner, 
+--		type_part <- recordStatemachine, 
+--		type_specifier <- recordStatemachine.name
+--	),
+--	recordStatemachineActive: MMmodelica!ModelicaValueProperty(
+--		name <- 'active',
+--		ownerModelicaClassDefinition <- recordStatemachine, 
+--		type_specifier <- 'Boolean'
+--	),
+--	recordStatemachineTimeAtActivation: MMmodelica!ModelicaValueProperty(
+--		name <- 'timeAtActivation',
+--		ownerModelicaClassDefinition <- recordStatemachine, 
+--		type_specifier <- 'Real'
+--	),
+--	recordStatemachineStime: MMmodelica!ModelicaValueProperty(
+--		name <- 'stime',
+--		ownerModelicaClassDefinition <- recordStatemachine, 
+--		type_specifier <- 'Real'
+--	),
+--	recordStatemachineSelfTransitionActivated: MMmodelica!ModelicaValueProperty(
+--		name <- 'selfTransitionActivated',
+--		ownerModelicaClassDefinition <- recordStatemachine, 
+--		type_specifier <- 'Boolean'
+--	),
+--	recordStatemachineStartBehaviour: MMmodelica!ModelicaValueProperty(
+--		name <- 'startBehaviour',
+--		ownerModelicaClassDefinition <- recordStatemachine, 
+--		type_specifier <- 'Boolean'
+--	),
+--	recordInitialStateActive: MMmodelica!ModelicaValueProperty(
+--		name <- 'active',
+--		ownerModelicaClassDefinition <- recordInitialState, 
+--		type_specifier <- 'Boolean'
+--	),
+--	recordInitialStateTimeAtActivation: MMmodelica!ModelicaValueProperty(
+--		name <- 'timeAtActivation',
+--		ownerModelicaClassDefinition <- recordInitialState, 
+--		type_specifier <- 'Real'
+--	),
+--	recordInitialStateStime: MMmodelica!ModelicaValueProperty(
+--		name <- 'stime',
+--		ownerModelicaClassDefinition <- recordInitialState, 
+--		type_specifier <- 'Real'
+--	),
+--	recordInitialStateSelfTransitionActivated: MMmodelica!ModelicaValueProperty(
+--		name <- 'selfTransitionActivated',
+--		ownerModelicaClassDefinition <- recordInitialState, 
+--		type_specifier <- 'Boolean'
+--	),
+--	recordFinalStateActive: MMmodelica!ModelicaValueProperty(
+--		name <- 'active',
+--		ownerModelicaClassDefinition <- recordFinalState, 
+--		type_specifier <- 'Boolean'
+--	),
+--	recordFinalStateTimeAtActivation: MMmodelica!ModelicaValueProperty(
+--		name <- 'timeAtActivation',
+--		ownerModelicaClassDefinition <- recordFinalState, 
+--		type_specifier <- 'Real'
+--	),
+--	recordFinalStateStime: MMmodelica!ModelicaValueProperty(
+--		name <- 'stime',
+--		ownerModelicaClassDefinition <- recordFinalState, 
+--		type_specifier <- 'Real'
+--	),
+--	recordFinalStateSelfTransitionActivated: MMmodelica!ModelicaValueProperty(
+--		name <- 'selfTransitionActivated',
+--		ownerModelicaClassDefinition <- recordFinalState, 
+--		type_specifier <- 'Boolean'
+--	),
+--	recordSimpleStateActive: MMmodelica!ModelicaValueProperty(
+--		name <- 'active',
+--		ownerModelicaClassDefinition <- recordSimpleState, 
+--		type_specifier <- 'Boolean'
+--	),
+--	recordSimpleStateTimeAtActivation: MMmodelica!ModelicaValueProperty(
+--		name <- 'timeAtActivation',
+--		ownerModelicaClassDefinition <- recordSimpleState, 
+--		type_specifier <- 'Real'
+--	),
+--	recordSimpleStateStime: MMmodelica!ModelicaValueProperty(
+--		name <- 'stime',
+--		ownerModelicaClassDefinition <- recordSimpleState, 
+--		type_specifier <- 'Real'
+--	),
+--	recordSimpleStateSelfTransitionActivated: MMmodelica!ModelicaValueProperty(
+--		name <- 'selfTransitionActivated',
+--		ownerModelicaClassDefinition <- recordSimpleState, 
+--		type_specifier <- 'Boolean'
+--	),
+--	algorithmSection: MMmodelica!AlgorithmSection(
+--		ownerModelicaClassDefinition <- statemachine.owner,
+--		body <- ''
+--	)
+--}
+--
+--rule Region2Record{
+--	from region: MMuml!Region
+--	to recordRegion: MMmodelica!Record(
+--		name <- region.stateMachine.name+'_'+region.name, 
+--		ownerModelicaClassDefinition <- region.stateMachine, 
+--		stateMachineElementType <- #region
+--	), 
+--	partRegion: MMmodelica!ModelicaPart(
+--		name <- region.name, 
+--		type_specifier <- recordRegion.name, 
+--		ownerModelicaClassDefinition <- region.stateMachine
+--	), 
+--	numberOfActiveStates: MMmodelica!ModelicaValueProperty(
+--		name <- 'numberOfActiveStates',
+--		ownerModelicaClassDefinition <- recordRegion, 
+--		type_specifier <- 'Integer'
+--	)
+--}
+--
+--rule InitialState2ModelicaPart{
+--	from initialState: MMuml!Pseudostate(
+--		initialState.kind = #initial	
+--	)
+--	to part: MMmodelica!ModelicaPart(
+--		name <- initialState.name,
+--		ownerModelicaClassDefinition <- initialState.owner, 
+--		type_specifier <- thisModule.resolveTemp(initialState.getStateMachine(), 'recordInitialState').name 
+--	)
+--}
+--
+--rule FinalState2ModelicaPart{
+--	from finalState: MMuml!FinalState
+--	to part: MMmodelica!ModelicaPart(
+--		name <- finalState.name,
+--		ownerModelicaClassDefinition <- finalState.owner, 
+--		type_specifier <- thisModule.resolveTemp(finalState.getStateMachine(), 'recordFinalState').name
+--	)
+--}
+--
