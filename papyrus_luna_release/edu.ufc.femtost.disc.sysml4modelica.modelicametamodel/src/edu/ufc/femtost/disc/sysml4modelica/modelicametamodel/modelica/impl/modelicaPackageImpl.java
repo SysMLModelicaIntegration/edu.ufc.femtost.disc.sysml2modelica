@@ -2,6 +2,7 @@
  */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Algorithm;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Block;
@@ -27,6 +28,7 @@ import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaSc
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaValueProperty;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaVariabilityKind;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Record;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.StateMachineElementType;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Type;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaFactory;
@@ -214,6 +216,13 @@ public class modelicaPackageImpl extends EPackageImpl implements modelicaPackage
 	 * @generated
 	 */
 	private EClass typeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass algorithmEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -451,6 +460,15 @@ public class modelicaPackageImpl extends EPackageImpl implements modelicaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getModelicaClassDefinition_Records() {
+		return (EReference)modelicaClassDefinitionEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getClass_() {
 		return classEClass;
 	}
@@ -489,6 +507,15 @@ public class modelicaPackageImpl extends EPackageImpl implements modelicaPackage
 	 */
 	public EClass getRecord() {
 		return recordEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRecord_OwnerModelicaClassDefinition() {
+		return (EReference)recordEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1216,8 +1243,8 @@ public class modelicaPackageImpl extends EPackageImpl implements modelicaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAlgorithmSection_Body() {
-		return (EAttribute)algorithmSectionEClass.getEStructuralFeatures().get(1);
+	public EReference getAlgorithmSection_Algorithm() {
+		return (EReference)algorithmSectionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1324,6 +1351,33 @@ public class modelicaPackageImpl extends EPackageImpl implements modelicaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAlgorithm() {
+		return algorithmEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAlgorithm_Body() {
+		return (EAttribute)algorithmEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAlgorithm_Algorithmsection() {
+		return (EReference)algorithmEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getVisibilityKind() {
 		return visibilityKindEEnum;
 	}
@@ -1407,6 +1461,7 @@ public class modelicaPackageImpl extends EPackageImpl implements modelicaPackage
 		createEReference(modelicaClassDefinitionEClass, MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS);
 		createEReference(modelicaClassDefinitionEClass, MODELICA_CLASS_DEFINITION__ANNOTATIONS);
 		createEReference(modelicaClassDefinitionEClass, MODELICA_CLASS_DEFINITION__COMMENTS);
+		createEReference(modelicaClassDefinitionEClass, MODELICA_CLASS_DEFINITION__RECORDS);
 
 		classEClass = createEClass(CLASS);
 
@@ -1416,6 +1471,7 @@ public class modelicaPackageImpl extends EPackageImpl implements modelicaPackage
 		modelEClass = createEClass(MODEL);
 
 		recordEClass = createEClass(RECORD);
+		createEReference(recordEClass, RECORD__OWNER_MODELICA_CLASS_DEFINITION);
 
 		blockEClass = createEClass(BLOCK);
 
@@ -1511,7 +1567,7 @@ public class modelicaPackageImpl extends EPackageImpl implements modelicaPackage
 
 		algorithmSectionEClass = createEClass(ALGORITHM_SECTION);
 		createEReference(algorithmSectionEClass, ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION);
-		createEAttribute(algorithmSectionEClass, ALGORITHM_SECTION__BODY);
+		createEReference(algorithmSectionEClass, ALGORITHM_SECTION__ALGORITHM);
 
 		constrainedByClauseEClass = createEClass(CONSTRAINED_BY_CLAUSE);
 		createEAttribute(constrainedByClauseEClass, CONSTRAINED_BY_CLAUSE__MODIFICATION);
@@ -1527,6 +1583,10 @@ public class modelicaPackageImpl extends EPackageImpl implements modelicaPackage
 		createEAttribute(commentEClass, COMMENT__BODY);
 
 		typeEClass = createEClass(TYPE);
+
+		algorithmEClass = createEClass(ALGORITHM);
+		createEAttribute(algorithmEClass, ALGORITHM__BODY);
+		createEReference(algorithmEClass, ALGORITHM__ALGORITHMSECTION);
 
 		// Create enums
 		visibilityKindEEnum = createEEnum(VISIBILITY_KIND);
@@ -1593,6 +1653,7 @@ public class modelicaPackageImpl extends EPackageImpl implements modelicaPackage
 		initEReference(getModelicaClassDefinition_AlgorithmSections(), this.getAlgorithmSection(), this.getAlgorithmSection_OwnerModelicaClassDefinition(), "algorithmSections", null, 0, -1, ModelicaClassDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModelicaClassDefinition_Annotations(), this.getAnnotation(), this.getAnnotation_OwnerMCD(), "annotations", null, 0, -1, ModelicaClassDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModelicaClassDefinition_Comments(), this.getComment(), this.getComment_OwnerModelicaClassDefinition(), "comments", null, 0, -1, ModelicaClassDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModelicaClassDefinition_Records(), this.getRecord(), this.getRecord_OwnerModelicaClassDefinition(), "records", null, 0, -1, ModelicaClassDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(classEClass, edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Class.class, "Class", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1602,6 +1663,7 @@ public class modelicaPackageImpl extends EPackageImpl implements modelicaPackage
 		initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(recordEClass, Record.class, "Record", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRecord_OwnerModelicaClassDefinition(), this.getModelicaClassDefinition(), this.getModelicaClassDefinition_Records(), "ownerModelicaClassDefinition", null, 0, 1, Record.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(blockEClass, Block.class, "Block", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1697,7 +1759,7 @@ public class modelicaPackageImpl extends EPackageImpl implements modelicaPackage
 
 		initEClass(algorithmSectionEClass, AlgorithmSection.class, "AlgorithmSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAlgorithmSection_OwnerModelicaClassDefinition(), this.getModelicaClassDefinition(), this.getModelicaClassDefinition_AlgorithmSections(), "ownerModelicaClassDefinition", null, 1, 1, AlgorithmSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAlgorithmSection_Body(), ecorePackage.getEString(), "body", null, 0, 1, AlgorithmSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAlgorithmSection_Algorithm(), this.getAlgorithm(), this.getAlgorithm_Algorithmsection(), "algorithm", null, 0, -1, AlgorithmSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constrainedByClauseEClass, ConstrainedByClause.class, "ConstrainedByClause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getConstrainedByClause_Modification(), ecorePackage.getEString(), "modification", null, 0, 1, ConstrainedByClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1713,6 +1775,10 @@ public class modelicaPackageImpl extends EPackageImpl implements modelicaPackage
 		initEAttribute(getComment_Body(), ecorePackage.getEString(), "body", null, 0, 1, Comment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(algorithmEClass, Algorithm.class, "Algorithm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAlgorithm_Body(), ecorePackage.getEString(), "body", null, 0, 1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAlgorithm_Algorithmsection(), this.getAlgorithmSection(), this.getAlgorithmSection_Algorithm(), "algorithmsection", null, 0, 1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(visibilityKindEEnum, VisibilityKind.class, "VisibilityKind");

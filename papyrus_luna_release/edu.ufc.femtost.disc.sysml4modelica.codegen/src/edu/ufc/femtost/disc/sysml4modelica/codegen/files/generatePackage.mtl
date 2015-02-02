@@ -29,6 +29,7 @@ package [aPackage.name/]
 [/if][/for]
 [for (aModelicaClassDefinition : ModelicaClassDefinition | aPackage.modelicaClasses)][if(aModelicaClassDefinition.oclIsTypeOf(DerFunction))][generateModelicaDerFunction(aModelicaClassDefinition.oclAsType(DerFunction))/]
 [/if][/for]
+	annotation(Diagram(coordinateSystem(extent = {{-148.5,-105.0},{148.5,105.0}}, preserveAspectRatio = true, initialScale = 0.1, grid = {10,10})), Icon(graphics = {Rectangle(rotation = 0, lineColor = {0,0,0}, fillColor = {190,224,255}, pattern = LinePattern.Solid, fillPattern = FillPattern.Solid, lineThickness = 0.25, extent = {{-100,-58.5379},{100,58.5379}}),Rectangle(rotation = 0, lineColor = {0,0,0}, fillColor = {255,255,255}, pattern = LinePattern.Solid, fillPattern = FillPattern.Solid, lineThickness = 0.25, extent = {{-100.06,58.5379},{-10.0595,91.46210000000001}}),Text(rotation = 0, lineColor = {0,0,0}, fillColor = {0,0,0}, pattern = LinePattern.Solid, fillPattern = FillPattern.Solid, lineThickness = 0.25, extent = {{-93.2419,-12.7008},{93.2419,12.7008}}, textString = "# Inputs for Requirements Evaluation", fontName = "Arial", textStyle = {TextStyle.Bold})}));
 end [aPackage.name/];
 [/file]
 

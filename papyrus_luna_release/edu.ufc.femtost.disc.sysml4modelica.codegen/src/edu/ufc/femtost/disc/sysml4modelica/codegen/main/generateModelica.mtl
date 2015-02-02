@@ -24,6 +24,7 @@
 [comment @main/]
 [file ('/'+aModelicaModel.name+'/package.mo', false, 'UTF-8')]
 package [aModelicaModel.name/]
+	annotation(Diagram(coordinateSystem(extent = {{-148.5,-105.0},{148.5,105.0}}, preserveAspectRatio = true, initialScale = 0.1, grid = {10,10})), Icon(graphics = {Rectangle(rotation = 0, lineColor = {0,0,0}, fillColor = {190,224,255}, pattern = LinePattern.Solid, fillPattern = FillPattern.Solid, lineThickness = 0.25, extent = {{-100,-58.5379},{100,58.5379}}),Rectangle(rotation = 0, lineColor = {0,0,0}, fillColor = {255,255,255}, pattern = LinePattern.Solid, fillPattern = FillPattern.Solid, lineThickness = 0.25, extent = {{-100.06,58.5379},{-10.0595,91.46210000000001}}),Text(rotation = 0, lineColor = {0,0,0}, fillColor = {0,0,0}, pattern = LinePattern.Solid, fillPattern = FillPattern.Solid, lineThickness = 0.25, extent = {{-94.73,-51.0937},{91.7538,-25.6921}}, textString = "Name", fontName = "Arial", textStyle = {TextStyle.Bold}),Polygon(points = {{37.2048,27.4641},{89.16079999999999,-16.4106},{-11.1869,-16.4106}}, rotation = 0, lineColor = {0,0,0}, fillColor = {255,255,255}, pattern = LinePattern.Solid, fillPattern = FillPattern.Solid, lineThickness = 0.25)}));
 end [aModelicaModel.name/];
 [/file]
 

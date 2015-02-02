@@ -2,20 +2,25 @@
  */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Algorithm;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +30,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * The following features are implemented:
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.AlgorithmSectionImpl#getOwnerModelicaClassDefinition <em>Owner Modelica Class Definition</em>}</li>
- *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.AlgorithmSectionImpl#getBody <em>Body</em>}</li>
+ *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.AlgorithmSectionImpl#getAlgorithm <em>Algorithm</em>}</li>
  * </ul>
  * </p>
  *
@@ -33,25 +38,14 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  */
 public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSection {
 	/**
-	 * The default value of the '{@link #getBody() <em>Body</em>}' attribute.
+	 * The cached value of the '{@link #getAlgorithm() <em>Algorithm</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBody()
+	 * @see #getAlgorithm()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String BODY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getBody() <em>Body</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBody()
-	 * @generated
-	 * @ordered
-	 */
-	protected String body = BODY_EDEFAULT;
-
+	protected EList<Algorithm> algorithm;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -117,8 +111,11 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getBody() {
-		return body;
+	public EList<Algorithm> getAlgorithm() {
+		if (algorithm == null) {
+			algorithm = new EObjectContainmentWithInverseEList<Algorithm>(Algorithm.class, this, modelicaPackage.ALGORITHM_SECTION__ALGORITHM, modelicaPackage.ALGORITHM__ALGORITHMSECTION);
+		}
+		return algorithm;
 	}
 
 	/**
@@ -126,18 +123,7 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBody(String newBody) {
-		String oldBody = body;
-		body = newBody;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, modelicaPackage.ALGORITHM_SECTION__BODY, oldBody, body));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -145,6 +131,8 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnerModelicaClassDefinition((ModelicaClassDefinition)otherEnd, msgs);
+			case modelicaPackage.ALGORITHM_SECTION__ALGORITHM:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAlgorithm()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -159,6 +147,8 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 		switch (featureID) {
 			case modelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
 				return basicSetOwnerModelicaClassDefinition(null, msgs);
+			case modelicaPackage.ALGORITHM_SECTION__ALGORITHM:
+				return ((InternalEList<?>)getAlgorithm()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -187,8 +177,8 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 		switch (featureID) {
 			case modelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
 				return getOwnerModelicaClassDefinition();
-			case modelicaPackage.ALGORITHM_SECTION__BODY:
-				return getBody();
+			case modelicaPackage.ALGORITHM_SECTION__ALGORITHM:
+				return getAlgorithm();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -198,14 +188,16 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case modelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
 				setOwnerModelicaClassDefinition((ModelicaClassDefinition)newValue);
 				return;
-			case modelicaPackage.ALGORITHM_SECTION__BODY:
-				setBody((String)newValue);
+			case modelicaPackage.ALGORITHM_SECTION__ALGORITHM:
+				getAlgorithm().clear();
+				getAlgorithm().addAll((Collection<? extends Algorithm>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -222,8 +214,8 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 			case modelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
 				setOwnerModelicaClassDefinition((ModelicaClassDefinition)null);
 				return;
-			case modelicaPackage.ALGORITHM_SECTION__BODY:
-				setBody(BODY_EDEFAULT);
+			case modelicaPackage.ALGORITHM_SECTION__ALGORITHM:
+				getAlgorithm().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -239,26 +231,10 @@ public class AlgorithmSectionImpl extends EObjectImpl implements AlgorithmSectio
 		switch (featureID) {
 			case modelicaPackage.ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION:
 				return getOwnerModelicaClassDefinition() != null;
-			case modelicaPackage.ALGORITHM_SECTION__BODY:
-				return BODY_EDEFAULT == null ? body != null : !BODY_EDEFAULT.equals(body);
+			case modelicaPackage.ALGORITHM_SECTION__ALGORITHM:
+				return algorithm != null && !algorithm.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (body: ");
-		result.append(body);
-		result.append(')');
-		return result.toString();
 	}
 
 } //AlgorithmSectionImpl

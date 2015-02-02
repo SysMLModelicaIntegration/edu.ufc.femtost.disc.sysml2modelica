@@ -2,6 +2,7 @@
  */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Algorithm;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Block;
@@ -25,6 +26,7 @@ import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaSc
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaValueProperty;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaVariabilityKind;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Record;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.StateMachineElementType;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Type;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaFactory;
@@ -105,6 +107,7 @@ public class modelicaFactoryImpl extends EFactoryImpl implements modelicaFactory
 			case modelicaPackage.ANNOTATION: return createAnnotation();
 			case modelicaPackage.COMMENT: return createComment();
 			case modelicaPackage.TYPE: return createType();
+			case modelicaPackage.ALGORITHM: return createAlgorithm();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -374,6 +377,16 @@ public class modelicaFactoryImpl extends EFactoryImpl implements modelicaFactory
 	public Type createType() {
 		TypeImpl type = new TypeImpl();
 		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Algorithm createAlgorithm() {
+		AlgorithmImpl algorithm = new AlgorithmImpl();
+		return algorithm;
 	}
 
 	/**

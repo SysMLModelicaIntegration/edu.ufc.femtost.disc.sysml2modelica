@@ -245,6 +245,7 @@ public class ModelicaClassDefinitionItemProvider
 			childrenFeatures.add(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS);
 			childrenFeatures.add(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__ANNOTATIONS);
 			childrenFeatures.add(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__COMMENTS);
+			childrenFeatures.add(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__RECORDS);
 		}
 		return childrenFeatures;
 	}
@@ -302,6 +303,7 @@ public class ModelicaClassDefinitionItemProvider
 			case modelicaPackage.MODELICA_CLASS_DEFINITION__ALGORITHM_SECTIONS:
 			case modelicaPackage.MODELICA_CLASS_DEFINITION__ANNOTATIONS:
 			case modelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__RECORDS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -353,6 +355,11 @@ public class ModelicaClassDefinitionItemProvider
 			(createChildParameter
 				(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__COMMENTS,
 				 modelicaFactory.eINSTANCE.createComment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modelicaPackage.Literals.MODELICA_CLASS_DEFINITION__RECORDS,
+				 modelicaFactory.eINSTANCE.createRecord()));
 	}
 
 	/**

@@ -193,13 +193,22 @@ public interface modelicaPackage extends EPackage {
 	int MODELICA_CLASS_DEFINITION__COMMENTS = 13;
 
 	/**
+	 * The feature id for the '<em><b>Records</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODELICA_CLASS_DEFINITION__RECORDS = 14;
+
+	/**
 	 * The number of structural features of the '<em>Modelica Class Definition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODELICA_CLASS_DEFINITION_FEATURE_COUNT = 14;
+	int MODELICA_CLASS_DEFINITION_FEATURE_COUNT = 15;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ClassImpl <em>Class</em>}' class.
@@ -336,6 +345,15 @@ public interface modelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int CLASS__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Records</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS__RECORDS = MODELICA_CLASS_DEFINITION__RECORDS;
 
 	/**
 	 * The number of structural features of the '<em>Class</em>' class.
@@ -481,6 +499,15 @@ public interface modelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONNECTOR__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Records</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTOR__RECORDS = MODELICA_CLASS_DEFINITION__RECORDS;
 
 	/**
 	 * The feature id for the '<em><b>Is Expandable</b></em>' attribute.
@@ -637,6 +664,15 @@ public interface modelicaPackage extends EPackage {
 	int MODEL__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
 
 	/**
+	 * The feature id for the '<em><b>Records</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL__RECORDS = MODELICA_CLASS_DEFINITION__RECORDS;
+
+	/**
 	 * The number of structural features of the '<em>Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -782,13 +818,31 @@ public interface modelicaPackage extends EPackage {
 	int RECORD__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
 
 	/**
+	 * The feature id for the '<em><b>Records</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECORD__RECORDS = MODELICA_CLASS_DEFINITION__RECORDS;
+
+	/**
+	 * The feature id for the '<em><b>Owner Modelica Class Definition</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECORD__OWNER_MODELICA_CLASS_DEFINITION = MODELICA_CLASS_DEFINITION_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Record</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECORD_FEATURE_COUNT = MODELICA_CLASS_DEFINITION_FEATURE_COUNT + 0;
+	int RECORD_FEATURE_COUNT = MODELICA_CLASS_DEFINITION_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.BlockImpl <em>Block</em>}' class.
@@ -925,6 +979,15 @@ public interface modelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int BLOCK__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Records</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK__RECORDS = MODELICA_CLASS_DEFINITION__RECORDS;
 
 	/**
 	 * The number of structural features of the '<em>Block</em>' class.
@@ -1070,6 +1133,15 @@ public interface modelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int PACKAGE__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Records</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE__RECORDS = MODELICA_CLASS_DEFINITION__RECORDS;
 
 	/**
 	 * The feature id for the '<em><b>Within Clause</b></em>' attribute.
@@ -1233,6 +1305,15 @@ public interface modelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int FUNCTION__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Records</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__RECORDS = MODELICA_CLASS_DEFINITION__RECORDS;
 
 	/**
 	 * The feature id for the '<em><b>External Language</b></em>' attribute.
@@ -1414,6 +1495,15 @@ public interface modelicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int DER_FUNCTION__COMMENTS = FUNCTION__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Records</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DER_FUNCTION__RECORDS = FUNCTION__RECORDS;
 
 	/**
 	 * The feature id for the '<em><b>External Language</b></em>' attribute.
@@ -2408,13 +2498,13 @@ public interface modelicaPackage extends EPackage {
 	int ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION = 0;
 
 	/**
-	 * The feature id for the '<em><b>Body</b></em>' attribute.
+	 * The feature id for the '<em><b>Algorithm</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALGORITHM_SECTION__BODY = 1;
+	int ALGORITHM_SECTION__ALGORITHM = 1;
 
 	/**
 	 * The number of structural features of the '<em>Algorithm Section</em>' class.
@@ -2682,6 +2772,15 @@ public interface modelicaPackage extends EPackage {
 	int TYPE__COMMENTS = MODELICA_CLASS_DEFINITION__COMMENTS;
 
 	/**
+	 * The feature id for the '<em><b>Records</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__RECORDS = MODELICA_CLASS_DEFINITION__RECORDS;
+
+	/**
 	 * The number of structural features of the '<em>Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2691,6 +2790,43 @@ public interface modelicaPackage extends EPackage {
 	int TYPE_FEATURE_COUNT = MODELICA_CLASS_DEFINITION_FEATURE_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.AlgorithmImpl <em>Algorithm</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.AlgorithmImpl
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.modelicaPackageImpl#getAlgorithm()
+	 * @generated
+	 */
+	int ALGORITHM = 24;
+
+	/**
+	 * The feature id for the '<em><b>Body</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALGORITHM__BODY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Algorithmsection</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALGORITHM__ALGORITHMSECTION = 1;
+
+	/**
+	 * The number of structural features of the '<em>Algorithm</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALGORITHM_FEATURE_COUNT = 2;
+
+	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind <em>Visibility Kind</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2698,7 +2834,7 @@ public interface modelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.modelicaPackageImpl#getVisibilityKind()
 	 * @generated
 	 */
-	int VISIBILITY_KIND = 24;
+	int VISIBILITY_KIND = 25;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaCausalityKind <em>Modelica Causality Kind</em>}' enum.
@@ -2708,7 +2844,7 @@ public interface modelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.modelicaPackageImpl#getModelicaCausalityKind()
 	 * @generated
 	 */
-	int MODELICA_CAUSALITY_KIND = 25;
+	int MODELICA_CAUSALITY_KIND = 26;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaVariabilityKind <em>Modelica Variability Kind</em>}' enum.
@@ -2718,7 +2854,7 @@ public interface modelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.modelicaPackageImpl#getModelicaVariabilityKind()
 	 * @generated
 	 */
-	int MODELICA_VARIABILITY_KIND = 26;
+	int MODELICA_VARIABILITY_KIND = 27;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaFlowFlag <em>Modelica Flow Flag</em>}' enum.
@@ -2728,7 +2864,7 @@ public interface modelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.modelicaPackageImpl#getModelicaFlowFlag()
 	 * @generated
 	 */
-	int MODELICA_FLOW_FLAG = 27;
+	int MODELICA_FLOW_FLAG = 28;
 
 	/**
 	 * The meta object id for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaScopeKind <em>Modelica Scope Kind</em>}' enum.
@@ -2738,7 +2874,7 @@ public interface modelicaPackage extends EPackage {
 	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.modelicaPackageImpl#getModelicaScopeKind()
 	 * @generated
 	 */
-	int MODELICA_SCOPE_KIND = 28;
+	int MODELICA_SCOPE_KIND = 29;
 
 
 	/**
@@ -2906,6 +3042,17 @@ public interface modelicaPackage extends EPackage {
 	EReference getModelicaClassDefinition_Comments();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getRecords <em>Records</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Records</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition#getRecords()
+	 * @see #getModelicaClassDefinition()
+	 * @generated
+	 */
+	EReference getModelicaClassDefinition_Records();
+
+	/**
 	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Class <em>Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2955,6 +3102,17 @@ public interface modelicaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getRecord();
+
+	/**
+	 * Returns the meta object for the container reference '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Record#getOwnerModelicaClassDefinition <em>Owner Modelica Class Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Owner Modelica Class Definition</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Record#getOwnerModelicaClassDefinition()
+	 * @see #getRecord()
+	 * @generated
+	 */
+	EReference getRecord_OwnerModelicaClassDefinition();
 
 	/**
 	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Block <em>Block</em>}'.
@@ -3822,15 +3980,15 @@ public interface modelicaPackage extends EPackage {
 	EReference getAlgorithmSection_OwnerModelicaClassDefinition();
 
 	/**
-	 * Returns the meta object for the attribute '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection#getBody <em>Body</em>}'.
+	 * Returns the meta object for the containment reference list '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection#getAlgorithm <em>Algorithm</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Body</em>'.
-	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection#getBody()
+	 * @return the meta object for the containment reference list '<em>Algorithm</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection#getAlgorithm()
 	 * @see #getAlgorithmSection()
 	 * @generated
 	 */
-	EAttribute getAlgorithmSection_Body();
+	EReference getAlgorithmSection_Algorithm();
 
 	/**
 	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause <em>Constrained By Clause</em>}'.
@@ -3948,6 +4106,38 @@ public interface modelicaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getType();
+
+	/**
+	 * Returns the meta object for class '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Algorithm <em>Algorithm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Algorithm</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Algorithm
+	 * @generated
+	 */
+	EClass getAlgorithm();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Algorithm#getBody <em>Body</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Body</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Algorithm#getBody()
+	 * @see #getAlgorithm()
+	 * @generated
+	 */
+	EAttribute getAlgorithm_Body();
+
+	/**
+	 * Returns the meta object for the container reference '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Algorithm#getAlgorithmsection <em>Algorithmsection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Algorithmsection</em>'.
+	 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Algorithm#getAlgorithmsection()
+	 * @see #getAlgorithm()
+	 * @generated
+	 */
+	EReference getAlgorithm_Algorithmsection();
 
 	/**
 	 * Returns the meta object for enum '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind <em>Visibility Kind</em>}'.
@@ -4144,6 +4334,14 @@ public interface modelicaPackage extends EPackage {
 		EReference MODELICA_CLASS_DEFINITION__COMMENTS = eINSTANCE.getModelicaClassDefinition_Comments();
 
 		/**
+		 * The meta object literal for the '<em><b>Records</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODELICA_CLASS_DEFINITION__RECORDS = eINSTANCE.getModelicaClassDefinition_Records();
+
+		/**
 		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ClassImpl <em>Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4190,6 +4388,14 @@ public interface modelicaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass RECORD = eINSTANCE.getRecord();
+
+		/**
+		 * The meta object literal for the '<em><b>Owner Modelica Class Definition</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RECORD__OWNER_MODELICA_CLASS_DEFINITION = eINSTANCE.getRecord_OwnerModelicaClassDefinition();
 
 		/**
 		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.BlockImpl <em>Block</em>}' class.
@@ -4862,12 +5068,12 @@ public interface modelicaPackage extends EPackage {
 		EReference ALGORITHM_SECTION__OWNER_MODELICA_CLASS_DEFINITION = eINSTANCE.getAlgorithmSection_OwnerModelicaClassDefinition();
 
 		/**
-		 * The meta object literal for the '<em><b>Body</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Algorithm</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ALGORITHM_SECTION__BODY = eINSTANCE.getAlgorithmSection_Body();
+		EReference ALGORITHM_SECTION__ALGORITHM = eINSTANCE.getAlgorithmSection_Algorithm();
 
 		/**
 		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ConstrainedByClauseImpl <em>Constrained By Clause</em>}' class.
@@ -4964,6 +5170,32 @@ public interface modelicaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TYPE = eINSTANCE.getType();
+
+		/**
+		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.AlgorithmImpl <em>Algorithm</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.AlgorithmImpl
+		 * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.modelicaPackageImpl#getAlgorithm()
+		 * @generated
+		 */
+		EClass ALGORITHM = eINSTANCE.getAlgorithm();
+
+		/**
+		 * The meta object literal for the '<em><b>Body</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ALGORITHM__BODY = eINSTANCE.getAlgorithm_Body();
+
+		/**
+		 * The meta object literal for the '<em><b>Algorithmsection</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ALGORITHM__ALGORITHMSECTION = eINSTANCE.getAlgorithm_Algorithmsection();
 
 		/**
 		 * The meta object literal for the '{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind <em>Visibility Kind</em>}' enum.

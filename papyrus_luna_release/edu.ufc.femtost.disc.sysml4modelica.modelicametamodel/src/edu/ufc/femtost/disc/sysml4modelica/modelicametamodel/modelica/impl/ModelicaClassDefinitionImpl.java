@@ -10,6 +10,7 @@ import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsCla
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaComponent;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaModel;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Record;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
@@ -50,6 +51,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#getAlgorithmSections <em>Algorithm Sections</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#getAnnotations <em>Annotations</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#getComments <em>Comments</em>}</li>
+ *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#getRecords <em>Records</em>}</li>
  * </ul>
  * </p>
  *
@@ -235,6 +237,16 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 * @ordered
 	 */
 	protected EList<Comment> comments;
+
+	/**
+	 * The cached value of the '{@link #getRecords() <em>Records</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRecords()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Record> records;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -571,6 +583,18 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Record> getRecords() {
+		if (records == null) {
+			records = new EObjectContainmentWithInverseEList<Record>(Record.class, this, modelicaPackage.MODELICA_CLASS_DEFINITION__RECORDS, modelicaPackage.RECORD__OWNER_MODELICA_CLASS_DEFINITION);
+		}
+		return records;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -597,6 +621,8 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAnnotations()).basicAdd(otherEnd, msgs);
 			case modelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getComments()).basicAdd(otherEnd, msgs);
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__RECORDS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRecords()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -625,6 +651,8 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 				return ((InternalEList<?>)getAnnotations()).basicRemove(otherEnd, msgs);
 			case modelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
 				return ((InternalEList<?>)getComments()).basicRemove(otherEnd, msgs);
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__RECORDS:
+				return ((InternalEList<?>)getRecords()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -681,6 +709,8 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 				return getAnnotations();
 			case modelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
 				return getComments();
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__RECORDS:
+				return getRecords();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -741,6 +771,10 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 				getComments().clear();
 				getComments().addAll((Collection<? extends Comment>)newValue);
 				return;
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__RECORDS:
+				getRecords().clear();
+				getRecords().addAll((Collection<? extends Record>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -795,6 +829,9 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 			case modelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
 				getComments().clear();
 				return;
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__RECORDS:
+				getRecords().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -835,6 +872,8 @@ public abstract class ModelicaClassDefinitionImpl extends EObjectImpl implements
 				return annotations != null && !annotations.isEmpty();
 			case modelicaPackage.MODELICA_CLASS_DEFINITION__COMMENTS:
 				return comments != null && !comments.isEmpty();
+			case modelicaPackage.MODELICA_CLASS_DEFINITION__RECORDS:
+				return records != null && !records.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

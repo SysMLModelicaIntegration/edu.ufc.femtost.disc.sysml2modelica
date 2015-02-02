@@ -578,6 +578,29 @@ public class modelicaItemProviderAdapterFactory extends modelicaAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Algorithm} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AlgorithmItemProvider algorithmItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Algorithm}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAlgorithmAdapter() {
+		if (algorithmItemProvider == null) {
+			algorithmItemProvider = new AlgorithmItemProvider(this);
+		}
+
+		return algorithmItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -698,6 +721,7 @@ public class modelicaItemProviderAdapterFactory extends modelicaAdapterFactory i
 		if (annotationItemProvider != null) annotationItemProvider.dispose();
 		if (commentItemProvider != null) commentItemProvider.dispose();
 		if (typeItemProvider != null) typeItemProvider.dispose();
+		if (algorithmItemProvider != null) algorithmItemProvider.dispose();
 	}
 
 }

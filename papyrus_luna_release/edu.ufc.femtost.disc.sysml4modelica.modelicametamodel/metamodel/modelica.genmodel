@@ -53,13 +53,16 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelica.ecore#//ModelicaClassDefinition/algorithmSections"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelica.ecore#//ModelicaClassDefinition/annotations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelica.ecore#//ModelicaClassDefinition/comments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelica.ecore#//ModelicaClassDefinition/records"/>
     </genClasses>
     <genClasses ecoreClass="modelica.ecore#//Class"/>
     <genClasses ecoreClass="modelica.ecore#//Connector">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//Connector/isExpandable"/>
     </genClasses>
     <genClasses ecoreClass="modelica.ecore#//Model"/>
-    <genClasses ecoreClass="modelica.ecore#//Record"/>
+    <genClasses ecoreClass="modelica.ecore#//Record">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference modelica.ecore#//Record/ownerModelicaClassDefinition"/>
+    </genClasses>
     <genClasses ecoreClass="modelica.ecore#//Block"/>
     <genClasses ecoreClass="modelica.ecore#//Package">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//Package/withinClause"/>
@@ -153,7 +156,7 @@
     </genClasses>
     <genClasses ecoreClass="modelica.ecore#//AlgorithmSection">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference modelica.ecore#//AlgorithmSection/ownerModelicaClassDefinition"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//AlgorithmSection/body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelica.ecore#//AlgorithmSection/algorithm"/>
     </genClasses>
     <genClasses ecoreClass="modelica.ecore#//ConstrainedByClause">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//ConstrainedByClause/modification"/>
@@ -169,5 +172,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//Comment/body"/>
     </genClasses>
     <genClasses ecoreClass="modelica.ecore#//Type"/>
+    <genClasses ecoreClass="modelica.ecore#//Algorithm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//Algorithm/body"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference modelica.ecore#//Algorithm/algorithmsection"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

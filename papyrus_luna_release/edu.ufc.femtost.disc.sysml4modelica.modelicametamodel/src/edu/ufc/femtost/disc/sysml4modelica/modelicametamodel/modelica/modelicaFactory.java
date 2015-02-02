@@ -220,6 +220,15 @@ public interface modelicaFactory extends EFactory {
 	Type createType();
 
 	/**
+	 * Returns a new object of class '<em>Algorithm</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Algorithm</em>'.
+	 * @generated
+	 */
+	Algorithm createAlgorithm();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

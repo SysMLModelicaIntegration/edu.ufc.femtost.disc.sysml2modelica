@@ -5,13 +5,17 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Record;
 
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Record} object.

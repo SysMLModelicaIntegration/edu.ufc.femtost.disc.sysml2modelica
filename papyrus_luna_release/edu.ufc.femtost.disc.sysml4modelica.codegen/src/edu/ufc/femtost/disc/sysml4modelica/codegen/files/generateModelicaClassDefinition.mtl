@@ -97,7 +97,7 @@
  * The documentation of the template generateModel.
  * @param aModel
  */]
-[template public generateModelicaClassDefinition(aModelicaClassDefinition : ModelicaClassDefinition)]
+[template public generateModelicaClassDefinition(aModelicaClassDefinition : ModelicaClassDefinition) ? (not aModelicaClassDefinition.oclIsTypeOf(Record))]
 [file (getPath(aModelicaClassDefinition), false, 'UTF-8')]
 within [getWithin(aModelicaClassDefinition)/];
 
@@ -113,12 +113,46 @@ within [getWithin(aModelicaClassDefinition)/];
 [for(aModelicaComponent : ModelicaComponent | aModelicaClassDefinition.modelicaComponents)]
 [if(aModelicaComponent.isFinal)]	final [/if][if(aModelicaComponent.isReplaceable)]	replaceable [/if][generateModelicaComponent(aModelicaComponent)/]
 [/for]
+
+[for(aRecord : Record | aModelicaClassDefinition.records)] 
+	[generateModelicaClassDefinition(aRecord)/] 
+[/for]
+
 [if(not aModelicaClassDefinition.equationSection.oclIsUndefined())][generateEquationSection(aModelicaClassDefinition.equationSection)/][/if]
+[for(aModelicaAlgorithmSection : AlgorithmSection | aModelicaClassDefinition.algorithmSections)]
+[generateAlgorithmSection(aModelicaAlgorithmSection)/]
+[/for]
 [for(aModelicaAnnotation : Annotation | aModelicaClassDefinition.annotations)]
 [generateModelicaAnnotation(aModelicaAnnotation)/]
 [/for]
 end [aModelicaClassDefinition.name/];
 [/file]
+[/template]
+
+[template public generateModelicaClassDefinition(aModelicaClassDefinition : ModelicaClassDefinition) ? (aModelicaClassDefinition.oclIsTypeOf(Record))]
+[if(aModelicaClassDefinition.isReplaceable)]replaceable [/if][if(aModelicaClassDefinition.isFinal)]final [/if][if(aModelicaClassDefinition.isModelicaEncapsulated)]encapsulated [/if][if(aModelicaClassDefinition.isPartial)]partial [/if][if(aModelicaClassDefinition.oclIsTypeOf(Connector) and aModelicaClassDefinition.oclAsType(Connector).isExpandable)]expandable [/if][aModelicaClassDefinition.eClass().name.toLower()/] [aModelicaClassDefinition.name/]
+[for(aModelicaExtends : ExtendsClause | aModelicaClassDefinition.extends)]
+[generateModelicaExtends(aModelicaExtends)/][if(not aModelicaExtends.modification.oclIsUndefined() and aModelicaExtends.modification <> '')]([aModelicaExtends.modification/])[/if];
+[/for]
+
+[for (aModelicaComment: Comment | aModelicaClassDefinition.comments)]
+/*
+[generateComment(aModelicaComment)/]
+*/
+[/for]
+[for(aModelicaComponent : ModelicaComponent | aModelicaClassDefinition.modelicaComponents)]
+[if(aModelicaComponent.isFinal)]final [/if][if(aModelicaComponent.isReplaceable)]	replaceable [/if][generateModelicaComponent(aModelicaComponent)/]
+[/for]
+
+[for(aRecord : Record | aModelicaClassDefinition.records)]
+	[generateModelicaClassDefinition(aRecord)/] 
+
+[/for]
+	
+[for(aModelicaAnnotation : Annotation | aModelicaClassDefinition.annotations)]
+[generateModelicaAnnotation(aModelicaAnnotation)/]
+[/for]
+end [aModelicaClassDefinition.name/];
 [/template]
 
 [template public generateModelicaExtends(aModelicaExtends : ExtendsClause) ? (not aModelicaExtends.from_modelica_primitive_types.oclIsUndefined() and aModelicaExtends.from_modelica_primitive_types.contains('ModelicaReal'))]
@@ -181,6 +215,15 @@ equation
 [/for]
 	[for(aEquation : Equation | aEquationSection.equations->select(e | not e.isInitial))][generateEquation(aEquation)/]
 [/for]
+[/template]
+
+[template public generateAlgorithmSection(aModelicaAlgorithmSection : AlgorithmSection)]
+algorithm
+	[for(aModelicaAlgorithm : Algorithm | aModelicaAlgorithmSection.algorithm)][generateAlgorithm(aModelicaAlgorithm)/][/for]
+[/template]
+
+[template public generateAlgorithm(aModelicaAlgorithm: Algorithm)]
+[aModelicaAlgorithm._body/]
 [/template]
 
 [template public generateConnect(aConnect : Connect)]

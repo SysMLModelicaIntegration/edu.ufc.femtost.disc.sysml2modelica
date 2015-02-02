@@ -2,6 +2,7 @@
  */
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.util;
 
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Algorithm;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Annotation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Block;
@@ -242,6 +243,12 @@ public class modelicaSwitch<T> extends Switch<T> {
 				Type type = (Type)theEObject;
 				T result = caseType(type);
 				if (result == null) result = caseModelicaClassDefinition(type);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case modelicaPackage.ALGORITHM: {
+				Algorithm algorithm = (Algorithm)theEObject;
+				T result = caseAlgorithm(algorithm);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -606,6 +613,21 @@ public class modelicaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseType(Type object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Algorithm</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Algorithm</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAlgorithm(Algorithm object) {
 		return null;
 	}
 

@@ -34,7 +34,11 @@
 	[if (not aModelicaFunctionParameter.causality.toString().contains('none'))][aModelicaFunctionParameter.causality.toString()/][/if][if(aModelicaFunctionParameter.variability.toString().contains('constant'))]constant[/if] [aModelicaFunctionParameter.type_specifier/] [aModelicaFunctionParameter.name/][if(not aModelicaFunctionParameter.default_value.oclIsUndefined())] = [aModelicaFunctionParameter.default_value.toString()/][/if];
 [/template]
 
-[template public generateModelicaAlgorithmSection(aModelicaAlgorithm : AlgorithmSection)]
+[template public generateModelicaAlgorithmSection(aModelicaAlgorithmSection : AlgorithmSection)]
 	algorithm
-		[aModelicaAlgorithm._body/]
+		[for(aModelicaAlgorithm : Algorithm | aModelicaAlgorithmSection.algorithm)][generateAlgorithm(aModelicaAlgorithm)/][/for]
+[/template]
+
+[template public generateAlgorithm(aModelicaAlgorithm: Algorithm)]
+[aModelicaAlgorithm._body/]
 [/template]

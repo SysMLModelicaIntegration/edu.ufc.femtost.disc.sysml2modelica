@@ -3,8 +3,7 @@
 package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider;
 
 
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaFactory;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Algorithm;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import java.util.Collection;
@@ -15,7 +14,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -28,12 +26,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.AlgorithmSection} object.
+ * This is the item provider adapter for a {@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Algorithm} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class AlgorithmSectionItemProvider 
+public class AlgorithmItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -47,7 +45,7 @@ public class AlgorithmSectionItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AlgorithmSectionItemProvider(AdapterFactory adapterFactory) {
+	public AlgorithmItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -62,49 +60,42 @@ public class AlgorithmSectionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addBodyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the Body feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(modelicaPackage.Literals.ALGORITHM_SECTION__ALGORITHM);
-		}
-		return childrenFeatures;
+	protected void addBodyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Algorithm_body_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Algorithm_body_feature", "_UI_Algorithm_type"),
+				 modelicaPackage.Literals.ALGORITHM__BODY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns AlgorithmSection.gif.
+	 * This returns Algorithm.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/AlgorithmSection"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Algorithm"));
 	}
 
 	/**
@@ -115,7 +106,10 @@ public class AlgorithmSectionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_AlgorithmSection_type");
+		String label = ((Algorithm)object).getBody();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Algorithm_type") :
+			getString("_UI_Algorithm_type") + " " + label;
 	}
 	
 
@@ -130,9 +124,9 @@ public class AlgorithmSectionItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(AlgorithmSection.class)) {
-			case modelicaPackage.ALGORITHM_SECTION__ALGORITHM:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+		switch (notification.getFeatureID(Algorithm.class)) {
+			case modelicaPackage.ALGORITHM__BODY:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -148,11 +142,6 @@ public class AlgorithmSectionItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(modelicaPackage.Literals.ALGORITHM_SECTION__ALGORITHM,
-				 modelicaFactory.eINSTANCE.createAlgorithm()));
 	}
 
 	/**

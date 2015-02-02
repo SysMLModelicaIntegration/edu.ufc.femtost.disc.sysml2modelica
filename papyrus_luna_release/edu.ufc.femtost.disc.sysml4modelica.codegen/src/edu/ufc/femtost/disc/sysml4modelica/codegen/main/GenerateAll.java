@@ -61,8 +61,8 @@ public class GenerateAll {
 		this.modelURI = modelURI;
 		this.targetFolder = targetFolder;
 		this.arguments = arguments;
-		this.targetFolderPath = this.targetFolder.getLocation().addTrailingSeparator().append("code-gen");
-		this.targetFolderPathFull = this.targetFolder.getLocation().addTrailingSeparator().append("code-gen");
+		this.targetFolderPath = this.targetFolder.getLocation().addTrailingSeparator().append("modelica-code-gen");
+		this.targetFolderPathFull = this.targetFolder.getLocation().addTrailingSeparator().append("modelica-code-gen");
 	}
 
 	/**
