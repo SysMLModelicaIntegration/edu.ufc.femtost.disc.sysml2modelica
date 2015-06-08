@@ -44,10 +44,13 @@ API and implementation
       <import plugin="edu.ufc.femtost.disc.sysml4modelica.papyrus.profile" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="edu.ufc.femtost.disc.sysml4modelica.problemmetamodel" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui"/>
-      <import plugin="edu.ufc.femtost.disc.sysml4modelica.papyrus.sysml2problem" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.resources" version="3.8.100" match="greaterOrEqual"/>
       <import plugin="org.eclipse.m2m.atl.core" version="3.4.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.ecore.xmi" version="2.9.1" match="greaterOrEqual"/>
+      <import plugin="edu.ufc.femtost.disc.sysml4modelica.papyrus.sysml2problem" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.eclipse.emf.edit.ui"/>
+      <import plugin="org.eclipse.ui.ide"/>
    </requires>
 
    <plugin
@@ -94,6 +97,20 @@ API and implementation
 
    <plugin
          id="edu.ufc.femtost.disc.sysml4modelica.problemmetamodel"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.editor"
          download-size="0"
          install-size="0"
          version="0.0.0"

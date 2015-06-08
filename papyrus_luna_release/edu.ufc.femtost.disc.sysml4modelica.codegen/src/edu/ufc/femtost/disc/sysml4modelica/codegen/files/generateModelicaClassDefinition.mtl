@@ -97,7 +97,7 @@
  * The documentation of the template generateModel.
  * @param aModel
  */]
-[template public generateModelicaClassDefinition(aModelicaClassDefinition : ModelicaClassDefinition) ? (not aModelicaClassDefinition.oclIsTypeOf(Record))]
+[template public generateModelicaClassDefinition(aModelicaClassDefinition : ModelicaClassDefinition) ? (not aModelicaClassDefinition.oclIsTypeOf(Record) and not aModelicaClassDefinition.oclIsTypeOf(Enumeration))]
 [file (getPath(aModelicaClassDefinition), false, 'UTF-8')]
 within [getWithin(aModelicaClassDefinition)/];
 
@@ -118,6 +118,14 @@ within [getWithin(aModelicaClassDefinition)/];
 	[generateModelicaClassDefinition(aRecord)/] 
 [/for]
 
+[let aModelicaValueProperties : Sequence(ModelicaValueProperty) = aModelicaClassDefinition.modelicaComponents->select(c | c.oclIsTypeOf(ModelicaValueProperty))->asSequence()]
+[if (aModelicaValueProperties->exists(p | p.visibility.toString().contains('protected')))]protected
+[for (aModelicaProtectedValueProperty : ModelicaValueProperty | aModelicaValueProperties->select(p | p.visibility.toString().contains('protected')))]
+	[generateModelicaValueProperty(aModelicaProtectedValueProperty)/]
+[/for]	
+[/if]
+[/let]
+
 [if(not aModelicaClassDefinition.equationSection.oclIsUndefined())][generateEquationSection(aModelicaClassDefinition.equationSection)/][/if]
 [for(aModelicaAlgorithmSection : AlgorithmSection | aModelicaClassDefinition.algorithmSections)]
 [generateAlgorithmSection(aModelicaAlgorithmSection)/]
@@ -126,6 +134,22 @@ within [getWithin(aModelicaClassDefinition)/];
 [generateModelicaAnnotation(aModelicaAnnotation)/]
 [/for]
 end [aModelicaClassDefinition.name/];
+[/file]
+[/template]
+
+[template public generateModelicaClassDefinition(aModelicaClassDefinition : ModelicaClassDefinition) ? (aModelicaClassDefinition.oclIsTypeOf(Enumeration))]
+[file (getPath(aModelicaClassDefinition), false, 'UTF-8')]
+within [getWithin(aModelicaClassDefinition)/];
+
+/* Generated with the plugin UFC - SysML4Modelica
+[for (aModelicaComment: Comment | aModelicaClassDefinition.comments)]
+[generateComment(aModelicaComment)/]
+[/for]
+*/
+type [aModelicaClassDefinition.name/] = enumeration([for(enumLiteral : EnumerationLiteral | aModelicaClassDefinition.oclAsType(Enumeration).enumerationLiterals) separator(', ')][enumLiteral.name/][/for]);
+[for(aModelicaAnnotation : Annotation | aModelicaClassDefinition.annotations)]
+[generateModelicaAnnotation(aModelicaAnnotation)/]
+[/for]
 [/file]
 [/template]
 
@@ -181,7 +205,7 @@ end [aModelicaClassDefinition.name/];
 
 
 [template public generateModelicaComponent(aModelicaComponent : ModelicaComponent) ? (aModelicaComponent.oclIsTypeOf(ModelicaValueProperty))]
-	[generateModelicaValueProperty(aModelicaComponent.oclAsType(ModelicaValueProperty))/]
+	[if (aModelicaComponent.oclAsType(ModelicaValueProperty).visibility.toString() <> 'protected')][generateModelicaValueProperty(aModelicaComponent.oclAsType(ModelicaValueProperty))/][/if]
 [/template]
 
 [template public generateModelicaComponent(aModelicaComponent : ModelicaComponent) ? (aModelicaComponent.oclIsTypeOf(ModelicaPort))]
@@ -193,7 +217,7 @@ end [aModelicaClassDefinition.name/];
 [/template]
 
 [template public generateModelicaValueProperty(aModelicaValueProperty : ModelicaValueProperty)]
-[if(aModelicaValueProperty.visibility.toString() <> 'public')][aModelicaValueProperty.visibility.toString()/] [/if][if(aModelicaValueProperty.flowFlag.toString() <> 'none')][aModelicaValueProperty.flowFlag.toString()/] [/if][if(aModelicaValueProperty.variability.toString() <> 'continuous')][aModelicaValueProperty.variability.toString()/] [/if][if(aModelicaValueProperty.causality.toString() <> 'none')][aModelicaValueProperty.causality.toString()/] [/if][aModelicaValueProperty.type_specifier/] [aModelicaValueProperty.name/][if (not aModelicaValueProperty.arraySize->first().oclIsUndefined())][ '[' /][for(arraySize : String | aModelicaValueProperty.arraySize) separator(', ')][arraySize/][/for][ ']' /] [/if][if(not aModelicaValueProperty.modification.oclIsUndefined() and aModelicaValueProperty.modification <> '')] ([aModelicaValueProperty.modification/])[/if][if(aModelicaValueProperty.default_value <> 'null' and not aModelicaValueProperty.default_value.oclIsUndefined())] = [aModelicaValueProperty.default_value/][/if];
+[if(aModelicaValueProperty.flowFlag.toString() <> 'none')][aModelicaValueProperty.flowFlag.toString()/] [/if][if(aModelicaValueProperty.variability.toString() <> 'continuous')][aModelicaValueProperty.variability.toString()/] [/if][if(aModelicaValueProperty.causality.toString() <> 'none')][aModelicaValueProperty.causality.toString()/] [/if][aModelicaValueProperty.type_specifier/] [aModelicaValueProperty.name/][if (not aModelicaValueProperty.arraySize->first().oclIsUndefined())][ '[' /][for(arraySize : String | aModelicaValueProperty.arraySize) separator(', ')][arraySize/][/for][ ']' /] [/if][if(not aModelicaValueProperty.modification.oclIsUndefined() and aModelicaValueProperty.modification <> '')] ([aModelicaValueProperty.modification/])[/if][if(aModelicaValueProperty.default_value <> 'null' and not aModelicaValueProperty.default_value.oclIsUndefined())] = [aModelicaValueProperty.default_value/][/if];
 [/template]
 
 [template public generateModelicaPort(aModelicaPort : ModelicaPort)]

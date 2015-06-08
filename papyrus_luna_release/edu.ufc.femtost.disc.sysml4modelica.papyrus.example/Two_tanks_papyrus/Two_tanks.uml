@@ -106,7 +106,7 @@
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_MzskgCsyEeORjY0gZtrwiA" value="0.02"/>
           </ownedAttribute>
         </nestedClassifier>
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_Jj-VECrCEeO_MbbH-EGeJw" name="Tank">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_Jj-VECrCEeO_MbbH-EGeJw" name="Tank" classifierBehavior="_iV38sIBzEeSw7NT8MBnrYg">
           <ownedRule xmi:type="uml:Constraint" xmi:id="_hrJ7kCsyEeORjY0gZtrwiA" name="Constraint1">
             <ownedComment xmi:type="uml:Comment" xmi:id="_h2j6UCsyEeORjY0gZtrwiA">
               <body>assert(minV >=  0, &quot;minV - minimum Valve level must be >= 0&quot;)</body>
@@ -169,6 +169,19 @@
           <ownedAttribute xmi:type="uml:Property" xmi:id="_e1IJoCsyEeORjY0gZtrwiA" name="h">
             <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
           </ownedAttribute>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_iV38sIBzEeSw7NT8MBnrYg" name="TankStates">
+            <region xmi:type="uml:Region" xmi:id="_ijsWQIBzEeSw7NT8MBnrYg" name="Region1">
+              <transition xmi:type="uml:Transition" xmi:id="_wNs-YIFTEeSt54Xe8XLQAA" kind="local" source="_PimZMICaEeSt54Xe8XLQAA" target="_NpV-QICqEeSt54Xe8XLQAA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_5M4f4IFTEeSt54Xe8XLQAA" kind="local" source="_NpV-QICqEeSt54Xe8XLQAA" target="_iLTQEIFSEeSt54Xe8XLQAA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_5uc74IFTEeSt54Xe8XLQAA" kind="local" source="_iLTQEIFSEeSt54Xe8XLQAA" target="_NpV-QICqEeSt54Xe8XLQAA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_6UDjUIFTEeSt54Xe8XLQAA" kind="local" source="_iLTQEIFSEeSt54Xe8XLQAA" target="_maP8wIFSEeSt54Xe8XLQAA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_7w1qYIFTEeSt54Xe8XLQAA" kind="local" source="_maP8wIFSEeSt54Xe8XLQAA" target="_iLTQEIFSEeSt54Xe8XLQAA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_PimZMICaEeSt54Xe8XLQAA" name="Initial1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_NpV-QICqEeSt54Xe8XLQAA" name="Empty"/>
+              <subvertex xmi:type="uml:State" xmi:id="_iLTQEIFSEeSt54Xe8XLQAA" name="PartiallyFilled"/>
+              <subvertex xmi:type="uml:State" xmi:id="_maP8wIFSEeSt54Xe8XLQAA" name="OverFlow"/>
+            </region>
+          </ownedBehavior>
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_ReLLgCrCEeO_MbbH-EGeJw" name="TanksConnectedPI">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_0SZvsCrTEeO_MbbH-EGeJw" name="source" visibility="public" type="_DTz-kCrCEeO_MbbH-EGeJw" aggregation="composite" association="_3c4HoCrTEeO_MbbH-EGeJw">

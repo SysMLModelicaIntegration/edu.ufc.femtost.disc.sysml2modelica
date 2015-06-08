@@ -223,6 +223,11 @@ public class ModelicaModelItemProvider
 			(createChildParameter
 				(modelicaPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
 				 modelicaFactory.eINSTANCE.createType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modelicaPackage.Literals.MODELICA_MODEL__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createEnumeration()));
 	}
 
 	/**

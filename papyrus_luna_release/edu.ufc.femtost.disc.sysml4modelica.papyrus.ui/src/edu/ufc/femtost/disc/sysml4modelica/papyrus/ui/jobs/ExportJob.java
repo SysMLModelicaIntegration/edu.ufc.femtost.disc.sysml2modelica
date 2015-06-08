@@ -89,7 +89,7 @@ public class ExportJob extends Job {
 		// Compute path
 		IPath pathSelected = workFile.getLocation();
 		IPath pathToOutModel = pathSelected.removeFileExtension()
-				.addFileExtension("xmi");
+				.addFileExtension("modelica");
 		// USER put the extension of the output meta model of your
 		// transformation
 		monitor.worked(10);

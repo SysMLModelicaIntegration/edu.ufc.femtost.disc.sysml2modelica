@@ -297,7 +297,7 @@ helper context MMuml!NamedElement def: getWithinClause(): String =
 			self.owner.name
     	else 
     		if(self.owner.oclIsTypeOf(MMuml!Package)) then
-				self.owner.getWithinClause()
+				self.owner.getWithinClause().concat('/'.concat(self.owner.name))
     		else
     			self.owner.getWithinClause().concat('/'.concat(self.owner.name))
 			endif
@@ -328,17 +328,37 @@ helper def:getEventsFromLifeline(c:MMuml!Class, p:MMuml!Property, size:Integer) 
 	endif;
 
 helper def: isMaxTimeValue(value:Integer, seqDurationConstraint:Sequence(MMuml!DurationConstraint)) : Boolean = 
-	if seqDurationConstraint->select(dc | dc.specification.max.expr.value >= value).size() <> 1 then
+	if seqDurationConstraint->exists(dc | dc.specification.max.expr.value > value) then
 		false
 	else 
 		true
 	endif;
+
+helper def: getModelicaGuardIndex(constraint: MMuml!Constraint, index:Integer): Integer = 
+	if constraint.specification.language->at(index).toString() = 'Modelica' then
+		index 
+	else
+		thisModule.getModelicaGuardIndex(constraint, index + 1)
+	endif;
+
+helper def: getModelicaGuardBody(constraint:MMuml!Constraint): String = 
+	constraint.specification.body->at(thisModule.getModelicaGuardIndex(constraint, 1));
+
+helper def: getModelicaEffectIndex(ob:MMuml!OpaqueBehavior, index:Integer): Integer = 
+	if ob.language->at(index).toString() = 'Modelica' then
+		index 
+	else
+		thisModule.getModelicaEffectIndex(ob, index + 1)
+	endif;
+
+helper def: getModelicaEffectBody(ob:MMuml!OpaqueBehavior): String = 
+	ob.body->at(thisModule.getModelicaEffectIndex(ob, 1));
 ------------------------------------------------------------------------
 ---------------------------------BDD------------------------------------
 ------------------------------------------------------------------------
 rule Model2Model{
 	from sysml: MMuml!Model(
-		sysml.oclIsTypeOf(MMuml!Model)
+		sysml.oclIsTypeOf(MMuml!Model) 
 	) 
 	to  modelica_model: MMmodelica!ModelicaModel(
 		name <- sysml.name
@@ -357,6 +377,29 @@ abstract rule Block2ModelicaClassDefinition{
 		isFinal <- sysml.getIsFinal(), 
 		isPartial <- sysml.getIsPartial(), 
 		isReplaceable <- sysml.getIsReplaceable()
+	)
+}
+
+rule Package2Package1 {
+	from uml:MMuml!Package(
+		not uml.owner.oclIsTypeOf(MMuml!Package) and
+		not uml.oclIsTypeOf(MMuml!Model)
+	)	
+	to modelica: MMmodelica!Package(
+		name <- uml.name,
+		withinClause <- uml.getWithinClause(), 
+		ownerModel <- uml.getModel()
+	)
+}
+
+rule Package2Package2 {
+	from uml:MMuml!Package(
+		uml.owner.oclIsTypeOf(MMuml!Package)	
+	)	
+	to modelica: MMmodelica!Package(
+		name <- uml.name,
+		withinClause <- uml.getWithinClause(), 
+		ownerPackage <- uml.owner
 	)
 }
 
@@ -395,12 +438,12 @@ rule Block2Model extends Block2ModelicaClassDefinition{
 		sysml.isModelicaModelStereotyped()
 	)
 	to modelica: MMmodelica!Model(
-		ownerModel <- if(not thisModule.isBlockStereotyped(sysml.owner))then
+		ownerModel <- if(not thisModule.isBlockStereotyped(sysml.owner) and not sysml.owner.oclIsTypeOf(MMuml!Package))then
 							sysml.getModel()
 						else
 							OclUndefined
 						endif, 
-		ownerPackage <- if(thisModule.isBlockStereotyped(sysml.owner))then
+		ownerPackage <- if(thisModule.isBlockStereotyped(sysml.owner) or sysml.owner.oclIsTypeOf(MMuml!Package))then
 							sysml.owner
 						else
 							OclUndefined
@@ -414,16 +457,16 @@ rule Block2Block extends Block2ModelicaClassDefinition{
 		sysml.isModelicaBlockStereotyped()
 	)
 	to modelica: MMmodelica!Block(
-		ownerModel <- if(not thisModule.isBlockStereotyped(sysml.owner))then
+		ownerModel <- if(not thisModule.isBlockStereotyped(sysml.owner) and not sysml.owner.oclIsTypeOf(MMuml!Package))then
 							sysml.getModel()
 						else
 							OclUndefined
 						endif, 
-		ownerPackage <- if(thisModule.isBlockStereotyped(sysml.owner))then
+		ownerPackage <- if(thisModule.isBlockStereotyped(sysml.owner) or sysml.owner.oclIsTypeOf(MMuml!Package))then
 							sysml.owner
 						else
 							OclUndefined
-						endif	
+						endif
 	)						
 }
 
@@ -444,16 +487,41 @@ rule Block2ModelicaRecord extends Block2ModelicaClassDefinition{
 		sysml.isModelicaRecordStereotyped()
 	)
 	to modelica: MMmodelica!Record(
-		ownerModel <- if(not thisModule.isBlockStereotyped(sysml.owner))then
+		ownerModel <- if(not thisModule.isBlockStereotyped(sysml.owner) and not sysml.owner.oclIsTypeOf(MMuml!Package))then
 							sysml.getModel()
 						else
 							OclUndefined
 						endif, 
-		ownerPackage <- if(thisModule.isBlockStereotyped(sysml.owner))then
+		ownerPackage <- if(thisModule.isBlockStereotyped(sysml.owner) or sysml.owner.oclIsTypeOf(MMuml!Package))then
 							sysml.owner
 						else
 							OclUndefined
 						endif	
+	)
+}
+
+rule Enumeration2EnumerationType{
+	from sysml: MMuml!Enumeration
+	to modelica: MMmodelica!Enumeration(
+		name <- sysml.name, 
+		ownerModel <- if(not thisModule.isBlockStereotyped(sysml.owner) and not sysml.owner.oclIsTypeOf(MMuml!Package))then
+							sysml.getModel()
+						else
+							OclUndefined
+						endif, 
+		ownerPackage <- if(thisModule.isBlockStereotyped(sysml.owner) or sysml.owner.oclIsTypeOf(MMuml!Package))then
+							sysml.owner
+						else
+							OclUndefined
+						endif
+	)
+}
+
+rule EnumLiteral2EnumeLiteral{
+	from sysml: MMuml!EnumerationLiteral
+	to modelica: MMmodelica!EnumerationLiteral(
+		name <- sysml.name, 
+		enumeration <- sysml.enumeration
 	)
 }
 
@@ -468,12 +536,12 @@ rule ValueType2Type{
 		isFinal <- sysml.getIsFinal(), 
 		isPartial <- sysml.getIsPartial(), 
 		isReplaceable <- sysml.getIsReplaceable(),
-		ownerModel <- if(not thisModule.isBlockStereotyped(sysml.owner))then
+		ownerModel <- if(not thisModule.isBlockStereotyped(sysml.owner) and not sysml.owner.oclIsTypeOf(MMuml!Package))then
 							sysml.getModel()
 						else
 							OclUndefined
 						endif, 
-		ownerPackage <- if(thisModule.isBlockStereotyped(sysml.owner))then
+		ownerPackage <- if(thisModule.isBlockStereotyped(sysml.owner) or sysml.owner.oclIsTypeOf(MMuml!Package))then
 							sysml.owner
 						else
 							OclUndefined
@@ -539,11 +607,16 @@ rule Property2ModelicaValueProperty extends Property2ModelicaComponent{
 		variability <- sysml.getVariability(), 
 		flowFlag <- sysml.getFlowFlag(), 
 		scope <- sysml.getScope(), 
-		default_value <- if(sysml.getDefault() <> OclUndefined or sysml.getDefault() <> '')then
-							sysml.getDefault()
+		default_value <- if(sysml.getDefault() <> OclUndefined and sysml.getDefault() <> '')then
+							if (sysml.type.oclIsTypeOf(MMuml!Enumeration)) then
+								sysml.type.name + '.' + sysml.getDefault()
+							else
+								sysml.getDefault()
+							endif
 						else
 							'null'
 						endif, 
+		
 		type_specifier <- if(sysml.type.name='ModelicaReal')then
 							'Real'
 							else
@@ -566,7 +639,7 @@ rule Property2ModelicaValueProperty extends Property2ModelicaComponent{
 
 rule FunctionBehavior2ModelicaFunction{
 	from sysml: MMuml!FunctionBehavior(
-		thisModule.isBlockStereotyped(sysml.owner) and
+		(sysml.owner.isModelicaPackageStereotyped() or sysml.owner.oclIsTypeOf(MMuml!Package)) and
 		sysml.isModelicaFunctionStereotyped() and 
 		not MMuml!Dependency.allInstances()->exists(d | d.isModelicaDerStereotyped() and d.client->first() = sysml)
 	)
@@ -614,6 +687,11 @@ rule FunctionParameter2ModelicaParameter{
 		arraySize <- sysml.getArraySize(), 
 		variability <- sysml.getVariability(), 
 		ownerFunction <- sysml.owner, 
+		isProtected <- if (sysml.visibility <> #protected) then
+							false
+						else
+							true
+						endif,
 		type_specifier <- if(sysml.type.name='ModelicaReal')then
 							'Real'
 							else
@@ -666,9 +744,9 @@ rule Comment2Annotation{
 		body <- sysml.body.toString()
 	)
 }
-------------------------------------------------------------------------
----------------------------------IBD------------------------------------
-------------------------------------------------------------------------
+--------------------------------------------------------------------------
+-----------------------------------IBD------------------------------------
+--------------------------------------------------------------------------
 rule Property2ModelicaPort extends Property2ModelicaComponent{
 	from sysml: MMuml!Port(
 		thisModule.isFlowPortStereotyped(sysml) and
@@ -717,9 +795,9 @@ rule Property2ModelicaPart extends Property2ModelicaComponent{
 	)
 }
 
-------------------------------------------------------------------------
--------------------------ALGORITHM SECTION------------------------------
-------------------------------------------------------------------------
+--------------------------------------------------------------------------
+---------------------------ALGORITHM SECTION------------------------------
+--------------------------------------------------------------------------
 unique lazy rule Block2AlgorithmSection{
 	from sysml: MMuml!Class(
 		thisModule.isBlockStereotyped(sysml)	
@@ -739,9 +817,9 @@ rule OpaqueBehavior2Algorithm{
 		algorithmsection <- thisModule.Block2AlgorithmSection(sysml.owner)
 	)
 }
-------------------------------------------------------------------------
---------------------------EQUATION SECTION------------------------------
-------------------------------------------------------------------------
+--------------------------------------------------------------------------
+----------------------------EQUATION SECTION------------------------------
+--------------------------------------------------------------------------
 unique lazy rule Block2EquationSection{
 	from sysml: MMuml!Class(
 		thisModule.isBlockStereotyped(sysml)	
@@ -855,12 +933,22 @@ rule Constraint2ModelicaEquation{
 	)
 }
 
-------------------------------------------------------------------------
-------------------------STATEMACHINE DIAGRAM----------------------------
-------------------------------------------------------------------------
+--------------------------------------------------------------------------
+--------------------------STATEMACHINE DIAGRAM----------------------------
+--------------------------------------------------------------------------
+rule Region2AlgorithmSection{
+	from region: MMuml!Region(
+		region.namespace.oclIsTypeOf(MMuml!StateMachine)	
+	)
+	to algorithmSection: MMmodelica!AlgorithmSection(
+		ownerModelicaClassDefinition <- region.namespace.owner	
+	)
+}
+
 rule InitialState2ModelicaPart{
 	from initialState: MMuml!Pseudostate(
-		initialState.kind = #initial	
+		initialState.kind = #initial and
+		initialState.owner.oclIsTypeOf(MMuml!Region)
 	)
 	to part: MMmodelica!ModelicaPart(
 		name <- initialState.name,
@@ -868,7 +956,7 @@ rule InitialState2ModelicaPart{
 		type_specifier <- 'Boolean'
 	), 
 	whenStatement: MMmodelica!Algorithm(
-		algorithmsection <- thisModule.Block2AlgorithmSection(initialState.getStateMachine().owner), 
+		algorithmsection <- initialState.owner, --thisModule.Block2AlgorithmSection(initialState.getStateMachine().owner), 
 		body <- 'when initial() then\n'+
 				'	'+initialState.name+' := true;\n'+
 				'end when;\n'
@@ -878,7 +966,8 @@ rule State2ModelicaPart{
 	from simpleState: MMuml!State(
 		not simpleState.oclIsTypeOf(MMuml!FinalState) and
 		not simpleState.isComposite and
-		simpleState.submachine.oclIsUndefined()	
+		simpleState.submachine.oclIsUndefined()	and
+		simpleState.owner.oclIsTypeOf(MMuml!Region)
 	)
 	to part: MMmodelica!ModelicaPart(
 		name <- simpleState.name,
@@ -899,16 +988,17 @@ rule Trigger2ModelicaPart{
 rule Transition2Algorithm{
 	from sysml: MMuml!Transition(
 		sysml.kind <> #internal and
-		sysml.getStateMachine().owner.oclIsTypeOf(MMuml!Class)
+		sysml.getStateMachine().owner.oclIsTypeOf(MMuml!Class) and
+		sysml.owner.oclIsTypeOf(MMuml!Region)
 	)	
 	to whenStatement: MMmodelica!Algorithm(
-		algorithmsection <- thisModule.Block2AlgorithmSection(sysml.getStateMachine().owner),
+		algorithmsection <- sysml.owner, --thisModule.Block2AlgorithmSection(sysml.getStateMachine().owner),
 		body <- 'when pre('+sysml.source.name+')' + 
 			
 			if not sysml.guard.oclIsUndefined() then 
 				if sysml.guard.oclIsTypeOf(MMuml!Constraint) then
 					if sysml.guard.specification.language->exists(l | l.toString() = 'Modelica') then
-						' and ' + sysml.guard.specification.body->first().toString()
+						' and ' + thisModule.getModelicaGuardBody(sysml.guard)
 					else
 						''
 					endif
@@ -937,7 +1027,7 @@ rule Transition2Algorithm{
 			if not sysml.effect.oclIsUndefined() then 
 				if sysml.effect.oclIsTypeOf(MMuml!OpaqueBehavior) then
 					if sysml.effect.language->exists(l | l.toString() = 'Modelica') then
-						'	' + sysml.effect.body->first().toString()
+						'	' + thisModule.getModelicaEffectBody(sysml.effect)
 					else
 						''
 					endif
@@ -951,9 +1041,9 @@ rule Transition2Algorithm{
 	)
 }
 
-------------------------------------------------------------------------
-------------------------SEQUENCE DIAGRAM----------------------------
-------------------------------------------------------------------------
+--------------------------------------------------------------------------
+--------------------------SEQUENCE DIAGRAM----------------------------
+--------------------------------------------------------------------------
 --These rules enables simulations of test cases specified with UML 
 --sequence diagrams. Interaction is transformed into a Modelica model 
 --containing Modelica parts derived from life lines. A test case is  
@@ -985,6 +1075,15 @@ rule Transition2Algorithm{
 --	 of the plant model are resolved in function of time.
 --	-Every human interactions with physical machines can be modeled as a list of actions 
 --	 upon the time line . 
+-- 
+--Modeling constraints: 
+--	-lifeline typed by existing part
+--	-messageRecv on ActionExecutionSpecificationStart
+--	-duration constraint on messageRecv and ActionExecutionSpecificationStop
+--	-message.signature must be existing operation and this operation must be triggered by the system
+--
+--
+-- Sequence diagrams are created during the concretization of abstract test cases generated by Phoenix.
 
 
 rule Interaction2Model {
@@ -993,12 +1092,12 @@ rule Interaction2Model {
 	)
 	to modelica: MMmodelica!Model(
 		name <- uml.name, 
-		ownerModel <- if(not thisModule.isBlockStereotyped(uml.owner))then
+		ownerModel <- if(not thisModule.isBlockStereotyped(uml.owner) and not uml.owner.oclIsTypeOf(MMuml!Package))then
 							uml.getModel()
 						else
 							OclUndefined
 						endif, 
-		ownerPackage <- if(thisModule.isBlockStereotyped(uml.owner))then
+		ownerPackage <- if(thisModule.isBlockStereotyped(uml.owner) or uml.owner.oclIsTypeOf(MMuml!Package) and not uml.owner.oclIsTypeOf(MMuml!Model))then
 							uml.owner
 						else
 							OclUndefined
@@ -1073,9 +1172,9 @@ rule Message2WhenStatement{
 	)
 }
 
-------------------------------------------------------------------------
-------------------------REQUIREMENTS DIAGRAM----------------------------
-------------------------------------------------------------------------
+--------------------------------------------------------------------------
+--------------------------REQUIREMENTS DIAGRAM----------------------------
+--------------------------------------------------------------------------
 
 rule Requirement2Comment {
 	from

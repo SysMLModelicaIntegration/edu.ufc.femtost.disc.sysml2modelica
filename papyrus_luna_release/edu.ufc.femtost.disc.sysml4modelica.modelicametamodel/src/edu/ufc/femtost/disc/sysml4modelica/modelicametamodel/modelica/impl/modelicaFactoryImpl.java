@@ -11,6 +11,8 @@ import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connect;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connector;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.DerFunction;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Enumeration;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EnumerationLiteral;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Equation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause;
@@ -26,7 +28,6 @@ import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaSc
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaValueProperty;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaVariabilityKind;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Record;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.StateMachineElementType;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Type;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.VisibilityKind;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaFactory;
@@ -108,6 +109,8 @@ public class modelicaFactoryImpl extends EFactoryImpl implements modelicaFactory
 			case modelicaPackage.COMMENT: return createComment();
 			case modelicaPackage.TYPE: return createType();
 			case modelicaPackage.ALGORITHM: return createAlgorithm();
+			case modelicaPackage.ENUMERATION: return createEnumeration();
+			case modelicaPackage.ENUMERATION_LITERAL: return createEnumerationLiteral();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -387,6 +390,26 @@ public class modelicaFactoryImpl extends EFactoryImpl implements modelicaFactory
 	public Algorithm createAlgorithm() {
 		AlgorithmImpl algorithm = new AlgorithmImpl();
 		return algorithm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Enumeration createEnumeration() {
+		EnumerationImpl enumeration = new EnumerationImpl();
+		return enumeration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EnumerationLiteral createEnumerationLiteral() {
+		EnumerationLiteralImpl enumerationLiteral = new EnumerationLiteralImpl();
+		return enumerationLiteral;
 	}
 
 	/**

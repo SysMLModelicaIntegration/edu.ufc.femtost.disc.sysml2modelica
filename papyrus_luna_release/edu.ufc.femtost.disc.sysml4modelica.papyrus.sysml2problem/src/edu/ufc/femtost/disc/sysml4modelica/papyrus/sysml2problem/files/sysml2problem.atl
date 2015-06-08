@@ -239,6 +239,7 @@ rule Constraints_3_CLASS_MODEL {
 		) and
 		not sysml.isModelicaFunctionStereotyped() and
 		not sysml.isModelicaAlgorithmStereotyped() and
+		not sysml.oclIsTypeOf(MMuml!StateMachine) and
 		sysml.isNamed()
 	)
 	to problem: MMproblem!Problem(
@@ -257,7 +258,8 @@ rule Constraints_4_CLASS_MODEL {
 				
 		) and 
 		sysml.isNamed() and
-		not sysml.owner.isModelicaClassDefinitionStereotyped()
+		not sysml.owner.isModelicaClassDefinitionStereotyped() and 
+		not sysml.owner.oclIsTypeOf(MMuml!Package)
 	)
 	to problem: MMproblem!Problem(
 		description <- 'The modelicaModel/modelicaClass ' + sysml.name + ' can only be contained in a modelicaClassDefinition.', 

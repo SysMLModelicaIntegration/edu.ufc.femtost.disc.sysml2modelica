@@ -11,6 +11,8 @@ import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connect;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connector;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ConstrainedByClause;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.DerFunction;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Enumeration;
+import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EnumerationLiteral;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Equation;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EquationSection;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause;
@@ -249,6 +251,20 @@ public class modelicaSwitch<T> extends Switch<T> {
 			case modelicaPackage.ALGORITHM: {
 				Algorithm algorithm = (Algorithm)theEObject;
 				T result = caseAlgorithm(algorithm);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case modelicaPackage.ENUMERATION: {
+				Enumeration enumeration = (Enumeration)theEObject;
+				T result = caseEnumeration(enumeration);
+				if (result == null) result = caseType(enumeration);
+				if (result == null) result = caseModelicaClassDefinition(enumeration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case modelicaPackage.ENUMERATION_LITERAL: {
+				EnumerationLiteral enumerationLiteral = (EnumerationLiteral)theEObject;
+				T result = caseEnumerationLiteral(enumerationLiteral);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -628,6 +644,36 @@ public class modelicaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAlgorithm(Algorithm object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Enumeration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Enumeration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEnumeration(Enumeration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Enumeration Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Enumeration Literal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEnumerationLiteral(EnumerationLiteral object) {
 		return null;
 	}
 

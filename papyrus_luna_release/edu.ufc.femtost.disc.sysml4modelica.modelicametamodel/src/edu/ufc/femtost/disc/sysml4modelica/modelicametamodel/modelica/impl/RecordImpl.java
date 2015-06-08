@@ -4,7 +4,6 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl;
 
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaClassDefinition;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Record;
-import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.StateMachineElementType;
 import edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage;
 
 import org.eclipse.emf.common.notify.Notification;

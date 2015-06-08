@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider.ModelicaEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.provider
 Require-Bundle: org.eclipse.core.runtime,
  edu.ufc.femtost.disc.sysml4modelica.modelicametamodel;visibility:=reexport,

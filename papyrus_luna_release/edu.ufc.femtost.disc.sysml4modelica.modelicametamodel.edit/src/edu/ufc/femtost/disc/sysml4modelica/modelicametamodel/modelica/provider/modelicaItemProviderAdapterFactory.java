@@ -601,6 +601,52 @@ public class modelicaItemProviderAdapterFactory extends modelicaAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Enumeration} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EnumerationItemProvider enumerationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Enumeration}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEnumerationAdapter() {
+		if (enumerationItemProvider == null) {
+			enumerationItemProvider = new EnumerationItemProvider(this);
+		}
+
+		return enumerationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EnumerationLiteral} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EnumerationLiteralItemProvider enumerationLiteralItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.EnumerationLiteral}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEnumerationLiteralAdapter() {
+		if (enumerationLiteralItemProvider == null) {
+			enumerationLiteralItemProvider = new EnumerationLiteralItemProvider(this);
+		}
+
+		return enumerationLiteralItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -722,6 +768,8 @@ public class modelicaItemProviderAdapterFactory extends modelicaAdapterFactory i
 		if (commentItemProvider != null) commentItemProvider.dispose();
 		if (typeItemProvider != null) typeItemProvider.dispose();
 		if (algorithmItemProvider != null) algorithmItemProvider.dispose();
+		if (enumerationItemProvider != null) enumerationItemProvider.dispose();
+		if (enumerationLiteralItemProvider != null) enumerationLiteralItemProvider.dispose();
 	}
 
 }

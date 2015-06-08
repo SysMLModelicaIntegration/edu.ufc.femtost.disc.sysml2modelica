@@ -24,10 +24,10 @@
     <windows>
       <children xsi:type="di:TabFolder">
         <children>
-          <emfPageIdentifier href="Two_tanks.notation#_kAsQ0CqIEeOAKMp9jIGVCg"/>
+          <emfPageIdentifier href="Two_tanks.notation#_N486IM96EeOjeMaviPd-Tw"/>
         </children>
         <children>
-          <emfPageIdentifier href="Two_tanks.notation#_waHroCqIEeOAKMp9jIGVCg"/>
+          <emfPageIdentifier href="Two_tanks.notation#_kAsQ0CqIEeOAKMp9jIGVCg"/>
         </children>
         <children>
           <emfPageIdentifier href="Two_tanks.notation#_kyWc0CrAEeO_MbbH-EGeJw"/>
@@ -39,7 +39,7 @@
           <emfPageIdentifier href="Two_tanks.notation#_dEJq8CrUEeO_MbbH-EGeJw"/>
         </children>
         <children>
-          <emfPageIdentifier href="Two_tanks.notation#_N486IM96EeOjeMaviPd-Tw"/>
+          <emfPageIdentifier href="Two_tanks.notation#_ijzD8IBzEeSw7NT8MBnrYg"/>
         </children>
       </children>
     </windows>

@@ -95,7 +95,7 @@ public class GenerateJob extends Job{
 		monitor.beginTask("Generating Modelica", 100);
 		IPath pathSelected = workFile.getLocation();
 		this.pathToOutModel = pathSelected.removeFileExtension()
-				.addFileExtension("xmi");
+				.addFileExtension("modelica");
 		// USER put the extension of the output meta model of your
 		// transformation
 		monitor.worked(10);
@@ -114,7 +114,7 @@ public class GenerateJob extends Job{
 		List<String> arguments = new ArrayList<String>();
 		IContainer target = workFile.getParent();
 		URI modelURI = URI.createPlatformResourceURI(workFile.getFullPath()
-				.removeFileExtension().addFileExtension("xmi").toString(),
+				.removeFileExtension().addFileExtension("modelica").toString(),
 				true);
 		monitor.worked(10);
 		generator = new GenerateAll(modelURI, target, arguments);

@@ -176,5 +176,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//Algorithm/body"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference modelica.ecore#//Algorithm/algorithmsection"/>
     </genClasses>
+    <genClasses ecoreClass="modelica.ecore#//Enumeration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modelica.ecore#//Enumeration/enumerationLiterals"/>
+    </genClasses>
+    <genClasses ecoreClass="modelica.ecore#//EnumerationLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modelica.ecore#//EnumerationLiteral/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference modelica.ecore#//EnumerationLiteral/enumeration"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

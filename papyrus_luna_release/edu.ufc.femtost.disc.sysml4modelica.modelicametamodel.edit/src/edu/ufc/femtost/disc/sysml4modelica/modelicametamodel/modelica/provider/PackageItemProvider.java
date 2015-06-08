@@ -207,6 +207,11 @@ public class PackageItemProvider extends ModelicaClassDefinitionItemProvider {
 			(createChildParameter
 				(modelicaPackage.Literals.PACKAGE__MODELICA_CLASSES,
 				 modelicaFactory.eINSTANCE.createType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modelicaPackage.Literals.PACKAGE__MODELICA_CLASSES,
+				 modelicaFactory.eINSTANCE.createEnumeration()));
 	}
 
 	/**
