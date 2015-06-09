@@ -10,7 +10,7 @@ Implementation of the SysML-Modelica Transformation Specification Version 1.0 No
 1. Download and install Eclipse Luna MDT
 2. From help->install modeling component : install ATL, Acceleo and Papyrus
 3. Get the source code from the Git
-4. Install the SysML4Modelica plugin from the update site (papyrus_luna_release folder)
-5. Import the example edu.ufc.femtost.disc.sysml4modelica.papyrus.example from the papyrus_luna_release folder
+4. Install the SysML4Modelica plugin from the update site project edu.ufc.femtost.disc.sysml4modelica.papyrus.updatesite 
+5. Import the example edu.ufc.femtost.disc.sysml4modelica.papyrus.example
 7. Right click on the Two_tanks.uml file -> SysML4Modelica -> Generate Modelica code	
 	
