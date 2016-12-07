@@ -3,41 +3,6 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated sysml4modelica -->
-      <package
-            uri="http://www.femto-st.fr/disc/SysML4Modelica/Classes"
-            class="edu.ufc.femtost.disc.sysml4modelica.profile.classes.ClassesPackage"
-            genModel="profile/SysML4Modelica.profile.genmodel"/>
-   </extension>
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated sysml4modelica -->
-      <package
-            uri="http://www.femto-st.fr/disc/SysML4Modelica/Types"
-            class="edu.ufc.femtost.disc.sysml4modelica.profile.types.TypesPackage"
-            genModel="profile/SysML4Modelica.profile.genmodel"/>
-   </extension>
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated sysml4modelica -->
-      <package
-            uri="http://www.femto-st.fr/disc/SysML4Modelica/Components"
-            class="edu.ufc.femtost.disc.sysml4modelica.profile.components.ComponentsPackage"
-            genModel="profile/SysML4Modelica.profile.genmodel"/>
-   </extension>
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated sysml4modelica -->
-      <package
-            uri="http://www.femto-st.fr/disc/SysML4Modelica/EquationsAndAlgorithms"
-            class="edu.ufc.femtost.disc.sysml4modelica.profile.equationsandalgorithms.EquationsandalgorithmsPackage"
-            genModel="profile/SysML4Modelica.profile.genmodel"/>
-   </extension>
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated sysml4modelica -->
-      <package
-            uri="http://www.femto-st.fr/disc/SysML4Modelica/Other"
-            class="edu.ufc.femtost.disc.sysml4modelica.profile.other.OtherPackage"
-            genModel="profile/SysML4Modelica.profile.genmodel"/>
-   </extension>
-   <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated SysML4Modelica.profile -->
       <package
             uri="http://www.femto-st.fr/disc/SysML4Modelica"
