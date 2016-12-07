@@ -27,12 +27,12 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.problem.impl.ProblemImpl#getLocation <em>Location</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.problem.impl.ProblemImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.problem.impl.ProblemImpl#getSeverity <em>Severity</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

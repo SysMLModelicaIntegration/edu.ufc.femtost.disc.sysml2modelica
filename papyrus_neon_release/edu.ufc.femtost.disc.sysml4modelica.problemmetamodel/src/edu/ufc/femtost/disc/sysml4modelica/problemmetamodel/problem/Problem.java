@@ -19,12 +19,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.problem.Problem#getLocation <em>Location</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.problem.Problem#getDescription <em>Description</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.problem.Problem#getSeverity <em>Severity</em>}</li>
  * </ul>
- * </p>
  *
  * @see edu.ufc.femtost.disc.sysml4modelica.problemmetamodel.problem.problemPackage#getProblem()
  * @model

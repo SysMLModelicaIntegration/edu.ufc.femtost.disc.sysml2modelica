@@ -36,7 +36,7 @@ public class problemFactoryImpl extends EFactoryImpl implements problemFactory {
 	 */
 	public static problemFactory init() {
 		try {
-			problemFactory theproblemFactory = (problemFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.femto-st.fr/disc/problem"); 
+			problemFactory theproblemFactory = (problemFactory)EPackage.Registry.INSTANCE.getEFactory(problemPackage.eNS_URI);
 			if (theproblemFactory != null) {
 				return theproblemFactory;
 			}
