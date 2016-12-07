@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sysml4modelica" nsURI="http://www.femto-st.fr/disc/SysML4Modelica"
+    nsPrefix="SysML4Modelica">
+  <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <details key="originalName" value="SysML4Modelica"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EDataType" name="Dummy" instanceClassName="java.lang.String"/>
+  <eSubpackages name="classes" nsURI="http://www.femto-st.fr/disc/SysML4Modelica/Classes"
+      nsPrefix="Classes">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="Classes"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaClassDefinition" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Classifier" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isFinal" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"
+          volatile="true" transient="true" defaultValueLiteral="false" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPartial" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"
+          volatile="true" transient="true" defaultValueLiteral="false" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isModelicaEncapsulated"
+          ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"
+          defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isReplaceable" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaClass" eSuperTypes="#//classes/ModelicaClassDefinition ../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaModel" eSuperTypes="#//classes/ModelicaClassDefinition ../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaBlock" eSuperTypes="#//classes/ModelicaClassDefinition ../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaRecord" eSuperTypes="#//classes/ModelicaClassDefinition ../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaOperator" eSuperTypes="#//classes/ModelicaClassDefinition ../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaConnector" eSuperTypes="#//classes/ModelicaClassDefinition ../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isExpandable" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaPackage" eSuperTypes="#//classes/ModelicaClassDefinition ../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaType" eSuperTypes="#//classes/ModelicaClassDefinition ../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/ValueType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaFunction" eSuperTypes="#//classes/ModelicaClassDefinition">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_FunctionBehavior"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//FunctionBehavior"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="scope" ordered="false"
+          lowerBound="1" eType="#//types/ModelicaScopeKind" defaultValueLiteral="none"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="externalLibrary" ordered="false"
+          eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="externalInclude" ordered="false"
+          eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaExtends">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="modification" ordered="false"
+          upperBound="-1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Generalization"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" ordered="false"
+          lowerBound="1" eType="ecore:EEnum ../../org.eclipse.uml2.uml/model/UML.ecore#//VisibilityKind"
+          defaultValueLiteral="public"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="arraySize" upperBound="-1"
+          eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaConstrainedBy">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="modification" ordered="false"
+          upperBound="-1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Dependency" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Dependency"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaDer">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="variable" ordered="false"
+          lowerBound="1" upperBound="-1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Dependency" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Dependency"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="types" nsURI="http://www.femto-st.fr/disc/SysML4Modelica/Types"
+      nsPrefix="Types">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="Types"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EEnum" name="ModelicaFlowFlagKind">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Modelica Spec 3.1, &#xD;&#xA;Chapter 15"/>
+      </eAnnotations>
+      <eLiterals name="none"/>
+      <eLiterals name="flow" value="1"/>
+      <eLiterals name="stream" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ModelicaCausalityKind">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Modelica Spec 3.1,&#xD;&#xA;Section 4.4.2.2"/>
+      </eAnnotations>
+      <eLiterals name="none"/>
+      <eLiterals name="input" value="1"/>
+      <eLiterals name="output" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ModelicaVariabilityKind">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Modelica Spec 3.1, &#xD;&#xA;Section 4.4.4"/>
+      </eAnnotations>
+      <eLiterals name="continuous"/>
+      <eLiterals name="constant" value="1"/>
+      <eLiterals name="parameter" value="2"/>
+      <eLiterals name="discrete" value="3"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ModelicaStateSelect">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Modelica Spec 3.1, &#xD;&#xA;Section 4.8.7.1"/>
+      </eAnnotations>
+      <eLiterals name="always"/>
+      <eLiterals name="never" value="1"/>
+      <eLiterals name="prefer" value="2"/>
+      <eLiterals name="avoid" value="3"/>
+      <eLiterals name="default" value="4"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ModelicaScopeKind">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Modelica Spec 3.1, &#xD;&#xA;Section 5.4"/>
+      </eAnnotations>
+      <eLiterals name="none"/>
+      <eLiterals name="inner" value="1"/>
+      <eLiterals name="outer" value="2"/>
+      <eLiterals name="innerOuter" value="3"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="components" nsURI="http://www.femto-st.fr/disc/SysML4Modelica/Components"
+      nsPrefix="Components">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="Components"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaValueProperty">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="causality" ordered="false"
+          lowerBound="1" eType="#//types/ModelicaCausalityKind" defaultValueLiteral="none"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="variability" ordered="false"
+          lowerBound="1" eType="#//types/ModelicaVariabilityKind" defaultValueLiteral="continuous"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="flowFlag" ordered="false"
+          lowerBound="1" eType="#//types/ModelicaFlowFlagKind" defaultValueLiteral="none"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="scope" ordered="false"
+          lowerBound="1" eType="#//types/ModelicaScopeKind" defaultValueLiteral="none"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isFinal" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"
+          volatile="true" transient="true" defaultValueLiteral="false" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="conditionalExpression"
+          ordered="false" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="modification" ordered="false"
+          upperBound="-1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isReplaceable" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"
+          defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="declarationEquation"
+          ordered="false" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="arraySize" upperBound="-1"
+          eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Property" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaPart">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="arraySize" upperBound="-1"
+          eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="scope" ordered="false"
+          lowerBound="1" eType="#//types/ModelicaScopeKind" defaultValueLiteral="none"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="modification" ordered="false"
+          upperBound="-1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isReplaceable" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"
+          defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="conditionalExpression"
+          ordered="false" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isFinal" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"
+          volatile="true" transient="true" defaultValueLiteral="false" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Property" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaPort">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isReplaceable" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"
+          defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="conditionalExpression"
+          ordered="false" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="modification" ordered="false"
+          upperBound="-1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="arraySize" upperBound="-1"
+          eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="causality" ordered="false"
+          lowerBound="1" eType="#//types/ModelicaCausalityKind" defaultValueLiteral="none"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isFinal" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"
+          volatile="true" transient="true" defaultValueLiteral="false" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Port" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Port"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaFunctionParameter">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Parameter" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="declarationEquation"
+          ordered="false" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isReplaceable" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"
+          defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="variability" ordered="false"
+          lowerBound="1" eType="#//types/ModelicaVariabilityKind" defaultValueLiteral="continuous"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="causality" ordered="false"
+          lowerBound="1" eType="#//types/ModelicaCausalityKind" defaultValueLiteral="input"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isFinal" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"
+          volatile="true" transient="true" defaultValueLiteral="false" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="modification" ordered="false"
+          upperBound="-1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="arraySize" upperBound="-1"
+          eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="equationsandalgorithms" nsURI="http://www.femto-st.fr/disc/SysML4Modelica/EquationsAndAlgorithms"
+      nsPrefix="EquationsAndAlgorithms">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="EquationsAndAlgorithms"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaEquation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInitial" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"
+          defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Constraint" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Constraint"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaAlgorithm">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInitial" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"
+          defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Behavior" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Behavior"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaConnection">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Connector" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Connector"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="other" nsURI="http://www.femto-st.fr/disc/SysML4Modelica/Other"
+      nsPrefix="Other">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="Other"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaAnnotation">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Comment" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Comment"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelicaSimulation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTime" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"
+          defaultValueLiteral="0.0"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopTime" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"
+          defaultValueLiteral="1.0"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="model" ordered="false"
+          lowerBound="1" eType="#//classes/ModelicaModel"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>
