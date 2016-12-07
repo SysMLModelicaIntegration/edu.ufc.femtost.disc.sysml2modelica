@@ -6,7 +6,6 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: edu.ufc.femtost.disc.sysml4modelica.papyrus.sysml2modelica.Activator
 Bundle-Vendor: Eclipse Modeling Project
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.papyrus.sysml,
  org.eclipse.uml2.uml,
  org.eclipse.m2m.atl.engine.emfvm,
  edu.ufc.femtost.disc.sysml4modelica.modelicametamodel;bundle-version="1.0.0",

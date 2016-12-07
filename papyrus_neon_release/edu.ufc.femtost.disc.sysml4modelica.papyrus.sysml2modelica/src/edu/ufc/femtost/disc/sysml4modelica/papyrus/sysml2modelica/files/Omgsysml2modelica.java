@@ -112,6 +112,7 @@ public class Omgsysml2modelica {
 		properties = new Properties();
 		properties.load(getFileURL("Omgsysml2modelica.properties").openStream());
 		EPackage.Registry.INSTANCE.put(getMetamodelUri("MMuml"), org.eclipse.uml2.uml.UMLPackage.eINSTANCE);
+		EPackage.Registry.INSTANCE.put(getMetamodelUri("MMsysml"), org.eclipse.papyrus.sysml14.sysmlPackage.eINSTANCE);
 		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl());
 	}
 	

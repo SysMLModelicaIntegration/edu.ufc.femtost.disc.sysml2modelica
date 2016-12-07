@@ -155,6 +155,7 @@ public class Sysml2problem {
 		properties = new Properties();
 		properties.load(getFileURL("Sysml2problem.properties").openStream());
 		EPackage.Registry.INSTANCE.put(getMetamodelUri("MMuml"), org.eclipse.uml2.uml.UMLPackage.eINSTANCE);
+		EPackage.Registry.INSTANCE.put(getMetamodelUri("MMsysml"), org.eclipse.papyrus.sysml14.sysmlPackage.eINSTANCE);
 		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl());
 	}
 	
