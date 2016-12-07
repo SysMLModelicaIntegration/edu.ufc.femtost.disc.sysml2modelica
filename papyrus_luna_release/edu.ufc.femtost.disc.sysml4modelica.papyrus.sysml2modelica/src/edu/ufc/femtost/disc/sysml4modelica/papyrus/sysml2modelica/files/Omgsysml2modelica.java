@@ -111,10 +111,7 @@ public class Omgsysml2modelica {
 	public Omgsysml2modelica() throws IOException {
 		properties = new Properties();
 		properties.load(getFileURL("Omgsysml2modelica.properties").openStream());
-		EPackage.Registry.INSTANCE.put(getMetamodelUri("MMmodelica"), edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage.eINSTANCE);
-		EPackage.Registry.INSTANCE.put(getMetamodelUri("MMsysml"), org.eclipse.papyrus.sysml.SysmlPackage.eINSTANCE);
 		EPackage.Registry.INSTANCE.put(getMetamodelUri("MMuml"), org.eclipse.uml2.uml.UMLPackage.eINSTANCE);
-		EPackage.Registry.INSTANCE.put(getMetamodelUri("MMmodelicaProfile"), edu.ufc.femtost.disc.sysml4modelica.profile.sysml4modelica.Sysml4modelicaPackage.eINSTANCE);
 		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl());
 	}
 	
@@ -135,14 +132,14 @@ public class Omgsysml2modelica {
 	public void loadModels(String inumlModelPath, String insysmlModelPath, String inmodelicaprofileModelPath) throws ATLCoreException {
 		ModelFactory factory = new EMFModelFactory();
 		IInjector injector = new EMFInjector();
-	 	IReferenceModel mmmodelicaMetamodel = factory.newReferenceModel();
-		injector.inject(mmmodelicaMetamodel, getMetamodelUri("MMmodelica"));
-	 	IReferenceModel mmsysmlMetamodel = factory.newReferenceModel();
-		injector.inject(mmsysmlMetamodel, getMetamodelUri("MMsysml"));
 	 	IReferenceModel mmumlMetamodel = factory.newReferenceModel();
 		injector.inject(mmumlMetamodel, getMetamodelUri("MMuml"));
 	 	IReferenceModel mmmodelicaprofileMetamodel = factory.newReferenceModel();
 		injector.inject(mmmodelicaprofileMetamodel, getMetamodelUri("MMmodelicaProfile"));
+	 	IReferenceModel mmmodelicaMetamodel = factory.newReferenceModel();
+		injector.inject(mmmodelicaMetamodel, getMetamodelUri("MMmodelica"));
+	 	IReferenceModel mmsysmlMetamodel = factory.newReferenceModel();
+		injector.inject(mmsysmlMetamodel, getMetamodelUri("MMsysml"));
 		this.inumlModel = factory.newModel(mmumlMetamodel);
 		injector.inject(inumlModel, inumlModelPath);
 		this.insysmlModel = factory.newModel(mmsysmlMetamodel);

@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:Classes="http://www.femto-st.fr/disc/SysML4Modelica/Classes" xmlns:Components="http://www.femto-st.fr/disc/SysML4Modelica/Components" xmlns:EquationsAndAlgorithms="http://www.femto-st.fr/disc/SysML4Modelica/EquationsAndAlgorithms" xmlns:PortAndFlows="http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows" xmlns:Requirements="http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://www.femto-st.fr/disc/SysML4Modelica/Classes http://www.femto-st.fr/disc/SysML4Modelica#//classes http://www.femto-st.fr/disc/SysML4Modelica/Components http://www.femto-st.fr/disc/SysML4Modelica#//components http://www.femto-st.fr/disc/SysML4Modelica/EquationsAndAlgorithms http://www.femto-st.fr/disc/SysML4Modelica#//equationsandalgorithms http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements http://www.eclipse.org/papyrus/0.7.0/SysML#//requirements">
+  <uml:Model xmi:id="_ifaEQCqIEeOAKMp9jIGVCg" name="Two_tanks">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_z-lWcCrAEeO_MbbH-EGeJw">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_73GR4CmvEeOqNeVB2HB3cA"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pg4i8CqIEeOAKMp9jIGVCg" name="Design">
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_xnIRUCqIEeOAKMp9jIGVCg" name="Interface">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_lf6GYCrAEeO_MbbH-EGeJw" name="ActSignal">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_tNKtACrAEeO_MbbH-EGeJw" name="act">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+          </ownedAttribute>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_9kp40CrAEeO_MbbH-EGeJw" name="ReadSignal">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_CsBbQCrBEeO_MbbH-EGeJw" name="val">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+          </ownedAttribute>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_FWnZQCrBEeO_MbbH-EGeJw" name="LiquidFlow">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Omr2cCrBEeO_MbbH-EGeJw" name="lflow">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+          </ownedAttribute>
+        </nestedClassifier>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_3qdswCqIEeOAKMp9jIGVCg" name="Components">
+        <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_fJ1Y4CszEeORjY0gZtrwiA" name="limitValue">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_tv-i4CszEeORjY0gZtrwiA" name="pMin">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rn5moCs0EeORjMAZExQRfQ" name="pMax">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-2osYCs0EeORjMAZExQRfQ" name="p">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_IRv78Cs1EeORjMAZExQRfQ" name="pLim">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+          </ownedParameter>
+          <language>Modelica</language>
+          <body>pLim:=if p > pMax then pMax else if p &lt; pMin then pMin else p;</body>
+        </ownedBehavior>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_pvB8wCrBEeO_MbbH-EGeJw" name="BaseController" isAbstract="true">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_hlLrUCrCEeO_MbbH-EGeJw" name="Constraint1">
+            <specification xmi:type="uml:LiteralString" xmi:id="_kDLXwCrCEeO_MbbH-EGeJw" name="constraintSpec" value="error = ref - cIn.val"/>
+          </ownedRule>
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_4dta4CrFEeO_MbbH-EGeJw" name="Constraint2">
+            <specification xmi:type="uml:LiteralString" xmi:id="_4d95kCrFEeO_MbbH-EGeJw" name="constraintSpec" value="cOut.act = outCtr"/>
+          </ownedRule>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_a0RYMCrCEeO_MbbH-EGeJw" name="K">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_lgKBMCrEEeO_MbbH-EGeJw" value="2.0"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_boIeJCrCEeO_MbbH-EGeJw" name="T">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_pm1isCrEEeO_MbbH-EGeJw" name="" value="10.0"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_cljIkCrCEeO_MbbH-EGeJw" name="ref">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_emu9MCrCEeO_MbbH-EGeJw" name="error">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_fmvBoCrCEeO_MbbH-EGeJw" name="outCtr">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+          </ownedAttribute>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_0A0VoCrBEeO_MbbH-EGeJw" name="Controller">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_cSjEUCrTEeO_MbbH-EGeJw" name="Constraint1">
+            <specification xmi:type="uml:LiteralString" xmi:id="_dxbdICrTEeO_MbbH-EGeJw" name="constraintSpec" value="der(x) = error / T"/>
+          </ownedRule>
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_nb4wQCrTEeO_MbbH-EGeJw" name="Constraint2">
+            <specification xmi:type="uml:LiteralString" xmi:id="_oGiPwCrTEeO_MbbH-EGeJw" name="constraintSpec" value="outCtr = K * (error + x)"/>
+          </ownedRule>
+          <generalization xmi:type="uml:Generalization" xmi:id="_9aNt8CrBEeO_MbbH-EGeJw" general="_pvB8wCrBEeO_MbbH-EGeJw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_WlKqwCrTEeO_MbbH-EGeJw" name="x">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_nuDzcCrVEeO_MbbH-EGeJw" name="cOut" visibility="public" type="_lf6GYCrAEeO_MbbH-EGeJw" aggregation="composite">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_o7Lt4CrVEeO_MbbH-EGeJw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_o7cMkCrVEeO_MbbH-EGeJw" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_o8EesCrVEeO_MbbH-EGeJw">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_BIVOYCrWEeO_MbbH-EGeJw" name="cIn" visibility="public" type="_9kp40CrAEeO_MbbH-EGeJw" aggregation="composite">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CQH84CrWEeO_MbbH-EGeJw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CQXNcCrWEeO_MbbH-EGeJw" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_CQ9DUCrWEeO_MbbH-EGeJw">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_DTz-kCrCEeO_MbbH-EGeJw" name="LiquidSource">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_Slb5oCsyEeORjY0gZtrwiA" name="Constraint1">
+            <specification xmi:type="uml:LiteralString" xmi:id="_UjtkMCsyEeORjY0gZtrwiA" name="constraintSpec" value="qOut.lflow = if time > 150 then 3 * flowLevel else flowLevel"/>
+          </ownedRule>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_DU3CQCrUEeO_MbbH-EGeJw" name="qOut" visibility="public" type="_FWnZQCrBEeO_MbbH-EGeJw" aggregation="composite">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D4f60CrUEeO_MbbH-EGeJw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D4vLYCrUEeO_MbbH-EGeJw" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_D5SlACrUEeO_MbbH-EGeJw">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_FZdAgCsyEeORjY0gZtrwiA" name="flowLevel">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_MzskgCsyEeORjY0gZtrwiA" value="0.02"/>
+          </ownedAttribute>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_Jj-VECrCEeO_MbbH-EGeJw" name="Tank" classifierBehavior="_iV38sIBzEeSw7NT8MBnrYg">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_hrJ7kCsyEeORjY0gZtrwiA" name="Constraint1">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_h2j6UCsyEeORjY0gZtrwiA">
+              <body>assert(minV >=  0, &quot;minV - minimum Valve level must be >= 0&quot;)</body>
+            </ownedComment>
+            <specification xmi:type="uml:LiteralString" xmi:id="_iFxbACsyEeORjY0gZtrwiA" name="constraintSpec" value="assert(minV >=  0, &quot;minV - minimum Valve level must be >= 0&quot;)"/>
+          </ownedRule>
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_lfKYsCsyEeORjY0gZtrwiA" name="Constraint2">
+            <specification xmi:type="uml:LiteralString" xmi:id="_l4jJECsyEeORjY0gZtrwiA" name="constraintSpec" value="der(h) = (qIn.lflow - qOut.lflow) / area"/>
+          </ownedRule>
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_nVK4ECsyEeORjY0gZtrwiA" name="Constraint3">
+            <specification xmi:type="uml:LiteralString" xmi:id="_nrJIECsyEeORjY0gZtrwiA" name="constraintSpec" value="qOut.lflow = limitValue(minV, maxV, -flowGain * tActuator.act)"/>
+          </ownedRule>
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_o5NdsCsyEeORjY0gZtrwiA" name="Constraint4">
+            <specification xmi:type="uml:LiteralString" xmi:id="_pLv_MCsyEeORjY0gZtrwiA" name="constraintSpec" value="tSensor.val = h"/>
+          </ownedRule>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_yFsLECrUEeO_MbbH-EGeJw" name="qIn" visibility="public" type="_FWnZQCrBEeO_MbbH-EGeJw" aggregation="composite">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zafa0CrUEeO_MbbH-EGeJw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zavScCrUEeO_MbbH-EGeJw" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_zban4CrUEeO_MbbH-EGeJw">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_EClOcCrVEeO_MbbH-EGeJw" name="tActuator" visibility="public" type="_lf6GYCrAEeO_MbbH-EGeJw" aggregation="composite">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Fhjt4CrVEeO_MbbH-EGeJw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Fhy-cCrVEeO_MbbH-EGeJw" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_FiZbYCrVEeO_MbbH-EGeJw">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_MaoegCrVEeO_MbbH-EGeJw" name="tSensor" visibility="public" type="_9kp40CrAEeO_MbbH-EGeJw" aggregation="composite">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PVd38CrVEeO_MbbH-EGeJw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PVuWoCrVEeO_MbbH-EGeJw" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_PWXP0CrVEeO_MbbH-EGeJw">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_T51bACrVEeO_MbbH-EGeJw" name="qOut" visibility="public" type="_FWnZQCrBEeO_MbbH-EGeJw" aggregation="composite">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VLcM0CrVEeO_MbbH-EGeJw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VLzZMCrVEeO_MbbH-EGeJw" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_VMbEQCrVEeO_MbbH-EGeJw">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Zs0zECsyEeORjY0gZtrwiA" name="area">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_xbOiECsyEeORjY0gZtrwiA" value="0.5"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_agV6sCsyEeORjY0gZtrwiA" name="flowGain">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_9sZ_0CsyEeORjY0gZtrwiA" value="0.05"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_cERLkCsyEeORjY0gZtrwiA" name="minV">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_Gqmp4CszEeORjY0gZtrwiA" value="0.0"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_dUvU8CsyEeORjY0gZtrwiA" name="maxV">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_MSxzUCszEeORjY0gZtrwiA" value="10.0"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_e1IJoCsyEeORjY0gZtrwiA" name="h">
+            <type xmi:type="uml:DataType" href="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml#_BwlE8O2IEeOP6pHABlJMzA"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_iV38sIBzEeSw7NT8MBnrYg" name="TankStates">
+            <region xmi:type="uml:Region" xmi:id="_ijsWQIBzEeSw7NT8MBnrYg" name="Region1">
+              <transition xmi:type="uml:Transition" xmi:id="_wNs-YIFTEeSt54Xe8XLQAA" kind="local" source="_PimZMICaEeSt54Xe8XLQAA" target="_NpV-QICqEeSt54Xe8XLQAA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_5M4f4IFTEeSt54Xe8XLQAA" kind="local" source="_NpV-QICqEeSt54Xe8XLQAA" target="_iLTQEIFSEeSt54Xe8XLQAA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_5uc74IFTEeSt54Xe8XLQAA" kind="local" source="_iLTQEIFSEeSt54Xe8XLQAA" target="_NpV-QICqEeSt54Xe8XLQAA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_6UDjUIFTEeSt54Xe8XLQAA" kind="local" source="_iLTQEIFSEeSt54Xe8XLQAA" target="_maP8wIFSEeSt54Xe8XLQAA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_7w1qYIFTEeSt54Xe8XLQAA" kind="local" source="_maP8wIFSEeSt54Xe8XLQAA" target="_iLTQEIFSEeSt54Xe8XLQAA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_PimZMICaEeSt54Xe8XLQAA" name="Initial1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_NpV-QICqEeSt54Xe8XLQAA" name="Empty"/>
+              <subvertex xmi:type="uml:State" xmi:id="_iLTQEIFSEeSt54Xe8XLQAA" name="PartiallyFilled"/>
+              <subvertex xmi:type="uml:State" xmi:id="_maP8wIFSEeSt54Xe8XLQAA" name="OverFlow"/>
+            </region>
+          </ownedBehavior>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_ReLLgCrCEeO_MbbH-EGeJw" name="TanksConnectedPI">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_0SZvsCrTEeO_MbbH-EGeJw" name="source" visibility="public" type="_DTz-kCrCEeO_MbbH-EGeJw" aggregation="composite" association="_3c4HoCrTEeO_MbbH-EGeJw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_36cNYCrTEeO_MbbH-EGeJw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_36q24CrTEeO_MbbH-EGeJw" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_37WMUCrTEeO_MbbH-EGeJw">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_P2nSoCrUEeO_MbbH-EGeJw" name="tank1" visibility="public" type="_Jj-VECrCEeO_MbbH-EGeJw" aggregation="composite" association="_RmqT8CrUEeO_MbbH-EGeJw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SzX-sCrUEeO_MbbH-EGeJw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SznPQCrUEeO_MbbH-EGeJw" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_S0VA8CrUEeO_MbbH-EGeJw">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_aNua8CrVEeO_MbbH-EGeJw" name="controller1" visibility="public" type="_0A0VoCrBEeO_MbbH-EGeJw" aggregation="composite" association="_b17u4CrVEeO_MbbH-EGeJw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ccQvECrVEeO_MbbH-EGeJw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cchNwCrVEeO_MbbH-EGeJw" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_cdSp0CrVEeO_MbbH-EGeJw">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Fcq3wCreEeO_MbbH-EGeJw" name="tank2" visibility="public" type="_Jj-VECrCEeO_MbbH-EGeJw" aggregation="composite" association="_HEiNcCreEeO_MbbH-EGeJw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IKmdoCreEeO_MbbH-EGeJw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IK28UCreEeO_MbbH-EGeJw" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_ILnxUCreEeO_MbbH-EGeJw">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_dho3MCrfEeO_MbbH-EGeJw" name="controller2" visibility="public" type="_0A0VoCrBEeO_MbbH-EGeJw" aggregation="composite" association="_fYGpkCrfEeO_MbbH-EGeJw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_g2zcMCrfEeO_MbbH-EGeJw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_g3DT0CrfEeO_MbbH-EGeJw" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_g3zhwCrfEeO_MbbH-EGeJw">
+              <value xsi:nil="true"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedConnector xmi:type="uml:Connector" xmi:id="_5yiiACrUEeO_MbbH-EGeJw" name="connector1">
+            <end xmi:type="uml:ConnectorEnd" xmi:id="_5zBqMCrUEeO_MbbH-EGeJw" partWithPort="_0SZvsCrTEeO_MbbH-EGeJw" role="_DU3CQCrUEeO_MbbH-EGeJw"/>
+            <end xmi:type="uml:ConnectorEnd" xmi:id="_5zKNECrUEeO_MbbH-EGeJw" partWithPort="_P2nSoCrUEeO_MbbH-EGeJw" role="_yFsLECrUEeO_MbbH-EGeJw"/>
+          </ownedConnector>
+          <ownedConnector xmi:type="uml:Connector" xmi:id="_-RY5oCrZEeO_MbbH-EGeJw" name="connector2">
+            <end xmi:type="uml:ConnectorEnd" xmi:id="_-RwtECrZEeO_MbbH-EGeJw" partWithPort="_aNua8CrVEeO_MbbH-EGeJw" role="_nuDzcCrVEeO_MbbH-EGeJw"/>
+            <end xmi:type="uml:ConnectorEnd" xmi:id="_-R5P8CrZEeO_MbbH-EGeJw" partWithPort="_P2nSoCrUEeO_MbbH-EGeJw" role="_EClOcCrVEeO_MbbH-EGeJw"/>
+          </ownedConnector>
+          <ownedConnector xmi:type="uml:Connector" xmi:id="_0o-_gCraEeO_MbbH-EGeJw" name="connector3">
+            <end xmi:type="uml:ConnectorEnd" xmi:id="_0pWy8CraEeO_MbbH-EGeJw" partWithPort="_aNua8CrVEeO_MbbH-EGeJw" role="_BIVOYCrWEeO_MbbH-EGeJw"/>
+            <end xmi:type="uml:ConnectorEnd" xmi:id="_0peuwCraEeO_MbbH-EGeJw" partWithPort="_P2nSoCrUEeO_MbbH-EGeJw" role="_MaoegCrVEeO_MbbH-EGeJw"/>
+          </ownedConnector>
+          <ownedConnector xmi:type="uml:Connector" xmi:id="_WK_2QCreEeO_MbbH-EGeJw" name="connector4">
+            <end xmi:type="uml:ConnectorEnd" xmi:id="_WLYQwCreEeO_MbbH-EGeJw" partWithPort="_P2nSoCrUEeO_MbbH-EGeJw" role="_T51bACrVEeO_MbbH-EGeJw"/>
+            <end xmi:type="uml:ConnectorEnd" xmi:id="_WLgMkCreEeO_MbbH-EGeJw" partWithPort="_Fcq3wCreEeO_MbbH-EGeJw" role="_yFsLECrUEeO_MbbH-EGeJw"/>
+          </ownedConnector>
+          <ownedConnector xmi:type="uml:Connector" xmi:id="_UmIfUCrgEeO_MbbH-EGeJw" name="connector5">
+            <end xmi:type="uml:ConnectorEnd" xmi:id="_Umg50CrgEeO_MbbH-EGeJw" partWithPort="_dho3MCrfEeO_MbbH-EGeJw" role="_BIVOYCrWEeO_MbbH-EGeJw"/>
+            <end xmi:type="uml:ConnectorEnd" xmi:id="_Umo1oCrgEeO_MbbH-EGeJw" partWithPort="_Fcq3wCreEeO_MbbH-EGeJw" role="_MaoegCrVEeO_MbbH-EGeJw"/>
+          </ownedConnector>
+          <ownedConnector xmi:type="uml:Connector" xmi:id="_Z6t-YCrgEeO_MbbH-EGeJw" name="connector6">
+            <end xmi:type="uml:ConnectorEnd" xmi:id="_Z7G_8CrgEeO_MbbH-EGeJw" partWithPort="_dho3MCrfEeO_MbbH-EGeJw" role="_nuDzcCrVEeO_MbbH-EGeJw"/>
+            <end xmi:type="uml:ConnectorEnd" xmi:id="_Z7O7wCrgEeO_MbbH-EGeJw" partWithPort="_Fcq3wCreEeO_MbbH-EGeJw" role="_EClOcCrVEeO_MbbH-EGeJw"/>
+          </ownedConnector>
+        </nestedClassifier>
+      </nestedClassifier>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Eh3O8M96EeOjeMaviPd-Tw" name="Requirements">
+      <packagedElement xmi:type="uml:Class" xmi:id="_SuMx0M96EeOjeMaviPd-Tw" name="Requirement1">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_NhhcIM97EeOjeMaviPd-Tw" name="Requirement2"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_2NL9gM97EeOjeMaviPd-Tw" name="Requirement3"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_3c4HoCrTEeO_MbbH-EGeJw" name="Association1" memberEnd="_0SZvsCrTEeO_MbbH-EGeJw _3c4HoyrTEeO_MbbH-EGeJw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3c4HoSrTEeO_MbbH-EGeJw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3c4HoirTEeO_MbbH-EGeJw" key="nature" value="SysML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_3c4HoyrTEeO_MbbH-EGeJw" name="" type="_ReLLgCrCEeO_MbbH-EGeJw" association="_3c4HoCrTEeO_MbbH-EGeJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RmqT8CrUEeO_MbbH-EGeJw" name="Association2" memberEnd="_P2nSoCrUEeO_MbbH-EGeJw _RmqT8yrUEeO_MbbH-EGeJw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RmqT8SrUEeO_MbbH-EGeJw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RmqT8irUEeO_MbbH-EGeJw" key="nature" value="SysML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_RmqT8yrUEeO_MbbH-EGeJw" name="" type="_ReLLgCrCEeO_MbbH-EGeJw" association="_RmqT8CrUEeO_MbbH-EGeJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_b17u4CrVEeO_MbbH-EGeJw" name="Association3" memberEnd="_aNua8CrVEeO_MbbH-EGeJw _b17u4yrVEeO_MbbH-EGeJw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b17u4SrVEeO_MbbH-EGeJw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_b17u4irVEeO_MbbH-EGeJw" key="nature" value="SysML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_b17u4yrVEeO_MbbH-EGeJw" name="" type="_ReLLgCrCEeO_MbbH-EGeJw" association="_b17u4CrVEeO_MbbH-EGeJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_HEiNcCreEeO_MbbH-EGeJw" name="Association4" memberEnd="_Fcq3wCreEeO_MbbH-EGeJw _HEiNcyreEeO_MbbH-EGeJw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HEiNcSreEeO_MbbH-EGeJw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HEiNcireEeO_MbbH-EGeJw" key="nature" value="SysML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_HEiNcyreEeO_MbbH-EGeJw" name="" type="_ReLLgCrCEeO_MbbH-EGeJw" association="_HEiNcCreEeO_MbbH-EGeJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_fYGpkCrfEeO_MbbH-EGeJw" name="Association5" memberEnd="_dho3MCrfEeO_MbbH-EGeJw _fYGpkyrfEeO_MbbH-EGeJw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fYGpkSrfEeO_MbbH-EGeJw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fYGpkirfEeO_MbbH-EGeJw" key="nature" value="SysML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_fYGpkyrfEeO_MbbH-EGeJw" name="" type="_ReLLgCrCEeO_MbbH-EGeJw" association="_fYGpkCrfEeO_MbbH-EGeJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_bX4SgM98EeOjeMaviPd-Tw" name="satisfy" client="_ReLLgCrCEeO_MbbH-EGeJw" supplier="_SuMx0M96EeOjeMaviPd-Tw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_uC8DcM98EeOjeMaviPd-Tw" name="" client="_0A0VoCrBEeO_MbbH-EGeJw" supplier="_2NL9gM97EeOjeMaviPd-Tw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_Ehu20M-gEeOW1ZojtwsShQ" name="Satisfy1" client="_DTz-kCrCEeO_MbbH-EGeJw" supplier="_NhhcIM97EeOjeMaviPd-Tw"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ioHUUCqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ioKXoCqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML_PROFILES/SysML.profile.uml#_TZ_nULU5EduiKqCzJMWbGw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_jF41cCqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jF41cSqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML_PROFILES/SysML.profile.uml#_Gx8MgLX7EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_jF74wCqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jF8f0CqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML_PROFILES/SysML.profile.uml#_fSw28LX7EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_jF8f0SqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jF9G4CqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML_PROFILES/SysML.profile.uml#_rpx28LX7EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_jF9G4SqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jF9t8CqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//constraints"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML_PROFILES/SysML.profile.uml#_5WYJ0LX7EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_jF9t8SqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jF-VACqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML_PROFILES/SysML.profile.uml#_C2zXMLX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_jF-VASqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jF-VAiqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML_PROFILES/SysML.profile.uml#_NxdG4LX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_jF-8ECqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jF-8ESqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML_PROFILES/SysML.profile.uml#_OOJC4LX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_jF_jICqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jF_jISqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//interactions"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML_PROFILES/SysML.profile.uml#_meOioLX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_jF_jIiqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jGAKMCqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//statemachines"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML_PROFILES/SysML.profile.uml#_nAF5kLX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_jGAKMSqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jGAKMiqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//usecases"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML_PROFILES/SysML.profile.uml#_neZmMLX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o01VQCqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o1cZQCqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.femto-st.fr/disc/SysML4Modelica#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_DPX8cCmvEeOqNeVB2HB3cA"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o18IgCqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o2dF4CqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.femto-st.fr/disc/SysML4Modelica#//classes"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_4fFNMCmvEeOqNeVB2HB3cA"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o3PwECqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o3scACqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.femto-st.fr/disc/SysML4Modelica#//types"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_73GR4CmvEeOqNeVB2HB3cA"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o4BMICqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o4bb0CqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.femto-st.fr/disc/SysML4Modelica#//components"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_s--8MCmxEeOqNeVB2HB3cA"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o4xaECqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o5LpwCqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.femto-st.fr/disc/SysML4Modelica#//equationsandalgorithms"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_uwgkMCmxEeOqNeVB2HB3cA"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o5hA8CqIEeOAKMp9jIGVCg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o57QoCqIEeOAKMp9jIGVCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.femto-st.fr/disc/SysML4Modelica#//other"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_ydnvICmxEeOqNeVB2HB3cA"/>
+    </profileApplication>
+  </uml:Model>
+  <Blocks:Block xmi:id="_phKPwCqIEeOAKMp9jIGVCg" base_Class="_pg4i8CqIEeOAKMp9jIGVCg"/>
+  <Classes:ModelicaPackage xmi:id="_t9iUcCqIEeOAKMp9jIGVCg" base_Classifier="_pg4i8CqIEeOAKMp9jIGVCg" base_Class="_pg4i8CqIEeOAKMp9jIGVCg"/>
+  <Blocks:Block xmi:id="_xnVssCqIEeOAKMp9jIGVCg" base_Class="_xnIRUCqIEeOAKMp9jIGVCg"/>
+  <Classes:ModelicaPackage xmi:id="_0ApGYCqIEeOAKMp9jIGVCg" base_Classifier="_xnIRUCqIEeOAKMp9jIGVCg" base_Class="_xnIRUCqIEeOAKMp9jIGVCg"/>
+  <Blocks:Block xmi:id="_3quLcCqIEeOAKMp9jIGVCg" base_Class="_3qdswCqIEeOAKMp9jIGVCg"/>
+  <Classes:ModelicaPackage xmi:id="_5tlbECqIEeOAKMp9jIGVCg" base_Classifier="_3qdswCqIEeOAKMp9jIGVCg" base_Class="_3qdswCqIEeOAKMp9jIGVCg"/>
+  <Blocks:Block xmi:id="_lgWLQCrAEeO_MbbH-EGeJw" base_Class="_lf6GYCrAEeO_MbbH-EGeJw"/>
+  <Classes:ModelicaConnector xmi:id="_pyxCsCrAEeO_MbbH-EGeJw" base_Classifier="_lf6GYCrAEeO_MbbH-EGeJw" base_Class="_lf6GYCrAEeO_MbbH-EGeJw"/>
+  <Components:ModelicaValueProperty xmi:id="_4DFtsCrAEeO_MbbH-EGeJw" base_Property="_tNKtACrAEeO_MbbH-EGeJw"/>
+  <Blocks:Block xmi:id="_9lAeICrAEeO_MbbH-EGeJw" base_Class="_9kp40CrAEeO_MbbH-EGeJw"/>
+  <Classes:ModelicaConnector xmi:id="_BDTxACrBEeO_MbbH-EGeJw" base_Classifier="_9kp40CrAEeO_MbbH-EGeJw" base_Class="_9kp40CrAEeO_MbbH-EGeJw"/>
+  <Blocks:Block xmi:id="_FW2CwCrBEeO_MbbH-EGeJw" base_Class="_FWnZQCrBEeO_MbbH-EGeJw"/>
+  <Classes:ModelicaConnector xmi:id="_IhNtACrBEeO_MbbH-EGeJw" base_Classifier="_FWnZQCrBEeO_MbbH-EGeJw" base_Class="_FWnZQCrBEeO_MbbH-EGeJw"/>
+  <Components:ModelicaValueProperty xmi:id="_RnlboCrBEeO_MbbH-EGeJw" base_Property="_Omr2cCrBEeO_MbbH-EGeJw"/>
+  <Components:ModelicaValueProperty xmi:id="_V9z1ACrBEeO_MbbH-EGeJw" base_Property="_CsBbQCrBEeO_MbbH-EGeJw"/>
+  <Blocks:Block xmi:id="_pvP_MCrBEeO_MbbH-EGeJw" base_Class="_pvB8wCrBEeO_MbbH-EGeJw"/>
+  <Classes:ModelicaModel xmi:id="_uQ0F4CrBEeO_MbbH-EGeJw" base_Classifier="_pvB8wCrBEeO_MbbH-EGeJw" base_Class="_pvB8wCrBEeO_MbbH-EGeJw"/>
+  <Blocks:Block xmi:id="_0BC_ICrBEeO_MbbH-EGeJw" base_Class="_0A0VoCrBEeO_MbbH-EGeJw"/>
+  <Classes:ModelicaModel xmi:id="_6GhvoCrBEeO_MbbH-EGeJw" base_Classifier="_0A0VoCrBEeO_MbbH-EGeJw" base_Class="_0A0VoCrBEeO_MbbH-EGeJw"/>
+  <Classes:ModelicaExtends xmi:id="_-J_lECrBEeO_MbbH-EGeJw" base_Generalization="_9aNt8CrBEeO_MbbH-EGeJw">
+    <modification>K = 2</modification>
+    <modification>T = 10</modification>
+  </Classes:ModelicaExtends>
+  <Blocks:Block xmi:id="_DUDPICrCEeO_MbbH-EGeJw" base_Class="_DTz-kCrCEeO_MbbH-EGeJw"/>
+  <Classes:ModelicaModel xmi:id="_HJZwECrCEeO_MbbH-EGeJw" base_Classifier="_DTz-kCrCEeO_MbbH-EGeJw" base_Class="_DTz-kCrCEeO_MbbH-EGeJw"/>
+  <Blocks:Block xmi:id="_JkNloCrCEeO_MbbH-EGeJw" base_Class="_Jj-VECrCEeO_MbbH-EGeJw"/>
+  <Classes:ModelicaModel xmi:id="_OlixgCrCEeO_MbbH-EGeJw" base_Classifier="_Jj-VECrCEeO_MbbH-EGeJw" base_Class="_Jj-VECrCEeO_MbbH-EGeJw"/>
+  <Blocks:Block xmi:id="_ReZ1ACrCEeO_MbbH-EGeJw" base_Class="_ReLLgCrCEeO_MbbH-EGeJw"/>
+  <Classes:ModelicaModel xmi:id="_WZw7wCrCEeO_MbbH-EGeJw" base_Classifier="_ReLLgCrCEeO_MbbH-EGeJw" base_Class="_ReLLgCrCEeO_MbbH-EGeJw"/>
+  <Components:ModelicaValueProperty xmi:id="_vxNFICrCEeO_MbbH-EGeJw" variability="parameter" base_Property="_a0RYMCrCEeO_MbbH-EGeJw"/>
+  <Components:ModelicaValueProperty xmi:id="_wnEWICrCEeO_MbbH-EGeJw" variability="parameter" base_Property="_boIeJCrCEeO_MbbH-EGeJw">
+    <modification>unit = &quot;s&quot;</modification>
+  </Components:ModelicaValueProperty>
+  <Components:ModelicaValueProperty xmi:id="_xOHvECrCEeO_MbbH-EGeJw" variability="parameter" base_Property="_cljIkCrCEeO_MbbH-EGeJw"/>
+  <Components:ModelicaValueProperty xmi:id="_xxzq8CrCEeO_MbbH-EGeJw" base_Property="_emu9MCrCEeO_MbbH-EGeJw"/>
+  <Components:ModelicaValueProperty xmi:id="_kRrxACrGEeO_MbbH-EGeJw" base_Property="_fmvBoCrCEeO_MbbH-EGeJw"/>
+  <Components:ModelicaValueProperty xmi:id="_YyTQsCrTEeO_MbbH-EGeJw" base_Property="_WlKqwCrTEeO_MbbH-EGeJw"/>
+  <EquationsAndAlgorithms:ModelicaEquation xmi:id="_gDQ84CrTEeO_MbbH-EGeJw" base_Constraint="_4dta4CrFEeO_MbbH-EGeJw"/>
+  <EquationsAndAlgorithms:ModelicaEquation xmi:id="_qvMUECrTEeO_MbbH-EGeJw" base_Constraint="_nb4wQCrTEeO_MbbH-EGeJw"/>
+  <PortAndFlows:FlowPort xmi:id="_DVQD0CrUEeO_MbbH-EGeJw" base_Port="_DU3CQCrUEeO_MbbH-EGeJw"/>
+  <Components:ModelicaPort xmi:id="_KjDHQCrUEeO_MbbH-EGeJw" base_Port="_DU3CQCrUEeO_MbbH-EGeJw"/>
+  <PortAndFlows:FlowPort xmi:id="_yGFMoCrUEeO_MbbH-EGeJw" base_Port="_yFsLECrUEeO_MbbH-EGeJw"/>
+  <Components:ModelicaPort xmi:id="_0jEzgCrUEeO_MbbH-EGeJw" base_Port="_yFsLECrUEeO_MbbH-EGeJw"/>
+  <EquationsAndAlgorithms:ModelicaConnection xmi:id="_8-5wUCrUEeO_MbbH-EGeJw" base_Connector="_5yiiACrUEeO_MbbH-EGeJw"/>
+  <PortAndFlows:FlowPort xmi:id="_EC-QACrVEeO_MbbH-EGeJw" base_Port="_EClOcCrVEeO_MbbH-EGeJw"/>
+  <Components:ModelicaPort xmi:id="_KjunQCrVEeO_MbbH-EGeJw" base_Port="_EClOcCrVEeO_MbbH-EGeJw"/>
+  <PortAndFlows:FlowPort xmi:id="_MbCHICrVEeO_MbbH-EGeJw" base_Port="_MaoegCrVEeO_MbbH-EGeJw"/>
+  <Components:ModelicaPort xmi:id="_Q1sUkCrVEeO_MbbH-EGeJw" base_Port="_MaoegCrVEeO_MbbH-EGeJw"/>
+  <PortAndFlows:FlowPort xmi:id="_T6OckCrVEeO_MbbH-EGeJw" base_Port="_T51bACrVEeO_MbbH-EGeJw"/>
+  <Components:ModelicaPort xmi:id="_V5ovkCrVEeO_MbbH-EGeJw" base_Port="_T51bACrVEeO_MbbH-EGeJw"/>
+  <PortAndFlows:FlowPort xmi:id="_nudcECrVEeO_MbbH-EGeJw" base_Port="_nuDzcCrVEeO_MbbH-EGeJw"/>
+  <Components:ModelicaPort xmi:id="__WQMwCrVEeO_MbbH-EGeJw" base_Port="_nuDzcCrVEeO_MbbH-EGeJw"/>
+  <PortAndFlows:FlowPort xmi:id="_BIveECrWEeO_MbbH-EGeJw" base_Port="_BIVOYCrWEeO_MbbH-EGeJw"/>
+  <Components:ModelicaPort xmi:id="_ERrk8CrWEeO_MbbH-EGeJw" base_Port="_BIVOYCrWEeO_MbbH-EGeJw"/>
+  <EquationsAndAlgorithms:ModelicaConnection xmi:id="_Ert4wCraEeO_MbbH-EGeJw" base_Connector="_-RY5oCrZEeO_MbbH-EGeJw"/>
+  <EquationsAndAlgorithms:ModelicaConnection xmi:id="_1VrGYCraEeO_MbbH-EGeJw" base_Connector="_0o-_gCraEeO_MbbH-EGeJw"/>
+  <Components:ModelicaPart xmi:id="_7ntsMCraEeO_MbbH-EGeJw" base_Property="_aNua8CrVEeO_MbbH-EGeJw">
+    <modification>ref = 0.25</modification>
+  </Components:ModelicaPart>
+  <Components:ModelicaPart xmi:id="_9LGKgCraEeO_MbbH-EGeJw" base_Property="_P2nSoCrUEeO_MbbH-EGeJw">
+    <modification>area = 1</modification>
+  </Components:ModelicaPart>
+  <Components:ModelicaPart xmi:id="_-YGJICraEeO_MbbH-EGeJw" base_Property="_0SZvsCrTEeO_MbbH-EGeJw">
+    <modification>flowLevel = 0.02</modification>
+  </Components:ModelicaPart>
+  <Components:ModelicaPart xmi:id="_KHGmkCreEeO_MbbH-EGeJw" base_Property="_Fcq3wCreEeO_MbbH-EGeJw">
+    <modification>area = 1.3</modification>
+  </Components:ModelicaPart>
+  <EquationsAndAlgorithms:ModelicaConnection xmi:id="_XD3_ACreEeO_MbbH-EGeJw" base_Connector="_WK_2QCreEeO_MbbH-EGeJw"/>
+  <EquationsAndAlgorithms:ModelicaConnection xmi:id="_XOMGsCrgEeO_MbbH-EGeJw" base_Connector="_UmIfUCrgEeO_MbbH-EGeJw"/>
+  <Components:ModelicaPart xmi:id="_e0YcACrgEeO_MbbH-EGeJw" base_Property="_dho3MCrfEeO_MbbH-EGeJw">
+    <modification>ref = 0.4</modification>
+  </Components:ModelicaPart>
+  <Components:ModelicaValueProperty xmi:id="_IzuH8CsyEeORjY0gZtrwiA" variability="parameter" base_Property="_FZdAgCsyEeORjY0gZtrwiA"/>
+  <EquationsAndAlgorithms:ModelicaEquation xmi:id="_Xf4aYCsyEeORjY0gZtrwiA" base_Constraint="_Slb5oCsyEeORjY0gZtrwiA"/>
+  <EquationsAndAlgorithms:ModelicaEquation xmi:id="_sgqFgCsyEeORjY0gZtrwiA" base_Constraint="_hrJ7kCsyEeORjY0gZtrwiA"/>
+  <EquationsAndAlgorithms:ModelicaEquation xmi:id="_tEr_oCsyEeORjY0gZtrwiA" base_Constraint="_lfKYsCsyEeORjY0gZtrwiA"/>
+  <EquationsAndAlgorithms:ModelicaEquation xmi:id="_tijnYCsyEeORjY0gZtrwiA" base_Constraint="_nVK4ECsyEeORjY0gZtrwiA"/>
+  <EquationsAndAlgorithms:ModelicaEquation xmi:id="_uCPNACsyEeORjY0gZtrwiA" base_Constraint="_o5NdsCsyEeORjY0gZtrwiA"/>
+  <Components:ModelicaValueProperty xmi:id="_zOGN4CsyEeORjY0gZtrwiA" variability="parameter" base_Property="_Zs0zECsyEeORjY0gZtrwiA">
+    <modification>unit = &quot;m2&quot;</modification>
+  </Components:ModelicaValueProperty>
+  <Components:ModelicaValueProperty xmi:id="_-qNE0CsyEeORjY0gZtrwiA" variability="parameter" base_Property="_agV6sCsyEeORjY0gZtrwiA">
+    <modification>unit = &quot;m2/s&quot;</modification>
+  </Components:ModelicaValueProperty>
+  <Components:ModelicaValueProperty xmi:id="_HVy78CszEeORjY0gZtrwiA" variability="parameter" base_Property="_cERLkCsyEeORjY0gZtrwiA"/>
+  <Components:ModelicaValueProperty xmi:id="_NXVnoCszEeORjY0gZtrwiA" variability="parameter" base_Property="_dUvU8CsyEeORjY0gZtrwiA"/>
+  <Components:ModelicaValueProperty xmi:id="_TbpTcCszEeORjY0gZtrwiA" base_Property="_e1IJoCsyEeORjY0gZtrwiA">
+    <modification>start = 0.0</modification>
+    <modification>unit = &quot;m&quot;</modification>
+  </Components:ModelicaValueProperty>
+  <Classes:ModelicaFunction xmi:id="_iWXmUCszEeORjY0gZtrwiA" base_Classifier="_fJ1Y4CszEeORjY0gZtrwiA" base_FunctionBehavior="_fJ1Y4CszEeORjY0gZtrwiA"/>
+  <Components:ModelicaFunctionParameter xmi:id="_z3odoCszEeORjY0gZtrwiA" base_Parameter="_tv-i4CszEeORjY0gZtrwiA"/>
+  <Components:ModelicaFunctionParameter xmi:id="_uitK4Cs0EeORjMAZExQRfQ" base_Parameter="_rn5moCs0EeORjMAZExQRfQ"/>
+  <Components:ModelicaFunctionParameter xmi:id="_E37gcCs1EeORjMAZExQRfQ" base_Parameter="_-2osYCs0EeORjMAZExQRfQ"/>
+  <Components:ModelicaFunctionParameter xmi:id="_K54b0Cs1EeORjMAZExQRfQ" base_Parameter="_IRv78Cs1EeORjMAZExQRfQ" causality="output"/>
+  <EquationsAndAlgorithms:ModelicaConnection xmi:id="_uQf4MCtCEeO-8ZhPq-3gdQ" base_Connector="_Z6t-YCrgEeO_MbbH-EGeJw"/>
+  <EquationsAndAlgorithms:ModelicaEquation xmi:id="_1xCjUCwEEeOiL6bEBWgQ8A" base_Constraint="_hlLrUCrCEeO_MbbH-EGeJw"/>
+  <EquationsAndAlgorithms:ModelicaEquation xmi:id="_6Lk08CwEEeOiL6bEBWgQ8A" base_Constraint="_cSjEUCrTEeO_MbbH-EGeJw"/>
+  <Requirements:Requirement xmi:id="_Svkq0M96EeOjeMaviPd-Tw" text="The system must fulfill two tanks. " id="1.0" base_Class="_SuMx0M96EeOjeMaviPd-Tw"/>
+  <Requirements:Requirement xmi:id="_NiEOsM97EeOjeMaviPd-Tw" text="After 150 sec, the flow rate must be 3 times higher than the previous rate." id="1.1" base_Class="_NhhcIM97EeOjeMaviPd-Tw"/>
+  <Requirements:Requirement xmi:id="_2NvXIM97EeOjeMaviPd-Tw" text="After 350 sec, the liquid height must be stabilized in both tanks." id="1.2" base_Class="_2NL9gM97EeOjeMaviPd-Tw"/>
+  <Requirements:Satisfy xmi:id="_bYUXYM98EeOjeMaviPd-Tw" base_Abstraction="_bX4SgM98EeOjeMaviPd-Tw"/>
+  <Requirements:Satisfy xmi:id="_uDYvYM98EeOjeMaviPd-Tw" base_Abstraction="_uC8DcM98EeOjeMaviPd-Tw"/>
+  <Requirements:Satisfy xmi:id="_EiuVUM-gEeOW1ZojtwsShQ" base_Abstraction="_Ehu20M-gEeOW1ZojtwsShQ"/>
+</xmi:XMI>

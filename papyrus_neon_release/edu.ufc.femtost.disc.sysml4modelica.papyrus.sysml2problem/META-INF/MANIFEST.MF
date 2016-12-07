@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ATL edu.ufc.femtost.disc.sysml4modelica.papyrus.sysml2problem Transformation Runtime Plug-in
+Bundle-SymbolicName: edu.ufc.femtost.disc.sysml4modelica.papyrus.sysml2problem
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: edu.ufc.femtost.disc.sysml4modelica.papyrus.sysml2problem.Activator
+Bundle-Vendor: Eclipse Modeling Project
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.papyrus.sysml,
+ org.eclipse.uml2.uml,
+ org.eclipse.m2m.atl.engine.emfvm,
+ edu.ufc.femtost.disc.sysml4modelica.problemmetamodel;bundle-version="1.0.0",
+ edu.ufc.femtost.disc.sysml4modelica.papyrus.profile;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Eclipse-LazyStart: true
+Export-Package: edu.ufc.femtost.disc.sysml4modelica.papyrus.sysml2problem.files

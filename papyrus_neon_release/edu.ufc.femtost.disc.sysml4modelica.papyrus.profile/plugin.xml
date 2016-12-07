@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SysML4Modelica.profile -->
+      <package uri="http://www.femto-st.fr/disc/SysML4Modelica" class="edu.ufc.femtost.disc.sysml4modelica.profile.sysml4modelica.Sysml4modelicaPackage" genModel="profile/SysML4Modelica.profile.genmodel"></package>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated SysML4Modelica.profile -->
+      <parser type="sysml4modelica" class="edu.ufc.femtost.disc.sysml4modelica.profile.sysml4modelica.util.Sysml4modelicaResourceFactoryImpl"></parser>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sysml4modelica -->
+      <package
+            uri="http://www.femto-st.fr/disc/SysML4Modelica/Classes"
+            class="edu.ufc.femtost.disc.sysml4modelica.profile.classes.ClassesPackage"
+            genModel="profile/SysML4Modelica.profile.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.uml2.uml.generated_package">
+      <profile location="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_DPX8cCmvEeOqNeVB2HB3cA" uri="http://www.femto-st.fr/disc/SysML4Modelica">
+      </profile>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SysML4Modelica.profile -->
+      <package uri="http://www.femto-st.fr/disc/SysML4Modelica/Classes" class="edu.ufc.femtost.disc.sysml4modelica.profile.classes.ClassesPackage" genModel="profile/SysML4Modelica.profile.genmodel"></package>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated SysML4Modelica.profile -->
+      <parser type="classes" class="edu.ufc.femtost.disc.sysml4modelica.profile.classes.util.ClassesResourceFactoryImpl"></parser>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sysml4modelica -->
+      <package
+            uri="http://www.femto-st.fr/disc/SysML4Modelica/Types"
+            class="edu.ufc.femtost.disc.sysml4modelica.profile.types.TypesPackage"
+            genModel="profile/SysML4Modelica.profile.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.uml2.uml.generated_package">
+      <profile location="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_4fFNMCmvEeOqNeVB2HB3cA" uri="http://www.femto-st.fr/disc/SysML4Modelica/Classes">
+      </profile>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SysML4Modelica.profile -->
+      <package uri="http://www.femto-st.fr/disc/SysML4Modelica/Types" class="edu.ufc.femtost.disc.sysml4modelica.profile.types.TypesPackage" genModel="profile/SysML4Modelica.profile.genmodel"></package>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated SysML4Modelica.profile -->
+      <parser type="types" class="edu.ufc.femtost.disc.sysml4modelica.profile.types.util.TypesResourceFactoryImpl"></parser>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sysml4modelica -->
+      <package
+            uri="http://www.femto-st.fr/disc/SysML4Modelica/Components"
+            class="edu.ufc.femtost.disc.sysml4modelica.profile.components.ComponentsPackage"
+            genModel="profile/SysML4Modelica.profile.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.uml2.uml.generated_package">
+      <profile location="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_73GR4CmvEeOqNeVB2HB3cA" uri="http://www.femto-st.fr/disc/SysML4Modelica/Types">
+      </profile>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SysML4Modelica.profile -->
+      <package uri="http://www.femto-st.fr/disc/SysML4Modelica/Components" class="edu.ufc.femtost.disc.sysml4modelica.profile.components.ComponentsPackage" genModel="profile/SysML4Modelica.profile.genmodel"></package>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated SysML4Modelica.profile -->
+      <parser type="components" class="edu.ufc.femtost.disc.sysml4modelica.profile.components.util.ComponentsResourceFactoryImpl"></parser>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sysml4modelica -->
+      <package
+            uri="http://www.femto-st.fr/disc/SysML4Modelica/EquationsAndAlgorithms"
+            class="edu.ufc.femtost.disc.sysml4modelica.profile.equationsandalgorithms.EquationsandalgorithmsPackage"
+            genModel="profile/SysML4Modelica.profile.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.uml2.uml.generated_package">
+      <profile location="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_s--8MCmxEeOqNeVB2HB3cA" uri="http://www.femto-st.fr/disc/SysML4Modelica/Components">
+      </profile>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SysML4Modelica.profile -->
+      <package uri="http://www.femto-st.fr/disc/SysML4Modelica/EquationsAndAlgorithms" class="edu.ufc.femtost.disc.sysml4modelica.profile.equationsandalgorithms.EquationsandalgorithmsPackage" genModel="profile/SysML4Modelica.profile.genmodel"></package>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated SysML4Modelica.profile -->
+      <parser type="equationsandalgorithms" class="edu.ufc.femtost.disc.sysml4modelica.profile.equationsandalgorithms.util.EquationsandalgorithmsResourceFactoryImpl"></parser>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sysml4modelica -->
+      <package
+            uri="http://www.femto-st.fr/disc/SysML4Modelica/Other"
+            class="edu.ufc.femtost.disc.sysml4modelica.profile.other.OtherPackage"
+            genModel="profile/SysML4Modelica.profile.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.uml2.uml.generated_package">
+      <profile location="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_uwgkMCmxEeOqNeVB2HB3cA" uri="http://www.femto-st.fr/disc/SysML4Modelica/EquationsAndAlgorithms">
+      </profile>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SysML4Modelica.profile -->
+      <package uri="http://www.femto-st.fr/disc/SysML4Modelica/Other" class="edu.ufc.femtost.disc.sysml4modelica.profile.other.OtherPackage" genModel="profile/SysML4Modelica.profile.genmodel"></package>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated SysML4Modelica.profile -->
+      <parser type="other" class="edu.ufc.femtost.disc.sysml4modelica.profile.other.util.OtherResourceFactoryImpl"></parser>
+   </extension>
+   <extension point="org.eclipse.uml2.uml.generated_package">
+      <profile location="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml#_ydnvICmxEeOqNeVB2HB3cA" uri="http://www.femto-st.fr/disc/SysML4Modelica/Other">
+      </profile>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping source="pathmap://SysML4Modelica_PROFILES/" target="platform:/plugin/edu.ufc.femtost.disc.sysml4modelica.papyrus.profile/profile/">
+      </mapping>
+      <mapping source="pathmap://SysML4Modelica_LIBRARIES/" target="platform:/plugin/edu.ufc.femtost.disc.sysml4modelica.papyrus.profile/library/">
+      </mapping>
+   </extension>
+   <extension point="org.eclipse.papyrus.uml.extensionpoints.UMLProfile">
+      <profile description="SysML-Modelica profile for SysML (from OMG SysML-Modelica Specification 1.0 beta 3 / 2012-03-19)" iconpath="icons/SysML4ModelicaProfile.png" name="SysML4Modelica" path="pathmap://SysML4Modelica_PROFILES/SysML4Modelica.profile.uml" provider="UFR-ST FEMTO-ST DISC">
+      </profile>
+   </extension>
+   <extension point="org.eclipse.papyrus.uml.extensionpoints.UMLLibrary">
+      <library description="Modelica primitive types for SysML " iconpath="icons/SysML4ModelicaProfile.png" name="Modelica Primitive Types" path="pathmap://SysML4Modelica_LIBRARIES/modelica.primitivetype.uml" provider="UFR-ST FEMTO-ST DISC">
+      </library>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.uml.extensionpoints.UMLLibrary">
+      <library
+            description="Modelica Standard Library for SysML "
+            iconpath="icons/SysML4ModelicaProfile.png"
+            name="Modelica Standard Library"
+            path="pathmap://SysML4Modelica_LIBRARIES/modelica.library.uml"
+            provider="UFR-ST FEMTO-ST DISC">
+      </library>
+   </extension>
+</plugin>

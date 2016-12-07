@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated modelica -->
+      <package
+            uri="http://www.femto-st.fr/disc/Modelica.ecore"
+            class="edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage"
+            genModel="metamodel/modelica.genmodel"/>
+   </extension>
+
+</plugin>
