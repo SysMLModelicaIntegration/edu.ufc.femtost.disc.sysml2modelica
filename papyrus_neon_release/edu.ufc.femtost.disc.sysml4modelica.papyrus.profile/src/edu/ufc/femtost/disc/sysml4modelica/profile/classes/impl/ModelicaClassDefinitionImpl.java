@@ -102,7 +102,7 @@ public abstract class ModelicaClassDefinitionImpl extends MinimalEObjectImpl.Con
 	 * @ordered
 	 */
 	protected boolean isReplaceable = IS_REPLACEABLE_EDEFAULT;
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -163,45 +163,37 @@ public abstract class ModelicaClassDefinitionImpl extends MinimalEObjectImpl.Con
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean isFinal() {
-		// TODO: implement this method to return the 'Is Final' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return this.base_Classifier.isLeaf();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setIsFinal(boolean newIsFinal) {
-		// TODO: implement this method to set the 'Is Final' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		this.base_Classifier.setIsLeaf(newIsFinal);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean isPartial() {
-		// TODO: implement this method to return the 'Is Partial' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return this.base_Classifier.isAbstract();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setIsPartial(boolean newIsPartial) {
-		// TODO: implement this method to set the 'Is Partial' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		this.base_Classifier.setIsAbstract(newIsPartial);
 	}
 
 	/**
