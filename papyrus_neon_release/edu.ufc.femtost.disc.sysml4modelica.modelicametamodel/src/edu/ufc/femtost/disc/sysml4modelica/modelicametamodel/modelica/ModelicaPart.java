@@ -10,13 +10,13 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart#getScope <em>Scope</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart#getType_part <em>Type part</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaPart#getConstrainedBy <em>Constrained By</em>}</li>
  * </ul>
- * </p>
  *
  * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaPart()
  * @model

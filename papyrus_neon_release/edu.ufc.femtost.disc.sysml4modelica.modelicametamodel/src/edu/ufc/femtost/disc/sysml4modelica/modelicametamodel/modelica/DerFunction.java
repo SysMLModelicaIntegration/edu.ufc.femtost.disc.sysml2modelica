@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.DerFunction#getDer <em>Der</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.DerFunction#getVariable <em>Variable</em>}</li>
  * </ul>
- * </p>
  *
  * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getDerFunction()
  * @model

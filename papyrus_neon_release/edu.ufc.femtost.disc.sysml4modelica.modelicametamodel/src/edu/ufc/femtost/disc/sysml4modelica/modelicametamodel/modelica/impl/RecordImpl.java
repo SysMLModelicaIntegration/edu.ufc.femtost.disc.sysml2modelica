@@ -19,10 +19,10 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.RecordImpl#getOwnerModelicaClassDefinition <em>Owner Modelica Class Definition</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

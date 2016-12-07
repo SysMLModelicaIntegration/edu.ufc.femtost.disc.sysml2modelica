@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause#getModification <em>Modification</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause#getArraySize <em>Array Size</em>}</li>
@@ -22,7 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause#getFrom_modelica_standard_library <em>From modelica standard library</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ExtendsClause#getFrom_modelica_primitive_types <em>From modelica primitive types</em>}</li>
  * </ul>
- * </p>
  *
  * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getExtendsClause()
  * @model

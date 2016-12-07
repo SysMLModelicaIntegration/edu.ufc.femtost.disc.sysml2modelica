@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaComponent#getConditionalExpression <em>Conditional Expression</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaComponent#getName <em>Name</em>}</li>
@@ -23,7 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaComponent#getOwnerModelicaClassDefinition <em>Owner Modelica Class Definition</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaComponent#getType_specifier <em>Type specifier</em>}</li>
  * </ul>
- * </p>
  *
  * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaComponent()
  * @model abstract="true"

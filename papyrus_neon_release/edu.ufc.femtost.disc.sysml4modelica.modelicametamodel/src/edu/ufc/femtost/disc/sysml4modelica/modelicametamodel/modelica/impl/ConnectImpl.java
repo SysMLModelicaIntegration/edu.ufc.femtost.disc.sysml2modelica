@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ConnectImpl#getOwnerEquationSection <em>Owner Equation Section</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ConnectImpl#getFrom <em>From</em>}</li>
@@ -36,7 +37,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ConnectImpl#getFromPart <em>From Part</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ConnectImpl#getToPart <em>To Part</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

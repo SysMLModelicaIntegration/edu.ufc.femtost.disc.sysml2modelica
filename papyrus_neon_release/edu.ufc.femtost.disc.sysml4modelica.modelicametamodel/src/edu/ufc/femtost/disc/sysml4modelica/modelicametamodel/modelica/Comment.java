@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment#getOwnerModelicaClassDefinition <em>Owner Modelica Class Definition</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Comment#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getComment()
  * @model

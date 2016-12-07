@@ -28,13 +28,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.FunctionImpl#getExternalLanguage <em>External Language</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.FunctionImpl#getExternalInclude <em>External Include</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.FunctionImpl#getExternalLibrary <em>External Library</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.FunctionImpl#getParameters <em>Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

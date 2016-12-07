@@ -26,11 +26,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.PackageImpl#getWithinClause <em>Within Clause</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.PackageImpl#getModelicaClasses <em>Modelica Classes</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

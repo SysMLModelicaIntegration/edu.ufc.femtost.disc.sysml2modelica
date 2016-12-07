@@ -10,6 +10,7 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaValueProperty#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaValueProperty#getCausality <em>Causality</em>}</li>
@@ -18,7 +19,6 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaValueProperty#getScope <em>Scope</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.ModelicaValueProperty#getDefault_value <em>Default value</em>}</li>
  * </ul>
- * </p>
  *
  * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getModelicaValueProperty()
  * @model

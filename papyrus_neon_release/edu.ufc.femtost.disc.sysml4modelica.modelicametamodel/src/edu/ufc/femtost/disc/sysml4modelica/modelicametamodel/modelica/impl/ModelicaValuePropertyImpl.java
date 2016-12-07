@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaValuePropertyImpl#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaValuePropertyImpl#getCausality <em>Causality</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaValuePropertyImpl#getScope <em>Scope</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaValuePropertyImpl#getDefault_value <em>Default value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

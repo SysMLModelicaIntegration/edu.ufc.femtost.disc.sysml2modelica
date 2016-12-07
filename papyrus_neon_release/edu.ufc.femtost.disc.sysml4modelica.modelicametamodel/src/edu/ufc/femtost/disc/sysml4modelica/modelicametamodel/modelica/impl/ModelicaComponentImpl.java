@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaComponentImpl#getConditionalExpression <em>Conditional Expression</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaComponentImpl#getName <em>Name</em>}</li>
@@ -38,7 +39,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaComponentImpl#getOwnerModelicaClassDefinition <em>Owner Modelica Class Definition</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaComponentImpl#getType_specifier <em>Type specifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

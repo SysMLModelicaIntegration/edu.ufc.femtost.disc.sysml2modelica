@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaFunctionParameterImpl#getOwnerFunction <em>Owner Function</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaFunctionParameterImpl#getName <em>Name</em>}</li>
@@ -44,7 +45,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaFunctionParameterImpl#isIsProtected <em>Is Protected</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaFunctionParameterImpl#getDefault_value <em>Default value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

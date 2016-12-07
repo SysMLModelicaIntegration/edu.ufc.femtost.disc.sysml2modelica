@@ -23,11 +23,11 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.AlgorithmImpl#getBody <em>Body</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.AlgorithmImpl#getAlgorithmsection <em>Algorithmsection</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

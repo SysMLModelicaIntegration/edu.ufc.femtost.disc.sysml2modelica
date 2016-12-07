@@ -10,10 +10,10 @@ package edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.Connector#isIsExpandable <em>Is Expandable</em>}</li>
  * </ul>
- * </p>
  *
  * @see edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.modelicaPackage#getConnector()
  * @model

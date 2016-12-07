@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ExtendsClauseImpl#getModification <em>Modification</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ExtendsClauseImpl#getArraySize <em>Array Size</em>}</li>
@@ -38,7 +39,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ExtendsClauseImpl#getFrom_modelica_standard_library <em>From modelica standard library</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ExtendsClauseImpl#getFrom_modelica_primitive_types <em>From modelica primitive types</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

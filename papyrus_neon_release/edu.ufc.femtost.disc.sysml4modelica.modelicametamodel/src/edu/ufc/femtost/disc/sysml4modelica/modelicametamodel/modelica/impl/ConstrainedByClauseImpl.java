@@ -23,12 +23,12 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ConstrainedByClauseImpl#getModification <em>Modification</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ConstrainedByClauseImpl#getOwnerInstance <em>Owner Instance</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ConstrainedByClauseImpl#getInstanceForConstrainedBy <em>Instance For Constrained By</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -24,10 +24,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.EnumerationImpl#getEnumerationLiterals <em>Enumeration Literals</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

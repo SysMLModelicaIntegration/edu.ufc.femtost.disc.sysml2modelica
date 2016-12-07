@@ -23,13 +23,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPartImpl#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPartImpl#getScope <em>Scope</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPartImpl#getType_part <em>Type part</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaPartImpl#getConstrainedBy <em>Constrained By</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

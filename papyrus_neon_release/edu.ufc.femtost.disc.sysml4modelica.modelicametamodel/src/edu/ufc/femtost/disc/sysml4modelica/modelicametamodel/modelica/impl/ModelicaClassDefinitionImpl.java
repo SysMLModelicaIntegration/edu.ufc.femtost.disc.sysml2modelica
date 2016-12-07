@@ -36,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#isIsPartial <em>Is Partial</em>}</li>
@@ -53,7 +54,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#getComments <em>Comments</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.ModelicaClassDefinitionImpl#getRecords <em>Records</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

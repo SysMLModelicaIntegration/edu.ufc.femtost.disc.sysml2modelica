@@ -25,11 +25,11 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.DerFunctionImpl#getDer <em>Der</em>}</li>
  *   <li>{@link edu.ufc.femtost.disc.sysml4modelica.modelicametamodel.modelica.impl.DerFunctionImpl#getVariable <em>Variable</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
