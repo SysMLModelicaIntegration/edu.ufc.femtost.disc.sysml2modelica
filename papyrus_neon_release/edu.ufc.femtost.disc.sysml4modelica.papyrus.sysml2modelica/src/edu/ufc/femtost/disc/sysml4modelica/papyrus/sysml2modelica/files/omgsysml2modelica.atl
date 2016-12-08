@@ -6,8 +6,8 @@
 --  http://www.eclipse.org/legal/epl-v10.html
 --  
 --  Contributors:
---      Jean-Marie Gauthier and University of Franche-Comte - initial API and implementation
---
+--      Jean-Marie Gauthier, University of Franche-Comte - initial API and implementation
+--		Jean-Marie Gauthier, Samares-Engineering - Migration to Neon and SysML 1.4
 
 -- @nsURI MMmodelica=http://www.femto-st.fr/disc/Modelica.ecore
 -- @nsURI MMsysml=http://www.eclipse.org/papyrus/sysml/1.4/SysML
@@ -356,6 +356,8 @@ helper def: getModelicaEffectIndex(ob:MMuml!OpaqueBehavior, index:Integer): Inte
 
 helper def: getModelicaEffectBody(ob:MMuml!OpaqueBehavior): String = 
 	ob.body->at(thisModule.getModelicaEffectIndex(ob, 1));
+
+
 ------------------------------------------------------------------------
 ---------------------------------BDD------------------------------------
 ------------------------------------------------------------------------

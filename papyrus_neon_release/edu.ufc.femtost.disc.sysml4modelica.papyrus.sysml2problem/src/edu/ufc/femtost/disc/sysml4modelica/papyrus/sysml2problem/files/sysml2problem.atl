@@ -7,6 +7,7 @@
 --  
 --  Contributors:
 --      Jean-Marie Gauthier and University of Franche-Comté - initial API and implementation
+--		Jean-Marie Gauthier, Samares-Engineering - Migration to Neon and SysML 1.4
 --
  
 -- @nsURI MMproblem=http://www.femto-st.fr/disc/problem
