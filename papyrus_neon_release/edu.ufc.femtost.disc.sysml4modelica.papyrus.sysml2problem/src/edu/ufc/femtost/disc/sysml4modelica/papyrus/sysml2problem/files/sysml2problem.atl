@@ -29,9 +29,6 @@ helper context MMuml!DataType def: isValueTypeStereotyped() : Boolean =
 helper def: isConstraintBlockStereotyped(c: MMuml!Class) : Boolean = 
 	c.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::Constraints::ConstraintBlock');
 
-helper def: isFlowPortStereotyped(p: MMuml!Port) : Boolean = 
-	p.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::PortAndFlows::FlowPort');
-
 helper context MMuml!NamedElement def: isModelicaClassDefinitionStereotyped() : Boolean = 
 	self.getAppliedStereotypes()->exists(s | 
 		s.qualifiedName = 'SysML4Modelica::Classes::ModelicaClass' or
@@ -737,9 +734,7 @@ rule Constraints_1_CONNECTION{
 	from sysml: MMuml!Connector(
 		sysml.isModelicaConnectionStereotyped()	and
 		(
-			not thisModule.isFlowPortStereotyped(sysml.end->at(1).role) or
 			not sysml.end->at(1).role.isModelicaPortStereotyped() or 
-			not thisModule.isFlowPortStereotyped(sysml.end->at(2).role) or
 			not sysml.end->at(2).role.isModelicaPortStereotyped()
 		)
 	)

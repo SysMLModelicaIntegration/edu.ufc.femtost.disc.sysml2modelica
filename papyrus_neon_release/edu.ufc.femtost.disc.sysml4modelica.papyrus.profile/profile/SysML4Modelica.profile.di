@@ -38,6 +38,9 @@
         <children>
           <emfPageIdentifier href="SysML4Modelica.profile.notation#_8MFYgCmxEeOqNeVB2HB3cA"/>
         </children>
+        <children>
+          <emfPageIdentifier href="SysML4Modelica.profile.notation#_KlH_ACnQEeOqNeVB2HB3cA"/>
+        </children>
       </children>
     </windows>
   </sashModel>

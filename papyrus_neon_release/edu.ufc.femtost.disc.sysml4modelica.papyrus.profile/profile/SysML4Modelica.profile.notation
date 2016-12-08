@@ -1427,7 +1427,7 @@
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_KlH_ACnQEeOqNeVB2HB3cA" type="PapyrusUMLProfileDiagram" name="ComponentsProfile" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_O0Y0wCnQEeOqNeVB2HB3cA" type="1031" fontName="Segoe UI" lineColor="0">
+    <children xmi:type="notation:Shape" xmi:id="_O0Y0wCnQEeOqNeVB2HB3cA" type="Class_MetaclassShape" fontName="Segoe UI" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_O0Zb0CnQEeOqNeVB2HB3cA" source="ShadowFigure">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0Zb0SnQEeOqNeVB2HB3cA" key="ShadowFigure_Value" value="false"/>
       </eAnnotations>
@@ -1437,18 +1437,11 @@
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_O0aC4inQEeOqNeVB2HB3cA" source="QualifiedName">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0aC4ynQEeOqNeVB2HB3cA" key="QualifiedNameDepth" value="1000"/>
       </eAnnotations>
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_O0ap8CnQEeOqNeVB2HB3cA" source="Stereotype_Annotation">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0ap8SnQEeOqNeVB2HB3cA" key="StereotypeWithQualifiedNameList" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0ap8inQEeOqNeVB2HB3cA" key="StereotypeList" value="StandardProfileL2::Metaclass"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0ap8ynQEeOqNeVB2HB3cA" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0bRACnQEeOqNeVB2HB3cA" key="PropStereoDisplay" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0bRASnQEeOqNeVB2HB3cA" key="StereotypePropertyLocation" value="Compartment"/>
-      </eAnnotations>
-      <children xmi:type="notation:DecorationNode" xmi:id="_O0aC5CnQEeOqNeVB2HB3cA" type="1084"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_O0aC5CnQEeOqNeVB2HB3cA" type="Class_MetaclassNameLabel"/>
       <element xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_O0aC5SnQEeOqNeVB2HB3cA" x="580" y="15"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_P6Ji8CnQEeOqNeVB2HB3cA" type="1026" fontName="Segoe UI" lineColor="0">
+    <children xmi:type="notation:Shape" xmi:id="_P6Ji8CnQEeOqNeVB2HB3cA" type="Stereotype_Shape" fontName="Segoe UI" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_P6KxECnQEeOqNeVB2HB3cA" source="ShadowFigure">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_P6KxESnQEeOqNeVB2HB3cA" key="ShadowFigure_Value" value="false"/>
       </eAnnotations>
@@ -1458,63 +1451,63 @@
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_P6LYISnQEeOqNeVB2HB3cA" source="QualifiedName">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_P6LYIinQEeOqNeVB2HB3cA" key="QualifiedNameDepth" value="1000"/>
       </eAnnotations>
-      <children xmi:type="notation:DecorationNode" xmi:id="_P6LYIynQEeOqNeVB2HB3cA" type="1034"/>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_P6LYJCnQEeOqNeVB2HB3cA" type="1071">
-        <children xmi:type="notation:Shape" xmi:id="_UcnBgCnQEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+      <children xmi:type="notation:DecorationNode" xmi:id="_P6LYIynQEeOqNeVB2HB3cA" type="Stereotype_NameLabel"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_P6LYJCnQEeOqNeVB2HB3cA" type="Stereotype_AttributeCompartment">
+        <children xmi:type="notation:Shape" xmi:id="_UcnBgCnQEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TlivQCnTEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TlivQSnTEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_UcXw8CnQEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_UcnBgSnQEeOqNeVB2HB3cA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_WkbpoCnQEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_WkbpoCnQEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bMYk0CnTEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bMYk0SnTEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_WkLyACnQEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_WkbpoSnQEeOqNeVB2HB3cA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_YrEmACnQEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_YrEmACnQEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_guN1sCnTEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_guN1sSnTEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_Yq0uYCnQEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_YrEmASnQEeOqNeVB2HB3cA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_dqwMECnQEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_dqwMECnQEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_x7Z6cCnTEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_x7ahgCnTEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_dqgUcCnQEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_dqwMESnQEeOqNeVB2HB3cA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_fUB3ACnQEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_fUB3ACnQEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xlUVsCnTEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xlUVsSnTEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_fTx_YCnQEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_fUB3ASnQEeOqNeVB2HB3cA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_hMHaACnQEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_hMHaACnQEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_hL4JcCnQEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_hMHaASnQEeOqNeVB2HB3cA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_lKi-cCnQEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_lKi-cCnQEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_lKTt4CnQEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_lKi-cSnQEeOqNeVB2HB3cA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_miclgCnQEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_miclgCnQEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8t5MoCnTEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8t5zsCnTEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_miMt4CnQEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_miclgSnQEeOqNeVB2HB3cA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_pGQmECnQEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_pGQmECnQEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_pGAHYCnQEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_pGQmESnQEeOqNeVB2HB3cA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_rOHqcCnQEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_rOHqcCnQEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_rN4Z4CnQEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_rOHqcSnQEeOqNeVB2HB3cA"/>
         </children>
@@ -1523,16 +1516,16 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_P6LYJynQEeOqNeVB2HB3cA"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P6L_MCnQEeOqNeVB2HB3cA"/>
       </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_P6L_MSnQEeOqNeVB2HB3cA" visible="false" type="1019">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_P6L_MSnQEeOqNeVB2HB3cA" visible="false" type="Stereotype_OperationCompartment">
         <styles xmi:type="notation:TitleStyle" xmi:id="_P6L_MinQEeOqNeVB2HB3cA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_P6L_MynQEeOqNeVB2HB3cA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_P6L_NCnQEeOqNeVB2HB3cA"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P6L_NSnQEeOqNeVB2HB3cA"/>
       </children>
       <element xmi:type="uml:Stereotype" href="SysML4Modelica.profile.uml#_P5sP8CnQEeOqNeVB2HB3cA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P6Ji8SnQEeOqNeVB2HB3cA" x="165" y="176" width="361" height="195"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P6Ji8SnQEeOqNeVB2HB3cA" x="165" y="155" width="361" height="264"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_RzWgQCnQEeOqNeVB2HB3cA" type="1026" fontName="Segoe UI" lineColor="0">
+    <children xmi:type="notation:Shape" xmi:id="_RzWgQCnQEeOqNeVB2HB3cA" type="Stereotype_Shape" fontName="Segoe UI" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RzXHUCnQEeOqNeVB2HB3cA" source="ShadowFigure">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RzXHUSnQEeOqNeVB2HB3cA" key="ShadowFigure_Value" value="false"/>
       </eAnnotations>
@@ -1542,44 +1535,44 @@
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RzXuYCnQEeOqNeVB2HB3cA" source="QualifiedName">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RzXuYSnQEeOqNeVB2HB3cA" key="QualifiedNameDepth" value="1000"/>
       </eAnnotations>
-      <children xmi:type="notation:DecorationNode" xmi:id="_RzXuYinQEeOqNeVB2HB3cA" type="1034"/>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_RzXuYynQEeOqNeVB2HB3cA" type="1071">
-        <children xmi:type="notation:Shape" xmi:id="_apfdsCnUEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+      <children xmi:type="notation:DecorationNode" xmi:id="_RzXuYinQEeOqNeVB2HB3cA" type="Stereotype_NameLabel"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_RzXuYynQEeOqNeVB2HB3cA" type="Stereotype_AttributeCompartment">
+        <children xmi:type="notation:Shape" xmi:id="_apfdsCnUEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_c0jAACnUEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_c0jAASnUEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_VTqBcCnUEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_apfdsSnUEeOqNeVB2HB3cA" x="77" y="24"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_auHfACnUEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_auHfACnUEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dLwmICnUEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dLwmISnUEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_VTx9QCnUEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_auHfASnUEeOqNeVB2HB3cA" x="77" y="24"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_ayclYCnUEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_ayclYCnUEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_digSMCnUEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dtASACnUEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="62"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_VT55ECnUEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_ayclYSnUEeOqNeVB2HB3cA" x="77" y="24"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_a2zg8CnUEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_a2zg8CnUEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eDdDICnUEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eDdDISnUEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_VUB04CnUEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_a2zg8SnUEeOqNeVB2HB3cA" x="77" y="24"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_a7LDkCnUEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_a7LDkCnUEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eiCckCnUEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_epgWgCnUEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="62"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_VUJJoCnUEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_a7LDkSnUEeOqNeVB2HB3cA" x="77" y="24"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_a_wBkCnUEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_a_wBkCnUEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fEwIECnUEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fEwIESnUEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
@@ -1591,7 +1584,7 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_RzXuZinQEeOqNeVB2HB3cA"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RzXuZynQEeOqNeVB2HB3cA"/>
       </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_RzXuaCnQEeOqNeVB2HB3cA" visible="false" type="1019">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_RzXuaCnQEeOqNeVB2HB3cA" visible="false" type="Stereotype_OperationCompartment">
         <styles xmi:type="notation:TitleStyle" xmi:id="_RzXuaSnQEeOqNeVB2HB3cA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_RzXuainQEeOqNeVB2HB3cA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_RzXuaynQEeOqNeVB2HB3cA"/>
@@ -1600,7 +1593,7 @@
       <element xmi:type="uml:Stereotype" href="SysML4Modelica.profile.uml#_RzAiACnQEeOqNeVB2HB3cA"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RzWgQSnQEeOqNeVB2HB3cA" x="715" y="175" width="301"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_1JULcCnUEeOqNeVB2HB3cA" type="1031" fontName="Segoe UI" lineColor="0">
+    <children xmi:type="notation:Shape" xmi:id="_1JULcCnUEeOqNeVB2HB3cA" type="Class_MetaclassShape" fontName="Segoe UI" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1JUygCnUEeOqNeVB2HB3cA" source="ShadowFigure">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1JUygSnUEeOqNeVB2HB3cA" key="ShadowFigure_Value" value="false"/>
       </eAnnotations>
@@ -1610,18 +1603,11 @@
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1JUyhCnUEeOqNeVB2HB3cA" source="QualifiedName">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1JVZkCnUEeOqNeVB2HB3cA" key="QualifiedNameDepth" value="1000"/>
       </eAnnotations>
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1JWAoCnUEeOqNeVB2HB3cA" source="Stereotype_Annotation">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1JWAoSnUEeOqNeVB2HB3cA" key="StereotypeWithQualifiedNameList" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1JWAoinUEeOqNeVB2HB3cA" key="StereotypeList" value="StandardProfileL2::Metaclass"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1JWAoynUEeOqNeVB2HB3cA" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1JWApCnUEeOqNeVB2HB3cA" key="PropStereoDisplay" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1JWApSnUEeOqNeVB2HB3cA" key="StereotypePropertyLocation" value="Compartment"/>
-      </eAnnotations>
-      <children xmi:type="notation:DecorationNode" xmi:id="_1JVZkSnUEeOqNeVB2HB3cA" type="1084"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_1JVZkSnUEeOqNeVB2HB3cA" type="Class_MetaclassNameLabel"/>
       <element xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Port"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1JVZkinUEeOqNeVB2HB3cA" x="1215" y="45"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1JVZkinUEeOqNeVB2HB3cA" x="1168" y="50"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_2SzjECnUEeOqNeVB2HB3cA" type="1026" fontName="Segoe UI" lineColor="0">
+    <children xmi:type="notation:Shape" xmi:id="_2SzjECnUEeOqNeVB2HB3cA" type="Stereotype_Shape" fontName="Segoe UI" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2S0KICnUEeOqNeVB2HB3cA" source="ShadowFigure">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2S0KISnUEeOqNeVB2HB3cA" key="ShadowFigure_Value" value="false"/>
       </eAnnotations>
@@ -1631,35 +1617,35 @@
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2S0KJCnUEeOqNeVB2HB3cA" source="QualifiedName">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2S0xMCnUEeOqNeVB2HB3cA" key="QualifiedNameDepth" value="1000"/>
       </eAnnotations>
-      <children xmi:type="notation:DecorationNode" xmi:id="_2S0xMSnUEeOqNeVB2HB3cA" type="1034"/>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_2S0xMinUEeOqNeVB2HB3cA" type="1071">
-        <children xmi:type="notation:Shape" xmi:id="_ODkCgCnVEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+      <children xmi:type="notation:DecorationNode" xmi:id="_2S0xMSnUEeOqNeVB2HB3cA" type="Stereotype_NameLabel"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_2S0xMinUEeOqNeVB2HB3cA" type="Stereotype_AttributeCompartment">
+        <children xmi:type="notation:Shape" xmi:id="_ODkCgCnVEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PVyfYCnVEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PVyfYSnVEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_JN9lgCnVEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_ODkCgSnVEeOqNeVB2HB3cA" x="65" y="21"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_OH7lICnVEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_OH7lICnVEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_JOE6QCnVEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_OH7lISnVEeOqNeVB2HB3cA" x="65" y="21"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_OLl9ICnVEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_OLl9ICnVEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_JOM2ECnVEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_OLl9ISnVEeOqNeVB2HB3cA" x="65" y="21"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_OO0QQCnVEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_OO0QQCnVEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_JOUK0CnVEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_OO0QQSnVEeOqNeVB2HB3cA" x="65" y="21"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_OSFmsCnVEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_OSFmsCnVEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_R9BAUCnVEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_R9BAUSnVEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_JObfkCnVEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_OSFmsSnVEeOqNeVB2HB3cA" x="65" y="21"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_OU64QCnVEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="_OU64QCnVEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TOwVACnVEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TOw8ECnVEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
@@ -1671,16 +1657,16 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_2S0xNSnUEeOqNeVB2HB3cA"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2S0xNinUEeOqNeVB2HB3cA"/>
       </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_2S0xNynUEeOqNeVB2HB3cA" visible="false" type="1019">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_2S0xNynUEeOqNeVB2HB3cA" visible="false" type="Stereotype_OperationCompartment">
         <styles xmi:type="notation:TitleStyle" xmi:id="_2S0xOCnUEeOqNeVB2HB3cA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_2S0xOSnUEeOqNeVB2HB3cA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_2S0xOinUEeOqNeVB2HB3cA"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2S0xOynUEeOqNeVB2HB3cA"/>
       </children>
       <element xmi:type="uml:Stereotype" href="SysML4Modelica.profile.uml#_2SbIkCnUEeOqNeVB2HB3cA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2SzjESnUEeOqNeVB2HB3cA" x="1120" y="200" width="291"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2SzjESnUEeOqNeVB2HB3cA" x="1063" y="174" width="291"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_XX1DMCnVEeOqNeVB2HB3cA" type="1031" fontName="Segoe UI" lineColor="0">
+    <children xmi:type="notation:Shape" xmi:id="_XX1DMCnVEeOqNeVB2HB3cA" type="Class_MetaclassShape" fontName="Segoe UI" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XX1qQCnVEeOqNeVB2HB3cA" source="ShadowFigure">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XX1qQSnVEeOqNeVB2HB3cA" key="ShadowFigure_Value" value="false"/>
       </eAnnotations>
@@ -1690,18 +1676,11 @@
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XX1qRCnVEeOqNeVB2HB3cA" source="QualifiedName">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XX2RUCnVEeOqNeVB2HB3cA" key="QualifiedNameDepth" value="1000"/>
       </eAnnotations>
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XX24YCnVEeOqNeVB2HB3cA" source="Stereotype_Annotation">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XX24YSnVEeOqNeVB2HB3cA" key="StereotypeWithQualifiedNameList" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XX24YinVEeOqNeVB2HB3cA" key="StereotypeList" value="StandardProfileL2::Metaclass"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XX3fcCnVEeOqNeVB2HB3cA" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XX3fcSnVEeOqNeVB2HB3cA" key="PropStereoDisplay" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XX3fcinVEeOqNeVB2HB3cA" key="StereotypePropertyLocation" value="Compartment"/>
-      </eAnnotations>
-      <children xmi:type="notation:DecorationNode" xmi:id="_XX2RUSnVEeOqNeVB2HB3cA" type="1084"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_XX2RUSnVEeOqNeVB2HB3cA" type="Class_MetaclassNameLabel"/>
       <element xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Parameter"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XX2RUinVEeOqNeVB2HB3cA" x="310" y="425"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XX2RUinVEeOqNeVB2HB3cA" x="326" y="466"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_YdNW4CnVEeOqNeVB2HB3cA" type="1026" fontName="Segoe UI" lineColor="0">
+    <children xmi:type="notation:Shape" xmi:id="_YdNW4CnVEeOqNeVB2HB3cA" type="Stereotype_Shape" fontName="Segoe UI" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YdN98CnVEeOqNeVB2HB3cA" source="ShadowFigure">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YdN98SnVEeOqNeVB2HB3cA" key="ShadowFigure_Value" value="false"/>
       </eAnnotations>
@@ -1711,48 +1690,48 @@
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YdOlAinVEeOqNeVB2HB3cA" source="QualifiedName">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YdOlAynVEeOqNeVB2HB3cA" key="QualifiedNameDepth" value="1000"/>
       </eAnnotations>
-      <children xmi:type="notation:DecorationNode" xmi:id="_YdOlBCnVEeOqNeVB2HB3cA" type="1034"/>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_YdOlBSnVEeOqNeVB2HB3cA" type="1071">
-        <children xmi:type="notation:Shape" xmi:id="__lVB4CnVEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+      <children xmi:type="notation:DecorationNode" xmi:id="_YdOlBCnVEeOqNeVB2HB3cA" type="Stereotype_NameLabel"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_YdOlBSnVEeOqNeVB2HB3cA" type="Stereotype_AttributeCompartment">
+        <children xmi:type="notation:Shape" xmi:id="__lVB4CnVEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EbEBwCnWEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EkEMwCnWEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="62"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_xZCiUCnVEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="__lVB4SnVEeOqNeVB2HB3cA" x="50" y="25"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="__pP4kCnVEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="__pP4kCnVEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FQCh8CnWEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FQCh8SnWEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_xZJ3ECnVEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="__pP4kSnVEeOqNeVB2HB3cA" x="50" y="25"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="__sjEMCnVEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="__sjEMCnVEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Fnf_sCnWEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FngmwCnWEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_xZRL0CnVEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="__sjEMSnVEeOqNeVB2HB3cA" x="50" y="25"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="__vviICnVEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="__vviICnVEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NyCYMCnWEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Q7FMwCnWEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_xZYgkCnVEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="__vviISnVEeOqNeVB2HB3cA" x="50" y="25"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="__ymB0CnVEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="__ymB0CnVEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RexIoCnWEeOqNeVB2HB3cA" source="CustomAppearance_Annotation">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RexIoSnWEeOqNeVB2HB3cA" key="CustomAppearance_MaskValue" value="126"/>
           </eAnnotations>
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_xZf1UCnVEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="__ymB0SnVEeOqNeVB2HB3cA" x="50" y="25"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="__1gy8CnVEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="__1gy8CnVEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_xZmjACnVEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="__1gy8SnVEeOqNeVB2HB3cA" x="50" y="25"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="__4E-wCnVEeOqNeVB2HB3cA" type="3002" fontName="Segoe UI" lineColor="0">
+        <children xmi:type="notation:Shape" xmi:id="__4E-wCnVEeOqNeVB2HB3cA" type="Property_ClassAttributeLabel" fontName="Segoe UI" lineColor="0">
           <element xmi:type="uml:Property" href="SysML4Modelica.profile.uml#_xZvF4CnVEeOqNeVB2HB3cA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="__4E-wSnVEeOqNeVB2HB3cA" x="50" y="25"/>
         </children>
@@ -1761,40 +1740,98 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_YdOlCCnVEeOqNeVB2HB3cA"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YdOlCSnVEeOqNeVB2HB3cA"/>
       </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_YdPMECnVEeOqNeVB2HB3cA" visible="false" type="1019">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_YdPMECnVEeOqNeVB2HB3cA" visible="false" type="Stereotype_OperationCompartment">
         <styles xmi:type="notation:TitleStyle" xmi:id="_YdPMESnVEeOqNeVB2HB3cA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_YdPMEinVEeOqNeVB2HB3cA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_YdPMEynVEeOqNeVB2HB3cA"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YdPMFCnVEeOqNeVB2HB3cA"/>
       </children>
       <element xmi:type="uml:Stereotype" href="SysML4Modelica.profile.uml#_Yc1jcCnVEeOqNeVB2HB3cA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YdNW4SnVEeOqNeVB2HB3cA" x="200" y="560" width="366"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YdNW4SnVEeOqNeVB2HB3cA" x="200" y="560" width="366" height="197"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_IJYDcLyVEea6FsPc0aKOrA" type="StereotypeComment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_IJYDcbyVEea6FsPc0aKOrA"/>
+      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_IJYDc7yVEea6FsPc0aKOrA" name="BASE_ELEMENT">
+        <eObjectValue xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+      </styles>
+      <element xsi:nil="true"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IJYDcryVEea6FsPc0aKOrA" x="780" y="15"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_IJk3wLyVEea6FsPc0aKOrA" type="StereotypeComment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_IJk3wbyVEea6FsPc0aKOrA"/>
+      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_IJk3w7yVEea6FsPc0aKOrA" name="BASE_ELEMENT">
+        <eObjectValue xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Port"/>
+      </styles>
+      <element xsi:nil="true"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IJk3wryVEea6FsPc0aKOrA" x="1415" y="45"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_IJszkLyVEea6FsPc0aKOrA" type="StereotypeComment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_IJszkbyVEea6FsPc0aKOrA"/>
+      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_IJszk7yVEea6FsPc0aKOrA" name="BASE_ELEMENT">
+        <eObjectValue xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Parameter"/>
+      </styles>
+      <element xsi:nil="true"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IJszkryVEea6FsPc0aKOrA" x="510" y="425"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_KlH_ASnQEeOqNeVB2HB3cA"/>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_IIM-wLyVEea6FsPc0aKOrA" name="diagram_compatibility_version" stringValue="1.2.0"/>
     <element xmi:type="uml:Profile" href="SysML4Modelica.profile.uml#_s--8MCmxEeOqNeVB2HB3cA"/>
-    <edges xmi:type="notation:Connector" xmi:id="_pisGkCnUEeOqNeVB2HB3cA" type="1013" source="_P6Ji8CnQEeOqNeVB2HB3cA" target="_O0Y0wCnQEeOqNeVB2HB3cA" routing="Rectilinear" lineColor="0">
+    <edges xmi:type="notation:Connector" xmi:id="_pisGkCnUEeOqNeVB2HB3cA" type="Extension_Edge" source="_P6Ji8CnQEeOqNeVB2HB3cA" target="_O0Y0wCnQEeOqNeVB2HB3cA" routing="Rectilinear" lineColor="0">
       <styles xmi:type="notation:FontStyle" xmi:id="_pisGkSnUEeOqNeVB2HB3cA" fontName="Segoe UI"/>
       <element xmi:type="uml:Extension" href="SysML4Modelica.profile.uml#_picO8CnUEeOqNeVB2HB3cA"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pisGkinUEeOqNeVB2HB3cA" points="[-144, -29, -285, 136]$[-144, -90, -285, 75]$[141, -90, 0, 75]$[141, -140, 0, 25]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_prgrYCnUEeOqNeVB2HB3cA" id="(0.8975069252077562,0.14871794871794872)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pisGkinUEeOqNeVB2HB3cA" points="[341, 155, -643984, -643984]$[341, 118, -643984, -643984]$[630, 118, -643984, -643984]$[630, 65, -643984, -643984]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_prgrYCnUEeOqNeVB2HB3cA" id="(0.48753462603878117,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NbDYcLyVEea6FsPc0aKOrA" id="(0.5,1.0)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_r_jKkCnUEeOqNeVB2HB3cA" type="1013" source="_RzWgQCnQEeOqNeVB2HB3cA" target="_O0Y0wCnQEeOqNeVB2HB3cA" routing="Rectilinear" lineColor="0">
+    <edges xmi:type="notation:Connector" xmi:id="_r_jKkCnUEeOqNeVB2HB3cA" type="Extension_Edge" source="_RzWgQCnQEeOqNeVB2HB3cA" target="_O0Y0wCnQEeOqNeVB2HB3cA" routing="Rectilinear" lineColor="0">
       <styles xmi:type="notation:FontStyle" xmi:id="_r_jKkSnUEeOqNeVB2HB3cA" fontName="Segoe UI"/>
       <element xmi:type="uml:Extension" href="SysML4Modelica.profile.uml#_r_TS8CnUEeOqNeVB2HB3cA"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_r_jKkinUEeOqNeVB2HB3cA" points="[81, -17, 240, 135]$[81, -77, 240, 75]$[-159, -77, 0, 75]$[-159, -127, 0, 25]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sIOlcCnUEeOqNeVB2HB3cA" id="(0.24584717607973422,0.1)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_UAsIQCnVEeOqNeVB2HB3cA" type="1013" source="_2SzjECnUEeOqNeVB2HB3cA" target="_1JULcCnUEeOqNeVB2HB3cA" routing="Rectilinear" lineColor="0">
+    <edges xmi:type="notation:Connector" xmi:id="_UAsIQCnVEeOqNeVB2HB3cA" type="Extension_Edge" source="_2SzjECnUEeOqNeVB2HB3cA" target="_1JULcCnUEeOqNeVB2HB3cA" routing="Rectilinear" lineColor="0">
       <styles xmi:type="notation:FontStyle" xmi:id="_UAsIQSnVEeOqNeVB2HB3cA" fontName="Segoe UI"/>
       <element xmi:type="uml:Extension" href="SysML4Modelica.profile.uml#_UAc3sCnVEeOqNeVB2HB3cA"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UAsIQinVEeOqNeVB2HB3cA" points="[1, -12, -8, 130]$[59, -142, 50, 0]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UHy10CnVEeOqNeVB2HB3cA" id="(0.46735395189003437,0.07058823529411765)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UAsIQinVEeOqNeVB2HB3cA" points="[1217, 174, -643984, -643984]$[1217, 100, -643984, -643984]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UHy10CnVEeOqNeVB2HB3cA" id="(0.5292096219931272,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OfFoULyVEea6FsPc0aKOrA" id="(0.49,1.0)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_bfWSMCnVEeOqNeVB2HB3cA" type="1013" source="_YdNW4CnVEeOqNeVB2HB3cA" target="_XX1DMCnVEeOqNeVB2HB3cA" routing="Rectilinear" lineColor="0">
+    <edges xmi:type="notation:Connector" xmi:id="_bfWSMCnVEeOqNeVB2HB3cA" type="Extension_Edge" source="_YdNW4CnVEeOqNeVB2HB3cA" target="_XX1DMCnVEeOqNeVB2HB3cA" routing="Rectilinear" lineColor="0">
       <styles xmi:type="notation:FontStyle" xmi:id="_bfWSMSnVEeOqNeVB2HB3cA" fontName="Segoe UI"/>
       <element xmi:type="uml:Extension" href="SysML4Modelica.profile.uml#_bfHosinVEeOqNeVB2HB3cA"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bfWSMinVEeOqNeVB2HB3cA" points="[-2, -13, 0, 115]$[-2, -103, 0, 25]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bm5rsCnVEeOqNeVB2HB3cA" id="(0.46440677966101696,0.13)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bfWSMinVEeOqNeVB2HB3cA" points="[375, 560, -643984, -643984]$[375, 516, -643984, -643984]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bm5rsCnVEeOqNeVB2HB3cA" id="(0.4781420765027322,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_J_TqULyVEea6FsPc0aKOrA" id="(0.49,1.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_IJYqgLyVEea6FsPc0aKOrA" type="StereotypeCommentLink" source="_O0Y0wCnQEeOqNeVB2HB3cA" target="_IJYDcLyVEea6FsPc0aKOrA">
+      <styles xmi:type="notation:FontStyle" xmi:id="_IJYqgbyVEea6FsPc0aKOrA"/>
+      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_IJZRkLyVEea6FsPc0aKOrA" name="BASE_ELEMENT">
+        <eObjectValue xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+      </styles>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IJYqgryVEea6FsPc0aKOrA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IJYqg7yVEea6FsPc0aKOrA"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IJYqhLyVEea6FsPc0aKOrA"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_IJk3xLyVEea6FsPc0aKOrA" type="StereotypeCommentLink" source="_1JULcCnUEeOqNeVB2HB3cA" target="_IJk3wLyVEea6FsPc0aKOrA">
+      <styles xmi:type="notation:FontStyle" xmi:id="_IJk3xbyVEea6FsPc0aKOrA"/>
+      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_IJk3ybyVEea6FsPc0aKOrA" name="BASE_ELEMENT">
+        <eObjectValue xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Port"/>
+      </styles>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IJk3xryVEea6FsPc0aKOrA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IJk3x7yVEea6FsPc0aKOrA"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IJk3yLyVEea6FsPc0aKOrA"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_IJszlLyVEea6FsPc0aKOrA" type="StereotypeCommentLink" source="_XX1DMCnVEeOqNeVB2HB3cA" target="_IJszkLyVEea6FsPc0aKOrA">
+      <styles xmi:type="notation:FontStyle" xmi:id="_IJszlbyVEea6FsPc0aKOrA"/>
+      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_IJszmbyVEea6FsPc0aKOrA" name="BASE_ELEMENT">
+        <eObjectValue xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Parameter"/>
+      </styles>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IJszlryVEea6FsPc0aKOrA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IJszl7yVEea6FsPc0aKOrA"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IJszmLyVEea6FsPc0aKOrA"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_ZleKACnWEeOqNeVB2HB3cA" type="PapyrusUMLProfileDiagram" name="EquationsAndAlgorithmsProfile" measurementUnit="Pixel">

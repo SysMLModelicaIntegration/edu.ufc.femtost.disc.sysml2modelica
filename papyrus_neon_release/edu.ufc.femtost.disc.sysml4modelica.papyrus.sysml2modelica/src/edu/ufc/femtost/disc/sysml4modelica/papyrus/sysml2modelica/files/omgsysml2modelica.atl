@@ -37,6 +37,9 @@ helper def: isBlockStereotyped(c: MMuml!Class) : Boolean =
 helper def: isConstraintBlockStereotyped(c: MMuml!Class) : Boolean = 
 	c.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::Constraints::ConstraintBlock');
 
+----------------
+---DEPRECATED---
+----------------
 helper def: isFlowPortStereotyped(p: MMuml!Port) : Boolean = 
 	p.getAppliedStereotypes()->exists(s | s.qualifiedName = 'SysML::PortAndFlows::FlowPort');
 
@@ -749,7 +752,6 @@ rule Comment2Annotation{
 --------------------------------------------------------------------------
 rule Property2ModelicaPort extends Property2ModelicaComponent{
 	from sysml: MMuml!Port(
-		thisModule.isFlowPortStereotyped(sysml) and
 		sysml.isModelicaPortStereotyped()
 	)
 	to modelica: MMmodelica!ModelicaPort(
@@ -833,8 +835,8 @@ rule Connector2ModelicaConnect_1{
 	from sysml: MMuml!Connector(
 		sysml.isModelicaConnectionStereotyped() and
 		thisModule.isBlockStereotyped(sysml.owner) and
-		thisModule.isFlowPortStereotyped(sysml.end->at(1).role) and
-		thisModule.isFlowPortStereotyped(sysml.end->at(2).role)
+		sysml.end->at(1).role.oclIsTypeOf(MMuml!Port) and 
+		sysml.end->at(2).role.oclIsTypeOf(MMuml!Port)
 	)
 	to modelica: MMmodelica!Connect(
 		ownerEquationSection <- thisModule.Block2EquationSection(sysml.owner), 
@@ -883,7 +885,7 @@ rule Connector2ModelicaConnect_2{
 	to modelica: MMmodelica!Connect(
 		ownerEquationSection <- thisModule.Block2EquationSection(sysml.owner), 
 		fromPart <- if(sysml.end->at(1).oclIsTypeOf(MMuml!ConnectorEnd))then
-						if(thisModule.isFlowPortStereotyped(sysml.end->at(1).role))then
+						if(sysml.end->at(1).role.oclIsTypeOf(MMuml!Port))then
 							sysml.end->at(1).partWithPort.name
 						else
 							sysml.end->at(1).role.name
@@ -892,7 +894,7 @@ rule Connector2ModelicaConnect_2{
 						sysml.end->at(1).propertyPath->first().name
 					endif, 
 		toPart <- if(sysml.end->at(2).oclIsTypeOf(MMuml!ConnectorEnd))then
-						if(thisModule.isFlowPortStereotyped(sysml.end->at(2).role))then
+						if(sysml.end->at(2).role.oclIsTypeOf(MMuml!Port))then
 							sysml.end->at(2).partWithPort.name
 						else
 							sysml.end->at(2).role.name
@@ -901,7 +903,7 @@ rule Connector2ModelicaConnect_2{
 						sysml.end->at(2).propertyPath->first().name
 					endif, 
 		fromPort <- if(sysml.end->at(1).oclIsTypeOf(MMuml!ConnectorEnd))then
-						if(thisModule.isFlowPortStereotyped(sysml.end->at(1).role))then
+						if(sysml.end->at(1).role.oclIsTypeOf(MMuml!Port))then
 							sysml.end->at(1).role.name
 						else
 							OclUndefined
@@ -910,7 +912,7 @@ rule Connector2ModelicaConnect_2{
 						sysml.end->at(1).role.name
 					endif, 
 		toPort <- if(sysml.end->at(2).oclIsTypeOf(MMuml!ConnectorEnd))then
-						if(thisModule.isFlowPortStereotyped(sysml.end->at(2).role))then
+						if(sysml.end->at(2).role.oclIsTypeOf(MMuml!Port))then
 							sysml.end->at(2).role.name
 						else
 							OclUndefined

@@ -336,23 +336,19 @@ public class ModelicaValuePropertyImpl extends MinimalEObjectImpl.Container impl
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean isFinal() {
-		// TODO: implement this method to return the 'Is Final' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return this.base_Property.isLeaf();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setIsFinal(boolean newIsFinal) {
-		// TODO: implement this method to set the 'Is Final' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		this.base_Property.setIsLeaf(newIsFinal);
 	}
 
 	/**
